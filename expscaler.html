@@ -1,0 +1,72 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/tr/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta name="keywords" content="Ragnarok,Online,Ragnarok Online,EuRO,PVP,PVM,WOE,MVP,Calc,Calculator,New,Current,prime,Ragnarok Prime,RO Prime,Loki,4 Games">
+		<meta name="description" content="The Ragnarok Prime Calculator, able to simulate stats, equipment, status resistance, skills and damage from Characters in PVM, MVP and PVP environments">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		
+		<title>Ragnarok Prime Exp Scaler</title>
+
+		<!--globals-->
+		<script src="js/ga.js" type="text/javascript"></script><script type="text/javascript">//<![CDATA[
+			var Language = 1; // japanese = 0, english = 1
+			var PlayerVersusPlayer = 0;
+		//]]></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/variables.js"></script>
+		<!--tables-->
+		<script type="text/javascript" src="js/defines.js"></script>
+		<script type="text/javascript" src="js/monster.js"></script>
+		<!--functions-->
+		<script type="text/javascript" src="js/scaler.js"></script>
+		<!--form-->
+		<script type="text/javascript" src="js/head.js"></script>
+		<script type="text/javascript" src="js/events.js"></script>
+		<script type="text/javascript" src="js/cookies.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="js/style.css">
+		
+		<!--Google AdSense-->
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6824539470557939" crossorigin="anonymous"></script>
+	</head>
+    <body onload="BuildSearchTable()" >
+    	<form name="calcForm" action="https://roprime-simulator.com/(EmptyReference!)">
+	        <!-- header -->
+			<div class="bgLgTitle lgTitle">
+				Ragnarok Prime Monster Search
+			</div>
+	        <!-- main body -->
+	        <div class="pageBody">
+	        	<!-- Welcome Message -->
+	        	<div class="bgMdTitle mdTitle" onclick="ToggleVisibility('welcome')">Welcome</div>
+	        	<div id="welcome" style="display:block">
+					<table class="bgDkTable">
+						<tbody>
+							<tr>
+								<td class="bgDkRow1 padded">
+									Leave your feedback at my Discord <u><b><a href="https://discord.gg/FKA3jDeSCp">here</a></b></u>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="bgDkTable">
+						<tbody>
+							<tr>
+								<td class="bgDkRow1 padded">
+								<span id="Search">
+								</td>
+							</tr>
+							<tr>
+								<td class="bgDkRow1 padded">
+								<span id="Monsters">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</form>
+		<script type="text/javascript" src="js/foot.js"></script>
+	</body><!--deferred loading--></html>
