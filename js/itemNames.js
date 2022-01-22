@@ -1388,7 +1388,7 @@ ITEM_NAME = [
 ,[1385,0,0,"Cannon Spear", "Increases damage inflicted with [Cannon Spear] by 10%<br/>Each refine increases this skill's damage by 3%", 0]
 ,[1386,0,0,"Gigantic Lance", "[ASPD] - 10<br/>If the user's base STR is 120: [ATK] +300<br/>Increases cooldown of [Clashing Spiral] by 20s<br/>You lose 600 SP when unequipping", 0]
 ,[1387,0,0,"Cold Magic Book", "Each refine increases damage inflicted with [Cold Bolt] and [Diamond Dust] by 3% and their SP cost by 5%", 0]
-,[1388,0,0,"Recovery Light", "Each refine increases the healing power of the user's [Heal] and [Sanctuary] skills by 1.5%<br/>Each refine increases SP cost of skills by 3%", 0]
+,[1388,0,0,"Recovery Light", "Each refine increases the healing power of the user's [Heal],[Sanctuary],[Coluseo Heal] and [High Heal] skills by 6.0%<br/>Each refine increases SP cost of skills by 3%", 0]
 ,[1389,0,0,"Giant Shield", "If upgraded to +9 or higher: Resistance to [Large] size monsters by additional 5%", 0]
 ,[1390,0,0,"Geffenia Report of Water", "If the user's base INT is 120:<br/>[MATK] +10<br/>[MAXHP] +800", 0]
 ,[1391,0,0,"Bible of Promise (2nd vol.)", "Allows usage of the skill [Odin's Power] Lv2", 0]

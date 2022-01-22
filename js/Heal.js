@@ -122,8 +122,8 @@ function CalcBaseHeal( HealLv, maxHeal )
 		healMultiplier += 4;
 	}
 	if ( EquipNumSearch( 1388 ))
-	{ // Light Of Recovery
-		healMultiplier += Math.floor( n_A_Weapon_ATKplus * 1.5 );
+	{ // Light Of Recovery / Recovery Light
+		healMultiplier += Math.floor( n_A_Weapon_ATKplus * 6.0 );
 	}
 	if ( EquipNumSearch( 1401 ))
 	{ // Ancient Gold Ornament
