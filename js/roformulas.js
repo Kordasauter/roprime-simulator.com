@@ -1512,6 +1512,10 @@ function CalcRangedMod()
 	{ //Fallen Angel Wing
 		n_tok[bon_DMG_RANGE] += Math.floor(SU_DEX/20);
 	}
+	if(CardNumSearch( 541 ))
+	{ //Menblatt Card
+		n_tok[bon_DMG_RANGE] += Math.floor(n_A_DEX/10);
+	}
 	if ( usableItems[ksRaydricArcherTransScroll] && n_A_WeaponType === weapTyp_BOW)
 	{
 		n_tok[bon_DMG_RANGE] += 25;
@@ -3320,7 +3324,7 @@ function calcFlee( n_A_FLEE )
 		/*var musicLessonsBonus = Math.floor( performerBuffs[ksMusicLessons] / 2 );
 		var agiBonus = Math.floor( performerBuffs[ksBardAgi] / 10 );
 		n_A_FLEE += skillBonus + musicLessonsBonus + agiBonus;*/
-		n_A_FLEE += 18 + (skillBonus * 2) + (Math.Floor(skillBonus / 10) * 2);
+		n_A_FLEE += 18 + (skillBonus * 2);
 	}
 	if ( performerBuffs[ksWandererSolo] === ksGloomyShynessW && performerBuffs[ksWandererSoloLevel] > 0 )
 	{ // Gloomy Shyness
@@ -3391,7 +3395,7 @@ function calcPDodge( n_A_LUCKY )
 	// Perfect Tablature
 	if ( performerBuffs[ksBardSolo] === ksPerfectTablature && performerBuffs[ksBardSoloLevel] > 0 )
 	{
-		var skillBonus = Math.ceil( performerBuffs[ksBardSoloLevel] / 2 );
+		var skillBonus = Math.floor( performerBuffs[ksBardSoloLevel] / 2 );
 		//var musicLessonsBonus = Math.floor( performerBuffs[ksMusicLessons] / 2 );
 		//var agiBonus = Math.floor( performerBuffs[ksBardAgi] / 10 );
 		n_A_LUCKY += skillBonus;
@@ -3747,7 +3751,7 @@ function calcASPD()
 			/*var musicLessonsBonus = performerBuffs[ksMusicLessons];
 			var agiBonus = Math.floor( performerBuffs[ksBardAgi] / 10 );
 			aspdMultiplier += skillBonus + musicLessonsBonus + agiBonus;*/
-			aspdMultiplier += (skillBonus * 2) -1 + Math.Floor(skillBonus / 10);
+			aspdMultiplier += (skillBonus * 2) -1 + Math.floor(skillBonus / 10);
 		}
 	}
 	if ( n_A_JobSearch2() === cls_CRU && SkillSearch( skill_KN_CAVALIER_MASTERY ) )
