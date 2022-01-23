@@ -507,6 +507,10 @@ function CalcEquipAtk()
 	{ // Ifrit
 		equipmentAttack += Math.floor( n_A_JobLV / 10 ) * CardNumSearch( 492 );
 	}
+	if(CardNumSearch( 542 ))
+	{ // Wakwak Card
+		equipmentAttack += Math.floor(SU_STR/10)*5;
+	}
 	
 	// Ice Pick Effect
 	if ( n_tok[bon_ICE_PICK] || (n_A_ActiveSkill == skill_MO_OCCULT_IMPACTION || n_A_ActiveSkill == skill_REB_MASS_SPIRAL))
