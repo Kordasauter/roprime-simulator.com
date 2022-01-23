@@ -1514,7 +1514,7 @@ function CalcRangedMod()
 	}
 	if(CardNumSearch( 541 ))
 	{ //Menblatt Card
-		n_tok[bon_DMG_RANGE] += Math.floor(n_A_DEX/10);
+		n_tok[bon_DMG_RANGE] += Math.floor(SU_DEX/10);
 	}
 	if ( usableItems[ksRaydricArcherTransScroll] && n_A_WeaponType === weapTyp_BOW)
 	{
