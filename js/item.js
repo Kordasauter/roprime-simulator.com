@@ -1455,14 +1455,14 @@
 ,[1449,itm_type_ARMOR,4000,60,0,0,100,85,bon_MDEF,3,bon_STR,1,bon_DEFIGN_RC_DEMI_HUMAN,10,bon_DEFIGN_RC_BRUTE,10,bon_NONE] // "Bone Plate"
 ,[1450,itm_type_SHOES,2117,15,0,1,30,105,bon_AGI,1,bon_ASPD_MUL,2,bon_NONE] // "Dance Shoes"
 ,[1451,weapTyp_DAGGER,58,130,3,1,70,99,bon_INT,3,bon_NONE] // "Kurenai"
-,[1452,weapTyp_DAGGER,58,120,3,1,60,110,bon_INT,3,bon_MATK,100,bon_NONE] // "Kodaichi"
-,[1453,weapTyp_DAGGER,58,50,4,1,60,110,bon_MATK,120,bon_RED_CAST,5,bon_NONE] // "Mikazuki"
-,[1454,itm_type_ARMOR,58,70,0,"0/1",120,100,bon_AGI,1,bon_NONE] // Special Ninja Suit
-,[1455,itm_type_ARMOR,58,90,0,1,180,100,bon_HP_MUL,15,bon_SP_MUL,-30,bon_NONE] // Ninja Scale Armor
-,[1456,itm_type_ARMOR,58,60,0,1,150,100,bon_AGI,1,bon_NONE] // Special Alloy Armor
+,[1452,weapTyp_DAGGER,58,120,3,1,60,110,bon_INT,3,bon_MATK,100,bon_NONE] // "Kodaichi"/"Raksasa Dagger"
+,[1453,weapTyp_DAGGER,58,50,4,1,60,110,bon_MATK,120,bon_RED_CAST,5,bon_NONE] // "Mikazuki"/"Mikatsuki"
+,[1454,itm_type_ARMOR,58,70,0,"0/1",120,100,bon_AGI,1,bon_NONE] // "Special Ninja Suit"
+,[1455,itm_type_ARMOR,58,90,0,1,180,100,bon_HP_MUL,15,bon_SP_MUL,-30,bon_NONE] // "Ninja Scale Armor"
+,[1456,itm_type_ARMOR,58,60,0,1,150,100,bon_AGI,1,bon_NONE] // "Special Alloy Armor" / "Tenebris Latitantes"
 ,[1457,itm_type_SHIELD,58,45,0,1,20,100,bon_FLEE,5,bon_NONE] // "Fox inscribed Armguard"
-,[1458,itm_type_SHIELD,58,70,0,1,25,100,bon_NONE] // "Wolf inscribed Armguard"
-,[1459,itm_type_SHIELD,58,45,0,1,25,100,bon_NONE] // "Crescent Moon Inscribed Armguard"
+,[1458,itm_type_SHIELD,58,70,0,1,25,100,bon_NONE] // "Wolf inscribed Armguard" / "Wolf Armguard"
+,[1459,itm_type_SHIELD,58,45,0,1,25,100,bon_NONE] // "Crescent Moon Inscribed Armguard" / "Crescent Armguard"
 ,[1460,itm_type_SET,0,0,0,0,0,0,bon_AGI,2,bon_NONE] // Fox inscribed Armguard + Special Ninja Suit
 ,[1461,itm_type_SET,0,0,0,0,0,0,bon_PHY_ATK,10,bon_STR,2,bon_NONE] // Wolf inscribed Armguard + Ninja Scale Armor
 ,[1462,itm_type_SET,0,0,0,0,0,0,bon_PDODGE,10,bon_FLEE,10,bon_NONE] // Crescent Moon Inscribed Armguard + Special Alloy Armor
@@ -1670,7 +1670,7 @@
 ,[1664,itm_type_HEAD_UPPER,0,0,0,0,0,1,bon_AGI,2,bon_ASPD_MUL,10,bon_NONE] // "Red Fox Ears"
 ,[1665,itm_type_HEAD_UPPER,0,0,0,0,0,1,bon_AGI,2,bon_ASPD_MUL,10,bon_CRIT,100,bon_DMG_RANGE,5,bon_NONE] // "Red Fox Ears(transformation mode)"
 ,[1666,itm_type_HEAD_UPPER,0,0,0,1,30,1,bon_MATK_MUL,5,bon_MDEF,5,bon_NONE] // "Headband Beret"
-,[1667,itm_type_HEAD_UPPER,0,0,0,1,30,1,bon_RED_CASTDELAY,-5,bon_NONE] // "Bandeau of Lovers"
+,[1667,itm_type_HEAD_UPPER,0,0,0,1,30,1,bon_RED_CASTDELAY,5,bon_NONE] // "Bandeau of Lovers"
 ,[1668,itm_type_HEAD_LOWER,0,0,0,0,20,0,bon_NONE] // "Silk Heart"
 ,[1669,itm_type_SET,0,0,0,0,0,0,bon_RED_CAST,-10,bon_NONE] // "Bandeau of Lovers + Silk Heart"
 ,[1670,itm_type_HEAD_LOWER,0,0,0,0,10,1,bon_ATK,30,bon_HP_MUL,-2,bon_NONE] // "Spiked Mask"
@@ -1702,8 +1702,9 @@
 ,[1696,weapTyp_GATLING_GUN,0,250,4,0,250,140,bon_HIT,-25,bon_CRIT,10,bon_DMG_RANGE,20,bon_NONE] // "Tempest"
 ,[1697,weapTyp_GRENADE_LAUNCHER,0,410,4,1,240,110,bon_NONE] // "End Of The Horizon"
 ,[1698,weapTyp_GRENADE_LAUNCHER,0,480,4,0,200,141,bon_NONE] // "Southern Cross"
-// ,[1699,itm_type,0,0,0,0,0,0,bon_NONE] // ""
-// ,[1700,itm_type,0,0,0,0,0,0,bon_NONE] // ""
+,[1699,weapTyp_HUUMA_SHURIKEN,0,150,3,2,150,110,bon_MATK,50,bon_DMG_SKILL+728,20,bon_NONE] // "Huuma Swirling Petal"
+,[1700,weapTyp_HUUMA_SHURIKEN,0,200,4,0,150,110,bon_ELEMENT,ele_WATER,bon_MATK,50,bon_NONE] // "Huuma Fluttering Snow"
+,[1701,weapTyp_HUUMA_SHURIKEN,0,200,4,0,150,110,bon_ELEMENT,ele_WIND,bon_MATK,50,bon_NONE] // "Huuma Thunderstorm"
 ];
 ItemMax = ItemOBJ.length -1;
 }

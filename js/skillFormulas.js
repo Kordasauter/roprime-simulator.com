@@ -55,7 +55,7 @@ var RANGED_SKILLS = [
     skill_BC_ACID_DEMONSTRATION,
     skill_SHA_TRIANGLE_SHOT,
     skill_KAG_CROSS_STRIKE,
-    skill_KAG_HUUMA_SHURIKEN_STRIKE,
+    skill_KAG_SWIRLING_PETAL,
     skill_GEN_HALLUCINATION_DRUG,
 	skill_REB_FIRE_DANCE,
 	skill_REB_SHATTERING_STORM,
@@ -784,7 +784,7 @@ function CalcSkillDamage()
 			skill_MEC_COLD_SLOWER,
 			skill_KAG_CROSS_STRIKE,
 			skill_KAG_SPIRIT_BREAKER,
-			skill_KAG_HUUMA_SHURIKEN_STRIKE,
+			skill_KAG_SWIRLING_PETAL,
 			skill_KAG_THROW_EXPLOSIVE_KUNAI,
 			skill_GLT_DARK_CLAW,
 			skill_GEN_HALLUCINATION_DRUG,
@@ -1625,10 +1625,11 @@ function CalcSkillDamage()
 			fixedCastTime *= 0.0;
 			variableCastTime *= 0.0;
 		}
-		else if ( n_A_ActiveSkill === skill_KAG_HUUMA_SHURIKEN_STRIKE )
+		else if ( n_A_ActiveSkill === skill_KAG_SWIRLING_PETAL )
 		{
 			damageType = kDmgTypeRanged;
-			w_SkillMod = (( n_A_ActiveSkillLV * 1.5 ) + ( n_A_DEX + n_A_AGI ) / 200.0 + 2.5) * n_A_BaseLV / 100.0;
+			//[Base_Damage + (Throw_Huuma_Shuriken_Lv x 100) + AGI + DEX]%
+			w_SkillMod = ( n_A_ActiveSkillLV * 1.5 ) + (( n_A_DEX + n_A_AGI )/100) + 5; //+5 is (Throw_Huuma_Shuriken_Lv5 x 100)
 			fixedCastTime *= 0.0;
 			variableCastTime *= 0.0;
 		}

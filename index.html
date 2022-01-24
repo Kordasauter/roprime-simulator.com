@@ -89,6 +89,32 @@
 							<tr>
 								<td class="bgLtRow3 padded optCaption">
 								<center><u><b>If you have any issue with update try to force refresh the page (CTRL + F5)</b></u></center>
+								<u><b>24/01/2022:</b></u>
+									<ul style="margin-left: 5px;">
+										<li><b>Has been fixed :</b></li>
+											<ul>
+												<li>Bandeau of Lovers' after cast delay bonus</li>
+												<li>Swirling Petal formula</li>
+											</ul>
+										<li><b>Has been added :</b></li>
+											<ul>
+												<li>Huuma Swirling Petal (Weapon/Huuma Shuriken)</li>
+												<li>Huuma Fluttering Snow (Weapon/Huuma Shuriken)</li>
+												<li>Huuma Thunderstorm (Weapon/Huuma Shuriken)</li>
+												<li>Ninja enchants for weapons (ninja enchant for armors will come later)</li>
+											</ul>
+										<li><b>Has been renamed :</b></li>
+											<ul>
+												<li>The skill "Huuma Shuriken Strike" renamed "Swirling Petal"</li>
+												<li>The weapon "Kodaichi" renamed "Raksasa Dagger"</li>
+												<li>The weapon "Mikazuki" renamed "Mikatsuki"</li>
+												<li>The armor "Special Alloy Armor" renamed "Tenebris Latitantes"</li>
+												<li>The armor "Wolf inscribed Armguard" renamed "Wolf Armguard"</li>
+												<li>The armor "Crescent Moon Inscribed Armguard" renamed "Crescent Armguard"</li>
+											</ul>
+									</ul>
+								-Kord
+								<br>
 								<u><b>23/01/2022:</b></u>
 									<ul style="margin-left: 5px;">
 										<li><b>Has been Fixed :</b></li>
@@ -100,21 +126,6 @@
 											<ul>
 												<li>Menblatt Card (Garment)</li>
 												<li>Wakwak Card (Garment)</li>
-											</ul>
-									</ul>
-								-Kord
-								<br>
-								<u><b>22/01/2022:</b></u>
-									<ul style="margin-left: 5px;">
-										A GitHub repository is available <u><b><a href="https://github.com/Kordasauter/roprime-simulator.com">here</a></b></u>
-										<li><b>Has been Fixed :</b></li>
-											<ul>
-												<li>Fixed Clashing Spirale formula</li>
-												<li>Fixed Killing Stroke formula</li>
-											</ul>
-										<li><b>Has been Added :</b></li>
-											<ul>
-												<li>Recovery Light (Rod) has been added for Arc Bishop</li>
 											</ul>
 									</ul>
 								-Kord
@@ -131,6 +142,22 @@
 						<tbody>
 							<tr>
 								<td class="bgLtRow3 padded optCaption">
+									<u><b>22/01/2022:</b></u><input type="button" value="Show/Hide" onclick="javascript:$('#note22012022').toggle()">
+									<span style="display: none;" id="note22012022">
+										<ul style="margin-left: 5px;">
+											A GitHub repository is available <u><b><a href="https://github.com/Kordasauter/roprime-simulator.com">here</a></b></u>
+											<li><b>Has been Fixed :</b></li>
+												<ul>
+													<li>Fixed Clashing Spirale formula</li>
+													<li>Fixed Killing Stroke formula</li>
+												</ul>
+											<li><b>Has been Added :</b></li>
+												<ul>
+													<li>Recovery Light (Rod) has been added for Arc Bishop</li>
+												</ul>
+										</ul>
+									-Kord
+									</span><br>
 									<u><b>20/01/2022:</b></u><input type="button" value="Show/Hide" onclick="javascript:$('#note20012022').toggle()">
 									<span style="display: none;" id="note20012022">
 										<ul style="margin-left: 5px;">
@@ -899,7 +926,7 @@
 											<tr>
 												<td class="bgLtRow3 padded optCaption">
 													Name
-												<select name="A_Weapon_ATKplus" style="width: 50px; visibility: hidden;" onchange="StAllCalc()">
+												<select name="A_Weapon_ATKplus" style="width: 50px; visibility: hidden;" onchange="ClickWeaponRefine(this[this.selectedIndex].value)|StAllCalc()">
 												</select>
 												</td>
 												<td class="bgLtRow1 padded optArea">
@@ -950,13 +977,13 @@
 												</td>
 											</tr>
 											<tr>
-													<td class="bgLtRow3 padded optCaption">Malangdo Enchants</td>
+													<td class="bgLtRow3 padded optCaption">Enchants</td>
 													<td class="bgLtRow1 padded optArea">
 														<select name="A_Mal_Ench1" style="width: 200px;" disabled onchange="StAllCalc()|DisplayEnchantDescription(this[this.selectedIndex].value)">
-															<option value="0">"(No Enchant)"</option>
+															<option value="0">(No Enchant)</option>
 														</select><br>
 														<select name="A_Mal_Ench2" style="width: 200px;" disabled onchange="StAllCalc()|DisplayEnchantDescription(this[this.selectedIndex].value)">
-															<option value="0">"(No Enchant)"</option>
+															<option value="0">(No Enchant)</option>
 														</select>
 													</td>
 											</tr>

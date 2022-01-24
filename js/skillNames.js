@@ -728,7 +728,7 @@ SKILL_NAME = [
 ,["16th Night","16th Night"]
 ,["Spin Throw Kunai","Spin Throw Kunai"]
 ,["Spirit Breaker","Spirit Breaker"]
-,["Huuma shuriken Strike","Huuma shuriken Strike"]
+,["Swirling Petal","Swirling Petal"]
 ,["Throw Explosive Kunai","Throw Explosive Kunai"]
 ,["Summon Elemental Seal","Summon Elemental Seal"]
 ,["Seals Element","Seals element"]
