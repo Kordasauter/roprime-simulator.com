@@ -328,6 +328,7 @@ WordData = [
 ,["","Raydric Archer Trans. Scroll"]//265
 ,["","Marduk Tranformation Scroll"]
 ,["","Archmage Potion"]
+,["","Damage on Scaraba monsters"]
 //,["","xxx"]
 ];
 }

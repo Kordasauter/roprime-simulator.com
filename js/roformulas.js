@@ -1118,6 +1118,10 @@ function CalcSpecialRacialMod()
 	{ // Golem
 		specialRacialMod = n_tok[bon_DMG_GOLEM];
 	}
+	if (n_B[en_ID] >= 549 && n_B[en_ID] <= 557)
+	{
+		specialRacialMod = n_tok[bon_DMG_SCARABA];
+	}
 }
 
 function CalcSizeMod()
@@ -4723,6 +4727,10 @@ function calcRaceElementalReduction()
 	if ( n_A_SHOULDER_DEF_PLUS >= 9 && CardNumSearch( 403 ) )
 	{ // Orc Baby Card
 		n_tok[bon_RED_ELE_NEUTRAL] += 5;
+	}
+	if ( CardNumSearch( 452 ) && n_A_HEAD_DEF_PLUS >= 9)
+	{ // Enchanted Peach Tree Card and Acolyte
+		n_tok[bon_RED_RC_INSECT] += 5;
 	}
 	
 	// Equipment modifiers

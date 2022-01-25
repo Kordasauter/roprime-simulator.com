@@ -926,7 +926,16 @@ function StPlusCalc()
 		if(n_A_JobSearch()==cls_ACO || n_A_JobSearch()==cls_ARC || n_A_JobSearch()==cls_MAG)
 			wSPC_INT += 2;
 	}
-	
+	if(CardNumSearch(543)) //Siorava
+	{ // Siorava
+		if(n_A_JobSearch()==cls_MER)
+			wSPC_LUK += Math.floor(n_A_HEAD_DEF_PLUS / 3);
+	}
+	if(CardNumSearch(546)) //Dolomedes
+	{ // Dolomedes
+		if(n_A_JobSearch()==cls_ARC)
+			wSPC_DEX += Math.floor(n_A_HEAD_DEF_PLUS / 3);
+	}
 	var numMegs = EquipNumSearch( 348 );
 	for ( var i = 0; i < numMegs; i++ )
 	{ // Megingjard

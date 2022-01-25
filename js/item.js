@@ -1835,6 +1835,8 @@ function BuildItemDescription( bonusType, bonusValue )
 		CBIstr += GetWord(199) + bonusValue +"%"+ GetWord(200) +"<br/>";
 	if(87 == bonusType)
 		CBIstr += GetWord(40) + wIS + bonusValue +"%<br/>";
+	if(bon_DMG_SCARABA == bonusType)
+		CBIstr += GetWord(268) + wIS + bonusValue +"%<br/>";
 	if ( bonusType === bon_MATK )
 	{
 		CBIstr += "[" + GetWord( 22 ) + "]" + wIS + bonusValue +"<br/>";
