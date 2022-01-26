@@ -143,19 +143,33 @@ function clashingATKFormula(weight)
 	CalcAtk();
 	
 	// for damage calculation
-	var tempAttack = (weight + equipmentAttack + n_A_Weapon_ATK + weaponUpgradeAttack + overrefineAttack + strengthBonusAttack) * element[n_B[en_ELEMENT]][n_A_Weapon_element] / 100 * 0.8;
-	// multiply race mod
-	tempAttack *= ( racialMod + 100 ) / 100;
-	// multiply special race mod
-	tempAttack *= ( specialRacialMod + 100 ) / 100;
-	// multiply size mod
-	tempAttack *= ( sizeMod + 100 ) / 100;
-	// multiply boss mod
-	tempAttack *= ( bossMod + 100 ) / 100;
-	// multiply attack mod
-	tempAttack *= attackMod;
-	tempAttack += statusAttack * 2 * element[n_B[en_ELEMENT]][ele_NEUTRAL] / 100;
-	tempAttack = (Max(tempAttack,0));
+	var tempAttack = new Array();
+	var tempWeaponAttack = n_A_Weapon_ATK + strengthBonusAttack + weaponUpgradeAttack;
+	var masteryATK = CalcMasteryAtk();
+
+	tempAttack[0] = ( tempWeaponAttack - varianceAttack + minOverrefineAttack )/* * (( sizeMod + 100 ) / 100)*/;
+	tempAttack[2] = ( tempWeaponAttack + varianceAttack + overrefineAttack )/* * (( sizeMod + 100 ) / 100)*/;
+	tempAttack[1] = Math.floor( ( tempAttack[0] + tempAttack[2] ) / 2 );
+	
+	for(var i = 0; i < 3;i++)
+	{
+		tempAttack[i] += (weight + equipmentAttack + strengthBonusAttack) * element[n_B[en_ELEMENT]][n_A_Weapon_element] / 100 * 0.7;
+		// multiply race mod
+		tempAttack[i] *= ( racialMod + 100 ) / 100;
+		// multiply special race mod
+		tempAttack[i] *= ( specialRacialMod + 100 ) / 100;
+		// multiply size mod
+		//tempAttack *= ( sizeMod + 100 ) / 100;
+		// multiply boss mod
+		tempAttack[i] *= ( bossMod + 100 ) / 100;
+		// multiply attack mod
+		tempAttack[i] *= attackMod;
+		tempAttack[i] += ((statusAttack * 2) * 0.9) * element[n_B[en_ELEMENT]][ele_NEUTRAL] / 100;
+		tempAttack[i] += masteryATK;
+		
+		tempAttack[i] *= ( rangedMod + 100 ) / 100;
+		tempAttack[i] = (Max(tempAttack[i],0));
+	}
 	return tempAttack;
 }
 function CalcSkillDamageType() {
@@ -2859,26 +2873,17 @@ function CalcSkillDamage()
 		// this skill has a range of damage to be displayed
 		damageType = kDmgTypeRanged;
 		
-		// from irowiki
-		//(floor(statusATK x 0.9) + floor((ATK + Weight) x 0.7) + masteryATK) x floor(Base_Damage) x (BaseLvl ÷ 100)
-		
-		var statATK = CalcStatAtk();
-		
-		var baseATK = clashingATKFormula(ItemOBJ[n_A_Equip[0]][itm_WEIGHT]); //ATK + Weight
-		
-		var masteryATK = CalcMasteryAtk();
-		
-		var bonusDMG = (Math.floor(statATK * 0.9) + Math.floor(baseATK * 0.7) + masteryATK)/100;
-		
-		
+		var baseATK =new Array();
+		baseATK = clashingATKFormula(ItemOBJ[n_A_Equip[0]][itm_WEIGHT]); //ATK + Weight
+		//baseATK *= ((100+rangedMod)/100);
 		w_SkillMod = 1.5 + (n_A_ActiveSkillLV * 0.5);
-		w_SkillMod *= bonusDMG * (n_A_BaseLV / 100);
+		//w_SkillMod *= bonusDMG * (n_A_BaseLV / 100);
 		w_TotalHits = 5;
-		CalcAtkMods02(w_SkillMod,0);
+		//CalcAtkMods02(w_SkillMod,0);
 		
 		for ( var i = 0; i < 3; i++ )
 		{
-			w_DMG[i] =n_A_DMG[i]/5;
+			w_DMG[i] = baseATK[i] * w_SkillMod;
 			switch(n_B[en_SIZE])
 			{
 				case siz_SMALL:
