@@ -1684,7 +1684,7 @@
 ,[1678,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,bon_RED_RC_BRUTE,1,bon_NONE] // "Shadow Tamer Shield"
 ,[1679,itm_type_SHADOW_SHOES,0,0,0,0,0,0,bon_DMG_RC_BRUTE,2,bon_NONE] // "Shadow Tamer Boots"
 ,[1680,itm_type_SET,0,0,0,0,0,0,bon_EXP_RC_BRUTE,3,bon_NONE] // "Shadow Tamer Shield + Shadow Tamer Boots"
-,[1681,itm_type_HEAD_UPPER,0,15,0,0,20,1,bon_NONE] // "Amistr Hat"
+,[1681,itm_type_HEAD_UPPER,0,15,0,1,20,1,bon_NONE] // "Amistr Hat"
 ,[1682,itm_type_HEAD_UPPER,0,35,0,0,40,1,bon_NONE] // "Officer's Cap"
 ,[1683,itm_type_ACCESSORY,215,1,0,0,40,130,bon_STR,5,bon_HP_MUL,-6,bon_SP_MUL,6,bon_NONE] // "Glove Of Shura"
 ,[1684,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Amistr Hat + Holy Stick"
@@ -1705,6 +1705,7 @@
 ,[1699,weapTyp_HUUMA_SHURIKEN,0,150,3,2,150,110,bon_MATK,50,bon_DMG_SKILL+728,20,bon_NONE] // "Huuma Swirling Petal"
 ,[1700,weapTyp_HUUMA_SHURIKEN,0,200,4,0,150,110,bon_ELEMENT,ele_WATER,bon_MATK,50,bon_NONE] // "Huuma Fluttering Snow"
 ,[1701,weapTyp_HUUMA_SHURIKEN,0,200,4,0,150,110,bon_ELEMENT,ele_WIND,bon_MATK,50,bon_NONE] // "Huuma Thunderstorm"
+,[1702,itm_type_HEAD_UPPER,0,35,0,1,40,1,bon_NONE] // "Dog Cap"
 ];
 ItemMax = ItemOBJ.length -1;
 }

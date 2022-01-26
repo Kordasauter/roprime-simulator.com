@@ -663,7 +663,12 @@ function CalcEquipAtk()
 		if(SU_STR >= 120)
 			equipmentAttack += 30;
 	}
-	
+	if(EquipNumSearch(1702))
+	{ //"Dog Cap"
+		equipmentAttack += 15 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		if(n_A_HEAD_DEF_PLUS >= 7)
+			equipmentAttack += 30;
+	}
 	//shadows
 	if ( EquipNumSearch( 1661 ) )
 	{ // "Shadow Strongman Ring"
@@ -1249,6 +1254,11 @@ function CalcAttackMod()
 	{ //"Amistr Hat"
 		if(n_A_HEAD_DEF_PLUS >= 11) { n_tok[bon_PHY_ATK] += 5;}	
 	}
+	if(EquipNumSearch(1702))
+	{ //"Dog Cap"
+		if(n_A_HEAD_DEF_PLUS >= 9)
+			n_tok[bon_PHY_ATK] += 5;
+	}
 	
 	//items
 	if ( usableItems[ksArchmagePotion] )
@@ -1332,6 +1342,12 @@ function CalcCriticalMod()
 	{ //Fallen Angel Wing
 		n_tok[bon_DMG_CRIT] += Math.floor(SU_LUK/20);
 	}
+	if(EquipNumSearch(1702))
+	{ //"Dog Cap"
+		if(n_A_HEAD_DEF_PLUS >= 11)
+			n_tok[bon_DMG_CRIT] += 3;
+	}
+	
 	// Pets
 	if ( miscEffects[ksPetEffects] == 22 )
 	{ // Dullahan Pet
@@ -1520,6 +1536,12 @@ function CalcRangedMod()
 	{ //Fallen Angel Wing
 		n_tok[bon_DMG_RANGE] += Math.floor(SU_DEX/20);
 	}
+	if(EquipNumSearch(1702))
+	{ //"Dog Cap"
+		if(n_A_HEAD_DEF_PLUS >= 11)
+			n_tok[bon_DMG_RANGE] += 3;
+	}
+	
 	if(CardNumSearch( 541 ))
 	{ //Menblatt Card
 		n_tok[bon_DMG_RANGE] += Math.floor(SU_DEX/10);
@@ -4075,6 +4097,11 @@ function calcASPD()
 			flatASPD +=1;
 		}
 	}
+	if(EquipNumSearch(1702))
+	{ //"Dog Cap"
+		if(n_A_HEAD_DEF_PLUS >= 11)
+			flatASPD += 1;
+	}
 	// if ( SkillSearch( skill_RUN_FIGHTING_SPIRIT ) )
 	// { // Asir Rune
 		// flatASPD += SkillSearch( skill_RUN_RUNE_MASTERY ) / 10.0 * 4;
@@ -4338,6 +4365,21 @@ function CalcFixedCast()
 		if ( n_A_HEAD_DEF_PLUS >= 11 && n_A_HEAD_DEF_PLUS <= 15)
 		{
 			reductionFlat += -0.1*(n_A_HEAD_DEF_PLUS - 10);
+		}
+		else if( n_A_HEAD_DEF_PLUS > 15)
+		{
+			reductionFlat += -0.5*(n_A_HEAD_DEF_PLUS - 10);
+		}
+	}
+	if(EquipNumSearch(1702))
+	{ //"Dog Cap"
+		if ( n_A_HEAD_DEF_PLUS >= 11 && n_A_HEAD_DEF_PLUS <= 15)
+		{
+			reductionFlat += -0.1*(n_A_HEAD_DEF_PLUS - 10);
+		}
+		else if( n_A_HEAD_DEF_PLUS > 15)
+		{
+			reductionFlat += -0.5*(n_A_HEAD_DEF_PLUS - 10);
 		}
 	}
 	

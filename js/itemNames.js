@@ -1702,6 +1702,7 @@ ITEM_NAME = [
 ,[1699,0,0,"Huuma Swirling Petal",0]
 ,[1700,0,0,"Huuma Fluttering Snow","Has a chance to auto-spell [Snow Flake Draft] (Lv 1 or level learned)",0]
 ,[1701,0,0,"Huuma Thunderstorm","Has a chance to auto-spell [Lightning Jolt] (Lv 1 or level learned)",0]
+,[1702,0,0,"Dog Cap","[For each 2 refine lvl]<br>ATK +15.<br><br>[If refine lv +7 or higher]<br>ATK +30.<br><br>[If refine rate is 9 or higher]<br>ATK +5%, ASPD +1.<br><br>[If refine rate is 11 or higher]<br>Critical damage +6%.<br>Ranged physical attack +3%<br>Fixed casting -0,1 sec. per refine rate (apply up to 15 refinements).",0]
 ]
 };
 
