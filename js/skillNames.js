@@ -750,7 +750,7 @@ SKILL_NAME = [
 ,["","Fallen Angel"]
 ,["","Fire Dance"]
 ,["","Hit Barrel"]
-,["","Skattering Storm"]
+,["","Shattering Storm"]
 ,["","Vanishing Buster"]
 ,["","Slug Shot"]
 ,["","Mass Spiral"]

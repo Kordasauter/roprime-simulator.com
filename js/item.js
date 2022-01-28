@@ -1706,6 +1706,11 @@
 ,[1700,weapTyp_HUUMA_SHURIKEN,0,200,4,0,150,110,bon_ELEMENT,ele_WATER,bon_MATK,50,bon_NONE] // "Huuma Fluttering Snow"
 ,[1701,weapTyp_HUUMA_SHURIKEN,0,200,4,0,150,110,bon_ELEMENT,ele_WIND,bon_MATK,50,bon_NONE] // "Huuma Thunderstorm"
 ,[1702,itm_type_HEAD_UPPER,0,35,0,1,40,1,bon_NONE] // "Dog Cap"
+,[1703,weapTyp_GATLING_GUN,0,180,3,1,0,100,bon_HIT,-20,bon_CRIT,10,bon_ASPD_ADD,1,bon_DMG_SKILL+760,20,bon_NONE] // "Probation Gatling Gun"
+,[1704,weapTyp_GRENADE_LAUNCHER,0,350,3,1,0,100,bon_DMG_SKILL+759,20,bon_NONE] // "Probation Grenade Launcher"
+,[1705,weapTyp_HANDGUN,0,120,3,1,0,100,bon_DMG_SKILL+748,20,bon_NONE] // "Probation Revolver"
+,[1706,weapTyp_RIFLE,0,200,3,1,0,100,bon_HIT,10,bon_CRIT,20,bon_DMG_SKILL+755,20,bon_NONE] // "Probation Rifle"
+,[1707,weapTyp_SHOTGUN,0,180,3,1,0,100,bon_HIT,-10,bon_DMG_SKILL+750,20,bon_NONE] // "Probation Shotgun"
 ];
 ItemMax = ItemOBJ.length -1;
 }

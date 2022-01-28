@@ -1703,6 +1703,11 @@ ITEM_NAME = [
 ,[1700,0,0,"Huuma Fluttering Snow","Has a chance to auto-spell [Snow Flake Draft] (Lv 1 or level learned)",0]
 ,[1701,0,0,"Huuma Thunderstorm","Has a chance to auto-spell [Lightning Jolt] (Lv 1 or level learned)",0]
 ,[1702,0,0,"Dog Cap","[For each 2 refine lvl]<br>ATK +15.<br><br>[If refine lv +7 or higher]<br>ATK +30.<br><br>[If refine rate is 9 or higher]<br>ATK +5%, ASPD +1.<br><br>[If refine rate is 11 or higher]<br>Critical damage +6%.<br>Ranged physical attack +3%<br>Fixed casting -0,1 sec. per refine rate (apply up to 15 refinements).",0]
+,[1703,0,0,"Probation Gatling Gun","Atk + 6 for every 10 base levels up to a maximum base level of 160.<br>If upgrade level is +7 or higher,<br>Increases long-ranged damage on targets by 1% per level of Gatling Fever known.",0]
+,[1704,0,0,"Probation Grenade Launcher","Atk + 6 for every 10 base levels up to a maximum base level of 160.",0]
+,[1705,0,0,"Probation Revolver","Atk + 6 for every 10 base levels up to a maximum base level of 160.<br>If upgrade level is +7 or higher,<br>Increases long-ranged damage on targets by 1% per level of Chain Action known.",0]
+,[1706,0,0,"Probation Rifle","Atk + 6 for every 10 base levels up to a maximum base level of 160.<br>If upgrade level is +7 or higher,<br>Increases long-ranged damage on targets by 1% per level of Tracking known.",0]
+,[1707,0,0,"Probation Shotgun","Atk + 6 for every 10 base levels up to a maximum base level of 160.",0]
 ]
 };
 

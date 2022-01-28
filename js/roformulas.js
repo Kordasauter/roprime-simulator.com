@@ -669,6 +669,18 @@ function CalcEquipAtk()
 		if(n_A_HEAD_DEF_PLUS >= 7)
 			equipmentAttack += 30;
 	}
+	if(EquipNumSearch(1703) || EquipNumSearch(1704) || EquipNumSearch(1705) || EquipNumSearch(1706) || EquipNumSearch(1707))
+	{ //"Probation Gatling Gun" "Probation Grenade Launcher" "Probation Revolver" "Probation Rifle" "Probation Shotgun "
+		if(n_A_BaseLV <= 160)
+		{
+			equipmentAttack += 6 * Math.floor(n_A_BaseLV / 10);
+		}
+		else
+		{
+			equipmentAttack += 96;
+		}
+		
+	}
 	//shadows
 	if ( EquipNumSearch( 1661 ) )
 	{ // "Shadow Strongman Ring"
@@ -1540,6 +1552,27 @@ function CalcRangedMod()
 	{ //"Dog Cap"
 		if(n_A_HEAD_DEF_PLUS >= 11)
 			n_tok[bon_DMG_RANGE] += 3;
+	}
+	if(EquipNumSearch(1703))
+	{ //"Probation Gatling Gun"
+		if(n_A_Weapon_ATKplus >= 7)
+		{
+			n_tok[bon_DMG_RANGE] += SkillSearch(433);
+		}
+	}
+	if(EquipNumSearch(1705))
+	{ //"Probation Revolver"
+		if(n_A_Weapon_ATKplus >= 7)
+		{
+			n_tok[bon_DMG_RANGE] += SkillSearch(427);
+		}
+	}
+	if(EquipNumSearch(1706))
+	{ //"Probation Rifle"
+		if(n_A_Weapon_ATKplus >= 7)
+		{
+			n_tok[bon_DMG_RANGE] += SkillSearch(427);
+		}
 	}
 	
 	if(CardNumSearch( 541 ))

@@ -621,7 +621,7 @@ function AdjustBaseLevelList( job )
 	}
 	else if ( len < maxBaseLvl )
 	{
-		if ( thirdClass === 1 ) {
+		if ( thirdClass === 1 || job == cls_REB) {
 		    for ( var i = maxBaseLvl; i !== len; i-- )
 		    {
 			    // delete options
