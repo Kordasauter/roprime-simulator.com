@@ -135,6 +135,11 @@ function CalcBaseHeal( HealLv, maxHeal )
 		healMultiplier += (n_A_HEAD_DEF_PLUS-6);
 	}
 	
+	if ( EquipNumSearch( 1730 ) )// "Shadow Alchemist Boots"
+	{ 
+		healMultiplier += n_A_SHADOW_SHOES_DEF_PLUS * 7;
+	}	
+	
 	if ( CardNumSearch( 534 ))
 	{ // Parus Card
 		if(n_A_JobSearch()==cls_ACO)

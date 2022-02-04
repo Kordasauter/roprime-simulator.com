@@ -1711,6 +1711,57 @@
 ,[1705,weapTyp_HANDGUN,0,120,3,1,0,100,bon_DMG_SKILL+748,20,bon_NONE] // "Probation Revolver"
 ,[1706,weapTyp_RIFLE,0,200,3,1,0,100,bon_HIT,10,bon_CRIT,20,bon_DMG_SKILL+755,20,bon_NONE] // "Probation Rifle"
 ,[1707,weapTyp_SHOTGUN,0,180,3,1,0,100,bon_HIT,-10,bon_DMG_SKILL+750,20,bon_NONE] // "Probation Shotgun"
+,[1708,itm_type_SHADOW_SHOES,0,0,0,0,0,0,bon_NONE] // "Shadow Warlock Boots"
+,[1709,itm_type_SHADOW_ARMOR,0,0,0,0,0,0,bon_NONE] // "Shadow Warlock Armor"
+,[1710,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,bon_NONE] // "Shadow Warlock Shield"
+,[1711,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Shadow Warlock Set"
+,[1712,itm_type_SHADOW_WEAPON,0,0,0,0,0,0,bon_ATK,10,bon_NONE] // "Shadow Swordsman Gloves"
+,[1713,itm_type_SHADOW_EARRING,0,0,0,0,0,0,bon_ASPD_MUL,1,bon_NONE] // "Shadow Swordsman Ring"
+,[1714,itm_type_SHADOW_PENDANT,0,0,0,0,0,0,bon_HP_ADD,100,bon_NONE] // "Shadow Swordsman Pendant"
+,[1715,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Shadow Swordsman Set"
+,[1716,itm_type_SHADOW_WEAPON,0,0,0,0,0,0,bon_MATK,10,bon_NONE] // "Shadow Diviner Gloves"
+,[1717,itm_type_SHADOW_PENDANT,0,0,0,0,0,0,bon_SP_ADD,50,bon_NONE] // "Shadow Diviner Pendant"
+,[1718,itm_type_SHADOW_EARRING,0,0,0,0,0,0,bon_RED_CAST,1,bon_NONE] // "Shadow Diviner Ring"
+,[1719,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Shadow Diviner Set"
+,[1720,itm_type_SHADOW_ARMOR,51,0,0,0,0,0,bon_NONE] // "Shadow Knight Armor"
+,[1721,itm_type_SHADOW_SHOES,51,0,0,0,0,0,bon_DMG_SKILL+skill_KN_PIERCE,20,bon_NONE] // "Shadow Knight Boots"
+,[1722,itm_type_SET,0,0,0,0,0,0,bon_DMG_SKILL+skill_KN_TWOHAND_QUICKEN,20,bon_NONE] // "Shadow Knight Set"
+,[1723,itm_type_SHADOW_ARMOR,51,0,0,0,0,0,bon_DMG_SKILL+skill_CR_GRAND_CROSS,20,bon_NONE] // "Shadow Crusader Armor"
+,[1724,itm_type_SHADOW_SHOES,51,0,0,0,0,0,bon_NONE] // "Shadow Crusader Boots"
+,[1725,itm_type_SET,0,0,0,0,0,0,bon_DMG_SKILL+skill_CR_HOLY_CROSS,20,bon_NONE] // "Shadow Crusader Set"
+,[1726,itm_type_SHADOW_ARMOR,56,0,0,0,0,0,bon_NONE] // "Shadow Blacksmith Armor"
+,[1727,itm_type_SHADOW_SHOES,56,0,0,0,0,0,bon_NONE] // "Shadow Blacksmith Boots"
+,[1728,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Shadow Blacksmith Set"
+,[1729,itm_type_SHADOW_ARMOR,56,0,0,0,0,0,bon_NONE] // "Shadow Alchemist Armor"
+,[1730,itm_type_SHADOW_SHOES,56,0,0,0,0,0,bon_HEAL_MUL,30,bon_NONE] // "Shadow Alchemist Boots"
+,[1731,itm_type_SET,0,0,0,0,0,0,bon_SKILL_ENABLE,51,bon_NONE] // "Shadow Alchemist Set"
+,[1732,itm_type_SHADOW_ARMOR,53,0,0,0,0,0,bon_DMG_SKILL+skill_PR_MAGNUS_EXORCISMUS,20,bon_NONE] // "Shadow Priest Armor"
+,[1733,itm_type_SHADOW_SHOES,53,0,0,0,0,0,bon_NONE] // "Shadow Priest Boots"
+,[1734,itm_type_SET,0,0,0,0,0,0,bon_MATK_MUL,3,bon_CAST_SKILL+skill_PR_MAGNUS_EXORCISMUS,40,bon_NONE] // "Shadow Priest Set"
+,[1735,itm_type_SHADOW_ARMOR,53,0,0,0,0,0,bon_DMG_SKILL+skill_MO_THROW_SPIRIT_SPHERES,20,bon_DMG_SKILL+skill_MO_OCCULT_IMPACTION,20,bon_NONE] // "Shadow Monk Armor"
+,[1736,itm_type_SHADOW_SHOES,53,0,0,0,0,0,bon_DMG_SKILL+skill_MO_RAGING_QUADRUPLE_BLOW,20,bon_NONE] // "Shadow Monk Boots"
+,[1737,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Shadow Monk Set"
+,[1738,itm_type_SHADOW_ARMOR,52,0,0,0,0,0,bon_NONE] // "Shadow Assassin Armor"
+,[1739,itm_type_SHADOW_SHOES,52,0,0,0,0,0,bon_DMG_SKILL+skill_AS_GRIMTOOTH,20,bon_NONE] // "Shadow Assassin Boots"
+,[1740,itm_type_SET,0,0,0,0,0,0,bon_DMG_SKILL+skill_AS_SONIC_BLOW,20,bon_NONE] // "Shadow Assassin Set"
+,[1741,itm_type_SHADOW_ARMOR,52,0,0,0,0,0,bon_DMG_SKILL+skill_RG_SIGHTLESS_MIND,20,bon_NONE] // "Shadow Rogue Armor"
+,[1742,itm_type_SHADOW_SHOES,52,0,0,0,0,0,bon_NONE] // "Shadow Rogue Boots"
+,[1743,itm_type_SET,0,0,0,0,0,0,bon_DMG_SIZ_LARGE,3,bon_DMG_SIZ_MEDIUM,3,bon_DMG_SIZ_SMALL,3,bon_NONE] // "Shadow Rogue Set"
+,[1744,itm_type_SHADOW_ARMOR,55,0,0,0,0,0,bon_DMG_SKILL+skill_WI_JUPITEL_THUNDER,20,bon_NONE] // "Shadow Wizard Armor"
+,[1745,itm_type_SHADOW_SHOES,55,0,0,0,0,0,bon_CAST_SKILL+skill_WI_METEOR_STORM,20,bon_CAST_SKILL+skill_WI_LORD_OF_VERMILLION,20,bon_CAST_SKILL+skill_WI_STORM_GUST,20,bon_NONE] // "Shadow Wizard Boots"
+,[1746,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Shadow Wizard Set"
+,[1747,itm_type_SHADOW_ARMOR,55,0,0,0,0,0,bon_NONE] // "Shadow Sage Armor"
+,[1748,itm_type_SHADOW_SHOES,55,0,0,0,0,0,bon_DMG_SKILL+skill_SA_HEAVENS_DRIVE,20,bon_NONE] // "Shadow Sage Boots"
+,[1749,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Shadow Sage Set"
+,[1750,itm_type_SHADOW_ARMOR,54,0,0,0,0,0,bon_CAST_SKILL+skill_HU_BLAST_MINE,20,bon_CAST_SKILL+skill_HU_LAND_MINE,20,bon_NONE] // "Shadow Hunter Armor"
+,[1751,itm_type_SHADOW_SHOES,54,0,0,0,0,0,bon_CAST_SKILL+skill_HU_BLITZ_BEAT,20,bon_CAST_SKILL+skill_SN_FALCON_ASSAULT,20,bon_NONE] // "Shadow Hunter Boots"
+,[1752,itm_type_SET,0,0,0,0,0,0,bon_DMG_SIZ_LARGE,3,bon_DMG_SIZ_MEDIUM,3,bon_DMG_SIZ_SMALL,3,bon_NONE] // "Shadow Hunter Set"
+,[1753,itm_type_SHADOW_ARMOR,54,0,0,0,0,0,bon_NONE] // "Shadow Bard Armor"
+,[1754,itm_type_SHADOW_SHOES,54,0,0,0,0,0,bon_NONE] // "Shadow Bard Boots"
+,[1755,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Shadow Bard Set"
+,[1756,itm_type_SHADOW_ARMOR,54,0,0,0,0,0,bon_NONE] // "Shadow Dancer Armor"
+,[1757,itm_type_SHADOW_SHOES,54,0,0,0,0,0,bon_NONE] // "Shadow Dancer Boots"
+,[1758,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Shadow Dancer Set"
 ];
 ItemMax = ItemOBJ.length -1;
 }
@@ -1905,9 +1956,9 @@ function BuildItemDescription( bonusType, bonusValue )
 	if(330 <= bonusType && bonusType <=339)
 		CBIstr += GetWord(184) + "[" + ZokuseiOBJ[bonusType-330][Language] + "] element monsters by" + wIS + bonusValue +"%<br/>";
 		//CBIstr += ZokuseiOBJ[bonusType-330][Language] +"Monster Tolerance Attributes "+ wIS + bonusValue +"%<br/>";
-	if(5000 <= bonusType && bonusType <= 6999)
+	if(bon_DMG_SKILL <= bonusType && bonusType <= 6999)
 		CBIstr += "[" + SKILL_NAME[bonusType -5000][Language] + GetWord(223) + wIS + bonusValue +"%<br/>";
-	if(7000 <= bonusType && bonusType <= 8999)
+	if(bon_CAST_SKILL <= bonusType && bonusType <= 8999)
 	{
 		/*if(bonusValue > 0)
 			CBIstr += "["+ SKILL_NAME[bonusType -7000][Language] +"] Cast Time "+ bonusValue +"%<br/>";
@@ -2084,7 +2135,22 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[1684,1681,863,"NULL"] // "Amistr Hat + Holy Stick"
 ,[1685,1681,932,"NULL"] // "Amistr Hat + Twin Edge of Naght Sieger(blue)"
 ,[1686,1681,933,"NULL"] // "Amistr Hat + Twin Edge of Naght Sieger(red)"
-
+,[1711,1708,1709,1710,"NULL"] // "Shadow Warlock Set"
+,[1715,1712,1713,1714,"NULL"] // "Shadow Swordman Set"
+,[1719,1716,1717,1718,"NULL"] // "Shadow Diviner Set"
+,[1722,1720,1721,"NULL"] // "Shadow Knight Set"
+,[1725,1723,1724,"NULL"] // "Shadow Crusader Set"
+,[1728,1726,1727,"NULL"] // "Shadow Blacksmith Set"
+,[1731,1729,1730,"NULL"] // "Shadow Alchemist Set"
+,[1734,1732,1733,"NULL"] // "Shadow Priest Set"
+,[1737,1735,1736,"NULL"] // "Shadow Monk Set"
+,[1740,1738,1739,"NULL"] // "Shadow Assassin Set"
+,[1743,1741,1742,"NULL"] // "Shadow Rogue Set"
+,[1746,1744,1745,"NULL"] // "Shadow Wizard Set"
+,[1749,1747,1748,"NULL"] // "Shadow Sage Set"
+,[1752,1750,1751,"NULL"] // "Shadow Hunter Set"
+,[1755,1753,1754,"NULL"] // "Shadow Bard Set"
+,[1758,1756,1757,"NULL"] // "Shadow Dancer Set"
 
 //,[itm_set,item1,item2,...,"NULL"]
 

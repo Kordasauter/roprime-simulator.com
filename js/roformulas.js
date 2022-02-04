@@ -690,6 +690,43 @@ function CalcEquipAtk()
 	{ // "Shadow Strongman Ring"
 		equipmentAttack += n_A_SHADOW_PENDANT_DEF_PLUS;
 	}
+	if ( EquipNumSearch( 1729 ) )// "Shadow Alchemist Armor"
+	{ 
+		equipmentAttack += SkillSearch(skill_AL_POTION_RESEARCH);
+		if(n_A_SHADOW_BODY_DEF_PLUS > 6)
+		equipmentAttack += (1+(n_A_SHADOW_BODY_DEF_PLUS - 6)) * SkillSearch(skill_AL_POTION_RESEARCH);
+	}	
+	if ( EquipNumSearch( 1742 ) )// "Shadow Rogue Boots"
+	{ 
+		equipmentAttack += SkillSearch(skill_SW_SWORD_MASTERY);
+		if(n_A_SHADOW_BODY_DEF_PLUS > 6)
+		equipmentAttack += (1+(n_A_SHADOW_BODY_DEF_PLUS - 6)) * SkillSearch(skill_SW_SWORD_MASTERY);
+	}
+	if ( EquipNumSearch( 1754 ) )// "Shadow Bard Boots"
+	{ 
+		equipmentAttack += SkillSearch(skill_BA_MUSIC_LESSONS);
+		if(n_A_SHADOW_BODY_DEF_PLUS > 6)
+		equipmentAttack += (1+(n_A_SHADOW_BODY_DEF_PLUS - 6)) * SkillSearch(skill_BA_MUSIC_LESSONS);
+	}
+	if ( EquipNumSearch( 1757 ) )// "Shadow Dancer Boots"
+	{ 
+		equipmentAttack += SkillSearch(skill_DA_DANCE_LESSONS);
+		if(n_A_SHADOW_BODY_DEF_PLUS > 6)
+		equipmentAttack += (1+(n_A_SHADOW_BODY_DEF_PLUS - 6)) * SkillSearch(skill_DA_DANCE_LESSONS);
+	}
+	if ( EquipNumSearch( 1712 ) )// "Shadow Swordsman Gloves"
+	{ 
+		equipmentAttack += n_A_SHADOW_WEAPON_DEF_PLUS;
+	}
+	if ( EquipNumSearch( 1715 ) )
+	{ // "Shadow Swordsman Set"
+		equipmentAttack += n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_PENDANT_DEF_PLUS;
+	}
+	if ( EquipNumSearch( 1716 ) )// "Shadow Diviner Gloves"
+	{ 
+		equipmentAttack += n_A_SHADOW_WEAPON_DEF_PLUS;
+	}
+	
 	//Enchante
 	if(EnchNumSearch( 281 ))//Special STR = 281
 	{
@@ -1150,6 +1187,21 @@ function CalcSizeMod()
 		if (n_A_Weapon_ATKplus >= 6) { n_tok[bon_DMG_SIZ_SMALL] += 5; n_tok[bon_DMG_SIZ_MEDIUM] += 5; n_tok[bon_DMG_SIZ_LARGE] += 5; }
 		if (n_A_Weapon_ATKplus >= 9) { n_tok[bon_DMG_SIZ_SMALL] += 5; n_tok[bon_DMG_SIZ_MEDIUM] += 5; n_tok[bon_DMG_SIZ_LARGE] += 5; }
 	}
+	if ( EquipNumSearch( 1726 ) )
+	{ // "Shadow Blacksmith Armor"
+		if( SkillSearch( skill_BS_WEAPON_PERFECTION ) )
+		{
+			n_tok[bon_DMG_SIZ_SMALL] += 5; 
+			n_tok[bon_DMG_SIZ_MEDIUM] += 5; 
+			n_tok[bon_DMG_SIZ_LARGE] += 5;
+			if(n_A_SHADOW_BODY_DEF_PLUS > 6)
+			{
+				n_tok[bon_DMG_SIZ_SMALL] += n_A_SHADOW_BODY_DEF_PLUS - 6; 
+				n_tok[bon_DMG_SIZ_MEDIUM] += n_A_SHADOW_BODY_DEF_PLUS - 6; 
+				n_tok[bon_DMG_SIZ_LARGE] += n_A_SHADOW_BODY_DEF_PLUS - 6;
+			}
+		}
+	}
 	
 	sizeMod = n_tok[bon_DMG_SIZ_SMALL + n_B[en_SIZE]];
 	if ( monsterBuffs[status_en_buff_Size] )
@@ -1244,6 +1296,15 @@ function CalcAttackMod()
 			n_tok[bon_PHY_ATK] += 5;
 		}
 	}
+	if(EquipNumSearch(1681))
+	{ //"Amistr Hat"
+		if(n_A_HEAD_DEF_PLUS >= 11) { n_tok[bon_PHY_ATK] += 5;}	
+	}
+	if(EquipNumSearch(1702))
+	{ //"Dog Cap"
+		if(n_A_HEAD_DEF_PLUS >= 9)
+			n_tok[bon_PHY_ATK] += 5;
+	}
 	//shadows
 	if ( EquipNumSearch( 1660 ) )
 	{ // "Shadow Strongman Gloves"
@@ -1262,15 +1323,21 @@ function CalcAttackMod()
 		if ((n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_PENDANT_DEF_PLUS) >= 20) { n_tok[bon_PHY_ATK] += 1; }
 		if ((n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_PENDANT_DEF_PLUS) >= 25) { n_tok[bon_PHY_ATK] += 1; }
 	}
-	if(EquipNumSearch(1681))
-	{ //"Amistr Hat"
-		if(n_A_HEAD_DEF_PLUS >= 11) { n_tok[bon_PHY_ATK] += 5;}	
+	if ( EquipNumSearch( 1712 ) )
+	{ // "Shadow Swordsman Gloves"
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7)
+		{
+			n_tok[bon_PHY_ATK] += 1;
+		}
 	}
-	if(EquipNumSearch(1702))
-	{ //"Dog Cap"
-		if(n_A_HEAD_DEF_PLUS >= 9)
-			n_tok[bon_PHY_ATK] += 5;
+	if ( EquipNumSearch( 1715 ) )
+	{ // "Shadow Swordsman Set"
+		if((n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_PENDANT_DEF_PLUS) >= 23)
+		{
+			n_tok[bon_PHY_ATK] += 1;
+		}
 	}
+	
 	
 	//items
 	if ( usableItems[ksArchmagePotion] )
@@ -2096,6 +2163,54 @@ function calcHP()
 	{ // "Shadow Tamer Boots"
 		additiveHP += n_A_SHADOW_SHOES_DEF_PLUS * 10; 
 	}
+	if ( EquipNumSearch( 1709 ) || // "Shadow Warlock Armor"
+		 EquipNumSearch( 1720 ) || // "Shadow Knight Armor"
+		 EquipNumSearch( 1723 ) || // "Shadow Crusader Armor"
+		 EquipNumSearch( 1726 ) || // "Shadow Blacksmith Armor"
+		 EquipNumSearch( 1729 ) || // "Shadow Alchemist Armor"
+		 EquipNumSearch( 1732 ) || // "Shadow Priest Armor"
+		 EquipNumSearch( 1735 ) || // "Shadow Monk Armor"
+		 EquipNumSearch( 1738 ) || // "Shadow Assassin Armor"
+		 EquipNumSearch( 1741 ) || // "Shadow Rogue Armor"
+		 EquipNumSearch( 1744 ) || // "Shadow Wizard Armor"
+		 EquipNumSearch( 1747 ) || // "Shadow Sage Armor"
+		 EquipNumSearch( 1750 ) || // "Shadow Hunter Armor"
+		 EquipNumSearch( 1753 ) || // "Shadow Bard Armor"
+		 EquipNumSearch( 1756 ) )  // "Shadow Dancer Armor"
+	{ // 
+		additiveHP += n_A_SHADOW_BODY_DEF_PLUS * 10; 
+	}
+	if ( EquipNumSearch( 1708 ) || // "Shadow Warlock Boots"
+		 EquipNumSearch( 1721 ) || // "Shadow Knight Boots"
+		 EquipNumSearch( 1724 ) || // "Shadow Crusader Boots"
+		 EquipNumSearch( 1727 ) || // "Shadow Blacksmith Boots"
+		 EquipNumSearch( 1730 ) || // "Shadow Alchemist Boots"
+		 EquipNumSearch( 1733 ) || // "Shadow Priest Boots"
+		 EquipNumSearch( 1736 ) || // "Shadow Monk Boots"
+		 EquipNumSearch( 1739 ) || // "Shadow Assassin Boots"
+		 EquipNumSearch( 1742 ) || // "Shadow Rogue Boots"
+		 EquipNumSearch( 1745 ) || // "Shadow Wizard Boots"
+		 EquipNumSearch( 1748 ) || // "Shadow Sage Boots"
+		 EquipNumSearch( 1751 ) || // "Shadow Hunter Boots"
+		 EquipNumSearch( 1754 ) || // "Shadow Bard Boots"
+		 EquipNumSearch( 1757 ) )  // "Shadow Dancer Boots"
+	{ // 
+		additiveHP += n_A_SHADOW_SHOES_DEF_PLUS * 10; 
+	}
+	if ( EquipNumSearch( 1710 ) ) // "Shadow Warlock Shield"
+	{
+		additiveHP += n_A_SHADOW_SHIELD_DEF_PLUS * 10; 
+	}
+	if ( EquipNumSearch( 1713 ) || // "Shadow Swordsman Ring"
+		 EquipNumSearch( 1718 ))   // "Shadow Diviner Ring"
+	{
+		additiveHP += n_A_SHADOW_EARRING_DEF_PLUS * 10; 
+	}
+	if ( EquipNumSearch( 1714 ) || // "Shadow Swordsman Pendant"
+		 EquipNumSearch( 1717 ))   // "Shadow Diviner Pendant"
+	{
+		additiveHP += n_A_SHADOW_PENDANT_DEF_PLUS * 10; 
+	}
 	
 	// Items
 	if ( usableItems[ksIncreaseHP] > 0 )
@@ -2244,6 +2359,11 @@ function calcHP()
 	{ // "Shadow Strongman Ring"
 		if (n_A_SHADOW_EARRING_DEF_PLUS >= 7) { hpMultiplier += 1; }
 	}
+	if ( EquipNumSearch( 1714 ) )
+	{ // "Shadow Swordman Pendant"
+		if (n_A_SHADOW_EARRING_DEF_PLUS >= 7) { hpMultiplier += 1; }
+	}
+	
 	
 	//Enchant
 	if(EnchNumSearch( 286 ))//Special LUK = 286
@@ -2675,6 +2795,14 @@ function calcSP( n_A_MaxSP )
 	}
 	if ( EquipNumSearch( 1658 ) )
 	{ // "Shadow Mystic Pendant"
+		if (n_A_SHADOW_PENDANT_DEF_PLUS >= 7) { spMultiplier += 1; }
+	}
+	if ( EquipNumSearch( 1710 ) )
+	{ // "Shadow Warlock Shield"
+		if (n_A_SHADOW_SHIELD_DEF_PLUS >= 7) { spMultiplier += 1; }
+	}
+	if ( EquipNumSearch( 1717 ) )
+	{ // "Shadow Diviner Pendant"
 		if (n_A_SHADOW_PENDANT_DEF_PLUS >= 7) { spMultiplier += 1; }
 	}
 	
@@ -3745,7 +3873,7 @@ function calcASPD()
 		{ // Two Handed Quicken
 			aspdMultiplier += 30;
 		}
-		if ( SkillSearch( skill_BS_ANDRENALINE_RUSH ) )
+		if ( SkillSearch( skill_BS_ADRENALINE_RUSH ) )
 		{ // Own AR
 			if ( weapTyp_AXE <= n_A_WeaponType && n_A_WeaponType<=weapTyp_MACE )
 			{
@@ -4052,6 +4180,29 @@ function calcASPD()
 	{ //Fallen Angel Wing
 		equipASPD += Math.floor(SU_AGI/20);
 	}
+	
+	
+	if ( EquipNumSearch( 1747 ) )// "Shadow Sage Armor"
+	{ 
+		if(SkillSearch(skill_SA_HINDSIGHT))
+		{
+			equipASPD += n_A_SHADOW_BODY_DEF_PLUS;
+		}
+	}	
+	if ( EquipNumSearch( 1755 ) || EquipNumSearch( 1758 ))// "Shadow Bard Set" or "Shadow Dancer Set"
+	{ 
+		if(SkillSearch(skill_BD_AMP))
+		{
+			equipASPD += 50;
+		}
+	}
+	if ( EquipNumSearch( 1713 ) )
+	{ // "Shadow Swordsman Ring"
+		if(n_A_SHADOW_EARRING_DEF_PLUS >= 7)
+		{
+			equipASPD += 2;
+		}
+	}
 	// if ( SkillSearch( skill_RUN_FIGHTING_SPIRIT ) )
 	// { // Asir Rune
 		// equipASPD += SkillSearch( skill_RUN_RUNE_MASTERY ) / 10.0 * 4;
@@ -4284,7 +4435,13 @@ function CalcVariableCast()
 			w -= 10;
 		}
 	}
-	
+	if(EquipNumSearch(1745))
+	{ //"Shadow Wizard Boots"
+		if ( n_A_ActiveSkill == skill_WI_METEOR_STORM || n_A_ActiveSkill == skill_WI_LORD_OF_VERMILLION || n_A_ActiveSkill == skill_WI_STORM_GUST )
+		{
+			w -= 3 * n_A_SHADOW_SHOES_DEF_PLUS;
+		}
+	}
 	// Skills
 	if ( performerBuffs[ksBardSolo] === ksMagicStrings && performerBuffs[ksBardSoloLevel] > 0 )
 	{ // Magic Strings
@@ -4340,12 +4497,23 @@ function CalcVariableCast()
 		}
 	}
 	if ( (EquipNumSearch( 1637 ) ) )
-		{// "Thanatos' Dolor Hat"
-			if(n_A_HEAD_DEF_PLUS > 8)
-			{
-				w -= 10;
-			}
+	{// "Thanatos' Dolor Hat"
+		if(n_A_HEAD_DEF_PLUS > 8)
+		{
+			w -= 10;
 		}
+	}
+	
+	if ( (EquipNumSearch( 1718 ) ) )
+	{// "Shadow Diviner Ring"
+		if(n_A_SHADOW_EARRING_DEF_PLUS >= 7)
+		{
+			w -= 2;
+		}
+	}
+	
+	
+	
 	if ( w < 0 )
 	{
 		w = 0;
@@ -5436,6 +5604,9 @@ function CalcSkillModAdditions( skillMod )
 	{
 		skillMod += 2 * SkillSearch( skill_TK_KIHOP ) * SkillSearch( skill_TK_KIHOP_PARTY );
 	}
+	
+	
+	
 	
 	return skillMod;
 }

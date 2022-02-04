@@ -161,7 +161,7 @@ WordData = [
 ,["�?","Remaining HP: "]
 ,["","Number of Hits(Average): "]
 ,["","Cell to Enemy: "]//100
-,["","Andrenaline Rush"]
+,["","Adrenaline Rush"]
 ,["","Spirit Spheres"]
 ,["","Magnum Break Bonus"]
 ,["","Aloevera"]

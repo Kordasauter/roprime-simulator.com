@@ -545,6 +545,8 @@ function ApplyDamageModifiers( damage )
 		damage += KunaiOBJ[eval(document.calcForm.SkillSubNum.value)][0] * 3;
 	}
 	
+
+	
 	if ( determiningEDPdamage == 0 && not_use_card == 0 )
 	{
 		// Crit Bonus
@@ -596,7 +598,32 @@ function ApplyDamageModifiers( damage )
 		
 		damage = Math.floor( damage * ( 100 + dmgMultiplier ) / 100 );
 	}
-
+	
+	
+	if( (EquipNumSearch( 1723 ) && n_A_ActiveSkill==skill_CR_GRAND_CROSS) || // Shadow Crusader Armor
+		(EquipNumSearch( 1732 ) && n_A_ActiveSkill==skill_PR_MAGNUS_EXORCISMUS) || // Shadow Priest Armor
+		(EquipNumSearch( 1735 ) && n_A_ActiveSkill==skill_MO_THROW_SPIRIT_SPHERES) || // Shadow Monk Armor
+		(EquipNumSearch( 1735 ) && n_A_ActiveSkill==skill_MO_OCCULT_IMPACTION) || // Shadow Monk Armor
+		(EquipNumSearch( 1741 ) && n_A_ActiveSkill==skill_RG_SIGHTLESS_MIND) || // Shadow Rogue Armor
+		(EquipNumSearch( 1744 ) && n_A_ActiveSkill==skill_WI_JUPITEL_THUNDER) || // Shadow Wizard Armor
+		(EquipNumSearch( 1750 ) && n_A_ActiveSkill==skill_HU_BLAST_MINE) || // Shadow Hunter Armor
+		(EquipNumSearch( 1750 ) && n_A_ActiveSkill==skill_HU_LAND_MINE)) // Shadow Hunter Armor
+	{ 
+		dmgMultiplier += n_A_SHADOW_BODY_DEF_PLUS * 5;
+		damage = Math.floor( damage * ( 100 + dmgMultiplier ) / 100 );
+	}
+	
+	if( (EquipNumSearch( 1721 ) && n_A_ActiveSkill==skill_KN_PIERCE) || // Shadow Knight Boots
+		(EquipNumSearch( 1736 ) && n_A_ActiveSkill==skill_MO_RAGING_QUADRUPLE_BLOW) || // Shadow Monk Boots
+		(EquipNumSearch( 1739 ) && n_A_ActiveSkill==skill_AS_GRIMTOOTH) || // Shadow Assassin Boots
+		(EquipNumSearch( 1748 ) && n_A_ActiveSkill==skill_SA_HEAVENS_DRIVE) || // Shadow Sage Boots
+		(EquipNumSearch( 1751 ) && n_A_ActiveSkill==skill_HU_BLITZ_BEAT) || // Shadow Hunter Boots
+		(EquipNumSearch( 1751 ) && n_A_ActiveSkill==skill_SN_FALCON_ASSAULT)) // Shadow Hunter Boots
+	{ 
+		dmgMultiplier += n_A_SHADOW_SHOES_DEF_PLUS * 5;
+		damage = Math.floor( damage * ( 100 + dmgMultiplier ) / 100 );
+	}
+	
 	//PRIMA ERA QUI, MO SPOSTO!!!
 	//damage = Math.floor(tPlusDamCut(damage));
 	

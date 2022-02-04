@@ -376,6 +376,18 @@ function calcMAtk( includeMultipliers )
 	{ // "Shadow Mystic Pendant"
 		n_A_EquipMATK += n_A_SHADOW_PENDANT_DEF_PLUS;
 	}
+	if ( EquipNumSearch( 1712 ) )// "Shadow Swordsman Gloves"
+	{ 
+		n_A_EquipMATK += n_A_SHADOW_WEAPON_DEF_PLUS;
+	}
+	if ( EquipNumSearch( 1716 ) )// "Shadow Diviner Gloves"
+	{ 
+		n_A_EquipMATK += n_A_SHADOW_WEAPON_DEF_PLUS;
+	}
+	if ( EquipNumSearch( 1719 ) )
+	{ // "Shadow Diviner Set"
+		n_A_EquipMATK += (n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_PENDANT_DEF_PLUS);
+	}
 		
 	// Skills
 	if ( performerBuffs[ksWandererSolo] === ksMoonlightSerenade &&
@@ -754,6 +766,13 @@ function CalcMagicDamage( rawDamage )
 				matkMultiplier += 10;
 			}
 		}	
+	}
+	if ( EquipNumSearch( 1719 ) )
+	{ // "Shadow Diviner Set"
+		if((n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_PENDANT_DEF_PLUS) >= 23)
+		{
+			matkMultiplier += 1;
+		}
 	}
 	// Apply multiplier, floor, and return value
 	wBMC2 = wBMC2 * ( 100 + matkMultiplier ) / 100;
