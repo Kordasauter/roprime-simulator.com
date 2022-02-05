@@ -617,7 +617,7 @@ function CalcEquipAtk()
 		if (n_A_SHOULDER_DEF_PLUS >= 9 && SU_STR >= 90) { equipmentAttack += 10; }
 	}
 	if ( EquipNumSearch( 1639 ) )
-	{ //Heroic Backpack
+	{ //Sleepy Little Tiger(transformation mode)
 		equipmentAttack += 25 * n_A_HEAD_DEF_PLUS;
 	}
 	if ( EquipNumSearch( 1583 ) )
@@ -1594,7 +1594,7 @@ function CalcRangedMod()
 	if ( EquipNumSearch( 1464 ) )
 	{ //Heroic Backpack
 		if (n_A_SHOULDER_DEF_PLUS >= 7 && SU_DEX >= 90) { n_tok[bon_DMG_RANGE] += 5; }
-		if (n_A_SHOULDER_DEF_PLUS >= 9 && SU_DEX >= 90) { n_tok[bon_DMG_RANGE] += 10; }
+		if (n_A_SHOULDER_DEF_PLUS >= 9 && SU_DEX >= 90) { n_tok[bon_DMG_RANGE] += 5; }
 	}
 	if ( EquipNumSearch( 1583 ) )
 	{ //Golden Angel Wing
