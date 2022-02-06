@@ -1545,7 +1545,7 @@ ITEM_NAME = [
 ,[1542,0,0,"Robe of Judgement + Shoes of Judgement + Shawl of Judgement + Empowered Mace of Judgement","Increases SP cost of [Adoramus] by 30.",0]
 ,[1543,0,0,"Robe of Judgement + Shoes of Judgement + Shawl of Judgement + Mace of Judgement","Increases SP cost of [Adoramus] by 30.",0]
 ,[1544,0,0,"Archangel Wing","",0]
-,[1545,0,0,"Fallen Angel Wing","Reduces magical damage received from [Demi-Human] race by 10%.",0]
+,[1545,0,0,"Fallen Angel Wing","<br>[For every 20 base stats]<br>STR: ATK +1.<br>INT: MATK +1.<br>VIT: Tolerance to Neutral attacks +1%.<br>AGI: ASPD +1%.<br>DEX: Ranged ATK +1%.<br>LUK: CRIT +1%.",0]
 ,[1546,0,0,"Enhanced Variant Shoes","Each 2 upgrades increases [DEF] by 1.",0]
 ,[1547,0,0,"Neo Corsair (Rental 7d.)","",0]
 ,[1548,0,0,"Neo Grand Circlet (Rental 7d.)","",0]

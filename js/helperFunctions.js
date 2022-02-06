@@ -934,6 +934,7 @@ function BuildPassiveSkillTable()
 	var skillESelect = formElements["A_Skill11"];
 	var skillFSelect = formElements["A_Skill6"];
 	var skillGSelect = formElements["A_Skill7"];
+	var skillFSelect = formElements["A_Skill10"];
 	
 	// Energy Coat
 	if ( JobSkillPassOBJ[job][0] === skill_MA_ENERGY_COAT )
@@ -1033,20 +1034,6 @@ function BuildPassiveSkillTable()
 		skillESelect.style.width = 85+'px';
 	}
 	
-	if (JobSkillPassOBJ[job][7] === skill_SOR_SPIRIT_CONTROL) {
-		for ( var i = 3; i >= 0; i-- )
-		{
-			skillGSelect.options[i] = null;
-		}
-		var w_name=["0 (Idle)","1 (Passive)","2 (Defense)","3 (Offense)"];
-		for ( var i = 0; i <= 3; i++ )
-		{
-			skillGSelect.options[i] = new Option(w_name[i],i);
-		}
-		// adjust the width
-		skillGSelect.style.width = 95+'px';
-	}
-	
 	if (JobSkillPassOBJ[job][8] === skill_SOR_SPIRIT_CONTROL) {
 		for ( var i = 3; i >= 0; i-- )
 		{
@@ -1061,19 +1048,18 @@ function BuildPassiveSkillTable()
 		skillCSelect.style.width = 95+'px';
 	}
 	
-	if ( JobSkillPassOBJ[job][8] === skill_SOR_SUMMON_TYPE )
-	{
+	if (JobSkillPassOBJ[job][9] === skill_SOR_SPIRIT_CONTROL) {
 		for ( var i = 3; i >= 0; i-- )
 		{
-			skillCSelect.options[i] = null;
+			skillDSelect.options[i] = null;
 		}
-		var w_name=["Agni","Ventus","Aqua","Terra"];
+		var w_name=["0 (Idle)","1 (Passive)","2 (Defense)","3 (Offense)"];
 		for ( var i = 0; i <= 3; i++ )
 		{
-			skillCSelect.options[i] = new Option(w_name[i],i);
+			skillDSelect.options[i] = new Option(w_name[i],i);
 		}
 		// adjust the width
-		skillCSelect.style.width = 85+'px';
+		skillDSelect.style.width = 95+'px';
 	}
 	
 	if ( JobSkillPassOBJ[job][9] === skill_SOR_SUMMON_TYPE )
@@ -1089,6 +1075,21 @@ function BuildPassiveSkillTable()
 		}
 		// adjust the width
 		skillDSelect.style.width = 85+'px';
+	}
+	
+	if ( JobSkillPassOBJ[job][10] === skill_SOR_SUMMON_TYPE )
+	{
+		for ( var i = 3; i >= 0; i-- )
+		{
+			skillFSelect.options[i] = null;
+		}
+		var w_name=["Agni","Ventus","Aqua","Terra"];
+		for ( var i = 0; i <= 3; i++ )
+		{
+			skillFSelect.options[i] = new Option(w_name[i],i);
+		}
+		// adjust the width
+		skillFSelect.style.width = 85+'px';
 	}
 
 	for ( var i = 0; JobSkillPassOBJ[n_A_JOB][i] !== 999; i++ )
