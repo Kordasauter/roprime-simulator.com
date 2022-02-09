@@ -1762,6 +1762,10 @@
 ,[1756,itm_type_SHADOW_ARMOR,54,0,0,0,0,0,bon_NONE] // "Shadow Dancer Armor"
 ,[1757,itm_type_SHADOW_SHOES,54,0,0,0,0,0,bon_NONE] // "Shadow Dancer Boots"
 ,[1758,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Shadow Dancer Set"
+,[1759,itm_type_HEAD_UPPER,0,0,0,1,10,0,bon_NONE] //Diabolic Halo
+,[1760,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Diabolic Halo + Mental Stick
+,[1761,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Diabolic Halo + Kronos
+,[1762,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Diabolic Halo + Mikatsuki + Raksasa Dagger
 ];
 ItemMax = ItemOBJ.length -1;
 }
@@ -2151,6 +2155,11 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[1752,1750,1751,"NULL"] // "Shadow Hunter Set"
 ,[1755,1753,1754,"NULL"] // "Shadow Bard Set"
 ,[1758,1756,1757,"NULL"] // "Shadow Dancer Set"
+,[1760,1759,1292,"NULL"] //Diabolic Halo + Mental Stick
+,[1761,1759,1172,"NULL"] //Diabolic Halo + Kronos
+,[1762,1759,1453,1452,"NULL"] //Diabolic Halo + Mikatsuki + Raksasa Dagger
+
+
 
 //,[itm_set,item1,item2,...,"NULL"]
 

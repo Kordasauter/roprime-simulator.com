@@ -495,7 +495,10 @@ function CalcEquipAtk()
 	{
 		equipmentAttack += 30;
 	}
-
+	if(usableItems[ksSuperhumanSweets])
+	{
+		equipmentAttack += 30;
+	}
 	// Cards
 	if(CardNumSearch(515) && n_A_Weapon_ATKplus >= 12) // Tendrillion
 		equipmentAttack += 35;
@@ -2863,6 +2866,10 @@ function calcSP( n_A_MaxSP )
 		}
 		spMultiplier += ( n_A_BaseLV / 10 ) + modifier;
 	}
+	if(usableItems[ksMindPotion])
+	{
+		spMultiplier += 10;
+	}
 	
 
 	n_A_MaxSP = Math.floor( n_A_MaxSP * ( 100 + spMultiplier ) / 100 );
@@ -4435,6 +4442,18 @@ function CalcVariableCast()
 			w -= 10;
 		}
 	}
+	if( EquipNumSearch( 1759 ) )
+	{ // Diabolic Halo
+		if(n_A_HEAD_DEF_PLUS >= 7)
+		{
+			w -= 10;
+		}
+		if(EquipNumSearch( 1452 ) && EquipNumSearch( 1453 ))
+		{// Mikatsuki + Raksasa Dagger
+			w -= n_A_Weapon_ATKplus + n_A_Weapon2_ATKplus;
+		}
+	}	
+	
 	if(EquipNumSearch(1745))
 	{ //"Shadow Wizard Boots"
 		if ( n_A_ActiveSkill == skill_WI_METEOR_STORM || n_A_ActiveSkill == skill_WI_LORD_OF_VERMILLION || n_A_ActiveSkill == skill_WI_STORM_GUST )
@@ -4561,26 +4580,15 @@ function CalcFixedCast()
 		reductionFlat += -0.08;
 		if ( n_A_HEAD_DEF_PLUS >= 2) {reductionFlat += -0.08*(n_A_HEAD_DEF_PLUS-1) }; 
 	}
-	if(EquipNumSearch(1681))
-	{ //"Amistr Hat"
+	if(EquipNumSearch(1681) || EquipNumSearch(1702) || EquipNumSearch(1759))
+	{ //"Amistr Hat"              "Dog Cap"                Diabolic Halo
 		if ( n_A_HEAD_DEF_PLUS >= 11 && n_A_HEAD_DEF_PLUS <= 15)
 		{
 			reductionFlat += -0.1*(n_A_HEAD_DEF_PLUS - 10);
 		}
 		else if( n_A_HEAD_DEF_PLUS > 15)
 		{
-			reductionFlat += -0.5*(n_A_HEAD_DEF_PLUS - 10);
-		}
-	}
-	if(EquipNumSearch(1702))
-	{ //"Dog Cap"
-		if ( n_A_HEAD_DEF_PLUS >= 11 && n_A_HEAD_DEF_PLUS <= 15)
-		{
-			reductionFlat += -0.1*(n_A_HEAD_DEF_PLUS - 10);
-		}
-		else if( n_A_HEAD_DEF_PLUS > 15)
-		{
-			reductionFlat += -0.5*(n_A_HEAD_DEF_PLUS - 10);
+			reductionFlat += -0.5;
 		}
 	}
 	

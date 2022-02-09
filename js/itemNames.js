@@ -1759,6 +1759,10 @@ ITEM_NAME = [
 ,[1756,0,0,"Shadow Dancer Armor","When using [Slow Grace], [Gypsy's Kiss], [Lady Luck], [Focus Ballet], [Hip Shaker]:Recover 5 SP per 5 seconds for 30 seconds.<br><br>[For each refine lv]<br>Max HP +10.<br>When using [Slow Grace], [Gypsy's Kiss], [Lady Luck], [Focus Ballet], [Hip Shaker]:Recover 1 more SP per 5 seconds for 30 seconds.",0]
 ,[1757,0,0,"Shadow Dancer Boots","Increases Atk equal to level of [Dance Lessons] user learned.<br><br>[For each refine lv]<br>Max HP +10.<br><br>[For each refine lv above 6]<br>Increases Atk by formula [(1 + (refine rate - 6)) * level of [Dance Lessons] user learned].",0]
 ,[1758,0,0,"Shadow Dancer Set","When using [Amp]: Increases movement speed for 5 sec.<br>ASPD +50% for 5 secs.",0]
+,[1759,0,0,"Diabolic Halo","[For each 2 refine lv]<br>MATK +15.<br><br>[If refine lv +7 or higher]<br>Variable casting time -10%.<br><br>[If refine lv is 9 or higher]<br>Property magic damage Neutral and Dark +10%.<br><br>[If refine lv is 11 or higher]<br>Property magic damage Water, Wind, Fire and Earth +10%.<br><br>[For each refine lv above 10]<br>Fixed casting time -0.1 second (up to 15)",0]
+,[1760,0,0,"Diabolic Halo + Mental Stick","<br>[Psychic Wave] damage +5% per 2 refine rate of weapon",0]
+,[1761,0,0,"Diabolic Halo + Kronos","<br>[Hell Inferno] damage +10% per 2 refine rate of weapon",0]
+,[1762,0,0,"Diabolic Halo + Mikatsuki + Raksasa Dagger","<br>Variable casting time -1% per refine rates of weapons.<br>[Flaming Petals], [Freezing Spear] and [Wind Blade] damage +5% per 2 refine rates of weapons",0]
 ]
 };
 

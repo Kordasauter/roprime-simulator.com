@@ -329,6 +329,8 @@ WordData = [
 ,["","Marduk Tranformation Scroll"]
 ,["","Archmage Potion"]
 ,["","Damage on Scaraba monsters"]
+,["","Superhuman Sweets"]
+,["","Mind Potion"]//270
 //,["","xxx"]
 ];
 }

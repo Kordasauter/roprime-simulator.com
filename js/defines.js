@@ -1879,6 +1879,8 @@ var ksManaPlus = 39;
 var ksRaydricArcherTransScroll = 40;
 var ksMardukTransScroll = 41;
 var ksArchmagePotion = 42;
+var ksSuperhumanSweets = 43;
+var ksMindPotion = 44;
 //var ksxxx = xx;
 
 // battleEffects[%]

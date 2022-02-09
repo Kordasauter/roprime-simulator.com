@@ -292,6 +292,10 @@ function calcMAtk( includeMultipliers )
 	{
 		n_A_EquipMATK += 30;
 	}
+	if(usableItems[ksSuperhumanSweets])
+	{
+		n_A_EquipMATK += 30;
+	}
 		
 	// Equipment
 	if(SU_STR >= 120 && EquipNumSearch(1253)) // Rune Circlet
@@ -388,6 +392,10 @@ function calcMAtk( includeMultipliers )
 	{ // "Shadow Diviner Set"
 		n_A_EquipMATK += (n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_PENDANT_DEF_PLUS);
 	}
+	if( EquipNumSearch( 1759 ) )
+	{ // Diabolic Halo
+		n_A_EquipMATK += Math.floor(n_A_HEAD_DEF_PLUS / 2) * 15;
+	}	
 		
 	// Skills
 	if ( performerBuffs[ksWandererSolo] === ksMoonlightSerenade &&
@@ -767,6 +775,24 @@ function CalcMagicDamage( rawDamage )
 			}
 		}	
 	}
+	if(EquipNumSearch(1759))
+	{ // Diabolic Halo
+		if(n_A_HEAD_DEF_PLUS >= 9) 
+		{ 
+			if(n_A_Weapon_element == ele_NEUTRAL || n_A_Weapon_element == ele_HOLY)
+			{
+				matkMultiplier += 10;
+			}
+		}
+		if(n_A_HEAD_DEF_PLUS >= 11) 
+		{ 
+			if(n_A_Weapon_element == ele_WATER || n_A_Weapon_element == ele_WIND || n_A_Weapon_element == ele_FIRE || n_A_Weapon_element == ele_EARTH)
+			{
+				matkMultiplier += 10;
+			}
+		}
+	}
+	
 	if ( EquipNumSearch( 1719 ) )
 	{ // "Shadow Diviner Set"
 		if((n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_PENDANT_DEF_PLUS) >= 23)

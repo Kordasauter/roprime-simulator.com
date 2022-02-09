@@ -417,6 +417,8 @@ with ( document.calcForm )
 		usableItems[ksRaydricArcherTransScroll] = formElements["raydricArcherTransScroll"].checked;
 		usableItems[ksMardukTransScroll] = formElements["mardukTransScroll"].checked;
 		usableItems[ksArchmagePotion] = formElements["archmagePotion"].checked;
+		usableItems[ksSuperhumanSweets] = formElements["superhumanSweets"].checked;
+		usableItems[ksMindPotion] = formElements["mindPotion"].checked;
 //		usableItems[ksxxx] = formElements["xxx"].checked;
 		
 		//usableItems[ksVipBuffs] = formElements["vipBuff"].checked;
@@ -1112,6 +1114,18 @@ function StPlusCalc()
 	wSPC_INT += usableItems[ksIntelligenceFood];
 	wSPC_DEX += usableItems[ksDexterityFood];
 	wSPC_LUK += usableItems[ksLuckFood];
+	
+	// Superhuman Sweets
+	if(usableItems[ksSuperhumanSweets])
+	{
+		wSPC_STR += 10;
+		wSPC_AGI += 10;
+		wSPC_VIT += 10;
+		wSPC_INT += 10;
+		wSPC_DEX += 10;
+		wSPC_LUK += 10;
+	}
+
 	if ( usableItems[ksLuckyRiceCake] )
 	{
 		wSPC_LUK += 21;
