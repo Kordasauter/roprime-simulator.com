@@ -955,10 +955,10 @@ function CalcSkillDamage()
 			wActiveHitNum = 8;
 			//w_SkillMod += n_A_ActiveSkillLV * 0.5 + 2;
 			w_SkillMod += n_A_ActiveSkillLV + 1;//prime
-			if ( SkillSearch( skill_AX_ENCHANT_DEADLY_POISON ) )
-			{ // half with edp on
-				w_SkillMod /= 2.0;
-			}
+			// if ( SkillSearch( skill_AX_ENCHANT_DEADLY_POISON ) )
+			// { // half with edp on
+				// w_SkillMod /= 2.0;
+			// }
 			
 			if ( n_A_ActiveSkill == skill_AS_SONIC_BLOW_SL && PlayerVersusPlayer == 0 )
 			{
@@ -1110,7 +1110,7 @@ function CalcSkillDamage()
 		}
 		else if ( n_A_ActiveSkill == skill_AX_METEOR_ASSAULT )
 		{
-			not_use_card = 1;
+			not_use_card = 1;// yes or no ?
 			//w_SkillMod += (n_A_ActiveSkillLV *0.4 -0.6);
 			w_SkillMod = 2.0 + (n_A_ActiveSkillLV * 1.2);//prime
 			w_SkillMod += n_A_STR * 0.05;//prime
@@ -1877,10 +1877,10 @@ function CalcSkillDamage()
 			w_SkillMod = ( n_A_ActiveSkillLV + 3.0 ) * n_A_BaseLV / 120.0;
 			w_SkillMod += ( ( n_A_AGI * 2 ) + ( n_A_JobLV * 4 ) ) / 100.0;
 			
-			if ( SkillSearch( skill_AX_ENCHANT_DEADLY_POISON ) )
-			{ // half with edp on
-				w_SkillMod /= 2.0;
-			}
+			// if ( SkillSearch( skill_AX_ENCHANT_DEADLY_POISON ) )
+			// { // half with edp on
+				// w_SkillMod /= 2.0;
+			// }
 			
 			fixedCastTime *= 0.0;
 			variableCastTime *= 0.0;
@@ -2568,10 +2568,10 @@ function CalcSkillDamage()
 			w_TotalHits = 7;
 			w_SkillMod = w_SkillMod / w_TotalHits;
 			
-			if ( SkillSearch( skill_AX_ENCHANT_DEADLY_POISON ) )
+			/*if ( SkillSearch( skill_AX_ENCHANT_DEADLY_POISON ) )
 			{ // half with edp on
 				w_SkillMod /= 2.0;
-			}
+			}*/
 			if ( EquipNumSearch( 1382 ) )
 			{ // Guillotine Katar
 				w_SkillMod *= 1.3;

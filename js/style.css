@@ -6,7 +6,7 @@ body{
 	color:#000000;
 	width:auto;
 	background-color:#B8DCEC;
-	max-width:1000px;
+	max-width:55%;
 	margin:0px auto;
 }
 
@@ -132,12 +132,12 @@ div.smTitle-centered{
 
 .entryNorm, .bgTabNorm{
 	background-color:#68B5D8;
-	background-image:url('https://calc.irowiki.org/style/tabnorm.png');
+	background-image:url('https://roprime-simulator.com/style/tabnorm.png');
 	background-repeat:repeat-x;
 }
 .entrySel, .bgTabSel{
 	background-color:#88C4E0;
-	background-image:url('https://calc.irowiki.org/style/tabsel.png');
+	background-image:url('https://roprime-simulator.com/style/tabsel.png');
 	background-repeat:repeat-x;
 }
 
@@ -154,17 +154,17 @@ table.tabMenu td.entryNorm, table.tabMenu td.entrySel{
 }
 table.tabMenu td.title{
 	background-color:#389DCC;
-	background-image:url('https://calc.irowiki.org/style/dksub.png');
+	background-image:url('https://roprime-simulator.com/style/dksub.png');
 	background-repeat:repeat-x;
 }
 table.tabMenu td.entryNorm{
 	background-color:#68B5D8;
-	background-image:url('https://calc.irowiki.org/style/tabnorm.png');
+	background-image:url('https://roprime-simulator.com/style/tabnorm.png');
 	background-repeat:repeat-x;
 }
 table.tabMenu td.entrySel{
 	background-color:#88C4E0;
-	background-image:url('https://calc.irowiki.org/style/tabsel.png');
+	background-image:url('https://roprime-simulator.com/style/tabsel.png');
 	background-repeat:repeat-x;
 }
 
@@ -278,7 +278,7 @@ select.encValue {
 }
 .tabBar li div{
 	background-color:#68B5D8;
-	background-image:url('https://calc.irowiki.org/style/tabnorm.png');
+	background-image:url('https://roprime-simulator.com/style/tabnorm.png');
 	background-repeat:repeat-x;
 	border-color:#58ADD4;
 	border-style:solid;
@@ -293,7 +293,7 @@ select.encValue {
 }
 .tabBar li div.active{
 	background-color:#68B5D8;
-	background-image:url('https://calc.irowiki.org/style/tabsel.png');
+	background-image:url('https://roprime-simulator.com/style/tabsel.png');
 	background-repeat:repeat-x;
 	position:relative;
 	height:19px;
@@ -335,7 +335,7 @@ select.encValue {
 }
 .siteMenuArea li a{
 	background-color:#68B5D8;
-	background-image:url('https://calc.irowiki.org/style/menu.png');
+	background-image:url('https://roprime-simulator.com/style/menu.png');
 	background-repeat:repeat-x;
 	border-color:#58ADD4;
 	border-style:solid;
@@ -383,44 +383,44 @@ select.encValue {
 
 .bgLgTitle{
 	background-color:#78BCDC;
-	background-image:url('https://calc.irowiki.org/style/lgtitle.png');
+	background-image:url('https://roprime-simulator.com/style/lgtitle.png');
 	background-repeat:repeat-x;
 }
 .bgMdTitle{
 	background-color:#78BCDC;
-	background-image:url('https://calc.irowiki.org/style/mdtitle.png');
+	background-image:url('https://roprime-simulator.com/style/mdtitle.png');
 	background-repeat:repeat-x;
 }
 .bgSmTitle{
 	background-color:#78BCDC;
-	background-image:url('https://calc.irowiki.org/style/smtitle.png');
+	background-image:url('https://roprime-simulator.com/style/smtitle.png');
 	background-repeat:repeat-x;
 }
 
 .bgDkSub{
 	background-color:#389DCC;
-	background-image:url('https://calc.irowiki.org/style/dksub.png');
+	background-image:url('https://roprime-simulator.com/style/dksub.png');
 	background-repeat:repeat-x;
 }
 
 .bgHeader1{
 	background-color:#A0A0A0;
-	background-image:url('https://calc.irowiki.org/style/header1.png');
+	background-image:url('https://roprime-simulator.com/style/header1.png');
 	background-repeat:repeat-x;
 }
 .bgHeader2{
 	background-color:#969696;
-	background-image:url('https://calc.irowiki.org/style/header2.png');
+	background-image:url('https://roprime-simulator.com/style/header2.png');
 	background-repeat:repeat-x;
 }
 .bgHeader3{
 	background-color:#8C8C8C;
-	background-image:url('https://calc.irowiki.org/style/header3.png');
+	background-image:url('https://roprime-simulator.com/style/header3.png');
 	background-repeat:repeat-x;
 }
 .bgHeader4{
 	background-color:#828282;
-	background-image:url('https://calc.irowiki.org/style/header4.png');
+	background-image:url('https://roprime-simulator.com/style/header4.png');
 	background-repeat:repeat-x;
 }
 

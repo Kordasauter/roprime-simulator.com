@@ -22,6 +22,7 @@ function GetBaseDmg( weaponElement, forced, addMasteries )
 		if( n_A_ActiveSkill != skill_AS_GRIMTOOTH && n_A_ActiveSkill != skill_AS_VENOM_KNIFE && n_A_ActiveSkill != skill_AX_METEOR_ASSAULT)
 		{
 			baseWeaponAttack *= 5;
+			// baseWeaponAttack *= 4;
 			equipmentAttack *= 4;
 		}
 		
@@ -92,6 +93,7 @@ function GetOffhandDmg( weaponElement )
 	if ( SkillSearch( skill_AX_ENCHANT_DEADLY_POISON ) )
 	{
 		baseWeaponAttack *= 5;
+		// baseWeaponAttack *= 4;
 		equipmentAttack *= 4;
 	}
 	finalWeaponAttack[0] = ( baseWeaponAttack - varianceAttack2 + minOverrefineAttack2 ) * weapon2SizeMod;
