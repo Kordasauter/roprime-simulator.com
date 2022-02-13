@@ -1534,6 +1534,18 @@ with(document.calcForm)
 		expiatio.options[i] = new Option( off, i ); // expiatio
 		ppChange.options[i] = new Option( off, i ); // ppChange
 		ppRevitalize.options[i] = new Option( off, i ); // ppRevitalize
+	}
+	for ( var i = 0; i <= 6; i++ )
+	{ // lvl6 skills
+		var off = '0';
+		if ( i === 0 )
+		{
+			off = 'Off';
+		}
+		else
+		{
+			off = i;
+		}
 		clementia.options[i] = new Option( off, i ); // clementia
 		candidus.options[i] = new Option( off, i ); // candidus
 	}
