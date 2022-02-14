@@ -68,7 +68,8 @@ var RANGED_SKILLS = [
 	skill_REB_HOWLING_MINE,
 	skill_REB_DRAGON_TAIL,
 	skill_REB_FIRE_RAIN,
-	skill_REB_ROUND_TRIP
+	skill_REB_ROUND_TRIP,
+	skill_ROY_VANISHING_POINT
 ];
 var MAGICAL_SKILLS = [
     skill_MON_DARK_STRIKE,
@@ -1933,6 +1934,8 @@ function CalcSkillDamage()
 		{ // Banishing Point
 			var bashLevel = parseInt(formElements["SkillSubNum"].value);
 			
+			damageType = kDmgTypeRanged;
+			
 			// ATK [{(Skill Level x 50) + (Caster s learned Bash Level x 30)} x Caster s Base Level / 100] %
 			w_SkillMod = ( ( n_A_ActiveSkillLV * 0.5 ) + ( bashLevel * 0.3 ) ) * n_A_BaseLV / 100.0;
 			if ( EquipNumSearch( 1269 ) )
@@ -1963,7 +1966,11 @@ function CalcSkillDamage()
 			{
 				currentHP = 1;
 			}
-			
+			if ( currentHP > n_A_MaxHP || isNaN(currentHP))
+			{
+				currentHP = n_A_MaxHP;
+				formElements["SkillSubNum"].value = n_A_MaxHP;
+			}
 			// ATK [{(Number of Spirit Spheres x 200) + <(Caster s Max HP - Current HP) / 100>} x Caster s Base Level / 100] %
 			w_SkillMod = ( ( rageCounter * 2 ) + ( n_A_MaxHP - currentHP ) / 100.0 ) * n_A_BaseLV / 100.0;
 			
@@ -2833,7 +2840,10 @@ function CalcSkillDamage()
 	{
 		n_PerHIT_DMG = 0;
 		damageType = kDmgTypeRanged;
-		n_A_Weapon_element = ele_NEUTRAL;
+		if(n_B[en_ELEMENT] == ele_GHOST)
+		{
+			n_A_Weapon_element = ele_NEUTRAL;
+		}
 		wSBr = n_A_LEFT_DEF_PLUS;
 		wSC  = ItemOBJ[n_A_Equip[eq_SHIELD]][itm_WEIGHT];
 

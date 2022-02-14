@@ -330,7 +330,7 @@ function calcMAtk( includeMultipliers )
 	if ( EquipNumSearch( 1584 ) )
 	{ //Golden Angel Hairband
 		if ( SU_INT >= 70 ) { n_A_EquipMATK += 5; }
-		if ( SU_INT >= 70 && n_A_SHOULDER_DEF_PLUS >= 7) { n_A_EquipMATK += 10; }
+		if ( SU_INT >= 70 && n_A_HEAD_DEF_PLUS >= 7) { n_A_EquipMATK += 10; }
 	}
 	if ( EquipNumSearch(1634) )
 	{//"Zaha Doll Hat(transformation mode)"

@@ -633,7 +633,7 @@ function CalcEquipAtk()
 	if ( EquipNumSearch( 1584 ) )
 	{ //Golden Angel HAirband
 		if (SU_STR >= 70) { equipmentAttack += 5; }
-		if (n_A_SHOULDER_DEF_PLUS >= 7 && SU_STR >= 70) { equipmentAttack += 10; }
+		if (n_A_HEAD_DEF_PLUS >= 7 && SU_STR >= 70) { equipmentAttack += 10; }
 	}
 	if ( EquipNumSearch( 1487 ) )
 	{ // "RWC Memory Knife" 
@@ -1420,7 +1420,7 @@ function CalcCriticalMod()
 	if ( EquipNumSearch( 1584 ) )
 	{ //Golden Angel Hairband
 		if ( SU_LUK >= 70 ) { n_tok[bon_DMG_CRIT] += 2; }
-		if ( SU_LUK >= 70 && n_A_SHOULDER_DEF_PLUS >= 7) { n_tok[bon_DMG_CRIT] += 3; }
+		if ( SU_LUK >= 70 && n_A_HEAD_DEF_PLUS >= 7) { n_tok[bon_DMG_CRIT] += 3; }
 	}
 	if(EquipNumSearch(1545))
 	{ //Fallen Angel Wing
@@ -1609,7 +1609,7 @@ function CalcRangedMod()
 	if ( EquipNumSearch( 1584 ) )
 	{ //Golden Angel Hairband
 		if (SU_DEX >= 70) { n_tok[bon_DMG_RANGE] += 2; }
-		if (n_A_SHOULDER_DEF_PLUS >= 7 && SU_DEX >= 70) { n_tok[bon_DMG_RANGE] += 3; }
+		if (n_A_HEAD_DEF_PLUS >= 7 && SU_DEX >= 70) { n_tok[bon_DMG_RANGE] += 3; }
 	}
 	if ( EquipNumSearch( 1665 ) )
 	{ //"Red Fox Ears(transformation mode)"
@@ -2305,7 +2305,7 @@ function calcHP()
 	if ( EquipNumSearch( 1584 ) )
 	{ // Golden Angel Hairband
 		if ( SU_VIT >= 70 ) { hpMultiplier += 2; }
-		if ( SU_VIT >= 70 && n_A_SHOULDER_DEF_PLUS >= 7) { hpMultiplier += 3;  }
+		if ( SU_VIT >= 70 && n_A_HEAD_DEF_PLUS >= 7) { hpMultiplier += 3;  }
 	}
 	if(EquipNumSearch(1440))
 	{ // Ur's Plate
@@ -2775,7 +2775,7 @@ function calcSP( n_A_MaxSP )
 	if ( EquipNumSearch( 1584 ) )
 	{ // Golden Angel Hairband
 		if ( SU_VIT >= 70 ) { spMultiplier += 2; }
-		if ( SU_VIT >= 70 && n_A_SHOULDER_DEF_PLUS >= 7) { spMultiplier += 3;  }
+		if ( SU_VIT >= 70 && n_A_HEAD_DEF_PLUS >= 7) { spMultiplier += 3;  }
 	}
 	if ( EquipNumSearch( 1524 ) && n_A_HEAD_DEF_PLUS >= 1)
 	{ // Turkey On Your Head
@@ -4156,7 +4156,7 @@ function calcASPD()
 	if ( EquipNumSearch( 1584 ) )
 	{ //Golden Angel HAirband
 		if (SU_AGI >= 70) { equipASPD += 2; }
-		if (n_A_SHOULDER_DEF_PLUS >= 7 && SU_AGI >= 70) { equipASPD += 3; }
+		if (n_A_HEAD_DEF_PLUS >= 7 && SU_AGI >= 70) { equipASPD += 3; }
 	}
 	if ( EquipNumSearch( 1515 ) )
 	{ //Pegasus Ear Wing
