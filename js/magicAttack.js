@@ -360,7 +360,7 @@ function calcMAtk( includeMultipliers )
 	}
 	if(EquipNumSearch(1681))
 	{ //"Amistr Hat"
-		n_A_EquipMATK += Math.floor(n_A_HEAD_DEF_PLUS/2);
+		n_A_EquipMATK += Math.floor(n_A_HEAD_DEF_PLUS / 2) * 10;
 		if(EquipNumSearch(863))//Holy Stick
 		{
 			n_A_EquipMATK += 10 * Math.floor(n_A_Weapon_ATKplus / 2);
