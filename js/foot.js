@@ -1444,7 +1444,6 @@ function StPlusCalc2( nSTP2 )
 			}
 		}
 	}
-	
 	return w;
 }
 
@@ -1459,7 +1458,7 @@ function StPlusCard( nSTP2 )
 				w += cardOBJ[n_A_card[i]][j +5];
 		}
 	}
-
+	
 	for(var j=0;PET_OBJ[miscEffects[ksPetEffects]][j +3] != 0;j += 2)
 	{
 		if(nSTP2 == PET_OBJ[miscEffects[ksPetEffects]][j +3])

@@ -1521,6 +1521,8 @@ with(document.calcForm)
 	myInnerHtml( "AASkill2", "", 0 );
 	myInnerHtml( "AASkillName3", "", 0 );
 	myInnerHtml( "AASkill3", "", 0 );
+	myInnerHtml( "AASkillName4", "", 0 );
+	myInnerHtml( "AASkill4", "", 0 );
 		
 	if ( n_A_ActiveSkill == skill_ME_CART_REVOLUTION ||
 		 n_A_ActiveSkill == skill_MS_HIGH_SPEED_CART_RAM )
@@ -1992,13 +1994,39 @@ with(document.calcForm)
 	else if ( n_A_ActiveSkill == skill_KN_BOWLING_BASH )
 	{
 		myInnerHtml("AASkillName","<br/>Number of enemies:",0);
-		myInnerHtml("AASkill",'<select name="SkillSubNum" onchange="calc()"></select>',0);
+		myInnerHtml("AASkill",'<select name="SkillSubNum" style="width:50px;" onchange="calc()"></select>',0);
 		//for(i=0;i<=10;i++)
 		//	SkillSubNum.options[i] = new Option(i,i);
 		SkillSubNum.options[0] = new Option("1",0);
 		SkillSubNum.options[1] = new Option("2~3",1);
 		SkillSubNum.options[2] = new Option("4+",2);
 		SkillSubNum.value=0;
+	}
+	else if (n_A_ActiveSkill == skill_SUR_FLASH_COMBO)
+	{
+		myInnerHtml("AASkillName","<br/>Dragon combo : ",0);
+		myInnerHtml("AASkill",'<select name="SkillSubNum" style="width:50px;" onchange="calc()"></select>',0);
+		myInnerHtml("AASkillName3","<br/>Tiger Cannon : ",0);
+		myInnerHtml("AASkill3",'<select name="SkillSubNum3" style="width:50px;" onchange="calc()"></select>',0);
+		for(var i = 1; i <= 10;i++)
+		{
+			SkillSubNum.options[i-1] = new Option(i,i);//Dragon Combo
+			SkillSubNum3.options[i-1] = new Option(i,i);//Tiger Cannon
+		}
+		
+		myInnerHtml("AASkillName2","<br/>Fallen Empire : ",0);
+		myInnerHtml("AASkill2",'<select name="SkillSubNum2" style="width:50px;" onchange="calc()"></select>',0);
+		myInnerHtml("AASkillName4","<br/>Sky Net Blow : ",0);
+		myInnerHtml("AASkill4",'<select name="SkillSubNum4" style="width:50px;" onchange="calc()"></select>',0);
+		for(var i = 1; i <= 5;i++)
+		{
+			SkillSubNum2.options[i-1] = new Option(i,i);//Fallen Empire
+			SkillSubNum4.options[i-1] = new Option(i,i);//Sky Net Blow
+		}
+		SkillSubNum.value=10;
+		SkillSubNum2.value=5;
+		SkillSubNum3.value=10;
+		SkillSubNum4.value=5;
 	}
 	else
 	{
@@ -2008,6 +2036,8 @@ with(document.calcForm)
 		myInnerHtml( "AASkill2", "", 0 );
 		myInnerHtml( "AASkillName3", "", 0 );
 		myInnerHtml( "AASkill3", "", 0 );
+		myInnerHtml( "AASkillName4", "", 0 );
+		myInnerHtml( "AASkill4", "", 0 );
 	}
 }
 }

@@ -361,7 +361,7 @@ function calcMAtk( includeMultipliers )
 	if(EquipNumSearch(1681))
 	{ //"Amistr Hat"
 		n_A_EquipMATK += Math.floor(n_A_HEAD_DEF_PLUS / 2) * 10;
-		if(EquipNumSearch(863))//Holy Stick
+		if(EquipNumSearch(1684))// Amistr Hat + Holy Stick
 		{
 			n_A_EquipMATK += 10 * Math.floor(n_A_Weapon_ATKplus / 2);
 		}
@@ -695,6 +695,7 @@ function CalcMagicDamage( rawDamage )
 		wX += SkillSearch( skill_SA_DRAGONOLOGY ) * 2;
 	}
 	
+	
 	if (SkillSearch(skill_WAR_INTENSE_TELEKINESIS) && 
 		(n_A_ActiveSkill === skill_MA_NAPALM_BEAT ||
 		n_A_ActiveSkill === skill_MA_SOUL_STRIKE ||
@@ -800,6 +801,7 @@ function CalcMagicDamage( rawDamage )
 			matkMultiplier += 1;
 		}
 	}
+	
 	// Apply multiplier, floor, and return value
 	wBMC2 = wBMC2 * ( 100 + matkMultiplier ) / 100;
 	wBMC2 = Math.floor( wBMC2 );

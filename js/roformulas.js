@@ -839,8 +839,12 @@ function CalcEquipAtk()
 		}
 	}
 	
-	if (SkillSearch(skill_SUR_FLASH_COMBO)) {
-	    equipmentAttack += 40 * SkillSearch(skill_SUR_FLASH_COMBO);
+	// if (SkillSearch(skill_SUR_FLASH_COMBO)) {
+	    // equipmentAttack += 40 * SkillSearch(skill_SUR_FLASH_COMBO);
+	// }
+	if(n_A_ActiveSkill == skill_SUR_FLASH_COMBO)
+	{
+		equipmentAttack += 40 * n_A_ActiveSkillLV;
 	}
 
 	return equipmentAttack;

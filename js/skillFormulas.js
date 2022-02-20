@@ -4594,6 +4594,107 @@ function CalcSkillDamage()
 		variableCastTime = 2.4 - (n_A_ActiveSkillLV * 0.4);
 		n_Delay[ksDelayCooldown] = 10.0;
 	}
+	else if(n_A_ActiveSkill == skill_SUR_FLASH_COMBO)
+	{
+		//Dragon Combo
+			var DragonComboLv = parseInt(formElements["SkillSubNum"].value);
+			var DragonCombo = new Array();
+			// ATK [{(Skill Level x 40) + 100} x Caster s Base Level / 100] %
+			w_SkillMod = ( ( DragonComboLv * 0.4 ) + 1.0 ) * n_A_BaseLV / 100.0;
+			
+			w_TotalHits = 2;
+			w_SkillMod = w_SkillMod / w_TotalHits;
+			
+			CalcAtkMods02(w_SkillMod,0);
+			
+			for ( var i = 0; i < 3; i++ )
+			{
+				DragonCombo[i] = CalcFinalDamage(n_A_DMG[i],i);
+				Last_DMG_A[i] = DragonCombo[i] * w_TotalHits;
+				// InnStr[i] += Math.floor( DragonCombo[i] * w_TotalHits ) + " ( " + DragonCombo[i] + SubName[8][Language] + w_TotalHits + " hit )";
+				DragonCombo[i] *= w_TotalHits;
+			}
+			// var wX = ApplyDamageModifiers(0);
+			// DragonCombo[1] = (DragonCombo[1] * w_HIT + wX * w_TotalHits *(100-w_HIT))/100;
+
+			// n_PerHIT_DMG = 0; //wX * w_TotalHits;
+			// str_PerHIT_DMG = wX * w_TotalHits + " (" + w_TotalHits + SubName[8][Language] + wX + " Damage)";
+		//Fallen Empire
+			var FallenEmpireLv = parseInt(formElements["SkillSubNum2"].value);
+			var FallenEmpire = new Array();
+			var physicalDamage = new Array();
+			var monsterSizeValue = 2;
+			if ( n_B[en_SIZE] == siz_MEDIUM )
+			{
+				monsterSizeValue = 4;
+			}
+			else if ( n_B[en_SIZE] == siz_LARGE )
+			{
+				monsterSizeValue = 6;
+			}
+			n_A_DMG = GetBaseDmg( n_A_Weapon_element, false, 0 );
+			
+			w_SkillMod = ( ( FallenEmpireLv * 1.5 ) + 1.0 ) * n_A_BaseLV / 150.0;
+			for ( var i = 0; i < 3; i++ )
+			{
+				physicalDamage[i] = ApplyEnemyDefense( n_A_DMG[i] * w_SkillMod, i, 0 );
+				physicalDamage[i] += ( ( monsterSizeValue + FallenEmpireLv - 1 ) * n_A_STR ) + ( n_B[en_LEVEL] * 50 * n_A_DEX / 120.0 );
+			}
+			
+			for ( var i = 0; i < 3; i++ )
+			{
+				FallenEmpire[i] = Math.floor(physicalDamage[i]);
+				//Last_DMG_A[i] = FallenEmpire[i];
+			}
+		//Tiger Cannon
+			var TigerCannonLv = parseInt(formElements["SkillSubNum3"].value);
+			var TigerCannon = new Array();
+			var physicalDamage = new Array();
+			var hpCost = n_A_MaxHP * ( ( 10 + ( 2 * TigerCannonLv ) ) / 100.0 );
+			var spCost = n_A_MaxSP * ( (  5 + ( 1 * TigerCannonLv ) ) / 100.0 );
+			n_A_DMG = GetBaseDmg( n_A_Weapon_element, false, 0 );
+			
+			w_SkillMod = ( ( ( hpCost + spCost ) / 4 ) / 100.0 ) * n_A_BaseLV / 100.0;
+			//CalcAtkMods02( w_SkillMod, 0 );
+			for ( var i = 0; i < 3; i++ )
+			{
+				physicalDamage[i] = ApplyEnemyDefense( n_A_DMG[i] * w_SkillMod, i, 0 );
+				physicalDamage[i] += ( TigerCannonLv * 240 ) + ( n_B[en_LEVEL] * 40 );
+			}
+			
+			// post damage to form
+			for ( var i = 0; i < 3; i++ )
+			{
+				TigerCannon[i] = Math.floor(physicalDamage[i]);
+				//Last_DMG_A[i] = TigerCannon[i];
+				// InnStr[i] += Math.floor( Last_DMG_A[i] );
+			}
+			
+		//Sky Blow
+			var SkyNetBlowLv = parseInt(formElements["SkillSubNum4"].value);
+			var SkyNetBlow = new Array();
+			w_SkillMod = ( SkyNetBlowLv * 0.8 ) + ( n_A_AGI / 100.0 ) * n_A_BaseLV / 100.0;
+			CalcAtkMods02( w_SkillMod, 0 );
+
+			for ( var i = 0; i < 3; i++ )
+			{
+				SkyNetBlow[i] = CalcFinalDamage(n_A_DMG[i],i);
+				Last_DMG_A[i] = Last_DMG_B[i] = SkyNetBlow[i];
+			}
+			// SkyNetBlow[1] = (SkyNetBlow[1] * w_HIT + ApplyDamageModifiers(0) *(100-w_HIT))/100;
+		//total
+		for ( var i = 0; i < 3; i++ )
+		{
+			w_DMG[i] = DragonCombo[i] + FallenEmpire[i] + TigerCannon[i] + SkyNetBlow[i];
+			Last_DMG_A[i] = w_DMG[i];
+			InnStr[i] += Math.floor( Last_DMG_A[i] );
+			InnStr[i] += "<input type=\"button\" value=\"Show details\" onclick=\"javascript:$('#FlashCombo" + i + "').toggle()\"><span style=\"display: none;\" id=\"FlashCombo" + i + "\"><br>"
+			InnStr[i] += "Dragon Combo : " + DragonCombo[i] + "&nbsp;(" + (DragonCombo[i]/2) + "&nbsp;X 2 hits)<br>Fallen Empire : " + FallenEmpire[i] + "<br>Tiger Cannon : " + TigerCannon[i] + "<br>Sky Net Blow: " + SkyNetBlow[i];
+			InnStr[i] +=  "</span>";
+		}
+		n_Delay[ksDelayGlobal] = 1.0;
+		n_Delay[ksDelayCooldown] = 14.0 - (n_A_ActiveSkillLV - 2);
+	}
 	// Magic Skills ----------------------------------
 	else
 	{
@@ -5230,13 +5331,13 @@ function CalcSkillDamage()
 			// MATK = [{(Skill Level x 100 ) + 500 } x Caster's BaseLV / 100 ] %
 			n_A_Weapon_element = ele_HOLY;
 			w_SkillMod = ( ( n_A_ActiveSkillLV * 1.0 ) + 5.0 ) * n_A_BaseLV / 100.0;
-			if(EquipNumSearch(1681))
-			{ //"Amistr Hat"
-				if(EquipNumSearch(863))//Holy Stick
-				{
-					w_SkillMod += (0.3 * Math.floor(n_A_Weapon_ATKplus / 2));
-				}
-			}
+			// if(EquipNumSearch(1681))
+			// { //"Amistr Hat"
+				// if(EquipNumSearch(863))//Holy Stick
+				// {
+					// w_SkillMod += (0.3 * Math.floor(n_A_Weapon_ATKplus / 2));
+				// }
+			// }
 			w_TotalHits = 1;
 			
 			fixedCastTime *= 0.0;
@@ -5435,6 +5536,22 @@ function CalcSkillDamage()
 			for ( var i = 0; i < 3; i++ )
 			{
 				w_DMG[i] = CalcMagicDamage( n_A_MATK[i] * w_SkillMod );
+				if(EquipNumSearch(1684) && n_A_ActiveSkill == skill_ABI_ADORAMUS)// Amistr Hat + Holy Stick
+				{
+					w_DMG[i]  += Math.floor(w_DMG[i] * (0.3 * Math.floor(n_A_Weapon_ATKplus / 2)));
+				}
+				if(EquipNumSearch(1732) && n_A_ActiveSkill == skill_PR_MAGNUS_EXORCISMUS)
+				{
+					w_DMG[i]  += Math.floor(w_DMG[i] * (n_A_SHADOW_BODY_DEF_PLUS * 0.05));
+				}
+				if(EquipNumSearch(1744) && n_A_ActiveSkill == skill_WI_JUPITEL_THUNDER)
+				{
+					w_DMG[i]  += Math.floor(w_DMG[i] * (n_A_SHADOW_BODY_DEF_PLUS * 0.05));
+				}
+				// if(EquipNumSearch() && n_A_ActiveSkill == )
+				// {
+					// w_DMG[i]  += ;
+				// }
 				if( SG_Special_HITnum != 0 )
 				{
 					SG_Special_DMG[i] = w_DMG[i];
