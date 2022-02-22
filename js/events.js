@@ -1886,17 +1886,17 @@ with(document.calcForm)
 	else if ( n_A_ActiveSkill === skill_ROY_RAGE_BURST )
 	{
 		// currentHP
-		myInnerHtml("AASkillName","<br/>Remaining HP:",0);
-		myInnerHtml("AASkill",'<input type="text" name="SkillSubNum" size=6 onchange="calc()">',0);
-		SkillSubNum.value = n_A_MaxHP;
+		// myInnerHtml("AASkillName","<br/>Remaining HP:",0);
+		// myInnerHtml("AASkill",'<input type="text" name="SkillSubNum" size=6 onchange="calc()">',0);
+		// SkillSubNum.value = n_A_MaxHP;
 		// number of rage counters
-		myInnerHtml( "AASkillName2", "<br/># Rage Counters: ", 0 );
-		myInnerHtml( "AASkill2", '<select id="SkillSubNum2" style="width:50px;" onchange="calc()"></select>', 0 );
+		myInnerHtml( "AASkillName", "<br/># Rage Counters: ", 0 );
+		myInnerHtml( "AASkill", '<select id="SkillSubNum" style="width:50px;" onchange="calc()"></select>', 0 );
 		for ( var i = 1; i <= 15; i++ )
 		{
-			SkillSubNum2.options[i - 1] = new Option( i, i );
+			SkillSubNum.options[i - 1] = new Option( i, i );
 		}
-		SkillSubNum2.value = 1;
+		SkillSubNum.value = 1;
 	}
 	else if ( n_A_ActiveSkill === skill_ROY_OVERBRAND )
 	{

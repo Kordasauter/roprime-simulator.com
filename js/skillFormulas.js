@@ -1961,19 +1961,20 @@ function CalcSkillDamage()
 		}
 		else if ( n_A_ActiveSkill === skill_ROY_RAGE_BURST )
 		{
-			var rageCounter = parseInt(formElements["SkillSubNum2"].value);
-			var currentHP = parseInt(formElements["SkillSubNum"].value);
-			if ( currentHP < 1 )
-			{
-				currentHP = 1;
-			}
-			if ( currentHP > n_A_MaxHP || isNaN(currentHP))
-			{
-				currentHP = n_A_MaxHP;
-				formElements["SkillSubNum"].value = n_A_MaxHP;
-			}
+			var rageCounter = parseInt(formElements["SkillSubNum"].value);
+			//var currentHP = parseInt(formElements["SkillSubNum"].value);
+			// if ( currentHP < 1 )
+			// {
+				// currentHP = 1;
+			// }
+			// if ( currentHP > n_A_MaxHP || isNaN(currentHP))
+			// {
+				// currentHP = n_A_MaxHP;
+				// formElements["SkillSubNum"].value = n_A_MaxHP;
+			// }
 			// ATK [{(Number of Spirit Spheres x 200) + <(Caster s Max HP - Current HP) / 100>} x Caster s Base Level / 100] %
-			w_SkillMod = ( ( rageCounter * 2 ) + ( n_A_MaxHP - currentHP ) / 100.0 ) * n_A_BaseLV / 100.0;
+			// w_SkillMod = ( ( rageCounter * 2 ) + ( n_A_MaxHP - currentHP ) / 100.0 ) * n_A_BaseLV / 100.0;
+			w_SkillMod = ( ( rageCounter * 2 )) * n_A_BaseLV / 100.0;
 			
 			fixedCastTime *= 0.0;
 			variableCastTime *= 0.0;
