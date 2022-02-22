@@ -1911,6 +1911,7 @@ function CalcSkillDamage()
 		}
 		else if ( n_A_ActiveSkill === skill_ROY_SPEAR_CANNON )
 		{ // Spear Cannon
+			damageType = kDmgTypeRanged;
 			// ATK [{(Skill Level x 50) + (Caster s STR x Skill Level)} x Caster s Base Level / 100] %
 			w_SkillMod = ( ( n_A_ActiveSkillLV * 0.5 ) + ( n_A_STR * n_A_ActiveSkillLV / 100.0 ) ) * n_A_BaseLV / 100.0;
 			if ( EquipNumSearch( 1269 ) )
