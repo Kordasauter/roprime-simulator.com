@@ -802,6 +802,23 @@ function CalcMagicDamage( rawDamage )
 		}
 	}
 	
+	if(EquipNumSearch( 1759 ))
+	{// Diabolic Halo
+		if(EquipNumSearch( 1292 ) && n_A_ActiveSkill == skill_SOR_PSYCHIC_WAVE)
+		{// Mental Stick
+			matkMultiplier += Math.floor(n_A_Weapon_ATKplus / 2) * 5;
+		}
+		if(EquipNumSearch( 1172 ) && n_A_ActiveSkill == skill_WAR_HELL_INFERNO)
+		{// Kronos
+			matkMultiplier += Math.floor(n_A_Weapon_ATKplus / 2) * 10;
+		}
+		if(EquipNumSearch( 1452 ) && EquipNumSearch( 1453 ))
+		{// Mikatsuki + Raksasa Dagger
+			if(n_A_ActiveSkill == skill_NIN_FLAMING_PETALS || n_A_ActiveSkill == skill_NIN_FREEZING_SPEAR || n_A_ActiveSkill == skill_NIN_WIND_BLADE )
+			matkMultiplier += Math.floor((n_A_Weapon_ATKplus + n_A_Weapon2_ATKplus) / 2) * 5;
+		}
+	}
+	
 	// Apply multiplier, floor, and return value
 	wBMC2 = wBMC2 * ( 100 + matkMultiplier ) / 100;
 	wBMC2 = Math.floor( wBMC2 );

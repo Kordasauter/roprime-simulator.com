@@ -624,24 +624,6 @@ function ApplyDamageModifiers( damage )
 		damage = Math.floor( damage * ( 100 + dmgMultiplier ) / 100 );
 	}
 	
-	if(EquipNumSearch( 1759 ))
-	{// Diabolic Halo
-		if(EquipNumSearch( 1292 ))
-		{// Mental Stick
-			dmgMultiplier += Math.floor(n_A_Weapon_ATKplus / 2) * 5;
-		}
-		if(EquipNumSearch( 1172 ))
-		{// Kronos
-			dmgMultiplier += Math.floor(n_A_Weapon_ATKplus / 2) * 10;
-		}
-		if(EquipNumSearch( 1452 ) && EquipNumSearch( 1453 ))
-		{// Mikatsuki + Raksasa Dagger
-			if(n_A_ActiveSkill == skill_NIN_FLAMING_PETALS || n_A_ActiveSkill == skill_NIN_FREEZING_SPEAR || n_A_ActiveSkill == skill_NIN_WIND_BLADE )
-			dmgMultiplier += Math.floor((n_A_Weapon_ATKplus + n_A_Weapon2_ATKplus) / 2) * 5;
-		}
-		damage = Math.floor( damage * ( 100 + dmgMultiplier ) / 100 );
-	}
-	
 	//PRIMA ERA QUI, MO SPOSTO!!!
 	//damage = Math.floor(tPlusDamCut(damage));
 	
