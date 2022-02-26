@@ -257,8 +257,8 @@ function CalcSkillDamage()
 		CalcAtkMods02( w_SkillMod, 1 );
 		
 		// there is no fixed or variable cast time for basic attacks.
-		fixedCastTime = 0;
-		variableCastTime = 0;
+		fixedCastTime *= 0;
+		variableCastTime *= 0;
 		
 		// Crit is a guarantee, calc it.
 		wCriTyuu=1;
@@ -946,7 +946,7 @@ function CalcSkillDamage()
 			w_SkillMod = 4.0 + n_A_ActiveSkillLV ;//prime
 			w_SkillMod += (n_A_STR * 5)/100;//add str to calc
 			
-			fixedCastTime = 0.35;
+			fixedCastTime *= 0.35;
 			n_Delay[ksDelayGlobal] = 0.5;
 			n_Delay[ksDelayCooldown] = 1.0;
 		}
@@ -1064,7 +1064,7 @@ function CalcSkillDamage()
 			
 			fixedCastTime *= 0.0;
 			//variableCastTime *= 1.5;
-			variableCastTime = 0.5;
+			variableCastTime *= 0.5;
 			n_Delay[ksDelayA] = 0.3;//prime
 		}
 		else if(n_A_ActiveSkill==skill_AL_BOMB)
@@ -1080,8 +1080,8 @@ function CalcSkillDamage()
 			//fixedCastTime *= 0.0;
 			//variableCastTime *= 1.0;
 			//n_Delay[ksDelayA] = 1.0;
-			fixedCastTime = 0.2;//prime
-			variableCastTime = 0.8;//prime
+			fixedCastTime *= 0.2;//prime
+			variableCastTime *= 0.8;//prime
 			n_Delay[ksDelayA] = 0.5;//prime
 		}
 		else if(n_A_ActiveSkill==skill_LK_TRAUMATIC_BLOW)
@@ -1119,8 +1119,8 @@ function CalcSkillDamage()
 			
 			//fixedCastTime *= 0.0;
 			//variableCastTime *= 0.5;
-			fixedCastTime = 0.25;//prime
-			variableCastTime = 0.25;//prime
+			fixedCastTime *= 0.25;//prime
+			variableCastTime *= 0.25;//prime
 			n_Delay[ksDelayGlobal] = 0.5;
 		}
 		else if(n_A_ActiveSkill==skill_CH_RAGING_PALM_STRIKE)//prime
@@ -1192,8 +1192,8 @@ function CalcSkillDamage()
 				n_A_Weapon_element = parseInt( formElements["A_Weapon_element"].value );
 			}
 			damageType = kDmgTypeRanged;
-			fixedCastTime = 0.5;
-			variableCastTime = 1.5;
+			fixedCastTime *= 0.5;
+			variableCastTime *= 1.5;
 			n_Delay[ksDelayGlobal] = 0.5;
 			n_Delay[ksDelayCooldown] = 1.5;
 		}
@@ -1242,8 +1242,8 @@ function CalcSkillDamage()
 			}
 			w_SkillMod += distance;
 				
-			fixedCastTime = 0.0;
-			variableCastTime = 0.0;
+			fixedCastTime *= 0.0;
+			variableCastTime *= 0.0;
 			n_Delay[ksDelayCooldown] = 0.5;
 		}
 		else if ( n_A_ActiveSkill == skill_HEAT || n_A_ActiveSkill == skill_HEAT_WALL )
@@ -2327,7 +2327,7 @@ function CalcSkillDamage()
 			w_SkillMod = 40 + (n_A_ActiveSkillLV * 10);
 			
 			fixedCastTime *= 0.0;
-			variableCastTime =  1.0 + (n_A_ActiveSkillLV * 0.2);
+			variableCastTime *=  1.0 + (n_A_ActiveSkillLV * 0.2);
 			n_Delay[ksDelayGlobal] = 2.0;
 			n_Delay[ksDelayCooldown] = 5.0;
 		}
@@ -2337,7 +2337,7 @@ function CalcSkillDamage()
 			w_SkillMod = 35 + (n_A_ActiveSkillLV * 3);
 			
 			fixedCastTime *= 0.0;
-			variableCastTime =  0.0;
+			variableCastTime *=  0.0;
 			n_Delay[ksDelayGlobal] = 1.0;
 			n_Delay[ksDelayCooldown] = 5.0;
 		}
@@ -2456,8 +2456,8 @@ function CalcSkillDamage()
 			w_TotalHits = n_A_ActiveSkillLV;
 			
 			
-			fixedCastTime = 0.5;
-			variableCastTime = 0.5;
+			fixedCastTime *= 0.5;
+			variableCastTime *= 0.5;
 			n_Delay[ksDelayGlobal] = 0.5;
 			n_Delay[ksDelayCooldown] = 1.0;
 		}
@@ -2975,8 +2975,8 @@ function CalcSkillDamage()
 		}
 		w_HIT_HYOUJI = 100;
 		
-		fixedCastTime = 0.5;
-		variableCastTime = 0.5;
+		fixedCastTime *= 0.5;
+		variableCastTime *= 0.5;
 		n_Delay[ksDelayA] = 1.0;
 		n_Delay[ksDelayCooldown] = 12 - n_A_ActiveSkillLV;
 	}
@@ -3163,8 +3163,8 @@ function CalcSkillDamage()
 		}
 		w_HIT_HYOUJI = 100;
 		
-		fixedCastTime = 0.5;
-		variableCastTime = 1.0;
+		fixedCastTime *= 0.5;
+		variableCastTime *= 1.0;
 		n_Delay[ksDelayGlobal] = 0.5;
 		n_Delay[ksDelayCooldown] = 1.0;
 	}
@@ -3376,8 +3376,8 @@ function CalcSkillDamage()
 		w_DMG[1] = (w_DMG[1] * w_HIT + ApplyDamageModifiers(0)* element[n_B[en_ELEMENT]][ele_NEUTRAL]/100 *(100-w_HIT))/100;
 		n_PerHIT_DMG = ApplyDamageModifiers(0) * element[n_B[en_ELEMENT]][ele_NEUTRAL]/100;
 		
-		fixedCastTime = 0.5;
-		variableCastTime = 1.0;
+		fixedCastTime *= 0.5;
+		variableCastTime *= 1.0;
 		n_Delay[ksDelayGlobal] = 2.0;
 	}
 	else if ( n_A_ActiveSkill === skill_NIN_KILLING_STRIKE ||
@@ -3592,8 +3592,8 @@ function CalcSkillDamage()
 		}
 		w_HIT_HYOUJI = 100;
 		
-		fixedCastTime = 1.0;
-		variableCastTime = 0.0;
+		fixedCastTime *= 1.0;
+		variableCastTime *= 0.0;
 		n_Delay[ksDelayGlobal] = 1.0;
 	}
 	else if ( n_A_ActiveSkill == skill_HU_LAND_MINE ||
@@ -3952,7 +3952,7 @@ function CalcSkillDamage()
 		}
 
 		// Cast and Delay time
-		fixedCastTime = 0.5;
+		fixedCastTime *= 0.5;
 		variableCastTime *= 0.0;
 		if ( n_A_ActiveSkillLV >= 4 && n_A_ActiveSkillLV <= 6 )
 		{
@@ -4534,8 +4534,8 @@ function CalcSkillDamage()
 			InnStr[i] += Math.floor( HMDamage[i] ) + " + " + HMEDamage[i] + " explosion damage";
 		}
 		
-		fixedCastTime = 0.0;
-		variableCastTime = 1.0;
+		fixedCastTime *= 0.0;
+		variableCastTime *= 1.0;
 		//n_Delay[ksDelayGlobal] = 1.0;
 		n_Delay[ksDelayCooldown] = 5.5 - (n_A_ActiveSkillLV * 0.5);
 	}
@@ -4566,8 +4566,8 @@ function CalcSkillDamage()
 			InnStr[i] += Math.floor( BTDamage[i] ) + " + " + BTKBDamage[i] + " knockback damage";
 		}
 		
-		fixedCastTime = 0.0;
-		variableCastTime = 0.0;
+		fixedCastTime *= 0.0;
+		variableCastTime *= 0.0;
 		//n_Delay[ksDelayGlobal] = 1.0;
 		n_Delay[ksDelayCooldown] = 3.5 - (n_A_ActiveSkillLV * 0.5);
 	}
@@ -4592,8 +4592,8 @@ function CalcSkillDamage()
 			InnStr[i] += Math.floor( BTDamage[i] );
 		}
 		
-		fixedCastTime = 0.0;
-		variableCastTime = 2.4 - (n_A_ActiveSkillLV * 0.4);
+		fixedCastTime *= 0.0;
+		variableCastTime *= 2.4 - (n_A_ActiveSkillLV * 0.4);
 		n_Delay[ksDelayCooldown] = 10.0;
 	}
 	else if(n_A_ActiveSkill == skill_SUR_FLASH_COMBO)
@@ -4746,7 +4746,7 @@ function CalcSkillDamage()
 		w_HIT_HYOUJI = 100;
 		
 		fixedCastTime *= 0.0;
-		variableCastTime = 1.0;
+		variableCastTime *= 1.0;
 		n_Delay[ksDelayGlobal] = 1.0;
 		}
 		// Mage Skills
@@ -4787,8 +4787,8 @@ function CalcSkillDamage()
 			n_A_Weapon_element = ele_FIRE;
 			w_SkillMod = 1.4 + n_A_ActiveSkillLV * 0.2;
 			
-			fixedCastTime = 0.2;
-			variableCastTime = 0.8;
+			fixedCastTime *= 0.2;
+			variableCastTime *= 0.8;
 			n_Delay[ksDelayGlobal] = 0.7;//prime
 		}
 		else if ( n_A_ActiveSkill == skill_MA_FIRE_WALL )
@@ -4816,8 +4816,8 @@ function CalcSkillDamage()
 			w_TotalHits = n_A_ActiveSkillLV;
 			w_SkillMod = 1;
 			
-			fixedCastTime = 1.5;
-			variableCastTime = 2.5 + (n_A_ActiveSkillLV * 0.2);
+			fixedCastTime *= 1.5;
+			variableCastTime *= 2.5 + (n_A_ActiveSkillLV * 0.2);
 			n_Delay[ksDelayGlobal] = 2.0;
 		}
 		else if ( n_A_ActiveSkill == skill_MA_NAPALM_BEAT )
@@ -4825,8 +4825,8 @@ function CalcSkillDamage()
 			n_A_Weapon_element = ele_GHOST;
 			w_SkillMod = 0.7 + n_A_ActiveSkillLV * 0.1;
 			
-			fixedCastTime = 0.12;
-			variableCastTime = 0.48;
+			fixedCastTime *= 0.12;
+			variableCastTime *= 0.48;
 			if( n_A_ActiveSkillLV == 10 )
 			{
 				n_Delay[ksDelayGlobal] = 0.5;
@@ -4897,7 +4897,7 @@ function CalcSkillDamage()
 			n_A_Weapon_element = ele_WIND;
 			w_TotalHits = n_A_ActiveSkillLV + 2;
 			
-			fixedCastTime = 0.5;
+			fixedCastTime *= 0.5;
 			variableCastTime *= 1.8 + (n_A_ActiveSkillLV * 0.2);
 		}
 		else if ( n_A_ActiveSkill==skill_WI_LORD_OF_VERMILLION )
@@ -4914,8 +4914,8 @@ function CalcSkillDamage()
 				w_SkillMod = 3.3;*/
 			w_SkillMod = 4 + n_A_ActiveSkillLV;
 				
-			fixedCastTime = 1.5;
-			variableCastTime = 6.5 - (n_A_ActiveSkillLV * 0.2);
+			fixedCastTime *= 1.5;
+			variableCastTime *= 6.5 - (n_A_ActiveSkillLV * 0.2);
 			n_Delay[ksDelayGlobal] = 1.0;
 			n_Delay[ksDelayCooldown] = 5.0;
 			n_Delay[ksDelaySkillDuration] = 4.0;
@@ -4943,7 +4943,7 @@ function CalcSkillDamage()
 			w_SkillMod = 0.66 + n_A_ActiveSkillLV * 0.07;
 			
 			fixedCastTime *= 0.0;
-			variableCastTime = 1.1 - (Math.floor((n_A_ActiveSkillLV) /2) * 0.1);
+			variableCastTime *= 1.1 - (Math.floor((n_A_ActiveSkillLV) /2) * 0.1);
 			/*if (n_A_ActiveSkillLV <= 4)
 			{
 				variableCastTime *= 0.8 - Math.floor((n_A_ActiveSkillLV-1) /2) * 0.08;
@@ -4962,8 +4962,8 @@ function CalcSkillDamage()
 			w_SkillMod = 0.7 + n_A_ActiveSkillLV * 0.5;
 			
 			//var cast = 4 + n_A_ActiveSkillLV * 0.8;
-			fixedCastTime = 1.5;
-			variableCastTime = 4.3 + (n_A_ActiveSkillLV * 0.2);
+			fixedCastTime *= 1.5;
+			variableCastTime *= 4.3 + (n_A_ActiveSkillLV * 0.2);
 			n_Delay[ksDelayGlobal] = 1.0;
 			n_Delay[ksDelayCooldown] = 6;
 			n_Delay[ksDelaySkillDuration] = 4.5;
@@ -4977,16 +4977,16 @@ function CalcSkillDamage()
 			if ( n_A_ActiveSkill == skill_WI_EARTH_SPIKE )
 			{
 				w_SkillMod = 2.0;
-				fixedCastTime = 0.2 * (n_A_ActiveSkillLV * 0.2);
-				variableCastTime = 0.7 * (n_A_ActiveSkillLV * 0.5);
+				fixedCastTime *= 0.2 * (n_A_ActiveSkillLV * 0.2);
+				variableCastTime *= 0.7 * (n_A_ActiveSkillLV * 0.5);
 				n_Delay[ksDelayGlobal] = 0.9 * (n_A_ActiveSkillLV * 0.1);
 			}
 			else
 			{
 				w_SkillMod = 1.25;
 				
-				fixedCastTime = 0.8;
-				variableCastTime = 0.9 + (n_A_ActiveSkillLV * 0.2);
+				fixedCastTime *= 0.8;
+				variableCastTime *= 0.9 + (n_A_ActiveSkillLV * 0.2);
 				n_Delay[ksDelayGlobal] = 0.5;
 			}
 		}
@@ -5029,8 +5029,8 @@ function CalcSkillDamage()
 		}*/
 		w_HIT_HYOUJI = 100;
 		
-		fixedCastTime = 1.0;
-		variableCastTime = 5.0;
+		fixedCastTime *= 1.0;
+		variableCastTime *= 5.0;
 		n_Delay[ksDelayGlobal] = 1.0;
 		//n_Delay[ksDelaySkillDuration] = 4 + n_A_ActiveSkillLV;
 		n_Delay[ksDelayCooldown] = 5.0;
@@ -5043,8 +5043,8 @@ function CalcSkillDamage()
 			if(n_A_ActiveSkill==skill_PR_HOLY_LIGHT_SL)
 				w_SkillMod *= 5;
 				
-			fixedCastTime = 0.2;
-			variableCastTime = 0.8;
+			fixedCastTime *= 0.2;
+			variableCastTime *= 0.8;
 		}
 		// Priest Skills
 		else if ( n_A_ActiveSkill==skill_PR_MAGNUS_EXORCISMUS )
@@ -5060,8 +5060,8 @@ function CalcSkillDamage()
 				w_SkillMod = 1.3;
 			}
 			
-			fixedCastTime = 1.0;
-			variableCastTime = 4.0;
+			fixedCastTime *= 1.0;
+			variableCastTime *= 4.0;
 			n_Delay[ksDelayGlobal] = 1.0;
 			n_Delay[ksDelayCooldown] = 6;
 		}
@@ -5132,8 +5132,8 @@ function CalcSkillDamage()
 			w_SkillMod = 1.5 + n_A_ActiveSkillLV * 1.5;
 			w_TotalHits = 3;
 			
-			fixedCastTime = 0.8;
-			variableCastTime = 2.0;
+			fixedCastTime *= 0.8;
+			variableCastTime *= 2.0;
 			n_Delay[ksDelayGlobal] = 0.5;
 			n_Delay[ksDelayCooldown] = 0.3;
 		}
@@ -5170,8 +5170,8 @@ function CalcSkillDamage()
 			w_SkillMod = 1.0 + n_A_ActiveSkillLV;
 			w_TotalHits = 1;
 			
-			fixedCastTime = 0.3;
-			variableCastTime = 1.7;
+			fixedCastTime *= 0.3;
+			variableCastTime *= 1.7;
 		}
 		else if ( n_A_ActiveSkill==skill_NIN_FIRST_WIND )
 		{
@@ -5179,8 +5179,8 @@ function CalcSkillDamage()
 			w_SkillMod = 1.0 + n_A_ActiveSkillLV * 1.0;
 			w_TotalHits = 1;
 			
-			fixedCastTime = 0.3;
-			variableCastTime = 1.2;
+			fixedCastTime *= 0.3;
+			variableCastTime *= 1.2;
 		}
 		// Warlock Skills
 		else if ( n_A_ActiveSkill == skill_WAR_DRAIN_LIFE )
@@ -5416,11 +5416,11 @@ function CalcSkillDamage()
 			fixedCastTime *= 1.0 - 0.2 * n_A_ActiveSkillLV;
 			if ( n_A_ActiveSkillLV < 5 )
 			{
-				variableCastTime = 1.0 + 1.2 * n_A_ActiveSkillLV;
+				variableCastTime *= 1.0 + 1.2 * n_A_ActiveSkillLV;
 			}
 			else
 			{
-				variableCastTime = 6.0;
+				variableCastTime *= 6.0;
 			}
 			n_Delay[ksDelayGlobal] = 1.0;
 			n_Delay[ksDelayCooldown] = 2.0;
@@ -5444,7 +5444,7 @@ function CalcSkillDamage()
 			}
 			variableCastTime *=	7.0 + 1.0 * n_A_ActiveSkillLV;
 			n_Delay[ksDelayGlobal] = 1.0;
-			//if ( EquipNumSearch( 1292 ) ) variableCastTime = Math.max(variableCastTime-3, 0);
+			//if ( EquipNumSearch( 1292 ) ) variableCastTime *= Math.max(variableCastTime-3, 0);
 			n_Delay[ksDelayCooldown] = 5.0;
 		}
 		else if ( n_A_ActiveSkill == skill_SOR_SPELL_FIST_FBOLT )
