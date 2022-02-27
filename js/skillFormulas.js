@@ -5433,7 +5433,7 @@ function CalcSkillDamage()
 			if ( SkillSearch( skill_SOR_SPIRIT_CONTROL ) == 1 && SkillSearch( skill_SOR_SUMMON_LEVEL ) == 2 )
 			{
 				n_A_Weapon_element = ( ( SkillSearch( skill_SOR_SUMMON_TYPE ) + 2 ) %4 ) + 1;
-				w_SkillMod *= 1.2;
+				//w_SkillMod *= 1.2;
 			}
 			w_TotalHits = parseInt(formElements["SkillSubNum"].value);
 			SG_Special_HITnum = w_TotalHits;
