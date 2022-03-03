@@ -74,7 +74,7 @@ function calcMAtk( includeMultipliers )
 			if (n_A_Weapon_ATKplus >= 6)
 				n_tok[bon_MDMG_RC_DEMI_HUMAN] += Math.min(20, 2*(n_A_Weapon_ATKplus-5));
 		}
-		if(CardNumSearch(551) && n_A_HEAD_DEF_PLUS >=9) // Uzhas	
+		if(n_A_card[card_loc_HEAD_UPPER] == 551 && n_A_HEAD_DEF_PLUS >=9) // Uzhas	
 		{
 			n_tok[bon_MDMG_RC_DEMON] += 5 ;
 		}
