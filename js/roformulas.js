@@ -1062,6 +1062,12 @@ function CalcElementalMod( weaponElement )
 			n_tok[bon_DMG_ELE_HOLY] += 6 ;
 		}
 	}
+	if(CardNumSearch(552) && n_A_BODY_DEF_PLUS >=9) // Wood Goblin
+	{
+		n_tok[bon_DMG_ELE_WATER] += 5 ;
+		n_tok[bon_DMG_ELE_EARTH] += 5 ;
+	}
+	
 	// Card Bonuses
 	if (not_use_card != 1)
 		weaponElementalMod += n_tok[bon_DMG_ELE_NEUTRAL + Math.floor( n_B[en_ELEMENT] / 10 )];
@@ -3432,7 +3438,9 @@ function calcFlee( n_A_FLEE )
 		n_A_FLEE += 10;
 	if(n_A_SHOULDER_DEF_PLUS >= 9 && CardNumSearch(403)) // OrcBaby
 		n_A_FLEE += 5;
-
+	if(CardNumSearch(553)) // Vavayaga	
+		n_A_FLEE += n_A_SHOES_DEF_PLUS * 2;
+		
 	if ( SU_STR >= 90 && EquipNumSearch( 442 ) )
 	{ // Rogue's Treasure
 		n_A_FLEE += 10 * EquipNumSearch( 442 );
@@ -3467,6 +3475,7 @@ function calcFlee( n_A_FLEE )
 	{ // WoE Robe
 		if (n_A_BODY_DEF_PLUS >= 6) { n_A_FLEE += 5; }
 	}
+	
 	
 	if(n_A_JobSearch2() == cls_ASS || n_A_JobSearch2() == cls_ROG)
 		n_A_FLEE += 4 * SkillSearch(skill_TH_IMPROVE_DODGE);
