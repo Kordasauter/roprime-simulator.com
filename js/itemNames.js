@@ -1763,6 +1763,13 @@ ITEM_NAME = [
 ,[1760,0,0,"Diabolic Halo + Mental Stick","<br>[Psychic Wave] damage +5% per 2 refine rate of weapon",0]
 ,[1761,0,0,"Diabolic Halo + Kronos","<br>[Hell Inferno] damage +10% per 2 refine rate of weapon",0]
 ,[1762,0,0,"Diabolic Halo + Mikatsuki + Raksasa Dagger","<br>Variable casting time -1% per refine rates of weapons.<br>[Flaming Petals], [Freezing Spear] and [Wind Blade] damage +5% per 2 refine rates of weapons",0]
+,[1763,0,0,"Shadow Boots of Hypnos","<br>[For each refine lv]<br>Resistance to [Sleep] +1%.<br>Max HP +10.",0]
+,[1764,0,0,"Shadow Boots of Harpos","<br>[For each refine lv]<br>Resistance to [Silence] +1%.<br>Max HP +10.",0]
+,[1765,0,0,"Shadow Armor of Hypnos","<br>[For each refine lv]<br>Resistance to [Sleep] +1%.<br>Max HP +10.",0]
+,[1766,0,0,"Shadow Armor of Harpos","<br>[For each refine lv]<br>Resistance to [Silence] +1%.<br>Max HP +10.",0]
+,[1767,0,0,"Shadow Shield of the Steadfast","<br>[For each refine lv]<br>Max HP +10.<br>Resistance to [Blind], [Silence], [Sleep] and [Stone Curse] +1%.<br><br>[For each 2 refine lv]<br>Resistance to [Bleed], [Curse], [Frozen] and [Stun] +1%.",0]
+,[1768,0,0,"Shadow Shield of the Steadfast & Hypnos Set","<br>[If sum of refine rate is 20 or higher]<br>Gains immunity to [Sleep].",0]
+,[1769,0,0,"Shadow Shield of the Steadfast & Harpos Set","<br>[If sum of refine rate is 20 or higher]<br>Gains immunity to [Silence].",0]
 ]
 };
 

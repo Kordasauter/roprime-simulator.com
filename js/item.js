@@ -1766,6 +1766,13 @@
 ,[1760,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Diabolic Halo + Mental Stick
 ,[1761,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Diabolic Halo + Kronos
 ,[1762,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Diabolic Halo + Mikatsuki + Raksasa Dagger
+,[1763,itm_type_SHADOW_SHOES,0,0,0,0,0,0,bon_DEF,1,bon_NONE] // "Shadow Boots of Hypnos"
+,[1764,itm_type_SHADOW_SHOES,0,0,0,0,0,0,bon_DEF,1,bon_NONE] // "Shadow Boots of Harpos"
+,[1765,itm_type_SHADOW_ARMOR,0,0,0,0,0,0,bon_DEF,1,bon_NONE] // "Shadow Armor of Hypnos"
+,[1766,itm_type_SHADOW_ARMOR,0,0,0,0,0,0,bon_DEF,1,bon_NONE] // "Shadow Armor of Harpos"
+,[1767,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,bon_DEF,3,bon_NONE] // "Shadow Shield of the Steadfast"
+,[1768,itm_type_SET,0,0,0,0,0,0,bon_DEF,5,bon_NONE] //Shadow Shield of the Steadfast + Shadow Armor of Hypnos + Shadow Boots of Hypnos
+,[1769,itm_type_SET,0,0,0,0,0,0,bon_DEF,5,bon_NONE] //Shadow Shield of the Steadfast + Shadow Armor of Harpos + Shadow Boots of Harpos
 ];
 ItemMax = ItemOBJ.length -1;
 }
@@ -2158,6 +2165,8 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[1760,1759,1292,"NULL"] //Diabolic Halo + Mental Stick
 ,[1761,1759,1172,"NULL"] //Diabolic Halo + Kronos
 ,[1762,1759,1453,1452,"NULL"] //Diabolic Halo + Mikatsuki + Raksasa Dagger
+,[1768,1767,1765,1763,"NULL"] //Shadow Shield of the Steadfast + Shadow Armor of Hypnos + Shadow Boots of Hypnos
+,[1769,1767,1766,1764,"NULL"] //Shadow Shield of the Steadfast + Shadow Armor of Harpos + Shadow Boots of Harpos
 
 
 

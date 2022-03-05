@@ -3841,7 +3841,7 @@ function calcASPD()
 	{ // Gatling Fever
 		if ( n_A_WeaponType == weapTyp_GATLING_GUN )
 		{
-			aspdMultiplier += 2 * SkillSearch( skill_GS_GATLING_FEVER );
+			aspdMultiplier += SkillSearch( skill_GS_GATLING_FEVER );
 		}
 	}
 	// if ( ( SkillSearch( skill_AC_INCREASE_AGI ) || acolyteBuffs[ksIncreaseAgi] ) )
@@ -5265,6 +5265,45 @@ function calcRaceElementalReduction()
 		n_tok[bon_RES_STATUS_FREEZE] += 2 * n_A_HEAD_DEF_PLUS;
 		n_tok[bon_RES_STATUS_STONE] += 2 * n_A_HEAD_DEF_PLUS;
 	}
+	//Shadows
+	if ( EquipNumSearch(1763) )
+	{//Shadow Boots of Hypnos
+		n_tok[bon_RES_STATUS_SLEEP] += n_A_SHADOW_SHOES_DEF_PLUS;
+	}
+	if ( EquipNumSearch(1764) )
+	{//Shadow Boots of Harpos
+		n_tok[bon_RES_STATUS_SILENCE] += n_A_SHADOW_SHOES_DEF_PLUS;
+	}
+	if ( EquipNumSearch(1765) )
+	{//Shadow Armor of Hypnos
+		n_tok[bon_RES_STATUS_SLEEP] += n_A_SHADOW_BODY_DEF_PLUS;
+	}
+	if ( EquipNumSearch(1766) )
+	{//Shadow Armor of Harpos
+		n_tok[bon_RES_STATUS_SILENCE] += n_A_SHADOW_BODY_DEF_PLUS;
+	}
+	if ( EquipNumSearch(1767) )
+	{//Shadow Shield of the Steadfast
+		n_tok[bon_RES_STATUS_BLIND] += n_A_SHADOW_SHIELD_DEF_PLUS;
+		n_tok[bon_RES_STATUS_SILENCE] += n_A_SHADOW_SHIELD_DEF_PLUS;
+		n_tok[bon_RES_STATUS_SLEEP] += n_A_SHADOW_SHIELD_DEF_PLUS;
+		n_tok[bon_RES_STATUS_STONE] += n_A_SHADOW_SHIELD_DEF_PLUS;
+		n_tok[bon_RES_STATUS_BLEEDING] += Math.floor(n_A_SHADOW_SHIELD_DEF_PLUS / 2);
+		n_tok[bon_RES_STATUS_CURSE] += Math.floor(n_A_SHADOW_SHIELD_DEF_PLUS / 2);
+		n_tok[bon_RES_STATUS_FREEZE] += Math.floor(n_A_SHADOW_SHIELD_DEF_PLUS / 2);
+		n_tok[bon_RES_STATUS_STUN] += Math.floor(n_A_SHADOW_SHIELD_DEF_PLUS / 2);
+	}
+	if ( EquipNumSearch(1768) )
+	{//Shadow Shield of the Steadfast + Shadow Armor of Hypnos + Shadow Boots of Hypnos
+		if( (n_A_SHADOW_BODY_DEF_PLUS + n_A_SHADOW_SHOES_DEF_PLUS + n_A_SHADOW_SHIELD_DEF_PLUS) >= 20)
+			n_tok[bon_RES_STATUS_SLEEP] += 100;
+	}
+	if ( EquipNumSearch(1769) )
+	{//Shadow Shield of the Steadfast + Shadow Armor of Harpos + Shadow Boots of Harpos
+		if( (n_A_SHADOW_BODY_DEF_PLUS + n_A_SHADOW_SHOES_DEF_PLUS + n_A_SHADOW_SHIELD_DEF_PLUS) >= 20)
+			n_tok[bon_RES_STATUS_SILENCE] += 100;
+	}
+	
 	if ( CardNumSearch(176) )
 	{
 		if (SU_AGI >= 90 )
