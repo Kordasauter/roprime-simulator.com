@@ -2226,6 +2226,20 @@ function calcHP()
 	{
 		additiveHP += n_A_SHADOW_PENDANT_DEF_PLUS * 10; 
 	}
+	if ( EquipNumSearch( 1763 ) || // "Shadow Boots of Hypnos"
+		 EquipNumSearch( 1764 ))   // "Shadow Boots of Harpos"
+	{
+		additiveHP += n_A_SHADOW_SHOES_DEF_PLUS * 10; 
+	}
+	if ( EquipNumSearch( 1765 ) || // "Shadow Armor of Hypnos"
+		 EquipNumSearch( 1766 ))   // "Shadow Armor of Harpos"
+	{
+		additiveHP += n_A_SHADOW_BODY_DEF_PLUS * 10; 
+	}
+	if ( EquipNumSearch( 1767 ) ) // "Shadow Shield of the Steadfast"
+	{
+		additiveHP += n_A_SHADOW_SHIELD_DEF_PLUS * 10; 
+	}
 	
 	// Items
 	if ( usableItems[ksIncreaseHP] > 0 )
