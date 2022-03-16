@@ -1292,7 +1292,7 @@ JobSkillActiveOBJ = [
 ];
 }
 
-{ AutoSpellSkill = [ //IDAutocast, Type(0=when hit, 1=when attack), SkillID, SkillLVL, Chance, 
+{ AutoSpellSkill = [ //IDAutocast, Type(0=when hit, 1=when attack), SkillID, SkillLVL, Chance, AutoCastTrigger
 [0,0,0,0,0,0],
 [1,1,54,3,10,1],
 [2,1,51,3,10,1],
@@ -1336,7 +1336,7 @@ JobSkillActiveOBJ = [
 [40,0,25,10,3,6],
 [41,1,88,10,2,6],
 [42,1,83,5,5,1],
-[43,1,264,2,5,1],
+[43,1,264,2,5,1], // Meteor Assault Lv 2 When Attacking (5%?)
 [44,1,193,5,2,1],
 [45,1,197,1,0,1],
 [46,0,103,1,2,1],
@@ -1419,7 +1419,9 @@ JobSkillActiveOBJ = [
 [123,0,134,3,1,10], //Forest ROD SETS
 [124,1,256,1,0,1], //PEURZ SETS
 [125,1,502,1,0,10], //Affection SETS
- //IDAutocast, Type(0=when hit, 1=when attack), SkillID, SkillLVL, Chance, 
+[126,1,264,1,0,1], // Meteor Assault Lv 1 When Attacking
+[127,1,263,1,0,1] // Soul Destroyer Lv 1 When Attacking
+ //IDAutocast, Type(0=when hit, 1=when attack), SkillID, SkillLVL, Chance, AutoCastTrigger
 ];
 }
 

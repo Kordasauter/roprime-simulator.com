@@ -686,6 +686,20 @@ function CalcEquipAtk()
 		}
 		
 	}
+	if ( EquipNumSearch( 1776 ) )
+	{ // Nab Hood
+		equipmentAttack += n_A_SHOULDER_DEF_PLUS * 2 ;
+	}
+	if ( EquipNumSearch( 1779 ) )
+	{ // Nab Set
+		if(SU_STR >= 120)
+			equipmentAttack += 30;
+	}
+	if ( EquipNumSearch( 1780 ) )
+	{ // Black Wing Suits
+		equipmentAttack += n_A_BODY_DEF_PLUS * 3;
+	}
+	
 	//shadows
 	if ( EquipNumSearch( 1661 ) )
 	{ // "Shadow Strongman Ring"
@@ -3489,7 +3503,10 @@ function calcFlee( n_A_FLEE )
 	{ // WoE Robe
 		if (n_A_BODY_DEF_PLUS >= 6) { n_A_FLEE += 5; }
 	}
-	
+	if ( EquipNumSearch( 1776 ) )
+	{ // Nab Hood
+		n_A_FLEE += n_A_SHOULDER_DEF_PLUS * 2 ;
+	}
 	
 	if(n_A_JobSearch2() == cls_ASS || n_A_JobSearch2() == cls_ROG)
 		n_A_FLEE += 4 * SkillSearch(skill_TH_IMPROVE_DODGE);
@@ -3613,12 +3630,17 @@ function calcPDodge( n_A_LUCKY )
 		var wHPVS = n_A_JobSearch();
 		if(wHPVS==cls_ACO || wHPVS==cls_ARC || wHPVS==cls_MAG)
 			n_A_LUCKY += 5+ n_A_SHOULDER_DEF_PLUS * 2;
-	}	
+	}
 	if(n_A_JobSearch()==cls_TKK && EquipNumSearch(678)) // HahoeMask
 		n_A_LUCKY += 2;
 	if(SU_AGI >= 120 && EquipNumSearch(1262)) // Silent Enforcer
 		n_A_LUCKY += 5;
-		
+	if ( EquipNumSearch( 1781 ) )
+	{ // Black Wing Manteau
+		if(n_A_SHOULDER_DEF_PLUS > 6)
+			n_A_LUCKY += n_A_SHOULDER_DEF_PLUS - 6;
+	}
+	
 	// Perfect Tablature
 	if ( performerBuffs[ksBardSolo] === ksPerfectTablature && performerBuffs[ksBardSoloLevel] > 0 )
 	{
@@ -3723,6 +3745,15 @@ function calcCrit( n_A_CRI )
 	if(EquipNumSearch(1514))
 	{//Evil Marching Hat
 		if (n_A_HEAD_DEF_PLUS >= 7) n_A_CRI += 10;
+	}
+	if(EquipNumSearch(1771))
+	{//Sapha Hood
+		n_A_CRI += n_A_SHOULDER_DEF_PLUS;
+	}
+	if ( EquipNumSearch( 1779 ) )
+	{ // Nab Set
+		if(SU_STR >= 120)
+			n_A_CRI -= 20;
 	}
 
 	// Skill modifiers

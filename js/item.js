@@ -1762,10 +1762,12 @@
 ,[1756,itm_type_SHADOW_ARMOR,54,0,0,0,0,0,bon_NONE] // "Shadow Dancer Armor"
 ,[1757,itm_type_SHADOW_SHOES,54,0,0,0,0,0,bon_NONE] // "Shadow Dancer Boots"
 ,[1758,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Shadow Dancer Set"
+//
 ,[1759,itm_type_HEAD_UPPER,0,0,0,1,10,0,bon_NONE] //Diabolic Halo
 ,[1760,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Diabolic Halo + Mental Stick
 ,[1761,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Diabolic Halo + Kronos
 ,[1762,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Diabolic Halo + Mikatsuki + Raksasa Dagger
+//
 ,[1763,itm_type_SHADOW_SHOES,0,0,0,0,0,0,bon_DEF,1,bon_NONE] // "Shadow Boots of Hypnos"
 ,[1764,itm_type_SHADOW_SHOES,0,0,0,0,0,0,bon_DEF,1,bon_NONE] // "Shadow Boots of Harpos"
 ,[1765,itm_type_SHADOW_ARMOR,0,0,0,0,0,0,bon_DEF,1,bon_NONE] // "Shadow Armor of Hypnos"
@@ -1773,6 +1775,30 @@
 ,[1767,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,bon_DEF,3,bon_NONE] // "Shadow Shield of the Steadfast"
 ,[1768,itm_type_SET,0,0,0,0,0,0,bon_DEF,5,bon_NONE] //Shadow Shield of the Steadfast + Shadow Armor of Hypnos + Shadow Boots of Hypnos
 ,[1769,itm_type_SET,0,0,0,0,0,0,bon_DEF,5,bon_NONE] //Shadow Shield of the Steadfast + Shadow Armor of Harpos + Shadow Boots of Harpos
+//
+,[1770,itm_type_ARMOR,208,45,0,1,10,100,bon_LUK,3,bon_SKILL_AUTOCAST,126,bon_NONE] //Sapha's Cloth
+,[1771,itm_type_GARMENT,208,13,0,0,10,100,bon_FLEE,12,bon_NONE] //Sapha Hood
+,[1772,itm_type_SHOES,208,18,0,1,40,100,bon_LUK,3,bon_SP_ADD,50,bon_NONE] //Sapha Shoes
+,[1773,itm_type_ACCESSORY,208,0,0,0,10,100,bon_CRIT,3,bon_NONE] //Sapha Ring
+,[1774,itm_type_SET,0,0,0,0,0,0,bon_FLEE,10,bon_CRIT,15,bon_DMG_CRIT,40,bon_DMG_SKILL+skill_GLT_CROSS_IMPACT,20,bon_NONE] //Sapha Set
+//
+,[1775,itm_type_ARMOR,208,45,0,1,10,100,bon_STR,2,bon_INT,2,bon_NONE] // Nab's Cloth
+,[1776,itm_type_GARMENT,208,13,0,0,10,100,bon_NONE] // Nab Hood
+,[1777,itm_type_SHOES,208,18,0,1,40,100,bon_FLEE,3,bon_INT,2,bon_NONE] // Nab Shoes
+,[1778,itm_type_ACCESSORY,208,0,0,0,10,100,bon_ATK,10,bon_MATK,20,bon_NONE] // Nab Ring
+,[1779,itm_type_SET,0,0,0,0,0,0,bon_PHY_ATK,10,bon_MATK_MUL,10,bon_SKILL_AUTOCAST,127,bon_NONE] // Nab Set
+//
+,[1780,itm_type_ARMOR,210,45,0,1,10,100,bon_INT,2,bon_NONE] // Black Wing Suits
+,[1781,itm_type_GARMENT,210,15,0,0,10,100,bon_INT,2,bon_NONE] // Black Wing Manteau
+,[1782,itm_type_SHOES,210,18,0,1,40,100,bon_INT,2,bon_SP_MUL,5,bon_NONE] // Black Wing Boots
+,[1783,itm_type_ACCESSORY,210,0,0,0,10,100,bon_INT,2,bon_PDODGE,3,bon_NONE] // Black Wing Brooch
+,[1784,itm_type_SET,0,0,0,0,0,0,bon_HP_MUL,15,bon_PDODGE,20,bon_ASPD_ADD,-7,bon_DMG_SKILL+skill_RAN_CLUSTER_BOMB,20,bon_DMG_RANGE,-30,bon_NONE] // Black Wing Set
+//
+,[1785,itm_type_ARMOR,0,10,0,0,1,0,bon_NONE] // Army Padding
+,[1786,itm_type_ACCESSORY,0,0,0,0,0,0,bon_NONE] // Pendant Of Guardian
+,[1787,itm_type_ACCESSORY,0,10,0,0,40,100,bon_AGI,2,bon_DMG_SKILL+skill_GLT_CROSS_IMPACT,5,bon_NONE] // Loki's Muffler
+,[1788,itm_type_HEAD_UPPER,0,1,0,0,10,0,bon_RED_RC_BRUTE,5,bon_RED_RC_PLANT,5,bon_DMG_RC_BRUTE,5,bon_DMG_RC_PLANT,5,bon_NONE] // Jaty Crown
+,[1789,weapTyp_DAGGER,0,107,3,1,70,30,bon_MATK,70,bon_NONE] // Keris
 ];
 ItemMax = ItemOBJ.length -1;
 }
@@ -2167,8 +2193,9 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[1762,1759,1453,1452,"NULL"] //Diabolic Halo + Mikatsuki + Raksasa Dagger
 ,[1768,1767,1765,1763,"NULL"] //Shadow Shield of the Steadfast + Shadow Armor of Hypnos + Shadow Boots of Hypnos
 ,[1769,1767,1766,1764,"NULL"] //Shadow Shield of the Steadfast + Shadow Armor of Harpos + Shadow Boots of Harpos
-
-
+,[1774,1770,1771,1772,1773,"NULL"] //Sapha Set
+,[1779,1775,1776,1777,1778,"NULL"] //Nab Set
+,[1784,1780,1781,1782,1783,"NULL"] //Black Wing Set
 
 //,[itm_set,item1,item2,...,"NULL"]
 
