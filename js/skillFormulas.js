@@ -1651,9 +1651,10 @@ function CalcSkillDamage()
 		else if ( n_A_ActiveSkill === skill_KAG_THROW_EXPLOSIVE_KUNAI )
 		{
 			damageType = kDmgTypeRanged;
-			w_SkillMod = SkillSearch( skill_NIN_DAGGER_THROWING_PRACTICE ) * 0.5 * n_A_ActiveSkillLV;
-			fixedCastTime *= 0.0;
-			variableCastTime *= 0.5*(1+n_A_ActiveSkillLV);
+			w_SkillMod =  ((n_A_ActiveSkillLV * (50 + n_A_DEX / 4)) * SkillSearch( skill_NIN_DAGGER_THROWING_PRACTICE ) * 0.4 * n_A_BaseLV / 120.0) + n_A_JobLV * 10;
+			fixedCastTime = 0.0;
+			variableCastTime = 1.0;
+			variableCastTime += 0.4 * (n_A_ActiveSkillLV - 1);
 			n_Delay[ksDelayGlobal] = 1.0;
 			n_Delay[ksDelayCooldown] = 3.0;
 		}
