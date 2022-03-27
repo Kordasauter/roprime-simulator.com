@@ -1799,6 +1799,8 @@
 ,[1787,itm_type_ACCESSORY,0,10,0,0,40,100,bon_AGI,2,bon_DMG_SKILL+skill_GLT_CROSS_IMPACT,5,bon_NONE] // Loki's Muffler
 ,[1788,itm_type_HEAD_UPPER,0,1,0,0,10,0,bon_RED_RC_BRUTE,5,bon_RED_RC_PLANT,5,bon_DMG_RC_BRUTE,5,bon_DMG_RC_PLANT,5,bon_NONE] // Jaty Crown
 ,[1789,weapTyp_DAGGER,0,107,3,1,70,30,bon_MATK,70,bon_NONE] // Keris
+//
+,[1790,itm_type_HEAD_UPPER,0,5,0,1,60,1,bon_FLEE,10,bon_AGI,5,bon_IGN_DEF_RC_DEMI_HUMAN,10,bon_IGN_DEF_RC_BRUTE,10,bon_SKILL_ENABLE,52,bon_NONE] // Wolf King Helm
 ];
 ItemMax = ItemOBJ.length -1;
 }

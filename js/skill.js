@@ -1289,6 +1289,7 @@ JobSkillActiveOBJ = [
 [49,1,177,1], // Scribble 1
 [50,0,13,5], // Double Attack 5
 [51,1,152,3], //Adrenalise Rush 3
+[52,1,636,1]
 ];
 }
 

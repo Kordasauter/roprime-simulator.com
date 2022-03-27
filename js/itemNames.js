@@ -1790,6 +1790,7 @@ ITEM_NAME = [
 ,[1787,0,0,"Loki's Muffler",0]
 ,[1788,0,0,"Jaty Crown",0]
 ,[1789,0,0,"Keris","Enable a 2% chance of gaining 10% of the damage inflicted on an enemy as HP with each attack.",0]
+,[1790,0,0,"Wolf King Helm","<br>[If refine level is +7 or higher]<br>Physical attack has a chance to inflict [Bleed] to all enemies in a 5x5 area.<br><br>[If refine level is +9 or higher]<br>Enables use of Lv 1 [Lion's Howl].<span style=\"color:red;\">(Enabled for all refine level in the simulator)</span><br>Has a chance of auto casting Lv 5 [Summon Spirit Sphere] when dealing physical attack.",0]
 ]
 };
 
