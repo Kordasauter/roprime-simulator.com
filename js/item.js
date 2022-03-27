@@ -1721,7 +1721,7 @@
 ,[1715,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Shadow Swordsman Set"
 ,[1716,itm_type_SHADOW_WEAPON,0,0,0,0,0,0,bon_MATK,10,bon_NONE] // "Shadow Diviner Gloves"
 ,[1717,itm_type_SHADOW_PENDANT,0,0,0,0,0,0,bon_SP_ADD,50,bon_NONE] // "Shadow Diviner Pendant"
-,[1718,itm_type_SHADOW_EARRING,0,0,0,0,0,0,bon_RED_CAST,1,bon_NONE] // "Shadow Diviner Ring"
+,[1718,itm_type_SHADOW_EARRING,0,0,0,0,0,0,bon_RED_CAST,-1,bon_NONE] // "Shadow Diviner Ring"
 ,[1719,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Shadow Diviner Set"
 ,[1720,itm_type_SHADOW_ARMOR,51,0,0,0,0,0,bon_NONE] // "Shadow Knight Armor"
 ,[1721,itm_type_SHADOW_SHOES,51,0,0,0,0,0,bon_DMG_SKILL+skill_KN_PIERCE,20,bon_NONE] // "Shadow Knight Boots"
