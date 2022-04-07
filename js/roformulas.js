@@ -699,7 +699,23 @@ function CalcEquipAtk()
 	{ // Black Wing Suits
 		equipmentAttack += n_A_BODY_DEF_PLUS * 3;
 	}
+	if ( EquipNumSearch( 1792 ) )
+	{//Str Glove
+		equipmentAttack += Math.floor(SU_STR / 10);
+	}
 	
+	
+	//Cards
+	if(CardNumSearch(557))
+	{//Faithful Manager Card
+		if (  n_A_WeaponType == weapTyp_BOOK)
+		{
+			if(n_A_Weapon_ATKplus >= 10)
+				equipmentAttack += 20 * CardNumSearch(557); // Apply for each Faithful Manager Card
+			if(n_A_Weapon_ATKplus >= 14)
+				equipmentAttack += 20 * CardNumSearch(557); // Apply for each Faithful Manager Card
+		}
+	}
 	//shadows
 	if ( EquipNumSearch( 1661 ) )
 	{ // "Shadow Strongman Ring"
@@ -1334,6 +1350,11 @@ function CalcAttackMod()
 		if(n_A_HEAD_DEF_PLUS >= 9)
 			n_tok[bon_PHY_ATK] += 5;
 	}
+	if ( EquipNumSearch( 1792 ) )
+	{//Str Glove
+		if(SU_STR >= 110)
+			n_tok[bon_PHY_ATK] += 1;
+	}
 	//shadows
 	if ( EquipNumSearch( 1660 ) )
 	{ // "Shadow Strongman Gloves"
@@ -1454,6 +1475,17 @@ function CalcCriticalMod()
 	{ //"Dog Cap"
 		if(n_A_HEAD_DEF_PLUS >= 11)
 			n_tok[bon_DMG_CRIT] += 3;
+	}
+	if ( EquipNumSearch( 1797 ) )
+	{//LUK Glove
+		if(SU_LUK >= 110)
+			n_tok[bon_DMG_CRIT] += 1;
+	}
+	
+	//Cards
+	if(CardNumSearch(562))
+	{//Petal Card
+		n_tok[bon_DMG_CRIT] += Math.floor(SU_LUK/10) * 2;
 	}
 	
 	// Pets
@@ -1669,6 +1701,11 @@ function CalcRangedMod()
 		{
 			n_tok[bon_DMG_RANGE] += SkillSearch(427);
 		}
+	}
+	if ( EquipNumSearch( 1796 ) )
+	{//DEX Glove
+		if(SU_DEX >= 110)
+			n_tok[bon_DMG_RANGE] += 1;
 	}
 	
 	if(CardNumSearch( 541 ))
@@ -2137,7 +2174,16 @@ function calcHP()
 	{//Poring Fedora Hat
 		additiveHP += (n_A_BODY_DEF_PLUS * 75);
 	}
+	if ( EquipNumSearch( 1794 ) )
+	{//Vit Glove
+		additiveHP+= Math.floor(SU_VIT / 10)
+	}
 	
+	//Cards
+	if(CardNumSearch(565))
+	{//Jejeling Card
+		additiveHP += Math.floor(SU_VIT / 10) * 200;
+	}
 	//Shadows
 	
 	if ( EquipNumSearch( 1646 ) )
@@ -2380,6 +2426,18 @@ function calcHP()
 	{ // Turkey On Your Head
 		hpMultiplier += 7;
 	}
+	if ( EquipNumSearch( 1794 ) )
+	{//Vit Glove
+		if(SU_VIT >= 110)
+			hpMultiplier += 1;
+	}
+	//Cards
+	if(CardNumSearch(563))
+	{//Bungisngis Card
+		hpMultiplier += Math.floor(n_A_HEAD_DEF_PLUS / 2);
+	}
+	
+	
 	//Shadows
 
 	if ( EquipNumSearch( 1653 ) )
@@ -3233,7 +3291,12 @@ function calcHardMDef(n_A_MDEF)
 	{ // LacrimaStick
 		n_A_MDEF += n_A_Weapon_ATKplus;
 	}
-
+	if ( EquipNumSearch(1800)  ||  EquipNumSearch( 1806 ))
+	{//Bangungot Boots of Nightmare
+		n_A_MDEF += n_A_SHOES_DEF_PLUS;
+	}
+	
+	
 	// Skill modifiers
 	if ( SkillSearch( skill_SW_ENDURE ) )
 	{ // Endure
@@ -3353,6 +3416,11 @@ function calcHit(n_A_HIT)
 	{ // Jungle Carbine
 		n_A_HIT -= Math.floor( SU_DEX / 3 );
 	}
+	if ( EquipNumSearch( 1796 ) )
+	{//Dex Glove
+		n_A_HIT += Math.floor(SU_DEX / 10);
+	}
+	
 	
 	// Skills
 	n_A_HIT += 1 * SkillSearch(skill_AR_VULTURES_EYE);
@@ -3507,6 +3575,10 @@ function calcFlee( n_A_FLEE )
 	{ // Nab Hood
 		n_A_FLEE += n_A_SHOULDER_DEF_PLUS * 2 ;
 	}
+	if ( EquipNumSearch( 1793 ) )
+	{//Agi Glove
+		n_A_FLEE += Math.floor(SU_AGI / 10);
+	}
 	
 	if(n_A_JobSearch2() == cls_ASS || n_A_JobSearch2() == cls_ROG)
 		n_A_FLEE += 4 * SkillSearch(skill_TH_IMPROVE_DODGE);
@@ -3640,6 +3712,11 @@ function calcPDodge( n_A_LUCKY )
 		if(n_A_SHOULDER_DEF_PLUS > 6)
 			n_A_LUCKY += n_A_SHOULDER_DEF_PLUS - 6;
 	}
+	if ( EquipNumSearch( 1793 ) )
+	{//Agi Glove
+		if(SU_AGI >= 110)
+			n_A_LUCKY += 1;
+	}
 	
 	// Perfect Tablature
 	if ( performerBuffs[ksBardSolo] === ksPerfectTablature && performerBuffs[ksBardSoloLevel] > 0 )
@@ -3755,7 +3832,11 @@ function calcCrit( n_A_CRI )
 		if(SU_STR >= 120)
 			n_A_CRI -= 20;
 	}
-
+	if ( EquipNumSearch( 1797 ) )
+	{//Luk Glove
+		n_A_CRI += Math.floor(SU_LUK / 10);
+	}
+	
 	// Skill modifiers
 	if ( SkillSearch(skill_MO_FURY ) )
 	{
@@ -4247,7 +4328,10 @@ function calcASPD()
 	{ //Fallen Angel Wing
 		equipASPD += Math.floor(SU_AGI/20);
 	}
-	
+	if(CardNumSearch(556))
+	{//Cenere Card
+		equipASPD += 2 * Math.floor(SU_AGI/10);
+	}
 	
 	if ( EquipNumSearch( 1747 ) )// "Shadow Sage Armor"
 	{ 
@@ -5256,6 +5340,14 @@ function calcRaceElementalReduction()
 		{
 			n_tok[bon_RED_BOSS] += 3;
 		}
+	}
+	if ( EquipNumSearch( 1801 ) ||  EquipNumSearch( 1806 ) )
+	{ // Kalasag
+		n_tok[bon_RED_BOSS] += Math.floor(n_A_SHIELD_DEF_PLUS / 3);
+	}
+	if ( EquipNumSearch( 1803 ) ||  EquipNumSearch( 1808 ) )
+	{ // Bakonawa Scale Armor
+		n_tok[bon_RED_BOSS] += Math.floor(n_A_BODY_DEF_PLUS / 3);
 	}
 	if ( EquipNumSearch( 1567 ) )
 	{//Poring Fedora Hat

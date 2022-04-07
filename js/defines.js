@@ -237,6 +237,7 @@ bon_HEAL_UNDEADII = 96; // see 93 ?
 // = 98; // free
 // = 99; // free
 bon_DMG_SCARABA = 100;
+bon_RED_DMG_MALAYA = 101;
 // ...
 bon_CRIT_RC_FORMLESS = 110;
 bon_CRIT_RC_UNDEAD = 111;

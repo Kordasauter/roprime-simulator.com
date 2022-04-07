@@ -206,7 +206,11 @@ function calcMAtk( includeMultipliers )
 				w += 5;
 			}
 		}
-		
+		if ( EquipNumSearch( 1795 ) )
+		{//INT Glove
+			if(SU_INT >= 110)
+				w += 1;
+		}
 		//Shadows
 		if ( EquipNumSearch( 1656 ) )
 		{ // "Shadow Mystic Gloves"
@@ -374,6 +378,10 @@ function calcMAtk( includeMultipliers )
 	{ //"Officer's Cap"
 		n_A_EquipMATK += Math.floor( n_A_HEAD_DEF_PLUS/2 );
 	}
+	if ( EquipNumSearch( 1795 ) )
+	{//Int Glove
+		n_A_EquipMATK+= Math.floor(SU_INT / 10)
+	}
 	
 	//shadows
 	if ( EquipNumSearch( 1657 ) )
@@ -400,7 +408,22 @@ function calcMAtk( includeMultipliers )
 	{ // Diabolic Halo
 		n_A_EquipMATK += Math.floor(n_A_HEAD_DEF_PLUS / 2) * 15;
 	}	
-		
+	
+	if(CardNumSearch(555))
+	{//Antique Book Card
+		n_A_EquipMATK += Math.floor(SU_INT / 10);
+	}
+	if(CardNumSearch(557))
+	{//Faithful Manager Card
+		if (  n_A_WeaponType == weapTyp_BOOK)
+		{
+			if(n_A_Weapon_ATKplus >= 10)
+				n_A_EquipMATK += 20 * CardNumSearch(557); // Apply for each Faithful Manager Card
+			if(n_A_Weapon_ATKplus >= 14)
+				n_A_EquipMATK += 20 * CardNumSearch(557); // Apply for each Faithful Manager Card
+		}
+	}
+	
 	// Skills
 	if ( performerBuffs[ksWandererSolo] === ksMoonlightSerenade &&
 		 performerBuffs[ksWandererSoloLevel] > 0 )
@@ -798,7 +821,56 @@ function CalcMagicDamage( rawDamage )
 		}
 	}
 	
-	
+	if(CardNumSearch(558))
+	{ //Lichtern Blue Card
+		if(n_A_HEAD_DEF_PLUS >= 9) 
+		{ 
+			if(n_A_Weapon_element == ele_WATER)
+			{
+				matkMultiplier += 5 * CardNumSearch(558);
+			}
+		}	
+	}
+	if(CardNumSearch(559))
+	{ //Lichtern Yellow Card
+		if(n_A_HEAD_DEF_PLUS >= 9) 
+		{ 
+			if(n_A_Weapon_element == ele_GHOST)
+			{
+				matkMultiplier += 5 * CardNumSearch(559);
+			}
+		}	
+	}
+	if(CardNumSearch(560))
+	{ //Lichtern Red Card
+		if(n_A_HEAD_DEF_PLUS >= 9) 
+		{ 
+			if(n_A_Weapon_element == ele_FIRE)
+			{
+				matkMultiplier += 5 * CardNumSearch(560);
+			}
+		}	
+	}
+	if(CardNumSearch(561))
+	{ //Lichtern Green Card
+		if(n_A_HEAD_DEF_PLUS >= 9) 
+		{ 
+			if(n_A_Weapon_element == ele_EARTH)
+			{
+				matkMultiplier += 5 * CardNumSearch(561);
+			}
+		}	
+	}
+	if(CardNumSearch(568))
+	{ //Tikbalang Card
+		if(n_A_HEAD_DEF_PLUS >= 9) 
+		{ 
+			if(n_A_Weapon_element == ele_WIND)
+			{
+				matkMultiplier += 5 * CardNumSearch(568);
+			}
+		}	
+	}
 	if ( EquipNumSearch( 1719 ) )
 	{ // "Shadow Diviner Set"
 		if((n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_PENDANT_DEF_PLUS) >= 23)

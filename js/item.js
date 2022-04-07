@@ -1801,6 +1801,27 @@
 ,[1789,weapTyp_DAGGER,0,107,3,1,70,30,bon_MATK,70,bon_NONE] // Keris
 //
 ,[1790,itm_type_HEAD_UPPER,0,5,0,1,60,1,bon_FLEE,10,bon_AGI,5,bon_IGN_DEF_RC_DEMI_HUMAN,10,bon_IGN_DEF_RC_BRUTE,10,bon_SKILL_ENABLE,52,bon_NONE] // Wolf King Helm
+//Eclage
+,[1791,itm_type_ACCESSORY,0,0,0,0,5,0,bon_MDEF,10,bon_NONE] // "Ettlang Keepsake"
+,[1792,itm_type_ACCESSORY,0,0,0,1,10,100,bon_HP_ADD,100,bon_SP_ADD,20,bon_NONE] // "Str Glove"
+,[1793,itm_type_ACCESSORY,0,0,0,1,10,100,bon_HP_ADD,100,bon_SP_ADD,20,bon_NONE] // "Agi Glove"
+,[1794,itm_type_ACCESSORY,0,0,0,1,10,100,bon_HP_ADD,100,bon_SP_ADD,20,bon_NONE] // "Vit Glove"
+,[1795,itm_type_ACCESSORY,0,0,0,1,10,100,bon_HP_ADD,100,bon_SP_ADD,20,bon_NONE] // "Int Glove"
+,[1796,itm_type_ACCESSORY,0,0,0,1,10,100,bon_HP_ADD,100,bon_SP_ADD,20,bon_NONE] // "Dex Glove"
+,[1797,itm_type_ACCESSORY,0,0,0,1,10,100,bon_HP_ADD,100,bon_SP_ADD,20,bon_NONE] // "Luk Glove"
+//Port Malaya
+,[1798,itm_type_ACCESSORY,0,0,0,0,10,1,bon_HEAL_MUL,5,bon_HP_REG,7,bon_NONE] // "Bangungot Agimat Tattoo"
+,[1799,itm_type_ACCESSORY,0,0,0,0,10,1,bon_MATK_MUL,7,bon_RED_CAST,-7,bon_NONE] // "Buwaya Agimat Tattoo"
+
+,[1800,itm_type_SHOES,0,10,0,0,60,1,bon_NONE] // "Bangungot Boots of Nightmare"
+,[1801,itm_type_SHIELD,0,40,0,0,40,1,bon_NONE] // "Kalasag"
+,[1802,itm_type_GARMENT,0,8,0,0,20,1,bon_RED_ELE_EARTH,10,bon_RED_ELE_WATER,10,bon_RED_ELE_FIRE,10,bon_RED_ELE_WIND,10,bon_NONE] // "Buwaya Sack Cloth"
+,[1803,itm_type_ARMOR,0,55,0,0,50,1,bon_ALL_STATS,1,bon_NONE] // "Bakonawa Scale Armor"
+,[1804,itm_type_SET,0,0,0,0,0,0,bon_HP_MUL,20,bon_SP_MUL,10,bon_RED_DMG_MALAYA,-30,bon_NONE] // "Port Malaya Set"
+,[1805,itm_type_SHOES,0,10,0,1,60,1,bon_NONE] // "Bangungot Boots of Nightmare(Bayani)"
+,[1806,itm_type_SHIELD,0,40,0,1,40,1,bon_NONE] // "Kalasag(Bayani)"
+,[1807,itm_type_GARMENT,0,8,0,1,20,1,bon_RED_ELE_EARTH,10,bon_RED_ELE_WATER,10,bon_RED_ELE_FIRE,10,bon_RED_ELE_WIND,10,bon_NONE] // "Buwaya Sack Cloth(Bayani)"
+,[1808,itm_type_ARMOR,0,55,0,1,50,1,bon_ALL_STATS,1,bon_NONE] // "Bakonawa Scale Armor(Bayani)"
 ];
 ItemMax = ItemOBJ.length -1;
 }
@@ -1933,6 +1954,8 @@ function BuildItemDescription( bonusType, bonusValue )
 		CBIstr += GetWord(40) + wIS + bonusValue +"%<br/>";
 	if(bon_DMG_SCARABA == bonusType)
 		CBIstr += GetWord(268) + wIS + bonusValue +"%<br/>";
+	if(bon_RED_DMG_MALAYA == bonusType)
+		CBIstr += GetWord(271) + wIS + bonusValue +"%<br/>";
 	if ( bonusType === bon_MATK )
 	{
 		CBIstr += "[" + GetWord( 22 ) + "]" + wIS + bonusValue +"<br/>";
@@ -2198,6 +2221,7 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[1774,1770,1771,1772,1773,"NULL"] //Sapha Set
 ,[1779,1775,1776,1777,1778,"NULL"] //Nab Set
 ,[1784,1780,1781,1782,1783,"NULL"] //Black Wing Set
+,[1804,1800,1801,1802,1803,"NULL"] //Malaya Set
 
 //,[itm_set,item1,item2,...,"NULL"]
 
