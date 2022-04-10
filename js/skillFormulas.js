@@ -1111,7 +1111,7 @@ function CalcSkillDamage()
 		}
 		else if ( n_A_ActiveSkill == skill_AX_METEOR_ASSAULT )
 		{
-			not_use_card = 1;// yes or no ?
+			//not_use_card = 1;// yes or no ?
 			//w_SkillMod += (n_A_ActiveSkillLV *0.4 -0.6);
 			w_SkillMod = 2.0 + (n_A_ActiveSkillLV * 1.2);//prime
 			w_SkillMod += n_A_STR * 0.05;//prime
