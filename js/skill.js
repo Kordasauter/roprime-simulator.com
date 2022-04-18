@@ -1289,7 +1289,9 @@ JobSkillActiveOBJ = [
 [49,1,177,1], // Scribble 1
 [50,0,13,5], // Double Attack 5
 [51,1,152,3], //Adrenalise Rush 3
-[52,1,636,1]
+[52,1,636,1], //Lion Howling 1
+[53,1,250,3] //Synthesized Shield 3
+
 ];
 }
 
@@ -1421,7 +1423,9 @@ JobSkillActiveOBJ = [
 [124,1,256,1,0,1], //PEURZ SETS
 [125,1,502,1,0,10], //Affection SETS
 [126,1,264,1,0,1], // Meteor Assault Lv 1 When Attacking
-[127,1,263,1,0,1] // Soul Destroyer Lv 1 When Attacking
+[127,1,263,1,0,1], // Soul Destroyer Lv 1 When Attacking
+[128,1,450,3,0,1],//[Ignition Break] Lv 3 
+[129,1,skill_GLT_DARK_CLAW,1,0,1] //Dark Claw lv 1
  //IDAutocast, Type(0=when hit, 1=when attack), SkillID, SkillLVL, Chance, AutoCastTrigger
 ];
 }

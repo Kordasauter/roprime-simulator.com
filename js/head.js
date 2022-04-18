@@ -624,6 +624,40 @@ function ApplyDamageModifiers( damage )
 		damage = Math.floor( damage * ( 100 + dmgMultiplier ) / 100 );
 	}
 	
+	if( (EquipNumSearch( 1810 ) && n_A_ActiveSkill==skill_ROY_EARTH_DRIVE) || // Shadow Royalguard Shield
+		(EquipNumSearch( 1811 ) && n_A_ActiveSkill==skill_MEC_FLAME_LAUNCHER) || // Shadow Mechanic Shield
+		(EquipNumSearch( 1813 ) && n_A_ActiveSkill==skill_ABI_ADORAMUS) || // Shadow Archbishop Shield
+		(EquipNumSearch( 1814 ) && n_A_ActiveSkill==skill_SUR_SKY_NET_BLOW) || // Shadow Sura Shield
+		(EquipNumSearch( 1817 ) && n_A_ActiveSkill==skill_WAR_EARTH_STRAIN) || // Shadow Warlock Shield
+		(EquipNumSearch( 1820 ) && n_A_ActiveSkill==skill_HU_BLITZ_BEAT) || // Shadow Minstrel Shield
+		(EquipNumSearch( 1821 ) && n_A_ActiveSkill==skill_HU_BLITZ_BEAT) || // Shadow Wanderer Shield
+		(EquipNumSearch( 1822 ) && n_A_ActiveSkill==skill_HU_BLITZ_BEAT) || // Shadow Ninja Shield
+		(EquipNumSearch( 1823 ) && n_A_ActiveSkill==skill_HU_BLITZ_BEAT) || // Shadow Taekwon Shield
+		(EquipNumSearch( 1824 ) && n_A_ActiveSkill==skill_HU_BLITZ_BEAT) || // Shadow Super Novice Shield
+		(EquipNumSearch( 1825 ) && n_A_ActiveSkill==skill_SN_FALCON_ASSAULT)) // Shadow Gunslinger Shield
+	{ 
+		dmgMultiplier += n_A_SHADOW_SHIELD_DEF_PLUS * 5;
+		damage = Math.floor( damage * ( 100 + dmgMultiplier ) / 100 );
+	}
+	
+	if( (EquipNumSearch( 1826 ) && n_A_ActiveSkill==skill_RUN_SONIC_WAVE) || // Shadow Runeknight Gloves
+		(EquipNumSearch( 1827 ) && n_A_ActiveSkill==skill_ROY_SPEAR_CANNON) || // Shadow Royalguard Gloves
+		(EquipNumSearch( 1828 ) && n_A_ActiveSkill==skill_MEC_VULCAN_ARM) || // Shadow Mechanic Gloves
+		(EquipNumSearch( 1829 ) && n_A_ActiveSkill==skill_GEN_CART_TORNADO) || // Shadow Genetic Gloves
+		(EquipNumSearch( 1830 ) && n_A_ActiveSkill==skill_ABI_DUPLE_LIGHT) || // Shadow Archbishop Gloves
+		(EquipNumSearch( 1831 ) && n_A_ActiveSkill==skill_SUR_RAMPAGE_BLASTER) || // Shadow Sura Gloves
+		(EquipNumSearch( 1833 ) && n_A_ActiveSkill==skill_SHA_TRIANGLE_SHOT) || // Shadow Shadowchaser Gloves
+		(EquipNumSearch( 1834 ) && n_A_ActiveSkill==skill_WAR_DRAIN_LIFE) || // Shadow Warlock Gloves
+		(EquipNumSearch( 1836 ) && n_A_ActiveSkill==skill_RAN_CLUSTER_BOMB) || // Shadow Ranger Gloves
+		(EquipNumSearch( 1839 ) && n_A_ActiveSkill==skill_HU_BLITZ_BEAT) || // Shadow Ninja Gloves
+		(EquipNumSearch( 1840 ) && n_A_ActiveSkill==skill_HU_BLITZ_BEAT) || // Shadow Taekwon Gloves
+		(EquipNumSearch( 1841 ) && n_A_ActiveSkill==skill_HU_BLITZ_BEAT) || // Shadow Super Novice Gloves
+		(EquipNumSearch( 1842 ) && n_A_ActiveSkill==skill_SN_FALCON_ASSAULT)) // Shadow Gunslinger Gloves
+	{ 
+		dmgMultiplier += n_A_SHADOW_WEAPON_DEF_PLUS * 5;
+		damage = Math.floor( damage * ( 100 + dmgMultiplier ) / 100 );
+	}
+	
 	//PRIMA ERA QUI, MO SPOSTO!!!
 	//damage = Math.floor(tPlusDamCut(damage));
 	

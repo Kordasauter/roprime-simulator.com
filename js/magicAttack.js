@@ -234,7 +234,20 @@ function calcMAtk( includeMultipliers )
 			if ((n_A_SHADOW_PENDANT_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_WEAPON_DEF_PLUS)>= 20) { w += 1; }
 			if ((n_A_SHADOW_PENDANT_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_WEAPON_DEF_PLUS)>= 25) { w += 1; }
 		}
-		
+		if ( EquipNumSearch(1823) || EquipNumSearch(1824))
+		{ // Shadow Taekwon  Shield or Shadow Super Novice Shield
+			if(n_A_SHADOW_SHIELD_DEF_PLUS >=7){w += 2;}
+			if(n_A_SHADOW_SHIELD_DEF_PLUS >=9){w += 3;}
+		}
+		if ( EquipNumSearch(1839) )
+		{ // Shadow Ninja Gloves
+			if(n_A_SHADOW_WEAPON_DEF_PLUS >=7){w += 3;}
+			if(n_A_SHADOW_WEAPON_DEF_PLUS >=9){w += 4;}
+		}
+		if ( EquipNumSearch(1840) )
+		{ // Shadow Taekwon Gloves
+			w += n_A_SHADOW_WEAPON_DEF_PLUS;
+		}
 		//Enchant
 		if(EnchNumSearch( 284 ))//Special INT = 284
 		{
@@ -408,7 +421,30 @@ function calcMAtk( includeMultipliers )
 	{ // Diabolic Halo
 		n_A_EquipMATK += Math.floor(n_A_HEAD_DEF_PLUS / 2) * 15;
 	}	
-	
+	if ( EquipNumSearch( 1826 ) || // "Shadow Runeknight Gloves"
+	 EquipNumSearch( 1827 ) || // "Shadow Royalguard Gloves"
+	 EquipNumSearch( 1828 ) || // "Shadow Mechanic Gloves"
+	 EquipNumSearch( 1829 ) || // "Shadow Genetic Gloves"
+	 EquipNumSearch( 1830 ) || // "Shadow Archbishop Gloves"
+	 EquipNumSearch( 1831 ) || // "Shadow Sura Gloves"
+	 EquipNumSearch( 1832 ) || // "Shadow Guillotine Gloves"
+	 EquipNumSearch( 1833 ) || // "Shadow Shadowchaser Gloves"
+	 EquipNumSearch( 1834 ) || // "Shadow Warlock Gloves"
+	 EquipNumSearch( 1835 ) || // "Shadow Sorcerer Gloves"
+	 EquipNumSearch( 1836 ) || // "Shadow Ranger Gloves"
+	 EquipNumSearch( 1837 ) || // "Shadow Minstrel Gloves"
+	 EquipNumSearch( 1838 ) || // "Shadow Wanderer Gloves"
+	 EquipNumSearch( 1839 ) || // "Shadow Ninja Gloves"
+	 EquipNumSearch( 1840 ) || // "Shadow Taekwon Gloves"
+	 EquipNumSearch( 1841 ) || // "Shadow Super Novice Gloves"
+	 EquipNumSearch( 1842 ) )  // "Shadow Gunslinger Gloves"
+	{ // 
+		n_A_EquipMATK += n_A_SHADOW_WEAPON_DEF_PLUS; 
+	}
+	if ( EquipNumSearch(1839) )
+	{ // Shadow Ninja Gloves
+		if(n_A_SHADOW_SHIELD_DEF_PLUS >=9){n_A_EquipMATK += SkillSearch(skill_NIN_NINJA_MASTERY) * 3;}
+	}
 	if(CardNumSearch(555))
 	{//Antique Book Card
 		n_A_EquipMATK += Math.floor(SU_INT / 10);

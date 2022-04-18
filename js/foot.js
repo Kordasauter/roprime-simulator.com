@@ -501,6 +501,40 @@ with ( document.calcForm )
 	{ // Thorn Staff of Darkness
 		n_tok[bon_DEFIGN_RC_ALL] += n_A_Weapon_ATKplus * 1;
 	}
+	if ( EquipNumSearch(1822) )
+	{ // Shadow Ninja Shield
+		n_tok[bon_DEFIGN_RC_ALL] += n_A_SHADOW_SHIELD_DEF_PLUS * 4;
+		if (n_A_SHADOW_SHIELD_DEF_PLUS >= 7) { n_tok[bon_DEFIGN_RC_ALL] += 10;}
+		if (n_A_SHADOW_SHIELD_DEF_PLUS >= 9) { n_tok[bon_DEFIGN_RC_ALL] += 10;}
+	}
+	if ( EquipNumSearch(1823) )
+	{ // Shadow Taekwon  Shield
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9){n_tok[bon_DEFIGN_RC_ALL] += SkillSearch(skill_TK_PEACEFUL_BREAK) * 3;}
+		n_tok[bon_DEFIGN_RC_ALL] += n_A_SHADOW_SHIELD_DEF_PLUS * 3;
+		for(var i = 310 ; i<=319 ; i++)
+		{
+			if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9){n_tok[i] += SkillSearch(skill_TK_HAPPY_BREAK) * 3;
+			n_tok[i] += n_A_SHADOW_SHIELD_DEF_PLUS * 3;
+		}
+	}
+	if ( EquipNumSearch(1841) )
+	{ // Shadow Super Novice Gloves
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9){n_tok[bon_DEFIGN_RC_ALL] += SkillSearch(skill_SW_SWORD_MASTERY) * 3;}
+		n_tok[bon_DEFIGN_RC_ALL] += n_A_SHADOW_WEAPON_DEF_PLUS * 3;
+		for(var i = 310 ; i<=319 ; i++)
+		{
+			if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9){n_tok[i] += SkillSearch(skill_MA_INCREASED_SP_RECOVERY) * 3;}
+			n_tok[i] += n_A_SHADOW_WEAPON_DEF_PLUS * 3;
+		}
+	}
+	}
+	if ( EquipNumSearch(1842) )
+	{ // Shadow Gunslinger Gloves
+
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9){n_tok[bon_DEFIGN_RC_ALL] += SkillSearch(skill_GS_SNAKE_EYES) * 3;}
+		n_tok[bon_DEFIGN_RC_ALL] += n_A_SHADOW_WEAPON_DEF_PLUS * 3;
+	}
+	
 	if ( n_B[en_BOSS] == 1 && EquipNumSearch(1228) )
 	{ // Southern Cross headgear?
 		if(n_A_HEAD_DEF_PLUS >= 6)
@@ -1913,6 +1947,9 @@ function FirstNovis()
 // 218 = SOR Cls
 // 219 = GEN Cls
 // 220 = HNov
+// 221 = Kag/Oro
+// 222 = Reb
+// 223 = TKW Cls
 // >1000 -> Rebi & Sub
 // >2000 -> 3rd  & Sub
 
@@ -1964,9 +2001,9 @@ JobEquipItemOBJ = [
 /* HMa */[0, 1, 55,105, 71, 77, 89, 146, 999],
 /* HMe */[0, 1, 56,106, 70, 71, 72, 73, 74, 75, 78, 83, 84, 85, 86, 90, 91, 147, 999],
 
-/* TKK */[0, 1,141, 83, 84, 85, 86, 147, 999],
-/* TKM */[0, 1,142, 79, 83, 84, 85, 86, 87, 91, 93, 147, 999],
-/* SLi */[0, 1,143, 55, 65,111, 71, 77, 79, 89, 146, 999],
+/* TKK */[0, 1,141, 83, 84, 85, 86, 147, 223, 999],
+/* TKM */[0, 1,142, 79, 83, 84, 85, 86, 87, 91, 93, 147, 223, 999],
+/* SLi */[0, 1,143, 55, 65,111, 71, 77, 79, 89, 146, 223, 999],
 /* Nin */[0, 1,144, 58, 52, 91, 147, 999],
 /* GSl */[0, 1,145, 59, 83,999],
 
@@ -1997,9 +2034,9 @@ JobEquipItemOBJ = [
 /* Sor */[0, 1, 55, 65,118,218,132, 71, 77, 79, 82, 89, 146, 999],
 /* Gen */[0, 1, 56, 66,119,219,133, 70, 71, 72, 73, 74, 75, 78, 79, 82, 83, 84, 85, 86, 90, 91,92, 147, 999],
 /* Gen */[0, 1, 56, 66,119,219,133, 70, 71, 72, 73, 74, 75, 78, 79, 82, 83, 84, 85, 86, 90, 91,92, 147, 999],
-/* Obo */[0, 1,144, 58, 52, 91,999],
+/* Obo */[0, 1,144, 58, 52, 91, 221, 999],
 /* Eno */[0,    50, 90,120,999],
-/* Reb */[0, 1,145, 59, 83,999],
+/* Reb */[0, 1,145, 59, 83,222,999],
 ];
 }
 

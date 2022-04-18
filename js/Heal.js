@@ -134,7 +134,7 @@ function CalcBaseHeal( HealLv, maxHeal )
 	{ // Chibi Pope
 		healMultiplier += (n_A_HEAD_DEF_PLUS-6);
 	}
-	if ( EquipNumSearch( 1802 ) ||  EquipNumSearch( 1807 )
+	if ( EquipNumSearch( 1802 ) ||  EquipNumSearch( 1807 ) )
 	{
 		healMultiplier += Math.floor(n_A_SHOULDER_DEF_PLUS / 3);
 	}

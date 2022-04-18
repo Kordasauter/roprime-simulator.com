@@ -703,6 +703,30 @@ function CalcEquipAtk()
 	{//Str Glove
 		equipmentAttack += Math.floor(SU_STR / 10);
 	}
+	if ( EquipNumSearch( 1822 ) )
+	{//Shadow Ninja Shield
+		equipmentAttack += SkillSearch(skill_NIN_DAGGER_THROWING_PRACTICE) * 3;
+	}
+	if ( EquipNumSearch( 1826 ) || // "Shadow Runeknight Gloves"
+	 EquipNumSearch( 1827 ) || // "Shadow Royalguard Gloves"
+	 EquipNumSearch( 1828 ) || // "Shadow Mechanic Gloves"
+	 EquipNumSearch( 1829 ) || // "Shadow Genetic Gloves"
+	 EquipNumSearch( 1830 ) || // "Shadow Archbishop Gloves"
+	 EquipNumSearch( 1831 ) || // "Shadow Sura Gloves"
+	 EquipNumSearch( 1832 ) || // "Shadow Guillotine Gloves"
+	 EquipNumSearch( 1833 ) || // "Shadow Shadowchaser Gloves"
+	 EquipNumSearch( 1834 ) || // "Shadow Warlock Gloves"
+	 EquipNumSearch( 1835 ) || // "Shadow Sorcerer Gloves"
+	 EquipNumSearch( 1836 ) || // "Shadow Ranger Gloves"
+	 EquipNumSearch( 1837 ) || // "Shadow Minstrel Gloves"
+	 EquipNumSearch( 1838 ) || // "Shadow Wanderer Gloves"
+	 EquipNumSearch( 1839 ) || // "Shadow Ninja Gloves"
+	 EquipNumSearch( 1840 ) || // "Shadow Taekwon Gloves"
+	 EquipNumSearch( 1841 ) || // "Shadow Super Novice Gloves"
+	 EquipNumSearch( 1842 ) )  // "Shadow Gunslinger Gloves"
+	{ // 
+		equipmentAttack += n_A_SHADOW_WEAPON_DEF_PLUS; 
+	}
 	
 	
 	//Cards
@@ -1387,7 +1411,20 @@ function CalcAttackMod()
 			n_tok[bon_PHY_ATK] += 1;
 		}
 	}
-	
+	if ( EquipNumSearch(1823) || EquipNumSearch(1824) )
+	{ // Shadow Taekwon  Shield or Shadow Super Novice Shield
+		if(n_A_SHADOW_SHIELD_DEF_PLUS >=7){n_tok[bon_PHY_ATK] += 2;}
+		if(n_A_SHADOW_SHIELD_DEF_PLUS >=9){n_tok[bon_PHY_ATK] += 3;}
+	}
+	if ( EquipNumSearch(1839) )
+	{ // Shadow Ninja Gloves
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >=7){n_tok[bon_PHY_ATK] += 3;}
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >=9){n_tok[bon_PHY_ATK] += 4;}
+	}
+	if ( EquipNumSearch(1840) )
+	{ // Shadow Taekwon Gloves
+		n_tok[bon_PHY_ATK] += n_A_SHADOW_WEAPON_DEF_PLUS;
+	}
 	
 	//items
 	if ( usableItems[ksArchmagePotion] )
@@ -1481,7 +1518,11 @@ function CalcCriticalMod()
 		if(SU_LUK >= 110)
 			n_tok[bon_DMG_CRIT] += 1;
 	}
-	
+	if( EquipNumSearch(1825))
+	{//Shadow Gunslinger Shield
+		if(n_A_SHADOW_SHIELD_DEF_PLUS >= 7){n_tok[bon_DMG_CRIT] += 2;}
+		if(n_A_SHADOW_SHIELD_DEF_PLUS >= 9){n_tok[bon_DMG_CRIT] += 3;}
+	}
 	//Cards
 	if(CardNumSearch(562))
 	{//Petal Card
@@ -1707,7 +1748,11 @@ function CalcRangedMod()
 		if(SU_DEX >= 110)
 			n_tok[bon_DMG_RANGE] += 1;
 	}
-	
+	if( EquipNumSearch(1842))
+	{//Shadow Gunslinger Gloves
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7){n_tok[bon_DMG_RANGE] += 3;}
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 8){n_tok[bon_DMG_RANGE] += 5;}
+	}
 	if(CardNumSearch( 541 ))
 	{ //Menblatt Card
 		n_tok[bon_DMG_RANGE] += Math.floor(SU_DEX/10);
@@ -2272,6 +2317,26 @@ function calcHP()
 	{ // 
 		additiveHP += n_A_SHADOW_SHOES_DEF_PLUS * 10; 
 	}
+	if ( EquipNumSearch( 1809 ) || // "Shadow Runeknight Shield"
+		 EquipNumSearch( 1810 ) || // "Shadow Royalguard Shield"
+		 EquipNumSearch( 1811 ) || // "Shadow Mechanic Shield"
+		 EquipNumSearch( 1812 ) || // "Shadow Genetic Shield"
+		 EquipNumSearch( 1813 ) || // "Shadow Archbishop Shield"
+		 EquipNumSearch( 1814 ) || // "Shadow Sura Shield"
+		 EquipNumSearch( 1815 ) || // "Shadow Guillotine Shield"
+		 EquipNumSearch( 1816 ) || // "Shadow Shadowchaser Shield"
+		 EquipNumSearch( 1817 ) || // "Shadow Warlock Shield"
+		 EquipNumSearch( 1818 ) || // "Shadow Sorcerer Shield"
+		 EquipNumSearch( 1819 ) || // "Shadow Ranger Shield"
+		 EquipNumSearch( 1820 ) || // "Shadow Minstrel Shield"
+		 EquipNumSearch( 1821 ) || // "Shadow Wanderer Shield"
+		 EquipNumSearch( 1822 ) || // "Shadow Ninja Shield"
+		 EquipNumSearch( 1823 ) || // "Shadow Taekwon Shield"
+		 EquipNumSearch( 1824 ) || // "Shadow Super Novice Shield"
+		 EquipNumSearch( 1825 ) )  // "Shadow Gunslinger Shield"
+	{ // 
+		additiveHP += n_A_SHADOW_SHIELD_DEF_PLUS * 10; 
+	}
 	if ( EquipNumSearch( 1710 ) ) // "Shadow Warlock Shield"
 	{
 		additiveHP += n_A_SHADOW_SHIELD_DEF_PLUS * 10; 
@@ -2299,6 +2364,10 @@ function calcHP()
 	if ( EquipNumSearch( 1767 ) ) // "Shadow Shield of the Steadfast"
 	{
 		additiveHP += n_A_SHADOW_SHIELD_DEF_PLUS * 10; 
+	}
+	if ( EquipNumSearch(1840) )
+	{ // Shadow Taekwon Gloves
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7){additiveHP += 1000;}
 	}
 	
 	// Items
@@ -2464,7 +2533,15 @@ function calcHP()
 	{ // "Shadow Swordman Pendant"
 		if (n_A_SHADOW_EARRING_DEF_PLUS >= 7) { hpMultiplier += 1; }
 	}
-	
+	if ( EquipNumSearch(1840) )
+	{ // Shadow Taekwon Gloves
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9){ hpMultiplier += 10;}
+	}
+	if ( EquipNumSearch(1841) )
+	{ // Shadow Super Novice Gloves
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7){ hpMultiplier += 5;}
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9){ hpMultiplier += 5;}
+	}
 	
 	//Enchant
 	if(EnchNumSearch( 286 ))//Special LUK = 286
@@ -2816,6 +2893,10 @@ function calcSP( n_A_MaxSP )
 	{ // "Shadow Champion Set"
 		w  += (n_A_SHADOW_SHOES_DEF_PLUS + n_A_SHADOW_BODY_DEF_PLUS);
 	}
+	if ( EquipNumSearch(1840) )
+	{ // Shadow Taekwon Gloves
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7){w += 200;}
+	}
 	
 	// Skills	
 	if ( SkillSearch( skill_SL_KAINA ) )
@@ -2906,7 +2987,15 @@ function calcSP( n_A_MaxSP )
 	{ // "Shadow Diviner Pendant"
 		if (n_A_SHADOW_PENDANT_DEF_PLUS >= 7) { spMultiplier += 1; }
 	}
-	
+	if ( EquipNumSearch(1840) )
+	{ // Shadow Taekwon Gloves
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9){spMultiplier += 10;}
+	}
+	if ( EquipNumSearch(1841) )
+	{ // Shadow Super Novice Gloves
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7){spMultiplier += 5;}
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9){spMultiplier += 5;}
+	}
 	//Enchant
 	if(EnchNumSearch( 283 ))//Special VIT = 283
 	{
@@ -3066,7 +3155,19 @@ function calcHardDef( n_A_totalDEF )
 	{ // Enhanced Variant Shoes
 		n_A_DEF += Math.floor(n_A_SHOES_DEF_PLUS /2);
 	}
-
+	if(EquipNumSearch(1812))
+	{ // Shadow Genetic Shield
+		n_A_DEF += n_A_SHADOW_SHIELD_DEF_PLUS * (SkillSearch(skill_GEN_CART_TORNADO) + SkillSearch(skill_GEN_CART_CANNON) + SkillSearch(skill_GEN_CART_BOOST));
+	}
+	if(EquipNumSearch(1837))
+	{ // Shadow Minstrel Shield
+		n_A_DEF += n_A_SHADOW_SHIELD_DEF_PLUS * (SkillSearch(skill_MIN_WINDMILL) + SkillSearch(skill_MIN_ECHO_SONG) + SkillSearch(skill_MIN_HARMONIZE));
+	}
+	if(EquipNumSearch(1838))
+	{ // Shadow Wanderer Shield
+		n_A_DEF += n_A_SHADOW_SHIELD_DEF_PLUS * (SkillSearch(skill_WAN_MOONLIGHT) + SkillSearch(skill_WAN_SYMPHONY) + SkillSearch(skill_WAN_SWING_DANCE));
+	}
+	
 	// Skills
 	if ( performerBuffs[ksEnsemble] === ksBattleTheme && performerBuffs[ksEnsembleLevel] > 0 )
 	{ // Battle Theme
@@ -3295,8 +3396,14 @@ function calcHardMDef(n_A_MDEF)
 	{//Bangungot Boots of Nightmare
 		n_A_MDEF += n_A_SHOES_DEF_PLUS;
 	}
-	
-	
+	if(EquipNumSearch(1820))
+	{ // Shadow Minstrel Shield
+		n_A_MDEF += n_A_SHADOW_SHIELD_DEF_PLUS * (SkillSearch(skill_MIN_WINDMILL) + SkillSearch(skill_MIN_ECHO_SONG) + SkillSearch(skill_MIN_HARMONIZE));
+	}
+	if(EquipNumSearch(1821))
+	{ // Shadow Wanderer Shield
+		n_A_MDEF += n_A_SHADOW_SHIELD_DEF_PLUS * (SkillSearch(skill_WAN_MOONLIGHT) + SkillSearch(skill_WAN_SYMPHONY) + SkillSearch(skill_WAN_SWING_DANCE));
+	}
 	// Skill modifiers
 	if ( SkillSearch( skill_SW_ENDURE ) )
 	{ // Endure
@@ -3836,6 +3943,11 @@ function calcCrit( n_A_CRI )
 	{//Luk Glove
 		n_A_CRI += Math.floor(SU_LUK / 10);
 	}
+	if( EquipNumSearch(1825))
+	{//Shadow Gunslinger Shield
+		n_A_CRI += n_A_SHADOW_SHIELD_DEF_PLUS;
+		if(n_A_SHADOW_SHIELD_DEF_PLUS >= 9){ n_A_CRI += SkillSearch(skill_GS_SINGLE_ACTION) * 2 }
+	}
 	
 	// Skill modifiers
 	if ( SkillSearch(skill_MO_FURY ) )
@@ -4354,6 +4466,16 @@ function calcASPD()
 			equipASPD += 2;
 		}
 	}
+	if( (EquipNumSearch( 1809 ) &&  SkillSearch(skill_RUN_ENCHANT_BLADE) ) ||// Shadow Runeknight Shield
+		(EquipNumSearch( 1816 ) &&  SkillSearch(skill_SHA_AUTO_SHADOW_SPELL) ) ||//Shadow Shadowchaser Shield
+		EquipNumSearch( 1824 ) ) //Shadow Super Novice Shield
+	{
+		equipASPD += n_A_SHADOW_SHIELD_DEF_PLUS;
+	}
+	if( EquipNumSearch( 1824 ) ) //Shadow Super Novice Shield
+	{
+		if(n_A_SHADOW_SHIELD_DEF_PLUS >= 9){ equipASPD += SkillSearch(skill_TH_DOUBLE_ATTACK);}
+	}
 	// if ( SkillSearch( skill_RUN_FIGHTING_SPIRIT ) )
 	// { // Asir Rune
 		// equipASPD += SkillSearch( skill_RUN_RUNE_MASTERY ) / 10.0 * 4;
@@ -4436,6 +4558,22 @@ function calcASPD()
 	{ //"Dog Cap"
 		if(n_A_HEAD_DEF_PLUS >= 11)
 			flatASPD += 1;
+	}
+	
+	if( (EquipNumSearch( 1809 ) &&  SkillSearch(skill_RUN_ENCHANT_BLADE) ) || // Shadow Runeknight Shield
+		(EquipNumSearch( 1816 ) &&  SkillSearch(skill_SHA_AUTO_SHADOW_SPELL) ) ) // Shadow Shadowchaser Shield
+	{
+		if(n_A_SHADOW_SHIELD_DEF_PLUS >= 7) {flatASPD += 1;}
+		if(n_A_SHADOW_SHIELD_DEF_PLUS >= 9) {flatASPD += 1;}
+	}
+	if( (EquipNumSearch( 1822 ) &&  SkillSearch(skill_NIN_NINJA_AURA) ) ) //Shadow Ninja Shield
+	{
+		if(n_A_SHADOW_SHIELD_DEF_PLUS >= 9) {flatASPD += 1;}
+	}
+	if ( EquipNumSearch(1840) || EquipNumSearch(1842) )
+	{ // Shadow Taekwon Gloves or Shadow Gunslinger Gloves
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >=7){flatASPD += 1;}
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >=9){flatASPD += 1;}
 	}
 	// if ( SkillSearch( skill_RUN_FIGHTING_SPIRIT ) )
 	// { // Asir Rune
@@ -4604,6 +4742,11 @@ function CalcVariableCast()
 		{
 			w -= 3 * n_A_SHADOW_SHOES_DEF_PLUS;
 		}
+	}
+	if( EquipNumSearch( 1824 ) ) //Shadow Super Novice Shield
+	{
+		w -= n_A_SHADOW_SHIELD_DEF_PLUS;
+		if(n_A_SHADOW_SHIELD_DEF_PLUS >= 9){ w -= SkillSearch(skill_AR_OWLS_EYE);}
 	}
 	// Skills
 	if ( performerBuffs[ksBardSolo] === ksMagicStrings && performerBuffs[ksBardSoloLevel] > 0 )
