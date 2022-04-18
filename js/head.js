@@ -629,12 +629,6 @@ function ApplyDamageModifiers( damage )
 		(EquipNumSearch( 1813 ) && n_A_ActiveSkill==skill_ABI_ADORAMUS) || // Shadow Archbishop Shield
 		(EquipNumSearch( 1814 ) && n_A_ActiveSkill==skill_SUR_SKY_NET_BLOW) || // Shadow Sura Shield
 		(EquipNumSearch( 1817 ) && n_A_ActiveSkill==skill_WAR_EARTH_STRAIN) || // Shadow Warlock Shield
-		(EquipNumSearch( 1820 ) && n_A_ActiveSkill==skill_HU_BLITZ_BEAT) || // Shadow Minstrel Shield
-		(EquipNumSearch( 1821 ) && n_A_ActiveSkill==skill_HU_BLITZ_BEAT) || // Shadow Wanderer Shield
-		(EquipNumSearch( 1822 ) && n_A_ActiveSkill==skill_HU_BLITZ_BEAT) || // Shadow Ninja Shield
-		(EquipNumSearch( 1823 ) && n_A_ActiveSkill==skill_HU_BLITZ_BEAT) || // Shadow Taekwon Shield
-		(EquipNumSearch( 1824 ) && n_A_ActiveSkill==skill_HU_BLITZ_BEAT) || // Shadow Super Novice Shield
-		(EquipNumSearch( 1825 ) && n_A_ActiveSkill==skill_SN_FALCON_ASSAULT)) // Shadow Gunslinger Shield
 	{ 
 		dmgMultiplier += n_A_SHADOW_SHIELD_DEF_PLUS * 5;
 		damage = Math.floor( damage * ( 100 + dmgMultiplier ) / 100 );
@@ -649,10 +643,6 @@ function ApplyDamageModifiers( damage )
 		(EquipNumSearch( 1833 ) && n_A_ActiveSkill==skill_SHA_TRIANGLE_SHOT) || // Shadow Shadowchaser Gloves
 		(EquipNumSearch( 1834 ) && n_A_ActiveSkill==skill_WAR_DRAIN_LIFE) || // Shadow Warlock Gloves
 		(EquipNumSearch( 1836 ) && n_A_ActiveSkill==skill_RAN_CLUSTER_BOMB) || // Shadow Ranger Gloves
-		(EquipNumSearch( 1839 ) && n_A_ActiveSkill==skill_HU_BLITZ_BEAT) || // Shadow Ninja Gloves
-		(EquipNumSearch( 1840 ) && n_A_ActiveSkill==skill_HU_BLITZ_BEAT) || // Shadow Taekwon Gloves
-		(EquipNumSearch( 1841 ) && n_A_ActiveSkill==skill_HU_BLITZ_BEAT) || // Shadow Super Novice Gloves
-		(EquipNumSearch( 1842 ) && n_A_ActiveSkill==skill_SN_FALCON_ASSAULT)) // Shadow Gunslinger Gloves
 	{ 
 		dmgMultiplier += n_A_SHADOW_WEAPON_DEF_PLUS * 5;
 		damage = Math.floor( damage * ( 100 + dmgMultiplier ) / 100 );
