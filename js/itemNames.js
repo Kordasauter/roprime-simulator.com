@@ -1193,7 +1193,7 @@ ITEM_NAME = [
 ,[1190,0,0,"Bone Plate","When performing a physical attack, there is a 1% chance to cast [Bleeding] around 5x5 cells of the player",0]
 ,[1191,0,0,"Bradium Shield",0]
 ,[1192,0,0,"Dragon Manteau",0]
-,[1193,0,0,"Nydhorgg's Shadow Garb","Each 3 Base Level increases [Max SP] by 1<br/>Each upgrade increases [Max SP] by 10<br/>Adds a 1% chance to restore 1% of the damage dealt as SP to the user with each physical attack",0]
+,[1193,0,0,"Piece Of Angent Skin","Each 3 Base Level increases [Max SP] by 1<br/>Each upgrade increases [Max SP] by 10<br/>Adds a 1% chance to restore 1% of the damage dealt as SP to the user with each physical attack",0]
 ,[1194,0,0,"Vital Tree Shoes","You recover 30 HP every 10 seconds",0]
 ,[1195,0,0,"Ring of Wisdom King[?]",0]
 ,[1196,0,0,"Eyeball Ring",0]
@@ -1860,6 +1860,10 @@ ITEM_NAME = [
 ,[1857,0,0,"Shadow Taekwon Set","<br>SP consumption -10%.",0]
 ,[1858,0,0,"Shadow Super Novice Set","<br>SP consumption -10%.",0]
 ,[1859,0,0,"Shadow Gunslinger Set","<br>SP consumption -10%.",0]
+,[1860,0,0,"Feathered Tricorn","[For each 2 refine lvl]<br>ATK +15.<br><br>[If refine lv +7 or higher]<br>Ranged Attack +7%.<br><br>[If refine rate is 9 or higher]<br>ATK +5%, ASPD +1.<br><br>[If refine rate is 11 or higher]<br>Ranged Attack +5%.<br>Fixed casting -0,1 sec. per refine rate (apply up to +15).",0]
+,[1861,0,0,"Nidhoggur's Set","[For each 2 refine lv of garment]<br>[Arrow Storm] damage +12%.",0]
+,[1862,0,0,"Tendrilion Set","[For each 2 refine lv of garment]<br>[Severe Rainsorm] damage +7%.",0]
+,[1863,0,0,"Ancient Set","[For each 2 refine lv of garment]<br>[Triangle Shot] damage +15%.",0]
 ]
 };
 

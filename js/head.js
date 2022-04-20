@@ -599,55 +599,6 @@ function ApplyDamageModifiers( damage )
 		damage = Math.floor( damage * ( 100 + dmgMultiplier ) / 100 );
 	}
 	
-	
-	if( (EquipNumSearch( 1723 ) && n_A_ActiveSkill==skill_CR_GRAND_CROSS) || // Shadow Crusader Armor
-		(EquipNumSearch( 1732 ) && n_A_ActiveSkill==skill_PR_MAGNUS_EXORCISMUS) || // Shadow Priest Armor
-		(EquipNumSearch( 1735 ) && n_A_ActiveSkill==skill_MO_THROW_SPIRIT_SPHERES) || // Shadow Monk Armor
-		(EquipNumSearch( 1735 ) && n_A_ActiveSkill==skill_MO_OCCULT_IMPACTION) || // Shadow Monk Armor
-		(EquipNumSearch( 1741 ) && n_A_ActiveSkill==skill_RG_SIGHTLESS_MIND) || // Shadow Rogue Armor
-		(EquipNumSearch( 1744 ) && n_A_ActiveSkill==skill_WI_JUPITEL_THUNDER) || // Shadow Wizard Armor
-		(EquipNumSearch( 1750 ) && n_A_ActiveSkill==skill_HU_BLAST_MINE) || // Shadow Hunter Armor
-		(EquipNumSearch( 1750 ) && n_A_ActiveSkill==skill_HU_LAND_MINE)) // Shadow Hunter Armor
-	{ 
-		dmgMultiplier += n_A_SHADOW_BODY_DEF_PLUS * 5;
-		damage = Math.floor( damage * ( 100 + dmgMultiplier ) / 100 );
-	}
-	
-	if( (EquipNumSearch( 1721 ) && n_A_ActiveSkill==skill_KN_PIERCE) || // Shadow Knight Boots
-		(EquipNumSearch( 1736 ) && n_A_ActiveSkill==skill_MO_RAGING_QUADRUPLE_BLOW) || // Shadow Monk Boots
-		(EquipNumSearch( 1739 ) && n_A_ActiveSkill==skill_AS_GRIMTOOTH) || // Shadow Assassin Boots
-		(EquipNumSearch( 1748 ) && n_A_ActiveSkill==skill_SA_HEAVENS_DRIVE) || // Shadow Sage Boots
-		(EquipNumSearch( 1751 ) && n_A_ActiveSkill==skill_HU_BLITZ_BEAT) || // Shadow Hunter Boots
-		(EquipNumSearch( 1751 ) && n_A_ActiveSkill==skill_SN_FALCON_ASSAULT)) // Shadow Hunter Boots
-	{ 
-		dmgMultiplier += n_A_SHADOW_SHOES_DEF_PLUS * 5;
-		damage = Math.floor( damage * ( 100 + dmgMultiplier ) / 100 );
-	}
-	
-	if( (EquipNumSearch( 1810 ) && n_A_ActiveSkill==skill_ROY_EARTH_DRIVE) || // Shadow Royalguard Shield
-		(EquipNumSearch( 1811 ) && n_A_ActiveSkill==skill_MEC_FLAME_LAUNCHER) || // Shadow Mechanic Shield
-		(EquipNumSearch( 1813 ) && n_A_ActiveSkill==skill_ABI_ADORAMUS) || // Shadow Archbishop Shield
-		(EquipNumSearch( 1814 ) && n_A_ActiveSkill==skill_SUR_SKY_NET_BLOW) || // Shadow Sura Shield
-		(EquipNumSearch( 1817 ) && n_A_ActiveSkill==skill_WAR_EARTH_STRAIN) ) // Shadow Warlock Shield
-	{ 
-		dmgMultiplier += n_A_SHADOW_SHIELD_DEF_PLUS * 5;
-		damage = Math.floor( damage * ( 100 + dmgMultiplier ) / 100 );
-	}
-	
-	if( (EquipNumSearch( 1826 ) && n_A_ActiveSkill==skill_RUN_SONIC_WAVE) || // Shadow Runeknight Gloves
-		(EquipNumSearch( 1827 ) && n_A_ActiveSkill==skill_ROY_SPEAR_CANNON) || // Shadow Royalguard Gloves
-		(EquipNumSearch( 1828 ) && n_A_ActiveSkill==skill_MEC_VULCAN_ARM) || // Shadow Mechanic Gloves
-		(EquipNumSearch( 1829 ) && n_A_ActiveSkill==skill_GEN_CART_TORNADO) || // Shadow Genetic Gloves
-		(EquipNumSearch( 1830 ) && n_A_ActiveSkill==skill_ABI_DUPLE_LIGHT) || // Shadow Archbishop Gloves
-		(EquipNumSearch( 1831 ) && n_A_ActiveSkill==skill_SUR_RAMPAGE_BLASTER) || // Shadow Sura Gloves
-		(EquipNumSearch( 1833 ) && n_A_ActiveSkill==skill_SHA_TRIANGLE_SHOT) || // Shadow Shadowchaser Gloves
-		(EquipNumSearch( 1834 ) && n_A_ActiveSkill==skill_WAR_DRAIN_LIFE) || // Shadow Warlock Gloves
-		(EquipNumSearch( 1836 ) && n_A_ActiveSkill==skill_RAN_CLUSTER_BOMB) )		// Shadow Ranger Gloves
-	{ 
-		dmgMultiplier += n_A_SHADOW_WEAPON_DEF_PLUS * 5;
-		damage = Math.floor( damage * ( 100 + dmgMultiplier ) / 100 );
-	}
-	
 	//PRIMA ERA QUI, MO SPOSTO!!!
 	//damage = Math.floor(tPlusDamCut(damage));
 	
@@ -808,6 +759,7 @@ function ApplySkillModifiers( damage )
 		// Combo Battle Glove +15% bonus to Trfecta and Quadruple
 		dmgMultiplier += 15;
 	}
+	
 	if ( ( n_A_ActiveSkill == skill_AS_SONIC_BLOW ||
 		   n_A_ActiveSkill == skill_AS_SONIC_BLOW_SL ) &&
 		 SkillSearch( skill_AS_SONIC_ACCELERATION ) && determiningEDPdamage == 0 )
@@ -830,7 +782,65 @@ function ApplySkillModifiers( damage )
 		if (n_A_Weapon_element == ele_NEUTRAL + SkillSearch( skill_KAG_GET_ELEMENTAL_SEAL ) && SkillSearch( skill_KAG_GET_ELEMENTAL_SEAL ) !== ele_EARTH)
 			dmgMultiplier += 10*SkillSearch( skill_KAG_SUMMON_ELEMENTAL_SEAL );
 	}
-
+		
+	
+	if( (EquipNumSearch( 1723 ) && n_A_ActiveSkill==skill_CR_GRAND_CROSS) || // Shadow Crusader Armor
+		(EquipNumSearch( 1732 ) && n_A_ActiveSkill==skill_PR_MAGNUS_EXORCISMUS) || // Shadow Priest Armor
+		(EquipNumSearch( 1735 ) && n_A_ActiveSkill==skill_MO_THROW_SPIRIT_SPHERES) || // Shadow Monk Armor
+		(EquipNumSearch( 1735 ) && n_A_ActiveSkill==skill_MO_OCCULT_IMPACTION) || // Shadow Monk Armor
+		(EquipNumSearch( 1741 ) && n_A_ActiveSkill==skill_RG_SIGHTLESS_MIND) || // Shadow Rogue Armor
+		(EquipNumSearch( 1744 ) && n_A_ActiveSkill==skill_WI_JUPITEL_THUNDER) || // Shadow Wizard Armor
+		(EquipNumSearch( 1750 ) && n_A_ActiveSkill==skill_HU_BLAST_MINE) || // Shadow Hunter Armor
+		(EquipNumSearch( 1750 ) && n_A_ActiveSkill==skill_HU_LAND_MINE)) // Shadow Hunter Armor
+	{ 
+		dmgMultiplier += n_A_SHADOW_BODY_DEF_PLUS * 5;
+	}
+	
+	if( (EquipNumSearch( 1721 ) && n_A_ActiveSkill==skill_KN_PIERCE) || // Shadow Knight Boots
+		(EquipNumSearch( 1736 ) && n_A_ActiveSkill==skill_MO_RAGING_QUADRUPLE_BLOW) || // Shadow Monk Boots
+		(EquipNumSearch( 1739 ) && n_A_ActiveSkill==skill_AS_GRIMTOOTH) || // Shadow Assassin Boots
+		(EquipNumSearch( 1748 ) && n_A_ActiveSkill==skill_SA_HEAVENS_DRIVE) || // Shadow Sage Boots
+		(EquipNumSearch( 1751 ) && n_A_ActiveSkill==skill_HU_BLITZ_BEAT) || // Shadow Hunter Boots
+		(EquipNumSearch( 1751 ) && n_A_ActiveSkill==skill_SN_FALCON_ASSAULT)) // Shadow Hunter Boots
+	{ 
+		dmgMultiplier += n_A_SHADOW_SHOES_DEF_PLUS * 5;
+	}
+	
+	if( (EquipNumSearch( 1810 ) && n_A_ActiveSkill==skill_ROY_EARTH_DRIVE) || // Shadow Royalguard Shield
+		(EquipNumSearch( 1811 ) && n_A_ActiveSkill==skill_MEC_FLAME_LAUNCHER) || // Shadow Mechanic Shield
+		(EquipNumSearch( 1813 ) && n_A_ActiveSkill==skill_ABI_ADORAMUS) || // Shadow Archbishop Shield
+		(EquipNumSearch( 1814 ) && n_A_ActiveSkill==skill_SUR_SKY_NET_BLOW) || // Shadow Sura Shield
+		(EquipNumSearch( 1817 ) && n_A_ActiveSkill==skill_WAR_EARTH_STRAIN) ) // Shadow Warlock Shield
+	{ 
+		dmgMultiplier += n_A_SHADOW_SHIELD_DEF_PLUS * 5;
+	}
+	
+	if( (EquipNumSearch( 1826 ) && n_A_ActiveSkill==skill_RUN_SONIC_WAVE) || // Shadow Runeknight Gloves
+		(EquipNumSearch( 1827 ) && n_A_ActiveSkill==skill_ROY_SPEAR_CANNON) || // Shadow Royalguard Gloves
+		(EquipNumSearch( 1828 ) && n_A_ActiveSkill==skill_MEC_VULCAN_ARM) || // Shadow Mechanic Gloves
+		(EquipNumSearch( 1829 ) && n_A_ActiveSkill==skill_GEN_CART_TORNADO) || // Shadow Genetic Gloves
+		(EquipNumSearch( 1830 ) && n_A_ActiveSkill==skill_ABI_DUPLE_LIGHT) || // Shadow Archbishop Gloves
+		(EquipNumSearch( 1831 ) && n_A_ActiveSkill==skill_SUR_RAMPAGE_BLASTER) || // Shadow Sura Gloves
+		(EquipNumSearch( 1833 ) && n_A_ActiveSkill==skill_SHA_TRIANGLE_SHOT) || // Shadow Shadowchaser Gloves
+		(EquipNumSearch( 1834 ) && n_A_ActiveSkill==skill_WAR_DRAIN_LIFE) || // Shadow Warlock Gloves
+		(EquipNumSearch( 1836 ) && n_A_ActiveSkill==skill_RAN_CLUSTER_BOMB) )		// Shadow Ranger Gloves
+	{ 
+		dmgMultiplier += n_A_SHADOW_WEAPON_DEF_PLUS * 5;
+	}
+	
+	if( (EquipNumSearch( 1860 ) && EquipNumSearch( 1193 ) && n_A_ActiveSkill==skill_RAN_ARROW_STORM) )
+	{ // "Feathered Tricorn" + "Piece OF Angent Skin"
+		dmgMultiplier += Math.floor(n_A_SHOULDER_DEF_PLUS / 2) * 12;
+	}
+	if( (EquipNumSearch( 1860 ) && EquipNumSearch( 996 ) && n_A_ActiveSkill==skill_MIWA_SEVERE_RAINSTORM) )
+	{ // "Feathered Tricorn" + "Leather of Tendrilion"
+		dmgMultiplier += Math.floor(n_A_SHOULDER_DEF_PLUS / 2) * 7;
+	}
+	if( (EquipNumSearch( 1860 ) && EquipNumSearch( 315 ) && n_A_ActiveSkill==skill_SHA_TRIANGLE_SHOT) )
+	{ // "Feathered Tricorn" + "Ancient Cape"
+		dmgMultiplier += Math.floor(n_A_SHOULDER_DEF_PLUS / 2) * 15;
+	}
+	
 	damage = damage * (100+StPlusCalc2(bon_DMG_SKILL+n_A_ActiveSkill)+StPlusCard(bon_DMG_SKILL+n_A_ActiveSkill) + dmgMultiplier) /100;
 	if ( n_A_ActiveSkill == skill_RG_BACK_STAB &&
 		 n_A_WeaponType == weapTyp_BOW )

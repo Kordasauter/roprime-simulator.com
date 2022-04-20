@@ -727,7 +727,10 @@ function CalcEquipAtk()
 	{ // 
 		equipmentAttack += n_A_SHADOW_WEAPON_DEF_PLUS; 
 	}
-	
+	if(EquipNumSearch(1860))
+	{ //"Feathered Tricorn"
+		equipmentAttack += 15 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
+	}
 	
 	//Cards
 	if(CardNumSearch(557))
@@ -1369,8 +1372,8 @@ function CalcAttackMod()
 	{ //"Amistr Hat"
 		if(n_A_HEAD_DEF_PLUS >= 11) { n_tok[bon_PHY_ATK] += 5;}	
 	}
-	if(EquipNumSearch(1702))
-	{ //"Dog Cap"
+	if(EquipNumSearch(1702) || EquipNumSearch(1860))
+	{ //"Dog Cap"        or    "Feathered Tricorn" 
 		if(n_A_HEAD_DEF_PLUS >= 9)
 			n_tok[bon_PHY_ATK] += 5;
 	}
@@ -1753,6 +1756,12 @@ function CalcRangedMod()
 		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7){n_tok[bon_DMG_RANGE] += 3;}
 		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 8){n_tok[bon_DMG_RANGE] += 5;}
 	}
+	if(EquipNumSearch(1860))
+	{ //"Feathered Tricorn"
+		if(n_A_HEAD_DEF_PLUS >= 7){n_tok[bon_DMG_RANGE] += 7;}
+		if(n_A_HEAD_DEF_PLUS >= 11){n_tok[bon_DMG_RANGE] += 5;}
+	}
+	
 	if(CardNumSearch( 541 ))
 	{ //Menblatt Card
 		n_tok[bon_DMG_RANGE] += Math.floor(SU_DEX/10);
@@ -4554,9 +4563,9 @@ function calcASPD()
 			flatASPD +=1;
 		}
 	}
-	if(EquipNumSearch(1702))
-	{ //"Dog Cap"
-		if(n_A_HEAD_DEF_PLUS >= 11)
+	if(EquipNumSearch(1702) || EquipNumSearch(1860))
+	{ //"Dog Cap" or "Feathered Tricorn"
+		if(n_A_HEAD_DEF_PLUS >= 9)
 			flatASPD += 1;
 	}
 	
@@ -4867,8 +4876,8 @@ function CalcFixedCast()
 		reductionFlat += -0.08;
 		if ( n_A_HEAD_DEF_PLUS >= 2) {reductionFlat += -0.08*(n_A_HEAD_DEF_PLUS-1) }; 
 	}
-	if(EquipNumSearch(1681) || EquipNumSearch(1702) || EquipNumSearch(1759))
-	{ //"Amistr Hat"              "Dog Cap"                Diabolic Halo
+	if(EquipNumSearch(1681) || EquipNumSearch(1702) || EquipNumSearch(1759) || EquipNumSearch(1860))
+	{ //"Amistr Hat"              "Dog Cap"               "Diabolic Halo"         "Feathered Tricorn"
 		if ( n_A_HEAD_DEF_PLUS >= 11 && n_A_HEAD_DEF_PLUS <= 15)
 		{
 			reductionFlat += -0.1*(n_A_HEAD_DEF_PLUS - 10);

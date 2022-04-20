@@ -1196,7 +1196,7 @@
 ,[1190,itm_type_ARMOR,1072,60,0,1,100,85,bon_STR,1,bon_MDEF,3,bon_DEFIGN_RC_DEMI_HUMAN,10,bon_DEFIGN_RC_BRUTE,10,bon_NONE] // "Bone Plate"
 ,[1191,itm_type_SHIELD,1079,98,0,1,180,65,bon_HP_ADD,500,5159,60,5384,60,bon_AGI,-1,bon_NONE] // "Bradium Shield"
 ,[1192,itm_type_GARMENT,1001,14,0,1,100,0,bon_AGI,1,bon_MDEF,5,bon_NONE] // "Dragon Manteau"
-,[1193,itm_type_GARMENT,1001,25,0,1,40,90,bon_MDEF,3,bon_RED_ELE_NEUTRAL,7,bon_RED_ELE_WATER,7,bon_RED_ELE_EARTH,7,bon_RED_ELE_FIRE,7,bon_RED_ELE_WIND,7,bon_RED_ELE_POISON,7,bon_RED_ELE_HOLY,7,bon_RED_ELE_SHADOW,7,bon_RED_ELE_GHOST,7,bon_RED_ELE_UNDEAD,7,bon_NONE] // "Nydhorgg's Shadow Garb"
+,[1193,itm_type_GARMENT,1001,25,0,1,40,90,bon_MDEF,3,bon_RED_ELE_NEUTRAL,7,bon_RED_ELE_WATER,7,bon_RED_ELE_EARTH,7,bon_RED_ELE_FIRE,7,bon_RED_ELE_WIND,7,bon_RED_ELE_POISON,7,bon_RED_ELE_HOLY,7,bon_RED_ELE_SHADOW,7,bon_RED_ELE_GHOST,7,bon_RED_ELE_UNDEAD,7,bon_NONE] // "Nydhorgg's Shadow Garb" / Piece OF Angent Skin
 ,[1194,itm_type_SHOES,1001,16,0,0,50,60,bon_HP_MUL,10,bon_VIT,2,bon_MDEF,3,bon_HEAL_REC,5,bon_NONE] // "Life Tree Wooden Shoes"
 ,[1195,itm_type_ACCESSORY,0,0,0,0,10,0,bon_HP_ADD,50,bon_SP_ADD,20,bon_NONE] // "Ring of Wisdom King?"
 ,[1196,itm_type_ACCESSORY,1,0,0,1,10,70,bon_CRIT,2,bon_SP_ADD,25,bon_NONE] // "Eyeball Ring"
@@ -1874,6 +1874,10 @@
 ,[1857,itm_type_SET,0,0,0,0,0,0,bon_ALL_STATS,3,bon_HP_MUL,2,bon_SP_MUL,2,bon_NONE] // "Shadow Taekwon Set"
 ,[1858,itm_type_SET,0,0,0,0,0,0,bon_ALL_STATS,3,bon_HP_MUL,2,bon_SP_MUL,2,bon_NONE] // "Shadow Super Novice Set"
 ,[1859,itm_type_SET,0,0,0,0,0,0,bon_ALL_STATS,3,bon_HP_MUL,2,bon_SP_MUL,2,bon_NONE] // "Shadow Gunslinger Set"
+,[1860,itm_type_HEAD_UPPER,0,0,0,0,0,1,bon_NONE] // "Feathered Tricorn"
+,[1861,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Feathered Tricorn" + "Piece Of Angent Skin"
+,[1862,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Feathered Tricorn" + "Leather of Tendrilion"
+,[1863,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Feathered Tricorn" + "Ancient Cape"
 
 ];
 ItemMax = ItemOBJ.length -1;
@@ -2292,9 +2296,10 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[1857,1823,1840,"NULL"] //"Shadow Taekwon Set"
 ,[1858,1824,1841,"NULL"] //"Shadow Super Novice Set"
 ,[1859,1825,1842,"NULL"] //"Shadow Gunslinger Set"
-
+,[1861,1860,1193,"NULL"] //"Feathered Tricorn" + "Piece Of Angent Skin"
+,[1862,1860,996,"NULL"] //"Feathered Tricorn" + "Leather of Tendrilion"
+,[1863,1860,315,"NULL"] //"Feathered Tricorn" + "Ancient Cape"
 //,[itm_set,item1,item2,...,"NULL"]
-
 ];
 SE_MAXnum = w_SE.length -1;
 }
