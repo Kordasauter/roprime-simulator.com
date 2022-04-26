@@ -765,6 +765,41 @@ SkillOBJ = [
 [762,1,"Crimson Marker"],
 [763,5,"Platinum Altar"],
 [764,5,"Binding Trap"],
+[765,1,"Basic Skill (Doram)"],//basic doram skills
+[766,1,"Bite"],
+[767,1,"Hide"],
+[768,3,"Scratch"],
+[769,3,"Lope"],
+[770,1,"Stoop"],
+[771,1,"Spirit Marble"],
+[772,1,"Soul Attack"],
+[773,5,"Fresh Shrimp"],//Seafood-based Skills
+[774,5,"Bunch of Shrimp"],
+[775,5,"Tuna Belly"],
+[776,5,"Tuna Party"],
+[777,1,"Power of Sea"],
+[778,5,"Grooming"],//Advanced Seafood-based Skills
+[779,5,"Purring"],
+[780,5,"Tasty Shrimp Party"],
+[781,1,"Spirit of Sea"],
+[782,1,"Silvervine Stem Spear"],//Plant-based Skills //only one level is used in the simulator because damage are fixed (700% Mdmg)
+[783,5,"Silvervine Root Twist"],
+[784,5,"Catnip Meteor"],
+[785,5,"Catnip Powdering"],
+[786,1,"Power of Land"],
+[787,5,"Chattering"],//Advanced Plant-based Skills
+[788,5,"Meow Meow"],
+[789,5,"Nyang Grass"],
+[790,1,"Spirit of Land"],
+[791,5,"Picky Peck"],//Animal-based Skills
+[792,5,"Arclouse Dash"],
+[793,5,"Scar of Tarou"],
+[794,5,"Lunatic Carrot Beat"],
+[795,1,"Power of Life"],
+[796,5,"Hiss"],//Advanced Animal-based Skills
+[797,5,"Power of Flock"],
+[798,5,"Spirit of Savage"],
+[799,1,"Spirit of Life"],
 ];
 }
 
@@ -844,10 +879,10 @@ JobSkillPassOBJ = [
 [ 68,241,688,691,744,999,999,999,999,999,999,999,999,999], // GEt
 [393,404,79,80,skill_KAG_16TH_NIGHT,skill_KAG_SUMMON_ELEMENTAL_SEAL,skill_KAG_GET_ELEMENTAL_SEAL,999,999,999,999,999,999,999,999], // KAG
 [  3, 13, 14, 23, 24, 38, 39, 42,253,385,  9,309,196,310,183,146,148,241,156,185,999], // Expanded SNovi
-[425,426,427,416,420,421,422,433,429,749,763,430,999,999,999] // Rebellion
+[425,426,427,416,420,421,422,433,429,749,763,430,999,999,999], // Rebellion
+[skill_SUM_STOOP,skill_SUM_SPRITE_MARBLE,774,777,778,779,999,999,999] // Summoner
 ];
 }
-// [425,426,427,416,420,421,422,433,745,746,747,749,756,762,763,764,999] // Rebellion
 {
     JobExclusiveSkillOBJ = [
 	[], // Blank
@@ -926,10 +961,10 @@ JobSkillPassOBJ = [
 	[],
 	[skill_KAG_CROSS_STRIKE, skill_KAG_SWIRLING_PETAL, skill_KAG_OVERTHROW, skill_KAG_SPINTHROW_KUNAI, skill_KAG_SPIRIT_BREAKER, skill_KAG_THROW_EXPLOSIVE_KUNAI], // Kagerou/Oboro
 	[skill_WI_EARTH_SPIKE, skill_HU_FREEZING_TRAP, skill_WI_FIRE_PILLAR, skill_WI_FROST_NOVA, skill_WI_HEAVENS_DRIVE, skill_CR_HOLY_CROSS, skill_WI_JUPITEL_THUNDER, skill_WI_SIGHTRASHER, skill_HW_STAVE_CRASHER, skill_WI_WATER_BALL], // Expanded Super Novice
-	[skill_REB_FIRE_DANCE, skill_REB_SHATTERING_STORM, skill_REB_VANISHING_BUSTER, skill_REB_SLUG_SHOT, skill_REB_MASS_SPIRAL, skill_REB_ANTI_MATERIAL_BLAST, skill_REB_GODS_HAMMER, skill_REB_QUICK_DRAW_SHOT, skill_REB_HOWLING_MINE, skill_REB_DRAGON_TAIL, skill_REB_FIRE_RAIN, skill_REB_ROUND_TRIP,skill_REB_BINDING_TRAP]//Rebellion
+	[skill_REB_FIRE_DANCE, skill_REB_SHATTERING_STORM, skill_REB_VANISHING_BUSTER, skill_REB_SLUG_SHOT, skill_REB_MASS_SPIRAL, skill_REB_ANTI_MATERIAL_BLAST, skill_REB_GODS_HAMMER, skill_REB_QUICK_DRAW_SHOT, skill_REB_HOWLING_MINE, skill_REB_DRAGON_TAIL, skill_REB_FIRE_RAIN, skill_REB_ROUND_TRIP,skill_REB_BINDING_TRAP],//Rebellion
+	[skill_SUM_SOUL_ATTACK,skill_SUM_BITE,skill_SUM_SCRATCH,skill_SUM_SILVERVINE_STEM_SPEAR,skill_SUM_CATNIP_METEOR,skill_SUM_PICKY_PECK,skill_SUM_SCAR_OF_TAROU,skill_SUM_LUNATIC_CARROT_BEAT,skill_SUM_SPIRIT_OF_SAVAGE]//Summoner
  ];
 }
-// [skill_REB_FIRE_DANCE, skill_REB_SHATTERING_STORM, skill_REB_VANISHING_BUSTER, skill_REB_SLUG_SHOT, skill_REB_MASS_SPIRAL, skill_REB_ANTI_MATERIAL_BLAST, skill_REB_GODS_HAMMER, skill_REB_QUICK_DRAW_SHOT, skill_REB_HOWLING_MINE, skill_REB_DRAGON_TAIL, skill_REB_FIRE_RAIN, skill_REB_ROUND_TRIP]//Rebellion
 
 {
     JobCopyableSkillOBJ = [
@@ -1007,7 +1042,8 @@ JobSkillPassOBJ = [
 	[],
 	[], // Kagerou/Oboro
 	[], // Expanded Super Novice
-	[] //Rebellion
+	[], //Rebellion
+	[] //Summoner
     ];
 }
 
@@ -1149,9 +1185,9 @@ JobSkillPassOBJ = [
 	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_NIN]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_KAGOB]] ], // Kagerou/Oboro
 	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_SNOVI]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_ENOVI]] ], // Super Novice
 	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_GUN]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_REB]] ], // Rebellion
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_SUM]]] // summoner
     ];
 }
-	// [ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_GUN]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_REB]] ], // Rebellion
 
 
 { // JobSkillActiveOBJ[Class] = ActiveSkills
@@ -1230,10 +1266,11 @@ JobSkillActiveOBJ = [
 [  0, 65, 66,244,248,328,skill_GEN_CART_TORNADO,skill_GEN_CART_CANNON,skill_GEN_THORN_TRAP,skill_GEN_WALL_OF_THORNS,743,999], // GEt
 [  0,407,408,409,410,412,413,414,415,394,395,396,398,400,401,405,438,skill_KAG_OVERTHROW,skill_KAG_CROSS_STRIKE,skill_KAG_SPINTHROW_KUNAI,skill_KAG_SPIRIT_BREAKER,skill_KAG_SWIRLING_PETAL,skill_KAG_THROW_EXPLOSIVE_KUNAI,999], // KAG
 [  0,  6,  7, 17, 65, 25, 51, 54, 56, 52, 53, 55, 57, 46, 47,111,132,122,130,133,126,124,128,275,161,999], // Expanded SNovi
-[  0,418,419,423,428,429,430,431,432,434,435,436,437,748,750,751,752,753,754,755,757,758,759,760,761,764,999] // Rebellion
+[  0,418,419,423,428,429,430,431,432,434,435,436,437,748,750,751,752,753,754,755,757,758,759,760,761,764,999], // Rebellion
+// [  0,skill_SUM_BASIC_SKILL,skill_SUM_BITE,skill_SUM_HIDE,skill_SUM_SCRATCH,skill_SUM_LOPE,skill_SUM_STOOP,skill_SUM_SPRITE_MARBLE,skill_SUM_SOUL_ATTACK,skill_SUM_FRESH_SHRIMP,skill_SUM_BUNCH_OF_SHRIMP,skill_SUM_TUNA_BELLY,skill_SUM_TUNA_PARTY,skill_SUM_POWER_OF_SEA,skill_SUM_GROOMING,skill_SUM_PURRING,skill_SUM_TASTY_SHRIMP_PARTY,skill_SUM_SPIRIT_OF_SEA,skill_SUM_SILVERVINE_STEM_SPEAR,skill_SUM_SILVERVINE_ROOT_TWIST,skill_SUM_CATNIP_METEOR,skill_SUM_CATNIP_POWDERING,skill_SUM_POWER_OF_LAND,skill_SUM_CHATTERING,skill_SUM_MEOW_MEOW,skill_SUM_NYANG_GRASS,skill_SUM_SPIRIT_OF_LAND,skill_SUM_PICKY_PECK,skill_SUM_ARCLOUSE_DASH,skill_SUM_SCAR_OF_TAROU,skill_SUM_LUNATIC_CARROT_BEAT,skill_SUM_POWER_OF_LIFE,skill_SUM_HISS,skill_SUM_POWER_OF_FLOCK,skill_SUM_SPIRIT_OF_SAVAGE,skill_SUM_SPIRIT_OF_LIFE,999] // Summoner
+[  0,766,999], // Summoner
 ];
 }
-// [  0,418,419,423,428,429,430,431,432,434,435,436,437,748,750,751,752,753,754,755,757,758,759,760,761,999] // Rebellion
 
 
 { InsertSkill = [ // Skills obtained via equipped item or card [id, isItem, SkillID, Lv]

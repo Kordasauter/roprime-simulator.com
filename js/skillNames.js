@@ -765,5 +765,40 @@ SKILL_NAME = [
 ,["","Crimson Marker"]
 ,["","Platinum Altar"]
 ,["","Binding Trap"]
+,["","Basic Skill (Doram)"]//basic doram skills
+,["","Bite"]
+,["","Hide"]
+,["","Scratch"]
+,["","Lope"]
+,["","Stoop"]
+,["","Spirit Marble"]
+,["","Soul Attack"]
+,["","Fresh Shrimp"]//Seafood-based Skills
+,["","Bunch of Shrimp"]
+,["","Tuna Belly"]
+,["","Tuna Party"]
+,["","Power of Sea"]
+,["","Grooming"]//Advanced Seafood-based Skills
+,["","Purring"]
+,["","Tasty Shrimp Party"]
+,["","Spirit of Sea"]
+,["","Silvervine Stem Spear"]//Plant-based Skills
+,["","Silvervine Root Twist"]
+,["","Catnip Meteor"]
+,["","Catnip Powdering"]
+,["","Power of Land"]
+,["","Chattering"]//Advanced Plant-based Skills
+,["","Meow Meow"]
+,["","Nyang Grass"]
+,["","Spirit of Land"]
+,["","Picky Peck"]//Animal-based Skills
+,["","Arclouse Dash"]
+,["","Scar of Tarou"]
+,["","Lunatic Carrot Beat"]
+,["","Power of Life"]
+,["","Hiss"]//Advanced Animal-based Skills
+,["","Power of Flock"]
+,["","Spirit of Savage"]
+,["","Spirit of Life"]
 ];
 }

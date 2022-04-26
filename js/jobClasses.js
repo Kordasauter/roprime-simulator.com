@@ -75,5 +75,6 @@ JobName = [
 ,["","Kagero/Oboro"]
 ,["","Expanded Super Novice"]
 ,["","Rebellion"]
+,["","Summoner"]
 ];
 }

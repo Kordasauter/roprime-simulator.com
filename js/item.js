@@ -1384,31 +1384,31 @@
 ,[1378,itm_type_HEAD_MIDDLE,0,0,0,0,10,0,bon_RED_RC_DEMI_HUMAN,3,bon_NONE] // "Cute Blush"
 ,[1379,itm_type_HEAD_LOWER,0,0,0,0,10,0,bon_RED_RC_DEMI_HUMAN,2,bon_NONE] // "Gentleman's Pipe"
 ,[1380,itm_type_HEAD_UPPER,/*0*/999,0,0,0,10,0,bon_ATK,5,bon_MATK_MUL,5,bon_NONE] // "Blue Pajama Hat"
-,[1381,weapTyp_KATAR,/*2108*/999,170,3,1,120,100,bon_NONE] // "Agent Katar"
-,[1382,weapTyp_KATAR,/*2108*/999,200,4,1,150,140,bon_DEX,2,bon_FLEE,-30,bon_DMG_RC_DEMI_HUMAN,50,bon_NONE] // "Guillotine Katar"
-,[1383,weapTyp_AXEII,/*1001*/999,250,4,1,190,95,bon_ELEMENT,3,bon_RES_STATUS_BURNING,5,bon_NONE] // "Ignis steel"
-,[1384,weapTyp_AXEII,/*1001*/999,250,4,1,190,95,bon_ELEMENT,1,bon_RES_STATUS_CRISTALLIZATION,5,bon_NONE] // "End Sectora"
-,[1385,weapTyp_SPEAR,/*2113*/999,180,4,1,160,100,bon_SP_ADD,-100,bon_NONE] // "Cannon Spear"
-,[1386,weapTyp_SPEARII,/*2107*/999,20,4,0,2000,140,bon_NONE] // "Gigantic Lance"
-,[1387,weapTyp_BOOK,/*2118*/999,100,4,2,100,100,bon_MATK,160,bon_DEX,1,bon_UNBREAKABLE,1,bon_NONE] // "Cold Magic Book"
+,[1381,weapTyp_KATAR,2108,170,3,1,120,100,bon_NONE] // "Agent Katar"
+,[1382,weapTyp_KATAR,2108,200,4,1,150,140,bon_DEX,2,bon_FLEE,-30,bon_DMG_RC_DEMI_HUMAN,50,bon_NONE] // "Guillotine Katar"
+,[1383,weapTyp_AXEII,1001,250,4,1,190,95,bon_ELEMENT,3,bon_RES_STATUS_BURNING,5,bon_NONE] // "Ignis steel"
+,[1384,weapTyp_AXEII,1001,250,4,1,190,95,bon_ELEMENT,1,bon_RES_STATUS_CRISTALLIZATION,5,bon_NONE] // "End Sectora"
+,[1385,weapTyp_SPEAR,2113,180,4,1,160,100,bon_SP_ADD,-100,bon_NONE] // "Cannon Spear"
+,[1386,weapTyp_SPEARII,2107,20,4,0,2000,140,bon_NONE] // "Gigantic Lance"
+,[1387,weapTyp_BOOK,2118,100,4,2,100,100,bon_MATK,160,bon_DEX,1,bon_UNBREAKABLE,1,bon_NONE] // "Cold Magic Book"
 ,[1388,weapTyp_ROD,2109,30,4,1,40,55,bon_MATK,160,bon_ELEMENT,6,bon_UNBREAKABLE,1,bon_NONE] // "Light Of Recovery""Recovery Light"
-,[1389,itm_type_SHIELD,/*2051*/999,130,0,1,280,100,bon_RED_SIZ_LARGE,5,bon_NONE] // "Giant Shield"
-,[1390,itm_type_SHIELD,/*2111*/999,30,0,1,100,100,bon_INT,1,bon_MDEF,2,bon_NONE] // "Gefenia report of water"
-,[1391,itm_type_SHIELD,/*2109*/999,20,0,1,50,140,bon_MDEF,5,bon_HEAL_MUL,5,bon_NONE] // "Bible of Promise (2nd vol.)"
-,[1392,itm_type_GARMENT,/*2094*/999,1,0,0,40,130,bon_MDEF,5,bon_SKILL_ENABLE,46,bon_NONE] // "Salvage Cape"
-,[1393,itm_type_ACCESSORY,/*2108*/999,3,0,1,40,100,bon_SP_ADD,20,bon_CRIT,3,bon_NONE] // "Assassin's glove"
-,[1394,weapTyp_DAGGER,/*1001*/999,160,4,0,50,110,bon_MATK,80,bon_ELEMENT,4,bon_CH_STATUS_FREEZE,1,bon_NONE] // "As-nail"
-,[1395,weapTyp_DAGGER,/*1001*/999,160,4,0,50,110,bon_MATK,80,bon_ELEMENT,3,bon_CH_STATUS_STONE,1,bon_NONE] // "Scarlet-nail"
-,[1396,itm_type_ARMOR,/*2119*/999,66,0,1,66,100,bon_DEX,1,bon_SP_ADD,30,bon_NONE] // "Green Surgical Gown"
-,[1397,weapTyp_MACE,/*1053*/999,170,4,0,150,100,bon_ELEMENT,7,bon_SKILL_AUTOCAST,116,bon_NONE] // "Bloody Cross"
-,[1398,weapTyp_BOW,/*2114*/999,150,4,2,110,100,bon_NONE] // "Thief Crossbow" "Each refine increase damage of Triangle shot, but increases it's sp cost"
+,[1389,itm_type_SHIELD,2051,130,0,1,280,100,bon_RED_SIZ_LARGE,5,bon_NONE] // "Giant Shield"
+,[1390,itm_type_SHIELD,2111,30,0,1,100,100,bon_INT,1,bon_MDEF,2,bon_NONE] // "Gefenia report of water"
+,[1391,itm_type_SHIELD,2109,20,0,1,50,140,bon_MDEF,5,bon_HEAL_MUL,5,bon_NONE] // "Bible of Promise (2nd vol.)"
+,[1392,itm_type_GARMENT,2094,1,0,0,40,130,bon_MDEF,5,bon_SKILL_ENABLE,46,bon_NONE] // "Salvage Cape"
+,[1393,itm_type_ACCESSORY,2108,3,0,1,40,100,bon_SP_ADD,20,bon_CRIT,3,bon_NONE] // "Assassin's glove"
+,[1394,weapTyp_DAGGER,1001,160,4,0,50,110,bon_MATK,80,bon_ELEMENT,4,bon_CH_STATUS_FREEZE,1,bon_NONE] // "As-nail"
+,[1395,weapTyp_DAGGER,1001,160,4,0,50,110,bon_MATK,80,bon_ELEMENT,3,bon_CH_STATUS_STONE,1,bon_NONE] // "Scarlet-nail"
+,[1396,itm_type_ARMOR,2119,66,0,1,66,100,bon_DEX,1,bon_SP_ADD,30,bon_NONE] // "Green Surgical Gown"
+,[1397,weapTyp_MACE,1053,170,4,0,150,100,bon_ELEMENT,7,bon_SKILL_AUTOCAST,116,bon_NONE] // "Bloody Cross"
+,[1398,weapTyp_BOW,2114,150,4,2,110,100,bon_NONE] // "Thief Crossbow" "Each refine increase damage of Triangle shot, but increases it's sp cost"
 ,[1399,weapTyp_BOW,2110,160,4,2,110,90,bon_NONE] // "Giant Crossbow"
-,[1400,weapTyp_BOW,/*2054*/999,150,3,2,120,150,bon_DEX,1,bon_SKILL_AUTOCAST,117,bon_NONE] // "Creeper Bow"
+,[1400,weapTyp_BOW,2054,150,3,2,120,150,bon_DEX,1,bon_SKILL_AUTOCAST,117,bon_NONE] // "Creeper Bow"
 ,[1401,itm_type_HEAD_UPPER,2001,7,0,1,40,100,bon_NONE] // "Ancient Gold Ornament"
-,[1402,itm_type_SET,/*0*/999,0,0,0,0,0,bon_ATK,50,bon_FLEE,-30,bon_NONE] // Assassin's Glove + Krisna
-,[1403,itm_type_SET,/*0*/999,0,0,0,0,0,bon_CRIT,4,bon_DMG_CRIT,40,bon_HP_MUL,-10,bon_NONE] // Assassin's Glove + Chakram
-,[1404,itm_type_SET,/*0*/999,0,0,0,0,0,bon_NONE] // Green Surgical Gown + Scalpel
-,[1405,itm_type_SET,/*0*/999,0,0,0,0,0,bon_NONE] // Lacryma Stick + Gefenia Report of Water
+,[1402,itm_type_SET,0,0,0,0,0,0,bon_ATK,50,bon_FLEE,-30,bon_NONE] // Assassin's Glove + Krisna
+,[1403,itm_type_SET,0,0,0,0,0,0,bon_CRIT,4,bon_DMG_CRIT,40,bon_HP_MUL,-10,bon_NONE] // Assassin's Glove + Chakram
+,[1404,itm_type_SET,0,0,0,0,0,0,bon_NONE] // Green Surgical Gown + Scalpel
+,[1405,itm_type_SET,0,0,0,0,0,0,bon_NONE] // Lacryma Stick + Gefenia Report of Water
 ,[1406,itm_type_ACCESSORY,2001,1,0,1,10,125,bon_INT,1,bon_MDEF,2,bon_INC_MAGIC_FIRE,10,bon_INC_MAGIC_WATER,-20,bon_RED_ELE_WATER,-30,bon_SKILL_AUTOCAST,118,bon_SKILL_AUTOCAST,119,bon_NONE] // Alchemy Glove
 ,[1407,itm_type_GARMENT,2110,15,0,0,20,100,bon_AGI,2,bon_FLEE,10,bon_NONE] // White Wing Manteau
 ,[1408,itm_type_ARMOR,2110,45,0,1,10,100,bon_NONE] // White Wing Suit
@@ -1520,17 +1520,17 @@
 ,[1514,itm_type_HEAD_UPPER,/*0*/999,10,0,1,50,1,bon_STR,2,bon_PHY_ATK,2,bon_NONE] // "Evil Marching Hat"
 ,[1515,itm_type_HEAD_MIDDLE,/*0*/999,1,0,1,50,1,bon_ASPD_MUL,1,bon_NONE] // "Pegasus Ear Wing"
 ,[1516,itm_type_ACCESSORY,/*0*/999,0,0,1,10,1,bon_DEX,2,bon_MATK_MUL,2,bon_NONE] // "Orlean's Necklace"
-,[1517,itm_type_SET,/*0*/999,0,0,0,0,0,bon_MATK_MUL,2,bon_NONE] // Orlean's necklace + glove
-,[1518,itm_type_SET,/*0*/999,0,0,0,0,0,bon_RED_CAST,15,bon_NONE] // Orlean's necklace + gown
-,[1519,itm_type_SET,/*0*/999,0,0,0,0,0,bon_NONE] // Orlean's necklace + plate
+,[1517,itm_type_SET,0,0,0,0,0,0,bon_MATK_MUL,2,bon_NONE] // Orlean's necklace + glove
+,[1518,itm_type_SET,0,0,0,0,0,0,bon_RED_CAST,15,bon_NONE] // Orlean's necklace + gown
+,[1519,itm_type_SET,0,0,0,0,0,0,bon_NONE] // Orlean's necklace + plate
 ,[1520,itm_type_ACCESSORY,0,5,0,1,10,1,bon_DEX,1,bon_AGI,1,bon_VIT,1,bon_LUK,1,bon_NONE] // Cat Hand Glove [1]
 ,[1521,weapTyp_MACE,0,88,1,3,70,1,bon_DMG_RC_BRUTE,15,bon_NONE] // Cat Club [3]
 ,[1522,itm_type_HEAD_UPPER,/*0*/999,0,0,1,30,1,bon_MDEF,7,bon_NONE] // Chibi Pope [1]
-,[1523,itm_type_SHIELD,/*2109*/999,10,0,1,50,110,bon_NONE] // Bible of Promise (1st Vol.)
+,[1523,itm_type_SHIELD,2109,10,0,1,50,110,bon_NONE] // Bible of Promise (1st Vol.)
 ,[1524,itm_type_HEAD_UPPER,/*0*/999,5,0,1,10,1,bon_STR,2,bon_NONE] // Turkey on Your Head
 ,[1525,itm_type_HEAD_UPPER,/*0*/999,1,0,1,10,1,bon_NONE] // Sweet Valentine
 ,[1526,itm_type_SET,/*0*/999,0,0,0,0,0,bon_HEAL_MUL,10,bon_NONE] // Chibi Pope + Blush
-,[1527,itm_type_ACCESSORY,/*2109*/999,0,0,0,0,110,bon_HEAL_MUL,2,bon_VIT,2,bon_NONE] // Light of Cure
+,[1527,itm_type_ACCESSORY,2109,0,0,0,0,110,bon_HEAL_MUL,2,bon_VIT,2,bon_NONE] // Light of Cure
 ,[1528,itm_type_HEAD_UPPER,/*0*/999,10,0,0,30,20,bon_MDEF,10,bon_STR,2,bon_INT,2,bon_DMG_RC_UNDEAD,15,bon_DMG_RC_DEMON,15,bon_NONE] // Witch's Pumpkin Hat
 ,[1529,itm_type_SET,/*0*/999,0,0,0,0,0,bon_NONE] // Witch's Pumpkin Hat + Mr. Smile
 ,[1530,itm_type_SET,/*0*/999,0,0,0,0,0,bon_NONE] // Witch's Pumpkin Hat + Hahoe Mask

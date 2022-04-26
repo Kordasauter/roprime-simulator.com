@@ -2028,6 +2028,16 @@ with(document.calcForm)
 		SkillSubNum3.value=10;
 		SkillSubNum4.value=5;
 	}
+	else if (n_A_ActiveSkill == skill_SUM_SILVERVINE_STEM_SPEAR)
+	{
+		myInnerHtml("AASkillName","<br/>Element : ",0);
+		myInnerHtml("AASkill",'<select name="SkillSubNum" style="width:60px;" onchange="calc()"></select>',0);
+		SkillSubNum.options[0] = new Option("Earth",0);
+		SkillSubNum.options[1] = new Option("Fire",1);
+		SkillSubNum.options[2] = new Option("Water",2);
+		SkillSubNum.options[3] = new Option("Wind",3);
+		SkillSubNum.options[4] = new Option("Ghost",4);
+	}
 	else
 	{
 		myInnerHtml("AASkillName","",0);

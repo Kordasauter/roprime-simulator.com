@@ -69,7 +69,12 @@ var RANGED_SKILLS = [
 	skill_REB_DRAGON_TAIL,
 	skill_REB_FIRE_RAIN,
 	skill_REB_ROUND_TRIP,
-	skill_ROY_VANISHING_POINT
+	skill_ROY_VANISHING_POINT,
+	skill_SUM_SOUL_ATTACK,
+	skill_SUM_PICKY_PECK,
+	skill_SUM_SCAR_OF_TAROU,
+	skill_SUM_LUNATIC_CARROT_BEAT,
+	skill_SUM_SPIRIT_OF_SAVAGE
 ];
 var MAGICAL_SKILLS = [
     skill_MON_DARK_STRIKE,
@@ -137,7 +142,9 @@ var MAGICAL_SKILLS = [
     skill_PR_TURN_UNDEAD,
     skill_PR_RESSURECTION,
     skill_HW_GRAVITY_FIELD,
-	skill_PA_PRESSURE
+	skill_PA_PRESSURE,
+	skill_SUM_SILVERVINE_STEM_SPEAR,
+	skill_SUM_CATNIP_METEOR
 ];
 function clashingATKFormula(weight)
 {
@@ -246,13 +253,13 @@ function CalcSkillDamage()
 	{ // Melee Attack
 		damageType = kDmgTypeMelee;
 	}
-	
 	// Fight!!!
 	if ( n_A_ActiveSkill == skill_ALL_BASIC_ATTACK ||
 		 ( n_A_ActiveSkill == skill_AS_POISON_REACT &&
 		   ( n_B[en_ELEMENT] >= ele_POISON * 10 &&
 		   	 n_B[en_ELEMENT] < ele_HOLY * 10 ) ) )
 	{
+		
 		// Get other ATK Mods and apply to crit.
 		CalcAtkMods02( w_SkillMod, 1 );
 		
@@ -816,6 +823,13 @@ function CalcSkillDamage()
 			skill_REB_DRAGON_TAIL,
 			skill_REB_FIRE_RAIN,
 			skill_MO_OCCULT_IMPACTION,
+			skill_SUM_SOUL_ATTACK,
+			skill_SUM_BITE,
+			skill_SUM_SCRATCH,
+			skill_SUM_PICKY_PECK,
+			skill_SUM_SCAR_OF_TAROU,
+			skill_SUM_LUNATIC_CARROT_BEAT,
+			skill_SUM_SPIRIT_OF_SAVAGE,
 			"NULL"];
 	for ( var iw=0; w_ActS[iw] != n_A_ActiveSkill && w_ActS[iw] != "NULL"; iw++ );
 	if ( n_A_ActiveSkill == w_ActS[iw] )
@@ -2341,6 +2355,64 @@ function CalcSkillDamage()
 			variableCastTime *=  0.0;
 			n_Delay[ksDelayGlobal] = 1.0;
 			n_Delay[ksDelayCooldown] = 5.0;
+		}
+		else if(n_A_ActiveSkill==skill_SUM_SOUL_ATTACK)
+		{
+			damageType = kDmgTypeRanged;
+			w_SkillMod = 1;
+			
+			fixedCastTime *= 0.0;
+			variableCastTime *=  0.0;
+		}
+		else if(n_A_ActiveSkill==skill_SUM_BITE)
+		{
+			w_SkillMod = 2;
+			
+			fixedCastTime *= 0.0;
+			variableCastTime *=  1.0;
+			n_Delay[ksDelayGlobal] = 1.0;
+		}
+		else if(n_A_ActiveSkill==skill_SUM_SCRATCH)
+		{
+			w_SkillMod = 0.5 + (0.5 * n_A_ActiveSkillLV);
+			
+			fixedCastTime *= 0.0;
+			variableCastTime *=  0.0;
+		}
+		else if(n_A_ActiveSkill==skill_SUM_PICKY_PECK)
+		{
+			damageType = kDmgTypeRanged;
+			w_SkillMod = 2 + n_A_ActiveSkillLV;
+			
+			fixedCastTime *= 1.0;
+			variableCastTime *=  1.0;
+		}
+		else if(n_A_ActiveSkill==skill_SUM_SCAR_OF_TAROU)
+		{
+			damageType = kDmgTypeRanged;
+			w_SkillMod = n_A_ActiveSkillLV;
+			
+			fixedCastTime *= 1.0;
+			variableCastTime *=  1.0;
+		}
+		else if(n_A_ActiveSkill==skill_SUM_LUNATIC_CARROT_BEAT)
+		{
+			damageType = kDmgTypeRanged;
+			w_SkillMod = 2 + n_A_ActiveSkillLV;
+			
+			fixedCastTime *= 1.0;
+			variableCastTime *=  1.0;
+		}
+		else if(n_A_ActiveSkill==skill_SUM_SPIRIT_OF_SAVAGE)
+		{
+			damageType = kDmgTypeRanged;
+			w_SkillMod = 2.5 +(1.5 * n_A_ActiveSkillLV);
+			
+			fixedCastTime *= (2.5 - (0.5 * n_A_ActiveSkillLV));
+			if(n_A_ActiveSkillLV < 5)
+				variableCastTime *=  1.0;
+			else
+				variableCastTime *=  0.0;
 		}
 
 		CalcAtkMods02( w_SkillMod, 0 );
@@ -5528,6 +5600,49 @@ function CalcSkillDamage()
 			n_Delay[ksDelayGlobal] = 1.0;
 			n_Delay[ksDelayCooldown] = 2.0;
 		}
+		else if ( n_A_ActiveSkill == skill_SUM_SILVERVINE_STEM_SPEAR )
+		{	
+			var SV_StemElem = parseInt(formElements["SkillSubNum"].value);
+			switch(SV_StemElem){
+				case 0:
+					n_A_Weapon_element = ele_EARTH;
+				break;
+				case 1:
+					n_A_Weapon_element = ele_FIRE;
+				break;
+				case 2:
+					n_A_Weapon_element = ele_WATER;
+				break;
+				case 3:
+					n_A_Weapon_element = ele_WIND;
+				break;
+				case 4:
+					n_A_Weapon_element = ele_GHOST;
+				break;
+				default:
+					n_A_Weapon_element = ele_EARTH;
+				break;
+			}
+			w_SkillMod = 7;
+			
+			fixedCastTime *= 0.5;
+			variableCastTime *= 2.0;
+			n_Delay[ksDelayGlobal] = 1.0;
+			n_Delay[ksDelayCooldown] = 1.0;
+		}
+		else if ( n_A_ActiveSkill == skill_SUM_CATNIP_METEOR )
+		{	
+			n_A_Weapon_element = ele_NEUTRAL;
+			w_SkillMod = 2 + (n_A_ActiveSkillLV);
+			
+			fixedCastTime *= 3.0;
+			variableCastTime *= 4.0;
+			n_Delay[ksDelayGlobal] = 1.0;
+			n_Delay[ksDelayCooldown] = 5.0;
+		}
+		
+		
+		
 		if (damageType == kDmgTypeMagic) {
 			var mElementBoost = 100 + StPlusCalc2(bon_INC_MAGIC_NEUTRAL+n_A_Weapon_element) + StPlusCard(bon_INC_MAGIC_NEUTRAL+n_A_Weapon_element)+ StPlusEnchant(bon_INC_MAGIC_NEUTRAL+n_A_Weapon_element);
 			w_SkillMod *= mElementBoost / 100.0;

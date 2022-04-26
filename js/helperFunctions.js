@@ -211,7 +211,7 @@ function StCalc(nSC)
 	}
 	
 	var wMAXLV;
-	if( thirdClass || n_A_JOB == cls_REB)
+	if( thirdClass || n_A_JOB == cls_REB ||  n_A_JOB == cls_SUM)
 	{ // third class
 		wMAXLV = CONST_MAXLVL_THIRD; // EDIT BY PROGM
 	}
@@ -538,7 +538,7 @@ function AdjustJobLevelList( job )
 	{
 		maxJobLvl = 10;
 	}
-	else if ( job <= cls_ALC || job == cls_KAGOB || ( cls_HSWO <= job && job <= cls_SL ) || job == cls_ENOVI ) // 1st~3rd
+	else if ( job <= cls_ALC || job == cls_KAGOB || ( cls_HSWO <= job && job <= cls_SL ) || job == cls_ENOVI || job == cls_SUM) // 1st~3rd
 	{
 		maxJobLvl = 50;
 	}
@@ -596,6 +596,10 @@ function AdjustBaseLevelList( job )
                 if (job == cls_KAGOB || job == cls_ENOVI) {
                     maxBaseLvl=CONST_MAXLVL_KAGOB_ENOVI-CONST_MAXLVL; // amount of BLvl [99, 160]
                 }
+				else if (job == cls_SUM)
+				{
+					maxBaseLvl = CONST_MAXLVL_THIRD;
+				}
 				else
 				{
                     maxBaseLvl=CONST_MAXLVL; // amount of BLvl [1, 99]
@@ -613,10 +617,17 @@ function AdjustBaseLevelList( job )
 			// delete options
 			formElements["A_BaseLV"].options[i - 1] = null;
 		}
-		for ( var i = 0; i !== ( maxBaseLvl + 1 ); i++ )
+		for ( var i = 0; i !== ( maxBaseLvl + 1); i++ )
 		{
 			// refresh labels
-			formElements["A_BaseLV"].options[i] = new Option( i + 99, i + 99 );
+			if(thirdClass === 1 || job == cls_REB || job == cls_KAGOB ) {
+				formElements["A_BaseLV"].options[i] = new Option( i + 99, i + 99 );
+			}
+			else
+			{
+				if( i < maxBaseLvl)
+					formElements["A_BaseLV"].options[i] = new Option( i + 1, i + 1);
+			}
 		}
 	}
 	else if ( len < maxBaseLvl )
@@ -654,7 +665,7 @@ function AdjustStatLists( job )
 	var maxStatLvl = 0;
 	
 	// Stats [list refresh]
-	if ( thirdClass === 1 || job == cls_REB) // third cls
+	if ( thirdClass === 1 || job == cls_REB || job == cls_SUM) // third cls
 	{
 		maxStatLvl = CONST_MAXSTAT_THIRD; // maxStats
 	}
@@ -934,7 +945,7 @@ function BuildPassiveSkillTable()
 	var skillESelect = formElements["A_Skill11"];
 	var skillFSelect = formElements["A_Skill6"];
 	var skillGSelect = formElements["A_Skill7"];
-	var skillFSelect = formElements["A_Skill10"];
+	var skillHSelect = formElements["A_Skill10"];
 	
 	// Energy Coat
 	if ( JobSkillPassOBJ[job][0] === skill_MA_ENERGY_COAT )
@@ -1099,7 +1110,7 @@ function BuildPassiveSkillTable()
 	}
 	if ( JobSkillPassOBJ[job][6] === skill_KAG_GET_ELEMENTAL_SEAL )
 	{
-		for ( var i = 10; i >= 0; i-- )
+		for ( var i = 3; i >= 0; i-- )
 		{
 			skillFSelect.options[i] = null;
 		}
