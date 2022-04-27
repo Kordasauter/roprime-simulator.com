@@ -922,6 +922,19 @@ function StPlusCalc()
 		
 	if(n_A_WeaponType==weapTyp_ROD)
 		wSPC_INT += CardNumSearch(card_WEPN_NECROMANCER);
+	
+	if(EquipNumSearch(1874))
+	{ //"Fine Foxtail Replica"
+		wSPC_DEX += 3 * Math.floor(n_A_Weapon_ATKplus / 3);
+	}
+	if(EquipNumSearch(1880))
+	{ //"Elaborate Foxtail Replica"
+		wSPC_DEX += 3 * Math.floor(n_A_Weapon_ATKplus / 2);
+	}
+	if(EquipNumSearch(1875))
+	{ //"Foxtail Replica"
+		wSPC_DEX += 2 * Math.floor(n_A_Weapon_ATKplus / 3);
+	}
 
 	wSPCall = StPlusCard(bon_ALL_STATS);
 	wSPC_STR += StPlusCard(bon_STR) + wSPCall;

@@ -731,6 +731,107 @@ function CalcEquipAtk()
 	{ //"Feathered Tricorn"
 		equipmentAttack += 15 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
 	}
+	if(EquipNumSearch(1874))
+	{ //"Fine Foxtail Replica"
+		if(n_A_Weapon_ATKplus >= 7)
+		{
+			equipmentAttack += 78;
+		}
+		if(n_A_Weapon_ATKplus >= 8 && n_A_Weapon_ATKplus <= 10 )
+		{
+			equipmentAttack += 39 * (n_A_Weapon_ATKplus - 7);
+		}
+		if(n_A_Weapon_ATKplus > 10)
+		{
+			equipmentAttack += 39 * 3;
+		}
+	}
+	if(EquipNumSearch(1880))
+	{ //"Elaborate Foxtail Replica"
+		if(n_A_Weapon_ATKplus >= 7)
+		{
+			equipmentAttack += 96;
+		}
+		if(n_A_Weapon_ATKplus >= 8 && n_A_Weapon_ATKplus <= 10 )
+		{
+			equipmentAttack += 48 * (n_A_Weapon_ATKplus - 7);
+		}
+		if(n_A_Weapon_ATKplus > 10)
+		{
+			equipmentAttack += 48 * 3;
+		}
+	}
+	if(EquipNumSearch(1881))
+	{ //"Elaborate Yellow Foxtail Replica"
+		if(n_A_Weapon_ATKplus >= 7)
+		{
+			equipmentAttack += 108;
+		}
+		if(n_A_Weapon_ATKplus >= 8 && n_A_Weapon_ATKplus <= 10 )
+		{
+			equipmentAttack += 54 * (n_A_Weapon_ATKplus - 7);
+		}
+		if(n_A_Weapon_ATKplus > 10)
+		{
+			equipmentAttack += 54 * 3;
+		}
+	}
+	if(EquipNumSearch(1883))
+	{ //"Magical Foxtail Staff"
+		if(n_A_Weapon_ATKplus >= 7)
+		{
+			equipmentAttack += 48;
+		}
+		if(n_A_Weapon_ATKplus >= 8 && n_A_Weapon_ATKplus <= 10 )
+		{
+			equipmentAttack += 24 * (n_A_Weapon_ATKplus - 7);
+		}
+		if(n_A_Weapon_ATKplus > 10)
+		{
+			equipmentAttack += 24 * 3;
+		}
+	}
+	if(EquipNumSearch(1884))
+	{ //"Magical Yellow Foxtail Staff"
+		if(n_A_Weapon_ATKplus >= 7)
+		{
+			equipmentAttack += 56;
+		}
+		if(n_A_Weapon_ATKplus >= 8 && n_A_Weapon_ATKplus <= 10 )
+		{
+			equipmentAttack += 28 * (n_A_Weapon_ATKplus - 7);
+		}
+		if(n_A_Weapon_ATKplus > 10)
+		{
+			equipmentAttack += 28 * 3;
+		}
+	}
+	if(EquipNumSearch(1877))
+	{ //"Wondrous Foxtail Staff"
+		if(n_A_Weapon_ATKplus >= 7)
+		{
+			equipmentAttack += 40;
+		}
+		if(n_A_Weapon_ATKplus >= 8 && n_A_Weapon_ATKplus <= 10 )
+		{
+			equipmentAttack += 20 * (n_A_Weapon_ATKplus - 7);
+		}
+		if(n_A_Weapon_ATKplus > 10)
+		{
+			equipmentAttack += 20 * 3;
+		}
+	}
+	if(EquipNumSearch(1919))
+	{ //"Foxtail Ring"
+		if(n_A_BaseLV <= 50)
+		{
+			equipmentAttack += 2 * Math.floor(n_A_BaseLV /5);
+		}
+		else
+		{
+			equipmentAttack += 20;
+		}
+	}
 	
 	//Cards
 	if(CardNumSearch(557))
@@ -1761,6 +1862,10 @@ function CalcRangedMod()
 		if(n_A_HEAD_DEF_PLUS >= 7){n_tok[bon_DMG_RANGE] += 7;}
 		if(n_A_HEAD_DEF_PLUS >= 11){n_tok[bon_DMG_RANGE] += 5;}
 	}
+	if(EquipNumSearch(1881))
+	{ //"Elaborate Yellow Foxtail Replica"
+		n_tok[bon_DMG_RANGE] += 1 * Math.floor(n_A_Weapon_ATKplus / 2);
+	}
 	
 	if(CardNumSearch( 541 ))
 	{ //Menblatt Card
@@ -2259,6 +2364,17 @@ function calcHP()
 	if ( EquipNumSearch( 1794 ) )
 	{//Vit Glove
 		additiveHP+= Math.floor(SU_VIT / 10)
+	}
+	if(EquipNumSearch(1919))
+	{ //"Foxtail Ring"
+		if(n_A_BaseLV <= 50)
+		{
+			additiveHP += 10 * Math.floor(n_A_BaseLV /5);
+		}
+		else
+		{
+			additiveHP += 100;
+		}
 	}
 	
 	//Cards
@@ -2951,6 +3067,37 @@ function calcSP( n_A_MaxSP )
 	{ // WoE Robe
 		if (n_A_BODY_DEF_PLUS >= 9) { w += 100; }
 	}
+	if(EquipNumSearch(1874))
+	{ //"Fine Foxtail Replica"
+		w += 15 * Math.floor(n_A_Weapon_ATKplus / 3);
+	}
+	if(EquipNumSearch(1880))
+	{ //"Elaborate Foxtail Replica"
+		w += 15 * Math.floor(n_A_Weapon_ATKplus / 2);
+	}
+	if(EquipNumSearch(1881))
+	{ //"Elaborate Yellow Foxtail Replica"
+		w += 20 * Math.floor(n_A_Weapon_ATKplus / 2);
+	}
+	if(EquipNumSearch(1875))
+	{ //"Foxtail Replica"
+		w += 10 * Math.floor(n_A_Weapon_ATKplus / 2);
+	}
+	if(EquipNumSearch(1873))
+	{ //"Marvelous Foxtail Staff"
+		w += 10 * Math.floor( n_A_Weapon_ATKplus / 3 );
+	}
+	if(EquipNumSearch(1919))
+	{ //"Foxtail Ring"
+		if(n_A_BaseLV <= 50)
+		{
+			w += 5 * Math.floor(n_A_BaseLV /5);
+		}
+		else
+		{
+			w += 50;
+		}
+	}
 	
 	//Shadows
 	if ( EquipNumSearch( 1655 ) )
@@ -3036,6 +3183,14 @@ function calcSP( n_A_MaxSP )
 	if ( EquipNumSearch( 1687 ) && n_A_HEAD_DEF_PLUS >= 12)
 	{ // Turkey On Your Head
 		spMultiplier += 3;
+	}
+	if(EquipNumSearch(1883))
+	{ //"Magic Foxtrail Staff"
+		spMultiplier += 1 * Math.floor(n_A_Weapon_ATKplus / 3);
+	}
+	if(EquipNumSearch(1877))
+	{ //"Wondrous Foxtail Staff"
+		spMultiplier += 1 * Math.floor(n_A_Weapon_ATKplus / 3);
 	}
 	
 	//Shadows

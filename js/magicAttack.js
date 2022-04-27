@@ -211,6 +211,19 @@ function calcMAtk( includeMultipliers )
 			if(SU_INT >= 110)
 				w += 1;
 		}
+		if(EquipNumSearch(1883))
+		{ //"Magic Foxtrail Staff"
+			w += 2 * Math.floor(n_A_Weapon_ATKplus / 3);
+		}
+		if(EquipNumSearch(1884))
+		{ //"Magic Yellow Foxtrail Staff"
+			w += 3 * Math.floor(n_A_Weapon_ATKplus / 2);
+		}
+		if(EquipNumSearch(1877))
+		{ //"Wondrous Foxtail Staff"
+			w += 2 * Math.floor(n_A_Weapon_ATKplus / 3);
+		}
+		
 		//Shadows
 		if ( EquipNumSearch( 1656 ) )
 		{ // "Shadow Mystic Gloves"
@@ -395,7 +408,66 @@ function calcMAtk( includeMultipliers )
 	{//Int Glove
 		n_A_EquipMATK+= Math.floor(SU_INT / 10)
 	}
-	
+	if(EquipNumSearch(1883))
+	{ //"Magical Foxtail Staff"
+		if(n_A_Weapon_ATKplus >= 7)
+		{
+			n_A_EquipMATK += 104;
+		}
+		if(n_A_Weapon_ATKplus >= 8 && n_A_Weapon_ATKplus <= 10 )
+		{
+			n_A_EquipMATK += 52 * (n_A_Weapon_ATKplus - 7);
+		}
+		if(n_A_Weapon_ATKplus > 10)
+		{
+			n_A_EquipMATK += 52 * 3;
+		}
+	}
+	if(EquipNumSearch(1884))
+	{ //"Magical Yellow Foxtail Staff"
+		if(n_A_Weapon_ATKplus >= 7)
+		{
+			n_A_EquipMATK += 112;
+		}
+		if(n_A_Weapon_ATKplus >= 8 && n_A_Weapon_ATKplus <= 10 )
+		{
+			n_A_EquipMATK += 56 * (n_A_Weapon_ATKplus - 7);
+		}
+		if(n_A_Weapon_ATKplus > 10)
+		{
+			n_A_EquipMATK += 56 * 3;
+		}
+	}
+	if(EquipNumSearch(1873))
+	{ //"Marvelous Foxtail Staff"
+		n_A_EquipMATK += 10 * Math.floor( n_A_Weapon_ATKplus / 3 );
+	}
+	if(EquipNumSearch(1877))
+	{ //"Wondrous Foxtail Staff"
+		if(n_A_Weapon_ATKplus >= 7)
+		{
+			n_A_EquipMATK += 96;
+		}
+		if(n_A_Weapon_ATKplus >= 8 && n_A_Weapon_ATKplus <= 10 )
+		{
+			n_A_EquipMATK += 48 * (n_A_Weapon_ATKplus - 7);
+		}
+		if(n_A_Weapon_ATKplus > 10)
+		{
+			n_A_EquipMATK += 48 * 3;
+		}
+	}
+	if(EquipNumSearch(1919))
+	{ //"Foxtail Ring"
+		if(n_A_BaseLV <= 50)
+		{
+			n_A_EquipMATK += 2 * Math.floor(n_A_BaseLV /5);
+		}
+		else
+		{
+			n_A_EquipMATK += 20;
+		}
+	}
 	//shadows
 	if ( EquipNumSearch( 1657 ) )
 	{ // "Shadow Mystic Ring"

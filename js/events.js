@@ -2037,6 +2037,12 @@ with(document.calcForm)
 		SkillSubNum.options[2] = new Option("Water",2);
 		SkillSubNum.options[3] = new Option("Wind",3);
 		SkillSubNum.options[4] = new Option("Ghost",4);
+		myInnerHtml("AASkillName2","<br/>Higher learned skill level",0);
+		myInnerHtml("AASkill2",'<select name="SkillSubNum2" style="width:60px;" onchange="calc()"></select>',0);
+		for ( i = 0 ; i <= 4; i++)
+		{
+			SkillSubNum2.options[i] = new Option(i+1,i+1);
+		}
 	}
 	else
 	{

@@ -1278,10 +1278,10 @@ JobSkillActiveOBJ = [
 [1,1,54,3], // Coldbolt 3
 [2,1,51,3], // Firebolt 3
 [3,1,6,5],
-[4,1,25,3],
+[4,1,25,3], // Heal lv. 3
 [5,1,25,1], // Heal lv. 1
 [6,0,26,1], // Cure Lv. 1
-[7,1,25,5],
+[7,1,25,5], // Heal lv. 5
 [8,1,302,1],
 [9,1,126,1],
 [10,1,34,1],
@@ -1327,8 +1327,9 @@ JobSkillActiveOBJ = [
 [50,0,13,5], // Double Attack 5
 [51,1,152,3], //Adrenalise Rush 3
 [52,1,636,1], //Lion Howling 1
-[53,1,250,3] //Synthesized Shield 3
-
+[53,1,250,3], //Synthesized Shield 3
+[54,1,25,7], // Heal lv. 7
+[55,1,25,9]  // Heal lv. 9
 ];
 }
 

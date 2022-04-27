@@ -2385,7 +2385,16 @@ function CalcSkillDamage()
 			w_SkillMod = 2 + n_A_ActiveSkillLV;
 			
 			fixedCastTime *= 1.0;
-			variableCastTime *=  1.0;
+			if(EquipNumSearch(1904))
+			{ //"Plump Earthworm Charm"
+				w_SkillMod += Math.floor(SU_DEX /6) * n_A_ActiveSkillLV;
+				variableCastTime *=  0.5;
+			}
+			else
+			{
+				variableCastTime *=  1.0;
+			}
+			
 		}
 		else if(n_A_ActiveSkill==skill_SUM_SCAR_OF_TAROU)
 		{
@@ -2394,6 +2403,15 @@ function CalcSkillDamage()
 			
 			fixedCastTime *= 1.0;
 			variableCastTime *=  1.0;
+			
+			if(EquipNumSearch(1886))
+			{ //"Fresh Grass Necklace"
+				n_Delay[ksDelayCooldown] = 4.0;
+			}
+			else
+			{
+				n_Delay[ksDelayCooldown] = 9.0;
+			}
 		}
 		else if(n_A_ActiveSkill==skill_SUM_LUNATIC_CARROT_BEAT)
 		{
@@ -5603,6 +5621,8 @@ function CalcSkillDamage()
 		else if ( n_A_ActiveSkill == skill_SUM_SILVERVINE_STEM_SPEAR )
 		{	
 			var SV_StemElem = parseInt(formElements["SkillSubNum"].value);
+			var SV_StemLv = parseInt(formElements["SkillSubNum2"].value);
+			
 			switch(SV_StemElem){
 				case 0:
 					n_A_Weapon_element = ele_EARTH;
@@ -5626,7 +5646,15 @@ function CalcSkillDamage()
 			w_SkillMod = 7;
 			
 			fixedCastTime *= 0.5;
-			variableCastTime *= 2.0;
+			if(EquipNumSearch(1902))
+			{ //"Shining Branch Charm"
+				w_SkillMod += Math.floor(SU_INT /6) * SV_StemLv;
+				variableCastTime *= 1.0;
+			}
+			else
+			{
+				variableCastTime *= 2.0;
+			}
 			n_Delay[ksDelayGlobal] = 1.0;
 			n_Delay[ksDelayCooldown] = 1.0;
 		}
@@ -5636,7 +5664,15 @@ function CalcSkillDamage()
 			w_SkillMod = 2 + (n_A_ActiveSkillLV);
 			
 			fixedCastTime *= 3.0;
-			variableCastTime *= 4.0;
+			if(EquipNumSearch(1888))
+			{ //"Charming Grass Necklace"
+				variableCastTime *= 3.0;
+			}
+			else
+			{
+				variableCastTime *= 4.0;
+			}
+			
 			n_Delay[ksDelayGlobal] = 1.0;
 			n_Delay[ksDelayCooldown] = 5.0;
 		}

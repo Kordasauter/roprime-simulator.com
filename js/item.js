@@ -1878,7 +1878,65 @@
 ,[1861,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Feathered Tricorn" + "Piece Of Angent Skin"
 ,[1862,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Feathered Tricorn" + "Leather of Tendrilion"
 ,[1863,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Feathered Tricorn" + "Ancient Cape"
-
+//Doram Stuff
+,[1864,itm_type_ARMOR,224,80,0,1,70,100,bon_HP_ADD,500,bon_SP_ADD,100,bon_NONE]//Doram Suit
+,[1865,itm_type_GARMENT,224,20,0,1,30,100,bon_FLEE,5,bon_RED_ELE_NEUTRAL,2,bon_NONE]//Doram Manteau
+,[1866,itm_type_SHOES,224,25,0,1,50,100,bon_HP_ADD,100,bon_SP_ADD,50,bon_NONE]//Doram Shoes
+,[1867,itm_type_ARMOR,224,120,0,1,90,175,bon_HP_MUL,15,bon_SP_MUL,15,bon_NONE]//Elegant Doram Suit
+,[1868,itm_type_GARMENT,224,30,0,1,50,175,bon_FLEE,10,bon_RED_ELE_NEUTRAL,5,bon_NONE]//Elegant Doram Manteau
+,[1869,itm_type_SHOES,224,35,0,1,70,175,bon_HP_MUL,10,bon_SP_MUL,10,bon_NONE]//Elegant Doram Shoes
+,[1870,itm_type_ARMOR,224,100,0,1,80,140,bon_HP_MUL,10,bon_SP_MUL,10,bon_NONE]//Luxurious Doram Suit
+,[1871,itm_type_GARMENT,224,25,0,1,40,140,bon_FLEE,7,bon_RED_ELE_NEUTRAL,3,bon_NONE]//Luxurious Doram Manteau
+,[1872,itm_type_SHOES,224,30,0,1,60,140,bon_HP_ADD,300,bon_SP_ADD,100,bon_NONE]//Luxurious Doram Shoes
+,[1873,weapTyp_STAFF,224,80,2,3,40,60,bon_MATK,180,bon_SP_ADD,50,bon_NONE]//Marvelous Foxtail Staff //Every 3 refine level: MATK +10, MaxSP +10.
+,[1874,weapTyp_STAFF,224,195,3,2,30,100,bon_DMG_RANGE,8,bon_HP_ADD,200,bon_NONE]//Fine Foxtail Replica //For every 3 refine level: DEX +3, MaxSP +15.
+,[1875,weapTyp_STAFF,224,150,2,3,30,60,bon_DMG_RANGE,8,bon_HP_ADD,100,bon_NONE]//Foxtail Replica  //For every 3 refine level: DEX +2, MaxSP +10.
+,[1876,weapTyp_STAFF,224,70,2,1,30,20,bon_DEX,1,bon_HP_ADD,200,bon_SP_ADD,100,bon_DMG_RANGE,8,bon_NONE]//Large Foxtail Staff
+,[1877,weapTyp_STAFF,224,100,3,2,50,100,bon_MATK,240,bon_SP_ADD,100,bon_NONE]//Wondrous Foxtail Staff //For every 3 refine level: MATK +2%, MaxSP +1%.
+,[1878,weapTyp_STAFF,224,70,2,1,30,20,bon_MATK,100,bon_INT,1,bon_HP_ADD,100,bon_SP_ADD,150,bon_NONE]//Dragonfly Sitting Foxtail Staff
+,[1879,weapTyp_STAFF,224,30,1,0,0,0,bon_NONE]//Shoot Foxtail Staff
+,[1880,weapTyp_STAFF,224,240,3,2,30,140,bon_DMG_RANGE,8,bon_HP_MUL,5,bon_NONE]//Elaborate Foxtail Replica //For every 2 refine level: DEX +3, MaxSP +15.
+,[1881,weapTyp_STAFF,224,270,4,1,30,175,bon_DMG_RANGE,9,bon_HP_MUL,7,bon_NONE]//Elaborate Yellow Foxtail Replica //Every 2 refine level: Long ranged physical attack +1%, MaxSP +20.
+,[1882,weapTyp_STAFF,224,50,2,1,20,12,bon_MATK,70,bon_SP_ADD,50,bon_NONE]//Enriched Foxtail Staff 
+,[1883,weapTyp_STAFF,224,120,3,2,60,140,bon_MATK,260,bon_SP_ADD,100,bon_NONE]//Magic Foxtail Staff //For every 3 refine level: MATK +2%, MaxSP +1%.
+,[1884,weapTyp_STAFF,224,140,4,1,70,175,bon_MATK,280,bon_NONE]//Magic Yellow Foxtail Staff //Every 2 refine level MATK +3%.
+,[1885,weapTyp_STAFF,224,50,2,1,20,12,bon_HP_ADD,200,bon_DMG_RANGE,5,bon_NONE]//Long Foxtail Staff
+,[1886,itm_type_ACCESSORY,224,0,0,1,1,100,bon_PDODGE,5,bon_NONE]//Fresh Grass Necklace
+,[1887,itm_type_ACCESSORY,224,0,0,1,1,100,bon_HEAL_MUL,5,bon_NONE]//Cute Grass Necklace
+,[1888,itm_type_ACCESSORY,224,0,0,1,1,100,bon_MDEF,5,bon_NONE]//Charming Grass Necklace
+,[1889,itm_type_ARMOR,224,25,0,1,5,6,bon_HP_ADD,70,bon_FLEE,5,bon_NONE]//White Shirt [1]
+,[1890,itm_type_ARMOR,224,40,0,1,10,15,bon_HP_ADD,150,bon_FLEE,10,bon_NONE]//White Eco Shirt [1]
+,[1891,itm_type_SHOES,224,10,0,1,5,9,bon_NONE]//Wooden Slippers [1] //Every 10 second restore 2 HP.
+,[1892,itm_type_SHOES,224,20,0,1,10,18,bon_CRIT,5,bon_NONE]//Red Eco Boots [1] //Every 10 second, restore 4 HP and 1 SP.
+,[1893,itm_type_ACCESSORY,224,1,0,1,10,100,bon_VIT,1,bon_NONE] // "Basic Saurel Charm"
+,[1894,itm_type_ACCESSORY,224,1,0,1,10,140,bon_VIT,2,bon_NONE] // "Fair Saurel Charm"
+,[1895,itm_type_ACCESSORY,224,1,0,1,10,175,bon_VIT,3,bon_NONE] // "Advanced Saurel Charm"
+,[1896,itm_type_ACCESSORY,224,1,0,1,10,100,bon_INT,1,bon_NONE] // "Basic Leaf Charm"
+,[1897,itm_type_ACCESSORY,224,1,0,1,10,140,bon_INT,2,bon_NONE] // "Fair Leaf Charm"
+,[1898,itm_type_ACCESSORY,224,1,0,1,10,175,bon_INT,3,bon_NONE] // "Advanced Leaf Charm"
+,[1899,itm_type_ACCESSORY,224,1,0,1,10,100,bon_DEX,1,bon_NONE] // "Basic Bunny Charm"
+,[1900,itm_type_ACCESSORY,224,1,0,1,10,140,bon_DEX,2,bon_NONE] // "Fair Bunny Charm"
+,[1901,itm_type_ACCESSORY,224,1,0,1,10,175,bon_DEX,3,bon_NONE] // "Advanced Bunny Charm"
+,[1902,itm_type_ACCESSORY,224,1,0,1,10,100,bon_NONE] // "Shining Branch Charm"
+,[1903,itm_type_ACCESSORY,224,1,0,1,10,100,bon_NONE] // "Fresh Tuna Charm"
+,[1904,itm_type_ACCESSORY,224,1,0,1,10,100,bon_NONE] // "Plump Earthworm Charm"
+,[1905,itm_type_SET,0,0,0,0,0,0,bon_HP_ADD,2000,bon_RED_FIXEDCAST,15,bon_NONE] // "Doram Gear Set"
+,[1906,itm_type_SET,0,0,0,0,0,0,bon_HP_MUL,10,bon_SP_MUL,10,bon_DMG_SKILL+skill_SUM_CATNIP_METEOR,100,bon_NONE] // "Doram Charm Grass Lesser Leaf Set"
+,[1907,itm_type_SET,0,0,0,0,0,0,bon_HP_MUL,20,bon_SP_MUL,3,bon_DMG_SKILL+skill_SUM_LUNATIC_CARROT_BEAT,100,bon_NONE] // "Doram Fresh Grass Lesser Bunny Set"
+,[1908,itm_type_SET,0,0,0,0,0,0,bon_HP_MUL,15,bon_SP_MUL,5,bon_HEAL_MUL,10,bon_SKILL_ENABLE,7,bon_NONE] // "Doram Cute Grass Lesser Tuna Set"
+,[1909,itm_type_SET,0,0,0,0,0,0,bon_HP_ADD,3000,bon_RED_FIXEDCAST,20,bon_NONE] // "Luxury Doram Gear Set"
+,[1910,itm_type_SET,0,0,0,0,0,0,bon_HP_MUL,15,bon_SP_MUL,15,bon_DMG_SKILL+skill_SUM_CATNIP_METEOR,150,bon_NONE] // "Luxury Doram Charm Grass Intermediate Leaf Set"
+,[1911,itm_type_SET,0,0,0,0,0,0,bon_HP_MUL,25,bon_SP_MUL,6,bon_DMG_SKILL+skill_SUM_LUNATIC_CARROT_BEAT,150,bon_NONE] // "Luxury Doram Fresh Grass Intermediate Bunny Set"
+,[1912,itm_type_SET,0,0,0,0,0,0,bon_HP_MUL,20,bon_SP_MUL,10,bon_HEAL_MUL,20,bon_SKILL_ENABLE,54,bon_NONE] // "Luxury Doram Cute Grass Intermediate Tuna Set"
+,[1913,itm_type_SET,0,0,0,0,0,0,bon_HP_ADD,4000,bon_RED_FIXEDCAST,25,bon_NONE] // "Elegant Doram Gear Set"
+,[1914,itm_type_SET,0,0,0,0,0,0,bon_HP_MUL,20,bon_SP_MUL,20,bon_DMG_SKILL+skill_SUM_CATNIP_METEOR,200,bon_NONE] // "Elegant Doram Charm Grass Superior Leaf Set"
+,[1915,itm_type_SET,0,0,0,0,0,0,bon_HP_MUL,30,bon_SP_MUL,9,bon_DMG_SKILL+skill_SUM_LUNATIC_CARROT_BEAT,200,bon_NONE] // "Elegant Doram Fresh Grass Superior Bunny Set"
+,[1916,itm_type_SET,0,0,0,0,0,0,bon_HP_MUL,25,bon_SP_MUL,15,bon_HEAL_MUL,30,bon_SKILL_ENABLE,55,bon_NONE] // "Elegant Doram Cute Grass Superior Tuna Set"
+,[1917,weapTyp_STAFF,224,40,1,1,10,3,bon_HP_ADD,100,bon_MATK,15,bon_NONE] // "Beginner Foxtail Staff"
+,[1918,itm_type_HEAD_UPPER,224,2,0,1,10,20,bon_LUK,1,bon_NONE] // "Parfaille Vigilante Hat" //Adds a chance to auto cast Level 3 Blessing when dealing physical or magical attacks.
+,[1919,itm_type_ACCESSORY,0,0,0,0,10,0,bon_NONE] // "Foxtail Ring"
+// ,[x,weapTyp_STAFF,224,150,3,1,0,100,bon_MATK,130,bon_UNBREAKABLE,1,bon_RED_CAST,-10,bon_NONE] // "Beginner Summoner's Foxtail"
+//
 ];
 ItemMax = ItemOBJ.length -1;
 }
@@ -2299,6 +2357,18 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[1861,1860,1193,"NULL"] //"Feathered Tricorn" + "Piece Of Angent Skin"
 ,[1862,1860,996,"NULL"] //"Feathered Tricorn" + "Leather of Tendrilion"
 ,[1863,1860,315,"NULL"] //"Feathered Tricorn" + "Ancient Cape"
+,[1905,1864,1865,1866,"NULL"] //"Doram Gear Set"
+,[1906,1864,1865,1866,1888,1896,"NULL"] //"Doram Charm Grass Lesser Leaf Set"
+,[1907,1864,1865,1866,1886,1899,"NULL"] //"Doram Fresh Grass Lesser Bunny Set"
+,[1908,1864,1865,1866,1887,1893,"NULL"] //"Doram Cute Grass Lesser Tuna Set"
+,[1909,1870,1871,1872,"NULL"] //"Luxury Doram Gear Set"
+,[1910,1870,1871,1872,1888,1897,"NULL"] //"Luxury Doram Charm Grass Intermediate Leaf Set"
+,[1911,1870,1871,1872,1886,1900,"NULL"] //"Luxury Doram Fresh Grass Intermediate Bunny Set"
+,[1912,1870,1871,1872,1887,1894,"NULL"] //"Luxury Doram Cute Grass Intermediate Tuna Set"
+,[1913,1867,1868,1869,"NULL"] //"Elegant Doram Gear Set"
+,[1914,1867,1868,1869,1888,1898,"NULL"] //"Elegant Doram Charm Grass Superior Leaf Set"
+,[1915,1867,1868,1869,1886,1901,"NULL"] //"Elegant Doram Fresh Grass Superior Bunny Set"
+,[1916,1867,1868,1869,1887,1895,"NULL"] //"Elegant Doram Cute Grass Superior Tuna Set"
 //,[itm_set,item1,item2,...,"NULL"]
 ];
 SE_MAXnum = w_SE.length -1;
