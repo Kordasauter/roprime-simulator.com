@@ -1721,6 +1721,9 @@ skill_SUM_HISS = 796;
 skill_SUM_POWER_OF_FLOCK = 797;
 skill_SUM_SPIRIT_OF_SAVAGE = 798;
 skill_SUM_SPIRIT_OF_LIFE = 799;
+skill_SUM_SEAFOOD = 800;
+skill_SUM_PLANT = 801;
+skill_SUM_ANIMAL = 802;
 
 skill_FINISH_DELIMITER = 999;
 }
@@ -1820,6 +1823,11 @@ var ksPerformerVit = 32;
 var ksPerformerInt = 33;
 var ksPerformerDex = 34;
 var ksPerformerLuk = 35;
+
+var ksBunchOfShrimp = 0;
+var ksPurring = 1;
+var ksMeowMeow = 2;
+var ksHiss = 3;
 
 // Guild Skills
 pass_IV_BAT_ORDER = 0;

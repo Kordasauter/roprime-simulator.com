@@ -2044,6 +2044,46 @@ with(document.calcForm)
 			SkillSubNum2.options[i] = new Option(i+1,i+1);
 		}
 	}
+	else if (n_A_ActiveSkill == skill_SUM_PICKY_PECK)
+	{
+		myInnerHtml( "AASkillName","<br/>Remaining HP:", 0 );
+		myInnerHtml("AASkill",'<select name="SkillSubNum" style="width:60px;" onchange="calc()"></select>',0);
+		SkillSubNum.options[0] = new Option("<10%",0);
+		SkillSubNum.options[1] = new Option(">10%",1);
+		SkillSubNum.options[2] = new Option(">50%",2);
+		SkillSubNum.options[3] = new Option(">80%",3);
+		SkillSubNum.options[4] = new Option("100%",4);
+	}
+	else if (n_A_ActiveSkill == skill_SUM_SCAR_OF_TAROU)
+	{
+		myInnerHtml( "AASkillName","<br/>Remaining HP:", 0 );
+		myInnerHtml("AASkill",'<select name="SkillSubNum" style="width:60px;" onchange="calc()"></select>',0);
+		SkillSubNum.options[0] = new Option("<10%",0);
+		SkillSubNum.options[1] = new Option(">10%",1);
+		SkillSubNum.options[2] = new Option(">50%",2);
+		SkillSubNum.options[3] = new Option(">80%",3);
+		SkillSubNum.options[4] = new Option("100%",4);
+	}
+	else if (n_A_ActiveSkill == skill_SUM_LUNATIC_CARROT_BEAT)
+	{
+		myInnerHtml( "AASkillName","<br/>Remaining HP:", 0 );
+		myInnerHtml("AASkill",'<select name="SkillSubNum" style="width:60px;" onchange="calc()"></select>',0);
+		SkillSubNum.options[0] = new Option("<10%",0);
+		SkillSubNum.options[1] = new Option(">10%",1);
+		SkillSubNum.options[2] = new Option(">50%",2);
+		SkillSubNum.options[3] = new Option(">80%",3);
+		SkillSubNum.options[4] = new Option("100%",4);
+	}
+	else if (n_A_ActiveSkill == skill_SUM_SPIRIT_OF_SAVAGE)
+	{
+		myInnerHtml( "AASkillName","<br/>Remaining HP:", 0 );
+		myInnerHtml("AASkill",'<select name="SkillSubNum" style="width:60px;" onchange="calc()"></select>',0);
+		SkillSubNum.options[0] = new Option("<10%",0);
+		SkillSubNum.options[1] = new Option(">10%",1);
+		SkillSubNum.options[2] = new Option(">50%",2);
+		SkillSubNum.options[3] = new Option(">80%",3);
+		SkillSubNum.options[4] = new Option("100%",4);
+	}
 	else
 	{
 		myInnerHtml("AASkillName","",0);

@@ -323,6 +323,12 @@ with ( document.calcForm )
 		performerBuffs[ksPerformerDex] = parseInt(formElements["marionetteDex"].value);
 		performerBuffs[ksPerformerLuk] = parseInt(formElements["marionetteLuk"].value);
 	}
+	{
+		summonerBuffs[ksBunchOfShrimp] = parseInt(formElements["bunchOfShrimp"].value);
+		summonerBuffs[ksPurring] = parseInt(formElements["purring"].value);
+		summonerBuffs[ksMeowMeow] = parseInt(formElements["meowMeow"].value);
+		summonerBuffs[ksHiss] = parseInt(formElements["hiss"].value);
+	}
 	
 	{ // Guild Skills
 		guildBuffs[pass_IV_BAT_ORDER] = formElements["guildSkill0"].checked;
@@ -935,6 +941,7 @@ function StPlusCalc()
 	{ //"Foxtail Replica"
 		wSPC_DEX += 2 * Math.floor(n_A_Weapon_ATKplus / 3);
 	}
+	
 
 	wSPCall = StPlusCard(bon_ALL_STATS);
 	wSPC_STR += StPlusCard(bon_STR) + wSPCall;
@@ -1092,6 +1099,10 @@ function StPlusCalc()
 		wSPC_DEX += statIncrease;
 		wSPC_INT += statIncrease;
 		wSPC_LUK += statIncrease;
+	}
+	if(SkillSearch(skill_SUM_POWER_OF_LAND))
+	{
+		wSPC_INT += 20;
 	}
 	
 	// Guild Skills

@@ -826,7 +826,7 @@ function CalcSkillDamage()
 			skill_SUM_SOUL_ATTACK,
 			skill_SUM_BITE,
 			skill_SUM_SCRATCH,
-			skill_SUM_PICKY_PECK,
+			// skill_SUM_PICKY_PECK,
 			skill_SUM_SCAR_OF_TAROU,
 			skill_SUM_LUNATIC_CARROT_BEAT,
 			skill_SUM_SPIRIT_OF_SAVAGE,
@@ -2379,27 +2379,15 @@ function CalcSkillDamage()
 			fixedCastTime *= 0.0;
 			variableCastTime *=  0.0;
 		}
-		else if(n_A_ActiveSkill==skill_SUM_PICKY_PECK)
-		{
-			damageType = kDmgTypeRanged;
-			w_SkillMod = 2 + n_A_ActiveSkillLV;
-			
-			fixedCastTime *= 1.0;
-			if(EquipNumSearch(1904))
-			{ //"Plump Earthworm Charm"
-				w_SkillMod += Math.floor(SU_DEX /6) * n_A_ActiveSkillLV;
-				variableCastTime *=  0.5;
-			}
-			else
-			{
-				variableCastTime *=  1.0;
-			}
-			
-		}
 		else if(n_A_ActiveSkill==skill_SUM_SCAR_OF_TAROU)
 		{
 			damageType = kDmgTypeRanged;
 			w_SkillMod = n_A_ActiveSkillLV;
+			if(SkillSearch(skill_SUM_SPIRIT_OF_LIFE))
+			{
+				var remainingHP = formElements["SkillSubNum"].value;
+				w_SkillMod += 0.3 * remainingHP;
+			}
 			
 			fixedCastTime *= 1.0;
 			variableCastTime *=  1.0;
@@ -2417,6 +2405,11 @@ function CalcSkillDamage()
 		{
 			damageType = kDmgTypeRanged;
 			w_SkillMod = 2 + n_A_ActiveSkillLV;
+			if(SkillSearch(skill_SUM_SPIRIT_OF_LIFE))
+			{
+				var remainingHP = formElements["SkillSubNum"].value;
+				w_SkillMod += 0.3 * remainingHP;
+			}
 			
 			fixedCastTime *= 1.0;
 			variableCastTime *=  1.0;
@@ -2425,6 +2418,11 @@ function CalcSkillDamage()
 		{
 			damageType = kDmgTypeRanged;
 			w_SkillMod = 2.5 +(1.5 * n_A_ActiveSkillLV);
+			if(SkillSearch(skill_SUM_SPIRIT_OF_LIFE))
+			{
+				var remainingHP = formElements["SkillSubNum"].value;
+				w_SkillMod += 0.3 * remainingHP;
+			}
 			
 			fixedCastTime *= (2.5 - (0.5 * n_A_ActiveSkillLV));
 			if(n_A_ActiveSkillLV < 5)
@@ -2488,7 +2486,8 @@ function CalcSkillDamage()
 			  n_A_ActiveSkill === skill_ROY_HESPERUS_LIT ||
 			  n_A_ActiveSkill === skill_SHA_TRIANGLE_SHOT ||
 			  n_A_ActiveSkill === skill_GLT_CROSS_IMPACT ||
-			  n_A_ActiveSkill === skill_REB_QUICK_DRAW_SHOT	)
+			  n_A_ActiveSkill === skill_REB_QUICK_DRAW_SHOT ||	
+			  n_A_ActiveSkill === skill_SUM_PICKY_PECK )
 	{
 		if ( n_A_ActiveSkill === skill_AR_DOUBLE_STRAFE )
 		{
@@ -2700,6 +2699,29 @@ function CalcSkillDamage()
 			
 			fixedCastTime *= 0.0;
 			variableCastTime *= 0.0;
+		}
+		else if(n_A_ActiveSkill==skill_SUM_PICKY_PECK)
+		{
+			damageType = kDmgTypeRanged;
+			w_TotalHits = 5;
+			w_SkillMod = (2 + n_A_ActiveSkillLV)/5;
+			
+			
+			fixedCastTime *= 1.0;
+			if(EquipNumSearch(1904))
+			{ //"Plump Earthworm Charm"
+				w_SkillMod += ((Math.floor(SU_DEX /6) * n_A_ActiveSkillLV) / 100) * EquipNumSearch(1904);
+				variableCastTime +=  1.0 / (1 + EquipNumSearch(1904)) ;
+			}
+			else
+			{
+				variableCastTime *=  1.0;
+			}
+			if(SkillSearch(skill_SUM_SPIRIT_OF_LIFE))
+			{
+				var remainingHP = formElements["SkillSubNum"].value;
+				w_SkillMod += 0.3 * remainingHP;
+			}
 		}
 		CalcAtkMods02(w_SkillMod,0);
 		

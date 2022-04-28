@@ -1004,6 +1004,14 @@ function CalcEquipAtk()
 	{
 		equipmentAttack += 40 * n_A_ActiveSkillLV;
 	}
+	if ( SkillSearch( skill_SUM_CHATTERING ) )
+	{ // Chattering
+		equipmentAttack += 100;
+	}
+	if ( SkillSearch( skill_SUM_MEOW_MEOW ) || summonerBuffs[ksMeowMeow])
+	{ // Meow Meow
+		equipmentAttack += 100;
+	}
 
 	return equipmentAttack;
 }
@@ -1535,6 +1543,11 @@ function CalcAttackMod()
 	{
 		n_tok[bon_PHY_ATK] += 1;
 	}
+	if(CardNumSearch(583))
+	{//Champion Card
+		if(SU_AGI >= 110)
+			n_tok[bon_PHY_ATK] += 7;
+	}
 	
 	attackMod *= ( 100 + n_tok[bon_PHY_ATK] ) / 100;
 	
@@ -1549,6 +1562,10 @@ function CalcAttackMod()
 	if ( n_A_WeaponType === weapTyp_KATAR && SkillSearch( skill_AX_ADVANCED_KATAR_MASTERY ) )
 	{
 		attackMod *= ( 110 + 2 * SkillSearch( skill_AX_ADVANCED_KATAR_MASTERY ) ) / 100;
+	}
+	if(SkillSearch(skill_SUM_BUNCH_OF_SHRIMP) || summonerBuffs[ksBunchOfShrimp])
+	{
+		attackMod += 0.1;
 	}
 	
 	var multiplier = 0;
@@ -1875,6 +1892,14 @@ function CalcRangedMod()
 	{
 		n_tok[bon_DMG_RANGE] += 25;
 	}
+	
+	//Skills
+	if(SkillSearch(skill_SUM_POWER_OF_LIFE) && SkillSearch(skill_SUM_ANIMAL))
+	{
+		n_tok[bon_DMG_RANGE] += 20;
+	}
+	
+	
 	if (not_use_card == 1)
 	rangedMod = 0;
 	else
@@ -2662,7 +2687,21 @@ function calcHP()
 	{//Bungisngis Card
 		hpMultiplier += Math.floor(n_A_HEAD_DEF_PLUS / 2);
 	}
-	
+	if(CardNumSearch(578))
+	{//Alphoccio Basil Card
+		if(n_A_JobSearch2() == cls_BAR)
+		hpMultiplier += 10;
+	}
+	if(CardNumSearch(579))
+	{//Trentini Card
+		if(n_A_JobSearch2() == cls_DAN)
+		hpMultiplier += 10;
+	}
+	if(CardNumSearch(580))
+	{//Paladin Card
+		if(SU_INT >= 110)
+		hpMultiplier += 10;
+	}
 	
 	//Shadows
 
@@ -3148,6 +3187,16 @@ function calcSP( n_A_MaxSP )
 		{
 			spMultiplier += 5;
 		}
+	}
+	if(CardNumSearch(578))
+	{//Alphoccio Basil Card
+		if(n_A_JobSearch2() == cls_BAR)
+		spMultiplier += 5;
+	}
+	if(CardNumSearch(579))
+	{//Trentini Card
+		if(n_A_JobSearch2() == cls_DAN)
+		spMultiplier += 5;
 	}
 	
 	// Equipment
@@ -3821,6 +3870,16 @@ function calcHit(n_A_HIT)
 	{
 		n_A_HIT -= 25 + (SkillSearch( skill_REB_HIT_BARREL ) * 5);
 	}
+	if(SkillSearch(skill_SUM_POWER_OF_LIFE))
+	{
+		n_A_HIT += 20;
+	}
+	
+	if(CardNumSearch(584))
+	{//Stalker Card
+		if(SU_LUK >= 110)
+			n_A_HIT += 20;
+	}
 	
 	// Items
 	if ( usableItems[ksSesamePastry] )
@@ -3984,6 +4043,25 @@ function calcFlee( n_A_FLEE )
 	{ // Spear Quicken
 		n_A_FLEE += SkillSearch( skill_CR_SPEAR_QUICKEN ) * 2;
 	}
+	if(SkillSearch(skill_SUM_GROOMING) || summonerBuffs[ksPurring])
+	{
+		n_A_FLEE += 100;
+	}
+	if(SkillSearch(skill_SUM_POWER_OF_LIFE))
+	{
+		n_A_FLEE += 20;
+	}
+	
+	if(CardNumSearch(585))
+	{//Clown Card
+		if(SU_VIT >= 110)
+			n_A_FLEE += 20;
+	}
+	if(CardNumSearch(586))
+	{//Gypsy Card
+		if(SU_VIT >= 110)
+			n_A_FLEE += 20;
+	}
 	
 	// Multipliers
 	var fleeMultiplier = 1;
@@ -4056,6 +4134,14 @@ function calcPDodge( n_A_LUCKY )
 		//var agiBonus = Math.floor( performerBuffs[ksBardAgi] / 10 );
 		n_A_LUCKY += skillBonus;
 	}
+	if(SkillSearch(skill_SUM_CATNIP_POWDERING) && SkillSearch(skill_SUM_SPIRIT_OF_LAND))
+	{
+		n_A_LUCKY += Math.floor(n_A_BaseLV / 12);
+	}
+	if(SkillSearch(skill_SUM_HISS) || summonerBuffs[ksHiss])
+	{
+		n_A_LUCKY += 50;
+	}
 
 	n_A_LUCKY = Math.round( n_A_LUCKY * 10 ) / 10;
 	
@@ -4091,6 +4177,11 @@ function calcCrit( n_A_CRI )
 		n_A_CRI += Math.floor(n_A_JobLV /10) * CardNumSearch(492);
 	if(CardNumSearch(515) && n_A_Weapon_ATKplus >= 14) // Tendrillion
 		n_A_CRI += 10;
+	if(CardNumSearch(581))
+	{//Creator Card
+		if(SU_STR >= 110)
+		n_A_CRI += 20;
+	}
 
 	// Equipment modifiers
 	if ( SU_AGI >= 90 && EquipNumSearch( 442 ) )
@@ -4221,6 +4312,10 @@ function calcCrit( n_A_CRI )
 	if ( SkillSearch( skill_RAN_CAMOUFLAGE ) )
 	{ // Camouflage
 		n_A_CRI += 100;
+	}
+	if(SkillSearch(skill_SUM_POWER_OF_LIFE))
+	{
+		n_A_CRI += 20;
 	}
 	if ( performerBuffs[ksChorus] === ksWarcryFromBeyond &&
 		 performerBuffs[ksChorusLevel] > 0 &&

@@ -276,6 +276,13 @@ function calcMAtk( includeMultipliers )
 				w += 1;
 			}
 		}
+		
+		if(CardNumSearch(582))
+		{//Professor Card
+			if(SU_DEX >= 110)
+			w += 7;
+		}
+		
 		//items
 		if ( usableItems[ksArchmagePotion] )
 		{
@@ -541,6 +548,22 @@ function calcMAtk( includeMultipliers )
 		var jobLvlBonus = performerBuffs[ksWandererJobLevel] / 5.0;
 
 		n_A_EquipMATK += skillBonus + voiceLessonsBonus + jobLvlBonus;
+	}
+	if ( SkillSearch( skill_SUM_CHATTERING ) )
+	{ // Chattering
+		n_A_EquipMATK += 100;
+	}
+	if ( SkillSearch( skill_SUM_MEOW_MEOW ) || summonerBuffs[ksMeowMeow])
+	{ // Meow Meow
+		n_A_EquipMATK += 100;
+	}
+	if(SkillSearch(skill_SUM_SILVERVINE_ROOT_TWIST) && SkillSearch(skill_SUM_SPIRIT_OF_LAND))
+	{
+		n_A_EquipMATK += n_A_BaseLV;
+	}
+	if(SkillSearch(skill_SUM_NYANG_GRASS) && SkillSearch(skill_SUM_SPIRIT_OF_LAND))
+	{
+		n_A_EquipMATK += n_A_BaseLV;
 	}
 
 	// Skill Multipliers
@@ -1002,6 +1025,16 @@ function CalcMagicDamage( rawDamage )
 			if(n_A_ActiveSkill == skill_NIN_FLAMING_PETALS || n_A_ActiveSkill == skill_NIN_FREEZING_SPEAR || n_A_ActiveSkill == skill_NIN_WIND_BLADE )
 			matkMultiplier += Math.floor((n_A_Weapon_ATKplus + n_A_Weapon2_ATKplus) / 2) * 5;
 		}
+	}
+	
+	//skills
+	if(SkillSearch(skill_SUM_BUNCH_OF_SHRIMP) || summonerBuffs[ksBunchOfShrimp])
+	{
+		matkMultiplier += 10;
+	}
+	if(SkillSearch(skill_SUM_POWER_OF_LAND) && SkillSearch(skill_SUM_PLANT))
+	{
+		matkMultiplier += 20;
 	}
 	
 	// Apply multiplier, floor, and return value

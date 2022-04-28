@@ -800,6 +800,9 @@ SkillOBJ = [
 [797,5,"Power of Flock"],
 [798,5,"Spirit of Savage"],
 [799,1,"Spirit of Life"],
+[800,1,"20 points used on seafood branch"],
+[801,1,"20 points used on plant branch"],
+[802,1,"20 points used on animal branch"],
 ];
 }
 
@@ -880,7 +883,7 @@ JobSkillPassOBJ = [
 [393,404,79,80,skill_KAG_16TH_NIGHT,skill_KAG_SUMMON_ELEMENTAL_SEAL,skill_KAG_GET_ELEMENTAL_SEAL,999,999,999,999,999,999,999,999], // KAG
 [  3, 13, 14, 23, 24, 38, 39, 42,253,385,  9,309,196,310,183,146,148,241,156,185,999], // Expanded SNovi
 [425,426,427,416,420,421,422,433,429,749,763,430,999,999,999], // Rebellion
-[skill_SUM_STOOP,skill_SUM_SPRITE_MARBLE,774,777,778,779,999,999,999] // Summoner
+[skill_SUM_STOOP,skill_SUM_SPRITE_MARBLE,skill_SUM_BUNCH_OF_SHRIMP,skill_SUM_SILVERVINE_ROOT_TWIST,skill_SUM_SPIRIT_OF_SEA,skill_SUM_CATNIP_POWDERING,skill_SUM_SEAFOOD,skill_SUM_POWER_OF_LAND,skill_SUM_GROOMING,skill_SUM_PLANT,skill_SUM_ARCLOUSE_DASH,skill_SUM_CHATTERING,skill_SUM_POWER_OF_LIFE,skill_SUM_MEOW_MEOW,skill_SUM_ANIMAL,skill_SUM_NYANG_GRASS,skill_SUM_HISS,skill_SUM_SPIRIT_OF_LAND,skill_SUM_SPIRIT_OF_LIFE,999] // Summoner
 ];
 }
 {
@@ -1321,7 +1324,7 @@ JobSkillActiveOBJ = [
 [44,1,133,3], // Heaven's Drive 3
 [45,1,61,2],  // Overcharge 2
 [46,0,402,1],
-[47,0,157,1],
+[47,0,157,1], //Auto Guard 1
 [48,1,123,1], // Sense 1
 [49,1,177,1], // Scribble 1
 [50,0,13,5], // Double Attack 5
@@ -1329,7 +1332,11 @@ JobSkillActiveOBJ = [
 [52,1,636,1], //Lion Howling 1
 [53,1,250,3], //Synthesized Shield 3
 [54,1,25,7], // Heal lv. 7
-[55,1,25,9]  // Heal lv. 9
+[55,1,25,9],  // Heal lv. 9
+[56,0,157,3],  // Auto Guard 3
+[57,0,240,1],  // Hocus Pocus 1 (Abracadabra)
+[58,0,185,2],  // Summon Spirit Sphere 2
+[59,0,383,1]  // Close Confine 1
 ];
 }
 
@@ -1463,7 +1470,11 @@ JobSkillActiveOBJ = [
 [126,1,264,1,0,1], // Meteor Assault Lv 1 When Attacking
 [127,1,263,1,0,1], // Soul Destroyer Lv 1 When Attacking
 [128,1,450,3,0,1],//[Ignition Break] Lv 3 
-[129,1,skill_GLT_DARK_CLAW,1,0,1] //Dark Claw lv 1
+[129,1,skill_GLT_DARK_CLAW,1,0,1], //Dark Claw lv 1
+[130,0,162,10,0,1], //Grand Cross 10
+[131,0,244,5,0,1], //Acid Terror 5
+[132,0,238,5,0,1], //Magnetic Earth 5
+[133,0,193,5,0,1] //Occult Impaction 5
  //IDAutocast, Type(0=when hit, 1=when attack), SkillID, SkillLVL, Chance, AutoCastTrigger
 ];
 }

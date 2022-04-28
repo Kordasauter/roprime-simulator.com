@@ -773,32 +773,35 @@ SKILL_NAME = [
 ,["","Stoop"]
 ,["","Spirit Marble"]
 ,["","Soul Attack"]
-,["","Fresh Shrimp"]//Seafood-based Skills
-,["","Bunch of Shrimp"]
-,["","Tuna Belly"]
-,["","Tuna Party"]
-,["","Power of Sea"]
-,["","Grooming"]//Advanced Seafood-based Skills
-,["","Purring"]
-,["","Tasty Shrimp Party"]
-,["","Spirit of Sea"]
-,["","Silvervine Stem Spear"]//Plant-based Skills
-,["","Silvervine Root Twist"]
-,["","Catnip Meteor"]
-,["","Catnip Powdering"]
-,["","Power of Land"]
-,["","Chattering"]//Advanced Plant-based Skills
-,["","Meow Meow"]
-,["","Nyang Grass"]
-,["","Spirit of Land"]
-,["","Picky Peck"]//Animal-based Skills
-,["","Arclouse Dash"]
-,["","Scar of Tarou"]
-,["","Lunatic Carrot Beat"]
-,["","Power of Life"]
-,["","Hiss"]//Advanced Animal-based Skills
-,["","Power of Flock"]
-,["","Spirit of Savage"]
-,["","Spirit of Life"]
+,["","<span style=\"color: blue\">Fresh Shrimp</span>"]//Seafood-based Skills
+,["","<span style=\"color: blue\">Bunch of Shrimp</span>"]
+,["","<span style=\"color: blue\">Tuna Belly</span>"]
+,["","<span style=\"color: blue\">Tuna Party</span>"]
+,["","<span style=\"color: blue\">Power of Sea</span>"]
+,["","<span style=\"color: blue\">Grooming</span>"]//Advanced Seafood-based Skills
+,["","<span style=\"color: blue\">Purring</span>"]
+,["","<span style=\"color: blue\">Tasty Shrimp Party</span>"]
+,["","<span style=\"color: blue\">Spirit of Sea</span>"]
+,["","<span style=\"color: green\">Silvervine Stem Spear</span>"]//Plant-based Skills
+,["","<span style=\"color: green\">Silvervine Root Twist</span>"]
+,["","<span style=\"color: green\">Catnip Meteor</span>"]
+,["","<span style=\"color: green\">Catnip Powdering</span>"]
+,["","<span style=\"color: green\">Power of Land</span>"]
+,["","<span style=\"color: green\">Chattering</span>"]//Advanced Plant-based Skills
+,["","<span style=\"color: green\">Meow Meow</span>"]
+,["","<span style=\"color: green\">Nyang Grass</span>"]
+,["","<span style=\"color: green\">Spirit of Land</span>"]
+,["","<span style=\"color: red\">Picky Peck</span>"]//Animal-based Skills
+,["","<span style=\"color: red\">Arclouse Dash</span>"]
+,["","<span style=\"color: red\">Scar of Tarou</span>"]
+,["","<span style=\"color: red\">Lunatic Carrot Beat</span>"]
+,["","<span style=\"color: red\">Power of Life</span>"]
+,["","<span style=\"color: red\">Hiss</span>"]//Advanced Animal-based Skills
+,["","<span style=\"color: red\">Power of Flock</span>"]
+,["","<span style=\"color: red\">Spirit of Savage</span>"]
+,["","<span style=\"color: red\">Spirit of Life</span>"]
+,["","<span style=\"color: blue\">20 points used on seafood branch</span>"]
+,["","<span style=\"color: green\">20 points used on plant branch</span>"]
+,["","<span style=\"color: red\">20 points used on animal branch</span>"]
 ];
 }

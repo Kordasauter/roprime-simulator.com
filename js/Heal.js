@@ -153,6 +153,14 @@ function CalcBaseHeal( HealLv, maxHeal )
 	if (SkillSearch(skill_ABI_OFFERTORIUM)) {
 	    healMultiplier += 30 * SkillSearch(skill_ABI_OFFERTORIUM);
 	}
+	if (SkillSearch(skill_SUM_SPIRIT_OF_SEA)) 
+	{
+	    healMultiplier += 10;
+		if(SkillSearch(skill_SUM_SEAFOOD))
+		{
+			healMultiplier += 20;
+		}
+	}
 	
 	
 	// Apply Multiplier

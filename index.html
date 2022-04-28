@@ -89,6 +89,38 @@
 							<tr>
 								<td class="bgLtRow3 padded optCaption">
 								<center><u><b>If you have any issue with update try to force refresh the page (CTRL + F5)</b></u></center>
+								<u><b>28/04/2022:</b></u>
+									<ul style="margin-left: 5px;">
+										<li><b>Has been added :</b></li>
+											<ul>
+												<li>Summoner support skills</li>
+												<li>Biolab 4 cards</li><input type="button" value="Show details" onclick="javascript:$('#noteBio428042022').toggle()">
+													<span style="display: none;" id="noteBio428042022">
+														<ul>
+															<li>Randel Lawrence Card</li>
+															<li>Flamel Emure Card</li>
+															<li>Celia Alde Card</li>
+															<li>Chen Liu Card</li>
+															<li>Gertie Wie Card</li>
+															<li>Alphoccio Basil Card</li>
+															<li>Trentini Card</li>
+															<li>Paladin Card</li>
+															<li>Creator Card</li>
+															<li>Professor Card</li>
+															<li>Champion Card</li>
+															<li>Stalker Card</li>
+															<li>Clown Card</li>
+															<li>Gypsy Card</li>
+														</ul>
+													</span>
+											</ul>
+										<li><b>Has been fixed :</b></li>
+											<ul>
+												<li>Summoner skills</li>
+											</ul>
+									</ul>
+								-Kord
+								<br>	
 								<u><b>27/04/2022:</b></u>
 									<ul style="margin-left: 5px;">
 										<li><b>Has been added :</b></li>
@@ -155,11 +187,6 @@
 														</ul>
 													</span>
 											</ul>
-										<li><b>Will be added soon :</b></li>
-											<ul>
-												<li>Summoner support skills</li>
-												<li>Biolab 4 cards</li>
-											</ul>
 									</ul>
 								-Kord
 								<br>
@@ -196,12 +223,6 @@
 										<li><b>Has been Fixed :</b></li>
 											<ul>
 												<li>Some codes errors</li>
-											</ul>
-										<li><b>Will be added soon :</b></li>
-											<ul>
-												<li>Summoner support skills</li>
-												<li>Doram stuff</li>
-												<li>Biolab 4 cards</li>
 											</ul>
 									</ul>
 								-Kord
@@ -2630,6 +2651,48 @@
 													<select id="marionetteDex" style="width:50px;" onchange="TogglePerformerSkills()">
 													</select>
 													<select id="marionetteLuk" style="width:50px;" onchange="TogglePerformerSkills()">
+													</select>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="mdSeperator">
+										&nbsp;
+									</div>
+									<div class="bgSmTitle smTitle">
+										Summoner Skills
+									</div>
+									<table id="performers" class="bgLtTable">
+										<tbody>
+											<tr>
+												<td id="AS0_1" class="bgLtRow3 padded optCaption">Bunch of Shrimp</td>
+												<td id="AS0_2" class="bgLtRow1 padded optArea">
+													<select id="bunchOfShrimp" style="width:50px;" onchange="StAllCalc()">
+														<option selected="selected" value="0">No</option>
+														<option value="1">Yes</option>
+													</select>
+												</td>
+												<td id="AS1_1" class="bgLtRow3 padded optCaption">Purring</td>
+												<td id="AS1_2" class="bgLtRow1 padded optArea">
+													<select id="purring" style="width:50px;" onchange="StAllCalc()">
+														<option selected="selected" value="0">No</option>
+														<option value="1">Yes</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td id="AS2_1" class="bgLtRow3 padded optCaption">Meow Meow</td>
+												<td id="AS2_2" class="bgLtRow1 padded optArea">
+													<select id="meowMeow" style="width:50px;" onchange="StAllCalc()">
+														<option selected="selected" value="0">No</option>
+														<option value="1">Yes</option>
+													</select>
+												</td>
+												<td id="AS3_1" class="bgLtRow3 padded optCaption">Hiss</td>
+												<td id="AS3_2" class="bgLtRow1 padded optArea">
+													<select id="hiss" style="width:50px;" onchange="StAllCalc()">
+														<option selected="selected" value="0">No</option>
+														<option value="1">Yes</option>
 													</select>
 												</td>
 											</tr>
