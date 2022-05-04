@@ -56,6 +56,7 @@ var RANGED_SKILLS = [
     skill_SHA_TRIANGLE_SHOT,
     skill_KAG_CROSS_STRIKE,
     skill_KAG_SWIRLING_PETAL,
+	skill_KAG_THROW_EXPLOSIVE_KUNAI,
     skill_GEN_HALLUCINATION_DRUG,
 	skill_REB_FIRE_DANCE,
 	skill_REB_SHATTERING_STORM,
@@ -1665,7 +1666,7 @@ function CalcSkillDamage()
 		else if ( n_A_ActiveSkill === skill_KAG_THROW_EXPLOSIVE_KUNAI )
 		{
 			damageType = kDmgTypeRanged;
-			w_SkillMod =  ((n_A_ActiveSkillLV * (50 + n_A_DEX / 4)) * SkillSearch( skill_NIN_DAGGER_THROWING_PRACTICE ) * 0.4 * n_A_BaseLV / 120.0) + n_A_JobLV * 10;
+			w_SkillMod =  (((n_A_ActiveSkillLV * (50 + n_A_DEX / 4)) * SkillSearch( skill_NIN_DAGGER_THROWING_PRACTICE ) * 0.4 * n_A_BaseLV / 120.0) + n_A_JobLV * 10) / 100;
 			fixedCastTime = 0.0;
 			variableCastTime = 1.0;
 			variableCastTime += 0.4 * (n_A_ActiveSkillLV - 1);
