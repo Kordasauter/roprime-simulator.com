@@ -1958,6 +1958,10 @@
 ,[1939,itm_type_ARMOR,0,70,0,0,0,60,bon_MDEF,5,bon_HP_ADD,500,bon_SP_ADD,50,bon_STR,1,bon_INT,1,bon_DEX,1,bon_NONE] // "Eden Group Uniform IV"
 ,[1940,weapTyp_AXEII,0,195,3,0,0,60,bon_NO_UPGRADES,1,bon_NONE] // "Eden Group Two Handed Axe I"
 ,[1941,weapTyp_HUUMA_SHURIKEN,0,150,3,0,0,60,bon_MATK,50,bon_NO_UPGRADES,1,bon_NONE] // "Eden Group Huuma Shuriken I"
+,[1942,itm_type_HEAD_UPPER,0,12,0,1,80,1,bon_NONE] // "General's Helmet"
+,[1943,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "General's Helmet + Gungnir"
+,[1944,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "General's Helmet + Zweihander"
+,[1945,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "General's Helmet + Quadrille"
 //
 ];
 ItemMax = ItemOBJ.length -1;
@@ -2391,6 +2395,9 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[1914,1867,1868,1869,1888,1898,"NULL"] //"Elegant Doram Charm Grass Superior Leaf Set"
 ,[1915,1867,1868,1869,1886,1901,"NULL"] //"Elegant Doram Fresh Grass Superior Bunny Set"
 ,[1916,1867,1868,1869,1887,1895,"NULL"] //"Elegant Doram Cute Grass Superior Tuna Set"
+,[1943,1942,52,"NULL"]//General's Gungnir Set
+,[1944,1942,46,"NULL"]//General's Zweihander Set
+,[1945,1942,422,"NULL"]//General's Quadrille Set
 //,[itm_set,item1,item2,...,"NULL"]
 ];
 SE_MAXnum = w_SE.length -1;

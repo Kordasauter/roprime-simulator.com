@@ -617,8 +617,8 @@ with ( document.calcForm )
 	var displayAtk = n_A_Weapon_ATK + weaponUpgradeAttack + equipmentAttack;
 	STR = Math.floor(statusAttack) +" + "+ displayAtk;
 	STR += "<br/>(" + Math.floor( statusAttack * 2 * element[n_B[en_ELEMENT]][ele_NEUTRAL] / 100 );
-	STR += " + " + Math.floor( totalAtk * element[n_B[en_ELEMENT]][n_A_Weapon_element] / 100 ) + " &plusmn; ";
-	STR += Math.floor( varianceAttack * element[n_B[en_ELEMENT]][n_A_Weapon_element] / 100 ) + ")";
+	STR += " + " + Math.floor( (totalAtk * attackMod) * element[n_B[en_ELEMENT]][n_A_Weapon_element] / 100 ) + " &plusmn; ";
+	STR += Math.floor( (varianceAttack * attackMod) * element[n_B[en_ELEMENT]][n_A_Weapon_element] / 100 ) + ")";
 
 	myInnerHtml("A_ATK",STR,0);
 	

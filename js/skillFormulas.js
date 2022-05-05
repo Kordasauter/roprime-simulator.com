@@ -4454,10 +4454,10 @@ function CalcSkillDamage()
 		{
 			w_SkillMod = ( ( ( hpCost + spCost ) / 4 ) / 100.0 ) * n_A_BaseLV / 100.0;
 		}
-		//CalcAtkMods02( w_SkillMod, 0 );
+		// CalcAtkMods02( w_SkillMod, 0 );
 		for ( var i = 0; i < 3; i++ )
 		{
-			physicalDamage[i] = ApplyEnemyDefense( n_A_DMG[i] * w_SkillMod, i, 0 );
+			physicalDamage[i] = CalcFinalDamage( n_A_DMG[i] * w_SkillMod, i );
 			if ( afterFallen )
 			{
 				physicalDamage[i] += ( n_A_ActiveSkillLV * 500 ) + ( n_B[en_LEVEL] * 40 );
@@ -4771,9 +4771,15 @@ function CalcSkillDamage()
 			n_A_DMG = GetBaseDmg( n_A_Weapon_element, false, 0 );
 			
 			w_SkillMod = ( ( ( hpCost + spCost ) / 4 ) / 100.0 ) * n_A_BaseLV / 100.0;
+			
 			//CalcAtkMods02( w_SkillMod, 0 );
+			
 			for ( var i = 0; i < 3; i++ )
 			{
+				if( EquipNumSearch(1945) )
+				{//General's Helmet + Quadrille 
+					n_A_DMG[i] *= (100 + (7 * Math.floor(n_A_Weapon_ATKplus / 2))) /100;
+				}
 				physicalDamage[i] = ApplyEnemyDefense( n_A_DMG[i] * w_SkillMod, i, 0 );
 				physicalDamage[i] += ( TigerCannonLv * 240 ) + ( n_B[en_LEVEL] * 40 );
 			}

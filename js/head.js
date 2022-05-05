@@ -773,16 +773,46 @@ function ApplySkillModifiers( damage )
 			dmgMultiplier += 25;
 		}
 	}
-	if ( (n_A_JOB == cls_KAGOB) && SkillSearch( skill_KAG_SUMMON_ELEMENTAL_SEAL ) &&
-		(n_A_ActiveSkill !== skill_KAG_THROW_EXPLOSIVE_KUNAI &&
-		 n_A_ActiveSkill !== skill_KAG_OVERTHROW &&
-		 n_A_ActiveSkill !== skill_NIN_THROW_COINS &&
-		 n_A_ActiveSkill !== skill_ALL_BASIC_ATTACK))
-	{ // Summon Elemental Seals damage multiplier
-		if (n_A_Weapon_element == ele_NEUTRAL + SkillSearch( skill_KAG_GET_ELEMENTAL_SEAL ) && SkillSearch( skill_KAG_GET_ELEMENTAL_SEAL ) !== ele_EARTH)
-			dmgMultiplier += 10*SkillSearch( skill_KAG_SUMMON_ELEMENTAL_SEAL );
+	// if ( (n_A_JOB == cls_KAGOB) && SkillSearch( skill_KAG_SUMMON_ELEMENTAL_SEAL ) &&
+		// (n_A_ActiveSkill !== skill_KAG_THROW_EXPLOSIVE_KUNAI &&
+		 // n_A_ActiveSkill !== skill_KAG_OVERTHROW &&
+		 // n_A_ActiveSkill !== skill_NIN_THROW_COINS &&
+		 // n_A_ActiveSkill !== skill_ALL_BASIC_ATTACK))
+	// { // Summon Elemental Seals damage multiplier
+		// if (n_A_Weapon_element == ele_NEUTRAL + SkillSearch( skill_KAG_GET_ELEMENTAL_SEAL ) && SkillSearch( skill_KAG_GET_ELEMENTAL_SEAL ) !== ele_EARTH)
+			// dmgMultiplier += 10*SkillSearch( skill_KAG_SUMMON_ELEMENTAL_SEAL );
+	// }
+	if( SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL) )
+	{
+		switch(SkillSearch(skill_KAG_GET_ELEMENTAL_SEAL)){
+			case ele_WATER:
+				if(n_A_ActiveSkill == skill_NIN_FREEZING_SPEAR)
+					dmgMultiplier += 5*SkillSearch( skill_KAG_SUMMON_ELEMENTAL_SEAL );
+				if(n_A_ActiveSkill == skill_NIN_SNOW_FLAKE_DRAFT)
+					dmgMultiplier += 25*SkillSearch( skill_KAG_SUMMON_ELEMENTAL_SEAL );
+				break;
+			case ele_EARTH:
+				break;
+			case ele_FIRE:
+				if(n_A_ActiveSkill == skill_NIN_FLAMING_PETALS)
+					dmgMultiplier += 20*SkillSearch( skill_KAG_SUMMON_ELEMENTAL_SEAL );
+				if(n_A_ActiveSkill == skill_NIN_BLAZE_SHIELD)
+					dmgMultiplier += 5*SkillSearch( skill_KAG_SUMMON_ELEMENTAL_SEAL );
+				if(n_A_ActiveSkill == skill_NIN_EXPLODING_DRAGON)
+					dmgMultiplier += 15*SkillSearch( skill_KAG_SUMMON_ELEMENTAL_SEAL );
+				break;
+			case ele_WIND:
+				if(n_A_ActiveSkill == skill_NIN_WIND_BLADE)
+					dmgMultiplier += 20*SkillSearch( skill_KAG_SUMMON_ELEMENTAL_SEAL );
+				if(n_A_ActiveSkill == skill_NIN_LIGHTNING_JOLT)
+					dmgMultiplier += 15*SkillSearch( skill_KAG_SUMMON_ELEMENTAL_SEAL );
+				if(n_A_ActiveSkill == skill_NIN_FIRST_WIND)
+					dmgMultiplier += 10*SkillSearch( skill_KAG_SUMMON_ELEMENTAL_SEAL );
+				break;
+			default:
+				break;
+		}
 	}
-		
 	
 	if( (EquipNumSearch( 1723 ) && n_A_ActiveSkill==skill_CR_GRAND_CROSS) || // Shadow Crusader Armor
 		(EquipNumSearch( 1732 ) && n_A_ActiveSkill==skill_PR_MAGNUS_EXORCISMUS) || // Shadow Priest Armor
@@ -839,6 +869,20 @@ function ApplySkillModifiers( damage )
 	if( (EquipNumSearch( 1860 ) && EquipNumSearch( 315 ) && n_A_ActiveSkill==skill_SHA_TRIANGLE_SHOT) )
 	{ // "Feathered Tricorn" + "Ancient Cape"
 		dmgMultiplier += Math.floor(n_A_SHOULDER_DEF_PLUS / 2) * 15;
+	}
+	if( EquipNumSearch(1943) )
+	{//General's Helmet + Gungnir
+		if(n_A_ActiveSkill == skill_ROY_VANISHING_POINT)
+		{
+			dmgMultiplier += 7 * Math.floor(n_A_Weapon_ATKplus / 2);
+		}
+	}
+	if( EquipNumSearch(1945) )
+	{//General's Helmet + Quadrille 
+		if(n_A_ActiveSkill == skill_SUR_TIGER_CANNON)
+		{
+			dmgMultiplier += 7 * Math.floor(n_A_Weapon_ATKplus / 2);
+		}
 	}
 	
 	damage = damage * (100+StPlusCalc2(bon_DMG_SKILL+n_A_ActiveSkill)+StPlusCard(bon_DMG_SKILL+n_A_ActiveSkill) + dmgMultiplier) /100;

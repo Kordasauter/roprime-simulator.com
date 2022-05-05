@@ -832,7 +832,14 @@ function CalcEquipAtk()
 			equipmentAttack += 20;
 		}
 	}
-	
+	if(EquipNumSearch(1942))
+	{ //"General's Helmet"
+		equipmentAttack += 15 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
+	}
+	if( EquipNumSearch(1944) )
+	{//General's Helmet + Zweihander 
+		equipmentAttack += 20 * Math.floor(n_A_Weapon_ATKplus / 2);
+	}
 	//Cards
 	if(CardNumSearch(557))
 	{//Faithful Manager Card
@@ -1481,8 +1488,8 @@ function CalcAttackMod()
 	{ //"Amistr Hat"
 		if(n_A_HEAD_DEF_PLUS >= 11) { n_tok[bon_PHY_ATK] += 5;}	
 	}
-	if(EquipNumSearch(1702) || EquipNumSearch(1860))
-	{ //"Dog Cap"        or    "Feathered Tricorn" 
+	if(EquipNumSearch(1702) || EquipNumSearch(1860) || EquipNumSearch(1942))
+	{ //"Dog Cap"        or    "Feathered Tricorn"   or   General's Helmet
 		if(n_A_HEAD_DEF_PLUS >= 9)
 			n_tok[bon_PHY_ATK] += 5;
 	}
@@ -1589,6 +1596,11 @@ function CalcAttackMod()
 	{
 		multiplier = (6 + (SkillSearch( skill_REB_HIT_BARREL ) * 2)) * SkillSearch( skill_GS_COIN_FLIP); 
 	}
+	// }
+	if( SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL) && SkillSearch(skill_KAG_GET_ELEMENTAL_SEAL) == ele_EARTH )
+	{
+		multiplier = 15 *  SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
+	}
 	
 	attackMod *= ( 100 + multiplier ) / 100;
 }
@@ -1638,6 +1650,11 @@ function CalcCriticalMod()
 	{//LUK Glove
 		if(SU_LUK >= 110)
 			n_tok[bon_DMG_CRIT] += 1;
+	}
+	if(EquipNumSearch(1942))
+	{ //"General's Helmet"
+		if(n_A_HEAD_DEF_PLUS >= 11)
+			n_tok[bon_DMG_CRIT] += 15;
 	}
 	if( EquipNumSearch(1825))
 	{//Shadow Gunslinger Shield
@@ -4762,6 +4779,11 @@ function calcASPD()
 	{//Cenere Card
 		equipASPD += 2 * Math.floor(SU_AGI/10);
 	}
+	if(EquipNumSearch(1942))
+	{ //"General's Helmet"
+		if(n_A_HEAD_DEF_PLUS >=7)
+			equipASPD += 10;
+	}
 	
 	if ( EquipNumSearch( 1747 ) )// "Shadow Sage Armor"
 	{ 
@@ -4872,8 +4894,8 @@ function calcASPD()
 			flatASPD +=1;
 		}
 	}
-	if(EquipNumSearch(1702) || EquipNumSearch(1860))
-	{ //"Dog Cap" or "Feathered Tricorn"
+	if(EquipNumSearch(1702) || EquipNumSearch(1860) || EquipNumSearch(1942))
+	{ //"Dog Cap" or "Feathered Tricorn" or "General's Helmet"
 		if(n_A_HEAD_DEF_PLUS >= 9)
 			flatASPD += 1;
 	}
@@ -5185,8 +5207,8 @@ function CalcFixedCast()
 		reductionFlat += -0.08;
 		if ( n_A_HEAD_DEF_PLUS >= 2) {reductionFlat += -0.08*(n_A_HEAD_DEF_PLUS-1) }; 
 	}
-	if(EquipNumSearch(1681) || EquipNumSearch(1702) || EquipNumSearch(1759) || EquipNumSearch(1860))
-	{ //"Amistr Hat"              "Dog Cap"               "Diabolic Halo"         "Feathered Tricorn"
+	if(EquipNumSearch(1681) || EquipNumSearch(1702) || EquipNumSearch(1759) || EquipNumSearch(1860) || EquipNumSearch(1942))
+	{ //"Amistr Hat"              "Dog Cap"               "Diabolic Halo"         "Feathered Tricorn"   "General's Helmet"
 		if ( n_A_HEAD_DEF_PLUS >= 11 && n_A_HEAD_DEF_PLUS <= 15)
 		{
 			reductionFlat += -0.1*(n_A_HEAD_DEF_PLUS - 10);

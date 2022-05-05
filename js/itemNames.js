@@ -1942,6 +1942,10 @@ ITEM_NAME = [
 ,[1939,0,0,"Eden Group Uniform IV",0]
 ,[1940,0,0,"Eden Group Two Handed Axe I",0]
 ,[1941,0,0,"Eden Group Huuma Shuriken I",0]
+,[1942,0,0,"General's Helmet","[For each 2 refine lv]<br>ATK +15.<br><br>[If refine lv +7 or higher]<br>ASPD +10%.<br><br>[If refine lv +9 or higher]<br>ATK +5%.<br>ASPD +1.<br><br>[If refine lv +11 or higher]<br>Critical damage +15%.<br>Fixed casting time -0.1 second for each refine lv (up to 15).",0]
+,[1943,0,0,"General's Gungnir Set","[Vanishing Point] damage +7% for each 2 refine lv of Gungnir.",0]
+,[1944,0,0,"General's Zweihander Set","ATK +20 for each 2 refine lv of Zweihander.",0]
+,[1945,0,0,"General's Quadrille Set","[Tiger Cannon] damage +7% for each 2 refine lv of Quadrille.",0]
 ]
 };
 
