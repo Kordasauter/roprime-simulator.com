@@ -1828,6 +1828,7 @@ var ksBunchOfShrimp = 0;
 var ksPurring = 1;
 var ksMeowMeow = 2;
 var ksHiss = 3;
+var ksArclouseDash = 4;
 
 // Guild Skills
 pass_IV_BAT_ORDER = 0;

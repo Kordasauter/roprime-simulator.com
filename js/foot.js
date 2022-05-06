@@ -323,11 +323,12 @@ with ( document.calcForm )
 		performerBuffs[ksPerformerDex] = parseInt(formElements["marionetteDex"].value);
 		performerBuffs[ksPerformerLuk] = parseInt(formElements["marionetteLuk"].value);
 	}
-	{
+	{// Summoner Skills
 		summonerBuffs[ksBunchOfShrimp] = parseInt(formElements["bunchOfShrimp"].value);
 		summonerBuffs[ksPurring] = parseInt(formElements["purring"].value);
 		summonerBuffs[ksMeowMeow] = parseInt(formElements["meowMeow"].value);
 		summonerBuffs[ksHiss] = parseInt(formElements["hiss"].value);
+		summonerBuffs[ksArclouseDash] = parseInt(formElements["arclouseDash"].value);
 	}
 	
 	{ // Guild Skills
@@ -1062,7 +1063,14 @@ function StPlusCalc()
 	{ // Warcry from Beyond
 		wSPC_STR += performerBuffs[ksChorusLevel] * performerBuffs[ksNumPerformers];
 	}
-	
+	// summoner skills
+	if ( summonerBuffs[ksArclouseDash] || SkillSearch(skill_SUM_ARCLOUSE_DASH))
+	{
+		if( summonerBuffs[ksArclouseDash] > SkillSearch(skill_SUM_ARCLOUSE_DASH) )
+			wSPC_AGI += 15 + (5 * summonerBuffs[ksArclouseDash]);
+		else
+			wSPC_AGI += 15 + (5 * SkillSearch(skill_SUM_ARCLOUSE_DASH));
+	}
 	// Sniper
 	if ( SkillSearch( skill_SN_FALCON_EYES ) )
 	{

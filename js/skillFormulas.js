@@ -2705,24 +2705,25 @@ function CalcSkillDamage()
 		{
 			damageType = kDmgTypeRanged;
 			w_TotalHits = 5;
+			// w_SkillMod = (2 + n_A_ActiveSkillLV);
 			w_SkillMod = (2 + n_A_ActiveSkillLV)/5;
 			
 			
-			fixedCastTime *= 1.0;
+			fixedCastTime *= 0.0;
 			if(EquipNumSearch(1904))
 			{ //"Plump Earthworm Charm"
 				w_SkillMod += ((Math.floor(SU_DEX /6) * n_A_ActiveSkillLV) / 100) * EquipNumSearch(1904);
-				variableCastTime +=  1.0 / (1 + EquipNumSearch(1904)) ;
+				variableCastTime *=  1.0 / (1 + EquipNumSearch(1904)) ;
 			}
 			else
 			{
 				variableCastTime *=  1.0;
 			}
-			if(SkillSearch(skill_SUM_SPIRIT_OF_LIFE))
-			{
-				var remainingHP = formElements["SkillSubNum"].value;
-				w_SkillMod += 0.3 * remainingHP;
-			}
+			// if(SkillSearch(skill_SUM_SPIRIT_OF_LIFE))
+			// {
+				// var remainingHP = formElements["SkillSubNum"].value;
+				// w_SkillMod += 0.3 * remainingHP;
+			// }
 		}
 		CalcAtkMods02(w_SkillMod,0);
 		

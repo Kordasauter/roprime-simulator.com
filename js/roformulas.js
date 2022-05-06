@@ -1915,6 +1915,10 @@ function CalcRangedMod()
 	{
 		n_tok[bon_DMG_RANGE] += 20;
 	}
+	if((SkillSearch(skill_SUM_ARCLOUSE_DASH) || summonerBuffs[ksArclouseDash]) && n_A_JOB == cls_SUM)
+	{
+		n_tok[bon_DMG_RANGE] += 10;
+	}
 	
 	
 	if (not_use_card == 1)

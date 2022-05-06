@@ -813,7 +813,15 @@ function ApplySkillModifiers( damage )
 				break;
 		}
 	}
-	
+	if(SkillSearch(skill_SUM_SPIRIT_OF_LIFE) && 
+	(n_A_ActiveSkill == skill_SUM_PICKY_PECK || n_A_ActiveSkill == skill_SUM_SCAR_OF_TAROU || 
+	 n_A_ActiveSkill == skill_SUM_LUNATIC_CARROT_BEAT || n_A_ActiveSkill == skill_SUM_SPIRIT_OF_SAVAGE))
+	{
+		var remainingHP = formElements["SkillSubNum"].value;
+		dmgMultiplier += 30 * remainingHP;
+	}
+
+
 	if( (EquipNumSearch( 1723 ) && n_A_ActiveSkill==skill_CR_GRAND_CROSS) || // Shadow Crusader Armor
 		(EquipNumSearch( 1732 ) && n_A_ActiveSkill==skill_PR_MAGNUS_EXORCISMUS) || // Shadow Priest Armor
 		(EquipNumSearch( 1735 ) && n_A_ActiveSkill==skill_MO_THROW_SPIRIT_SPHERES) || // Shadow Monk Armor
