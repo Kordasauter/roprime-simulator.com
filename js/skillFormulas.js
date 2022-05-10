@@ -2712,7 +2712,6 @@ function CalcSkillDamage()
 			fixedCastTime *= 0.0;
 			if(EquipNumSearch(1904))
 			{ //"Plump Earthworm Charm"
-				w_SkillMod += ((Math.floor(SU_DEX /6) * n_A_ActiveSkillLV) / 100) * EquipNumSearch(1904);
 				variableCastTime *=  1.0 / (1 + EquipNumSearch(1904)) ;
 			}
 			else

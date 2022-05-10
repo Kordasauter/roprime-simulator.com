@@ -821,7 +821,6 @@ function ApplySkillModifiers( damage )
 		dmgMultiplier += 30 * remainingHP;
 	}
 
-
 	if( (EquipNumSearch( 1723 ) && n_A_ActiveSkill==skill_CR_GRAND_CROSS) || // Shadow Crusader Armor
 		(EquipNumSearch( 1732 ) && n_A_ActiveSkill==skill_PR_MAGNUS_EXORCISMUS) || // Shadow Priest Armor
 		(EquipNumSearch( 1735 ) && n_A_ActiveSkill==skill_MO_THROW_SPIRIT_SPHERES) || // Shadow Monk Armor
@@ -894,6 +893,15 @@ function ApplySkillModifiers( damage )
 	}
 	
 	damage = damage * (100+StPlusCalc2(bon_DMG_SKILL+n_A_ActiveSkill)+StPlusCard(bon_DMG_SKILL+n_A_ActiveSkill) + dmgMultiplier) /100;
+	
+	/* 
+		For some reason the Earthworm Charm Multiplier has to be recalculate after the "spirit of life" multiplier
+	*/
+	if(EquipNumSearch(1904))
+	{ //"Plump Earthworm Charm"
+		damage *= 1 + ((Math.floor(SU_DEX /6) * n_A_ActiveSkillLV) / 100) * EquipNumSearch(1904);
+	}
+	
 	if ( n_A_ActiveSkill == skill_RG_BACK_STAB &&
 		 n_A_WeaponType == weapTyp_BOW )
 	{
