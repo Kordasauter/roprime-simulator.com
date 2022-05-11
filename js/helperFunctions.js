@@ -244,13 +244,19 @@ function StCalc(nSC)
 	{ // auto base level
 		if ( thirdClass == 0 && (n_A_JOB != cls_KAGOB && n_A_JOB != cls_ENOVI && n_A_JOB != cls_REB))
 		{
-		    //if (n_A_JOB == cls_KAGOB || n_A_JOB == cls_ENOVI || n_A_JOB == cls_REB) {
-			//wStPoint += 1225;
-		    //} //else {
 			for ( var i = 1; StPoint > wStPoint && i < wMAXLV; i++ )
 			{
-				wStPoint += Math.floor( i / 5 ) + 3;
-			//}
+				if ( i <= 100 )
+				{
+					wStPoint += Math.floor(i / 5) + 3;
+				}
+				else if (i <= 159 || i == 161 || i == 170)
+				{
+					wStPoint += Math.floor( ( i - 100 ) / 10 ) + 23;
+				} else {
+					wStPoint += Math.floor( ( i - 100 ) / 10 ) + 24;
+				}
+
 		    }
 		}
 		else

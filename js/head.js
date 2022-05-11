@@ -891,6 +891,10 @@ function ApplySkillModifiers( damage )
 			dmgMultiplier += 7 * Math.floor(n_A_Weapon_ATKplus / 2);
 		}
 	}
+	// if ( EquipNumSearch( 1399 ) && n_A_ActiveSkill == skill_RAN_ARROW_STORM)
+	// { // Giant Crossbow
+		// dmgMultiplier += 5 * n_A_Weapon_ATKplus;
+	// }
 	
 	damage = damage * (100+StPlusCalc2(bon_DMG_SKILL+n_A_ActiveSkill)+StPlusCard(bon_DMG_SKILL+n_A_ActiveSkill) + dmgMultiplier) /100;
 	
