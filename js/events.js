@@ -1204,6 +1204,8 @@ function ClickGarment( data, isRefine )
 	}
 	else if(garm_id == 1958)
 	{// "Giant God Snake Skin"
+		if(!isRefine)
+			CleanEnchantGarment();
 		for ( var i = 0; EnchantListOBJ[7][i] != "NULL" && !isRefine; i++ )
 		{
 			formElements["A_GARMENT_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[7][i]][1],EnchantOBJ[EnchantListOBJ[7][i]][0]);
@@ -1269,6 +1271,8 @@ function ClickShoes( data, isRefine )
 	
 	if(shoes_id >= 1946 && shoes_id <= 1957 )
 	{// "Temporal Shoes"
+		if(!isRefine)
+			CleanEnchantShoes();
 		for ( var i = 0; EnchantListOBJ[10][i] != "NULL" && !isRefine; i++ )
 		{
 			formElements["A_SHOES_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[10][i]][1],EnchantOBJ[EnchantListOBJ[10][i]][0]);
@@ -1278,10 +1282,38 @@ function ClickShoes( data, isRefine )
 			
 			formElements["A_SHOES_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[9][i]][1],EnchantOBJ[EnchantListOBJ[9][i]][0]);
 		}
+		for ( var i = 0; EnchantListOBJ[0][i] != "NULL" && !isRefine; i++ )
+		{
+			
+			formElements["A_SHOES_ENCHANT_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
+		}
 		formElements["A_SHOES_ENCHANT_4"].disabled = false;
 		formElements["A_SHOES_ENCHANT_3"].disabled = false;
 		formElements["A_SHOES_ENCHANT_2"].disabled = true;
 	}
+	//test
+	/*else if(shoes_id == 1442)
+	{//Ur's Greaves
+		CleanEnchantShoes();
+		for ( var i = 0; EnchantListOBJ[29][i] != "NULL"; i++ )
+		{
+			formElements["A_SHOES_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[29][i]][1],EnchantOBJ[EnchantListOBJ[29][i]][0]);
+		}
+		if(shoes_ref >= 9)
+		{
+			var formsize = formElements["A_SHOES_ENCHANT_4"].length;
+			formElements["A_SHOES_ENCHANT_4"].options[formsize] = new Option("Strength");
+			formElements["A_SHOES_ENCHANT_4"].options[formsize].disabled = true;
+			for ( var i = 1; EnchantListOBJ[11][i] != "NULL"; i++ )
+			{
+				
+				formElements["A_SHOES_ENCHANT_4"].options[i+formsize] = new Option(EnchantOBJ[EnchantListOBJ[11][i]][1],EnchantOBJ[EnchantListOBJ[11][i]][0]);
+			}
+		}
+		formElements["A_SHOES_ENCHANT_4"].disabled = false;
+		formElements["A_SHOES_ENCHANT_3"].disabled = true;
+		formElements["A_SHOES_ENCHANT_2"].disabled = true;
+	}*/
 	else
 	{
 		CleanEnchantShoes();
@@ -1317,6 +1349,12 @@ function CleanEnchantShoes()
 	{
 		formElements["A_SHOES_ENCHANT_4"].options[0] = null;
 	}
+	for ( var i = 0; EnchantListOBJ[0][i] != "NULL" ; i++ )
+		{
+			formElements["A_SHOES_ENCHANT_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
+			formElements["A_SHOES_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
+			formElements["A_SHOES_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
+		}
 }
 
 function ClickWeaponType( weaponType )

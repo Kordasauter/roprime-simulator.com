@@ -840,6 +840,15 @@ function CalcEquipAtk()
 	{//General's Helmet + Zweihander 
 		equipmentAttack += 20 * Math.floor(n_A_Weapon_ATKplus / 2);
 	}
+	if(EquipNumSearch(1946) || EquipNumSearch(1952))  //Str Boots
+	{
+		equipmentAttack += 7 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
+		if(SU_STR >= 120)
+		{
+			equipmentAttack += 50;
+		}
+	}
+	
 	//Cards
 	if(CardNumSearch(557))
 	{//Faithful Manager Card
@@ -1656,6 +1665,13 @@ function CalcCriticalMod()
 		if(n_A_HEAD_DEF_PLUS >= 11)
 			n_tok[bon_DMG_CRIT] += 15;
 	}
+	if(EquipNumSearch(1951) || EquipNumSearch(1957))  //Luk Boots
+	{
+		n_tok[bon_DMG_CRIT] += 2 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
+		if(SU_LUK >= 120)
+			n_tok[bon_DMG_CRIT] += 30;
+	}
+	
 	if( EquipNumSearch(1825))
 	{//Shadow Gunslinger Shield
 		if(n_A_SHADOW_SHIELD_DEF_PLUS >= 7){n_tok[bon_DMG_CRIT] += 2;}
@@ -1886,6 +1902,14 @@ function CalcRangedMod()
 		if(SU_DEX >= 110)
 			n_tok[bon_DMG_RANGE] += 1;
 	}
+	if(EquipNumSearch(1950) || EquipNumSearch(1956))  //Dex Boots
+	{
+		if(SU_DEX >= 120)
+			n_tok[bon_DMG_RANGE] += 5;
+	}
+	
+	
+	
 	if( EquipNumSearch(1842))
 	{//Shadow Gunslinger Gloves
 		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7){n_tok[bon_DMG_RANGE] += 3;}
@@ -2423,6 +2447,19 @@ function calcHP()
 		}
 	}
 	
+	if(EquipNumSearch(1946) || EquipNumSearch(1952)  //Str Boots
+	|| EquipNumSearch(1947) || EquipNumSearch(1953)  //Agi Boots
+	|| EquipNumSearch(1949) || EquipNumSearch(1955)  //Int Boots
+	|| EquipNumSearch(1950) || EquipNumSearch(1956)  //Dex Boots
+	|| EquipNumSearch(1951) || EquipNumSearch(1957)) //Luk Boots
+	{
+		additiveHP += 100 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
+	}
+	if(EquipNumSearch(1948) || EquipNumSearch(1954))  //Vit Boots
+	{
+		additiveHP += 300 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
+	}
+	
 	//Cards
 	if(CardNumSearch(565))
 	{//Jejeling Card
@@ -2702,6 +2739,12 @@ function calcHP()
 	{//Vit Glove
 		if(SU_VIT >= 110)
 			hpMultiplier += 1;
+	}
+	
+	if(EquipNumSearch(1948) || EquipNumSearch(1954))  //Vit Boots
+	{
+		if(SU_VIT >= 120)
+			hpMultiplier += 8;
 	}
 	//Cards
 	if(CardNumSearch(563))
@@ -3157,6 +3200,15 @@ function calcSP( n_A_MaxSP )
 		{
 			w += 50;
 		}
+	}
+	if(EquipNumSearch(1946) || EquipNumSearch(1952)  //Str Boots
+	|| EquipNumSearch(1947) || EquipNumSearch(1953)  //Agi Boots
+	|| EquipNumSearch(1948) || EquipNumSearch(1954)  //Vit Boots
+	|| EquipNumSearch(1949) || EquipNumSearch(1955)  //Int Boots
+	|| EquipNumSearch(1950) || EquipNumSearch(1956)  //Dex Boots
+	|| EquipNumSearch(1951) || EquipNumSearch(1957)) //Luk Boots
+	{
+		w += 10 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
 	}
 	
 	//Shadows
@@ -4788,6 +4840,10 @@ function calcASPD()
 		if(n_A_HEAD_DEF_PLUS >=7)
 			equipASPD += 10;
 	}
+	if(EquipNumSearch(1947) || EquipNumSearch(1953))  //Agi Boots
+	{
+		equipASPD += 3 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
+	}
 	
 	if ( EquipNumSearch( 1747 ) )// "Shadow Sage Armor"
 	{ 
@@ -4903,6 +4959,14 @@ function calcASPD()
 		if(n_A_HEAD_DEF_PLUS >= 9)
 			flatASPD += 1;
 	}
+	if(EquipNumSearch(1947) || EquipNumSearch(1953))  //Agi Boots
+	{
+		if(SU_AGI >= 120)
+		{
+			flatASPD += 1;
+		}
+	}
+	
 	
 	if( (EquipNumSearch( 1809 ) &&  SkillSearch(skill_RUN_ENCHANT_BLADE) ) || // Shadow Runeknight Shield
 		(EquipNumSearch( 1816 ) &&  SkillSearch(skill_SHA_AUTO_SHADOW_SPELL) ) ) // Shadow Shadowchaser Shield
@@ -5221,6 +5285,11 @@ function CalcFixedCast()
 		{
 			reductionFlat += -0.5;
 		}
+	}
+	if(EquipNumSearch(1950) || EquipNumSearch(1956))  //Dex Boots
+	{
+		if(SU_DEX >= 120)
+			reductionFlat += -0.5;
 	}
 	
 	//Enchant

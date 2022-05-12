@@ -901,7 +901,7 @@ function ApplySkillModifiers( damage )
 	/* 
 		For some reason the Earthworm Charm Multiplier has to be recalculate after the "spirit of life" multiplier
 	*/
-	if(EquipNumSearch(1904))
+	if(EquipNumSearch(1904) && n_A_ActiveSkill == skill_SUM_PICKY_PECK)
 	{ //"Plump Earthworm Charm"
 		damage *= 1 + ((Math.floor(SU_DEX /6) * n_A_ActiveSkillLV) / 100) * EquipNumSearch(1904);
 	}

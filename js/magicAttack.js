@@ -475,6 +475,17 @@ function calcMAtk( includeMultipliers )
 			n_A_EquipMATK += 20;
 		}
 	}
+	if( EquipNumSearch( 1759 ) )
+	{ // Diabolic Halo
+		n_A_EquipMATK += Math.floor(n_A_HEAD_DEF_PLUS / 2) * 15;
+	}
+	if(EquipNumSearch(1949) || EquipNumSearch(1955))  //Int Boots
+	{
+		n_A_EquipMATK += Math.floor(n_A_SHOES_DEF_PLUS / 3) * 10;
+		if(SU_INT >= 120)
+			n_A_EquipMATK += 120;
+	}
+	
 	//shadows
 	if ( EquipNumSearch( 1657 ) )
 	{ // "Shadow Mystic Ring"
@@ -496,10 +507,6 @@ function calcMAtk( includeMultipliers )
 	{ // "Shadow Diviner Set"
 		n_A_EquipMATK += (n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_PENDANT_DEF_PLUS);
 	}
-	if( EquipNumSearch( 1759 ) )
-	{ // Diabolic Halo
-		n_A_EquipMATK += Math.floor(n_A_HEAD_DEF_PLUS / 2) * 15;
-	}	
 	if ( EquipNumSearch( 1826 ) || // "Shadow Runeknight Gloves"
 	 EquipNumSearch( 1827 ) || // "Shadow Royalguard Gloves"
 	 EquipNumSearch( 1828 ) || // "Shadow Mechanic Gloves"
