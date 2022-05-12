@@ -1962,6 +1962,21 @@
 ,[1943,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "General's Helmet + Gungnir"
 ,[1944,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "General's Helmet + Zweihander"
 ,[1945,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "General's Helmet + Quadrille"
+,[1946,itm_type_SHOES,2001,25,0,1,60,99,bon_HP_ADD,300,bon_SP_ADD,30,bon_NONE] // "Temporal Str Boots"
+,[1947,itm_type_SHOES,2001,25,0,1,60,99,bon_HP_ADD,300,bon_SP_ADD,30,bon_NONE] // "Temporal Agi Boots"
+,[1948,itm_type_SHOES,2001,25,0,1,60,99,bon_HP_ADD,300,bon_SP_ADD,30,bon_NONE] // "Temporal Vit Boots"
+,[1949,itm_type_SHOES,2001,25,0,1,60,99,bon_HP_ADD,300,bon_SP_ADD,30,bon_NONE] // "Temporal Int Boots"
+,[1950,itm_type_SHOES,2001,25,0,1,60,99,bon_HP_ADD,300,bon_SP_ADD,30,bon_NONE] // "Temporal Dex Boots"
+,[1951,itm_type_SHOES,2001,25,0,1,60,99,bon_HP_ADD,300,bon_SP_ADD,30,bon_NONE] // "Temporal Luk Boots"
+,[1952,itm_type_SHOES,225,25,0,1,60,99,bon_HP_ADD,300,bon_SP_ADD,30,bon_NONE] // "Modified Str Boots"
+,[1953,itm_type_SHOES,225,25,0,1,60,99,bon_HP_ADD,300,bon_SP_ADD,30,bon_NONE] // "Modified Agi Boots"
+,[1954,itm_type_SHOES,225,25,0,1,60,99,bon_HP_ADD,300,bon_SP_ADD,30,bon_NONE] // "Modified Vit Boots"
+,[1955,itm_type_SHOES,225,25,0,1,60,99,bon_HP_ADD,300,bon_SP_ADD,30,bon_NONE] // "Modified Int Boots"
+,[1956,itm_type_SHOES,225,25,0,1,60,99,bon_HP_ADD,300,bon_SP_ADD,30,bon_NONE] // "Modified Dex Boots"
+,[1957,itm_type_SHOES,225,25,0,1,60,99,bon_HP_ADD,300,bon_SP_ADD,30,bon_NONE] // "Modified Luk Boots"
+,[1958,itm_type_GARMENT,0,38,0,1,40,1,bon_MDEF,10,bon_NONE] // "Giant God Snake Skin"
+,[1959,itm_type_SET,0,0,0,0,0,0,bon_HP_MUL,15,bon_SP_MUL,5,bon_NONE] // "Giant God Snake Skin + Temporal Boots"
+,[1960,itm_type_SET,0,0,0,0,0,0,bon_HP_MUL,15,bon_SP_MUL,5,bon_NONE] // "Giant God Snake Skin + Modified Boots"
 //
 ];
 ItemMax = ItemOBJ.length -1;
@@ -2395,9 +2410,21 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[1914,1867,1868,1869,1888,1898,"NULL"] //"Elegant Doram Charm Grass Superior Leaf Set"
 ,[1915,1867,1868,1869,1886,1901,"NULL"] //"Elegant Doram Fresh Grass Superior Bunny Set"
 ,[1916,1867,1868,1869,1887,1895,"NULL"] //"Elegant Doram Cute Grass Superior Tuna Set"
-,[1943,1942,52,"NULL"]//General's Gungnir Set
-,[1944,1942,46,"NULL"]//General's Zweihander Set
-,[1945,1942,422,"NULL"]//General's Quadrille Set
+,[1943,1942,52,"NULL"] //General's Gungnir Set
+,[1944,1942,46,"NULL"] //General's Zweihander Set
+,[1945,1942,422,"NULL"] //General's Quadrille Set
+,[1959,1958,1946,"NULL"] // "Giant God Snake Skin + Temporal Str Boots"
+,[1959,1958,1947,"NULL"] // "Giant God Snake Skin + Temporal Agi Boots"
+,[1959,1958,1948,"NULL"] // "Giant God Snake Skin + Temporal Vit Boots"
+,[1959,1958,1949,"NULL"] // "Giant God Snake Skin + Temporal Int Boots"
+,[1959,1958,1950,"NULL"] // "Giant God Snake Skin + Temporal Dex Boots"
+,[1959,1958,1951,"NULL"] // "Giant God Snake Skin + Temporal Luk Boots"
+,[1960,1958,1952,"NULL"] // "Giant God Snake Skin + Modified Str Boots"
+,[1960,1958,1953,"NULL"] // "Giant God Snake Skin + Modified Agi Boots"
+,[1960,1958,1954,"NULL"] // "Giant God Snake Skin + Modified Vit Boots"
+,[1960,1958,1955,"NULL"] // "Giant God Snake Skin + Modified Int Boots"
+,[1960,1958,1956,"NULL"] // "Giant God Snake Skin + Modified Dex Boots"
+,[1960,1958,1957,"NULL"] // "Giant God Snake Skin + Modified Luk Boots"
 //,[itm_set,item1,item2,...,"NULL"]
 ];
 SE_MAXnum = w_SE.length -1;

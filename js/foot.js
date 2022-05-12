@@ -199,9 +199,12 @@ with ( document.calcForm )
 	n_A_Enchant[ench_mal2] = parseInt(formElements["A_Mal_Ench2"].value);
 	n_A_Enchant[ench_mal3] = parseInt(formElements["A_Mal_Ench3"].value);
 	n_A_Enchant[ench_mal4] = parseInt(formElements["A_Mal_Ench4"].value);
-	n_A_Enchant[ench_FAW1] = parseInt(formElements["A_FAW_enchant1"].value);
-	n_A_Enchant[ench_FAW2] = parseInt(formElements["A_FAW_enchant2"].value);
-	n_A_Enchant[ench_FAW3] = parseInt(formElements["A_FAW_enchant3"].value);
+	n_A_Enchant[ench_GARMENT2] = parseInt(formElements["A_GARMENT_ENCHANT_2"].value);
+	n_A_Enchant[ench_GARMENT3] = parseInt(formElements["A_GARMENT_ENCHANT_3"].value);
+	n_A_Enchant[ench_GARMENT4] = parseInt(formElements["A_GARMENT_ENCHANT_4"].value);
+	n_A_Enchant[ench_SHOES2] = parseInt(formElements["A_SHOES_ENCHANT_2"].value);
+	n_A_Enchant[ench_SHOES3] = parseInt(formElements["A_SHOES_ENCHANT_3"].value);
+	n_A_Enchant[ench_SHOES4] = parseInt(formElements["A_SHOES_ENCHANT_4"].value);
 	n_A_Enchant[ench_HSE_Armor] = parseInt(formElements["A_HSE"].value);
 	n_A_Enchant[ench_HSE_Head] = parseInt(formElements["A_HSE_HEAD1"].value);
 	
@@ -1446,7 +1449,7 @@ function StPlusCalc()
 	{
 		if(EnchNumSearch( 281 + i ))//Special STR = 281 ~ Special Luk = 286
 		{
-			if(EquipNumSearch(1545) && n_A_SHOULDER_DEF_PLUS >7)
+			if(n_A_SHOULDER_DEF_PLUS >7)
 			{
 				if(i==0)
 					wSPC_STR += 3;
@@ -1567,7 +1570,7 @@ function StPlusEnchant(nSTP2)
 	//EnchantOBJ
 	// [  0,      1       ,2,    3   ]
 	// [  0,"(No Enchant)",0,bon_NONE]
-	for(var i=0;i<=6;i++)
+	for(var i=0;i<=ench_MAX;i++)
 	{
 		for(var j=0;EnchantOBJ[n_A_Enchant[i]][j +3] != 0;j += 2)
 		{
@@ -1983,6 +1986,7 @@ function FirstNovis()
 // 222 = Reb
 // 223 = TKW Cls
 // 224 = Summoner
+// 225 = Kag/Oro + Reb
 // >1000 -> Rebi & Sub
 // >2000 -> 3rd  & Sub
 
@@ -2067,10 +2071,10 @@ JobEquipItemOBJ = [
 /* Sor */[0, 1, 55, 65,118,218,132, 71, 77, 79, 82, 89, 146, 999],
 /* Gen */[0, 1, 56, 66,119,219,133, 70, 71, 72, 73, 74, 75, 78, 79, 82, 83, 84, 85, 86, 90, 91,92, 147, 999],
 /* Gen */[0, 1, 56, 66,119,219,133, 70, 71, 72, 73, 74, 75, 78, 79, 82, 83, 84, 85, 86, 90, 91,92, 147, 999],
-/* Obo */[0, 1,144, 58, 52, 91, 221, 999],
-/* Eno */[0,    50, 90,120,999],
-/* Reb */[0, 1,145, 59, 83,222,999],
-/* Sum */[0, 1,224,999],
+/* Obo */[0, 1,144, 58, 52, 91, 221, 225, 999],
+/* Eno */[0, 50, 90, 120, 999],
+/* Reb */[0, 1, 145, 59, 83, 222, 225, 999],
+/* Sum */[0, 1, 224, 999],
 ];
 }
 
@@ -2120,7 +2124,7 @@ function EquipNumSearch( nENS )
 function EnchNumSearch( nENS )
 { // Search equipCount
 	var wENS=0;
-	for(var ENSi=0;ENSi<=8;ENSi++)
+	for(var ENSi=0;ENSi<=ench_MAX;ENSi++)
 	{
 		if(nENS == n_A_Enchant[ENSi])
 			wENS += 1;

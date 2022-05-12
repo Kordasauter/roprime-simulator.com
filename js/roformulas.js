@@ -900,14 +900,14 @@ function CalcEquipAtk()
 	//Enchante
 	if(EnchNumSearch( 281 ))//Special STR = 281
 	{
-		if(EquipNumSearch(1545) && n_A_SHOULDER_DEF_PLUS >8)
+		if(n_A_SHOULDER_DEF_PLUS >8)
 		{
 			equipmentAttack += 1;
 		}
 	}
 	if(EnchNumSearch( 282 ))//Special AGI = 282
 	{
-		if(EquipNumSearch(1545) && n_A_SHOULDER_DEF_PLUS >8)
+		if(n_A_SHOULDER_DEF_PLUS >8)
 		{
 			equipmentAttack += 1;
 		}
@@ -2763,7 +2763,7 @@ function calcHP()
 	//Enchant
 	if(EnchNumSearch( 286 ))//Special LUK = 286
 	{
-		if(EquipNumSearch(1545) && n_A_SHOULDER_DEF_PLUS >8)
+		if(n_A_SHOULDER_DEF_PLUS >8)
 		{
 			hpMultiplier += 1;
 		}
@@ -3292,7 +3292,7 @@ function calcSP( n_A_MaxSP )
 	//Enchant
 	if(EnchNumSearch( 283 ))//Special VIT = 283
 	{
-		if(EquipNumSearch(1545) && n_A_SHOULDER_DEF_PLUS >8)
+		if(n_A_SHOULDER_DEF_PLUS >8)
 		{
 			spMultiplier += 1;
 		}
@@ -4940,7 +4940,7 @@ function calcASPD()
 	{
 		if(EnchNumSearch( 281 + i ))//Special STR = 281 ~ Special Luk = 286
 		{
-			if(EquipNumSearch(1545) && n_A_SHOULDER_DEF_PLUS > 11)
+			if(n_A_SHOULDER_DEF_PLUS > 11)
 			{
 				flatASPD += 1;
 			}
@@ -5228,7 +5228,7 @@ function CalcFixedCast()
 	{
 		if(EnchNumSearch( 281 + i ))//Special STR = 281 ~ Special Luk = 286
 		{
-			if(EquipNumSearch(1545) && n_A_SHOULDER_DEF_PLUS > 11)
+			if(n_A_SHOULDER_DEF_PLUS > 11)
 			{
 				reductionPercentage += 7;
 			}

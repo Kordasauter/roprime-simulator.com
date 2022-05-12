@@ -264,14 +264,14 @@ function calcMAtk( includeMultipliers )
 		//Enchant
 		if(EnchNumSearch( 284 ))//Special INT = 284
 		{
-			if(EquipNumSearch(1545) && n_A_SHOULDER_DEF_PLUS >8)
+			if(n_A_SHOULDER_DEF_PLUS >8)
 			{
 				w += 1;
 			}
 		}
 		if(EnchNumSearch( 285 ))//Special DEX = 285
 		{
-			if(EquipNumSearch(1545) && n_A_SHOULDER_DEF_PLUS >8)
+			if(n_A_SHOULDER_DEF_PLUS >8)
 			{
 				w += 1;
 			}

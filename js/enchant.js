@@ -300,6 +300,16 @@
 ,[298,"Place Holder",0,bon_NONE]
 ,[299,"Place Holder",0,bon_NONE]
 ,[300,"Place Holder",0,bon_NONE]
+,[301,"Bear's Power","Consumes 500 HP per second during activation.",bon_STR,200,bon_NONE]
+,[302,"Hawkeye","Consumes 50 SP per second during activation.",bon_DEX,200,bon_NONE]
+,[303,"Lucky Day","Adds a chance to obtain a Treasure Box when killing monsters during activation.",bon_LUK,200,bon_NONE]
+,[304,"Muscle Fool",0,bon_DEF,1000,bon_PHY_ATK,-50,bon_MATK_MUL,-50,bon_NONE]
+,[305,"Runaway Magic","Consumes 200 SP per second during activation.",bon_INT,200,bon_NONE]
+,[306,"Speed of Light","Consumes 400 HP and 40 SP per second during activation.",bon_ASPD_MUL,100,bon_PDODGE,100,bon_NONE]
+,[307,"Place Holder",0,bon_NONE]
+,[308,"Place Holder",0,bon_NONE]
+,[309,"Place Holder",0,bon_NONE]
+,[310,"Place Holder",0,bon_NONE]
 ];
 //,[  x,"name",0,bon_NONE]
 EnchantNum = EnchantOBJ.length -1;
@@ -313,5 +323,9 @@ EnchantNum = EnchantOBJ.length -1;
 /* 4 Ninja Eanchant (upg < 10)*/[0,1,2,11,12,21,22,31,32,41,42,51,52,61,62,63,64,71,72,73,74,"NULL"],
 /* 5 Ninja Eanchant (10> upg < 12)*/[0,1,2,11,12,21,22,31,32,41,42,51,52,61,62,63,64,71,72,73,74,81,82,83,102,104,"NULL"],
 /* 6 Ninja Eanchant (upg > 12)*/[0,1,2,3,11,12,13,21,22,23,31,32,33,41,42,43,51,52,53,61,62,63,64,71,72,73,74,81,82,83,102,104,"NULL"],
+/* 7 Faceworm Skin slot 2&3*/[0,1,2,3,4,5,6,7,11,12,13,14,15,16,17,21,22,23,24,25,26,27,31,32,33,34,35,36,37,41,42,43,44,45,46,47,51,52,53,54,55,56,57,"NULL"],
+/* 8 Faceworm Skin slot 4*/[0,281,282,283,284,285,286,"NULL"],
+/* 9 temporal boots slot 3*/[0,301,302,303,304,305,306,"NULL"],
+/* 10 temporal boots slot 4*/[0,214,215,216,217,231,232,233,234,242,243,244,245,22,23,91,92,261,262,263,264,53,54,55,56,"NULL"],
 ];
 }

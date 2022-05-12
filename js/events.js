@@ -1045,57 +1045,55 @@ function ClickWeapon( weapon )
 	}
 }
 
-function ClickWeaponRefine( ref )
-{
-	var weapon = ItemOBJ[n_A_Equip[eq_WEAPON]][itm_ID];
-	
-	if(weapon== 1452 /*Raksasa Dagger*/ || 
-			weapon== 1453 /*Mikatsuki*/ || 
-			weapon== 1699 /*Huuma Swirling Petal*/ || 
-			weapon== 1700 /*Huuma Fluttering Snow*/ || 
-			weapon== 1701 /*Huuma Thunderstorm*/)
-	{	
-		while(formElements["A_Mal_Ench1"].length > 0)
-		{
-			formElements["A_Mal_Ench1"].options[0] = null;
-		}
-		while(formElements["A_Mal_Ench2"].length > 0)
-		{
-			formElements["A_Mal_Ench2"].options[0] = null;
-		}
-		formElements["A_Mal_Ench1"].disabled = false;
-		formElements["A_Mal_Ench2"].disabled = false;
-		var enchlv = 0;
-		if( ref < 10)
-		{
-			enchlv = 4;
-		}
-		else if (ref < 12)
-		{
-			enchlv = 5;
-		}
-		else
-		{
-			enchlv = 6;
-		}
-		for ( var i = 0; EnchantListOBJ[enchlv][i] != "NULL"; i++ )
-		{
-			formElements["A_Mal_Ench1"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[enchlv][i]][1],EnchantOBJ[EnchantListOBJ[enchlv][i]][0]);
-			formElements["A_Mal_Ench2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[enchlv][i]][1],EnchantOBJ[EnchantListOBJ[enchlv][i]][0]);
-		}
-	}
-	else
-	{
-		for ( var i = 0; EnchantListOBJ[0][i] != "NULL"; i++ )
-		{
-			formElements["A_Mal_Ench1"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
-			formElements["A_Mal_Ench2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
-		}
-		formElements["A_Mal_Ench1"].disabled = true;
-		formElements["A_Mal_Ench2"].disabled = true;
-	}
-	
-}
+// function ClickWeaponRefine( ref )
+// {
+	// var weapon = ItemOBJ[n_A_Equip[eq_WEAPON]][itm_ID];
+	// if(weapon== 1452 /*Raksasa Dagger*/ || 
+			// weapon== 1453 /*Mikatsuki*/ || 
+			// weapon== 1699 /*Huuma Swirling Petal*/ || 
+			// weapon== 1700 /*Huuma Fluttering Snow*/ || 
+			// weapon== 1701 /*Huuma Thunderstorm*/)
+	// {	
+		// while(formElements["A_Mal_Ench1"].length > 0)
+		// {
+			// formElements["A_Mal_Ench1"].options[0] = null;
+		// }
+		// while(formElements["A_Mal_Ench2"].length > 0)
+		// {
+			// formElements["A_Mal_Ench2"].options[0] = null;
+		// }
+		// formElements["A_Mal_Ench1"].disabled = false;
+		// formElements["A_Mal_Ench2"].disabled = false;
+		// var enchlv = 0;
+		// if( ref < 10)
+		// {
+			// enchlv = 4;
+		// }
+		// else if (ref < 12)
+		// {
+			// enchlv = 5;
+		// }
+		// else
+		// {
+			// enchlv = 6;
+		// }
+		// for ( var i = 0; EnchantListOBJ[enchlv][i] != "NULL"; i++ )
+		// {
+			// formElements["A_Mal_Ench1"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[enchlv][i]][1],EnchantOBJ[EnchantListOBJ[enchlv][i]][0]);
+			// formElements["A_Mal_Ench2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[enchlv][i]][1],EnchantOBJ[EnchantListOBJ[enchlv][i]][0]);
+		// }
+	// }
+	// else
+	// {
+		// for ( var i = 0; EnchantListOBJ[0][i] != "NULL"; i++ )
+		// {
+			// formElements["A_Mal_Ench1"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
+			// formElements["A_Mal_Ench2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
+		// }
+		// formElements["A_Mal_Ench1"].disabled = true;
+		// formElements["A_Mal_Ench2"].disabled = true;
+	// }
+// }
 
 function ClickWeapon2( weapon2 )
 {
@@ -1148,77 +1146,179 @@ function ClickWeapon2( weapon2 )
 	}
 }
 
-function ClickGarment( garment )
+function ClickGarment( data, isRefine )
 {
-	//clean enchant list
-	var len = formElements["A_FAW_enchant1"].length;
-	for ( var i = 0; i < len ; i++ )
+	var garm_id = ItemOBJ[n_A_Equip[eq_GARMENT]][itm_ID];
+	var garm_ref = n_A_SHOULDER_DEF_PLUS;
+	if(isRefine)
 	{
-		formElements["A_FAW_enchant1"].options[0] = null;
+		garm_ref = data;
 	}
-	len = formElements["A_FAW_enchant3"].length;
-	for ( var i = 0; i < len ; i++ )
+	else
 	{
-		formElements["A_FAW_enchant2"].options[0] = null;
-		formElements["A_FAW_enchant3"].options[0] = null;
+		garm_id = data;
 	}
 	
-	if( garment == 1545 || EquipNumSearch( 1545 ))
-	{
+	if(garm_id == 1545)
+	{// Fallen Angel Wing
+		CleanEnchantGarment();
 		for ( var i = 0; EnchantListOBJ[3][i] != "NULL"; i++ )
 		{
-			formElements["A_FAW_enchant3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[3][i]][1],EnchantOBJ[EnchantListOBJ[3][i]][0]);
+			formElements["A_GARMENT_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[3][i]][1],EnchantOBJ[EnchantListOBJ[3][i]][0]);
 		}
-		formElements["A_FAW_enchant3"].disabled = false;
-		if(n_A_SHOULDER_DEF_PLUS > 6)
+		formElements["A_GARMENT_ENCHANT_4"].disabled = false;
+		if(garm_ref > 6)
 		{
 			for ( var i = 0; EnchantListOBJ[3][i] != "NULL"; i++ )
 			{
-				formElements["A_FAW_enchant2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[3][i]][1],EnchantOBJ[EnchantListOBJ[3][i]][0]);
+				formElements["A_GARMENT_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[3][i]][1],EnchantOBJ[EnchantListOBJ[3][i]][0]);
 			}
-			formElements["A_FAW_enchant2"].disabled = false;
-			if(n_A_SHOULDER_DEF_PLUS > 8)
+			formElements["A_GARMENT_ENCHANT_3"].disabled = false;
+			if(garm_ref > 8)
 			{
 				for ( var i = 0; EnchantListOBJ[2][i] != "NULL"; i++ )
 				{
-						formElements["A_FAW_enchant1"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[2][i]][1],EnchantOBJ[EnchantListOBJ[2][i]][0]);
+						formElements["A_GARMENT_ENCHANT_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[2][i]][1],EnchantOBJ[EnchantListOBJ[2][i]][0]);
 				}
-				formElements["A_FAW_enchant1"].disabled = false;
+				formElements["A_GARMENT_ENCHANT_2"].disabled = false;
 			}
 			else
 			{
 				for ( var i = 0; EnchantListOBJ[0][i] != "NULL"; i++ )
 				{
-						formElements["A_FAW_enchant1"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
+						formElements["A_GARMENT_ENCHANT_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
 				}
-				formElements["A_FAW_enchant1"].disabled = true;
+				formElements["A_GARMENT_ENCHANT_2"].disabled = true;
 			}
 		}
 		else
 		{
 			for ( var i = 0; EnchantListOBJ[0][i] != "NULL"; i++ )
 			{
-				formElements["A_FAW_enchant2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
-				formElements["A_FAW_enchant1"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
+				formElements["A_GARMENT_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
+				formElements["A_GARMENT_ENCHANT_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
 			}
-			formElements["A_FAW_enchant2"].disabled = true;
-			formElements["A_FAW_enchant1"].disabled = true;
+			formElements["A_GARMENT_ENCHANT_3"].disabled = true;
+			formElements["A_GARMENT_ENCHANT_2"].disabled = true;
 		}
+	}
+	else if(garm_id == 1958)
+	{// "Giant God Snake Skin"
+		for ( var i = 0; EnchantListOBJ[7][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_GARMENT_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[7][i]][1],EnchantOBJ[EnchantListOBJ[7][i]][0]);
+			formElements["A_GARMENT_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[7][i]][1],EnchantOBJ[EnchantListOBJ[7][i]][0]);
+		}
+		for ( var i = 0; EnchantListOBJ[8][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_GARMENT_ENCHANT_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[8][i]][1],EnchantOBJ[EnchantListOBJ[8][i]][0]);
+		}
+		formElements["A_GARMENT_ENCHANT_4"].disabled = false;
+		formElements["A_GARMENT_ENCHANT_3"].disabled = false;
+		formElements["A_GARMENT_ENCHANT_2"].disabled = false;
 	}
 	else
 	{
+		CleanEnchantGarment();
 		for ( var i = 0; EnchantListOBJ[0][i] != "NULL"; i++ )
-			{
-					formElements["A_FAW_enchant1"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
-					formElements["A_FAW_enchant2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
-					formElements["A_FAW_enchant3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
-			}
-		formElements["A_FAW_enchant1"].disabled = true;
-		formElements["A_FAW_enchant2"].disabled = true;
-		formElements["A_FAW_enchant3"].disabled = true;
+		{
+				formElements["A_GARMENT_ENCHANT_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
+				formElements["A_GARMENT_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
+				formElements["A_GARMENT_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
+		}
+		formElements["A_GARMENT_ENCHANT_2"].disabled = true;
+		formElements["A_GARMENT_ENCHANT_3"].disabled = true;
+		formElements["A_GARMENT_ENCHANT_4"].disabled = true;
 		
 	}
+	StAllCalc();
 }
+
+function CleanEnchantGarment()
+{
+	//clean enchant list
+	var len = formElements["A_GARMENT_ENCHANT_2"].length;
+	for ( var i = 0; i < len ; i++ )
+	{
+		formElements["A_GARMENT_ENCHANT_2"].options[0] = null;
+	}
+	len = formElements["A_GARMENT_ENCHANT_3"].length;
+	for ( var i = 0; i < len ; i++ )
+	{
+		formElements["A_GARMENT_ENCHANT_3"].options[0] = null;
+	}
+	len = formElements["A_GARMENT_ENCHANT_4"].length;
+	for ( var i = 0; i < len ; i++ )
+	{
+		formElements["A_GARMENT_ENCHANT_4"].options[0] = null;
+	}
+}
+
+function ClickShoes( data, isRefine )
+{
+	var shoes_id = ItemOBJ[n_A_Equip[eq_SHOES]][itm_ID];
+	var shoes_ref = n_A_SHOES_DEF_PLUS;
+	if(isRefine)
+	{
+		shoes_ref = data;
+	}
+	else
+	{
+		shoes_id = data;
+	}
+	
+	if(shoes_id >= 1946 && shoes_id <= 1957 )
+	{// "Temporal Shoes"
+		for ( var i = 0; EnchantListOBJ[10][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_SHOES_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[10][i]][1],EnchantOBJ[EnchantListOBJ[10][i]][0]);
+		}
+		for ( var i = 0; EnchantListOBJ[9][i] != "NULL" && !isRefine; i++ )
+		{
+			
+			formElements["A_SHOES_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[9][i]][1],EnchantOBJ[EnchantListOBJ[9][i]][0]);
+		}
+		formElements["A_SHOES_ENCHANT_4"].disabled = false;
+		formElements["A_SHOES_ENCHANT_3"].disabled = false;
+		formElements["A_SHOES_ENCHANT_2"].disabled = true;
+	}
+	else
+	{
+		CleanEnchantShoes();
+		for ( var i = 0; EnchantListOBJ[0][i] != "NULL"; i++ )
+		{
+				formElements["A_SHOES_ENCHANT_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
+				formElements["A_SHOES_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
+				formElements["A_SHOES_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
+		}
+		formElements["A_SHOES_ENCHANT_2"].disabled = true;
+		formElements["A_SHOES_ENCHANT_3"].disabled = true;
+		formElements["A_SHOES_ENCHANT_4"].disabled = true;
+		
+	}
+	StAllCalc();
+}
+
+function CleanEnchantShoes()
+{
+	//clean enchant list
+	var len = formElements["A_SHOES_ENCHANT_2"].length;
+	for ( var i = 0; i < len ; i++ )
+	{
+		formElements["A_SHOES_ENCHANT_2"].options[0] = null;
+	}
+	len = formElements["A_SHOES_ENCHANT_3"].length;
+	for ( var i = 0; i < len ; i++ )
+	{
+		formElements["A_SHOES_ENCHANT_3"].options[0] = null;
+	}
+	len = formElements["A_SHOES_ENCHANT_4"].length;
+	for ( var i = 0; i < len ; i++ )
+	{
+		formElements["A_SHOES_ENCHANT_4"].options[0] = null;
+	}
+}
+
 function ClickWeaponType( weaponType )
 {
 	n_A_JobSet();

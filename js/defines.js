@@ -496,11 +496,25 @@ ench_mal1=0;
 ench_mal2=1;
 ench_mal3=2;
 ench_mal4=3;
-ench_FAW1=4;
-ench_FAW2=5;
-ench_FAW3=6;
-ench_HSE_Armor=7;
-ench_HSE_Head=8;
+ench_GARMENT2=4;
+ench_GARMENT3=5;
+ench_GARMENT4=6;
+ench_SHOES2=7;
+ench_SHOES3=8;
+ench_SHOES4=9;
+ench_ARMOR2=10;
+ench_ARMOR3=11;
+ench_ARMOR4=12;
+ench_ACC1_2=13;
+ench_ACC1_3=14;
+ench_ACC1_4=15;
+ench_ACC2_2=16;
+ench_ACC2_3=17;
+ench_ACC2_4=18;
+ench_HSE_Armor=19;
+ench_HSE_Head=20;
+ench_MAX=9;
+
 }
 
 { // Cards - n_A_card[%] - cardOBJ[id][%] - cardOBJ[id][card_att_COMP] = %
