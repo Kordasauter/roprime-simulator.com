@@ -513,7 +513,7 @@ ench_ACC2_3=17;
 ench_ACC2_4=18;
 ench_HSE_Armor=19;
 ench_HSE_Head=20;
-ench_MAX=9;
+ench_MAX=18;
 
 }
 
@@ -1943,6 +1943,12 @@ var ksMardukTransScroll = 41;
 var ksArchmagePotion = 42;
 var ksSuperhumanSweets = 43;
 var ksMindPotion = 44;
+//var ksStrBiscuit= 45;
+//var ksAgiBiscuit= 46;
+//var ksVitBiscuit= 47;
+//var ksIntBiscuit= 48;
+//var ksDexBiscuit= 49;
+//var ksLukBiscuit= 50;
 //var ksxxx = xx;
 
 // battleEffects[%]
@@ -2090,7 +2096,32 @@ ench_LUK_8 = 67;
 ench_LUK_9 = 68;
 ench_LUK_10 = 69;
 }
-
+{//ench_type
+ench_Malangdo=1;
+ench_FAW_2=2;
+ench_FAW_3=3;
+ench_FAW_4=3;
+ench_FAW_3_4=3;
+ench_Ninja1=4;
+ench_Ninja2=5;
+ench_Ninja3=6;
+ench_Faceworm_4=7;
+ench_Faceworm_3=7;
+ench_Faceworm_3_4=7;
+ench_Faceworm_2=8;
+ench_TempBoot_3=9;
+ench_TempBoot_4=10;
+ench_Strength=11;
+ench_ATK_Type=14;
+ench_Physical=17;
+ench_Critical=20;
+ench_Evasion=23;
+ench_Ranged_Type=26;
+ench_Assist_Ability=29;
+ench_Spell_Ability_1=32;
+ench_Spell_Ability_2=35;
+ench_Healer=38;
+}
 {
 var CONST_MAXLVL = 99;
 var CONST_MAXLVL_THIRD = 175;

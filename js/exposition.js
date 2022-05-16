@@ -332,6 +332,7 @@ WordData = [
 ,["","Superhuman Sweets"]
 ,["","Mind Potion"]//270
 ,["","Damage on Port Malaya monsters (not implemented yet)"]
+,["","Str Biscuit Stick"]
 //,["","xxx"]
 ];
 }

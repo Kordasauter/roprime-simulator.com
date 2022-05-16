@@ -3197,6 +3197,8 @@ function BuildItemsTable()
 	str += '<td id="superhumanSweetsInput" class="bgLtRow1 padded optArea"></td>';	
 	str += '<td id="mindPotionLabel" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="mindPotionInput" class="bgLtRow1 padded optArea"></td>';
+	// str += '<td id="strBiscuitLabel" class="bgLtRow3 padded optCaption"></td>';
+	// str += '<td id="strBiscuitInput" class="bgLtRow1 padded optArea"></td>';
 	str += '<td class="bgLtRow3 padded optCaption"></td>';
 	str += '<td class="bgLtRow1 padded optArea"></td>';
 	str += '<td class="bgLtRow3 padded optCaption"></td>';
@@ -3348,7 +3350,7 @@ function BuildItemsTable()
 	myInnerHtml( "mardukTransScrollLabel", GetWord(266) + " (MATK +25)", 0 );
 	myInnerHtml( "mardukTransScrollInput", '<input id="mardukTransScroll" type="checkbox" onclick="ToggleItems(0)">', 0 );
 	// Archmage Potion
-	myInnerHtml( "archmagePotionLabel", GetWord(267) + " <br>ATK/MATK/HIT/FLEE +30<br>ATK/MATK + 1% <br>ASPD +1<br>SP consumption -5%<br>Fixed casting -30%", 0 );
+	myInnerHtml( "archmagePotionLabel", "<span title=\"ATK/MATK/HIT/FLEE +30, ATK/MATK + 1%, ASPD +1, SP consumption -5%, Fixed casting -30%\">" + GetWord(267) + " (mouse over to see effects)</span>", 0 );
 	myInnerHtml( "archmagePotionInput", '<input id="archmagePotion" type="checkbox" onclick="ToggleItems(0)">', 0 );
 //	// Superhuman Sweets
 	myInnerHtml( "superhumanSweetsLabel", GetWord(269) + " (All stats +10<br>ATK/MATK +30)", 0 );
@@ -3356,6 +3358,9 @@ function BuildItemsTable()
 //	// Mind Potion
 	myInnerHtml( "mindPotionLabel", GetWord(270) + " (MSP +10%)", 0 );
 	myInnerHtml( "mindPotionInput", '<input id="mindPotion" type="checkbox" onclick="ToggleItems(0)">', 0 );
+//	// Str Biscuit
+	// myInnerHtml( "strBiscuitLabel", GetWord(272) + " (STR + 15)", 0 );
+	// myInnerHtml( "strBiscuitInput", '<input id="strBiscuit" type="checkbox" onclick="ToggleItems(0)">', 0 );
 //	// xxx
 //	myInnerHtml( "xxxLabel", GetWord(xxx) + " (bonus)", 0 );
 //	myInnerHtml( "xxxInput", '<input id="xxx" type="checkbox" onclick="ToggleItems(0)">', 0 );

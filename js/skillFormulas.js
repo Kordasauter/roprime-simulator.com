@@ -814,6 +814,7 @@ function CalcSkillDamage()
 			skill_AL_ACID_TERROR,
 			skill_CR_SHIELD_BOOMERANG,
 			skill_CR_SHIELD_BOOMERANG_SL,
+			skill_PA_RAPID_SMITING,
 			skill_REB_FIRE_DANCE,
 			skill_REB_SHATTERING_STORM,
 			skill_REB_VANISHING_BUSTER,
@@ -2256,6 +2257,25 @@ function CalcSkillDamage()
 				n_Delay[ksDelayGlobal] = 0.35;
 			}
 		}
+		else if(n_A_ActiveSkill==skill_PA_RAPID_SMITING)
+		{
+			n_PerHIT_DMG = 0;
+			damageType = kDmgTypeRanged;
+			if(n_B[en_ELEMENT] == ele_GHOST)
+			{
+				n_A_Weapon_element = ele_NEUTRAL;
+			}
+
+			w_SkillMod = (3 + n_A_ActiveSkillLV *2.0);//prime
+			
+			w_SkillMod += ((n_A_LEFT_DEF_PLUS *4) + ItemOBJ[n_A_Equip[eq_SHIELD]][itm_WEIGHT])/100;
+			w_SkillMod *= n_A_BaseLV /100;
+			
+			fixedCastTime *= 0.2;
+			variableCastTime *= 0.8;
+			n_Delay[ksDelayGlobal] = 1;
+
+		}
 		else if(n_A_ActiveSkill==skill_REB_FIRE_DANCE)
 		{
 			damageType = kDmgTypeRanged;
@@ -2952,7 +2972,7 @@ function CalcSkillDamage()
 			// n_Delay[ksDelayGlobal] = 0.35;
 		// }
 	// }*/
-	else if(n_A_ActiveSkill==skill_PA_RAPID_SMITING)
+	/*else if(n_A_ActiveSkill==skill_PA_RAPID_SMITING)
 	{
 		n_PerHIT_DMG = 0;
 		damageType = kDmgTypeRanged;
@@ -2993,7 +3013,7 @@ function CalcSkillDamage()
 		fixedCastTime *= 0.0;
 		variableCastTime *= 1.0;
 		n_Delay[ksDelayGlobal] = 1.0;
-	}
+	}*/
 	else if ( n_A_ActiveSkill === skill_LK_CLASHING_SPIRAL )
 	{
 		// this skill has a range of damage to be displayed

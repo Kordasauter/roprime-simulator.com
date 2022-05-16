@@ -205,6 +205,15 @@ with ( document.calcForm )
 	n_A_Enchant[ench_SHOES2] = parseInt(formElements["A_SHOES_ENCHANT_2"].value);
 	n_A_Enchant[ench_SHOES3] = parseInt(formElements["A_SHOES_ENCHANT_3"].value);
 	n_A_Enchant[ench_SHOES4] = parseInt(formElements["A_SHOES_ENCHANT_4"].value);
+	n_A_Enchant[ench_ARMOR2] = parseInt(formElements["A_ARMOR_ENCHANT_2"].value);
+	n_A_Enchant[ench_ARMOR3] = parseInt(formElements["A_ARMOR_ENCHANT_3"].value);
+	n_A_Enchant[ench_ARMOR4] = parseInt(formElements["A_ARMOR_ENCHANT_4"].value);
+	n_A_Enchant[ench_ACC1_2] = parseInt(formElements["A_ACCES1_ENCHANT_2"].value);
+	n_A_Enchant[ench_ACC1_3] = parseInt(formElements["A_ACCES1_ENCHANT_3"].value);
+	n_A_Enchant[ench_ACC1_4] = parseInt(formElements["A_ACCES1_ENCHANT_4"].value);
+	n_A_Enchant[ench_ACC2_2] = parseInt(formElements["A_ACCES2_ENCHANT_2"].value);
+	n_A_Enchant[ench_ACC2_3] = parseInt(formElements["A_ACCES2_ENCHANT_3"].value);
+	n_A_Enchant[ench_ACC2_4] = parseInt(formElements["A_ACCES2_ENCHANT_4"].value);
 	n_A_Enchant[ench_HSE_Armor] = parseInt(formElements["A_HSE"].value);
 	n_A_Enchant[ench_HSE_Head] = parseInt(formElements["A_HSE_HEAD1"].value);
 	
@@ -429,6 +438,7 @@ with ( document.calcForm )
 		usableItems[ksArchmagePotion] = formElements["archmagePotion"].checked;
 		usableItems[ksSuperhumanSweets] = formElements["superhumanSweets"].checked;
 		usableItems[ksMindPotion] = formElements["mindPotion"].checked;
+		// usableItems[ksStrBiscuit] = formElements["strBiscuit"].checked;
 //		usableItems[ksxxx] = formElements["xxx"].checked;
 		
 		//usableItems[ksVipBuffs] = formElements["vipBuff"].checked;
@@ -1187,6 +1197,8 @@ function StPlusCalc()
 	wSPC_INT += usableItems[ksIntelligenceFood];
 	wSPC_DEX += usableItems[ksDexterityFood];
 	wSPC_LUK += usableItems[ksLuckFood];
+	//test
+	// wSPC_STR += 15 * usableItems[ksStrBiscuit];
 	
 	// Superhuman Sweets
 	if(usableItems[ksSuperhumanSweets])
