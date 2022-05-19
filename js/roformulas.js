@@ -860,6 +860,17 @@ function CalcEquipAtk()
 				equipmentAttack += 20 * CardNumSearch(557); // Apply for each Faithful Manager Card
 		}
 	}
+	if(CardNumSearch(589))
+	{//Big Eggring Card
+		if(SU_STR <=50)
+		{
+			equipmentAttack -= 5 * Math.floor(SU_STR/10);
+		}
+		else
+		{
+			equipmentAttack -= 25;
+		}
+	}
 	//shadows
 	if ( EquipNumSearch( 1661 ) )
 	{ // "Shadow Strongman Ring"
@@ -1682,7 +1693,17 @@ function CalcCriticalMod()
 	{//Petal Card
 		n_tok[bon_DMG_CRIT] += Math.floor(SU_LUK/10) * 2;
 	}
-	
+	if(CardNumSearch(589))
+	{//Big Eggring Card
+		if(SU_LUK <=50)
+		{
+			n_tok[bon_DMG_CRIT] -= 2 * Math.floor(SU_LUK/10);
+		}
+		else
+		{
+			n_tok[bon_DMG_CRIT] -= 10;
+		}
+	}
 	// Pets
 	if ( miscEffects[ksPetEffects] == 22 )
 	{ // Dullahan Pet
@@ -1932,6 +1953,18 @@ function CalcRangedMod()
 	if ( usableItems[ksRaydricArcherTransScroll] && n_A_WeaponType === weapTyp_BOW)
 	{
 		n_tok[bon_DMG_RANGE] += 25;
+	}
+	//cards
+	if(CardNumSearch(589))
+	{//Big Eggring Card
+		if(SU_DEX <=50)
+		{
+			n_tok[bon_DMG_RANGE] -= 1 * Math.floor(SU_DEX/10);
+		}
+		else
+		{
+			n_tok[bon_DMG_RANGE] -= 5;
+		}
 	}
 	
 	//Skills
@@ -2459,6 +2492,10 @@ function calcHP()
 	{
 		additiveHP += 300 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
 	}
+	if(EquipNumSearch(1869))
+	{//Elegant Doram Shoes
+		additiveHP += 100 * Math.floor(n_A_SHOES_DEF_PLUS / 2);
+	}
 	
 	//Cards
 	if(CardNumSearch(565))
@@ -2604,6 +2641,18 @@ function calcHP()
 	if ( EquipNumSearch(1840) )
 	{ // Shadow Taekwon Gloves
 		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7){additiveHP += 1000;}
+	}
+	//cards
+	if(CardNumSearch(589))
+	{//Big Eggring Card
+		if(SU_VIT <=50)
+		{
+			additiveHP -= 200 * Math.floor(SU_VIT/10);
+		}
+		else
+		{
+			additiveHP -= 1000;
+		}
 	}
 	
 	// Items
@@ -3210,7 +3259,10 @@ function calcSP( n_A_MaxSP )
 	{
 		w += 10 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
 	}
-	
+	if(EquipNumSearch(1869))
+	{//Elegant Doram Shoes
+		w += 20 * Math.floor(n_A_SHOES_DEF_PLUS / 2);
+	}
 	//Shadows
 	if ( EquipNumSearch( 1655 ) )
 	{ // "Shadow Champion Set"
@@ -4198,6 +4250,18 @@ function calcPDodge( n_A_LUCKY )
 		if(SU_AGI >= 110)
 			n_A_LUCKY += 1;
 	}
+	if( EquipNumSearch(1665))
+	{//Doram Manteau
+		n_A_LUCKY += Math.floor(n_A_SHOULDER_DEF_PLUS / 3);
+	}
+	if( EquipNumSearch(1871))
+	{//Luxurious Doram Manteau
+		n_A_LUCKY += Math.floor(n_A_SHOULDER_DEF_PLUS / 3);
+	}
+	if( EquipNumSearch(1868))
+	{//Elegant Doram Manteau
+		n_A_LUCKY += Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
+	}
 	
 	// Perfect Tablature
 	if ( performerBuffs[ksBardSolo] === ksPerfectTablature && performerBuffs[ksBardSoloLevel] > 0 )
@@ -4866,6 +4930,18 @@ function calcASPD()
 			equipASPD += 2;
 		}
 	}
+	//cards
+	if(CardNumSearch(589))
+	{//Big Eggring Card
+		if(SU_AGI <=50)
+		{
+			equipASPD -= 2 * Math.floor(SU_AGI/10);
+		}
+		else
+		{
+			equipASPD -= 10;
+		}
+	}
 	if( (EquipNumSearch( 1809 ) &&  SkillSearch(skill_RUN_ENCHANT_BLADE) ) ||// Shadow Runeknight Shield
 		(EquipNumSearch( 1816 ) &&  SkillSearch(skill_SHA_AUTO_SHADOW_SPELL) ) ||//Shadow Shadowchaser Shield
 		EquipNumSearch( 1824 ) ) //Shadow Super Novice Shield
@@ -5452,6 +5528,15 @@ function calcHPReg( n_A_HPR )
 	multiplier = 100;
 	multiplier += n_tok[bon_HP_REG];
 	
+	if( EquipNumSearch(1866))
+	{//Doram Shoes
+		multiplier += 10 * Math.floor(n_A_SHOES_DEF_PLUS / 3 );
+	}
+	if( EquipNumSearch(1872))
+	{//Luxurious Doram Shoes
+		multiplier += 20 * Math.floor(n_A_SHOES_DEF_PLUS / 3 );
+	}
+	
 	// cards
 	if ( SU_LUK >= 77)
 	{ // ArcAngel
@@ -5531,6 +5616,15 @@ function calcSPReg(n_A_SPR)
 	}
 		
 	// Equipment
+	if( EquipNumSearch(1866))
+	{//Doram Shoes
+		w += 10 *Math.floor(n_A_SHOES_DEF_PLUS / 3 );
+	}
+	if( EquipNumSearch(1872))
+	{//Luxurious Doram Shoes
+		w += 20 * Math.floor(n_A_SHOES_DEF_PLUS / 3 );
+	}
+	// Cards
 	if(SU_LUK >= 77)
 		w += 100 * CardNumSearch(221); // ArcAngel
 	

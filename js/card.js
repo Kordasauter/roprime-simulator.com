@@ -647,6 +647,18 @@ function SetCard()
 ,[584,	 card_com_ARMOR,"Stalker","Has a chance of autocasting Level 1 Full Strip when the user receives physical attacks.",bon_HIT,20,0]
 ,[585,	 card_com_ARMOR,"Clown","When compounded on with musical instrument, enables use of Level 10 Poem of Bragi.",bon_FLEE,20,0]
 ,[586,	 card_com_ARMOR,"Gypsy","Enables use of Level 10 Fortune's kiss (When equipped with a Whip or Musical Instrument).",bon_FLEE,20,0]
+//Lasagna
+,[587,	 card_com_ARMOR,"Grass Fabre",0,bon_LUK,1,bon_HP_ADD,100,0]
+,[588,	 card_com_ARMOR,"Eggring",0,bon_LUK,2,bon_HP_ADD,50,0]
+,[589,	 card_com_GARMENT,"Big Eggring","ATK -5 for every 10 base points of STR.<br>ASPD -2% for every 10 base points of AGI.<br>MaxHP -200 for every 10 base points of VIT.<br>MATK -5 for every 10 base points of INT.<br>Long ranged physical damage -1% for every 10 base points of DEX.<br>Critical damage -2% for every 10 base points of LUK.<br>All Stats can't be lower than 0.",bon_HP_ADD,1000,bon_PHY_ATK,25,bon_MATK,25,bon_ASPD_MUL,10,bon_DMG_RANGE,5,bon_DMG_CRIT,10,0]
+,[590,	 card_com_SHOES,"Hunter Wolf",0,bon_SP_ADD,30,0]
+,[591,	 card_com_ARMOR,"Sweet Roda Frog",0,bon_SP_ADD,10,bon_HP_ADD,300,0]
+,[592,	 card_comp_WEAPON,"Wild Hornet",0,bon_ATK,5,0]
+,[593,	 card_com_SHIELD,"Scout Basilisk",0,bon_RED_SIZ_MEDIUM,5,bon_RED_SIZ_LARGE,5,0]
+,[594,	 card_comp_HEAD,"Trans Spore",0,bon_VIT,1,bon_INT,1,0]
+,[595,	 card_com_SHIELD,"Charge Basilisk",0,bon_RED_SIZ_MEDIUM,20,bon_RED_SIZ_LARGE,20,bon_RED_SIZ_SMALL,-15,0]
+,[596,	 card_comp_WEAPON,"Jungle Mandragora","Not implanted yet !<br>Increase magic attack against Wind property monsters by 3%.<br><br>If refine level of compounded weapon is:<br>[+7 or higher]<br>Magic attack against Wind property monsters is increased to 5%.<br>[+9 or higher]<br>Magic attack against Wind property monsters is increased to 7%.",0]
+,[597,	 card_comp_WEAPON,"Fruit Pom Spider","Not implanted yet !<br>Increase magic attack against Fire property monsters by 3%.<br><br>If refine level of compounded weapon is:<br>[+7 or higher]<br>Magic attack against Fire property monsters is increased to 5%.<br>[+9 or higher]<br>Magic attack against Fire property monsters is increased to 7%.",0]
 ];
 
 CardNum = cardOBJ.length -1;

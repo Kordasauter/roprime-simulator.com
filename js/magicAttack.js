@@ -545,7 +545,17 @@ function calcMAtk( includeMultipliers )
 				n_A_EquipMATK += 20 * CardNumSearch(557); // Apply for each Faithful Manager Card
 		}
 	}
-	
+	if(CardNumSearch(589))
+	{//Big Eggring Card
+		if(SU_INT <=50)
+		{
+			n_A_EquipMATK -= 5 * Math.floor(SU_INT/10);
+		}
+		else
+		{
+			n_A_EquipMATK -= 25;
+		}
+	}
 	// Skills
 	if ( performerBuffs[ksWandererSolo] === ksMoonlightSerenade &&
 		 performerBuffs[ksWandererSoloLevel] > 0 )

@@ -959,6 +959,31 @@ function StPlusCalc()
 	{
 		wSPC_DEX += Math.floor(n_A_SHOES_DEF_PLUS / 3) * 3;
 	}
+	if(EquipNumSearch(1864))
+	{//Doram Suit
+		wSPC_DEX += Math.floor(n_A_BODY_DEF_PLUS / 3);
+		wSPC_INT += Math.floor(n_A_BODY_DEF_PLUS / 3);
+	}
+	if(EquipNumSearch(1870))
+	{//Luxurious Doram Suit
+		wSPC_DEX += Math.floor(n_A_BODY_DEF_PLUS / 2);
+		wSPC_INT += Math.floor(n_A_BODY_DEF_PLUS / 2);
+	}
+	if(EquipNumSearch(1867))
+	{//Elegant Doram Suit
+		wSPC_DEX += n_A_BODY_DEF_PLUS;
+		wSPC_INT += n_A_BODY_DEF_PLUS ;
+	}
+	if(EquipNumSearch(1871))
+	{//Luxurious Doram Manteau
+		wSPC_LUK += Math.floor(n_A_BODY_DEF_PLUS / 3);
+	}
+	if(EquipNumSearch(1868))
+	{//Elegant Doram Manteau
+		wSPC_INT += Math.floor(n_A_BODY_DEF_PLUS / 2);
+		wSPC_DEX += Math.floor(n_A_BODY_DEF_PLUS / 2);
+		wSPC_LUK += Math.floor(n_A_BODY_DEF_PLUS / 2);
+	}
 	
 
 	wSPCall = StPlusCard(bon_ALL_STATS);
