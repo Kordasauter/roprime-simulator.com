@@ -1961,6 +1961,7 @@ ITEM_NAME = [
 ,[1958,0,0,"Giant God Snake Skin",0]
 ,[1959,0,0,"Giant God Snake Skin + Temporal Boots",0]
 ,[1960,0,0,"Giant God Snake Skin + Modified Boots",0]
+,[1961,0,0,"CD in Mouth",0]
 ]
 };
 

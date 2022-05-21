@@ -1474,7 +1474,8 @@ JobSkillActiveOBJ = [
 [130,0,162,10,0,1], //Grand Cross 10
 [131,0,244,5,0,1], //Acid Terror 5
 [132,0,238,5,0,1], //Magnetic Earth 5
-[133,0,193,5,0,1] //Occult Impaction 5
+[133,0,193,5,0,1], //Occult Impaction 5
+[134,1,47,10,0,1] //Soul Strike 10
  //IDAutocast, Type(0=when hit, 1=when attack), SkillID, SkillLVL, Chance, AutoCastTrigger
 ];
 }

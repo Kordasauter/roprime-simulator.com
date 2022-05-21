@@ -972,7 +972,7 @@ function ClickWeapon( weapon )
 		/*Two Handed Swords*/weapon== 44 || weapon== 405 || weapon== 406 || weapon== 46 || weapon== 45 || weapon== 615 || weapon== 934 || weapon== 819 || weapon== 1159 || weapon== 1275 || weapon== 47 || weapon== 43 || weapon== 614 || weapon== 935 || weapon== 940 || 
 		/*One Handed Spears*/weapon== 616 || weapon== 52 || weapon== 408 || weapon== 410 || weapon== 1269 || weapon== 409 || weapon== 617 || weapon== 618 || 
 		/*Two Handed Spears*/weapon== 60 || weapon== 411 || weapon== 59 || weapon== 412 || weapon== 413 || weapon== 414 || weapon== 471 || weapon== 619 || weapon== 620 || weapon== 1289/*2 ahlspiess??*/ || weapon== 942 || 
-		/*One Handed Staves*/weapon== 478 || weapon== 1041 || weapon== 863 || weapon== 1168 || weapon== 1292 || weapon== 936 || weapon== 948 || 
+		/*One Handed Staves*/weapon== 478 || weapon== 1041 || weapon== 863 || weapon== 1168 || weapon== 1292 || weapon== 936 || weapon== 948 || weapon== 1881 || weapon== 1884 || 
 		/*Two Handed Staves*/weapon== 92 || weapon== 1172 || weapon== 1173 || weapon== 647 || weapon== 646 || 
 		/*Maces*/weapon== 81 || weapon== 82 || weapon== 422 || weapon== 820 || weapon== 1162 || weapon== 1163 || weapon== 1276 || weapon== 420 || weapon== 421 || weapon== 83 || 
 		/*Books*/weapon== 122 || weapon== 121 || weapon== 486 || weapon== 485 || weapon== 641 ||

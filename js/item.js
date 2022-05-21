@@ -1725,7 +1725,7 @@
 ,[1719,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Shadow Diviner Set"
 ,[1720,itm_type_SHADOW_ARMOR,51,0,0,0,0,0,bon_NONE] // "Shadow Knight Armor"
 ,[1721,itm_type_SHADOW_SHOES,51,0,0,0,0,0,bon_DMG_SKILL+skill_KN_PIERCE,20,bon_NONE] // "Shadow Knight Boots"
-,[1722,itm_type_SET,0,0,0,0,0,0,bon_DMG_SKILL+skill_KN_TWOHAND_QUICKEN,20,bon_NONE] // "Shadow Knight Set"
+,[1722,itm_type_SET,0,0,0,0,0,0,bon_DMG_SKILL+skill_KN_BOWLING_BASH,20,bon_NONE] // "Shadow Knight Set"
 ,[1723,itm_type_SHADOW_ARMOR,51,0,0,0,0,0,bon_DMG_SKILL+skill_CR_GRAND_CROSS,20,bon_NONE] // "Shadow Crusader Armor"
 ,[1724,itm_type_SHADOW_SHOES,51,0,0,0,0,0,bon_NONE] // "Shadow Crusader Boots"
 ,[1725,itm_type_SET,0,0,0,0,0,0,bon_DMG_SKILL+skill_CR_HOLY_CROSS,20,bon_NONE] // "Shadow Crusader Set"
@@ -1977,6 +1977,7 @@
 ,[1958,itm_type_GARMENT,0,38,0,1,40,1,bon_MDEF,10,bon_NONE] // "Giant God Snake Skin"
 ,[1959,itm_type_SET,0,0,0,0,0,0,bon_HP_MUL,15,bon_SP_MUL,5,bon_NONE] // "Giant God Snake Skin + Temporal Boots"
 ,[1960,itm_type_SET,0,0,0,0,0,0,bon_HP_MUL,15,bon_SP_MUL,5,bon_NONE] // "Giant God Snake Skin + Modified Boots"
+,[1961,itm_type_HEAD_LOWER,0,0,0,0,20,1,bon_INC_MAGIC_NEUTRAL,5,bon_INC_MAGIC_WATER,5,bon_INC_MAGIC_EARTH,5,bon_INC_MAGIC_FIRE,5,bon_INC_MAGIC_WIND,5,bon_INC_MAGIC_POISON,5,bon_INC_MAGIC_HOLY,5,bon_INC_MAGIC_DARK,5,bon_INC_MAGIC_GHOST,5,bon_INC_MAGIC_UNDEAD,5,bon_SKILL_AUTOCAST,134,bon_NONE] // "CD in Mouth"
 //
 ];
 ItemMax = ItemOBJ.length -1;

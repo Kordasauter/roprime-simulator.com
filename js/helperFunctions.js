@@ -1098,15 +1098,15 @@ function BuildPassiveSkillTable()
 	{
 		for ( var i = 3; i >= 0; i-- )
 		{
-			skillFSelect.options[i] = null;
+			skillHSelect.options[i] = null;
 		}
 		var w_name=["Agni","Ventus","Aqua","Terra"];
 		for ( var i = 0; i <= 3; i++ )
 		{
-			skillFSelect.options[i] = new Option(w_name[i],i);
+			skillHSelect.options[i] = new Option(w_name[i],i);
 		}
 		// adjust the width
-		skillFSelect.style.width = 85+'px';
+		skillHSelect.style.width = 85+'px';
 	}
 
 	for ( var i = 0; JobSkillPassOBJ[n_A_JOB][i] !== 999; i++ )
