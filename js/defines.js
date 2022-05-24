@@ -374,7 +374,7 @@ bon_CRIT_DMG_RC_DEMI_HUMAN = 327;
 bon_CRIT_DMG_RC_ANGEL = 328;
 bon_CRIT_DMG_RC_DRAGON = 329;
 
-// New shieldcards ?
+// Reduce damage from Element monster
 bon_RED_ELE2_NEUTRAL = 330;
 bon_RED_ELE2_WATER = 331;
 bon_RED_ELE2_EARTH = 332;
@@ -397,6 +397,17 @@ bon_INC_MAGIC_HOLY = 346;
 bon_INC_MAGIC_DARK = 347;
 bon_INC_MAGIC_GHOST = 348;
 bon_INC_MAGIC_UNDEAD = 349;
+//Increase damage on Element monster
+bon_MDMG_ELE_NEUTRAL = 350;
+bon_MDMG_ELE_WATER = 351;
+bon_MDMG_ELE_EARTH = 352;
+bon_MDMG_ELE_FIRE = 353;
+bon_MDMG_ELE_WIND = 354;
+bon_MDMG_ELE_POISON = 355;
+bon_MDMG_ELE_HOLY = 356;
+bon_MDMG_ELE_DARK = 357;
+bon_MDMG_ELE_GHOST = 358;
+bon_MDMG_ELE_UNDEAD = 359;
 
 // [ +% Damage on Single MonsterID: (BonusID - 1000) 1000 - 2999 ] 
 bon_DMG_MONSTER = 1000;
@@ -551,7 +562,10 @@ card_com_ARMOR = 4;
 card_com_GARMENT = 5;
 card_com_SHOES = 6;
 card_com_ACC = 7;
+card_com_ACC_L = 8;
+card_com_ACC_R = 9;
 card_com_IMPOSSIBLE = 10;
+card_com_SPE = 11;
 
 card_CARD = 0;
 }

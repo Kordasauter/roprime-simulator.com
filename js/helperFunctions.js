@@ -127,7 +127,7 @@ function ClearBonuses()
 		n_tok[i] += StPlusCard(i);
 		n_tok[i] += StPlusEnchant(i);
 	}
-	for ( var i = 290; i <= 339; i++ )
+	for ( var i = 290; i <= 359; i++ )
 	{
 		n_tok[i] = 0;
 		n_tok[i] += StPlusCalc2(i);

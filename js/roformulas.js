@@ -516,6 +516,17 @@ function CalcEquipAtk()
 	{ // Wakwak Card
 		equipmentAttack += Math.floor(SU_STR/10)*5;
 	}
+	if(CardNumSearch( 637 ))
+	{ // Payon Soldier Card
+		if(n_A_WeaponType == weapTyp_2HSPEAR || n_A_WeaponType == weapTyp_SPEAR)
+		{
+			if(n_A_Weapon_ATKplus >= 10)
+				equipmentAttack += 20;
+			if(n_A_Weapon_ATKplus >= 14)
+				equipmentAttack += 20;
+		}
+			
+	}
 	
 	// Ice Pick Effect
 	if ( n_tok[bon_ICE_PICK] || (n_A_ActiveSkill == skill_MO_OCCULT_IMPACTION || n_A_ActiveSkill == skill_REB_MASS_SPIRAL))
@@ -1703,6 +1714,10 @@ function CalcCriticalMod()
 		{
 			n_tok[bon_DMG_CRIT] -= 10;
 		}
+	}
+	if ( CardNumSearch( 635 ))
+	{ // Faceworm Queen Card
+		n_tok[bon_DMG_CRIT] += n_A_SHOES_DEF_PLUS;
 	}
 	// Pets
 	if ( miscEffects[ksPetEffects] == 22 )
@@ -3886,6 +3901,8 @@ function calcHit(n_A_HIT)
 		n_A_HIT += CardNumSearch(465) * 5; // Bow Guardian
 	if(CardNumSearch(492)) // Ifrit
 		n_A_HIT += Math.floor(n_A_JobLV /10) * CardNumSearch(492);
+	if(CardNumSearch(636)) // Irene Elder Card 
+		n_A_HIT += Math.floor(n_A_SHOULDER_DEF_PLUS / 3) * 5;
 
 	// Equipment
 	if ( EquipNumSearch( 442 ) && SU_STR >= 90 )
@@ -4319,7 +4336,11 @@ function calcCrit( n_A_CRI )
 		if(SU_STR >= 110)
 		n_A_CRI += 20;
 	}
-
+	if ( CardNumSearch( 635 ))
+	{ // Faceworm Queen Card
+		n_A_CRI += n_A_SHOES_DEF_PLUS;
+	}
+	
 	// Equipment modifiers
 	if ( SU_AGI >= 90 && EquipNumSearch( 442 ) )
 	{ // Rogue's Treasure
@@ -5776,6 +5797,13 @@ function calcRaceElementalReduction()
 	if ( CardNumSearch( 452 ) && n_A_HEAD_DEF_PLUS >= 9)
 	{ // Enchanted Peach Tree Card and Acolyte
 		n_tok[bon_RED_RC_INSECT] += 5;
+	}
+	if ( CardNumSearch( 632 ))
+	{ // Faceworm Egg
+		if(n_A_SHOES_DEF_PLUS >= 7)
+			n_tok[bon_RED_ELE_FIRE] += 1;
+		if(n_A_SHOES_DEF_PLUS >= 9)
+			n_tok[bon_RED_ELE_FIRE] += 2;
 	}
 	
 	// Equipment modifiers

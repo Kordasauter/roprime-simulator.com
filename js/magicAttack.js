@@ -556,6 +556,22 @@ function calcMAtk( includeMultipliers )
 			n_A_EquipMATK -= 25;
 		}
 	}
+	if(CardNumSearch(623) && (n_A_JOB == cls_BAR || n_A_JOB == cls_DAN || n_A_JOB == cls_CLO || n_A_JOB == cls_GYP ||
+							  n_A_JOB == cls_MIN || n_A_JOB == cls_MINt || n_A_JOB == cls_WAN || n_A_JOB == cls_WANt ))
+	{//Grand Pere Card 
+			n_A_EquipMATK += 15 * n_A_BODY_DEF_PLUS;
+	}
+	if(CardNumSearch( 637 ))
+	{ // Payon Soldier Card
+		if(n_A_WeaponType == weapTyp_2HSPEAR || n_A_WeaponType == weapTyp_SPEAR)
+		{
+			if(n_A_Weapon_ATKplus >= 10)
+				n_A_EquipMATK += 20;
+			if(n_A_Weapon_ATKplus >= 14)
+				n_A_EquipMATK += 20;
+		}
+			
+	}
 	// Skills
 	if ( performerBuffs[ksWandererSolo] === ksMoonlightSerenade &&
 		 performerBuffs[ksWandererSoloLevel] > 0 )
@@ -880,6 +896,22 @@ function CalcMagicDamage( rawDamage )
 	}
 	
 	wBMC2 = wBMC2 * ( 100 + wX ) / 100;
+	
+	wX = n_tok[bon_MDMG_ELE_NEUTRAL + n_B[en_ELEMENT]];
+	if(CardNumSearch(620) && n_B[en_ELEMENT] == ele_EARTH )
+	{
+		if(n_A_SHOULDER_DEF_PLUS >= 7)
+		{
+			wX += 5;
+		}
+		if(n_A_SHOULDER_DEF_PLUS >= 9)
+		{
+			wX += 7;
+		}
+	}
+	
+	
+	wBMC2 = wBMC2 * ( 100 + wX ) / 100;
 
 	wBMC2 = tPlusDamCut( wBMC2 );
 
@@ -1019,6 +1051,15 @@ function CalcMagicDamage( rawDamage )
 			}
 		}	
 	}
+	if ( CardNumSearch( 633 ))
+	{ // Faceworm Larva
+		if(n_A_Weapon_element == ele_WATER)
+		{
+			matkMultiplier += 3 * n_A_SHOULDER_DEF_PLUS;
+		}
+	}
+	
+	
 	if ( EquipNumSearch( 1719 ) )
 	{ // "Shadow Diviner Set"
 		if((n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_PENDANT_DEF_PLUS) >= 23)

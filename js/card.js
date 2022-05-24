@@ -51,9 +51,9 @@ function SetCard()
 //7-Accessory
 {cardOBJ = [
  [  0,0,"(No Card)",0,0]
-,[  1,1,"All Race +20%",0,bon_DMG_RC_FORMLESS,20,bon_DMG_RC_UNDEAD,20,bon_DMG_RC_BRUTE,20,bon_DMG_RC_PLANT,20,bon_DMG_RC_INSECT,20,bon_DMG_RC_FISH,20,bon_DMG_RC_DEMON,20,bon_DMG_RC_DEMI_HUMAN,20,bon_DMG_RC_ANGEL,20,bon_DMG_RC_DRAGON,20,0]
-,[  2,1,"All Element +20%",0,bon_DMG_ELE_NEUTRAL,20,bon_DMG_ELE_WATER,20,bon_DMG_ELE_EARTH,20,bon_DMG_ELE_FIRE,20,bon_DMG_ELE_WIND,20,bon_DMG_ELE_POISON,20,bon_DMG_ELE_HOLY,20,bon_DMG_ELE_SHADOW,20,bon_DMG_ELE_GHOST,20,bon_DMG_ELE_UNDEAD,20,0]
-,[  3,1,"All Size +15%,Atk+5",0,bon_ATK,5,bon_DMG_SIZ_SMALL,15,bon_DMG_SIZ_MEDIUM,15,bon_DMG_SIZ_LARGE,15,0]
+,[  1,0,"All Race +20%",0,bon_DMG_RC_FORMLESS,20,bon_DMG_RC_UNDEAD,20,bon_DMG_RC_BRUTE,20,bon_DMG_RC_PLANT,20,bon_DMG_RC_INSECT,20,bon_DMG_RC_FISH,20,bon_DMG_RC_DEMON,20,bon_DMG_RC_DEMI_HUMAN,20,bon_DMG_RC_ANGEL,20,bon_DMG_RC_DRAGON,20,0]
+,[  2,0,"All Element +20%",0,bon_DMG_ELE_NEUTRAL,20,bon_DMG_ELE_WATER,20,bon_DMG_ELE_EARTH,20,bon_DMG_ELE_FIRE,20,bon_DMG_ELE_WIND,20,bon_DMG_ELE_POISON,20,bon_DMG_ELE_HOLY,20,bon_DMG_ELE_SHADOW,20,bon_DMG_ELE_GHOST,20,bon_DMG_ELE_UNDEAD,20,0]
+,[  3,0,"All Size +15%,Atk+5",0,bon_ATK,5,bon_DMG_SIZ_SMALL,15,bon_DMG_SIZ_MEDIUM,15,bon_DMG_SIZ_LARGE,15,0]
 ,[  4,1,"Fabre",0,bon_VIT,1,bon_HP_ADD,100,0]
 ,[  5,1,"Drops",0,bon_DEX,1,bon_HIT,3,0]
 ,[  6,1,"Hornet",0,bon_STR,1,bon_ATK,3,0]
@@ -659,6 +659,53 @@ function SetCard()
 ,[595,	 card_com_SHIELD,"Charge Basilisk",0,bon_RED_SIZ_MEDIUM,20,bon_RED_SIZ_LARGE,20,bon_RED_SIZ_SMALL,-15,0]
 ,[596,	 card_comp_WEAPON,"Jungle Mandragora","Not implanted yet !<br>Increase magic attack against Wind property monsters by 3%.<br><br>If refine level of compounded weapon is:<br>[+7 or higher]<br>Magic attack against Wind property monsters is increased to 5%.<br>[+9 or higher]<br>Magic attack against Wind property monsters is increased to 7%.",0]
 ,[597,	 card_comp_WEAPON,"Fruit Pom Spider","Not implanted yet !<br>Increase magic attack against Fire property monsters by 3%.<br><br>If refine level of compounded weapon is:<br>[+7 or higher]<br>Magic attack against Fire property monsters is increased to 5%.<br>[+9 or higher]<br>Magic attack against Fire property monsters is increased to 7%.",0]
+//Island of Bios
+,[598,	 card_comp_HEAD,"Birth and Death",0,bon_HP_ADD,500,bon_SP_ADD,50,bon_RED_RC_ANGEL,-50,0]
+,[599,	 itm_type_SET,"Birth and Death + Orc Baby",0,bon_RED_ELE_NEUTRAL,5,bon_FLEE,5,0]
+,[600,	 itm_type_SET,"Birth and Death + Baby Desert Wolf",0,bon_INT,3,bon_SP_ADD,100,bon_MATK_MUL,5,0]
+,[601,	 itm_type_SET,"Birth and Death + Familiar",0,bon_ATK,15,bon_DMG_ELE_SHADOW,20,0]
+,[602,	 itm_type_SET,"Birth and Death + Orc Warrior",0,bon_RED_RC_DEMI_HUMAN,15,0]
+,[603,	 itm_type_SET,"Birth and Death + Desert Wolf",0,bon_DMG_SIZ_MEDIUM,15,bon_DMG_SIZ_LARGE,15,0]
+,[604,	 itm_type_SET,"Birth and Death + Phen",0,bon_RED_CAST,-25,0]
+,[605,	 itm_type_SET,"Birth and Death + Orc Zombie",0,bon_FLEE,15,bon_HIT,15,bon_DMG_CRIT,15,0]
+,[606,	 itm_type_SET,"Birth and Death + Verit",0,bon_HP_MUL,4,bon_SP_MUL,4,0]
+,[607,	 itm_type_SET,"Birth and Death + Megalodon",0,bon_DEF,100,0]
+,[608,	 card_comp_HEAD,"The Death Ankou","Receiving physical or magical damage has a chance to curse all enemies in 17x17 cells around the caster<br>and get buffed with ATK +25% and MATK +25% for 10 seconds.<br>The chance increases with each refine level of the compounded equipment.<br><br>When using the First Aid skill:<br>transforms into Grim Reaper Ankouc for 5 seconds.",0]
+//Morse's Cave
+,[609,	 card_com_ARMOR,"Morroc Necromancer",0,bon_ATK,100,bon_ASPD_MUL,25,bon_HP_MUL,-20,0]
+//Temple of Demon God
+,[610,	 card_comp_WEAPON,"Brinaranea",0,bon_INC_MAGIC_WATER,15,0]
+,[611,	 card_com_SHIELD,"Muspellskoll",0,bon_RED_ELE_FIRE,30,0]
+,[612,	 itm_type_SET,"Brinaranea + Muspellskoll",0,bon_INC_MAGIC_WATER,10,bon_RED_ELE_FIRE,10,0]
+,[613,	 card_com_ACC,"Morroc Apostle Ahat",0,bon_SP_MUL,5,0]
+,[614,	 card_com_ACC,"Morroc Apostle Shnaim",0,bon_HP_MUL,5,0]
+,[615,	 itm_type_SET,"Ahat + Shnaim",0,bon_HP_MUL,5,bon_SP_MUL,5,0]
+,[616,	 card_com_SHOES,"Morocc the Desperate","<br>When using the First Aid skill:<br>transforms into Despair God Morroc for 5 seconds.",bon_PHY_ATK,10,bon_HP_MUL,-50,0]
+,[617,	 itm_type_SET,"Morroc Necromancer + Morocc the Desperate",0,bon_HP_MUL,50,0]
+//Flame Basin
+,[618,	 card_com_ARMOR,"Fire Sandman",0,bon_DEF,50,bon_RED_ELE_FIRE,10,0]
+,[619,	 card_com_ACC,"Fire Condor",0,bon_CAST_SKILL + skill_MA_FIRE_BALL,50,bon_DMG_SKILL + skill_MA_FIRE_BALL,100,0]
+,[620,	 card_comp_WEAPON,"Fire Frilldora","[If weapon refine lv +7 or higher]<br>Increases magical attack against Earth element monsters by 5%.<br>[If weapon refine lv +9 or higher]<br>Increases magical attack against Earth element monsters by 7%.",bon_MDMG_ELE_EARTH,3,0]
+,[621,	 card_com_SHIELD,"Fire Golem",0,bon_RED_ELE_FIRE,20,bon_DMG_ELE_FIRE,5,0]
+,[622,	 card_comp_HEAD,"Fulbuk","Adds a high chance of inflicting Burning status on target when dealing physical or magical attacks.",0]
+//Nightmarish Jitterbug
+,[623,	 card_com_ARMOR,"Grand Pere","[When using by Bard and Dancer Jobs]<br>[For each armor refine lv]<br>Matk +15.",0]
+,[624,	 card_comp_HEAD,"Jitterbug",0,bon_RED_ELE_NEUTRAL,10,bon_HP_ADD,500,0]
+,[625,	 card_com_ACC_R,"Playing Pere",0,bon_DMG_ELE_NEUTRAL,20,0]
+,[626,	 card_com_ACC_L,"Singing Pere",0,bon_DMG_ELE_NEUTRAL,20,0]
+,[627,	 itm_type_SET,"Playing Pere + Singing Pere",0,bon_DMG_SKILL + skill_MIWA_METALLIC_SOUND,50,0]
+,[628,	 itm_type_SET,"Playing Pere + Singing Pere + Jitterbug","Has a chance to transform into [Jitterbug] for 6 sec. when attacks.",0]
+//Faceworm Nest
+,[629,	 card_com_ACC,"Faceworm",0,bon_AGI,-1,bon_DEX,-1,bon_ASPD_MUL,3,0]
+,[630,	 card_com_ACC,"Faceworm Dark",0,bon_VIT,-1,bon_INT,-1,bon_RED_CASTDELAY,3,0]
+,[631,	 itm_type_SET,"Faceworm + Faceworm Dark",0,bon_AGI,2,bon_DEX,2,bon_INT,2,bon_VIT,2,bon_RED_CASTDELAY,3,0]
+,[632,	 card_com_SHOES,"Faceworm Egg","[If shoes refine lv +7 or higher]<br>resistance to Fire damage +1%.<br>[If shoes refine lv +9 or higher]<br>resistance to Fire damage +2%.",bon_RED_ELE_FIRE,2,0]
+,[633,	 card_com_GARMENT,"Faceworm Larva","[For each garment refine lv]<br>resistance to Water damage +3%.",bon_RED_ELE_NEUTRAL,15,0]
+,[634,	 itm_type_SET,"Faceworm Egg + Faceworm Larva",0,bon_RED_ELE_NEUTRAL,5,bon_DMG_ELE_FIRE,10,0]
+,[635,	 card_com_SHOES,"Faceworm Queen","[For each shoes refine lv]<br>Critical damage +1%.<br>Crit +1.",bon_HP_MUL,-10,bon_CRIT,15,0]
+//Sara's Memory
+,[636,	 card_com_GARMENT,"Irene Elder","[For each 3 garment refine lv]<br>Hit +5.",bon_HIT,10,0]
+,[637,	 card_comp_WEAPON,"Payon Soldier","[If using in spear with refine lv +10 or higher]<br>Atk +20.<br>Matk +20.<br>[If using in spear with refine lv +14 or higher]<br>Atk +20.<br>Matk +20.",bon_ATK,5,bon_MATK,5,0]
 ];
 
 CardNum = cardOBJ.length -1;
@@ -667,7 +714,7 @@ CardNum = cardOBJ.length -1;
 //,[,,,,0]
 {CardSortOBJ = [
 /* 1st Weap */[0,201,202,203,204,1,2,3,156,106,31,25,502,11,107,223,356,463,503,305,45,355,504,361,217,34,465,505,163,15,265,160,506,325,507,259,279,311,169,28,20,329,427,42,508,47,21,32,343,5,462,215,244,158,4,557,359,110,509,8,17,253,263,14,286,288,287,39,277,511,167,510,6,159,46,13,235,26,289,290,164,168,382,219,538,7,165,37,566,23,398,35,161,166,157,36,30,535,328,40,380,512,466,513,345,252,539,27,353,12,19,360,44,514,171,33,547,170,537,111,390,255,22,109,16,254,43,428,29,9,162,41,366,313,18,464,233,515,296,323,24,363,10,516,38,326,319,"NULL"],
-/* Oth Weap */[0,1,2,3,156,106,31,25,502,11,107,223,356,463,503,305,45,355,504,361,217,34,465,505,163,15,265,160,506,325,507,259,279,311,169,28,20,329,427,42,508,47,21,32,343,5,462,215,244,158,4,557,359,110,509,8,17,253,263,14,286,288,287,39,277,511,167,510,6,159,46,13,235,26,289,290,164,168,382,219,538,7,165,37,566,23,398,35,161,166,157,36,30,535,328,40,380,512,466,513,345,252,539,27,353,12,19,360,44,514,171,33,170,537,111,390,255,22,109,16,254,43,428,29,9,162,41,366,313,18,464,233,515,296,323,24,363,10,516,38,326,319,"NULL"],
+/* Oth Weap */[0,1,2,3,156,106,31,25,502,11,107,223,356,463,503,305,45,355,504,361,217,34,465,505,163,15,265,160,506,325,507,259,279,311,169,28,20,329,427,42,508,47,21,32,343,5,462,215,244,158,4,557,359,110,509,8,17,253,263,14,286,288,287,39,277,511,167,510,6,159,46,13,235,26,289,290,164,168,382,219,538,7,165,37,566,23,398,35,161,166,157,36,30,535,328,40,380,512,466,513,345,252,539,27,353,12,19,360,44,514,171,33,547,170,537,111,390,255,22,109,16,254,43,428,29,9,162,41,366,313,18,464,233,515,296,323,24,363,10,516,38,326,319,"NULL"],
 /* Head     */[0,536,221,474,179,563,298,114,273,320,497,51,546,342,498,564,49,337,284,176,116,303,213,117,548,554,274,424,175,234,472,177,357,473,397,387,558,561,560,559,178,118,426,115,374,119,376,50,52,534,347,120,499,501,383,500,180,543,113,309,568,339,174,551,471,425,332,48,239,238,"NULL"],
 /* Shield   */[0,154,231,55,245,54,122,522,222,124,58,523,524,525,173,526,307,241,470,126,348,467,62,61,549,527,127,63,123,272,125,469,375,249,57,358,368,60,59,468,310,396,528,172,56,53,306,"NULL"],
 /* Armor    */[0,476,194,282,191,134,224,232,225,190,133,69,570,517,281,572,135,364,571,479,583,264,280,585,532,132,275,581,197,321,330,422,198,214,131,334,477,187,518,75,199,301,136,545,302,475,283,276,586,519,349,421,261,268,299,478,220,285,567,137,184,196,521,520,344,185,138,580,130,73,367,65,183,64,582,71,420,192,186,68,72,384,129,293,70,308,195,333,317,584,74,291,66,128,392,67,189,182,181,552,240,331,193,"NULL"],
@@ -711,11 +758,26 @@ w_SC = [[429,306,235,"NULL"],
 [459,279,408,224,340,230,"NULL"],
 [460,337,193,346,379,350,"NULL"],
 [461,326,175,281,388,104,"NULL"],
-[496,485,494,"NULL"]
+[496,485,494,"NULL"],
+[599,598,403,"NULL"], //"Birth and Death + Orc Baby",0,bon_RED_ELE_NEUTRAL,5,bon_FLEE,5,0]
+[600,598,69,"NULL"], //"Birth and Death + Baby Desert Wolf"
+[601,598,110,"NULL"], //"Birth and Death + Familiar"
+[602,598,57,"NULL"], //"Birth and Death + Orc Warrior"
+[603,598,28,"NULL"], //"Birth and Death + Desert Wolf"
+[604,598,105,"NULL"], //"Birth and Death + Phen"
+[605,598,85,"NULL"], //"Birth and Death + Orc Zombie"
+[606,598,92,"NULL"], //"Birth and Death + Verit"
+[607,598,123,"NULL"], //"Birth and Death + Megalodon"
+[615,613,614,"NULL"], //"Ahat + Shnaim"
+[617,616,609,"NULL"], //"Morroc Necromancer + Morocc the Desperate"
+[627,625,626,"NULL"], //"Playing Pere + Singing Pere"
+[628,625,626,624,"NULL"], //"Playing Pere + Singing Pere + Jitterbug"
+[631,629,630,"NULL"], //"Faceworm + Faceworm Dark"
+[634,632,633,"NULL"]  //"Faceworm Egg + Faceworm Larva"
 ];
 }
 
-SC_MAXnum = 33;
+SC_MAXnum = w_SC.length - 1;
 
 for(var i=0;i<=SC_MAXnum;i++){
 	for(var k=1;w_SC[i][k] != "NULL";k++){

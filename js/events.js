@@ -1256,7 +1256,7 @@ function ClickShoes( data, isRefine )
 	}
 	else
 	{
-		CleanEnchantShoes();
+		CleanEnchant("A_SHOES_ENCHANT");
 		for ( var i = 0; EnchantListOBJ[0][i] != "NULL"; i++ )
 		{
 				formElements["A_SHOES_ENCHANT_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
@@ -1707,17 +1707,57 @@ with(document.calcForm)
 			myInnerHtml("nA_weapon2_c3",'<select name="A_weapon2_card3" style="width:200px;" onChange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>',0);
 			myInnerHtml("nA_weapon2_c4",'<select name="A_weapon2_card4" style="width:200px;" onChange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>',0);
 
-			for ( var i = 0; CardSortOBJ[0][i] != "NULL"; i++ )
+			// for ( var i = 0; CardSortOBJ[0][i] != "NULL"; i++ )
+			// {
+				// A_weapon2_card1.options[i] = new Option(cardOBJ[CardSortOBJ[0][i]][2],cardOBJ[CardSortOBJ[0][i]][0]);
+			// }
+			// for ( var i = 0; CardSortOBJ[1][i] != "NULL"; i++ )
+			// {
+				// A_weapon2_card2.options[i] = new Option(cardOBJ[CardSortOBJ[1][i]][2],cardOBJ[CardSortOBJ[1][i]][0]);
+				// A_weapon2_card3.options[i] = new Option(cardOBJ[CardSortOBJ[1][i]][2],cardOBJ[CardSortOBJ[1][i]][0]);
+				// A_weapon2_card4.options[i] = new Option(cardOBJ[CardSortOBJ[1][i]][2],cardOBJ[CardSortOBJ[1][i]][0]);
+			// }
+			// A_weapon2_card4.options[4] = new Option("Top10",106);
+			document.calcForm.A_weapon2_card1.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+			document.calcForm.A_weapon2_card2.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+			document.calcForm.A_weapon2_card3.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+			document.calcForm.A_weapon2_card4.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+			for(i=0;i<cardOBJ.length;i++)
 			{
-				A_weapon2_card1.options[i] = new Option(cardOBJ[CardSortOBJ[0][i]][2],cardOBJ[CardSortOBJ[0][i]][0]);
+				if(cardOBJ[i][1]==card_comp_WEAPON)
+				{
+					document.calcForm.A_weapon2_card1.add(ReturnOption(i));
+					document.calcForm.A_weapon2_card2.add(ReturnOption(i));
+					document.calcForm.A_weapon2_card3.add(ReturnOption(i));
+					document.calcForm.A_weapon2_card4.add(ReturnOption(i));
+				}
 			}
-			for ( var i = 0; CardSortOBJ[1][i] != "NULL"; i++ )
+			sortSelect(document.calcForm.A_weapon2_card1);
+			sortSelect(document.calcForm.A_weapon2_card2);
+			sortSelect(document.calcForm.A_weapon2_card3);
+			sortSelect(document.calcForm.A_weapon2_card4);
+			for(i=1;i<5;i++)
 			{
-				A_weapon2_card2.options[i] = new Option(cardOBJ[CardSortOBJ[1][i]][2],cardOBJ[CardSortOBJ[1][i]][0]);
-				A_weapon2_card3.options[i] = new Option(cardOBJ[CardSortOBJ[1][i]][2],cardOBJ[CardSortOBJ[1][i]][0]);
-				A_weapon2_card4.options[i] = new Option(cardOBJ[CardSortOBJ[1][i]][2],cardOBJ[CardSortOBJ[1][i]][0]);
+				if(i<4)
+				{
+					document.calcForm.A_weapon2_card1.add(ReturnOption(i),i);
+					document.calcForm.A_weapon2_card2.add(ReturnOption(i),i);
+					document.calcForm.A_weapon2_card3.add(ReturnOption(i),i);
+					document.calcForm.A_weapon2_card4.add(ReturnOption(i),i);
+				}
+				else
+				{
+					document.calcForm.A_weapon2_card1.add(ReturnOption(156),i);
+					document.calcForm.A_weapon2_card2.add(ReturnOption(156),i);
+					document.calcForm.A_weapon2_card3.add(ReturnOption(156),i);
+					document.calcForm.A_weapon2_card4.add(ReturnOption(156),i);
+				}
+				
 			}
-			A_weapon2_card4.options[4] = new Option("Top10",106);
+			for(i=0;i<4;i++)
+			{
+				document.calcForm.A_weapon2_card1.add(ReturnOption(201+i),i+1);
+			}
 
 			A_LEFT_DEF_PLUS.style.visibility = "hidden";
 			A_LEFT_DEF_PLUS.value = 0;
@@ -2592,28 +2632,61 @@ function Click_Card( CardIndex )
 	CBIstr += tempDesc;
 	if(cardOBJ[CardIndex][card_att_DESC] != 0)
 		CBIstr += cardOBJ[CardIndex][card_att_DESC] +"<BR>";
-
+	
+	// Build Set Bonus Descriptions if any
 	var check = 0;
-	for(var i=card_att_BONUS_START;cardOBJ[CardIndex][i] != bon_NONE;i+=2){ // Check for Sets
-		if(cardOBJ[CardIndex][i] == 90){
-			CBIstr += "<Font size=2><BR><B>When equipping "+ SetCardName(cardOBJ[CardIndex][i+1]);
-			var w = w_SC[cardOBJ[CardIndex][i+1]][0];
-			while(cardOBJ[CardIndex][i+2] != bon_NONE && check == 0){
-				if(w == w_SE[cardOBJ[CardIndex][i+3]][0]){
-					CBIstr += " or<BR>"+ SetCardName(CardOBJ[CardIndex][i+3]);
+	for ( var i = card_att_BONUS_START; cardOBJ[CardIndex][i] !== bon_NONE; i += 2 )
+	{ // Check for Sets
+		if ( cardOBJ[CardIndex][i] === bon_SETID )
+		{			
+			CBIstr += "<br/><b>When equipping "+ SetCardName(cardOBJ[CardIndex][i + 1]);
+			var setIndex = w_SC[cardOBJ[CardIndex][i + 1]][0];
+			while ( cardOBJ[CardIndex][i + 2] !== bon_NONE && check === 0 )
+			{
+				if ( setIndex == w_SC[cardOBJ[CardIndex][i+3]][0])
+				{
+					CBIstr += " or<br/>" + SetCardName(cardOBJ[CardIndex][i + 3]);
 					i += 2;
-				}else
+				}
+				else
+				{
 					check = 1;
+				}
 			}
-			CBIstr += " at the same time:<BR>";
+			CBIstr += " at the same time:</b><br/>";
 			check = 0;
-			for(var j=card_att_BONUS_START;cardOBJ[w][j] != bon_NONE;j+=2)
-				BuildItemDescription(cardOBJ[w][j],cardOBJ[w][j+1]);
-			if(cardOBJ[w][card_att_DESC] != bon_NONE)
-				CBIstr += cardOBJ[w][card_att_DESC] +"<BR>";
-			CBIstr += "</Font></B>";
+			for ( var j = card_att_BONUS_START; cardOBJ[setIndex][j] !== bon_NONE; j += 2 )
+			{
+				CBIstr += BuildItemDescription( cardOBJ[setIndex][j], cardOBJ[setIndex][j + 1] );
+			}
+			if ( cardOBJ[setIndex][card_att_DESC] !== bon_NONE )
+			{
+				CBIstr += cardOBJ[setIndex][card_att_DESC] + "<br/>";
+			}
+			CBIstr += "";
 		}
 	}
+	// var check = 0;
+	// for(var i=card_att_BONUS_START;cardOBJ[CardIndex][i] != bon_NONE;i+=2){ // Check for Sets
+		// if(cardOBJ[CardIndex][i] == 90){
+			// CBIstr += "<Font size=2><BR><B>When equipping "+ SetCardName(cardOBJ[CardIndex][i+1]);
+			// var w = w_SC[cardOBJ[CardIndex][i+1]][0];
+			// while(cardOBJ[CardIndex][i+2] != bon_NONE && check == 0){
+				// if(w == w_SC[cardOBJ[CardIndex][i+3]][0]){
+					// CBIstr += " or<BR>"+ SetCardName(CardOBJ[CardIndex][i+3]);
+					// i += 2;
+				// }else
+					// check = 1;
+			// }
+			// CBIstr += " at the same time:<BR>";
+			// check = 0;
+			// for(var j=card_att_BONUS_START;cardOBJ[w][j] != bon_NONE;j+=2)
+				// BuildItemDescription(cardOBJ[w][j],cardOBJ[w][j+1]);
+			// if(cardOBJ[w][card_att_DESC] != bon_NONE)
+				// CBIstr += cardOBJ[w][card_att_DESC] +"<BR>";
+			// CBIstr += "</Font></B>";
+		// }
+	// }
 
 	myInnerHtml( "ItemDescription", CBIstr, 0 );
 }

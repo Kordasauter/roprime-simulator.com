@@ -2744,37 +2744,132 @@ function Init()
 	
 	var wLang = Language * 2;
 	
-	for ( var i = 0; CardSortOBJ[0][i] != "NULL"; i++ )
-	{ // WeaponSlot1
-		document.calcForm.A_weapon1_card1.options[i] = new Option( cardOBJ[CardSortOBJ[card_comp_NONE][i]][2], CardSortOBJ[card_comp_NONE][i] );
-	}
-	for ( var i = 0;CardSortOBJ[1][i]!="NULL";i++)
-	{ // WeaponSlot2-4
-		document.calcForm.A_weapon1_card2.options[i] = new Option(cardOBJ[CardSortOBJ[card_comp_WEAPON][i]][2],CardSortOBJ[card_comp_WEAPON][i]);
-		document.calcForm.A_weapon1_card3.options[i] = new Option(cardOBJ[CardSortOBJ[card_comp_WEAPON][i]][2],CardSortOBJ[card_comp_WEAPON][i]);
-		document.calcForm.A_weapon1_card4.options[i] = new Option(cardOBJ[CardSortOBJ[card_comp_WEAPON][i]][2],CardSortOBJ[card_comp_WEAPON][i]);
-	}
-	document.calcForm.A_weapon1_card4.options[4] = new Option(GetWord(91),106); // "Top10Rank"
+	// for ( var i = 0; CardSortOBJ[0][i] != "NULL"; i++ )
+	// { // WeaponSlot1
+		// document.calcForm.A_weapon1_card1.options[i] = new Option( cardOBJ[CardSortOBJ[card_comp_NONE][i]][2], CardSortOBJ[card_comp_NONE][i] );
+	// }
+	// for ( var i = 0;CardSortOBJ[1][i]!="NULL";i++)
+	// { // WeaponSlot2-4
+		// document.calcForm.A_weapon1_card2.options[i] = new Option(cardOBJ[CardSortOBJ[card_comp_WEAPON][i]][2],CardSortOBJ[card_comp_WEAPON][i]);
+		// document.calcForm.A_weapon1_card3.options[i] = new Option(cardOBJ[CardSortOBJ[card_comp_WEAPON][i]][2],CardSortOBJ[card_comp_WEAPON][i]);
+		// document.calcForm.A_weapon1_card4.options[i] = new Option(cardOBJ[CardSortOBJ[card_comp_WEAPON][i]][2],CardSortOBJ[card_comp_WEAPON][i]);
+	// }
+	// document.calcForm.A_weapon1_card4.options[4] = new Option(GetWord(91),106); // "Top10Rank"
 	
-	for ( var i=0;CardSortOBJ[2][i]!="NULL";i++ )
-	{ // HeadCard
-		document.calcForm.A_head1_card.options[i] = new Option(cardOBJ[CardSortOBJ[card_comp_HEAD][i]][2],CardSortOBJ[card_comp_HEAD][i]);
-		document.calcForm.A_head2_card.options[i] = new Option(cardOBJ[CardSortOBJ[card_comp_HEAD][i]][2],CardSortOBJ[card_comp_HEAD][i]);
+	// for ( var i=0;CardSortOBJ[2][i]!="NULL";i++ )
+	// { // HeadCard
+		// document.calcForm.A_head1_card.options[i] = new Option(cardOBJ[CardSortOBJ[card_comp_HEAD][i]][2],CardSortOBJ[card_comp_HEAD][i]);
+		// document.calcForm.A_head2_card.options[i] = new Option(cardOBJ[CardSortOBJ[card_comp_HEAD][i]][2],CardSortOBJ[card_comp_HEAD][i]);
+	// }
+	// for(i=0;CardSortOBJ[3][i]!="NULL";i++) // Shield-/ LeftHandCard
+		// document.calcForm.A_left_card.options[i] = new Option(cardOBJ[CardSortOBJ[card_com_SHIELD][i]][2],CardSortOBJ[card_com_SHIELD][i]);
+	// for(i=0;CardSortOBJ[4][i]!="NULL";i++) // ArmorCard
+		// document.calcForm.A_body_card.options[i] = new Option(cardOBJ[CardSortOBJ[card_com_ARMOR][i]][2],CardSortOBJ[card_com_ARMOR][i]);
+	// for(i=0;CardSortOBJ[5][i]!="NULL";i++) // GarmentCard
+		// document.calcForm.A_shoulder_card.options[i] = new Option(cardOBJ[CardSortOBJ[card_com_GARMENT][i]][2],CardSortOBJ[card_com_GARMENT][i]);
+	// for(i=0;CardSortOBJ[6][i]!="NULL";i++) // ShoesCard
+		// document.calcForm.A_shoes_card.options[i] = new Option(cardOBJ[CardSortOBJ[card_com_SHOES][i]][2],CardSortOBJ[card_com_SHOES][i]);
+	// for(i=0;CardSortOBJ[7][i]!="NULL";i++)
+	// { // AccessoryCards
+		// document.calcForm.A_acces1_card.options[i] = new Option(cardOBJ[CardSortOBJ[card_com_ACC][i]][2],CardSortOBJ[card_com_ACC][i]);
+		// document.calcForm.A_acces2_card.options[i] = new Option(cardOBJ[CardSortOBJ[card_com_ACC][i]][2],CardSortOBJ[card_com_ACC][i]);
+	// }
+	
+	document.calcForm.A_weapon1_card1.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+	document.calcForm.A_weapon1_card2.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+	document.calcForm.A_weapon1_card3.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+	document.calcForm.A_weapon1_card4.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+	document.calcForm.A_head1_card.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+	document.calcForm.A_head2_card.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+	document.calcForm.A_left_card.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+	document.calcForm.A_body_card.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+	document.calcForm.A_shoulder_card.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+	document.calcForm.A_shoes_card.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+	document.calcForm.A_acces1_card.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+	document.calcForm.A_acces2_card.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+	for(i=0;i<cardOBJ.length;i++)
+	{
+		if(cardOBJ[i][1]==card_comp_WEAPON)
+		{
+			document.calcForm.A_weapon1_card1.add(ReturnOption(i));
+			document.calcForm.A_weapon1_card2.add(ReturnOption(i));
+			document.calcForm.A_weapon1_card3.add(ReturnOption(i));
+			document.calcForm.A_weapon1_card4.add(ReturnOption(i));
+		}
+		if(cardOBJ[i][1]==card_comp_HEAD)
+		{
+			document.calcForm.A_head1_card.add(ReturnOption(i));
+			document.calcForm.A_head2_card.add(ReturnOption(i));
+		}
+		if(cardOBJ[i][1]==card_com_SHIELD)
+		{
+			document.calcForm.A_left_card.add(ReturnOption(i));
+		}
+		if(cardOBJ[i][1]==card_com_ARMOR)
+		{
+			document.calcForm.A_body_card.add(ReturnOption(i));
+		}
+		if(cardOBJ[i][1]==card_com_GARMENT)
+		{
+			document.calcForm.A_shoulder_card.add(ReturnOption(i));
+		}
+		if(cardOBJ[i][1]==card_com_SHOES)
+		{
+			document.calcForm.A_shoes_card.add(ReturnOption(i));
+		}
+		if(cardOBJ[i][1]==card_com_ACC)
+		{
+			document.calcForm.A_acces1_card.add(ReturnOption(i));
+			document.calcForm.A_acces2_card.add(ReturnOption(i));
+		}
+		if(cardOBJ[i][1]==card_com_ACC_L)
+		{
+			document.calcForm.A_acces1_card.add(ReturnOption(i));
+		}
+		if(cardOBJ[i][1]==card_com_ACC_R)
+		{
+			document.calcForm.A_acces2_card.add(ReturnOption(i));
+		}
+		// console.log(i);
 	}
-	for(i=0;CardSortOBJ[3][i]!="NULL";i++) // Shield-/ LeftHandCard
-		document.calcForm.A_left_card.options[i] = new Option(cardOBJ[CardSortOBJ[card_com_SHIELD][i]][2],CardSortOBJ[card_com_SHIELD][i]);
-	for(i=0;CardSortOBJ[4][i]!="NULL";i++) // ArmorCard
-		document.calcForm.A_body_card.options[i] = new Option(cardOBJ[CardSortOBJ[card_com_ARMOR][i]][2],CardSortOBJ[card_com_ARMOR][i]);
-	for(i=0;CardSortOBJ[5][i]!="NULL";i++) // GarmentCard
-		document.calcForm.A_shoulder_card.options[i] = new Option(cardOBJ[CardSortOBJ[card_com_GARMENT][i]][2],CardSortOBJ[card_com_GARMENT][i]);
-	for(i=0;CardSortOBJ[6][i]!="NULL";i++) // ShoesCard
-		document.calcForm.A_shoes_card.options[i] = new Option(cardOBJ[CardSortOBJ[card_com_SHOES][i]][2],CardSortOBJ[card_com_SHOES][i]);
-	for(i=0;CardSortOBJ[7][i]!="NULL";i++)
-	{ // AccessoryCards
-		document.calcForm.A_acces1_card.options[i] = new Option(cardOBJ[CardSortOBJ[card_com_ACC][i]][2],CardSortOBJ[card_com_ACC][i]);
-		document.calcForm.A_acces2_card.options[i] = new Option(cardOBJ[CardSortOBJ[card_com_ACC][i]][2],CardSortOBJ[card_com_ACC][i]);
+	sortSelect(document.calcForm.A_weapon1_card1);
+	sortSelect(document.calcForm.A_weapon1_card2);
+	sortSelect(document.calcForm.A_weapon1_card3);
+	sortSelect(document.calcForm.A_weapon1_card4);
+	sortSelect(document.calcForm.A_head1_card);
+	sortSelect(document.calcForm.A_head2_card);
+	sortSelect(document.calcForm.A_left_card);
+	sortSelect(document.calcForm.A_body_card);
+	sortSelect(document.calcForm.A_shoulder_card);
+	sortSelect(document.calcForm.A_shoes_card);
+	sortSelect(document.calcForm.A_acces1_card);
+	sortSelect(document.calcForm.A_acces2_card);
+	for(i=1;i<5;i++)
+	{
+		if(i<4)
+		{
+			document.calcForm.A_weapon1_card1.add(ReturnOption(i),i);
+			document.calcForm.A_weapon1_card2.add(ReturnOption(i),i);
+			document.calcForm.A_weapon1_card3.add(ReturnOption(i),i);
+			document.calcForm.A_weapon1_card4.add(ReturnOption(i),i);
+		}
+		else
+		{
+			document.calcForm.A_weapon1_card1.add(ReturnOption(156),i);
+			document.calcForm.A_weapon1_card2.add(ReturnOption(156),i);
+			document.calcForm.A_weapon1_card3.add(ReturnOption(156),i);
+			document.calcForm.A_weapon1_card4.add(ReturnOption(156),i);
+		}
+		
+	}
+	for(i=0;i<4;i++)
+	{
+		document.calcForm.A_weapon1_card1.add(ReturnOption(201+i),i+1);
 	}
 	
+
+	
+
 	for(i=0;i<CardShort.length;i++) // CardShortcuts
 		document.calcForm.A_SHORTCUT_R.options[i] = new Option(CardShort[i][Language+4],i);
 	
@@ -2904,6 +2999,7 @@ function Init()
 	BuildMonsterBuffTable();
 	BuildItemsTable();
 	FillPerformerBuffOptions();
+	BuildSearchTable();
 	
 	// init player
 	formElements["A_JOB"].value = 0;
@@ -2919,4 +3015,29 @@ function Init()
 	formElements["saveName"].value = GetWord(84);
 	
 	LoadDataINIT(); // loads cookies
+}
+
+function sortSelect(selElem) {
+    var tmpAry = new Array();
+    for (var i=0;i<selElem.options.length;i++) {
+        tmpAry[i] = new Array();
+        tmpAry[i][0] = selElem.options[i].text;
+        tmpAry[i][1] = selElem.options[i].value;
+    }
+    tmpAry.sort();
+    while (selElem.options.length > 0) {
+        selElem.options[0] = null;
+    }
+    for (var i=0;i<tmpAry.length;i++) {
+        var op = new Option(tmpAry[i][0], tmpAry[i][1]);
+        selElem.options[i] = op;
+    }
+    return;
+}
+function ReturnOption(ID)
+{
+	var opt = document.createElement("option");
+	opt.value = cardOBJ[ID][0];
+	opt.text = cardOBJ[ID][2];
+	return opt;
 }
