@@ -706,6 +706,25 @@ function SetCard()
 //Sara's Memory
 ,[636,	 card_com_GARMENT,"Irene Elder","[For each 3 garment refine lv]<br>Hit +5.",bon_HIT,10,0]
 ,[637,	 card_comp_WEAPON,"Payon Soldier","[If using in spear with refine lv +10 or higher]<br>Atk +20.<br>Matk +20.<br>[If using in spear with refine lv +14 or higher]<br>Atk +20.<br>Matk +20.",bon_ATK,5,bon_MATK,5,0]
+//Dark Lord Essence
+,[638,   card_com_SPE,"Darklord Essence Force 1",0,bon_STR,1,bon_ATK,3,bon_INT,-1,0]
+,[639,   card_com_SPE,"Darklord Essence Force 2",0,bon_STR,2,bon_ATK,6,bon_INT,-2,0]
+,[640,   card_com_SPE,"Darklord Essence Force 3",0,bon_STR,4,bon_ATK,12,bon_INT,-4,0]
+,[641,   card_com_SPE,"Darklord Essence Speed 1",0,bon_AGI,1,bon_FLEE,2,bon_VIT,-1,0]
+,[642,   card_com_SPE,"Darklord Essence Speed 2",0,bon_AGI,2,bon_FLEE,4,bon_VIT,-2,0]
+,[643,   card_com_SPE,"Darklord Essence Speed 3",0,bon_AGI,4,bon_FLEE,8,bon_VIT,-4,0]
+,[644,   card_com_SPE,"Darklord Essence Vitality 1",0,bon_VIT,1,bon_DEF,3,bon_MDEF,2,bon_AGI,-1,0]
+,[645,   card_com_SPE,"Darklord Essence Vitality 2",0,bon_VIT,2,bon_DEF,6,bon_MDEF,4,bon_AGI,-2,0]
+,[646,   card_com_SPE,"Darklord Essence Vitality 3",0,bon_VIT,4,bon_DEF,12,bon_MDEF,8,bon_AGI,-4,0]
+,[647,   card_com_SPE,"Darklord Essence Intelligence 1",0,bon_INT,1,bon_MATK,3,bon_STR,-1,0]
+,[648,   card_com_SPE,"Darklord Essence Intelligence 2",0,bon_INT,2,bon_MATK,6,bon_STR,-2,0]
+,[649,   card_com_SPE,"Darklord Essence Intelligence 3",0,bon_INT,4,bon_MATK,12,bon_STR,-4,0]
+,[650,   card_com_SPE,"Darklord Essence Concentration 1",0,bon_DEX,1,bon_HIT,2,bon_LUK,-1,0]
+,[651,   card_com_SPE,"Darklord Essence Concentration 2",0,bon_DEX,2,bon_HIT,4,bon_LUK,-2,0]
+,[652,   card_com_SPE,"Darklord Essence Concentration 3",0,bon_DEX,4,bon_HIT,8,bon_LUK,-4,0]
+,[653,   card_com_SPE,"Darklord Essence Luck 1",0,bon_LUK,1,bon_CRIT,1,bon_DEX,-1,0]
+,[654,   card_com_SPE,"Darklord Essence Luck 2",0,bon_LUK,2,bon_CRIT,2,bon_DEX,-2,0]
+,[655,   card_com_SPE,"Darklord Essence Luck 3",0,bon_LUK,4,bon_CRIT,4,bon_DEX,-4,0]
 ];
 
 CardNum = cardOBJ.length -1;

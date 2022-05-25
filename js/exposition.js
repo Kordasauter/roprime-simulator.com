@@ -340,16 +340,16 @@ WordData = [
 { // AutoCastTrigger [AUTOSPELL_NAME]
 AUTOSPELL_NAME = [
  [0,0]
-,["","When performing a physical attack, "]
-,["","When performing a short range physical attack, "]
-,["","When performing a long range physical attack, "]
-,["","When performing a magical attack, "]
-,["","When attacking, "]
-,["","When recieving physical damage, "]
-,["","When recieving short range physical damage, "]
-,["","When recieving long range physical damage, "]
-,["","When recieving magical damage, "]
-,["","When recieving physical or magical damage, "]
+,["","When performing a physical attack, "]//1
+,["","When performing a short range physical attack, "]//2
+,["","When performing a long range physical attack, "]//3
+,["","When performing a magical attack, "]//4
+,["","When attacking, "]//5
+,["","When recieving physical damage, "]//6
+,["","When recieving short range physical damage, "]//7
+,["","When recieving long range physical damage, "]//8
+,["","When recieving magical damage, "]//9
+,["","When recieving physical or magical damage, "]//10
 ];
 }
 

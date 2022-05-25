@@ -1978,7 +1978,35 @@
 ,[1959,itm_type_SET,0,0,0,0,0,0,bon_HP_MUL,15,bon_SP_MUL,5,bon_NONE] // "Giant God Snake Skin + Temporal Boots"
 ,[1960,itm_type_SET,0,0,0,0,0,0,bon_HP_MUL,15,bon_SP_MUL,5,bon_NONE] // "Giant God Snake Skin + Modified Boots"
 ,[1961,itm_type_HEAD_LOWER,0,0,0,0,20,1,bon_INC_MAGIC_NEUTRAL,5,bon_INC_MAGIC_WATER,5,bon_INC_MAGIC_EARTH,5,bon_INC_MAGIC_FIRE,5,bon_INC_MAGIC_WIND,5,bon_INC_MAGIC_POISON,5,bon_INC_MAGIC_HOLY,5,bon_INC_MAGIC_DARK,5,bon_INC_MAGIC_GHOST,5,bon_INC_MAGIC_UNDEAD,5,bon_SKILL_AUTOCAST,134,bon_NONE] // "CD in Mouth"
-//
+//Decisive Battle
+,[1962,itm_type_ARMOR,2061,120,0,1,400,160,bon_HP_MUL,5,bon_SP_MUL,5,bon_ATK,10,bon_MATK,10,bon_MDEF,5,bon_HIT,10,bon_FLEE,10,bon_DMG_SKILL+skill_ROY_VANISHING_POINT,10,bon_DMG_SKILL+skill_RUN_STORM_BLAST,10,bon_SKILL_AUTOCAST,135,bon_SKILL_AUTOCAST,136,bon_NONE] // "Hero Plate"
+,[1963,itm_type_ARMOR,2063,77,0,1,50,160,bon_HP_MUL,5,bon_SP_MUL,5,bon_ATK,10,bon_MATK,10,bon_HIT,10,bon_FLEE,10,bon_DMG_SKILL+skill_SUR_DRAGON_COMBO,10,bon_DMG_SKILL+skill_SUR_SKY_NET_BLOW,10,bon_DMG_SKILL+skill_SUR_EARTH_SHAKER,10,bon_DMG_SKILL+skill_ABI_JUDEX,10,bon_DMG_SKILL+skill_ABI_ADORAMUS,10,bon_SKILL_AUTOCAST,137,bon_SKILL_AUTOCAST,138,bon_NONE] // "Hero Judgement Shawl"
+,[1964,itm_type_ARMOR,2065,50,0,1,80,160,bon_HP_MUL,5,bon_SP_MUL,5,bon_MATK,10,bon_FLEE,10,bon_DMG_SKILL+skill_WAR_CRIMSON_ROCK,10,bon_DMG_SKILL+skill_SOR_PSYCHIC_WAVE,10,bon_NONE] // "Hero Magic Coat"
+,[1965,itm_type_ARMOR,2066,100,0,1,50,160,bon_HP_MUL,5,bon_SP_MUL,5,bon_ATK,10,bon_MATK,10,bon_MDEF,5,bon_NONE] // "Hero Trade Mail"
+,[1966,itm_type_ARMOR,2062,70,0,1,20,160,bon_HP_MUL,5,bon_SP_MUL,5,bon_DMG_SKILL+skill_SHA_FATAL_MENACE,10,bon_DMG_SKILL+skill_SHA_TRIANGLE_SHOT,10,bon_DMG_SKILL+skill_GLT_CROSS_IMPACT,10,bon_DMG_SKILL+skill_GLT_CROSS_RIPPER_SLASHER,10,bon_NONE] // "Hero Hidden Cloth"
+,[1967,itm_type_ARMOR,2064,60,0,1,20,160,bon_HP_MUL,5,bon_SP_MUL,5,bon_ALL_STATS,1,bon_ASPD_ADD,1,bon_DMG_RANGE,3,bon_SKILL_AUTOCAST,139,bon_SKILL_AUTOCAST,140,bon_NONE] // "Hero Target Suit"
+,[1968,itm_type_SHOES,226,10,0,1,30,160,bon_RED_CAST,-10,bon_NONE] // "Hero Nependess Shoes "
+,[1969,itm_type_SHOES,226,15,0,1,30,160,bon_DMG_RANGE,5,bon_NONE] // "Hero Silverleather Boots"
+,[1970,itm_type_SHOES,226,10,0,1,30,160,bon_NONE] // "Hero Ungoliant Boots "
+,[1971,itm_type_ACCESSORY,2000,0,0,0,10,130,bon_STR,-5,bon_MATK_MUL,6,bon_HP_REG,50,bon_SP_REG,50,bon_RED_ELE_HOLY,5,bon_SKILL_AUTOCAST,141,bon_SKILL_AUTOCAST,142,bon_NONE] // "Pendant of Harmony"
+,[1972,itm_type_ACCESSORY,2000,0,0,0,10,130,bon_INT,-5,bon_PHY_ATK,6,bon_RED_ELE_SHADOW,5,bon_CH_STATUS_CHAOS,100,bon_NONE] // "Pendant of Chaos"
+,[1973,itm_type_SET,0,0,0,0,0,0,bon_ALL_STATS,5,bon_SKILL_AUTOCAST,143,bon_NONE] // "Pendant of Chaos + Pendant of Harmony" "Yin Yang Set"
+,[1974,itm_type_ACCESSORY,2000,0,0,1,10,130,bon_ALL_STATS,1,bon_PHY_ATK,6,bon_MATK_MUL,6,bon_SKILL_AUTOCAST,143,bon_NONE] // "Pendant of Maelstrom"
+,[1975,weapTyp_BOW,210,195,4,1,300,130,bon_DMG_RANGE,40,bon_ASPD_MUL,-15,bon_HIT,-50,bon_NONE] // "Great Bow"
+,[1976,weapTyp_BOW,2064,160,4,1,150,130,bon_DMG_RANGE,30,bon_DELAY_SKILL_FLAT+skill_MIWA_SEVERE_RAINSTORM,2,bon_NONE] // "Bow Of Storm"
+,[1977,weapTyp_INSTRUMENT,0,160,4,2,100,130,bon_NONE] // "Ukulele Of Newoz"
+,[1978,itm_type_ACCESSORY,2116,0,0,1,10,130,bon_RED_CAST,-25,bon_NONE] // "Hero Ring Of Newoz"
+,[1979,itm_type_SET,0,0,0,0,0,0,bon_DMG_SKILL+skill_CG_ARROW_VULCAN,200,bon_NONE] // "Newoz Set" "Ukulele Of Newoz + Hero Ring Of Newoz"
+,[1980,itm_type_ARMOR,2000,20,0,1,150,130,bon_USR_ELEMENT,ele_EARTH,bon_NONE] // "Harden Breastplate"
+,[1981,weapTyp_WHIP,0,160,4,2,100,130,bon_NONE] // "Floral Mic Of Aigu"
+,[1982,itm_type_ACCESSORY,2116,0,0,1,10,130,bon_RED_CAST,-25,bon_NONE] // "Floral Bracelet Of Aigu"
+,[1983,itm_type_SET,0,0,0,0,0,0,bon_DMG_SKILL+skill_CG_ARROW_VULCAN,200,bon_NONE] // "Aigu Set" "Floral Mic Of Aigu + Floral Bracelet Of Aigu"
+,[1984,itm_type_ARMOR,2000,20,0,1,150,130,bon_USR_ELEMENT,ele_WATER,bon_NONE] // "Frozen Breastplate"
+,[1987,weapTyp_INSTRUMENT,2000,180,3,2,25,160,bon_MATK,120,bon_DELAY_SKILL_FLAT+skill_MIWA_IMPROVISED_SONG,2,bon_NONE] // "Contrabass"
+,[1987,weapTyp_WHIP,2000,150,3,2,20,160,bon_MATK,120,bon_ASPD_MUL,20,bon_NONE] // "Gymnastics Ribbon"
+,[1987,itm_type_ACCESSORY,226,0,0,0,20,160,bon_NONE] // "Hero Ring"
+,[1988,weapTyp_DAGGER,0,110,3,1,50,24,bon_ELEMENT,ele_POISON,bon_MATK,50,bon_NONE] // "Faceworm Leg"
+,[1989,weapTyp_DAGGER,226,180,4,2,50,100,bon_MATK,120,bon_INT,3,bon_NONE] // "Faceworm Queen Leg"
 ];
 ItemMax = ItemOBJ.length -1;
 }
@@ -2426,6 +2454,9 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[1960,1958,1955,"NULL"] // "Giant God Snake Skin + Modified Int Boots"
 ,[1960,1958,1956,"NULL"] // "Giant God Snake Skin + Modified Dex Boots"
 ,[1960,1958,1957,"NULL"] // "Giant God Snake Skin + Modified Luk Boots"
+,[1973,1971,1972,"NULL"] // "Yin Yang Set"
+,[1979,1977,1978,"NULL"] // "Newoz Set"
+,[1983,1981,1982,"NULL"] // "Aigu Set"
 //,[itm_set,item1,item2,...,"NULL"]
 ];
 SE_MAXnum = w_SE.length -1;

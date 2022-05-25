@@ -1357,7 +1357,11 @@ function ClickAcces( data, numAccess )
 		CleanEnchant(formAcc);
 		SetEnchant(formAcc,0,ench_Assist_Ability,0);
 	}
-	else
+	else if(access_id == 1985)
+	{// Hero Ring
+		CleanEnchant(formAcc);
+		// SetEnchant(formAcc,0,ench_Assist_Ability,0);
+	}
 	{
 		CleanEnchant(formAcc);
 	}
@@ -2666,27 +2670,6 @@ function Click_Card( CardIndex )
 			CBIstr += "";
 		}
 	}
-	// var check = 0;
-	// for(var i=card_att_BONUS_START;cardOBJ[CardIndex][i] != bon_NONE;i+=2){ // Check for Sets
-		// if(cardOBJ[CardIndex][i] == 90){
-			// CBIstr += "<Font size=2><BR><B>When equipping "+ SetCardName(cardOBJ[CardIndex][i+1]);
-			// var w = w_SC[cardOBJ[CardIndex][i+1]][0];
-			// while(cardOBJ[CardIndex][i+2] != bon_NONE && check == 0){
-				// if(w == w_SC[cardOBJ[CardIndex][i+3]][0]){
-					// CBIstr += " or<BR>"+ SetCardName(CardOBJ[CardIndex][i+3]);
-					// i += 2;
-				// }else
-					// check = 1;
-			// }
-			// CBIstr += " at the same time:<BR>";
-			// check = 0;
-			// for(var j=card_att_BONUS_START;cardOBJ[w][j] != bon_NONE;j+=2)
-				// BuildItemDescription(cardOBJ[w][j],cardOBJ[w][j+1]);
-			// if(cardOBJ[w][card_att_DESC] != bon_NONE)
-				// CBIstr += cardOBJ[w][card_att_DESC] +"<BR>";
-			// CBIstr += "</Font></B>";
-		// }
-	// }
 
 	myInnerHtml( "ItemDescription", CBIstr, 0 );
 }

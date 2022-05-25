@@ -1943,6 +1943,13 @@ function CalcRangedMod()
 		if(SU_DEX >= 120)
 			n_tok[bon_DMG_RANGE] += 5;
 	}
+	if(EquipNumSearch(1969))
+	{//Hero Silverleather Boots
+		if(n_A_SHOES_DEF_PLUS >= 8 && n_A_SHOES_DEF_PLUS <=13)
+			n_tok[bon_DMG_RANGE] += n_A_SHOES_DEF_PLUS - 7;
+		else if(n_A_SHOES_DEF_PLUS >13)
+			n_tok[bon_DMG_RANGE] += 6;
+	}
 	
 	
 	
@@ -3808,6 +3815,13 @@ function calcHardMDef(n_A_MDEF)
 	{//Bangungot Boots of Nightmare
 		n_A_MDEF += n_A_SHOES_DEF_PLUS;
 	}
+	if( EquipNumSearch( 1964 ) )
+	{//Hero Magic Coat
+		if(n_A_BODY_DEF_PLUS % 2 == 0) // If an even refine level
+		{
+			n_A_MDEF += Math.floor(n_A_BODY_DEF_PLUS / 2);
+		}
+	}
 	if(EquipNumSearch(1820))
 	{ // Shadow Minstrel Shield
 		n_A_MDEF += n_A_SHADOW_SHIELD_DEF_PLUS * (SkillSearch(skill_MIN_WINDMILL) + SkillSearch(skill_MIN_ECHO_SONG) + SkillSearch(skill_MIN_HARMONIZE));
@@ -5240,6 +5254,30 @@ function CalcVariableCast()
 			w -= n_A_Weapon_ATKplus + n_A_Weapon2_ATKplus;
 		}
 	}	
+	if( EquipNumSearch( 1964 ) )
+	{//Hero Magic Coat
+		if(n_A_BODY_DEF_PLUS % 2 == 1) // If an odd refine level
+		{
+			w += 20;
+		}
+		else
+		{
+			w -= Math.floor(n_A_BODY_DEF_PLUS / 2);
+		}
+	}
+	if( EquipNumSearch( 1968 ) )
+	{//Hero Nependess Shoes
+		if(n_A_SHOES_DEF_PLUS >=8)
+			w -= 5;
+		if(n_A_SHOES_DEF_PLUS >=8 && n_A_SHOES_DEF_PLUS < 11) 
+			w -= n_A_SHOES_DEF_PLUS - 8;
+		if(n_A_SHOES_DEF_PLUS >=11)
+			w -= 3;
+		if(n_A_SHOES_DEF_PLUS >=11 && n_A_SHOES_DEF_PLUS < 13)
+			w -= (n_A_SHOES_DEF_PLUS - 11) * 3;
+		if(n_A_SHOES_DEF_PLUS >=13)
+			w -= 9;
+	}
 	
 	if(EquipNumSearch(1745))
 	{ //"Shadow Wizard Boots"
