@@ -1451,7 +1451,7 @@
 ,[1445,itm_type_HEAD_LOWER,/*0*/999,1,0,0,10,90,bon_VIT,1,bon_RED_RC_DEMI_HUMAN,1,bon_DMG_RC_DEMI_HUMAN,1,bon_NONE] // "Spiked Scarf"
 ,[1446,itm_type_HEAD_MIDDLE,/*0*/999,1,0,0,80,50,bon_RED_ELE_WATER,3,bon_RED_ELE_FIRE,3,bon_RED_ELE_UNDEAD,3,bon_RED_ELE_GHOST,3,bon_NONE] // "Hairband of Reginleif"
 ,[1447,itm_type_HEAD_UPPER,/*0*/999,5,0,0,15,0,bon_DEX,3,bon_RED_RC_DEMI_HUMAN,10,bon_NO_UPGRADES,1,bon_NONE] // "I Love China"
-,[1448,itm_type_ACCESSORY,0,2,0,0,110,20,bon_MDEF,1,bon_INT,3,bon_SP_ADD,20,bon_DMG_SKILL+678,10,bon_NONE] // Telekinetic orb
+,[1448,itm_type_ACCESSORY,0,2,0,0,110,20,bon_MDEF,1,bon_INT,3,bon_SP_ADD,20,bon_DMG_SKILL+skill_SOR_PSYCHIC_WAVE,10,bon_DMG_SKILL+skill_WAR_SOUL_EXPANSION,10,bon_NONE] // Telekinetic orb
 ,[1449,itm_type_ARMOR,4000,60,0,0,100,85,bon_MDEF,3,bon_STR,1,bon_DEFIGN_RC_DEMI_HUMAN,10,bon_DEFIGN_RC_BRUTE,10,bon_NONE] // "Bone Plate"
 ,[1450,itm_type_SHOES,2117,15,0,1,30,105,bon_AGI,1,bon_ASPD_MUL,2,bon_NONE] // "Dance Shoes"
 ,[1451,weapTyp_DAGGER,58,130,3,1,70,99,bon_INT,3,bon_NONE] // "Kurenai"

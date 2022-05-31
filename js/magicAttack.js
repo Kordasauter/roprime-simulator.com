@@ -533,7 +533,7 @@ function calcMAtk( includeMultipliers )
 	}
 	if(CardNumSearch(555))
 	{//Antique Book Card
-		n_A_EquipMATK += Math.floor(SU_INT / 10);
+		n_A_EquipMATK += 5 * Math.floor(SU_INT / 10);
 	}
 	if(CardNumSearch(557))
 	{//Faithful Manager Card

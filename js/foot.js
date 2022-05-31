@@ -2882,7 +2882,8 @@ function Init()
 	{
 		document.calcForm.A_weapon1_card1.add(ReturnOption(201+i),i+1);
 	}
-	
+	//add race reduction on shield
+	document.calcForm.A_left_card.add(ReturnOption(154),1);
 
 	
 

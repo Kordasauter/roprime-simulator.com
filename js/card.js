@@ -204,7 +204,7 @@ function SetCard()
 ,[151,7,"Joker",0,bon_SKILL_ENABLE,27,0]
 ,[152,7,"Osiris","When revived you recover full HP & SP",0]
 ,[153,10,"0",0,0]
-,[154,3,"Race Reduction 30%",0,bon_RED_RC_FORMLESS,30,bon_RED_RC_UNDEAD,30,bon_RED_RC_BRUTE,30,bon_RED_RC_PLANT,30,bon_RED_RC_INSECT,30,bon_RED_RC_FISH,30,bon_RED_RC_DEMON,30,bon_RED_RC_DEMI_HUMAN,30,bon_RED_RC_ANGEL,30,bon_RED_RC_DRAGON,30,0]
+,[154,10,"Race Reduction 30%",0,bon_RED_RC_FORMLESS,30,bon_RED_RC_UNDEAD,30,bon_RED_RC_BRUTE,30,bon_RED_RC_PLANT,30,bon_RED_RC_INSECT,30,bon_RED_RC_FISH,30,bon_RED_RC_DEMON,30,bon_RED_RC_DEMI_HUMAN,30,bon_RED_RC_ANGEL,30,bon_RED_RC_DRAGON,30,0]
 ,[155,10,"0",0,0]
 ,[156,1,"Crit Dmg+10%,Crit+7",0,bon_DMG_CRIT,10,bon_CRIT,7,0]
 ,[157,1,"Metaling",0,221,54,0]
