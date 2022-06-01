@@ -2817,6 +2817,12 @@ function calcHP()
 		if(SU_VIT >= 120)
 			hpMultiplier += 8;
 	}
+	if(EquipNumSearch(1990) && n_A_SHIELD_DEF_PLUS >= 7) // Seraphing Shield
+	{
+		hpMultiplier += 5;
+	}
+	
+	
 	//Cards
 	if(CardNumSearch(563))
 	{//Bungisngis Card
@@ -3388,6 +3394,11 @@ function calcSP( n_A_MaxSP )
 	{ //"Wondrous Foxtail Staff"
 		spMultiplier += 1 * Math.floor(n_A_Weapon_ATKplus / 3);
 	}
+	if(EquipNumSearch(1990) && n_A_SHIELD_DEF_PLUS >= 7) // Seraphing Shield
+	{
+		spMultiplier += 5;
+	}
+	
 	
 	//Shadows
 	if ( EquipNumSearch( 1654 ) )
@@ -5077,7 +5088,10 @@ function calcASPD()
 			flatASPD += 1;
 		}
 	}
-	
+	if(EquipNumSearch(1990) && n_A_SHIELD_DEF_PLUS >= 9) // Seraphing Shield
+	{
+		flatASPD += 1;
+	}
 	
 	if( (EquipNumSearch( 1809 ) &&  SkillSearch(skill_RUN_ENCHANT_BLADE) ) || // Shadow Runeknight Shield
 		(EquipNumSearch( 1816 ) &&  SkillSearch(skill_SHA_AUTO_SHADOW_SPELL) ) ) // Shadow Shadowchaser Shield
@@ -5555,6 +5569,11 @@ function CalcDelay()
 	{ // "Bandeau of Lovers"
 		n_tok[bon_RED_CASTDELAY] += 3 * Math.floor( n_A_HEAD_DEF_PLUS / 3);
 	}
+	if ( EquipNumSearch( 1992 ) )
+	{ // "Sacred Rosary + Recovery Light"
+		n_tok[bon_RED_CASTDELAY] += 3 * Math.floor( n_A_Weapon_ATKplus / 2);
+	}
+	
 	// Skills
 	if ( performerBuffs[ksBardSolo] === ksMagicStrings && performerBuffs[ksBardSoloLevel] > 0 )
 	{ // Magic Strings
@@ -6006,6 +6025,12 @@ function calcRaceElementalReduction()
 		n_tok[bon_RED_SIZ_MEDIUM] += n_A_Weapon_ATKplus;
 	if(EquipNumSearch(1389) && n_A_SHIELD_DEF_PLUS >= 9) // Giant Shield
 		n_tok[bon_RED_SIZ_LARGE] += 5;
+	if(EquipNumSearch(1990)) // Seraphing Shield
+	{
+		n_tok[bon_RED_SIZ_SMALL] += 2 * Math.floor(n_A_SHIELD_DEF_PLUS / 3);
+		n_tok[bon_RED_SIZ_MEDIUM] += 2 * Math.floor(n_A_SHIELD_DEF_PLUS / 3);
+		n_tok[bon_RED_SIZ_LARGE] += 2 * Math.floor(n_A_SHIELD_DEF_PLUS / 3);
+	}
 	
 	if(SkillSearch(421))
 		n_tok[bon_RED_RANGE] += 20;

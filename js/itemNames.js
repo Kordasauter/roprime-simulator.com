@@ -1990,6 +1990,9 @@ ITEM_NAME = [
 ,[1987,0,0,"Hero Ring",0]
 ,[1988,0,0,"Faceworm Leg","Has a chance to turn a monster into a Faceworm while you are attacking.",0]
 ,[1989,0,0,"Faceworm Queen Leg","Has a chance to turn a monster into a Faceworm while you are attacking.",0]
+,[1990,0,0,"Seraphing Shield","[For each 3 refine lv]<br>Physical damage taken from all size monsters -2%.<br>-------------<br>[If refine lv +7 or higher]<br>Max HP, SP +5%.<br>-------------<br>[If refine lv +9 or higher]<br>ASPD +1.<br>-------------<br>[If refine lv +12 or higher]<br>Reflect 1% of melee physical damage back to the enemy which inflicted it.<br>Has a chance of activate effect for 4 seconds when dealing magical damage: restore 100 HP every second.",0]
+,[1991,0,0,"Sacred Rosary",0]
+,[1992,0,0,"Sacred Set","[For each refine lv of staff]<br>[Heal] SP consumption -10%.<br>[Coluseo Heal] SP consumption -12%.<br>[High Heal] SP consumption -14%.<br>[For each 2 refine lv of staff]<br>Skill delay -3%.",0]
 ]
 };
 

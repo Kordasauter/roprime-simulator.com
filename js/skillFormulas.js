@@ -2738,11 +2738,7 @@ function CalcSkillDamage()
 			{
 				variableCastTime *=  1.0;
 			}
-			// if(SkillSearch(skill_SUM_SPIRIT_OF_LIFE))
-			// {
-				// var remainingHP = formElements["SkillSubNum"].value;
-				// w_SkillMod += 0.3 * remainingHP;
-			// }
+			n_Delay[ksDelayGlobal] = 1.0;
 		}
 		CalcAtkMods02(w_SkillMod,0);
 		

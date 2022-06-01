@@ -2007,6 +2007,9 @@
 ,[1987,itm_type_ACCESSORY,226,0,0,0,20,160,bon_NONE] // "Hero Ring"
 ,[1988,weapTyp_DAGGER,0,110,3,1,50,24,bon_ELEMENT,ele_POISON,bon_MATK,50,bon_NONE] // "Faceworm Leg"
 ,[1989,weapTyp_DAGGER,226,180,4,2,50,100,bon_MATK,120,bon_INT,3,bon_NONE] // "Faceworm Queen Leg"
+,[1990,itm_type_SHIELD,0,80,0,1,0,125,bon_NONE] // "Seraphing Shield"
+,[1991,itm_type_HEAD_LOWER,0,12,0,0,30,1,bon_HEAL_MUL,5,bon_NONE] // "Sacred Rosary"
+,[1992,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Sacred Rosary + Recovery Light"
 ];
 ItemMax = ItemOBJ.length -1;
 }
@@ -2457,6 +2460,7 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[1973,1971,1972,"NULL"] // "Yin Yang Set"
 ,[1979,1977,1978,"NULL"] // "Newoz Set"
 ,[1983,1981,1982,"NULL"] // "Aigu Set"
+,[1992,1991,1388,"NULL"] // "Sacred Set"
 //,[itm_set,item1,item2,...,"NULL"]
 ];
 SE_MAXnum = w_SE.length -1;
