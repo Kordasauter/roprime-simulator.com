@@ -5656,7 +5656,11 @@ function CalcSkillDamage()
 			
 			// MATK [{(Caster s Base Level x 4) + (Shield MDEF x 100)} + (Caster s INT x 2)] %
 			n_A_Weapon_element = ele_HOLY;
-			w_SkillMod = ( ( n_A_BaseLV * 4 ) + shieldMdef ) + ( n_A_INT * 2 / 100.0 );
+			if(shieldMdef != 0)
+				w_SkillMod = ( ( n_A_BaseLV * 4 ) + ( shieldMdef * 100 ) + ( n_A_INT * 2 ) ) / 100.0 ;
+			else
+				w_SkillMod = 0;
+			
 			
 			fixedCastTime *= 0.0;
 			variableCastTime *= 1.0;
@@ -5755,10 +5759,40 @@ function CalcSkillDamage()
 				{
 					SG_Special_DMG[i] = w_DMG[i];
 				}
-				Last_DMG_B[i] = w_DMG[i];
-				Last_DMG_A[i] = w_DMG[i] * w_TotalHits;
-				InnStr[i] += Last_DMG_A[i] + " (" + Last_DMG_B[i] + SubName[8][Language] + w_TotalHits + "hit)";
-				w_DMG[i] = Last_DMG_A[i];
+				if ( n_A_ActiveSkill == skill_ROY_SHIELD_SPELL_MATK )
+				{
+					var shieldMdef = 0;
+					for ( var j = itm_BONUS_START; ItemOBJ[n_A_Equip[eq_SHIELD]][j] !== bon_NONE; j += 2 )
+					{ // find shield MDEF
+						if ( ItemOBJ[n_A_Equip[eq_SHIELD]][j] === bon_MDEF )
+						{
+							shieldMdef = ItemOBJ[n_A_Equip[eq_SHIELD]][j + 1];
+						}
+					}
+
+					if(shieldMdef != 0)
+					{
+						Last_DMG_B[i] = w_DMG[i];
+						Last_DMG_A[i] = w_DMG[i] * w_TotalHits;
+						InnStr[i] += Last_DMG_A[i];
+						w_DMG[i] = Last_DMG_A[i];
+					}
+					else
+					{
+						Last_DMG_B[i] = 0;
+						Last_DMG_A[i] =0;
+						InnStr[i] += "<span style=\"color: red\">Shield doesn't have Mdef</span>";
+						w_DMG[i] = Last_DMG_A[i];
+					}
+
+				}
+				else
+				{
+					Last_DMG_B[i] = w_DMG[i];
+					Last_DMG_A[i] = w_DMG[i] * w_TotalHits;
+					InnStr[i] += Last_DMG_A[i] + " (" + Last_DMG_B[i] + SubName[8][Language] + w_TotalHits + "hit)";
+					w_DMG[i] = Last_DMG_A[i];
+				}
 			}
 		}
 		else
@@ -5784,6 +5818,7 @@ function CalcSkillDamage()
 				myInnerHtml( "CRInum", '<font color="#0000FF">' + spDrainLow + "-" + spDrainHigh + "</font>", 0 );
 			}
 		}
+		
 
 		w_HIT_HYOUJI = 100;
 	}

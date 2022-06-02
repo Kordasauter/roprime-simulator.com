@@ -2817,7 +2817,7 @@ function calcHP()
 		if(SU_VIT >= 120)
 			hpMultiplier += 8;
 	}
-	if(EquipNumSearch(1990) && n_A_SHIELD_DEF_PLUS >= 7) // Seraphing Shield
+	if(EquipNumSearch(1990) && n_A_LEFT_DEF_PLUS >= 7) // Seraphing Shield
 	{
 		hpMultiplier += 5;
 	}
@@ -3394,7 +3394,7 @@ function calcSP( n_A_MaxSP )
 	{ //"Wondrous Foxtail Staff"
 		spMultiplier += 1 * Math.floor(n_A_Weapon_ATKplus / 3);
 	}
-	if(EquipNumSearch(1990) && n_A_SHIELD_DEF_PLUS >= 7) // Seraphing Shield
+	if(EquipNumSearch(1990) && n_A_LEFT_DEF_PLUS >= 7) // Seraphing Shield
 	{
 		spMultiplier += 5;
 	}
@@ -5088,7 +5088,7 @@ function calcASPD()
 			flatASPD += 1;
 		}
 	}
-	if(EquipNumSearch(1990) && n_A_SHIELD_DEF_PLUS >= 9) // Seraphing Shield
+	if(EquipNumSearch(1990) && n_A_LEFT_DEF_PLUS >= 9) // Seraphing Shield
 	{
 		flatASPD += 1;
 	}
@@ -5549,7 +5549,7 @@ function CalcDelay()
 		}
 	}
 	if ( EquipNumSearch( 1459 ) ) {
-		n_tok[bon_RED_CASTDELAY] += n_A_SHIELD_DEF_PLUS*2;
+		n_tok[bon_RED_CASTDELAY] += n_A_LEFT_DEF_PLUS*2;
 	}
 		if ( EquipNumSearch( 1497 ) )
 	{ // UFO Poring Hat
@@ -6023,13 +6023,13 @@ function calcRaceElementalReduction()
 // ---------------------------------------------
 	if(EquipNumSearch(624)) // Hurricane Fury
 		n_tok[bon_RED_SIZ_MEDIUM] += n_A_Weapon_ATKplus;
-	if(EquipNumSearch(1389) && n_A_SHIELD_DEF_PLUS >= 9) // Giant Shield
+	if(EquipNumSearch(1389) && n_A_LEFT_DEF_PLUS >= 9) // Giant Shield
 		n_tok[bon_RED_SIZ_LARGE] += 5;
 	if(EquipNumSearch(1990)) // Seraphing Shield
 	{
-		n_tok[bon_RED_SIZ_SMALL] += 2 * Math.floor(n_A_SHIELD_DEF_PLUS / 3);
-		n_tok[bon_RED_SIZ_MEDIUM] += 2 * Math.floor(n_A_SHIELD_DEF_PLUS / 3);
-		n_tok[bon_RED_SIZ_LARGE] += 2 * Math.floor(n_A_SHIELD_DEF_PLUS / 3);
+		n_tok[bon_RED_SIZ_SMALL] += 2 * Math.floor(n_A_LEFT_DEF_PLUS / 3);
+		n_tok[bon_RED_SIZ_MEDIUM] += 2 * Math.floor(n_A_LEFT_DEF_PLUS / 3);
+		n_tok[bon_RED_SIZ_LARGE] += 2 * Math.floor(n_A_LEFT_DEF_PLUS / 3);
 	}
 	
 	if(SkillSearch(421))
@@ -6084,7 +6084,7 @@ function calcRaceElementalReduction()
 	}
 	if ( EquipNumSearch( 1801 ) ||  EquipNumSearch( 1806 ) )
 	{ // Kalasag
-		n_tok[bon_RED_BOSS] += Math.floor(n_A_SHIELD_DEF_PLUS / 3);
+		n_tok[bon_RED_BOSS] += Math.floor(n_A_LEFT_DEF_PLUS / 3);
 	}
 	if ( EquipNumSearch( 1803 ) ||  EquipNumSearch( 1808 ) )
 	{ // Bakonawa Scale Armor

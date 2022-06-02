@@ -170,7 +170,7 @@ function calcMAtk( includeMultipliers )
 		}
 		if( EquipNumSearch(1519) ) 
 		{ // Orlean's glove + Plate
-			w += n_A_SHIELD_DEF_PLUS;
+			w += n_A_LEFT_DEF_PLUS;
 		}
 		if( EquipNumSearch(1522) ) 
 		{ // Chibi Pope
