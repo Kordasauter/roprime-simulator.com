@@ -1398,7 +1398,7 @@ ITEM_NAME = [
 ,[1395,0,0,"Scarlet-Nail", "Each refine increases [Stone] chance by 0.5%", 0]
 ,[1396,0,0,"Green Surgical Gown", 0]
 ,[1397,0,0,"Bloody Cross", "Each refine increases the chance of activation by 0.5%", 0]
-,[1398,0,0,"Thief Crossbow", "Each refine increases damage inflicted with [Triangle Shot] by 2%, and increases its SP cost.", 0]
+,[1398,0,0,"Catapult", "Each refine increases damage inflicted with [Triangle Shot] by 2%, and increases its SP cost.", 0]
 ,[1399,0,0,"Big Crossbow", "If the user's base AGI is 120: [ASPD] +1<br/>Each refine increases damage inflicted with [Arrow Storm] by 5%, and increases its SP cost.", 0]
 ,[1400,0,0,"Creeper Bow", 0]
 ,[1401,0,0,"Ancient Gold Ornament", "If the user's Base Level is 150: [All Stats] +2<br/>If equipped by a Swordman, Thief or Merchant job type: [ATK] +8%<br/>If equipped by a Mage or Acolyte job type: [MATK] +8%, Heal amount increased by +7%<br/>If equipped by an Archer job type: [DEX] +3, Ranged damage +10%<br/>", 0]
