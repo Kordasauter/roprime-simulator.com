@@ -1785,7 +1785,7 @@ function CalcSkillDamage()
 			w_SkillMod = ( ( n_A_ActiveSkillLV * 1.0 ) + 5.0 ) * n_A_BaseLV / 100.0;
 			if ( knockback )
 			{
-				w_SkillMod += ( n_A_ActiveSkillLV * 1.5 ) + ( 10 * 1 ) + ( n_B[en_LEVEL] * 5 / 100.0 ) * n_A_BaseLV / 150.0;
+				w_SkillMod += ( n_A_ActiveSkillLV * 1.5 )  /*+ ( 10 * 1 )*/ + (( n_B[en_LEVEL] * 5 / 100.0 ) * n_A_BaseLV / 150.0) ;
 			}
 			
 			fixedCastTime *= 0.0;
