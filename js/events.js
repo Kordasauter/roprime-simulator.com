@@ -2618,13 +2618,13 @@ function Click_Card( CardIndex )
 		myInnerHtml("nm080","Very Strong or Top10",0);
 		var str = "A damaged piece of stars +5<BR>If the star piece is constant damage (?)";
 		str += "+40<BR>TOP10 Rank damage +10<BR>(Rank card manufacturing weapons of TOP10 the 4th column)";
-		myInnerHtml( "B_SETUMEI", str, 0 );
+		myInnerHtml( "ItemDescription", str, 0 );
 		return;
 	}
 	if(201 <= CardIndex && CardIndex <= 204)
 	{ // Ele Stones
 		myInnerHtml("nm080",cardOBJ[CardIndex][card_att_NAME],0);
-		myInnerHtml("B_SETUMEI", "[" + ZokuseiOBJ[CardIndex-200][Language] + "]" + GetWord(173),0);
+		myInnerHtml("ItemDescription", "[" + ZokuseiOBJ[CardIndex-200][Language] + "]" + GetWord(173),0);
 		return;
 	}
 	myInnerHtml("nm080",cardOBJ[CardIndex][card_att_NAME] +" Card",0);

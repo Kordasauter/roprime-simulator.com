@@ -328,22 +328,22 @@ ITEM_NAME = [
 ,[325,0,0,"Greaves",0]
 ,[326,0,0,"(No Accessory)",0]
 ,[327,0,0,"Earring",0]
-,[328,0,0,"Earring [1]",0]
+,[328,0,0,"Earring",0]//Slotted
 ,[329,0,0,"Clip",0]
 ,[330,0,0,"Critical Ring",0]
 ,[331,0,0,"Glove",0]
-,[332,0,0,"Glove [1]",0]
+,[332,0,0,"Glove",0]//Slotted
 ,[333,0,0,"Dullahan's Eye",0]
 ,[334,0,0,"Necklace",0]
-,[335,0,0,"Necklace [1]",0]
+,[335,0,0,"Necklace",0]//Slotted
 ,[336,0,0,"Novice Armlet",0]
 ,[337,0,0,"Brooch",0]
-,[338,0,0,"Brooch [1]",0]
+,[338,0,0,"Brooch",0]//Slotted
 ,[339,0,0,"Belt",0]
 ,[340,0,0,"Ring",0]
-,[341,0,0,"Ring [1]",0]
+,[341,0,0,"Ring",0]//Slotted
 ,[342,0,0,"Rosary",0]
-,[343,0,0,"Rosary [1]",0]
+,[343,0,0,"Rosary",0]//Slotted
 ,[344,0,0,"Bow Thimble",0]
 ,[345,0,0,"Martyr's Leash",0]
 ,[346,0,0,"Celebrant's Mitten",0]
@@ -453,7 +453,7 @@ ITEM_NAME = [
 ,[450,0,0,"Tiger Mask",0]
 ,[451,0,0,"Electric Guitar",0]
 ,[452,0,0,"Takius Blindfold",0]
-,[453,0,0,"Coif [1]",0]
+,[453,0,0,"Coif",0]//Slotted
 ,[454,0,0,"The Sign",0]
 ,[455,0,0,"Magic Eyes",0]
 ,[456,0,0,"Hibiscus",0]
@@ -474,10 +474,10 @@ ITEM_NAME = [
 ,[471,0,0,"Gae Bolg",0]
 ,[472,0,0,"Windhawk",0]
 ,[473,0,0,"Hypnotist's Staff",0]
-,[474,0,0,"Survivor's Rod [0] (dex)",0]
-,[475,0,0,"Survivor's Rod [1] (dex)",0]
-,[476,0,0,"Survivor's Rod [0] (int)",0]
-,[477,0,0,"Survivor's Rod [1] (int)",0]
+,[474,0,0,"Survivor's Rod (dex)",0] //non slotted
+,[475,0,0,"Survivor's Rod (dex)",0]//slotted
+,[476,0,0,"Survivor's Rod (int)",0]//non slotted
+,[477,0,0,"Survivor's Rod (int)",0]//slotted
 ,[478,0,0,"Wing Staff",0]
 ,[479,0,0,"Dragon Wing","Add 3% chance to drop [Oridecon Arrow] when killing [Dragon] monsters",0]
 ,[480,0,0,"Specialty Jur","[Bleeding] yourself by 0.1%",0]
@@ -603,13 +603,13 @@ ITEM_NAME = [
 ,[600,0,0,"Holy Marching Hat",0]
 ,[601,0,0,"Resort Hat",0]
 ,[602,0,0,"Lily Crown",0]
-,[603,0,0,"Claytos Cracking Earth Armor [1]",0]
-,[604,0,0,"Lucius's Fierce Armor of Volcano [1]",0]
-,[605,0,0,"Saphien's Armor of Ocean [1]",0]
-,[606,0,0,"Aebecee's Raging Typhoon Armor [1]",0]
-,[607,0,0,"Ice Pick [1]",0]
-,[608,0,0,"Crown [1]",0]
-,[609,0,0,"Tiara [1]",0]
+,[603,0,0,"Claytos Cracking Earth Armor",0]
+,[604,0,0,"Lucius's Fierce Armor of Volcano",0]
+,[605,0,0,"Saphien's Armor of Ocean",0]
+,[606,0,0,"Aebecee's Raging Typhoon Armor",0]
+,[607,0,0,"Ice Pick",0]
+,[608,0,0,"Crown",0]
+,[609,0,0,"Tiara",0]//Slotted
 ,[610,0,0,"Scalpel",0]
 ,[611,0,0,"Tooth Blade","If upgraded from +0 to +8: When performing a physical attack, there is a 5% chance to cast the skill [Slow Cast] Lv 1<br/>If upgraded to +9 or higher: When performing a physical attack, there is a 7% chance to cast the skill [Slow Cast] Lv 2",0]
 ,[612,0,0,"Silver Shotel",0]
@@ -1135,7 +1135,7 @@ ITEM_NAME = [
 ,[1132,0,0,"White Fox Mask",0]
 ,[1133,0,0,"Evolved Pipe",0]
 ,[1134,0,0,"Novice Cutter",0]
-,[1135,0,0,"Novice Main-Gauche[3]",0]
+,[1135,0,0,"Novice Main-Gauche",0]
 ,[1136,0,0,"Novice Falchion",0]
 ,[1137,0,0,"Novice Mace",0]
 ,[1138,0,0,"Novice Battle Axe",0]
@@ -1537,7 +1537,7 @@ ITEM_NAME = [
 ,[1534,0,0,"Seal of Cathedral","Allows the user to enchant items with effects related to the effectiveness of healing skills.",0]
 ,[1535,0,0,"Gozarian Mask","",0]
 ,[1536,0,0,"Ring of Archbishop","Allows the user to enchant items with effects related to the effectiveness of healing skills.",0]
-,[1537,0,0,"Mace of Judgement [0]","Physical and Magical Attacks have a chance to do 20% more damage to Demon monsters for 7 seconds.",0]
+,[1537,0,0,"Mace of Judgement","Physical and Magical Attacks have a chance to do 20% more damage to Demon monsters for 7 seconds.",0]
 ,[1538,0,0,"Shoes of Judgement","",0]
 ,[1539,0,0,"Shawl of Judgement","Adds a chance of casting [Oratio] Lv 2 while being physically or magically attacked. If a higher level of this skill is learned then that level will activate.",0]
 ,[1540,0,0,"Robe of Judgement","Decreases SP cost of [Judex] by 40.",0]

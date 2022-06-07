@@ -1664,7 +1664,11 @@ function WeaponSet()
 
 	work = sort(work);
 	for (i=0;i<j; i++)
-		document.calcForm.A_weapon1.options[i] = new Option(ITEM_NAME[work[i]][1+ Language*2],ItemOBJ[work[i]][0]);
+		if(ItemOBJ[work[i]][5] != 0)
+				document.calcForm.A_weapon1.options[i] = new Option(ITEM_NAME[work[i]][1+ Language*2] + " [" + ItemOBJ[work[i]][5] + "]",ItemOBJ[work[i]][0]);
+			else
+				document.calcForm.A_weapon1.options[i] = new Option(ITEM_NAME[work[i]][1+ Language*2],ItemOBJ[work[i]][0]);
+		// document.calcForm.A_weapon1.options[i] = new Option(ITEM_NAME[work[i]][1+ Language*2],ItemOBJ[work[i]][0]);
 }
 
 function WeaponSetLeft()
@@ -1837,57 +1841,84 @@ with(document.calcForm)
 	for(i=0;i<wsj[0];i++){ // Upper Head - fill dropdown
 		z = workB[0][i];
 		if(z < ITEM_NAME.length)
-			A_head1.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
+			if(ItemOBJ[z][5] != 0)
+				A_head1.options[i] = new Option(ITEM_NAME[z][nx] + " [" + ItemOBJ[z][5] + "]",ItemOBJ[z][0]);
+			else
+				A_head1.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
 		else
 			A_head1.options[i] = new Option("[missing name]",ItemOBJ[z][0]);
 	}
 	for(i=0;i<wsj[1];i++){ // middle head - fill dropdown
 		z = workB[1][i];
 		if(z < ITEM_NAME.length)
-			A_head2.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
+			if(ItemOBJ[z][5] != 0)
+				A_head2.options[i] = new Option(ITEM_NAME[z][nx] + " [" + ItemOBJ[z][5] + "]",ItemOBJ[z][0]);
+			else
+				A_head2.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
 		else
 			A_head2.options[i] = new Option("[missing name]",ItemOBJ[z][0]);
 	}
 	for(i=0;i<wsj[2];i++){ // lower head - fill dropdown
 		z = workB[2][i];
 		if(z < ITEM_NAME.length)
-			A_head3.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
+			if(ItemOBJ[z][5] != 0)
+				A_head3.options[i] = new Option(ITEM_NAME[z][nx] + " [" + ItemOBJ[z][5] + "]",ItemOBJ[z][0]);
+			else
+				A_head3.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
 		else
 			A_head3.options[i] = new Option("[missing name]",ItemOBJ[z][0]);
 	}
 	for(i=0;i<wsj[3];i++){ // shield - fill dropdown
 		z = workB[3][i];
 		if(z < ITEM_NAME.length)
-			A_left.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
+			if(ItemOBJ[z][5] != 0)
+				A_left.options[i] = new Option(ITEM_NAME[z][nx] + " [" + ItemOBJ[z][5] + "]",ItemOBJ[z][0]);
+			else
+				A_left.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
 		else
 			A_left.options[i] = new Option("[missing name]",ItemOBJ[z][0]);
 	}
 	for(i=0;i<wsj[4];i++){ // armor - fill dropdown
 		z = workB[4][i];
 		if(z < ITEM_NAME.length)
-			A_body.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
+			if(ItemOBJ[z][5] != 0)
+				A_body.options[i] = new Option(ITEM_NAME[z][nx] + " [" + ItemOBJ[z][5] + "]",ItemOBJ[z][0]);
+			else
+				A_body.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
 		else
 			A_body.options[i] = new Option("[missing name]",ItemOBJ[z][0]);
 	}
 	for(i=0;i<wsj[5];i++){ // garment - fill dropdown
 		z = workB[5][i];
 		if(z < ITEM_NAME.length)
-			A_shoulder.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
+			if(ItemOBJ[z][5] != 0)
+				A_shoulder.options[i] = new Option(ITEM_NAME[z][nx] + " [" + ItemOBJ[z][5] + "]",ItemOBJ[z][0]);
+			else
+				A_shoulder.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
 		else
 			A_shoulder.options[i] = new Option("[missing name]",ItemOBJ[z][0]);
 	}
 	for(i=0;i<wsj[6];i++){ // shoes - fill dropdown
 		z = workB[6][i];
 		if(z < ITEM_NAME.length)
-			A_shoes.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
+			if(ItemOBJ[z][5] != 0)
+				A_shoes.options[i] = new Option(ITEM_NAME[z][nx] + " [" + ItemOBJ[z][5] + "]",ItemOBJ[z][0]);
+			else
+				A_shoes.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
 		else
 			A_shoes.options[i] = new Option("[missing name]",ItemOBJ[z][0]);
 	}
 	for(i=0;i<wsj[7];i++){ // accessory - fill dropdown
 		z = workB[7][i];
 		if(z < ITEM_NAME.length){
-			A_acces1.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
-			A_acces2.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
+			if(ItemOBJ[z][5] != 0)
+				A_acces1.options[i] = new Option(ITEM_NAME[z][nx] + " [" + ItemOBJ[z][5] + "]",ItemOBJ[z][0]);
+			else
+				A_acces1.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
+			if(ItemOBJ[z][5] != 0)
+				A_acces2.options[i] = new Option(ITEM_NAME[z][nx] + " [" + ItemOBJ[z][5] + "]",ItemOBJ[z][0]);
+			else
+				A_acces2.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
 		}else{
 			A_acces1.options[i] = new Option("[missing name]",ItemOBJ[z][0]);
 			A_acces2.options[i] = new Option("[missing name]",ItemOBJ[z][0]);
