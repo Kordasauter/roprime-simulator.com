@@ -2434,6 +2434,16 @@ function CalcSkillDamage()
 			
 			fixedCastTime *= 1.0;
 			variableCastTime *=  1.0;
+			n_Delay[ksDelayA] = 1.0;
+			n_Delay[ksDelayCooldown] = 6.0;
+			if(EquipNumSearch(1993))
+			{//"Shadow Doram Battler Shield"
+				n_Delay[ksDelayCooldown] -= (n_A_SHADOW_SHIELD_DEF_PLUS * 0.2);
+			}
+			if(EquipNumSearch(2003))
+			{//"Shadow Doram Battler Armor + Boots"
+				n_Delay[ksDelayCooldown] -= 3.0;
+			}
 		}
 		else if(n_A_ActiveSkill==skill_SUM_SPIRIT_OF_SAVAGE)
 		{
@@ -3627,10 +3637,11 @@ function CalcSkillDamage()
 	{
 		n_A_Weapon_element = KunaiOBJ[parseInt(formElements["SkillSubNum"].value)][1];
 		damageType = kDmgTypeMelee;
-		w_SkillMod = ( 0.6 * (5 + n_A_ActiveSkillLV) );
+		// w_SkillMod = ( 0.6 * (5 + n_A_ActiveSkillLV) );
+		w_SkillMod = ( 3 * (0.6 + n_A_ActiveSkillLV) );
 		CalcAtkMods02(w_SkillMod,0);
 		if (n_tok[bon_ICE_PICK])
-			equipmentAttack -= Math.floor( n_B[en_HARDDEF] / 2 );
+			equipmentAttack += Math.floor( n_B[en_HARDDEF] / 2 );
 		var tempAttack = (equipmentAttack + n_A_Weapon_ATK + weaponUpgradeAttack + overrefineAttack + strengthBonusAttack);
 		for ( var i = 0; i < 3; i++ )
 		{
@@ -5726,6 +5737,10 @@ function CalcSkillDamage()
 			}
 			n_Delay[ksDelayGlobal] = 1.0;
 			n_Delay[ksDelayCooldown] = 1.0;
+			if(EquipNumSearch(2004))
+			{//"Shadow Doram Mage Armor + Boots"
+				n_Delay[ksDelayCooldown] -= 1.0;
+			}
 		}
 		else if ( n_A_ActiveSkill == skill_SUM_CATNIP_METEOR )
 		{	
@@ -5744,6 +5759,10 @@ function CalcSkillDamage()
 			
 			n_Delay[ksDelayGlobal] = 1.0;
 			n_Delay[ksDelayCooldown] = 5.0;
+			if(EquipNumSearch(1994))
+			{//"Shadow Doram Mage Shield"
+				n_Delay[ksDelayCooldown] -= (n_A_SHADOW_SHIELD_DEF_PLUS * 0.1);
+			}
 		}
 		
 		

@@ -261,6 +261,12 @@ function calcMAtk( includeMultipliers )
 		{ // Shadow Taekwon Gloves
 			w += n_A_SHADOW_WEAPON_DEF_PLUS;
 		}
+		if ( EquipNumSearch(1996) )
+		{ // Shadow Doram Mage Gloves
+			if(n_A_SHADOW_WEAPON_DEF_PLUS >=7){w += 5;}
+			if(n_A_SHADOW_WEAPON_DEF_PLUS >=9){w += 5;}
+		}
+		
 		//Enchant
 		if(EnchNumSearch( 284 ))//Special INT = 284
 		{
@@ -523,7 +529,9 @@ function calcMAtk( includeMultipliers )
 	 EquipNumSearch( 1839 ) || // "Shadow Ninja Gloves"
 	 EquipNumSearch( 1840 ) || // "Shadow Taekwon Gloves"
 	 EquipNumSearch( 1841 ) || // "Shadow Super Novice Gloves"
-	 EquipNumSearch( 1842 ) )  // "Shadow Gunslinger Gloves"
+	 EquipNumSearch( 1842 ) || // "Shadow Gunslinger Gloves"
+	 EquipNumSearch( 1995 ) || // "Shadow Doram Battler Gloves"
+	 EquipNumSearch( 1996 ) )  // "Shadow Doram Mage Gloves"
 	{ // 
 		n_A_EquipMATK += n_A_SHADOW_WEAPON_DEF_PLUS; 
 	}
@@ -858,6 +866,13 @@ function CalcMagicDamage( rawDamage )
 	}
 	else
 	{
+		for(var i = 0 ; i < 3 ; i++)
+		{
+			if ( n_tok[bon_IGN_MDEF_SIZ_SMALL + i] > 0 &&  n_B[en_SIZE]==(siz_SMALL + i))
+			{
+				wBMC_MDEF = wBMC_MDEF - (wBMC_MDEF * (n_tok[bon_IGN_MDEF_SIZ_SMALL + i] / 100) );
+			}
+		}
 		wBMC2 = Math.floor( rawDamage * mdefReduction( wBMC_MDEF ) - n_B_MDEF2 );
 	}
 	

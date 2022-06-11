@@ -726,7 +726,7 @@ SKILL_NAME = [
 ,["Overthrow","Overthrow"]
 ,["Cross Strike","Cross Strike"]
 ,["16th Night","16th Night"]
-,["Spin Throw Kunai","Spin Throw Kunai"]
+,["Kunai Splash","Kunai Splash"]//Spin Throw Kunai
 ,["Spirit Breaker","Spirit Breaker"]
 ,["Swirling Petal","Swirling Petal"]
 ,["Throw Explosive Kunai","Throw Explosive Kunai"]

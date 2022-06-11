@@ -502,8 +502,15 @@ function ApplyEnemyDefense( damage, index, wBC4_3 )
 	{
 		return damage + wBC4_3;
 	}
-
-	if ( n_tok[bon_ICE_PICK] === 0 )
+	
+	for(var i = 0 ; i < 3 ; i++)
+	{
+		if ( n_tok[bon_IGN_DEF_SIZ_SMALL + i] > 0 &&  n_B[en_SIZE]==(siz_SMALL + i))
+		{
+			return Math.floor( damage * defReduction( n_B[en_HARDDEF] - (n_B[en_HARDDEF] * (n_tok[bon_IGN_DEF_SIZ_SMALL + i] / 100) ) ) ) - n_B_DEF2[0] + wBC4_3;
+		}
+	}
+	if ( n_tok[bon_ICE_PICK] === 0 || n_A_ActiveSkill == skill_KAG_THROW_EXPLOSIVE_KUNAI)
 	{ // Player has no Ice Pick, apply defence
 		damage = Math.floor( damage * defReduction( n_B[en_HARDDEF] ) ) - n_B[en_SOFTDEF] + wBC4_3;
 	}
@@ -889,6 +896,75 @@ function ApplySkillModifiers( damage )
 		if(n_A_ActiveSkill == skill_SUR_TIGER_CANNON)
 		{
 			dmgMultiplier += 7 * Math.floor(n_A_Weapon_ATKplus / 2);
+		}
+	}
+	if(n_A_ActiveSkill == skill_SUM_LUNATIC_CARROT_BEAT)
+	{
+		if(EquipNumSearch(1993))
+		{//"Shadow Doram Battler Shield"
+			if(n_A_SHADOW_SHIELD_DEF_PLUS >= 7){dmgMultiplier += 5;}
+			if(n_A_SHADOW_SHIELD_DEF_PLUS >= 9){dmgMultiplier += 5;}
+		}
+		if(EquipNumSearch(1997))
+		{//"Shadow Doram Battler Armor"
+			dmgMultiplier += n_A_SHADOW_BODY_DEF_PLUS * 3;
+		}
+	}
+	if(n_A_ActiveSkill == skill_SUM_CATNIP_METEOR)
+	{
+		if(EquipNumSearch(1994))
+		{//"Shadow Doram Mage Shield"
+			if(n_A_SHADOW_SHIELD_DEF_PLUS >= 7){dmgMultiplier += 5;}
+			if(n_A_SHADOW_SHIELD_DEF_PLUS >= 9){dmgMultiplier += 5;}
+		}
+	}
+	if(n_A_ActiveSkill == skill_SUM_SILVERVINE_STEM_SPEAR)
+	{
+		if(EquipNumSearch(1998))
+		{//"Shadow Doram Mage Armor"
+			dmgMultiplier += n_A_SHADOW_BODY_DEF_PLUS * 3;
+		}
+	}
+	if(n_A_ActiveSkill == skill_NIN_FLAMING_PETALS)
+	{
+		if(EquipNumSearch(2007))
+		{//"Shadow Oboro Armor"
+			dmgMultiplier += n_A_SHADOW_BODY_DEF_PLUS * 5;
+		}
+	}
+	if(n_A_ActiveSkill == skill_NIN_FREEZING_SPEAR)
+	{
+		if(EquipNumSearch(2007))
+		{//"Shadow Oboro Armor"
+			dmgMultiplier += n_A_SHADOW_BODY_DEF_PLUS * 5;
+		}
+	}
+	if(n_A_ActiveSkill == skill_NIN_WIND_BLADE)
+	{
+		if(EquipNumSearch(2007))
+		{//"Shadow Oboro Armor"
+			dmgMultiplier += n_A_SHADOW_BODY_DEF_PLUS * 5;
+		}
+	}
+	if(n_A_ActiveSkill == skill_KAG_SWIRLING_PETAL)
+	{
+		if(EquipNumSearch(2008))
+		{//"Shadow Kagerou Armor"
+			dmgMultiplier += n_A_SHADOW_BODY_DEF_PLUS * 5;
+		}
+	}
+	if(n_A_ActiveSkill == skill_KAG_SPINTHROW_KUNAI)
+	{
+		if(EquipNumSearch(2011))
+		{//"Shadow Kagerou Boots"
+			dmgMultiplier += n_A_SHADOW_BODY_DEF_PLUS * 5;
+		}
+	}
+	if(n_A_ActiveSkill == skill_REB_GODS_HAMMER)
+	{
+		if(EquipNumSearch(2012))
+		{//"Shadow Rebellion Boots"
+			dmgMultiplier += n_A_SHADOW_BODY_DEF_PLUS * 5;
 		}
 	}
 	// if ( EquipNumSearch( 1399 ) && n_A_ActiveSkill == skill_RAN_ARROW_STORM)

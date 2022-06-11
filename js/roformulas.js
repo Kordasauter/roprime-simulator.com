@@ -927,6 +927,10 @@ function CalcEquipAtk()
 	{ 
 		equipmentAttack += n_A_SHADOW_WEAPON_DEF_PLUS;
 	}
+	if( EquipNumSearch(1995) || EquipNumSearch(1996))
+	{// Shadow Doram Battler Gloves ||Shadow Doram Mage Glove
+		equipmentAttack += n_A_SHADOW_WEAPON_DEF_PLUS;
+	}
 	
 	//Enchante
 	if(EnchNumSearch( 281 ))//Special STR = 281
@@ -1951,12 +1955,14 @@ function CalcRangedMod()
 			n_tok[bon_DMG_RANGE] += 6;
 	}
 	
-	
-	
 	if( EquipNumSearch(1842))
 	{//Shadow Gunslinger Gloves
 		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7){n_tok[bon_DMG_RANGE] += 3;}
 		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 8){n_tok[bon_DMG_RANGE] += 5;}
+	}
+	if( EquipNumSearch(1995))
+	{//Shadow Doram Battler Gloves
+		n_tok[bon_DMG_RANGE] += n_A_SHADOW_WEAPON_DEF_PLUS;
 	}
 	if(EquipNumSearch(1860))
 	{ //"Feathered Tricorn"
@@ -2591,7 +2597,12 @@ function calcHP()
 		 EquipNumSearch( 1747 ) || // "Shadow Sage Armor"
 		 EquipNumSearch( 1750 ) || // "Shadow Hunter Armor"
 		 EquipNumSearch( 1753 ) || // "Shadow Bard Armor"
-		 EquipNumSearch( 1756 ) )  // "Shadow Dancer Armor"
+		 EquipNumSearch( 1756 ) || // "Shadow Dancer Armor"
+		 EquipNumSearch( 1997 ) || // "Shadow Doram Battler Armor"
+		 EquipNumSearch( 1998 ) || // "Shadow Doram Mage Armor"
+		 EquipNumSearch( 2007 ) || // "Shadow Oboro Armor"
+		 EquipNumSearch( 2008 ) || // "Shadow Kagerou Armor"
+		 EquipNumSearch( 2009 ) )  // "Shadow Rebellion Armor"
 	{ // 
 		additiveHP += n_A_SHADOW_BODY_DEF_PLUS * 10; 
 	}
@@ -2608,7 +2619,12 @@ function calcHP()
 		 EquipNumSearch( 1748 ) || // "Shadow Sage Boots"
 		 EquipNumSearch( 1751 ) || // "Shadow Hunter Boots"
 		 EquipNumSearch( 1754 ) || // "Shadow Bard Boots"
-		 EquipNumSearch( 1757 ) )  // "Shadow Dancer Boots"
+		 EquipNumSearch( 1757 ) || // "Shadow Dancer Boots"
+		 EquipNumSearch( 1999 ) || // "Shadow Doram Battler Boots"
+		 EquipNumSearch( 2000 ) || // "Shadow Doram Mage Boots"
+		 EquipNumSearch( 2010 ) || // "Shadow Oboro Boots"
+		 EquipNumSearch( 2011 ) || // "Shadow Kagerou Boots"
+		 EquipNumSearch( 2012 ) )  // "Shadow Rebellion Boots"
 	{ // 
 		additiveHP += n_A_SHADOW_SHOES_DEF_PLUS * 10; 
 	}
@@ -2628,7 +2644,9 @@ function calcHP()
 		 EquipNumSearch( 1822 ) || // "Shadow Ninja Shield"
 		 EquipNumSearch( 1823 ) || // "Shadow Taekwon Shield"
 		 EquipNumSearch( 1824 ) || // "Shadow Super Novice Shield"
-		 EquipNumSearch( 1825 ) )  // "Shadow Gunslinger Shield"
+		 EquipNumSearch( 1825 ) || // "Shadow Gunslinger Shield"
+		 EquipNumSearch( 1993 ) || // "Shadow Doram Battler Shield"
+		 EquipNumSearch( 1994 ) )  // "Shadow Doram Mage Shield"
 	{ // 
 		additiveHP += n_A_SHADOW_SHIELD_DEF_PLUS * 10; 
 	}
@@ -4305,6 +4323,12 @@ function calcPDodge( n_A_LUCKY )
 		n_A_LUCKY += Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
 	}
 	
+	//Shadows
+	if( EquipNumSearch(1995))
+	{//Shadow Doram Battler Gloves
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7){n_A_LUCKY += 2;}
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9){n_A_LUCKY += 3;}
+	}
 	// Perfect Tablature
 	if ( performerBuffs[ksBardSolo] === ksPerfectTablature && performerBuffs[ksBardSoloLevel] > 0 )
 	{
@@ -5108,6 +5132,16 @@ function calcASPD()
 		if(n_A_SHADOW_WEAPON_DEF_PLUS >=7){flatASPD += 1;}
 		if(n_A_SHADOW_WEAPON_DEF_PLUS >=9){flatASPD += 1;}
 	}
+	if( EquipNumSearch(1995))
+	{//Shadow Doram Battler Gloves
+		if(SkillSearch(skill_SUM_SPIRIT_OF_LAND))
+			flatASPD += 1;
+	}
+	if( EquipNumSearch(1993))
+	{//Shadow Doram Battler Shield
+		if(SkillSearch(skill_SUM_ARCLOUSE_DASH))
+			flatASPD += 1;
+	}
 	// if ( SkillSearch( skill_RUN_FIGHTING_SPIRIT ) )
 	// { // Asir Rune
 		// flatASPD += SkillSearch( skill_RUN_RUNE_MASTERY ) / 10.0 * 4;
@@ -5305,6 +5339,11 @@ function CalcVariableCast()
 		w -= n_A_SHADOW_SHIELD_DEF_PLUS;
 		if(n_A_SHADOW_SHIELD_DEF_PLUS >= 9){ w -= SkillSearch(skill_AR_OWLS_EYE);}
 	}
+	if ( EquipNumSearch(1996) )
+	{ // Shadow Doram Mage Gloves
+		w -= n_A_SHADOW_WEAPON_DEF_PLUS;
+	}
+	
 	// Skills
 	if ( performerBuffs[ksBardSolo] === ksMagicStrings && performerBuffs[ksBardSoloLevel] > 0 )
 	{ // Magic Strings
@@ -5440,7 +5479,11 @@ function CalcFixedCast()
 		if(SU_DEX >= 120)
 			reductionFlat += -0.5;
 	}
-	
+	if ( EquipNumSearch(1996) )
+	{ // Shadow Doram Mage Gloves
+		if(SkillSearch(skill_SUM_SPIRIT_OF_LAND))
+			reductionFlat += -0.1;
+	}
 	//Enchant
 	for(var i = 0; i < 6; i++)
 	{

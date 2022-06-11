@@ -2010,6 +2010,35 @@
 ,[1990,itm_type_SHIELD,0,80,0,1,0,125,bon_NONE] // "Seraphing Shield"
 ,[1991,itm_type_HEAD_LOWER,0,12,0,0,30,1,bon_HEAL_MUL,5,bon_NONE] // "Sacred Rosary"
 ,[1992,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Sacred Rosary + Recovery Light"
+//new shadows
+,[1993,itm_type_SHADOW_SHIELD,224,0,0,0,0,0,bon_PHY_ATK,3,bon_NONE] // "Shadow Doram Battler Shield"
+,[1994,itm_type_SHADOW_SHIELD,224,0,0,0,0,0,bon_MATK_MUL,3,bon_NONE] // "Shadow Doram Mage Shield"
+,[1995,itm_type_SHADOW_WEAPON,224,0,0,0,0,0,bon_NONE] // "Shadow Doram Battler Gloves"
+,[1996,itm_type_SHADOW_WEAPON,224,0,0,0,0,0,bon_RED_CAST,-5,bon_NONE] // "Shadow Doram Mage Gloves"
+,[1997,itm_type_SHADOW_ARMOR,224,0,0,0,0,0,bon_DMG_SKILL + skill_SUM_PICKY_PECK,20,bon_NONE] // "Shadow Doram Battler Armor"
+,[1998,itm_type_SHADOW_ARMOR,224,0,0,0,0,0,bon_DMG_SKILL + skill_SUM_CATNIP_METEOR,20,bon_NONE] // "Shadow Doram Mage Armor"
+,[1999,itm_type_SHADOW_SHOES,224,0,0,0,0,0,bon_DELAY_SKILL_FLAT + skill_SUM_HISS,3,bon_NONE] // "Shadow Doram Battler Boots"
+,[2000,itm_type_SHADOW_SHOES,224,0,0,0,0,0,bon_DELAY_SKILL_FLAT + skill_SUM_CHATTERING,3,bon_NONE] // "Shadow Doram Mage Boots"
+,[2001,itm_type_SET,0,0,0,0,0,0,bon_ALL_STATS,3,bon_HP_MUL,2,bon_SP_MUL,2,bon_NONE] // "Shadow Doram Battler Gloves + Shadow Doram Battler Shield"
+,[2002,itm_type_SET,0,0,0,0,0,0,bon_ALL_STATS,3,bon_HP_MUL,2,bon_SP_MUL,2,bon_NONE] // "Shadow Doram Mage Gloves + Shadow Doram Mage Shield"
+,[2003,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Shadow Doram Battler Armor + Shadow Doram Battler Boots"
+,[2004,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Shadow Doram Mage Armor + Shadow Doram Mage Boots"
+,[2005,itm_type_SET,0,0,0,0,0,0,bon_ALL_STATS,7,bon_HP_MUL,3,bon_SP_MUL,3,bon_IGN_DEF_SIZ_MEDIUM,50,bon_IGN_MDEF_SIZ_MEDIUM,50,bon_NONE] // "Shadow Doram Battler Set"
+,[2006,itm_type_SET,0,0,0,0,0,0,bon_ALL_STATS,7,bon_HP_MUL,3,bon_SP_MUL,3,bon_IGN_DEF_SIZ_MEDIUM,50,bon_IGN_MDEF_SIZ_MEDIUM,50,bon_NONE] // "Shadow Doram Mage Set"
+,[2007,itm_type_SHADOW_ARMOR,221,0,0,0,0,0,bon_DMG_SKILL + skill_NIN_FLAMING_PETALS,20,bon_DMG_SKILL + skill_NIN_FREEZING_SPEAR,20,bon_DMG_SKILL + skill_NIN_WIND_BLADE,20,bon_NONE] // "Shadow Oboro Armor"
+,[2008,itm_type_SHADOW_ARMOR,221,0,0,0,0,0,bon_DMG_SKILL + skill_KAG_SWIRLING_PETAL,20,bon_NONE] // "Shadow Kagerou Armor"
+,[2009,itm_type_SHADOW_ARMOR,222,0,0,0,0,0,bon_DELAY_SKILL_FLAT + skill_REB_HIT_BARREL,1,bon_NONE] // "Shadow Rebellion Armor"
+,[2010,itm_type_SHADOW_SHOES,221,0,0,0,0,0,bon_NONE] // "Shadow Oboro Boots"
+,[2011,itm_type_SHADOW_SHOES,221,0,0,0,0,0,bon_DMG_SKILL + skill_KAG_SPINTHROW_KUNAI,20,bon_NONE] // "Shadow Kagerou Boots"
+,[2012,itm_type_SHADOW_SHOES,222,0,0,0,0,0,bon_DMG_SKILL + skill_REB_GODS_HAMMER,20,bon_NONE] // "Shadow Rebellion Boots"
+,[2013,itm_type_SET,0,0,0,0,0,0,bon_INC_MAGIC_WATER,5,bon_INC_MAGIC_FIRE,5,bon_INC_MAGIC_WIND,5,bon_NONE] // "Shadow Oboro Armor + Boots"
+,[2014,itm_type_SET,0,0,0,0,0,0,bon_DELAY_SKILL_FLAT + skill_KAG_CROSS_STRIKE,1,bon_DMG_RANGE,5,bon_NONE] // "Shadow Kagerou Armor + Boots"
+,[2015,itm_type_SET,0,0,0,0,0,0,bon_DELAY_SKILL_FLAT + skill_REB_GODS_HAMMER,2,bon_NONE] // "Shadow Rebellion Armor + Boots"
+,[2016,itm_type_SET,0,0,0,0,0,0,bon_ALL_STATS,7,bon_HP_MUL,3,bon_SP_MUL,3,bon_NONE] // "Shadow Oboro Set"
+,[2017,itm_type_SET,0,0,0,0,0,0,bon_ALL_STATS,7,bon_HP_MUL,3,bon_SP_MUL,3,bon_NONE] // "Shadow Kagerou Set"
+,[2018,itm_type_SET,0,0,0,0,0,0,bon_ALL_STATS,7,bon_HP_MUL,3,bon_SP_MUL,3,bon_NONE] // "Shadow Rebellion Set"
+// ,[2019,itm_,à,0,0,0,0,0,bon_NONE] // ""
+
 ];
 ItemMax = ItemOBJ.length -1;
 }
@@ -2231,6 +2260,30 @@ function BuildItemDescription( bonusType, bonusValue )
 			CBIstr += "["+ SKILL_NAME[bonusType -7000][Language] +"] Cast Time "+ bonusValue +"%<br/>";
 		else*/
 			CBIstr += "["+ SKILL_NAME[bonusType -bon_DELAY_SKILL_FLAT][Language] +"] Cooldown "+ (-1 * bonusValue) +"sec<br/>";
+	}
+	if(bonusType  == bon_IGN_DEF_SIZ_SMALL)
+	{
+		CBIstr += "Ignores " + bonusValue + "% of physical defense rate of small size enemies<br>";
+	}
+	if(bonusType  == bon_IGN_DEF_SIZ_MEDIUM)
+	{
+		CBIstr += "Ignores " + bonusValue + "% of physical defense rate of medium size enemies<br>";
+	}
+	if(bonusType  == bon_IGN_DEF_SIZ_LARGE)
+	{
+		CBIstr += "Ignores " + bonusValue + "% of physical defense rate of large size enemies<br>";
+	}
+	if(bonusType  == bon_IGN_MDEF_SIZ_SMALL)
+	{
+		CBIstr += "Ignores " + bonusValue + "% of magical defense rate of small size enemies<br>";
+	}
+	if(bonusType  == bon_IGN_MDEF_SIZ_MEDIUM)
+	{
+		CBIstr += "Ignores " + bonusValue + "% of magical defense rate of medium size enemies<br>";
+	}
+	if(bonusType  == bon_IGN_MDEF_SIZ_LARGE)
+	{
+		CBIstr += "Ignores " + bonusValue + "% of magical defense rate of large size enemies<br>";
 	}
 	
 	return CBIstr;
@@ -2461,6 +2514,22 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[1979,1977,1978,"NULL"] // "Newoz Set"
 ,[1983,1981,1982,"NULL"] // "Aigu Set"
 ,[1992,1991,1388,"NULL"] // "Sacred Set"
+,[2001,1993,1995,"NULL"] // "Shadow Doram Battler Gloves + Shadow Doram Battler Shield"
+,[2002,1994,1996,"NULL"] // "Shadow Doram Mage Gloves + Shadow Doram Mage Shield"
+,[2003,1997,1999,"NULL"] // "Shadow Doram Battler Armor + Shadow Doram Battler Boots"
+,[2004,1998,2000,"NULL"] // "Shadow Doram Mage Armor + Shadow Doram Mage Boots"
+,[2005,1993,1995,1997,1999,"NULL"] // "Shadow Doram Battler Set"
+,[2006,1994,1996,1998,2000,"NULL"] // "Shadow Doram Mage Set"
+,[2013,2007,2010,"NULL"] // "Shadow Oboro Armor + Boots"
+,[2014,2008,2011,"NULL"] // "Shadow Kagerou Armor + Boots"
+,[2015,2009,2012,"NULL"] // "Shadow Rebellion Armor + Boots"
+,[2016,2007,2010,1822,1839,"NULL"] // "Shadow Oboro Set"
+,[2017,2008,2011,1822,1839,"NULL"] // "Shadow Kagerou Set"
+,[2018,2009,2012,1825,1842,"NULL"] // "Shadow Rebellion Set"
+
+
+
+
 //,[itm_set,item1,item2,...,"NULL"]
 ];
 SE_MAXnum = w_SE.length -1;
