@@ -967,6 +967,27 @@ function ApplySkillModifiers( damage )
 			dmgMultiplier += n_A_SHADOW_BODY_DEF_PLUS * 5;
 		}
 	}
+	if(n_A_ActiveSkill == skill_MEC_AXE_BOOMERANG)
+	{
+		if(CardNumSearch(656) && n_A_Weapon_ATKplus >= 10)
+		{ //Step Card
+			dmgMultiplier += CardNumSearch(656) * 30;
+		}
+	}
+	if(n_A_ActiveSkill == skill_MEC_ARM_CANNON)
+	{
+		if(CardNumSearch(657) && n_A_BODY_DEF_PLUS >= 10)
+		{ //Rock Step Card
+			dmgMultiplier += 20;
+		}
+	}
+	if(n_A_ActiveSkill == skill_MEC_VULCAN_ARM)
+	{
+		if(CardNumSearch(659) && n_A_Weapon_ATKplus >= 10)
+		{ //Rock Step Card
+			dmgMultiplier += CardNumSearch(659) * 20;
+		}
+	}
 	// if ( EquipNumSearch( 1399 ) && n_A_ActiveSkill == skill_RAN_ARROW_STORM)
 	// { // Giant Crossbow
 		// dmgMultiplier += 5 * n_A_Weapon_ATKplus;

@@ -1999,7 +1999,7 @@
 ,[1979,itm_type_SET,0,0,0,0,0,0,bon_DMG_SKILL+skill_CG_ARROW_VULCAN,200,bon_NONE] // "Newoz Set" "Ukulele Of Newoz + Hero Ring Of Newoz"
 ,[1980,itm_type_ARMOR,2000,20,0,1,150,130,bon_USR_ELEMENT,ele_EARTH,bon_NONE] // "Harden Breastplate"
 ,[1981,weapTyp_WHIP,0,160,4,2,100,130,bon_NONE] // "Floral Mic Of Aigu"
-,[1982,itm_type_ACCESSORY,2116,0,0,1,10,130,bon_RED_CAST,-25,bon_NONE] // "Floral Bracelet Of Aigu"
+,[1982,itm_type_ACCESSORY,2117,0,0,1,10,130,bon_RED_CAST,-25,bon_NONE] // "Floral Bracelet Of Aigu"
 ,[1983,itm_type_SET,0,0,0,0,0,0,bon_DMG_SKILL+skill_CG_ARROW_VULCAN,200,bon_NONE] // "Aigu Set" "Floral Mic Of Aigu + Floral Bracelet Of Aigu"
 ,[1984,itm_type_ARMOR,2000,20,0,1,150,130,bon_USR_ELEMENT,ele_WATER,bon_NONE] // "Frozen Breastplate"
 ,[1987,weapTyp_INSTRUMENT,2000,180,3,2,25,160,bon_MATK,120,bon_DELAY_SKILL_FLAT+skill_MIWA_IMPROVISED_SONG,2,bon_NONE] // "Contrabass"
@@ -2037,7 +2037,39 @@
 ,[2016,itm_type_SET,0,0,0,0,0,0,bon_ALL_STATS,7,bon_HP_MUL,3,bon_SP_MUL,3,bon_NONE] // "Shadow Oboro Set"
 ,[2017,itm_type_SET,0,0,0,0,0,0,bon_ALL_STATS,7,bon_HP_MUL,3,bon_SP_MUL,3,bon_NONE] // "Shadow Kagerou Set"
 ,[2018,itm_type_SET,0,0,0,0,0,0,bon_ALL_STATS,7,bon_HP_MUL,3,bon_SP_MUL,3,bon_NONE] // "Shadow Rebellion Set"
-// ,[2019,itm_,à,0,0,0,0,0,bon_NONE] // ""
+//charleston
+,[2019,weapTyp_MACE,2212,450,4,0,400,130,bon_NONE] // "Pile Bunker P"
+,[2020,weapTyp_MACE,2092,195,4,2,300,130,bon_CRIT,20,bon_UNBREAKABLE,1,bon_NONE] // "Robot's Arm"
+,[2021,weapTyp_2HSWORD,2051,300,4,1,500,130,bon_ASPD_MUL,-5,bon_UNBREAKABLE,1,bon_NONE] // "Gigantic Blade" "Gigant Blade"
+,[2022,weapTyp_AXEII,2092,320,4,1,400,100,bon_DELAY_SKILL_FLAT + skill_MEC_AXE_TORNADO,1,bon_NONE] // "Tornado Axe"
+,[2023,itm_type_ARMOR,2212,110,0,1,300,130,bon_RED_SIZ_MEDIUM,10,bon_RED_SIZ_SMALL,10,bon_UNBREAKABLE,1,bon_NONE] // "Upgrade Part - Plate"
+,[2024,itm_type_SHOES,2212,23,0,1,100,100,bon_NONE] // "Reinforced Parts - Booster" "Upgrade Part - Booster"
+,[2025,itm_type_GARMENT,2212,25,0,1,150,100,bon_RED_CASTDELAY,10,bon_NONE] // "Reinforced Parts - Engine" "Upgrade Part - Engine"
+,[2026,itm_type_ACCESSORY,2212,0,0,1,50,100,bon_PHY_ATK,4,bon_HIT,10,bon_DMG_SKILL + skill_MEC_BOOST_KNUCKLE,25,bon_NONE] // "Reinforced Parts - Gun Barrel" "Upgrade Part - Gun Barrel"
+,[2027,itm_type_SET,0,0,0,0,0,0,bon_DMG_SKILL + skill_MEC_ARM_CANNON,50,bon_NONE] // "Upgrade Part Set"
+,[2028,itm_type_ARMOR,2212,80,0,1,200,130,bon_PHY_ATK,5,bon_NONE] // "Supplement Part Str"
+,[2029,itm_type_SHOES,2212,25,0,1,35,100,bon_ASPD_MUL,5,bon_NONE] // "Supplement Part Agi" 
+,[2030,itm_type_GARMENT,2212,20,0,1,50,100,bon_HP_MUL,6,bon_NONE] // "Supplement Part Con"
+,[2031,itm_type_ACCESSORY,2212,0,0,1,10,100,bon_RED_CASTDELAY,10,bon_RED_CAST,-10,bon_NONE] // "Supplement Part Dex"
+,[2032,itm_type_SET,0,0,0,0,0,0,bon_ATK,30,bon_NONE] // "Supplement Part Str + Agi"
+,[2033,itm_type_SET,0,0,0,0,0,0,bon_DMG_SKILL + skill_MEC_AXE_TORNADO,25,bon_NONE] // "Supplement Part Str + Con"
+,[2034,itm_type_SET,0,0,0,0,0,0,bon_DMG_SKILL + skill_MEC_AXE_BOOMERANG,100,bon_DELAY_SKILL_FLAT + skill_MEC_AXE_BOOMERANG,2,bon_NONE] // "Supplement Part Str + Dex"
+,[2035,weapTyp_MACE,2212,400,4,1,300,130,bon_NONE] // "Pile Bunker S"
+,[2036,weapTyp_MACE,2212,400,4,1,300,130,bon_NONE] // "Pile Bunker T"
+,[2037,itm_type_ARMOR,0,120,0,1,200,1,bon_ATK,50,bon_NONE] // "Armor of Sixtus the Mighty"
+,[2038,itm_type_ARMOR,0,120,0,1,200,1,bon_ATK,50,bon_NONE] // "Armor of Sixtus the Agile"
+,[2039,itm_type_ARMOR,0,120,0,1,200,1,bon_ATK,50,bon_NONE] // "Armor of Sixtus the Tough"
+,[2040,itm_type_ARMOR,0,120,0,1,200,1,bon_MATK,50,bon_NONE] // "Armor of Sixtus the Wise"
+,[2041,itm_type_ARMOR,0,120,0,1,200,1,bon_ATK,50,bon_NONE] // "Armor of Sixtus the Dexterous"
+,[2042,itm_type_ARMOR,0,120,0,1,200,1,bon_ATK,50,bon_NONE] // "Armor of Sixtus the Lucky"
+,[2043,itm_type_SET,0,0,0,0,0,0,bon_PHY_ATK,10,bon_NONE] // "Sixtus + Temporal Str"
+,[2044,itm_type_SET,0,0,0,0,0,0,bon_ASPD_ADD,1,bon_NONE] // "Sixtus + Temporal Agi"
+,[2045,itm_type_SET,0,0,0,0,0,0,bon_HP_MUL,10,bon_NONE] // "Sixtus + Temporal Vit"
+,[2046,itm_type_SET,0,0,0,0,0,0,bon_MATK_MUL,10,bon_NONE] // "Sixtus + Temporal Int"
+,[2047,itm_type_SET,0,0,0,0,0,0,bon_DMG_RANGE,5,bon_NONE] // "Sixtus + Temporal Dex"
+,[2048,itm_type_SET,0,0,0,0,0,0,bon_DMG_CRIT,10,bon_NONE] // "Sixtus + Temporal Luk"
+// ,[2049,itm_,0,0,0,0,0,0,bon_NONE] // ""
+// ,[2050,itm_,0,0,0,0,0,0,bon_NONE] // ""
 
 ];
 ItemMax = ItemOBJ.length -1;
@@ -2526,11 +2558,18 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2016,2007,2010,1822,1839,"NULL"] // "Shadow Oboro Set"
 ,[2017,2008,2011,1822,1839,"NULL"] // "Shadow Kagerou Set"
 ,[2018,2009,2012,1825,1842,"NULL"] // "Shadow Rebellion Set"
+,[2027,2023,2024,2025,2026,"NULL"] // "Upgrade Part Set"
+,[2032,2028,2029,"NULL"] // "Supplement Part Str + Agi"
+,[2033,2028,2030,"NULL"] // "Supplement Part Str + Con"
+,[2034,2028,2031,"NULL"] // "Supplement Part Str + Dex"
+,[2043,2037,1946,"NULL"] // "Sixtus + Temporal Str"
+,[2044,2038,1947,"NULL"] // "Sixtus + Temporal Agi"
+,[2045,2039,1948,"NULL"] // "Sixtus + Temporal Vit"
+,[2046,2040,1949,"NULL"] // "Sixtus + Temporal Int"
+,[2047,2041,1950,"NULL"] // "Sixtus + Temporal Dex"
+,[2048,2042,1951,"NULL"] // "Sixtus + Temporal Luk"
 
-
-
-
-//,[itm_set,item1,item2,...,"NULL"]
+//,[itm_set,item1,item2,...,"NULL"] // 
 ];
 SE_MAXnum = w_SE.length -1;
 }

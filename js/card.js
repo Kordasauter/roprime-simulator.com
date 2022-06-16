@@ -725,6 +725,22 @@ function SetCard()
 ,[653,   card_com_SPE,"Darklord Essence Luck 1",0,bon_LUK,1,bon_CRIT,1,bon_DEX,-1,0]
 ,[654,   card_com_SPE,"Darklord Essence Luck 2",0,bon_LUK,2,bon_CRIT,2,bon_DEX,-2,0]
 ,[655,   card_com_SPE,"Darklord Essence Luck 3",0,bon_LUK,4,bon_CRIT,4,bon_DEX,-4,0]
+//Charleston
+,[656,	 card_comp_WEAPON,"Step","[If refine level is +10 or higher]<br>[Axe Boomerang] damage +30%.",bon_DMG_SKILL + skill_MEC_AXE_BOOMERANG,30,0]
+,[657,	 card_com_ARMOR,"Rock Step","[If refine level is +10 or higher]<br>[Arm Cannon] damage +20%.",bon_DMG_SKILL + skill_MEC_ARM_CANNON,20,0]
+,[658,	 card_com_ARMOR,"Kick Step","[When using by Mechanic class]<br>Resistance to long-range physical damage +30%.",bon_HP_MUL,8,0]
+,[659,	 card_comp_WEAPON,"Kick and Kick","[If refine level is +10 or higher]<br>[Vulcan Arm] damage +20%.",bon_DMG_SKILL + skill_MEC_VULCAN_ARM,10,0]
+,[660,	 card_comp_WEAPON,"Charleston","Has a chance to destroy an enemy's armor. ",bon_SP_ADD,-300,0]
+,[661,	 itm_type_SET,"Kick Step + Rock Step","No Magic Gear Fuel is consumed.",0]
+,[662,	 itm_type_SET,"Kick Step + Kick and Kick Step","No Magic Gear Fuel is consumed.",0]
+,[663,	 itm_type_SET,"Kick Step + Charleston","No Magic Gear Fuel is consumed.",0]
+,[664,	 card_com_GARMENT,"Undead Knight of Grudge","Restores 20 SP when killing monsters with melee physical damage.<br>SP -444 when unequipped.<br>[For each garment refine lv]<br>Restores 1 more SP when killing monsters with melee physical damage.",bon_SP_MUL,-44,0]
+,[665,	 card_com_ARMOR,"Undead Knight of Agony","Restores 200 HP when killing monsters with melee physical damage.<br>HP -4444 when unequipped.<br>[For each armor refine lv]<br>Restores 10 more HP when killing monsters with melee physical damage.",bon_HP_MUL,-44,0]
+,[666,	 itm_type_SET,"Undead Knight Card Set","HP -100 and SP -6 every 6 seconds.",bon_FLEE,20,bon_RED_ELE_NEUTRAL,20,0]
+,[667,	 card_com_ARMOR,"Amdarais","HP -666 and SP -66 every 4 seconds.<br>HP -6,666 and SP -666 when unequipped. ",bon_PHY_ATK,15,bon_MATK_MUL,15,0]
+,[668,	 card_comp_WEAPON,"Corruption Root","Has a chance to inflict [Curse], [Sleep] or [Stone Curse] when dealing physical damage.",bon_ATK,20,0]
+//,[669,	 ,"","",0]
+
 ];
 
 CardNum = cardOBJ.length -1;
@@ -792,7 +808,11 @@ w_SC = [[429,306,235,"NULL"],
 [627,625,626,"NULL"], //"Playing Pere + Singing Pere"
 [628,625,626,624,"NULL"], //"Playing Pere + Singing Pere + Jitterbug"
 [631,629,630,"NULL"], //"Faceworm + Faceworm Dark"
-[634,632,633,"NULL"]  //"Faceworm Egg + Faceworm Larva"
+[634,632,633,"NULL"], //"Faceworm Egg + Faceworm Larva"
+[661,658,657,"NULL"], //"Kick Step + Rock Step"
+[662,658,659,"NULL"], //"Kick Step + Kick and Kick Step"
+[663,658,660,"NULL"], //"Kick Step + Charleston"
+[666,664,665,"NULL"]  //"Undead Knight Card Set"
 ];
 }
 

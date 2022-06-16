@@ -223,7 +223,10 @@ function calcMAtk( includeMultipliers )
 		{ //"Wondrous Foxtail Staff"
 			w += 2 * Math.floor(n_A_Weapon_ATKplus / 3);
 		}
-		
+		if ( EquipNumSearch( 2040 ) )
+		{//Armor of Sixtus the Wise
+				w += 2 * Math.floor(n_A_BODY_DEF_PLUS / 3);
+		}
 		//Shadows
 		if ( EquipNumSearch( 1656 ) )
 		{ // "Shadow Mystic Gloves"
@@ -858,6 +861,33 @@ function CalcMagicDamage( rawDamage )
 			n_B_MDEF2 = n_B_MDEF2 - ((n_B_MDEF2 /100) *n_A_HEAD_DEF_PLUS) ;
 		}
 	}
+	if ( EquipNumSearch( 2040 ) )
+	{//Armor of Sixtus the Lucky
+		if(n_A_BODY_DEF_PLUS >= 7)
+		{
+			for(var i = 1; i <= 4 ; i++)
+			{
+				if(n_B[en_ELEMENT] == ((ele_WIND * 10) + i)  || n_B[en_ELEMENT] ==  ((ele_EARTH * 10) + i))
+				{
+					wBMC_MDEF = wBMC_MDEF - ((wBMC_MDEF /100) * 30) ;
+				}
+			}
+			
+		}
+	}
+	if ( EquipNumSearch( 2046 ) )
+		{//Armor of Sixtus Set (all)
+			if((n_A_BODY_DEF_PLUS + n_A_SHOES_DEF_PLUS) >= 21)
+			{
+				for(var i = 1; i <= 4 ; i++)
+				{
+					if(n_B[en_ELEMENT] == ((ele_WIND * 10) + i)  || n_B[en_ELEMENT] ==  ((ele_EARTH * 10) + i))
+					{
+						wBMC_MDEF = wBMC_MDEF - ((wBMC_MDEF /100) * 30) ;
+					}
+				}
+			}
+		}
 	// Calc Damage based on MDEF of opponent
 	if ( n_A_ActiveSkill == skill_WI_FIRE_PILLAR )
 	{

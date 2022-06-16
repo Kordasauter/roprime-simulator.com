@@ -2077,6 +2077,7 @@ function FirstNovis()
 // 226 = 3rd + Kag/Oro + Reb + Summoner
 // >1000 -> Rebi & Sub
 // >2000 -> 3rd  & Sub
+// 2092 = 3rd swo + mer + aco
 
 JobEquipItemOBJ = [
 /* Nov */[0,    50, 90,100, 146, 999],
