@@ -227,6 +227,10 @@ function calcMAtk( includeMultipliers )
 		{//Armor of Sixtus the Wise
 				w += 2 * Math.floor(n_A_BODY_DEF_PLUS / 3);
 		}
+		if(EquipNumSearch(2079) && n_A_Weapon_ATKplus >= 7)
+		{//Crimson Rose
+			w += 5;
+		}
 		//Shadows
 		if ( EquipNumSearch( 1656 ) )
 		{ // "Shadow Mystic Gloves"
@@ -494,7 +498,20 @@ function calcMAtk( includeMultipliers )
 		if(SU_INT >= 120)
 			n_A_EquipMATK += 120;
 	}
-	
+	if( EquipNumSearch(2053) || //Blade of Light
+		EquipNumSearch(2055) || //Tide Conch
+		EquipNumSearch(2056) || //Thorn Whip
+		EquipNumSearch(2059) || //Magic Sword
+		EquipNumSearch(2063) || //Rusty Dragon's Wand
+		EquipNumSearch(2064) || //Wand of the Purple Orb
+		EquipNumSearch(2065) || //Shadow Eater
+		EquipNumSearch(2066) || //Ice Guardian
+		EquipNumSearch(2071) || //All-Holy Book
+		EquipNumSearch(2080) || //Master of Souls
+		EquipNumSearch(2083) ) //Meowmeow Foxtail
+	{
+		n_A_EquipMATK += 10 * Math.floor(n_A_Weapon_ATKplus / 2);
+	}
 	//shadows
 	if ( EquipNumSearch( 1657 ) )
 	{ // "Shadow Mystic Ring"
@@ -923,14 +940,17 @@ function CalcMagicDamage( rawDamage )
 		wBMC2 = Math.floor( wBMC2 * ( 1 + 0.05 * n_A_ActiveSkillLV ) );
 	}
 	
-	// Multiplier	
+	// Multiplier (race)
 	var wX = n_tok[bon_MDMG_RC_FORMLESS + n_B[en_RACE]];
 	
 	if ( n_B[en_RACE] == race_DRAGON  && SkillSearch( skill_SA_DRAGONOLOGY ) )
 	{
 		wX += SkillSearch( skill_SA_DRAGONOLOGY ) * 2;
 	}
-	
+	if ( n_B[en_RACE] == race_UNDEAD  && EquipNumSearch(2066) && n_A_Weapon_ATKplus >= 9)
+	{//Ice Guardian
+		wX += 10;
+	}
 	
 	if (SkillSearch(skill_WAR_INTENSE_TELEKINESIS) && 
 		(n_A_ActiveSkill === skill_MA_NAPALM_BEAT ||
@@ -942,6 +962,7 @@ function CalcMagicDamage( rawDamage )
 	
 	wBMC2 = wBMC2 * ( 100 + wX ) / 100;
 	
+	//Multiplier (element)
 	wX = n_tok[bon_MDMG_ELE_NEUTRAL + n_B[en_ELEMENT]];
 	if(CardNumSearch(620) && n_B[en_ELEMENT] == ele_EARTH )
 	{
@@ -954,7 +975,140 @@ function CalcMagicDamage( rawDamage )
 			wX += 7;
 		}
 	}
+	if(EquipNumSearch(2064) && n_B[en_ELEMENT] == ele_FIRE && n_A_Weapon_ATKplus >= 11)
+	{//Wand of the Purple Orb
+		wX += 7;
+	}
 	
+	if(EquipNumSearch(1681))
+	{ //"Amistr Hat"
+		if(n_A_HEAD_DEF_PLUS >= 9) 
+		{ 
+			if(n_A_Weapon_element == ele_NEUTRAL || n_A_Weapon_element == ele_HOLY)
+			{
+				wX += 10;
+			}
+		}	
+	}
+	if(EquipNumSearch(1759))
+	{ // Diabolic Halo
+		if(n_A_HEAD_DEF_PLUS >= 9) 
+		{ 
+			if(n_A_Weapon_element == ele_NEUTRAL || n_A_Weapon_element == ele_HOLY)
+			{
+				wX += 10;
+			}
+		}
+		if(n_A_HEAD_DEF_PLUS >= 11) 
+		{ 
+			if(n_A_Weapon_element == ele_WATER || n_A_Weapon_element == ele_WIND || n_A_Weapon_element == ele_FIRE || n_A_Weapon_element == ele_EARTH)
+			{
+				wX += 10;
+			}
+		}
+	}
+	if(EquipNumSearch(2053))
+	{ // Blade of Light
+		if(n_A_HEAD_DEF_PLUS >= 11) 
+		{ 
+			if(n_A_Weapon_element == ele_HOLY)
+			{
+				wX += 15;
+			}
+		}
+	}
+	if(EquipNumSearch(2055) || EquipNumSearch(2056))
+	{ // Tide Conch || Thorn Whip
+		if(n_A_Weapon_element == ele_NEUTRAL)
+		{
+			wX += 4 * Math.floor(n_A_Weapon_ATKplus / 3);
+		}
+	}
+	if(EquipNumSearch(2059))
+	{ //Magic Sword
+		wX += 10;
+	}
+	if(EquipNumSearch(2064) && n_A_Weapon_ATKplus >= 9)
+	{ // Wand of the Purple Orb
+		if(n_A_Weapon_element == ele_WATER)
+		{
+			wX += 7;
+		}
+	}
+	if(EquipNumSearch(2066) && n_A_Weapon_ATKplus >= 11)
+	{ // Ice Guardian
+		if(n_A_Weapon_element == ele_WATER)
+		{
+			wX += 10;
+		}
+	}
+	if(EquipNumSearch(2072))
+	{ // Mace of the Righteous
+		if(n_A_Weapon_element == ele_HOLY)
+		{
+			wX += Math.floor(n_A_Weapon_ATKplus / 2);
+			if(n_A_Weapon_ATKplus >= 11)
+				wX += 10;
+		}
+	}
+	//Cards
+	if(CardNumSearch(558))
+	{ //Lichtern Blue Card
+		if(n_A_HEAD_DEF_PLUS >= 9) 
+		{ 
+			if(n_A_Weapon_element == ele_WATER)
+			{
+				wX += 5 * CardNumSearch(558);
+			}
+		}	
+	}
+	if(CardNumSearch(559))
+	{ //Lichtern Yellow Card
+		if(n_A_HEAD_DEF_PLUS >= 9) 
+		{ 
+			if(n_A_Weapon_element == ele_GHOST)
+			{
+				wX += 5 * CardNumSearch(559);
+			}
+		}	
+	}
+	if(CardNumSearch(560))
+	{ //Lichtern Red Card
+		if(n_A_HEAD_DEF_PLUS >= 9) 
+		{ 
+			if(n_A_Weapon_element == ele_FIRE)
+			{
+				wX += 5 * CardNumSearch(560);
+			}
+		}	
+	}
+	if(CardNumSearch(561))
+	{ //Lichtern Green Card
+		if(n_A_HEAD_DEF_PLUS >= 9) 
+		{ 
+			if(n_A_Weapon_element == ele_EARTH)
+			{
+				wX += 5 * CardNumSearch(561);
+			}
+		}	
+	}
+	if(CardNumSearch(568))
+	{ //Tikbalang Card
+		if(n_A_HEAD_DEF_PLUS >= 9) 
+		{ 
+			if(n_A_Weapon_element == ele_WIND)
+			{
+				wX += 5 * CardNumSearch(568);
+			}
+		}	
+	}
+	if ( CardNumSearch( 633 ))
+	{ // Faceworm Larva
+		if(n_A_Weapon_element == ele_WATER)
+		{
+			wX += 3 * n_A_SHOULDER_DEF_PLUS;
+		}
+	}
 	
 	wBMC2 = wBMC2 * ( 100 + wX ) / 100;
 
@@ -1018,101 +1172,6 @@ function CalcMagicDamage( rawDamage )
 			matkMultiplier += 3 * SkillSearch( skill_HP_BASILICA );
 		}
 	}
-	if(EquipNumSearch(1681))
-	{ //"Amistr Hat"
-		if(n_A_HEAD_DEF_PLUS >= 9) 
-		{ 
-			if(n_A_Weapon_element == ele_NEUTRAL || n_A_Weapon_element == ele_HOLY)
-			{
-				matkMultiplier += 10;
-			}
-		}	
-	}
-	if(EquipNumSearch(1759))
-	{ // Diabolic Halo
-		if(n_A_HEAD_DEF_PLUS >= 9) 
-		{ 
-			if(n_A_Weapon_element == ele_NEUTRAL || n_A_Weapon_element == ele_HOLY)
-			{
-				matkMultiplier += 10;
-			}
-		}
-		if(n_A_HEAD_DEF_PLUS >= 11) 
-		{ 
-			if(n_A_Weapon_element == ele_WATER || n_A_Weapon_element == ele_WIND || n_A_Weapon_element == ele_FIRE || n_A_Weapon_element == ele_EARTH)
-			{
-				matkMultiplier += 10;
-			}
-		}
-	}
-	
-	if(CardNumSearch(558))
-	{ //Lichtern Blue Card
-		if(n_A_HEAD_DEF_PLUS >= 9) 
-		{ 
-			if(n_A_Weapon_element == ele_WATER)
-			{
-				matkMultiplier += 5 * CardNumSearch(558);
-			}
-		}	
-	}
-	if(CardNumSearch(559))
-	{ //Lichtern Yellow Card
-		if(n_A_HEAD_DEF_PLUS >= 9) 
-		{ 
-			if(n_A_Weapon_element == ele_GHOST)
-			{
-				matkMultiplier += 5 * CardNumSearch(559);
-			}
-		}	
-	}
-	if(CardNumSearch(560))
-	{ //Lichtern Red Card
-		if(n_A_HEAD_DEF_PLUS >= 9) 
-		{ 
-			if(n_A_Weapon_element == ele_FIRE)
-			{
-				matkMultiplier += 5 * CardNumSearch(560);
-			}
-		}	
-	}
-	if(CardNumSearch(561))
-	{ //Lichtern Green Card
-		if(n_A_HEAD_DEF_PLUS >= 9) 
-		{ 
-			if(n_A_Weapon_element == ele_EARTH)
-			{
-				matkMultiplier += 5 * CardNumSearch(561);
-			}
-		}	
-	}
-	if(CardNumSearch(568))
-	{ //Tikbalang Card
-		if(n_A_HEAD_DEF_PLUS >= 9) 
-		{ 
-			if(n_A_Weapon_element == ele_WIND)
-			{
-				matkMultiplier += 5 * CardNumSearch(568);
-			}
-		}	
-	}
-	if ( CardNumSearch( 633 ))
-	{ // Faceworm Larva
-		if(n_A_Weapon_element == ele_WATER)
-		{
-			matkMultiplier += 3 * n_A_SHOULDER_DEF_PLUS;
-		}
-	}
-	
-	
-	if ( EquipNumSearch( 1719 ) )
-	{ // "Shadow Diviner Set"
-		if((n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_PENDANT_DEF_PLUS) >= 23)
-		{
-			matkMultiplier += 1;
-		}
-	}
-	
 	if(EquipNumSearch( 1759 ))
 	{// Diabolic Halo
 		if(EquipNumSearch( 1292 ) && n_A_ActiveSkill == skill_SOR_PSYCHIC_WAVE)
@@ -1127,6 +1186,21 @@ function CalcMagicDamage( rawDamage )
 		{// Mikatsuki + Raksasa Dagger
 			if(n_A_ActiveSkill == skill_NIN_FLAMING_PETALS || n_A_ActiveSkill == skill_NIN_FREEZING_SPEAR || n_A_ActiveSkill == skill_NIN_WIND_BLADE )
 			matkMultiplier += Math.floor((n_A_Weapon_ATKplus + n_A_Weapon2_ATKplus) / 2) * 5;
+		}
+	}
+	if(EquipNumSearch(2080) && n_A_Weapon_ATKplus >= 7)
+	{////Master of Souls
+		matkMultiplier += 5;
+	}
+	if(EquipNumSearch(2083))
+	{//Meowmeow Foxtail
+		matkMultiplier += 2 * Math.floor(n_A_Weapon_ATKplus / 3);
+	}
+	if ( EquipNumSearch( 1719 ) )
+	{ // "Shadow Diviner Set"
+		if((n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_PENDANT_DEF_PLUS) >= 23)
+		{
+			matkMultiplier += 1;
 		}
 	}
 	

@@ -1655,6 +1655,12 @@ function CalcSkillDamage()
 			}
 			fixedCastTime *= 0.0;
 			variableCastTime *= 0.0;
+			n_Delay[ksDelayGlobal] = 0.5;
+			n_Delay[ksDelayCooldown] = 5.5 - ( n_A_ActiveSkillLV * 0.5);
+			if(EquipNumSearch(2084) && (n_A_Weapon_ATKplus + n_A_Weapon2_ATKplus) >= 16) 
+			{//Kagero & Oboro Dual Dagger Set
+				n_Delay[ksDelayCooldown] -= 2.0;
+			}
 		}
 		else if ( n_A_ActiveSkill === skill_KAG_SWIRLING_PETAL )
 		{
@@ -1663,6 +1669,12 @@ function CalcSkillDamage()
 			w_SkillMod = ( n_A_ActiveSkillLV * 1.5 ) + (( n_A_DEX + n_A_AGI )/100) + 5; //+5 is (Throw_Huuma_Shuriken_Lv5 x 100)
 			fixedCastTime *= 0.0;
 			variableCastTime *= 0.0;
+			n_Delay[ksDelayGlobal] = 1.0;
+			n_Delay[ksDelayCooldown] = 3.0;
+			if(EquipNumSearch(2075) && n_A_Weapon_ATKplus >= 9)
+			{//Four Mirrors
+				n_Delay[ksDelayCooldown] -= 1.0;
+			}
 		}
 		else if ( n_A_ActiveSkill === skill_KAG_THROW_EXPLOSIVE_KUNAI )
 		{
@@ -1772,6 +1784,10 @@ function CalcSkillDamage()
 			variableCastTime *= 0.0;
 			n_Delay[ksDelayGlobal] = 1.0;
 			n_Delay[ksDelayCooldown] = 10.0;
+			if(EquipNumSearch(2073) && n_A_Weapon_ATKplus >= 11)
+			{//Iron Claw
+				n_Delay[ksDelayCooldown] -= 1.0;
+			}
 		}
 		else if ( n_A_ActiveSkill === skill_SUR_KNUCKLE_ARROW )
 		{
@@ -2366,6 +2382,8 @@ function CalcSkillDamage()
 			variableCastTime *=  1.0 + (n_A_ActiveSkillLV * 0.2);
 			n_Delay[ksDelayGlobal] = 2.0;
 			n_Delay[ksDelayCooldown] = 5.0;
+			if(EquipNumSearch(2081) && n_A_Weapon_ATKplus >= 11)//Big Game Trophy
+				n_Delay[ksDelayCooldown] -= 1.0;
 		}
 		else if(n_A_ActiveSkill==skill_REB_FIRE_RAIN)
 		{
@@ -2672,6 +2690,9 @@ function CalcSkillDamage()
 			fixedCastTime *= 0.5;
 			variableCastTime *= 4.0;
 			n_Delay[ksDelayGlobal] = 1.0;
+			n_Delay[ksDelayCooldown] = 1.0;
+			if(EquipNumSearch(2062) && n_A_Weapon_ATKplus >= 11) //Scarlet Dragon's Bow
+				n_Delay[ksDelayCooldown] -= 1;
 		}
 		else if ( n_A_ActiveSkill === skill_ROY_HESPERUS_LIT )
 		{
@@ -4039,6 +4060,10 @@ function CalcSkillDamage()
 		variableCastTime *= 1.0 + 0.5 * n_A_ActiveSkillLV;
 		n_Delay[ksDelayGlobal] = 1.0;
 		n_Delay[ksDelayCooldown] = 4.5 + 0.5 * n_A_ActiveSkillLV;
+		if( EquipNumSearch(2054) && n_A_Weapon_ATKplus >= 11) 
+		{//Bow of Narcissus
+			n_Delay[ksDelayCooldown] -= 2;
+		}
 	}
 	else if ( n_A_ActiveSkill === skill_RUN_DRAGON_BREATH  || n_A_ActiveSkill === skill_RUN_DRAGON_BREATH_WATER)
 	{ // Dragon Breath
@@ -4507,6 +4532,10 @@ function CalcSkillDamage()
 		variableCastTime *= 1.0 + 0.1 * n_A_ActiveSkillLV;
 		n_Delay[ksDelayGlobal] = 1.0;
 		n_Delay[ksDelayCooldown] = 5.0;
+		if(EquipNumSearch(2073) && n_A_Weapon_ATKplus >= 11)  
+		{//Iron Claw
+		 n_Delay[ksDelayCooldown] -= 1.0;
+		}
 	}
 	else if ( n_A_ActiveSkill === skill_SUR_GATE_OF_HELL )
 	{ // Gate of Hell
@@ -4806,6 +4835,13 @@ function CalcSkillDamage()
 				if( EquipNumSearch(1945) )
 				{//General's Helmet + Quadrille 
 					n_A_DMG[i] *= (100 + (7 * Math.floor(n_A_Weapon_ATKplus / 2))) /100;
+				}
+				if( EquipNumSearch(2074) )
+				{//Claws of the Bifrost
+					if(n_A_Weapon_ATKplus <=8)
+						n_A_DMG[i] *= (100 + (2 * Math.floor(n_A_Weapon_ATKplus / 3))) /100;
+					else
+						n_A_DMG[i] *= (100 + (2 * Math.floor(n_A_Weapon_ATKplus / 3)) + 15 ) /100;
 				}
 				physicalDamage[i] = ApplyEnemyDefense( n_A_DMG[i] * w_SkillMod, i, 0 );
 				physicalDamage[i] += ( TigerCannonLv * 240 ) + ( n_B[en_LEVEL] * 40 );
@@ -5439,6 +5475,8 @@ function CalcSkillDamage()
 			fixedCastTime *= 1.0;
 			variableCastTime *= 1.5 + 0.5 * n_A_ActiveSkillLV;
 			n_Delay[ksDelayGlobal] = 1.0;
+			if(EquipNumSearch(2064) && n_A_Weapon_ATKplus >= 11)//Wand of the Purple Orb
+				n_Delay[ksDelayGlobal] -= 1;
 		}
 		else if ( n_A_ActiveSkill == skill_WAR_CHAIN_LIGHTNING )
 		{
@@ -5468,6 +5506,8 @@ function CalcSkillDamage()
 			variableCastTime *= 1.0 + 1.0 * n_A_ActiveSkillLV;
 			n_Delay[ksDelayGlobal] = 1.0;
 			n_Delay[ksDelayCooldown] = 10.0;
+			if(EquipNumSearch(2063) && n_A_Weapon_ATKplus >= 11)//Rusty Dragon's Wand
+				n_Delay[ksDelayCooldown] -= 1;
 		}
 		else if ( n_A_ActiveSkill == skill_WAR_TETRA_VORTEX )
 		{
@@ -5613,6 +5653,8 @@ function CalcSkillDamage()
 			n_Delay[ksDelayGlobal] = 1.0;
 			//if ( EquipNumSearch( 1292 ) ) variableCastTime *= Math.max(variableCastTime-3, 0);
 			n_Delay[ksDelayCooldown] = 5.0;
+			if(EquipNumSearch(2065) && n_A_Weapon_ATKplus >= 11)//Shadow Eater
+				n_Delay[ksDelayGlobal] -= 1;
 		}
 		else if ( n_A_ActiveSkill == skill_SOR_SPELL_FIST_FBOLT )
 		{

@@ -868,7 +868,35 @@ function CalcEquipAtk()
 		if(SU_STR >= 110)
 			equipmentAttack -= 250;
 	}
-	
+	if( EquipNumSearch(2050) || //Runic Katana
+		EquipNumSearch(2052) || //Trident of Undine
+		EquipNumSearch(2054) || //Bow of Narcissus
+		EquipNumSearch(2057) || //Hand of Death
+		EquipNumSearch(2058) || //Steel Flower
+		EquipNumSearch(2060) || //Fatalist
+		EquipNumSearch(2061) || //Empyrean
+		EquipNumSearch(2062) || //Scarlet Dragon's Bow
+		EquipNumSearch(2067) || //Avenger
+		EquipNumSearch(2068) || //Big Badaboom
+		EquipNumSearch(2069) || //Sword of Blue Fire
+		EquipNumSearch(2070) || //Slate Sword
+		EquipNumSearch(2073) || //Iron Claw
+		EquipNumSearch(2074) || //Claws of the Bifrost
+		EquipNumSearch(2075) || //Four Mirrors
+		EquipNumSearch(2079) || //Crimson Rose
+		EquipNumSearch(2082) || //Guttling Gun
+		EquipNumSearch(2083) ) //Meowmeow Foxtail
+	{
+		equipmentAttack += 10 * Math.floor(n_A_Weapon_ATKplus / 2);
+	}
+	if(EquipNumSearch(2084)) //Kagero & Oboro Dual Dagger Set
+	{
+		equipmentAttack += 10 * Math.floor((n_A_Weapon_ATKplus + n_A_Weapon2_ATKplus) / 3);
+	}
+	if(EquipNumSearch(2081)) //Big Game Trophy
+	{
+		equipmentAttack += 15 * Math.floor((n_A_Weapon_ATKplus) / 3);
+	}
 	//Cards
 	if(CardNumSearch(557))
 	{//Faithful Manager Card
@@ -1284,7 +1312,30 @@ function CalcElementalMod( weaponElement )
 		n_tok[bon_DMG_ELE_WATER] += 5 ;
 		n_tok[bon_DMG_ELE_EARTH] += 5 ;
 	}
-	
+	for(var i = 0 ; i < 6 ; i++)
+	{
+		if ( EquipNumSearch( 2037 + i ) && i != 3)
+		{//Armor of Sixtus (all)
+			if(n_A_BODY_DEF_PLUS >= 11)
+			{
+				n_tok[bon_DMG_ELE_WIND] += 30;
+				n_tok[bon_DMG_ELE_EARTH] += 30;
+			}
+		}
+	}
+	if ( EquipNumSearch( 2040 ) )
+	{//Armor of Sixtus the Wise
+		if(n_A_BODY_DEF_PLUS >= 11)
+		{
+			n_tok[bon_MDMG_ELE_WIND] += 30;
+			n_tok[bon_MDMG_ELE_EARTH] += 30;
+		}
+	}
+	if(EquipNumSearch(2075) && n_A_Weapon_ATKplus >= 11)
+	{//Four Mirrors
+		n_tok[bon_DMG_ELE_FIRE] += 15;
+		n_tok[bon_DMG_ELE_DARK] += 15;
+	}
 	// Card Bonuses
 	if (not_use_card != 1)
 		weaponElementalMod += n_tok[bon_DMG_ELE_NEUTRAL + Math.floor( n_B[en_ELEMENT] / 10 )];
@@ -1313,6 +1364,53 @@ function CalcRacialMod()
 			}
 		}
 	}
+	if(EquipNumSearch(2057))
+	{
+		if(n_A_Weapon_ATKplus >= 7)
+		{
+			n_tok[bon_DMG_RC_DEMI_HUMAN] += 15;
+			n_tok[bon_DMG_RC_BRUTE] += 15;
+		}
+		if(n_A_Weapon_ATKplus >= 11)
+		{
+			n_tok[bon_DMG_RC_DEMI_HUMAN] += 20;
+			n_tok[bon_DMG_RC_BRUTE] += 20;
+		}
+	}
+	for(var i = 0 ; i < 6 ; i++)
+	{
+		if ( EquipNumSearch( 2037 + i ) && i != 3)
+		{//Armor of Sixtus (all)
+			if(n_A_BODY_DEF_PLUS >= 7)
+			{
+				n_tok[bon_IGN_DEF_RC_BRUTE] += 30;
+				n_tok[bon_IGN_DEF_RC_DEMON] += 30;
+			}
+			if(n_A_BODY_DEF_PLUS >= 9)
+			{
+				n_tok[bon_DMG_RC_BRUTE] += 30;
+				n_tok[bon_DMG_RC_DEMON] += 30;
+			}
+		}
+		if ( EquipNumSearch( 2043 + i ) && i != 3)
+		{//Armor of Sixtus Set (all)
+			if((n_A_BODY_DEF_PLUS + n_A_SHOES_DEF_PLUS) >= 21)
+			{
+				n_tok[bon_IGN_DEF_RC_BRUTE] += 20;
+				n_tok[bon_IGN_DEF_RC_DEMON] += 20;
+			}
+		}
+	}
+	if(EquipNumSearch(2075) && n_A_Weapon_ATKplus >= 11)
+	{//Four Mirrors
+		n_tok[bon_DMG_RC_UNDEAD] += 20;
+		n_tok[bon_DMG_RC_DEMON] += 20;
+	}
+	if( EquipNumSearch(2078) && n_A_Weapon_ATKplus >= 11)   
+	{//Demon's Shot
+		n_tok[bon_DMG_RC_UNDEAD] += 15;
+		n_tok[bon_DMG_RC_DEMON] += 15;
+	}	
 	
 	// Magical
 	if ( EquipNumSearch( 1250 ) && n_A_HEAD_DEF_PLUS >= 5 )
@@ -1322,6 +1420,14 @@ function CalcRacialMod()
 	if ( EquipNumSearch( 1666 ) &&  n_A_HEAD_DEF_PLUS >= 6 )
 	{// "Headband Beret"
 		n_tok[bon_MDMG_RC_DEMI_HUMAN] += n_A_HEAD_DEF_PLUS - 5;
+	}
+	if ( EquipNumSearch( 2040 ) )
+	{//Armor of Sixtus the Wise
+		if(n_A_BODY_DEF_PLUS >= 9)
+		{
+			n_tok[bon_MDMG_RC_BRUTE] += 30;
+			n_tok[bon_MDMG_RC_DEMON] += 30;
+		}
 	}
 	//GLORIOUS WEAPONS
 	if ( (EquipNumSearch( 1076 ) || EquipNumSearch( 1077 ) || EquipNumSearch( 1081 ) ||
@@ -1434,6 +1540,12 @@ function CalcSizeMod()
 			}
 		}
 	}
+	if(EquipNumSearch(2067) && n_A_Weapon_ATKplus >= 11) //Avenger
+	{
+		n_tok[bon_DMG_SIZ_SMALL] += 15; 
+		n_tok[bon_DMG_SIZ_MEDIUM] += 15; 
+		n_tok[bon_DMG_SIZ_LARGE] += 15;
+	}
 	sizeMod = n_tok[bon_DMG_SIZ_SMALL + n_B[en_SIZE]];
 	if ( monsterBuffs[status_en_buff_Size] )
 	{ // Size Reduction
@@ -1451,14 +1563,20 @@ function CalcBossMod()
 	}
 	if(EquipNumSearch(1513))
 	{//Lord of the Dead Helm
-		if (n_A_HEAD_DEF_PLUS >= 5) n_tok[bon_DMG_BOSS] += n_A_HEAD_DEF_PLUS-5;
-		if (CardNumSearch(31)) n_tok[bon_DMG_BOSS] += 5;
+		if (n_A_HEAD_DEF_PLUS >= 5) 
+			n_tok[bon_DMG_BOSS] += n_A_HEAD_DEF_PLUS-5;
+		if (CardNumSearch(31)) 
+			n_tok[bon_DMG_BOSS] += 5;
 	}
 	if(EquipNumSearch(1569))
 	{//Warlock King's Crown
-		if (CardNumSearch(31)) n_tok[bon_DMG_BOSS] += 5;
+		if (CardNumSearch(31)) 
+			n_tok[bon_DMG_BOSS] += 5;
 	}
-	
+	if( EquipNumSearch(2078) && n_A_Weapon_ATKplus >= 7)   
+	{//Demon's Shot
+		n_tok[bon_DMG_BOSS] += 10;
+	}
 	
 	if ( n_B[en_BOSS] === 1 )
 	{
@@ -1548,6 +1666,18 @@ function CalcAttackMod()
 	if ( EquipNumSearch( 2037 ) )
 	{//Armor of Sixtus the Mighty
 			n_tok[bon_PHY_ATK] += 2 * Math.floor(n_A_BODY_DEF_PLUS / 3);
+	}
+	if(EquipNumSearch(2084)) //Kagero & Oboro Dual Dagger Set
+	{
+		n_tok[bon_PHY_ATK] += 2 * Math.floor((n_A_Weapon_ATKplus + n_A_Weapon2_ATKplus) / 5);
+	}
+	if(EquipNumSearch(2079) && n_A_Weapon_ATKplus >= 7)
+	{//Crimson Rose
+		n_tok[bon_PHY_ATK] += 5;
+	}
+	if(EquipNumSearch(2083))
+	{//Meowmeow Foxtail
+		n_tok[bon_PHY_ATK] += 2 * Math.floor(n_A_Weapon_ATKplus / 3);
 	}
 	
 	//shadows
@@ -1720,7 +1850,15 @@ function CalcCriticalMod()
 	}
 	if ( EquipNumSearch( 2042 ) )
 	{//Armor of Sixtus the Lucky
-			n_tok[bon_DMG_CRIT] += 2 * Math.floor(n_A_BODY_DEF_PLUS / 3);
+		n_tok[bon_DMG_CRIT] += 2 * Math.floor(n_A_BODY_DEF_PLUS / 3);
+	}
+	if(EquipNumSearch(2057))
+	{//Hand of Death
+		n_tok[bon_DMG_CRIT] += 4 * Math.floor(n_A_Weapon_ATKplus / 3);
+	}
+	if(EquipNumSearch(2079) && n_A_Weapon_ATKplus >= 9)
+	{//Crimson Rose
+		n_tok[bon_DMG_CRIT] += 20;
 	}
 	
 	if( EquipNumSearch(1825))
@@ -1978,6 +2116,29 @@ function CalcRangedMod()
 			n_tok[bon_DMG_RANGE] += n_A_SHOES_DEF_PLUS - 7;
 		else if(n_A_SHOES_DEF_PLUS >13)
 			n_tok[bon_DMG_RANGE] += 6;
+	}
+	if( EquipNumSearch(2051) && n_A_Weapon_ATKplus >= 11) 
+	{//Dragon Slayer (Ancient Weapon)
+		n_tok[bon_DMG_RANGE] += 10;
+	}
+	if(EquipNumSearch(2078) || EquipNumSearch(2081))   
+	{//Demon's Shot || Big Game Trophy
+		n_tok[bon_DMG_RANGE] += 3 * Math.floor(n_A_Weapon_ATKplus / 2);
+	}
+	if(EquipNumSearch(2075) || EquipNumSearch(2082))   
+	{//Four Mirrors || Guttling Gun
+		n_tok[bon_DMG_RANGE] += 2 * Math.floor(n_A_Weapon_ATKplus / 3);
+	}
+	if( EquipNumSearch(2052) || //Trident of Undine
+		EquipNumSearch(2054) || //Bow of Narcissus
+		EquipNumSearch(2069) || //Sword of Blue Fire
+		EquipNumSearch(2073))   //Iron Claw
+	{
+		n_tok[bon_DMG_RANGE] += 4 * Math.floor(n_A_Weapon_ATKplus / 3);
+	}
+	if(EquipNumSearch(2061) && n_A_Weapon_ATKplus >= 11)
+	{//Empyrean
+		n_tok[bon_DMG_RANGE] += 5;
 	}
 	
 	if( EquipNumSearch(1842))
@@ -2860,22 +3021,26 @@ function calcHP()
 			hpMultiplier += 1;
 	}
 	
-	if(EquipNumSearch(1948) || EquipNumSearch(1954))  //Vit Boots
-	{
+	if(EquipNumSearch(1948) || EquipNumSearch(1954))
+	{//Vit Boots
 		if(SU_VIT >= 120)
 			hpMultiplier += 8;
 	}
-	if(EquipNumSearch(1990) && n_A_LEFT_DEF_PLUS >= 7) // Seraphing Shield
-	{
+	if(EquipNumSearch(1990) && n_A_LEFT_DEF_PLUS >= 7)
+	{// Seraphing Shield
 		hpMultiplier += 5;
 	}
 	if ( EquipNumSearch( 2030 ) )
 	{//Supplement Part Con
-			hpMultiplier += Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
+		hpMultiplier += Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
 	}
 	if ( EquipNumSearch( 2039 ) )
 	{//Armor of Sixtus the Tough
-			hpMultiplier += 2 * Math.floor(n_A_BODY_DEF_PLUS / 3);
+		hpMultiplier += 2 * Math.floor(n_A_BODY_DEF_PLUS / 3);
+	}
+	if( EquipNumSearch(2051)) 
+	{//Dragon Slayer (Ancient Weapon)
+		hpMultiplier += 3 * Math.floor(n_A_Weapon_ATKplus / 2);
 	}
 	
 	//Cards
@@ -3450,12 +3615,18 @@ function calcSP( n_A_MaxSP )
 	{ //"Wondrous Foxtail Staff"
 		spMultiplier += 1 * Math.floor(n_A_Weapon_ATKplus / 3);
 	}
-	if(EquipNumSearch(1990) && n_A_LEFT_DEF_PLUS >= 7) // Seraphing Shield
-	{
+	if(EquipNumSearch(1990) && n_A_LEFT_DEF_PLUS >= 7)
+	{// Seraphing Shield
 		spMultiplier += 5;
 	}
-	
-	
+	if( EquipNumSearch(2051)) 
+	{//Dragon Slayer (Ancient Weapon)
+		spMultiplier += 3 * Math.floor(n_A_Weapon_ATKplus / 2);
+	}
+	if( EquipNumSearch(2078))   
+	{//Demon's Shot
+		spMultiplier += 2 * Math.floor(n_A_Weapon_ATKplus / 3);
+	}
 	//Shadows
 	if ( EquipNumSearch( 1654 ) )
 	{ // "Shadow Champion Boots"
@@ -5010,12 +5181,25 @@ function calcASPD()
 	}
 	if(EquipNumSearch(2035))
 	{ //Pile Bunker S
-			equipASPD += Math.floor(n_A_Weapon2_ATKplus / 2);
+		equipASPD += Math.floor(n_A_Weapon2_ATKplus / 2);
 	}
-	if ( EquipNumSearch( 2038 ) )
+	if (EquipNumSearch(2038))
 	{//Armor of Sixtus the Agile
-			equipASPD += 2 * Math.floor(n_A_BODY_DEF_PLUS / 3);
+		equipASPD += 2 * Math.floor(n_A_BODY_DEF_PLUS / 3);
 	}
+	if((EquipNumSearch(2052) || EquipNumSearch(2057) || EquipNumSearch(2061) || EquipNumSearch(2071) ) && n_A_Weapon_ATKplus >= 9) 
+	{//Trident of Undine || Hand of Death || Empyrean || All-Holy Book
+		equipASPD += 10;
+	}
+	if(EquipNumSearch(2058) || EquipNumSearch(2059) || EquipNumSearch(2060))
+	{//Steel Flower || Magic Sword || Fatalist
+		equipASPD += 2 *  Math.floor(n_A_Weapon_ATKplus / 3);
+	}
+	if(EquipNumSearch(2079) || EquipNumSearch(2080))
+	{//Crimson Rose || Master of Souls
+		equipASPD += 3 *  Math.floor(n_A_Weapon_ATKplus / 3);
+	}
+	
 	//Cards
 	if(CardNumSearch(556))
 	{//Cenere Card
@@ -5166,6 +5350,10 @@ function calcASPD()
 	}
 	if(EquipNumSearch(1990) && n_A_LEFT_DEF_PLUS >= 9) // Seraphing Shield
 	{
+		flatASPD += 1;
+	}
+	if((EquipNumSearch(2079) || EquipNumSearch(2080)) && n_A_Weapon_ATK >= 7)
+	{//Crimson Rose || Master of Souls
 		flatASPD += 1;
 	}
 	
@@ -5377,6 +5565,15 @@ function CalcVariableCast()
 			w -= (n_A_SHOES_DEF_PLUS - 11) * 3;
 		if(n_A_SHOES_DEF_PLUS >=13)
 			w -= 9;
+	}
+	if( (EquipNumSearch(2053) || EquipNumSearch(2063) || EquipNumSearch(2065) || EquipNumSearch(2072))&& n_A_Weapon_ATKplus >= 9)
+	{//Blade of Light || Rusty Dragon's Wand || Shadow Eater || Mace of the Righteous
+		w -= 10;
+	}
+	
+	if(EquipNumSearch(2068) && n_A_Weapon_ATKplus >= 11) 
+	{//Big Badaboom
+		w -= 15;
 	}
 	
 	if(EquipNumSearch(1745))
@@ -5674,6 +5871,22 @@ function CalcDelay()
 			n_tok[bon_RED_CASTDELAY] += 10;
 		
 	}
+	if((EquipNumSearch(2058) && n_A_Weapon_ATKplus >= 11) ||
+	   (EquipNumSearch(2060) && n_A_Weapon_ATKplus >= 11) )
+	{//Steel Flower || Fatalist
+		n_tok[bon_RED_CASTDELAY] += 7;
+	}
+	if((EquipNumSearch(2051) && n_A_Weapon_ATKplus >= 9) ||//Dragon Slayer (Ancient Weapon)
+	   (EquipNumSearch(2070) && n_A_Weapon_ATKplus >= 11) )//Slate Sword
+	{
+		n_tok[bon_RED_CASTDELAY] += 10;
+	}
+	
+	if(EquipNumSearch(2062)) 
+	{//Scarlet Dragon's Bow
+		n_tok[bon_RED_CASTDELAY] += 4 * Math.floor(n_A_Weapon_ATKplus / 3);
+	}
+	
 	// Skills
 	if ( performerBuffs[ksBardSolo] === ksMagicStrings && performerBuffs[ksBardSoloLevel] > 0 )
 	{ // Magic Strings
@@ -5979,48 +6192,6 @@ function calcRaceElementalReduction()
 			n_tok[bon_RED_RC_DRAGON] -= 200;
 		}
 	}
-	for(var i = 0 ; i < 6 ; i++)
-	{
-		if ( EquipNumSearch( 2037 + i ) && i != 3)
-		{//Armor of Sixtus (all)
-			if(n_A_BODY_DEF_PLUS >= 7)
-			{
-				n_tok[bon_IGN_DEF_RC_BRUTE] += 30;
-				n_tok[bon_IGN_DEF_RC_DEMON] += 30;
-			}
-			if(n_A_BODY_DEF_PLUS >= 9)
-			{
-				n_tok[bon_DMG_RC_BRUTE] += 30;
-				n_tok[bon_DMG_RC_DEMON] += 30;
-			}
-			if(n_A_BODY_DEF_PLUS >= 11)
-			{
-				n_tok[bon_DMG_ELE_WIND] += 30;
-				n_tok[bon_DMG_ELE_EARTH] += 30;
-			}
-		}
-		if ( EquipNumSearch( 2043 + i ) && i != 3)
-		{//Armor of Sixtus Set (all)
-			if((n_A_BODY_DEF_PLUS + n_A_SHOES_DEF_PLUS) >= 21)
-			{
-				n_tok[bon_IGN_DEF_RC_BRUTE] += 20;
-				n_tok[bon_IGN_DEF_RC_DEMON] += 20;
-			}
-		}
-	}
-	if ( EquipNumSearch( 2040 ) )
-	{//Armor of Sixtus the Wise
-		if(n_A_BODY_DEF_PLUS >= 9)
-		{
-			n_tok[bon_MDMG_RC_BRUTE] += 30;
-			n_tok[bon_MDMG_RC_DEMON] += 30;
-		}
-		if(n_A_BODY_DEF_PLUS >= 11)
-		{
-			n_tok[bon_MDMG_ELE_WIND] += 30;
-			n_tok[bon_MDMG_ELE_EARTH] += 30;
-		}
-	}
 	if ( EquipNumSearch( 737 ) )
 	{ // Survivor's Mant + Survivor's Rod
 		n_tok[bon_RED_ELE_NEUTRAL] += n_A_SHOULDER_DEF_PLUS * 3;
@@ -6089,6 +6260,7 @@ function calcRaceElementalReduction()
 			n_tok[bon_RED_ELE_NEUTRAL] += 10;
 		
 	}
+
 	//Shadows
 	if ( EquipNumSearch( 1672 ) )
 	{ // "Shadow Dragonslayer Shield"
@@ -6274,7 +6446,7 @@ function calcRaceElementalReduction()
 	// Sanctuary. Not sure why this is here...
 	if ( EquipNumSearch( 1085 ) )
 	{
-		if(n_A_Weapon_ATKplus >= 6)
+		if(n_A_Weapon_ATKplus >= 6) 
 		{
 			n_tok[bon_SANC_MUL] += 5;
 		}

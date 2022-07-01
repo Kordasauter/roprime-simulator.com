@@ -3066,7 +3066,8 @@ function Init()
 	LoadDataINIT(); // loads cookies
 }
 
-function sortSelect(selElem) {
+function sortSelect(selElem) 
+{
     var tmpAry = new Array();
     for (var i=0;i<selElem.options.length;i++) {
         tmpAry[i] = new Array();

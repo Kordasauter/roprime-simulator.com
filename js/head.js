@@ -988,6 +988,105 @@ function ApplySkillModifiers( damage )
 			dmgMultiplier += CardNumSearch(659) * 20;
 		}
 	}
+	if(n_A_ActiveSkill == skill_SUR_TIGER_CANNON && EquipNumSearch(2074)) //Claws of the Bifrost
+	{
+		dmgMultiplier += 4 * Math.floor(n_A_Weapon_ATKplus / 3);
+	}
+	if(((n_A_ActiveSkill == skill_RUN_DRAGON_BREATH || n_A_ActiveSkill == skill_RUN_DRAGON_BREATH_WATER) && EquipNumSearch(2051)) || //Dragon Slayer (Ancient Weapon)
+	   ((n_A_ActiveSkill == skill_ROY_RAY_OF_GENESIS || n_A_ActiveSkill == skill_PA_GLORIA_DOMINI) && EquipNumSearch(2053)) || //Blade of Light
+	   ( n_A_ActiveSkill == skill_ABI_ADORAMUS && EquipNumSearch(2072)) ) //Mace of the Righteous
+	{
+		dmgMultiplier += 5 * Math.floor(n_A_Weapon_ATKplus / 3);
+	}
+	if(n_A_ActiveSkill == skill_SOR_DIAMOND_DUST && EquipNumSearch(2066)) //Ice Guardian
+	{
+		dmgMultiplier += 8 * Math.floor(n_A_Weapon_ATKplus / 3);
+	}
+	if((n_A_ActiveSkill == skill_RUN_SONIC_WAVE && EquipNumSearch(2050)) ||//Runic Katana
+	   (n_A_ActiveSkill == skill_MEC_AXE_TORNADO && EquipNumSearch(2067))||//Avenger
+	   (n_A_ActiveSkill == skill_MEC_VULCAN_ARM && EquipNumSearch(2068)) ||//Big Badaboom
+	   (n_A_ActiveSkill == skill_GEN_CART_TORNADO && EquipNumSearch(2070)))//Slate Sword
+	{
+		dmgMultiplier += 10 * Math.floor(n_A_Weapon_ATKplus / 3);
+	}	
+	if((n_A_ActiveSkill == skill_RAN_ARROW_STORM && EquipNumSearch(2061))  || //Empyrean
+	   (n_A_ActiveSkill == skill_WAR_EARTH_STRAIN && EquipNumSearch(2063)) || //Rusty Dragon's Wand
+	   (n_A_ActiveSkill == skill_WAR_JACK_FROST && EquipNumSearch(2064))   || //Wand of the Purple Orb
+	   (n_A_ActiveSkill == skill_SOR_EARTH_GRAVE && EquipNumSearch(2065))   )  //Shadow Eater
+	{
+		dmgMultiplier += 12 * Math.floor(n_A_Weapon_ATKplus / 3);
+	}
+	if(n_A_ActiveSkill == skill_ABI_DUPLE_LIGHT && EquipNumSearch(2071)) //All-Holy Book
+	{
+		dmgMultiplier += 25 * Math.floor(n_A_Weapon_ATKplus / 3);
+	}
+	
+	if((n_A_ActiveSkill == skill_MIWA_SEVERE_RAINSTORM  && EquipNumSearch(2054) && n_A_Weapon_ATKplus >= 9) ||  //"Bow of Narcissus"
+	  ((n_A_ActiveSkill == skill_MIWA_REVERBERATION || n_A_ActiveSkill == skill_MIWA_METALLIC_SOUND ) && EquipNumSearch(2055) && n_A_Weapon_ATKplus >= 9) || //Tide Conch
+	  ((n_A_ActiveSkill == skill_MIWA_REVERBERATION || n_A_ActiveSkill == skill_MIWA_METALLIC_SOUND ) && EquipNumSearch(2056) && n_A_Weapon_ATKplus >= 9) || //Thorn Whip
+	  ((n_A_ActiveSkill == skill_MEC_VULCAN_ARM || n_A_ActiveSkill == skill_MEC_ARM_CANNON ) && EquipNumSearch(2068) && n_A_Weapon_ATKplus >= 9) ||  //Big Badaboom
+	   (n_A_ActiveSkill == skill_SUR_RAMPAGE_BLASTER && EquipNumSearch(2073) && n_A_Weapon_ATKplus >= 9) )  //Iron Claw
+	{
+		dmgMultiplier += 10;
+	}
+	if(((n_A_ActiveSkill == skill_ROY_SPEAR_CANNON || n_A_ActiveSkill == skill_ROY_VANISHING_POINT) && EquipNumSearch(2052) && n_A_Weapon_ATKplus >= 7) || //Trident of Undine
+	    (n_A_ActiveSkill == skill_GEN_CART_CANNON && EquipNumSearch(2069) && n_A_Weapon_ATKplus >= 9) || //Sword of Blue Fire
+	    (n_A_ActiveSkill == skill_SUR_TIGER_CANNON && EquipNumSearch(2074) && n_A_Weapon_ATKplus >= 9)|| //Claws of the Bifrost
+	    (n_A_ActiveSkill == skill_REB_DRAGON_TAIL && EquipNumSearch(2081) && n_A_Weapon_ATKplus >= 7) ||//Big Game Trophy
+	    (n_A_ActiveSkill == skill_REB_ROUND_TRIP && EquipNumSearch(2082) && n_A_Weapon_ATKplus >= 7)  ||//Guttling Gun
+	    (n_A_ActiveSkill == skill_SUM_LUNATIC_CARROT_BEAT && EquipNumSearch(2083) && n_A_Weapon_ATKplus >= 7)  ||//Meowmeow Foxtail
+	    (n_A_ActiveSkill == skill_SUM_SILVERVINE_STEM_SPEAR && EquipNumSearch(2083) && n_A_Weapon_ATKplus >= 7)  ) //Meowmeow Foxtail
+	{
+		dmgMultiplier += 15;
+		if((n_A_ActiveSkill == skill_REB_DRAGON_TAIL && EquipNumSearch(2081) && n_A_Weapon_ATKplus >= 11) ||//Big Game Trophy
+		   (n_A_ActiveSkill == skill_REB_ROUND_TRIP && EquipNumSearch(2082) && n_A_Weapon_ATKplus >= 11)  ) //Guttling Gun
+			dmgMultiplier += 15;
+	}
+	if((n_A_ActiveSkill == skill_GLT_ROLLING_CUTTER && EquipNumSearch(2058) && n_A_Weapon_ATKplus >= 9) || //Steel Flower
+	   (n_A_ActiveSkill == skill_SHA_FATAL_MENACE && EquipNumSearch(2060) && n_A_Weapon_ATKplus >= 9)   || //Fatalist
+	   ((n_A_ActiveSkill == skill_ROY_SPEAR_CANNON || n_A_ActiveSkill == skill_ROY_VANISHING_POINT) && EquipNumSearch(2052) && n_A_Weapon_ATKplus >= 11) ||//Trident of Undine
+	   (n_A_ActiveSkill == skill_GEN_CART_TORNADO && EquipNumSearch(2070) && n_A_Weapon_ATKplus >= 9)   ||//Slate Sword
+	   (n_A_ActiveSkill == skill_SUM_CATNIP_METEOR && EquipNumSearch(2083) && n_A_Weapon_ATKplus >= 11) ||//Meowmeow Foxtail
+	   (n_A_ActiveSkill == skill_SUM_PICKY_PECK && EquipNumSearch(2083) && n_A_Weapon_ATKplus >= 11)    ) //Meowmeow Foxtail
+	{
+		dmgMultiplier += 20;
+	}
+	if(n_A_ActiveSkill == skill_KAG_CROSS_STRIKE && EquipNumSearch(2084) && (n_A_Weapon_ATKplus + n_A_Weapon2_ATKplus) >= 14) 
+	{//Kagero & Oboro Dual Dagger Set
+		dmgMultiplier += 25;
+		if(n_A_ActiveSkill == skill_KAG_CROSS_STRIKE && EquipNumSearch(2084) && (n_A_Weapon_ATKplus + n_A_Weapon2_ATKplus) >= 20)
+		{//Kagero & Oboro Dual Dagger Set
+			dmgMultiplier += 25;
+			
+		}
+	}
+	if((n_A_ActiveSkill == skill_ABI_DUPLE_LIGHT && EquipNumSearch(2071) && n_A_Weapon_ATKplus >= 11) ||//All-Holy Book
+	   (n_A_ActiveSkill == skill_KAG_SWIRLING_PETAL && EquipNumSearch(2075) && n_A_Weapon_ATKplus >= 7))//Four Mirrors
+	{
+		dmgMultiplier += 30;
+	}
+	if(n_A_ActiveSkill == skill_RAN_AIMED_BOLT && EquipNumSearch(2062) && n_A_Weapon_ATKplus >= 9) //Scarlet Dragon's Bow
+	{
+		dmgMultiplier += 35;
+	}
+	
+	if(n_A_ActiveSkill == skill_MEC_AXE_BOOMERANG && EquipNumSearch(2067) && n_A_Weapon_ATKplus >= 9) //Avenger
+	{
+		dmgMultiplier += 40;
+	}
+	
+	// if(n_A_ActiveSkill == )
+	// {
+		// if(EquipNumSearch() && n_A_Weapon_ATKplus >= )
+		// { //
+			// dmgMultiplier += 10 * Math.floor(n_A_Weapon_ATKplus / 3);
+		// }
+	// }
+	
+	
+	
+	
+	
 	// if ( EquipNumSearch( 1399 ) && n_A_ActiveSkill == skill_RAN_ARROW_STORM)
 	// { // Giant Crossbow
 		// dmgMultiplier += 5 * n_A_Weapon_ATKplus;
