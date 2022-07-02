@@ -2085,7 +2085,7 @@ ITEM_NAME = [
 ,[2082,0,0,"Guttling Gun","[For each 2 refine lv]<br>ATK +10.<br>[For each 3 refine lv]<br>Long-range physical damage +2%.<br>[If refine lv is 7 or higher]<br>[Round Trip] damage +15%.<br>[Round Trip] SP consumption -10%.<br>[If refine lv is 9 or higher]<br>Has a chance of activating effects for 90 seconds when using [Platinum Altar]:<br>Long-range physical damage +10%.<br>ATK +50.<br>[If refine lv is 11 or higher]<br>[Round Trip] damage +15%.",0]
 ,[2083,0,0,"Meowmeow Foxtail","[For each 2 refine lv]<br>ATK and MATK +10.<br>[For each 3 refine lv]<br>ATK and MATK +2%.<br>[If refine lv is 7 or higher]<br>[Lunatic Carrot Beat] and [SV Stem Spear] damage +15%.<br>[If refine lv is 9 or higher]<br>ASPD +10%.<br>Variable casting time -10%.<br>[If refine lv is 11 or higher]<br>[Picky Peck] and [CN Meteor] damage +20%.",0]
 ,[2084,0,0,"Kagero & Oboro Dual Dagger Set","[For each 3 level of set items refine sum]<br>ATK +10.<br>[For each 5 level of set items refine sum]<br>Physical damage +2%.<br>[If sum of set items refine is +14 or higher]<br>[Cross Slash] damage +25%.<br>[If sum of set items refine is +16 or higher]<br>Cooldown of [Cross Slash] -2 sec.<br>[If sum of set items refine is +18 or higher]<br>Enables to use [Shadow Trampling] same Lv like [Distorted Crescent].<br>Enables to use [Distorted Crescent] same Lv like [Shadow Trampling].<br>[If sum of set items refine is +20 or higher]<br>[Cross Slash] damage +25%.",0]
-// ,[2085,0,0,"Item_Name","Item_Desc",0]
+,[2085,0,0,"Dog Cap + Tornado Axe","[Axe Tornado] damage +15% per 2 refine lv of weapon.",0]
 // ,[2086,0,0,"Item_Name","Item_Desc",0]
 // ,[2087,0,0,"Item_Name","Item_Desc",0]
 // ,[2088,0,0,"Item_Name","Item_Desc",0]

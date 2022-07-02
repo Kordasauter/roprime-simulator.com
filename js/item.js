@@ -2104,7 +2104,7 @@
 ,[2082,weapTyp_GATLING_GUN,222,205,4,2,270,100,bon_NONE] // "Guttling Gun"
 ,[2083,weapTyp_ROD,224,300,4,2,110,100,bon_MATK,300,bon_NONE] // "Meowmeow Foxtail"
 ,[2084,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Kagero & Oboro Dual Dagger Set"
-// ,[2085,itm_,0,0,0,0,0,0,bon_NONE] // ""
+,[2085,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Dog Cap + Tornado Axe"
 // ,[2086,itm_,0,0,0,0,0,0,bon_NONE] // ""
 // ,[2087,itm_,0,0,0,0,0,0,bon_NONE] // ""
 // ,[2088,itm_,0,0,0,0,0,0,bon_NONE] // ""
@@ -2618,6 +2618,7 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2047,2041,1950,"NULL"] // "Sixtus + Temporal Dex"
 ,[2048,2042,1951,"NULL"] // "Sixtus + Temporal Luk"
 ,[2084,2076,2077,"NULL"] // Kagero & Oboro Dual Dagger Set
+,[2085,1702,2022,"NULL"] // Dog Cap + Tornado Axe
 
 //,[itm_set,item1,item2,...,"NULL"] // 
 ];

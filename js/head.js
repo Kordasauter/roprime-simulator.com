@@ -988,6 +988,10 @@ function ApplySkillModifiers( damage )
 			dmgMultiplier += CardNumSearch(659) * 20;
 		}
 	}
+	if(n_A_ActiveSkill == skill_MEC_AXE_TORNADO && EquipNumSearch(2085)) //"Dog Cap + Tornado Axe"
+	{
+		dmgMultiplier += 15 * Math.floor(n_A_Weapon_ATKplus / 2);
+	}
 	if(n_A_ActiveSkill == skill_SUR_TIGER_CANNON && EquipNumSearch(2074)) //Claws of the Bifrost
 	{
 		dmgMultiplier += 4 * Math.floor(n_A_Weapon_ATKplus / 3);
