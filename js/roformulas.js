@@ -4239,6 +4239,11 @@ function calcHit(n_A_HIT)
 	{ // Rapid Smiting
 		n_A_HIT += 20;
 	}
+	if ( n_A_ActiveSkill === skill_SHA_FATAL_MENACE )
+	{ // Fatal Menace
+		n_A_HIT += (n_A_ActiveSkillLV * 5) - 35;
+	}
+	
 	if ( battleChantBuffs[pass_V_HIT_FLEE] )
 	{
 		n_A_HIT += 50;

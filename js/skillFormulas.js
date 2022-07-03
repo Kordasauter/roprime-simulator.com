@@ -2536,7 +2536,8 @@ function CalcSkillDamage()
 			  n_A_ActiveSkill === skill_SHA_TRIANGLE_SHOT ||
 			  n_A_ActiveSkill === skill_GLT_CROSS_IMPACT ||
 			  n_A_ActiveSkill === skill_REB_QUICK_DRAW_SHOT ||	
-			  n_A_ActiveSkill === skill_SUM_PICKY_PECK )
+			  n_A_ActiveSkill === skill_SUM_PICKY_PECK ||
+			  n_A_ActiveSkill === skill_SHA_FATAL_MENACE )
 	{
 		if ( n_A_ActiveSkill === skill_AR_DOUBLE_STRAFE )
 		{
@@ -2770,6 +2771,23 @@ function CalcSkillDamage()
 				variableCastTime *=  1.0;
 			}
 			n_Delay[ksDelayGlobal] = 1.0;
+		}
+		else if(n_A_ActiveSkill==skill_SHA_FATAL_MENACE)
+		{
+			w_SkillMod = 1.0 +(1.0 * n_A_ActiveSkillLV);
+			w_SkillMod *= n_A_BaseLV / 100;
+			if (  n_A_WeaponType == weapTyp_DAGGER)//prime
+			{
+					w_TotalHits = 2;
+			}
+			else
+			{
+				w_TotalHits = 1;
+			}
+			
+			fixedCastTime *= 0.0;
+			variableCastTime *=  0.0;
+			n_Delay[ksDelayCooldown] = 0.5;
 		}
 		CalcAtkMods02(w_SkillMod,0);
 		
