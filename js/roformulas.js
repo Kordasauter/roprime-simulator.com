@@ -865,7 +865,7 @@ function CalcEquipAtk()
 	}
 	if( EquipNumSearch(2021) )
 	{//Gigant Blade 
-		if(SU_STR >= 110)
+		if(SU_STR <= 110)
 			equipmentAttack -= 250;
 	}
 	if( EquipNumSearch(2050) || //Runic Katana
@@ -1679,8 +1679,19 @@ function CalcAttackMod()
 	{//Meowmeow Foxtail
 		n_tok[bon_PHY_ATK] += 2 * Math.floor(n_A_Weapon_ATKplus / 3);
 	}
+	if(EquipNumSearch(2120) || // "Evil Slayer Stabber Dagger"
+	   EquipNumSearch(2121) || // "Evil Slayer Destroyer Hammer"
+	   EquipNumSearch(2122) || // "Evil Slayer Piercer Bow"
+	   EquipNumSearch(2123) || // "Evil Slayer Sword"
+	   EquipNumSearch(2124) )  // "Evil Slayer Ripper Katar"
+	{
+		if(n_A_Weapon_ATKplus >= 7)
+			n_tok[bon_PHY_ATK] += 5;
+		if(n_A_Weapon_ATKplus >= 9)
+			n_tok[bon_PHY_ATK] += 7;
+	}
 	
-	//shadows
+//shadows
 	if ( EquipNumSearch( 1660 ) )
 	{ // "Shadow Strongman Gloves"
 		n_tok[bon_PHY_ATK] += Math.floor(n_A_SHADOW_WEAPON_DEF_PLUS/2);
@@ -1727,7 +1738,7 @@ function CalcAttackMod()
 		n_tok[bon_PHY_ATK] += n_A_SHADOW_WEAPON_DEF_PLUS;
 	}
 	
-	//items
+//items
 	if ( usableItems[ksArchmagePotion] )
 	{
 		n_tok[bon_PHY_ATK] += 1;
@@ -1743,7 +1754,7 @@ function CalcAttackMod()
 	var cardnEquipBonus = StPlusCalc2( bon_DMG_MONSTER+n_B[en_ID] ) + StPlusCard( bon_DMG_MONSTER+n_B[en_ID] );
 	attackMod *= ( 100 + cardnEquipBonus ) / 100;
 		
-	// Skills
+// Skills
 	if ( SkillSearch( skill_LK_FRENZY ) )
 	{
 		attackMod *= 2;
@@ -1846,7 +1857,7 @@ function CalcCriticalMod()
 	}
 	if( EquipNumSearch(2021) )
 	{//Gigant Blade 
-		n_tok[bon_DMG_CRIT] += n_A_Weapon2_ATKplus;
+		n_tok[bon_DMG_CRIT] += n_A_Weapon_ATKplus;
 	}
 	if ( EquipNumSearch( 2042 ) )
 	{//Armor of Sixtus the Lucky
@@ -2715,13 +2726,22 @@ function calcHP()
 	{//Elegant Doram Shoes
 		additiveHP += 100 * Math.floor(n_A_SHOES_DEF_PLUS / 2);
 	}
+	if(EquipNumSearch(2129))
+	{//Felrock‘s Armor
+		if(n_A_BODY_DEF_PLUS >= 7)
+			additiveHP += 500;
+		if(n_A_BODY_DEF_PLUS >= 9)
+			additiveHP += 200;
+		if(n_A_BODY_DEF_PLUS >= 12)
+			additiveHP += 300;
+	}
 	
-	//Cards
+//Cards
 	if(CardNumSearch(565))
 	{//Jejeling Card
 		additiveHP += Math.floor(SU_VIT / 10) * 200;
 	}
-	//Shadows
+//Shadows
 	
 	if ( EquipNumSearch( 1646 ) )
 	{ // "Dragan's Shadow Gloves"
@@ -3020,7 +3040,6 @@ function calcHP()
 		if(SU_VIT >= 110)
 			hpMultiplier += 1;
 	}
-	
 	if(EquipNumSearch(1948) || EquipNumSearch(1954))
 	{//Vit Boots
 		if(SU_VIT >= 120)
@@ -3042,8 +3061,18 @@ function calcHP()
 	{//Dragon Slayer (Ancient Weapon)
 		hpMultiplier += 3 * Math.floor(n_A_Weapon_ATKplus / 2);
 	}
+	if( EquipNumSearch( 2091 ) )
+	{//Anti-magic Suit
+		if(n_A_BODY_DEF_PLUS >=9)
+			hpMultiplier += 2;
+	}
+	if(EquipNumSearch(2132))
+	{//Felrock‘s Set
+		if((n_A_BODY_DEF_PLUS + n_A_SHOULDER_DEF_PLUS + n_A_SHOES_DEF_PLUS) >= 30)
+			hpMultiplier += 5;
+	}
 	
-	//Cards
+//Cards
 	if(CardNumSearch(563))
 	{//Bungisngis Card
 		hpMultiplier += Math.floor(n_A_HEAD_DEF_PLUS / 2);
@@ -3064,8 +3093,7 @@ function calcHP()
 		hpMultiplier += 10;
 	}
 	
-	//Shadows
-
+//Shadows
 	if ( EquipNumSearch( 1653 ) )
 	{ // "Shadow Champion Armor"
 		if (n_A_SHADOW_BODY_DEF_PLUS >= 7) { hpMultiplier += 1; }
@@ -3512,7 +3540,16 @@ function calcSP( n_A_MaxSP )
 	{//Elegant Doram Shoes
 		w += 20 * Math.floor(n_A_SHOES_DEF_PLUS / 2);
 	}
-	//Shadows
+	if(EquipNumSearch(2129))
+	{//Felrock‘s Armor
+		if(n_A_BODY_DEF_PLUS >= 7)
+			w += 50;
+		if(n_A_BODY_DEF_PLUS >= 9)
+			w += 20;
+		if(n_A_BODY_DEF_PLUS >= 12)
+			w += 30;
+	}
+//Shadows
 	if ( EquipNumSearch( 1655 ) )
 	{ // "Shadow Champion Set"
 		w  += (n_A_SHADOW_SHOES_DEF_PLUS + n_A_SHADOW_BODY_DEF_PLUS);
@@ -3522,7 +3559,7 @@ function calcSP( n_A_MaxSP )
 		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7){w += 200;}
 	}
 	
-	// Skills	
+// Skills	
 	if ( SkillSearch( skill_SL_KAINA ) )
 	{
 		w += 30 * SkillSearch( skill_SL_KAINA );
@@ -3548,7 +3585,7 @@ function calcSP( n_A_MaxSP )
 	
 	spMultiplier += n_tok[bon_SP_MUL];
 	
-	// Cards
+// Cards
 	if ( n_A_SHOES_DEF_PLUS >= 9 && CardNumSearch( 304 ) )
 	{ // Firelock Soldier
 		spMultiplier += 10;
@@ -3573,7 +3610,7 @@ function calcSP( n_A_MaxSP )
 		spMultiplier += 5;
 	}
 	
-	// Equipment
+// Equipment
 	if ( n_A_SHOES_DEF_PLUS <= 4 && CardNumSearch( 407 ) )
 	{ // Gold Acidus
 		spMultiplier += 4;
@@ -3627,7 +3664,13 @@ function calcSP( n_A_MaxSP )
 	{//Demon's Shot
 		spMultiplier += 2 * Math.floor(n_A_Weapon_ATKplus / 3);
 	}
-	//Shadows
+	if(EquipNumSearch(2132))
+	{//Felrock‘s Set
+		if((n_A_BODY_DEF_PLUS + n_A_SHOULDER_DEF_PLUS + n_A_SHOES_DEF_PLUS) >= 30)
+			spMultiplier += 5;
+	}
+	
+//Shadows
 	if ( EquipNumSearch( 1654 ) )
 	{ // "Shadow Champion Boots"
 		if (n_A_SHADOW_SHOES_DEF_PLUS >= 7) { spMultiplier += 1; }
@@ -3653,7 +3696,7 @@ function calcSP( n_A_MaxSP )
 		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7){spMultiplier += 5;}
 		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9){spMultiplier += 5;}
 	}
-	//Enchant
+//Enchant
 	if(EnchNumSearch( 283 ))//Special VIT = 283
 	{
 		if(n_A_SHOULDER_DEF_PLUS >8)
@@ -4060,6 +4103,14 @@ function calcHardMDef(n_A_MDEF)
 			n_A_MDEF += Math.floor(n_A_BODY_DEF_PLUS / 2);
 		}
 	}
+	if( EquipNumSearch( 2091 ) )
+	{//Anti-magic Suit
+		if(n_A_BODY_DEF_PLUS >=7)
+			n_A_MDEF += 5;
+		if(n_A_BODY_DEF_PLUS >=9)
+			n_A_MDEF += 5;
+	}
+	
 	if(EquipNumSearch(1820))
 	{ // Shadow Minstrel Shield
 		n_A_MDEF += n_A_SHADOW_SHIELD_DEF_PLUS * (SkillSearch(skill_MIN_WINDMILL) + SkillSearch(skill_MIN_ECHO_SONG) + SkillSearch(skill_MIN_HARMONIZE));
@@ -4678,6 +4729,14 @@ function calcCrit( n_A_CRI )
 	{//Luk Glove
 		n_A_CRI += Math.floor(SU_LUK / 10);
 	}
+	if ( EquipNumSearch( 2086 ) )
+	{//Revised Encyclopedia
+		if(n_A_LEFT_DEF_PLUS >= 7)
+			n_A_CRI += 2;
+		if(n_A_LEFT_DEF_PLUS >= 9)
+			n_A_CRI += 2;
+	}
+	
 	if( EquipNumSearch(1825))
 	{//Shadow Gunslinger Shield
 		n_A_CRI += n_A_SHADOW_SHIELD_DEF_PLUS;
@@ -5204,12 +5263,6 @@ function calcASPD()
 	{//Crimson Rose || Master of Souls
 		equipASPD += 3 *  Math.floor(n_A_Weapon_ATKplus / 3);
 	}
-	
-	//Cards
-	if(CardNumSearch(556))
-	{//Cenere Card
-		equipASPD += 2 * Math.floor(SU_AGI/10);
-	}
 	if(EquipNumSearch(1942))
 	{ //"General's Helmet"
 		if(n_A_HEAD_DEF_PLUS >=7)
@@ -5219,7 +5272,34 @@ function calcASPD()
 	{
 		equipASPD += 3 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
 	}
-	
+	if(EquipNumSearch(2092))
+	{//Revised Encyclopedia + Giant Encyclopedia
+		equipASPD += n_A_LEFT_DEF_PLUS;
+	}
+	if(EquipNumSearch(2131))
+	{//Felrock's Boots
+		if(n_A_SHOES_DEF_PLUS >= 7)
+			equipASPD += 5;
+		if(n_A_SHOES_DEF_PLUS >= 9)
+			equipASPD += 5;
+	}
+//Cards
+	if(CardNumSearch(556))
+	{//Cenere Card
+		equipASPD += 2 * Math.floor(SU_AGI/10);
+	}
+	if(CardNumSearch(589))
+	{//Big Eggring Card
+		if(SU_AGI <=50)
+		{
+			equipASPD -= 2 * Math.floor(SU_AGI/10);
+		}
+		else
+		{
+			equipASPD -= 10;
+		}
+	}
+//Shadows
 	if ( EquipNumSearch( 1747 ) )// "Shadow Sage Armor"
 	{ 
 		if(SkillSearch(skill_SA_HINDSIGHT))
@@ -5239,18 +5319,6 @@ function calcASPD()
 		if(n_A_SHADOW_EARRING_DEF_PLUS >= 7)
 		{
 			equipASPD += 2;
-		}
-	}
-	//cards
-	if(CardNumSearch(589))
-	{//Big Eggring Card
-		if(SU_AGI <=50)
-		{
-			equipASPD -= 2 * Math.floor(SU_AGI/10);
-		}
-		else
-		{
-			equipASPD -= 10;
 		}
 	}
 	if( (EquipNumSearch( 1809 ) &&  SkillSearch(skill_RUN_ENCHANT_BLADE) ) ||// Shadow Runeknight Shield
@@ -5360,6 +5428,11 @@ function calcASPD()
 	if((EquipNumSearch(2079) || EquipNumSearch(2080)) && n_A_Weapon_ATK >= 7)
 	{//Crimson Rose || Master of Souls
 		flatASPD += 1;
+	}
+	if(EquipNumSearch(2131))
+	{//Felrock's Boots
+		if(n_A_SHOES_DEF_PLUS >= 12)
+			flatASPD += 1;
 	}
 	
 	if( (EquipNumSearch( 1809 ) &&  SkillSearch(skill_RUN_ENCHANT_BLADE) ) || // Shadow Runeknight Shield
@@ -5575,10 +5648,18 @@ function CalcVariableCast()
 	{//Blade of Light || Rusty Dragon's Wand || Shadow Eater || Mace of the Righteous
 		w -= 10;
 	}
-	
 	if(EquipNumSearch(2068) && n_A_Weapon_ATKplus >= 11) 
 	{//Big Badaboom
 		w -= 15;
+	}
+	if(EquipNumSearch(2130))
+	{//Felrock's Cloak
+		if(n_A_SHOULDER_DEF_PLUS >= 7)
+			w -= 10;
+		if(n_A_SHOULDER_DEF_PLUS >= 9)
+			w -= 10;
+		if(n_A_SHOULDER_DEF_PLUS >= 12)
+			w -= 5;
 	}
 	
 	if(EquipNumSearch(1745))
@@ -5598,7 +5679,7 @@ function CalcVariableCast()
 		w -= n_A_SHADOW_WEAPON_DEF_PLUS;
 	}
 	
-	// Skills
+// Skills
 	if ( performerBuffs[ksBardSolo] === ksMagicStrings && performerBuffs[ksBardSoloLevel] > 0 )
 	{ // Magic Strings
 		var skillBonus = performerBuffs[ksBardSoloLevel];

@@ -231,6 +231,13 @@ function calcMAtk( includeMultipliers )
 		{//Crimson Rose
 			w += 5;
 		}
+		if(EquipNumSearch(2119))
+		{//Evil Slayer Vanquisher Staff
+			if(n_A_Weapon_ATKplus >= 7)
+				w += 5;
+			if(n_A_Weapon_ATKplus >= 9)
+				w += 7;
+		}
 		//Shadows
 		if ( EquipNumSearch( 1656 ) )
 		{ // "Shadow Mystic Gloves"
@@ -511,6 +518,11 @@ function calcMAtk( includeMultipliers )
 		EquipNumSearch(2083) ) //Meowmeow Foxtail
 	{
 		n_A_EquipMATK += 10 * Math.floor(n_A_Weapon_ATKplus / 2);
+	}
+	if ( EquipNumSearch( 2086 ) )
+	{//Revised Encyclopedia
+		if(n_A_LEFT_DEF_PLUS >= 9)
+			n_A_EquipMATK += 5;
 	}
 	//shadows
 	if ( EquipNumSearch( 1657 ) )

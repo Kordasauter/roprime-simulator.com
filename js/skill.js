@@ -1485,6 +1485,7 @@ JobSkillActiveOBJ = [
 ,[141,1,502,1,0,1]// Renovatio 1  When Attacking
 ,[142,0,94,3,0,6]// Sanctuary 3  When recieving physical damage
 ,[143,0,620,1,0,9]// Maelstrom 1  When recieving magical damage
+,[144,0,534,3,0,6]// Drain Life 3  When recieving physical damage
 
  //IDAutocast, Type(0=when hit, 1=when attack), SkillID, SkillLVL, Chance, AutoCastTrigger
 ];

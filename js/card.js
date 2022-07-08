@@ -91,7 +91,7 @@ function SetCard()
 ,[ 38,1,"Zenorc",0,bon_ATK,10,bon_CH_STATUS_POISON,4,0]
 ,[ 39,1,"Golem","Weapon Cannot be broken",bon_ATK,5,0]
 ,[ 40,1,"Mummy",0,bon_HIT,20,0]
-,[ 41,1,"Soldier Sleleton",0,bon_CRIT,9,0]
+,[ 41,1,"Soldier Skeleton",0,bon_CRIT,9,0]
 ,[ 42,1,"Doppelganger",0,bon_ASPD_MUL,10,0]
 ,[ 43,1,"Sidewinder","Enable the use of [Double Attack] Lvl 1 (all weapons)<BR>If you know a level higher than 1 you will use that level instead",0]
 ,[ 44,1,"Phreeoni",0,bon_HIT,100,0]
