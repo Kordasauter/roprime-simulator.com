@@ -1078,7 +1078,23 @@ function ApplySkillModifiers( damage )
 	{
 		dmgMultiplier += 40;
 	}
-	
+	if(n_A_ActiveSkill == skill_MA_COLD_BOLT || n_A_ActiveSkill == skill_MA_FIRE_BOLT || n_A_ActiveSkill == skill_MA_LIGHTNING_BOLT )
+	{
+		if(CardNumSearch( 672 ) && n_A_WeaponType == weapTyp_BOOK)
+		{ //Ju Card
+			dmgMultiplier += 20 * CardNumSearch( 672 );
+			if(n_A_Weapon_ATKplus >= 14)
+				dmgMultiplier += 20 * CardNumSearch( 672 );
+		}
+	}
+	if(n_A_ActiveSkill == skill_REB_ANTI_MATERIAL_BLAST || n_A_ActiveSkill == skill_REB_GODS_HAMMER )
+	{
+		if(CardNumSearch( 690 ))
+		{ //Captain Ferlock Card
+			if(n_A_Weapon_ATKplus >= 10)
+				dmgMultiplier += 30 * CardNumSearch( 672 );
+		}
+	}
 	// if(n_A_ActiveSkill == )
 	// {
 		// if(EquipNumSearch() && n_A_Weapon_ATKplus >= )
@@ -1086,10 +1102,6 @@ function ApplySkillModifiers( damage )
 			// dmgMultiplier += 10 * Math.floor(n_A_Weapon_ATKplus / 3);
 		// }
 	// }
-	
-	
-	
-	
 	
 	// if ( EquipNumSearch( 1399 ) && n_A_ActiveSkill == skill_RAN_ARROW_STORM)
 	// { // Giant Crossbow

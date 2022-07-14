@@ -739,8 +739,38 @@ function SetCard()
 ,[666,	 itm_type_SET,"Undead Knight Card Set","HP -100 and SP -6 every 6 seconds.",bon_FLEE,20,bon_RED_ELE_NEUTRAL,20,0]
 ,[667,	 card_com_ARMOR,"Amdarais","HP -666 and SP -66 every 4 seconds.<br>HP -6,666 and SP -666 when unequipped. ",bon_PHY_ATK,15,bon_MATK_MUL,15,0]
 ,[668,	 card_comp_WEAPON,"Corruption Root","Has a chance to inflict [Curse], [Sleep] or [Stone Curse] when dealing physical damage.",bon_ATK,20,0]
-//,[669,	 ,"","",0]
+//Geffen Magic Tournament
+,[669,	 card_comp_HEAD,"Fenrir","Additional Matk +5 per each Upgrade level.",bon_MATK,50,bon_RED_FIXEDCAST,70,0]
+,[670,	 card_com_SHOES,"Archi","",bon_ATK,15,bon_MATK,15,bon_HP_ADD,500,bon_FLEE,15,bon_HIT,15,0]
+,[671,	 card_com_SHOES,"Odoric","",bon_ASPD_MUL,3,bon_DMG_RANGE,5,0]
+,[672,	 card_comp_WEAPON,"Ju","[If card inserted in a Book]<br>[Cold Bolt], [Fire Bolt] and [Lightning Bolt] damage +20%.<br>[If Book refine lv +14 and higher]<br>[Cold Bolt], [Fire Bolt] and [Lightning Bolt] damage +20%",bon_DMG_SKILL + skill_MA_COLD_BOLT,10,bon_DMG_SKILL + skill_MA_FIRE_BOLT,10,bon_DMG_SKILL + skill_MA_LIGHTNING_BOLT,10,0]
+,[673,	 card_com_ACC,"Dwigh","",bon_MDMG_ELE_NEUTRAL,20,bon_MDMG_ELE_DARK,20,0]
+,[674,	 card_com_SHOES,"Dio Anemos","",bon_MATK_MUL,3,bon_MDMG_ELE_NEUTRAL,5,bon_MDMG_ELE_EARTH,5,0]
+,[675,	 card_com_SHOES,"Geffen Shoplifter","",bon_MATK_MUL,3,bon_MDMG_ELE_HOLY,5,bon_MDMG_ELE_FIRE,5,0]
+,[676,	 card_com_SHOES,"Geffen Bully","",bon_ASPD_MUL,3,bon_CRIT,5,0]
+,[677,	 card_com_SHOES,"Geffen Gangster","",bon_ASPD_MUL,5,bon_CRIT,3,0]
+,[678,	 card_com_SHOES,"Faymont"," SP regen +10%<br>Has a chance of auto casting Lv 1 [Zen] when taking physical damage.",0]
+,[679,	 card_com_SHOES,"Ordre","",bon_MATK_MUL,3,bon_MDMG_ELE_WIND,5,bon_MDMG_ELE_WATER,5,0]
+,[680,	 card_com_SHOES,"Blut Hase","",bon_DMG_RANGE,5,bon_PHY_ATK,5,0]
+,[681,	 card_com_SHOES,"Kuro Akuma","",bon_RED_CAST,3,bon_DMG_SKILL + skill_NIN_FLAMING_PETALS,5,bon_DMG_SKILL + skill_NIN_FREEZING_SPEAR,5,bon_DMG_SKILL + skill_NIN_WIND_BLADE,5,bon_DMG_RANGE,5,0]
+,[682,	 card_com_SHOES,"Ifodes","",bon_PHY_ATK,3,bon_ASPD_MUL,5,0]
+,[683,	 card_com_SHOES,"Licheni","",bon_MATK_MUL,3,bon_MDMG_ELE_HOLY,5,bon_HEAL_MUL,5,0]
+,[684,	 card_com_SHOES,"Fay Kanavian","Has a chance to transform into [Golem] for 7 sec. when attacks<br>[During transform]<br>DEF +300",0]
+//Ghost Palace
+,[685,	 card_comp_WEAPON,"Lord Sakray","",bon_ATK,20,bon_DMG_RC_DEMON,30,bon_DMG_RC_UNDEAD,30,0]
+//Devil's Tower
+,[686,	 card_com_SHIELD,"Evil Shadow","",bon_RED_ELE_HOLY,-30,bon_RED_ELE_FIRE,-30,bon_RED_ELE_UNDEAD,30,bon_RED_ELE_SHADOW,30,0]
+,[687,	 card_comp_WEAPON,"Evil Fanatic","",bon_RED_ELE_HOLY,-30,bon_RED_ELE_FIRE,-30,bon_RED_ELE_UNDEAD,30,bon_RED_ELE_SHADOW,30,0]
+,[688,	 itm_type_SET,"Shadow & Fanatic","",bon_RED_ELE_UNDEAD,30,bon_RED_ELE_SHADOW,30,bon_DMG_ELE_UNDEAD,15,bon_DMG_ELE_SHADOW,15,0]
+//Assault on the Airship
+,[689,	 card_comp_WEAPON,"Airship Raid","For every 2 upgrade levels of the compounded item,<br>Increases ranged damage on targets by an additional 1%.<br>Crit + 1 ",bon_DMG_RANGE,1,0]
+,[690,	 card_comp_WEAPON,"Captain Ferlock","If compounded item upgrade level is +10 or higher,<br>increases the damage of Anti-Material Blast and God's Hammer by an additional 30%.",bon_ATK,30,bon_DMG_SKILL + skill_REB_ANTI_MATERIAL_BLAST,30,bon_DMG_SKILL + skill_REB_GODS_HAMMER,30,0]
+//Fenrir and Sarah
+,[691,   card_com_ACC,"Gigantes","[If str 120 or higher]<br>ATK +20.<br>ASPD +3%. ",bon_ATK,20,0]
+,[692,   card_com_ARMOR,"Sarah","Damage to the player cannot exceed 40%.",0]
+,[693,   itm_type_SET,"Sarah & Irene","Chance of transforming into Sarah Irene for 60 seconds when dealing physical attack.",bon_ATK,100,0]
 
+//,[694,   ,"","",0]
 ];
 
 CardNum = cardOBJ.length -1;
@@ -812,7 +842,9 @@ w_SC = [[429,306,235,"NULL"],
 [661,658,657,"NULL"], //"Kick Step + Rock Step"
 [662,658,659,"NULL"], //"Kick Step + Kick and Kick Step"
 [663,658,660,"NULL"], //"Kick Step + Charleston"
-[666,664,665,"NULL"]  //"Undead Knight Card Set"
+[666,664,665,"NULL"],  //"Undead Knight Card Set"
+[688,686,687,"NULL"],  //"Evil Shadow Card + Evil Fanatics Card"
+[693,692,636,"NULL"]  //"Sarah & Irene"
 ];
 }
 

@@ -612,6 +612,10 @@ function calcMAtk( includeMultipliers )
 		}
 			
 	}
+	if(n_A_card[8]==669)
+	{ // Fenrir Card
+		n_A_EquipMATK += 5 * n_A_HEAD_DEF_PLUS;
+	}
 	// Skills
 	if ( performerBuffs[ksWandererSolo] === ksMoonlightSerenade &&
 		 performerBuffs[ksWandererSoloLevel] > 0 )

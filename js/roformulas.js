@@ -919,6 +919,11 @@ function CalcEquipAtk()
 			equipmentAttack -= 25;
 		}
 	}
+	if(CardNumSearch(691))
+	{//Gigantes Card
+		if(SU_AGI >= 120)
+			equipmentAttack += 20 * CardNumSearch(691);
+	}
 	//shadows
 	if ( EquipNumSearch( 1661 ) )
 	{ // "Shadow Strongman Ring"
@@ -1743,6 +1748,7 @@ function CalcAttackMod()
 	{
 		n_tok[bon_PHY_ATK] += 1;
 	}
+//Cards
 	if(CardNumSearch(583))
 	{//Champion Card
 		if(SU_AGI >= 110)
@@ -1996,7 +2002,7 @@ function CalcRangedMod()
 	// Calc Ranged bonuses
 	rangedMod = 0;
 	
-	// Equipment
+// Equipment
 	if ( EquipNumSearch( 626 ) && n_A_Arrow == arrTyp_FIRE )
 	{ // Burning Bow
 		n_tok[bon_DMG_RANGE] += 25;
@@ -2175,16 +2181,11 @@ function CalcRangedMod()
 			n_tok[bon_DMG_RANGE] += 2 * Math.floor(n_A_BODY_DEF_PLUS / 3);
 	}
 	
-	
+//Cards	
 	if(CardNumSearch( 541 ))
 	{ //Menblatt Card
 		n_tok[bon_DMG_RANGE] += Math.floor(SU_DEX/10);
 	}
-	if ( usableItems[ksRaydricArcherTransScroll] && n_A_WeaponType === weapTyp_BOW)
-	{
-		n_tok[bon_DMG_RANGE] += 25;
-	}
-	//cards
 	if(CardNumSearch(589))
 	{//Big Eggring Card
 		if(SU_DEX <=50)
@@ -2196,8 +2197,12 @@ function CalcRangedMod()
 			n_tok[bon_DMG_RANGE] -= 5;
 		}
 	}
+	if ( CardNumSearch( 689 ))
+	{ // Airship Raid Card
+		n_tok[bon_DMG_RANGE] += Math.floor(n_A_Weapon_ATKplus / 2) * CardNumSearch(689);
+	}
 	
-	//Skills
+//Skills
 	if(SkillSearch(skill_SUM_POWER_OF_LIFE) && SkillSearch(skill_SUM_ANIMAL))
 	{
 		n_tok[bon_DMG_RANGE] += 20;
@@ -2206,8 +2211,11 @@ function CalcRangedMod()
 	{
 		n_tok[bon_DMG_RANGE] += 10;
 	}
-	
-	
+//Item
+	if ( usableItems[ksRaydricArcherTransScroll] && n_A_WeaponType === weapTyp_BOW)
+	{
+		n_tok[bon_DMG_RANGE] += 25;
+	}
 	if (not_use_card == 1)
 	rangedMod = 0;
 	else
@@ -4623,7 +4631,7 @@ function calcCrit( n_A_CRI )
 	n_A_CRI += n_tok[bon_CRIT];
 	w = n_tok[bon_CRIT_RC_FORMLESS+n_B[en_RACE]];
 
-	// Card modifiers
+// Card modifiers
 	if(n_A_JobSearch()==cls_ACO)
 	{
 		if(n_B[en_RACE]==race_UNDEAD || n_B[en_RACE] == race_DEMON )
@@ -4654,8 +4662,12 @@ function calcCrit( n_A_CRI )
 	{ // Faceworm Queen Card
 		n_A_CRI += n_A_SHOES_DEF_PLUS;
 	}
+	if ( CardNumSearch( 689 ))
+	{ // Airship Raid Card
+		n_A_CRI += Math.floor(n_A_Weapon_ATKplus / 2) * CardNumSearch(689);
+	}
 	
-	// Equipment modifiers
+// Equipment modifiers
 	if ( SU_AGI >= 90 && EquipNumSearch( 442 ) )
 	{ // Rogue's Treasure
 		n_A_CRI += 10 * EquipNumSearch( 442 );
@@ -5298,6 +5310,11 @@ function calcASPD()
 		{
 			equipASPD -= 10;
 		}
+	}
+	if(CardNumSearch(691))
+	{//Gigantes Card
+		if(SU_AGI >= 120)
+			equipASPD += 3 * CardNumSearch(691);
 	}
 //Shadows
 	if ( EquipNumSearch( 1747 ) )// "Shadow Sage Armor"
