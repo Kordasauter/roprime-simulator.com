@@ -195,8 +195,8 @@ with ( document.calcForm )
 	n_A_Equip[eq_SHADOW_PENDANT] = parseInt(formElements["A_SHADOW_pendant"].value);
 	
 	//Enchant
-	n_A_Enchant[ench_mal1] = parseInt(formElements["A_Mal_Ench1"].value);
-	n_A_Enchant[ench_mal2] = parseInt(formElements["A_Mal_Ench2"].value);
+	n_A_Enchant[ench_mal1] = parseInt(formElements["A_WEAPON_ENCHANT_3"].value);
+	n_A_Enchant[ench_mal2] = parseInt(formElements["A_WEAPON_ENCHANT_4"].value);
 	n_A_Enchant[ench_mal3] = parseInt(formElements["A_Mal_Ench3"].value);
 	n_A_Enchant[ench_mal4] = parseInt(formElements["A_Mal_Ench4"].value);
 	n_A_Enchant[ench_GARMENT2] = parseInt(formElements["A_GARMENT_ENCHANT_2"].value);
@@ -214,6 +214,9 @@ with ( document.calcForm )
 	n_A_Enchant[ench_ACC2_2] = parseInt(formElements["A_ACCES2_ENCHANT_2"].value);
 	n_A_Enchant[ench_ACC2_3] = parseInt(formElements["A_ACCES2_ENCHANT_3"].value);
 	n_A_Enchant[ench_ACC2_4] = parseInt(formElements["A_ACCES2_ENCHANT_4"].value);
+	n_A_Enchant[ench_SHIELD2] = parseInt(formElements["A_SHIELD_ENCHANT_2"].value);
+	n_A_Enchant[ench_SHIELD3] = parseInt(formElements["A_SHIELD_ENCHANT_3"].value);
+	n_A_Enchant[ench_SHIELD4] = parseInt(formElements["A_SHIELD_ENCHANT_4"].value);
 	n_A_Enchant[ench_HSE_Armor] = parseInt(formElements["A_HSE"].value);
 	n_A_Enchant[ench_HSE_Head] = parseInt(formElements["A_HSE_HEAD1"].value);
 	

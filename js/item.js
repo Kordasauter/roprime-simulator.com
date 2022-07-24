@@ -1537,9 +1537,9 @@
 ,[1531,itm_type_SET,/*0*/999,0,0,0,0,0,bon_NONE] // Witch's Pumpkin Hat + Alarm Mask
 ,[1532,itm_type_SET,/*0*/999,0,0,0,0,0,bon_FLEE,10,bon_NONE] // Witch's Pumpkin Hat + Opera Masque
 ,[1533,itm_type_SET,/*0*/999,0,0,0,0,0,bon_MATK,30,bon_ATK,30,bon_NONE] // Witch's Pumpkin Hat + Gozarian Mask
-,[1534,itm_type_ACCESSORY,/*2109*/999,0,0,0,0,110,bon_HEAL_MUL,2,bon_INT,2,bon_NONE] // Seal of Cathedral
+,[1534,itm_type_ACCESSORY,2109,0,0,0,0,110,bon_HEAL_MUL,2,bon_INT,2,bon_NONE] // Seal of Cathedral
 ,[1535,itm_type_HEAD_MIDDLE,/*0*/999,0,0,0,0,1,bon_ALL_STATS,1,bon_NONE] // "Gozarian Mask"
-,[1536,itm_type_ACCESSORY,/*2109*/999,0,0,0,0,110,bon_HEAL_MUL,2,bon_DEX,2,bon_NONE] // Ring of Archbishop
+,[1536,itm_type_ACCESSORY,2109,0,0,0,0,110,bon_HEAL_MUL,2,bon_DEX,2,bon_NONE] // Ring of Archbishop
 ,[1537,weapTyp_MACE,2109,170,4,0,120,100,bon_INT,1,bon_STR,1,bon_MATK,170,bon_NONE] // Mace of Judgement
 ,[1538,itm_type_SHOES,2109,12,0,0,30,100,bon_SP_ADD,150,bon_RED_RC_UNDEAD,10,bon_RED_RC_FORMLESS,-10,bon_RED_RC_BRUTE,-10,bon_RED_RC_PLANT,-10,bon_RED_RC_INSECT,-10,bon_RED_RC_FISH,-10,bon_RED_RC_DEMON,10,bon_RED_RC_DEMI_HUMAN,-10,bon_RED_RC_ANGEL,-10,bon_RED_RC_DRAGON,-10,bon_NONE] // Shoes of Judgement
 ,[1539,itm_type_GARMENT,2109,12,0,0,30,110,bon_FLEE,5,bon_NONE] // Shawl of Judgement
@@ -1793,10 +1793,11 @@
 ,[1782,itm_type_SHOES,210,18,0,1,40,100,bon_INT,2,bon_SP_MUL,5,bon_NONE] // Black Wing Boots
 ,[1783,itm_type_ACCESSORY,210,0,0,0,10,100,bon_INT,2,bon_PDODGE,3,bon_NONE] // Black Wing Brooch
 ,[1784,itm_type_SET,0,0,0,0,0,0,bon_HP_MUL,15,bon_PDODGE,20,bon_ASPD_ADD,-7,bon_DMG_SKILL+skill_RAN_CLUSTER_BOMB,20,bon_DMG_RANGE,-30,bon_NONE] // Black Wing Set
-//
+//Mora
 ,[1785,itm_type_ARMOR,0,10,0,0,1,0,bon_NONE] // Army Padding
 ,[1786,itm_type_ACCESSORY,0,0,0,0,0,0,bon_NONE] // Pendant Of Guardian
 ,[1787,itm_type_ACCESSORY,0,10,0,0,40,100,bon_AGI,2,bon_DMG_SKILL+skill_GLT_CROSS_IMPACT,5,bon_NONE] // Loki's Muffler
+//Dewata
 ,[1788,itm_type_HEAD_UPPER,0,1,0,0,10,0,bon_RED_RC_BRUTE,5,bon_RED_RC_PLANT,5,bon_DMG_RC_BRUTE,5,bon_DMG_RC_PLANT,5,bon_NONE] // Jaty Crown
 ,[1789,weapTyp_DAGGER,0,107,3,1,70,30,bon_MATK,70,bon_NONE] // Keris
 //
@@ -2002,8 +2003,8 @@
 ,[1982,itm_type_ACCESSORY,2117,0,0,1,10,130,bon_RED_CAST,-25,bon_NONE] // "Floral Bracelet Of Aigu"
 ,[1983,itm_type_SET,0,0,0,0,0,0,bon_DMG_SKILL+skill_CG_ARROW_VULCAN,200,bon_NONE] // "Aigu Set" "Floral Mic Of Aigu + Floral Bracelet Of Aigu"
 ,[1984,itm_type_ARMOR,2000,20,0,1,150,130,bon_USR_ELEMENT,ele_WATER,bon_NONE] // "Frozen Breastplate"
-,[1987,weapTyp_INSTRUMENT,2000,180,3,2,25,160,bon_MATK,120,bon_DELAY_SKILL_FLAT+skill_MIWA_IMPROVISED_SONG,2,bon_NONE] // "Contrabass"
-,[1987,weapTyp_WHIP,2000,150,3,2,20,160,bon_MATK,120,bon_ASPD_MUL,20,bon_NONE] // "Gymnastics Ribbon"
+,[1985,weapTyp_INSTRUMENT,2000,180,3,2,25,160,bon_MATK,120,bon_DELAY_SKILL_FLAT+skill_MIWA_IMPROVISED_SONG,2,bon_NONE] // "ContrabassContrabass"
+,[1986,weapTyp_WHIP,2000,150,3,2,20,160,bon_MATK,120,bon_ASPD_MUL,20,bon_NONE] // "Gymnastics Ribbon"
 ,[1987,itm_type_ACCESSORY,226,0,0,0,20,160,bon_NONE] // "Hero Ring"
 ,[1988,weapTyp_DAGGER,0,110,3,1,50,24,bon_ELEMENT,ele_POISON,bon_MATK,50,bon_NONE] // "Faceworm Leg"
 ,[1989,weapTyp_DAGGER,226,180,4,2,50,100,bon_MATK,120,bon_INT,3,bon_NONE] // "Faceworm Queen Leg"

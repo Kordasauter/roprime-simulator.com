@@ -131,15 +131,15 @@
 ,[129,"Place Holder",0,bon_NONE]
 ,[130,"Place Holder",0,bon_NONE]
 ,[131,"Perfect Flee +1",0,bon_PDODGE,1,bon_NONE]//pdodge
-,[132,"Place Holder",0,bon_NONE]
-,[133,"Place Holder",0,bon_NONE]
-,[134,"Place Holder",0,bon_NONE]
-,[135,"Place Holder",0,bon_NONE]
-,[136,"Place Holder",0,bon_NONE]
-,[137,"Place Holder",0,bon_NONE]
-,[138,"Place Holder",0,bon_NONE]
-,[139,"Place Holder",0,bon_NONE]
-,[140,"Place Holder",0,bon_NONE]
+,[132,"Perfect Flee +2",0,bon_PDODGE,2,bon_NONE]
+,[133,"Perfect Flee +3",0,bon_PDODGE,3,bon_NONE]
+,[134,"Perfect Flee +4",0,bon_PDODGE,4,bon_NONE]
+,[135,"Perfect Flee +5",0,bon_PDODGE,5,bon_NONE]
+,[136,"Perfect Flee +6",0,bon_PDODGE,6,bon_NONE]
+,[137,"Perfect Flee +7",0,bon_PDODGE,7,bon_NONE]
+,[138,"Perfect Flee +8",0,bon_PDODGE,8,bon_NONE]
+,[139,"Perfect Flee +9",0,bon_PDODGE,9,bon_NONE]
+,[140,"Perfect Flee +10",0,bon_PDODGE,10,bon_NONE]
 ,[141,"Hit +1",0,bon_HIT,1,bon_NONE]//hit
 ,[142,"Place Holder",0,bon_NONE]
 ,[143,"Place Holder",0,bon_NONE]
@@ -309,7 +309,40 @@
 ,[307,"Place Holder",0,bon_NONE]
 ,[308,"Place Holder",0,bon_NONE]
 ,[309,"Place Holder",0,bon_NONE]
-,[310,"Place Holder",0,bon_NONE]
+,[310,"Cure Lv1",0,bon_DELAY_SKILL_FLAT + 503,3,bon_NONE]
+,[311,"Place Holder",0,bon_NONE]
+,[312,"Place Holder",0,bon_NONE]
+,[313,"Catholic Lv1","Reduces the SP cost of Coluseo Heal by 30",bon_NONE]
+,[314,"Place Holder",0,bon_NONE]
+,[315,"Place Holder",0,bon_NONE]
+,[316,"Archbishop Lv1",0,bon_HEAL_MUL,3,bon_NONE]
+,[317,"Place Holder",0,bon_NONE]
+,[318,"Place Holder",0,bon_NONE]
+,[319,"Place Holder",0,bon_NONE]
+,[320,"Place Holder",0,bon_NONE]
+,[321,"Neutral Resistance +1%",0,bon_RED_ELE_NEUTRAL,1,bon_NONE]
+,[322,"Neutral Resistance +2%",0,bon_RED_ELE_NEUTRAL,2,bon_NONE]
+,[323,"Neutral Resistance +3%",0,bon_RED_ELE_NEUTRAL,3,bon_NONE]
+,[324,"Neutral Resistance +4%",0,bon_RED_ELE_NEUTRAL,4,bon_NONE]
+,[325,"Neutral Resistance +5%",0,bon_RED_ELE_NEUTRAL,5,bon_NONE]
+,[326,"Neutral Resistance +6%",0,bon_RED_ELE_NEUTRAL,6,bon_NONE]
+,[327,"Neutral Resistance +7%",0,bon_RED_ELE_NEUTRAL,7,bon_NONE]
+,[328,"Neutral Resistance +8%",0,bon_RED_ELE_NEUTRAL,8,bon_NONE]
+,[329,"Neutral Resistance +9%",0,bon_RED_ELE_NEUTRAL,9,bon_NONE]
+,[330,"Neutral Resistance +10%",0,bon_RED_ELE_NEUTRAL,10,bon_NONE]
+,[331,"Fatal Lv1",0,bon_CRIT,1,bon_DMG_CRIT,2,bon_NONE]
+,[332,"Fatal Lv2",0,bon_CRIT,2,bon_DMG_CRIT,4,bon_NONE]
+,[333,"Fatal Lv3",0,bon_CRIT,3,bon_DMG_CRIT,6,bon_NONE]
+,[334,"Place Holder",0,bon_NONE]
+,[335,"Place Holder",0,bon_NONE]
+,[336,"Place Holder",0,bon_NONE]
+,[337,"Place Holder",0,bon_NONE]
+,[338,"Place Holder",0,bon_NONE]
+,[339,"Place Holder",0,bon_NONE]
+,[340,"Place Holder",0,bon_NONE]
+,[341,"After Skill Delay Lv1",0,bon_RED_CASTDELAY,2,bon_NONE]
+,[342,"After Skill Delay Lv2",0,bon_RED_CASTDELAY,4,bon_NONE]
+,[343,"After Skill Delay Lv3",0,bon_RED_CASTDELAY,6,bon_NONE]
 ];
 //,[  x,"name",0,bon_NONE]
 EnchantNum = EnchantOBJ.length -1;
@@ -361,6 +394,50 @@ EnchantNum = EnchantOBJ.length -1;
 /* 42 Hero Ring 2 */[0,171,172,173,174,175,191,192,193,194,195,"NULL"],
 /* 43 Hero Ring 3 */[0,101,102,103,104,105,106,"NULL"],
 /* 44 Hero Ring 4 */[0,61,62,63,64,65,71,72,73,74,75,"NULL"],
+/* 45 Warlock Mora 1 */[0,31,32,33,34,41,42,43,44,71,72,81,82,104,108,191,192,"NULL"],
+/* 46 Warlock Mora 2 */[0,31,32,33,41,42,43,71,72,81,82,104,108,191,192,"NULL"],
+/* 47 Light Of Cure */[0,21,22,31,32,41,42,76,85,172,310,"NULL"],
+/* 48 Seal Of Cathedral */[0,21,22,31,32,41,42,76,85,172,313,"NULL"],
+/* 49 Ring Of Archbishop */[0,21,22,31,32,41,42,76,85,172,316,"NULL"],
+/* 50 Arch Bishop Mora 1 */ [0,31,32,33,41,42,43,173,192,"NULL"],
+/* 51 Arch Bishop Mora 2 */ [0,4,31,32,33,34,41,42,43,44,173,192,"NULL"],
+/* 52 Arch Bishop Mora 3 */ [0,4,34,44,76,85,155,172,192,"NULL"],
+/* 53 Wand Of Affection 1 */ [0,31,32,33,34,41,42,43,44,45,191,"NULL"],
+/* 54 Wand Of Affection 2 */ [0,21,22,31,32,33,34,41,42,43,44,45,104,"NULL"],
+/* 55 Mace Of Judgement 1 */ [0,1,2,3,4,5,31,32,33,34,173,"NULL"],
+/* 56 Mace Of Judgement 2 */ [0,1,2,3,4,5,21,22,31,32,33,34,173,"NULL"],
+/* 57 Mora 1 */ [0,1,2,3,11,12,13,21,22,23,33,43,54,"NULL"],
+/* 58 Mora 2 */ [0,3,13,23,31,32,33,41,42,43,51,52,53,"NULL"],
+/* 59 Mora 3 */ [0,123,125,155,157,172,173,191,192,"NULL"],
+/* 60 Eclage 1 */ [0,172,231,251,316,"NULL"],
+/* 61 Eclage 2 */ [0,221,243,316,"NULL"],
+/* 62 Biolab Weapon */ [0,1,2,3,11,12,13,21,22,23,31,32,33,41,42,43,51,52,53,211,212,213,221,222,223,231,232,233,241,242,243,271,"NULL"],
+/* 63 Biolab Armor */ [0,1,2,3,11,12,13,21,22,23,31,32,33,41,42,43,51,52,53,61,62,63,64,72,74,76,78,80,81,82,83,102,121,122,123,"NULL"],
+/* 64 Hero Ring 1 */ [0,1,2,3,4,5,11,12,13,14,15,21,22,23,24,25,31,32,33,34,35,41,42,43,44,45,51,52,53,54,55,"NULL"],
+/* 65 Hero Ring 2 */ [0,171,172,173,174,175,191,192,193,194,195,"NULL"],
+/* 66 Hero Ring 3 */ [0,91,92,93,94,95,101,102,103,104,105,106,"NULL"],
+/* 67 Hero Ring 4 */ [0,61,62,63,64,65,71,72,73,74,75,"NULL"], //Onyl 3 enchant slot available on simulator
+/* 68 Charleston Armor Speed 1 */ [0,11,12,51,52,122,123,261,262,"NULL"],
+/* 69 Charleston Armor Speed 2 */ [0,11,12,13,51,52,53,122,123,125,261,262,"NULL"],
+/* 70 Charleston Armor Atk 1 */ [0,1,2,41,42,211,212,231,232,"NULL"],
+/* 71 Charleston Armor Atk 2 */ [0,1,2,3,41,42,43,211,212,213,231,232,233,"NULL"],
+/* 72 Charleston Garments Regular */ [0,1,2,11,12,21,22,31,32,41,42,51,52,231,"NULL"],
+/* 73 Charleston Garments Superior */ [0,2,3,12,13,22,23,32,33,42,43,52,53,231,232,"NULL"],
+/* 74 Charleston Shoes Regular */ [0,1,2,11,12,21,22,41,42,241,261,"NULL"],
+/* 75 Charleston Shoes Superior */ [0,2,3,12,13,22,23,42,43,241,242,261,262,"NULL"],
+/* 76 Charleston Access */ [0,1,2,11,12,21,22,31,32,41,42,241,261,"NULL"],
+/* 77 Charleston Armor Defense 1 */ [0,21,22,61,62,91,92,321,322,"NULL"],
+/* 78 Charleston Armor Defense 2 */ [0,21,22,23,61,62,63,91,92,93,321,322,323,"NULL"],
+/* 79 Sarah Crit 1 */ [0,152,154,331,332,"NULL"],
+/* 80 Sarah Crit 2 */ [0,152,154,156,331,332,333,"NULL"],
+/* 81 Sarah EA/PD 1 */ [0,231,232,133,134,"NULL"],
+/* 82 Sarah EA/PD 2 */ [0,231,232,233,133,134,135,"NULL"],
+/* 83 Sarah Magic 1 */ [0,193,194,"NULL"],
+/* 84 Sarah Magic 2 */ [0,193,194,195,"NULL"],
+/* 85 Sarah ASPD 1 */ [0,261,262,341,342,"NULL"],
+/* 86 Sarah ASPD 2 */ [0,261,262,263,341,342,343,"NULL"],
+/* 87 Evil Slayer */ [0,61,62,72,73,211,212,213,214,215,216,217,241,242,243,244,"NULL"],
+/*  */ [0,"NULL"]
 ];
 }
 // /*  */[0,"NULL"],

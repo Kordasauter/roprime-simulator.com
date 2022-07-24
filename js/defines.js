@@ -529,9 +529,12 @@ ench_ACC1_4=15;
 ench_ACC2_2=16;
 ench_ACC2_3=17;
 ench_ACC2_4=18;
-ench_HSE_Armor=19;
-ench_HSE_Head=20;
-ench_MAX=18;
+ench_SHIELD2=19;
+ench_SHIELD3=20;
+ench_SHIELD4=21;
+ench_HSE_Armor=22;
+ench_HSE_Head=23;
+ench_MAX=21;
 
 }
 

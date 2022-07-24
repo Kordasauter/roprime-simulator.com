@@ -951,17 +951,32 @@ function CalcExtendedInfo()
 	}
 }
 
-function ClickWeapon( weapon )
+function ClickWeapon( data,isRefine )
 {
-	var len = formElements["A_Mal_Ench1"].length;
-	for ( var i = 0; i < len ; i++ )
+	var weapon = ItemOBJ[n_A_Equip[eq_WEAPON]][itm_ID];
+	var weapon_ref = n_A_Weapon_ATKplus;
+	if(isRefine)
 	{
-		formElements["A_Mal_Ench1"].options[0] = null;
+		weapon_ref = data;
 	}
-	len = formElements["A_Mal_Ench2"].length;
-	for ( var i = 0; i < len ; i++ )
+	else
 	{
-		formElements["A_Mal_Ench2"].options[0] = null;
+		weapon = data;
+	}
+	var len = formElements["A_WEAPON_ENCHANT_2"].length;
+	for ( var i = len; i > 0 ; i-- )
+	{
+		formElements["A_WEAPON_ENCHANT_2"].options[i] = null;
+	}
+	len = formElements["A_WEAPON_ENCHANT_3"].length;
+	for ( var i = len; i > 0 ; i-- )
+	{
+		formElements["A_WEAPON_ENCHANT_3"].options[i] = null;
+	}
+	len = formElements["A_WEAPON_ENCHANT_4"].length;
+	for ( var i = len; i > 0 ; i-- )
+	{
+		formElements["A_WEAPON_ENCHANT_4"].options[i] = null;
 	}
 	
 	if (/*Daggers*/weapon== 390 || weapon== 391 || weapon== 392 || weapon== 387 || weapon== 13 || weapon== 394 || weapon== 396 || weapon== 14 || weapon== 15 || weapon== 389 || weapon== 397 || weapon== 398 || weapon== 799 || weapon== 1157 || weapon== 1267 || weapon== 12 || weapon== 393 || weapon== 11 || weapon== 388 || weapon== 607 || weapon== 395 || weapon== 1268 || 
@@ -982,12 +997,12 @@ function ClickWeapon( weapon )
 		/*Whips*/weapon== 425 || weapon== 426 || weapon== 141 || weapon== 498 || weapon== 499 || weapon== 650 || weapon== 652 || weapon== 653 || weapon== 951 || weapon== 1271 || weapon== 1272 
 		)
 	{//two or less slot weapons
-		formElements["A_Mal_Ench1"].disabled = false;
-		formElements["A_Mal_Ench2"].disabled = false;
-		for ( var i = 0; EnchantListOBJ[1][i] != "NULL"; i++ )
+		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
+		formElements["A_WEAPON_ENCHANT_4"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[1][i] != "NULL" && !isRefine; i++ )
 		{
-			formElements["A_Mal_Ench1"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[1][i]][1],EnchantOBJ[EnchantListOBJ[1][i]][0]);
-			formElements["A_Mal_Ench2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[1][i]][1],EnchantOBJ[EnchantListOBJ[1][i]][0]);
+			formElements["A_WEAPON_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[1][i]][1],EnchantOBJ[EnchantListOBJ[1][i]][0]);
+			formElements["A_WEAPON_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[1][i]][1],EnchantOBJ[EnchantListOBJ[1][i]][0]);
 		}
 	}
 	else if(weapon== 1156 /*Krieg*/ || 
@@ -995,15 +1010,15 @@ function ClickWeapon( weapon )
 			weapon== 932 /*Twin Edge of Naght Sieger(blue)*/|| 
 			weapon== 1160 /*Krasnaya*/)
 	{//tree slot weapons
-		formElements["A_Mal_Ench1"].disabled = false;
-		formElements["A_Mal_Ench2"].disabled = true;
-		for ( var i = 0; EnchantListOBJ[1][i] != "NULL"; i++ )
+		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
+		formElements["A_WEAPON_ENCHANT_4"].disabled = true;
+		for ( var i = 0; EnchantListOBJ[1][i] != "NULL" && !isRefine; i++ )
 		{
-			formElements["A_Mal_Ench1"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[1][i]][1],EnchantOBJ[EnchantListOBJ[1][i]][0]);
+			formElements["A_WEAPON_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[1][i]][1],EnchantOBJ[EnchantListOBJ[1][i]][0]);
 		}
-		for ( var i = 0; EnchantListOBJ[0][i] != "NULL"; i++ )
+		for ( var i = 0; EnchantListOBJ[0][i] != "NULL" && !isRefine; i++ )
 		{
-			formElements["A_Mal_Ench2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
+			formElements["A_WEAPON_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
 		}
 	}
 	else if(weapon== 1452 /*Raksasa Dagger*/ || 
@@ -1012,8 +1027,8 @@ function ClickWeapon( weapon )
 			weapon== 1700 /*Huuma Fluttering Snow*/ || 
 			weapon== 1701 /*Huuma Thunderstorm*/)
 	{
-		formElements["A_Mal_Ench1"].disabled = false;
-		formElements["A_Mal_Ench2"].disabled = false;
+		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
+		formElements["A_WEAPON_ENCHANT_4"].disabled = false;
 		var enchlv = 0;
 		if( n_A_Weapon_ATKplus < 10)
 		{
@@ -1027,22 +1042,123 @@ function ClickWeapon( weapon )
 		{
 			enchlv = 6;
 		}
-		for ( var i = 0; EnchantListOBJ[enchlv][i] != "NULL"; i++ )
+		for ( var i = 0; EnchantListOBJ[enchlv][i] != "NULL" && !isRefine; i++ )
 		{
-			formElements["A_Mal_Ench1"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[enchlv][i]][1],EnchantOBJ[EnchantListOBJ[1][i]][0]);
-			formElements["A_Mal_Ench2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[enchlv][i]][1],EnchantOBJ[EnchantListOBJ[1][i]][0]);
+			formElements["A_WEAPON_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[enchlv][i]][1],EnchantOBJ[EnchantListOBJ[enchlv][i]][0]);
+			formElements["A_WEAPON_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[enchlv][i]][1],EnchantOBJ[EnchantListOBJ[enchlv][i]][0]);
 		}
 	}
+	else if(weapon== 1412 /*Golden Rod Staff*/ || 
+			weapon== 1419 /*Aqua Rod Staff*/ || 
+			weapon== 1426 /*Crimson Rod Staff*/ || 
+			weapon== 1433 /*Forest Rod Staff*/ )
+	{
+		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
+		formElements["A_WEAPON_ENCHANT_4"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[45][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_WEAPON_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[45][i]][1],EnchantOBJ[EnchantListOBJ[45][i]][0]);
+			formElements["A_WEAPON_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[45][i]][1],EnchantOBJ[EnchantListOBJ[45][i]][0]);
+		}
+	}
+	else if(weapon == 1506)
+	{// Wand Of Affection
+		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
+		formElements["A_WEAPON_ENCHANT_4"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[53][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_WEAPON_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[53][i]][1],EnchantOBJ[EnchantListOBJ[53][i]][0]);
+		}
+		for ( var i = 0; EnchantListOBJ[54][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_WEAPON_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[54][i]][1],EnchantOBJ[EnchantListOBJ[54][i]][0]);
+		}
+	}
+	else if(weapon == 1537)
+	{// Mace Of Judgement
+		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
+		formElements["A_WEAPON_ENCHANT_4"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[53][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_WEAPON_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[53][i]][1],EnchantOBJ[EnchantListOBJ[53][i]][0]);
+		}
+		for ( var i = 0; EnchantListOBJ[54][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_WEAPON_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[54][i]][1],EnchantOBJ[EnchantListOBJ[54][i]][0]);
+		}
+	}
+	else if(weapon == 1507)
+	{// "Empowered Wand of Affection"
+		SetEnchant("A_WEAPON_ENCHANT",weapon_ref,ench_Healer,ench_Spell_Ability_1);
+	}
+	else if(weapon == 1541)
+	{// Empowered Mace of Judgement
+		SetEnchant("A_WEAPON_ENCHANT",weapon_ref,ench_ATK_Type,ench_Spell_Ability_1);
+	}
+	else if(weapon == 1413 || // "Empowered Golden Rod Staff"
+			weapon == 1420 || // "Empowered Aqua Rod Staff"
+			weapon == 1427 || // "Empowered Crimson Rod Staff"
+			weapon == 1434  ) // "Empowered Forest Rod Staff"
+	{// Empowered Mace of Judgement
+		SetEnchant("A_WEAPON_ENCHANT",weapon_ref,ench_Spell_Ability_1,ench_Spell_Ability_2);
+	}
+	else if(weapon == 1381 || // "Agent Katar"
+			weapon == 1382 || // "Guillotine Katar"
+			weapon == 1383 || // "Ignis steel"
+			weapon == 1384 || // "End Sectora"
+			weapon == 1385 || // "Cannon Spear"
+			weapon == 1386 || // "Gigantic Lance"
+			weapon == 1387 || // "Cold Magic Book"
+			weapon == 1388 || // "Recovery Light"
+			weapon == 1394 || // "As-nail"
+			weapon == 1395 || // "Scarlet-nail"
+			weapon == 1397 || // "Bloody Cross"
+			weapon == 1398 || // "Catapult"
+			weapon == 1399 || // "Giant Crossbow"
+			weapon == 1400 )  // "Creeper Bow"
+	{
+		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
+		formElements["A_WEAPON_ENCHANT_4"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[62][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_WEAPON_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[62][i]][1],EnchantOBJ[EnchantListOBJ[62][i]][0]);
+			formElements["A_WEAPON_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[62][i]][1],EnchantOBJ[EnchantListOBJ[62][i]][0]);
+		}
+	}
+	else if(weapon == 2119 || // "Evil Slayer Vanquisher Staff"
+			weapon == 2120 || // "Evil Slayer Stabber Dagger"
+			weapon == 2121 || // "Evil Slayer Destroyer Hammer"
+			weapon == 2122 || // "Evil Slayer Piercer Bow"
+			weapon == 2123 || // "Evil Slayer Sword"
+			weapon == 2124 )  // "Evil Slayer Ripper Katar"
+	{
+		formElements["A_WEAPON_ENCHANT_2"].disabled = false;
+		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
+		formElements["A_WEAPON_ENCHANT_4"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[87][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_WEAPON_ENCHANT_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[87][i]][1],EnchantOBJ[EnchantListOBJ[87][i]][0]);
+			formElements["A_WEAPON_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[87][i]][1],EnchantOBJ[EnchantListOBJ[87][i]][0]);
+			formElements["A_WEAPON_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[87][i]][1],EnchantOBJ[EnchantListOBJ[87][i]][0]);
+		}
+	}
+	// else if(weapon == 9999)
+	// {
+		
+	// }
 	else
 	{
 		for ( var i = 0; EnchantListOBJ[0][i] != "NULL"; i++ )
 		{
-			formElements["A_Mal_Ench1"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
-			formElements["A_Mal_Ench2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
+			formElements["A_WEAPON_ENCHANT_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
+			formElements["A_WEAPON_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
+			formElements["A_WEAPON_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
 		}
-		formElements["A_Mal_Ench1"].disabled = true;
-		formElements["A_Mal_Ench2"].disabled = true;
+		formElements["A_WEAPON_ENCHANT_2"].disabled = true;
+		formElements["A_WEAPON_ENCHANT_3"].disabled = true;
+		formElements["A_WEAPON_ENCHANT_4"].disabled = true;
 	}
+	
 }
 
 function ClickWeapon2( weapon2 )
@@ -1093,6 +1209,43 @@ function ClickWeapon2( weapon2 )
 		formElements["A_Mal_Ench3"].disabled = true;
 		formElements["A_Mal_Ench4"].disabled = true;
 		
+	}
+}
+
+function ClickShield(data, isRefine)
+{
+	var shield_id = ItemOBJ[n_A_Equip[eq_SHIELD]][itm_ID];
+	var shield_ref = n_A_LEFT_DEF_PLUS;
+	if(isRefine)
+	{
+		shield_ref = data;
+	}
+	else
+	{
+		shield_id = data;
+	}
+	
+	if(shield_id == 1523)
+	{// Bible of Promise (1st Vol.)
+		CleanEnchant("A_SHIELD_ENCHANT");
+		SetEnchant("A_SHIELD_ENCHANT",0,50,0);
+	}
+	else if(shield_id == 1389 || // "Giant Shield"
+			shield_id == 1390 || // "Gefenia report of water"
+			shield_id == 1391 )  // "Bible of Promise (2nd vol.)"
+	{
+		CleanEnchant("A_SHIELD_ENCHANT");
+		formElements["A_SHIELD_ENCHANT_3"].disabled = false;
+		formElements["A_SHIELD_ENCHANT_4"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[63][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_SHIELD_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[63][i]][1],EnchantOBJ[EnchantListOBJ[63][i]][0]);
+			formElements["A_SHIELD_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[63][i]][1],EnchantOBJ[EnchantListOBJ[63][i]][0]);
+		}
+	}
+	else
+	{
+		CleanEnchant("A_SHIELD_ENCHANT");
 	}
 }
 
@@ -1181,6 +1334,41 @@ function ClickGarment( data, isRefine )
 		CleanEnchant("A_GARMENT_ENCHANT");
 		SetEnchant("A_GARMENT_ENCHANT",garm_ref,ench_Evasion,ench_Critical);
 	}
+	else if(garm_id == 1509)
+	{// Shawl of Affection
+		CleanEnchant("A_GARMENT_ENCHANT");
+		SetEnchant("A_GARMENT_ENCHANT",0,50,0);
+	}
+	else if(garm_id == 1539)
+	{// Shawl of Judgement
+		CleanEnchant("A_GARMENT_ENCHANT");
+		SetEnchant("A_GARMENT_ENCHANT",0,50,0);
+	}
+	else if(garm_id == 1787)
+	{// Loki's Muffler
+		CleanEnchant("A_GARMENT_ENCHANT");
+		SetEnchant("A_GARMENT_ENCHANT",0,57,0);
+	}
+	else if(garm_id == 1392)
+	{// "Salvage Cape"
+		CleanEnchant("A_GARMENT_ENCHANT");
+		formElements["A_GARMENT_ENCHANT_3"].disabled = false;
+		formElements["A_GARMENT_ENCHANT_4"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[63][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_GARMENT_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[63][i]][1],EnchantOBJ[EnchantListOBJ[63][i]][0]);
+			formElements["A_GARMENT_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[63][i]][1],EnchantOBJ[EnchantListOBJ[63][i]][0]);
+		}
+	}
+	else if(garm_id == 2030 || garm_id == 2025 )
+	{// "Supplement Part Con" || "Upgrade Part - Engine"
+		CleanEnchant("A_GARMENT_ENCHANT");
+		SetEnchant2("A_GARMENT_ENCHANT",garm_ref,72,73);
+	}
+	// else if(garm_id == 9999)
+	// {
+		// CleanEnchant("A_GARMENT_ENCHANT");
+	// }
 	else
 	{
 		CleanEnchant("A_GARMENT_ENCHANT");
@@ -1223,7 +1411,6 @@ function ClickShoes( data, isRefine )
 		formElements["A_SHOES_ENCHANT_3"].disabled = false;
 		formElements["A_SHOES_ENCHANT_2"].disabled = true;
 	}
-	//test
 	else if(shoes_id == 1442)
 	{//Ur's Greaves
 		CleanEnchant("A_SHOES_ENCHANT");
@@ -1254,19 +1441,48 @@ function ClickShoes( data, isRefine )
 		CleanEnchant("A_SHOES_ENCHANT");
 		SetEnchant("A_SHOES_ENCHANT",shoes_ref,ench_Assist_Ability,ench_ATK_Type);
 	}
+	else if(shoes_id == 1416 || // Golden Rod Shoes
+			shoes_id == 1423 || // Aqua Rod Shoes
+			shoes_id == 1430 || // Crimson Rod Shoes
+			shoes_id == 1437 )  // Forest Rod Shoes
+	{
+		if(!isRefine)
+			CleanEnchant("A_SHOES_ENCHANT");
+		for ( var i = 0; EnchantListOBJ[45][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_SHOES_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[45][i]][1],EnchantOBJ[EnchantListOBJ[45][i]][0]);
+			formElements["A_SHOES_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[45][i]][1],EnchantOBJ[EnchantListOBJ[45][i]][0]);
+		}
+		for ( var i = 0; EnchantListOBJ[46][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_SHOES_ENCHANT_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[46][i]][1],EnchantOBJ[EnchantListOBJ[46][i]][0]);
+		}
+		formElements["A_SHOES_ENCHANT_4"].disabled = false;
+		formElements["A_SHOES_ENCHANT_3"].disabled = false;
+		formElements["A_SHOES_ENCHANT_2"].disabled = false;
+	}
+	else if(shoes_id == 1510)
+	{// Shoes of Affection
+		CleanEnchant("A_SHOES_ENCHANT");
+		SetEnchant("A_SHOES_ENCHANT",0,50,0);
+	}
+	else if(shoes_id == 1538)
+	{// Shoes of Judgement
+		CleanEnchant("A_SHOES_ENCHANT");
+		SetEnchant("A_SHOES_ENCHANT",0,50,0);
+	}
+	else if(shoes_id == 2024 || shoes_id == 2029 )
+	{// Upgrade Part - Booster ||Supplement Part Agi
+		CleanEnchant("A_SHOES_ENCHANT");
+		SetEnchant2("A_SHOES_ENCHANT",shoes_ref,74,75);
+	}
+	// else if(shoes_id == 9999)
+	// {
+		// CleanEnchant("A_SHOES_ENCHANT");
+	// }
 	else
 	{
 		CleanEnchant("A_SHOES_ENCHANT");
-		for ( var i = 0; EnchantListOBJ[0][i] != "NULL"; i++ )
-		{
-				formElements["A_SHOES_ENCHANT_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
-				formElements["A_SHOES_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
-				formElements["A_SHOES_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
-		}
-		formElements["A_SHOES_ENCHANT_2"].disabled = true;
-		formElements["A_SHOES_ENCHANT_3"].disabled = true;
-		formElements["A_SHOES_ENCHANT_4"].disabled = true;
-		
 	}
 	StAllCalc();
 }
@@ -1313,9 +1529,79 @@ function ClickArmor( data, isRefine )
 		CleanEnchant("A_ARMOR_ENCHANT");
 		SetEnchant("A_ARMOR_ENCHANT",armor_ref,ench_ATK_Type,ench_Critical);
 	}
+	else if(armor_id == 1414 || // Golden Rod Robe
+			armor_id == 1421 || // Aqua Rod Robe
+			armor_id == 1428 || // Crimson Rod Robe
+			armor_id == 1435 )  // Forest Rod Robe
+	{
+		if(!isRefine)
+			CleanEnchant("A_ARMOR_ENCHANT");
+		for ( var i = 0; EnchantListOBJ[45][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_ARMOR_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[45][i]][1],EnchantOBJ[EnchantListOBJ[45][i]][0]);
+		}
+		for ( var i = 0; EnchantListOBJ[45][i] != "NULL" && !isRefine; i++ )
+		{
+			
+			formElements["A_ARMOR_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[45][i]][1],EnchantOBJ[EnchantListOBJ[45][i]][0]);
+		}
+		for ( var i = 0; EnchantListOBJ[46][i] != "NULL" && !isRefine; i++ )
+		{
+			
+			formElements["A_ARMOR_ENCHANT_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[46][i]][1],EnchantOBJ[EnchantListOBJ[46][i]][0]);
+		}
+		formElements["A_ARMOR_ENCHANT_4"].disabled = false;
+		formElements["A_ARMOR_ENCHANT_3"].disabled = false;
+		formElements["A_ARMOR_ENCHANT_2"].disabled = false;
+	}
+	else if(armor_id == 1508)
+	{// Robe of Affection
+		if(!isRefine)
+			CleanEnchant("A_ARMOR_ENCHANT");
+		SetEnchant("A_ARMOR_ENCHANT",0,50,0);
+	}
+	else if(armor_id == 1540)
+	{// Robe of Judgement
+		if(!isRefine)
+			CleanEnchant("A_ARMOR_ENCHANT");
+		SetEnchant("A_ARMOR_ENCHANT",0,50,0);
+	}
+	else if(armor_id == 1785)
+	{// Army Padding
+		if(!isRefine)
+			CleanEnchant("A_ARMOR_ENCHANT");
+		SetEnchant("A_ARMOR_ENCHANT",0,57,0);
+	}
+	else if(armor_id == 1396)
+	{// "Green Surgical Gown"
+		if(!isRefine)
+			CleanEnchant("A_ARMOR_ENCHANT");
+		formElements["A_ARMOR_ENCHANT_3"].disabled = false;
+		formElements["A_ARMOR_ENCHANT_4"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[63][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_ARMOR_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[63][i]][1],EnchantOBJ[EnchantListOBJ[63][i]][0]);
+			formElements["A_ARMOR_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[63][i]][1],EnchantOBJ[EnchantListOBJ[63][i]][0]);
+		}
+	}
+	else if(armor_id == 2023)
+	{// "Upgrade Part - Plate"
+		CleanEnchant("A_ARMOR_ENCHANT");
+		SetEnchant2("A_ARMOR_ENCHANT",armor_ref,68,70);
+	}
+	else if(armor_id == 2028)
+	{// "Supplement Part Str"
+		CleanEnchant("A_ARMOR_ENCHANT");
+		SetEnchant2("A_ARMOR_ENCHANT",armor_ref,68,77);
+	}
+	// else if(armor_id == 9999)
+	// {
+		// if(!isRefine)
+			// CleanEnchant("A_ARMOR_ENCHANT");
+	// }
 	else
 	{
-		CleanEnchant("A_ARMOR_ENCHANT");
+		CleanEnchant("A_ARMOR_ENCHANT");	
 	}
 	StAllCalc();
 }
@@ -1362,13 +1648,216 @@ function ClickAcces( data, numAccess )
 		CleanEnchant(formAcc);
 		// SetEnchant(formAcc,0,ench_Assist_Ability,0);
 	}
+	else if(access_id == 1415 || // Golden Rod Orb
+			access_id == 1422 || // Aqua Rod Orb
+			access_id == 1429 || // Crimson Rod Orb
+			access_id == 1434 )  // Forest Rod Orb
+	{
+		CleanEnchant(formAcc);
+		for ( var i = 0; EnchantListOBJ[45][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[45][i]][1],EnchantOBJ[EnchantListOBJ[45][i]][0]);
+			formElements[formAcc + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[45][i]][1],EnchantOBJ[EnchantListOBJ[45][i]][0]);
+		}
+		for ( var i = 0; EnchantListOBJ[46][i] != "NULL"; i++ )
+		{
+			
+			formElements[formAcc + "_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[46][i]][1],EnchantOBJ[EnchantListOBJ[46][i]][0]);
+		}
+		formElements[formAcc + "_4"].disabled = false;
+		formElements[formAcc + "_3"].disabled = false;
+		formElements[formAcc + "_2"].disabled = false;
+	}
+	else if(access_id == 1527)
+	{// Light of Cure
+		CleanEnchant(formAcc);
+		// SetEnchant(formAcc,0,47,0);
+		for ( var i = 0; EnchantListOBJ[47][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[47][i]][1],EnchantOBJ[EnchantListOBJ[47][i]][0]);
+			formElements[formAcc + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[47][i]][1],EnchantOBJ[EnchantListOBJ[47][i]][0]);
+		}
+		formElements[formAcc + "_4"].disabled = false;
+		formElements[formAcc + "_3"].disabled = false;
+		formElements[formAcc + "_2"].disabled = true;
+	}
+	else if(access_id == 1534)
+	{// Seal of Cathedral
+		CleanEnchant(formAcc);
+		// SetEnchant(formAcc,0,48,0);
+		for ( var i = 0; EnchantListOBJ[48][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[48][i]][1],EnchantOBJ[EnchantListOBJ[48][i]][0]);
+			formElements[formAcc + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[48][i]][1],EnchantOBJ[EnchantListOBJ[48][i]][0]);
+		}
+		formElements[formAcc + "_4"].disabled = false;
+		formElements[formAcc + "_3"].disabled = false;
+		formElements[formAcc + "_2"].disabled = true;
+	}
+	else if(access_id == 1536)
+	{// Ring of Archbishop
+		CleanEnchant(formAcc);
+		// SetEnchant(formAcc,0,49,0);
+		for ( var i = 0; EnchantListOBJ[49][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[49][i]][1],EnchantOBJ[EnchantListOBJ[49][i]][0]);
+			formElements[formAcc + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[49][i]][1],EnchantOBJ[EnchantListOBJ[49][i]][0]);
+		}
+		formElements[formAcc + "_4"].disabled = false;
+		formElements[formAcc + "_3"].disabled = false;
+		formElements[formAcc + "_2"].disabled = true;
+	}
+	else if(access_id == 1786)
+	{// Pendant Of Guardian
+		CleanEnchant(formAcc);
+		SetEnchant(formAcc,0,ench_Assist_Ability,0);
+	}
+	else if(access_id == 1791)
+	{// "Ettlang Keepsake"
+		CleanEnchant(formAcc);
+		for ( var i = 0; EnchantListOBJ[60][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[60][i]][1],EnchantOBJ[EnchantListOBJ[60][i]][0]);
+		}
+		for ( var i = 0; EnchantListOBJ[61][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[61][i]][1],EnchantOBJ[EnchantListOBJ[61][i]][0]);
+		}
+		formElements[formAcc + "_4"].disabled = false;
+		formElements[formAcc + "_3"].disabled = false;
+		formElements[formAcc + "_2"].disabled = true;
+	}
+	else if(access_id == 1393)
+	{// "Assassin's glove"
+		CleanEnchant(formAcc);
+		formElements[formAcc + "_3"].disabled = false;
+		formElements[formAcc + "_4"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[63][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[63][i]][1],EnchantOBJ[EnchantListOBJ[63][i]][0]);
+			formElements[formAcc + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[63][i]][1],EnchantOBJ[EnchantListOBJ[63][i]][0]);
+		}
+	}
+	else if(access_id == 1987)
+	{// "Hero Ring"
+		CleanEnchant(formAcc);
+		formElements[formAcc + "_2"].disabled = false;
+		formElements[formAcc + "_3"].disabled = false;
+		formElements[formAcc + "_4"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[64][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[64][i]][1],EnchantOBJ[EnchantListOBJ[64][i]][0]);
+		}
+		for ( var i = 0; EnchantListOBJ[65][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[65][i]][1],EnchantOBJ[EnchantListOBJ[65][i]][0]);
+		}
+		for ( var i = 0; EnchantListOBJ[66][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[66][i]][1],EnchantOBJ[EnchantListOBJ[66][i]][0]);
+		}
+	}
+	else if(access_id == 2026 || access_id == 2031 )
+	{//"Upgrade Part - Gun Barrel" || "Supplement Part Dex"
+		CleanEnchant(formAcc);
+		SetEnchant2(formAcc,0,76,0);
+	}
+	else if(access_id == 2134 || access_id == 2135 )
+	{// "Sarah's Left Earring" || "Sarah's Right Earring"
+		CleanEnchant(formAcc);
+		formElements[formAcc + "_4"].disabled = false;
+		formElements[formAcc + "_3"].disabled = false;
+		//Slot 4
+		for ( var i = 0; EnchantListOBJ[79][i] != "NULL"; i++ )
+		{
+			if(i < 1)
+			{
+				formElements[formAcc + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[79][i]][1],EnchantOBJ[EnchantListOBJ[79][i]][0]);
+			}
+				
+			if(i == 1)
+			{
+				formElements[formAcc + "_4"].options[i] = new Option(EnchToName(79));
+				formElements[formAcc + "_4"].options[i].disabled = true;
+			}
+			if(i >= 1)
+			{
+				formElements[formAcc + "_4"].options[i+1] = new Option(EnchantOBJ[EnchantListOBJ[79][i]][1],EnchantOBJ[EnchantListOBJ[79][i]][0]);
+			}
+		}
+		var formsize = formElements[formAcc + "_4"].length;
+		formElements[formAcc + "_4"].options[formsize] = new Option(EnchToName(81));
+		formElements[formAcc + "_4"].options[formsize].disabled = true;
+		for ( var i = 1; EnchantListOBJ[81][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_4"].options[i+formsize] = new Option(EnchantOBJ[EnchantListOBJ[81][i]][1],EnchantOBJ[EnchantListOBJ[81][i]][0]);
+		}
+		formsize = formElements[formAcc + "_4"].length;
+		formElements[formAcc + "_4"].options[formsize] = new Option(EnchToName(83));
+		formElements[formAcc + "_4"].options[formsize].disabled = true;
+		for ( var i = 1; EnchantListOBJ[83][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_4"].options[i+formsize] = new Option(EnchantOBJ[EnchantListOBJ[83][i]][1],EnchantOBJ[EnchantListOBJ[83][i]][0]);
+		}
+		formsize = formElements[formAcc + "_4"].length;
+		formElements[formAcc + "_4"].options[formsize] = new Option(EnchToName(85));
+		formElements[formAcc + "_4"].options[formsize].disabled = true;
+		for ( var i = 1; EnchantListOBJ[85][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_4"].options[i+formsize] = new Option(EnchantOBJ[EnchantListOBJ[85][i]][1],EnchantOBJ[EnchantListOBJ[85][i]][0]);
+		}
+		//Slot 3
+		for ( var i = 0; EnchantListOBJ[80][i] != "NULL"; i++ )
+		{
+			if(i < 1)
+			{
+				formElements[formAcc + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[80][i]][1],EnchantOBJ[EnchantListOBJ[80][i]][0]);
+			}
+				
+			if(i == 1)
+			{
+				formElements[formAcc + "_3"].options[i] = new Option(EnchToName(80));
+				formElements[formAcc + "_3"].options[i].disabled = true;
+			}
+			if(i >= 1)
+			{
+				formElements[formAcc + "_3"].options[i+1] = new Option(EnchantOBJ[EnchantListOBJ[80][i]][1],EnchantOBJ[EnchantListOBJ[80][i]][0]);
+			}
+		}
+		var formsize = formElements[formAcc + "_3"].length;
+		formElements[formAcc + "_3"].options[formsize] = new Option(EnchToName(82));
+		formElements[formAcc + "_3"].options[formsize].disabled = true;
+		for ( var i = 1; EnchantListOBJ[82][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_3"].options[i+formsize] = new Option(EnchantOBJ[EnchantListOBJ[82][i]][1],EnchantOBJ[EnchantListOBJ[82][i]][0]);
+		}
+		formsize = formElements[formAcc + "_3"].length;
+		formElements[formAcc + "_3"].options[formsize] = new Option(EnchToName(84));
+		formElements[formAcc + "_3"].options[formsize].disabled = true;
+		for ( var i = 1; EnchantListOBJ[84][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_3"].options[i+formsize] = new Option(EnchantOBJ[EnchantListOBJ[84][i]][1],EnchantOBJ[EnchantListOBJ[84][i]][0]);
+		}
+		formsize = formElements[formAcc + "_3"].length;
+		formElements[formAcc + "_3"].options[formsize] = new Option(EnchToName(86));
+		formElements[formAcc + "_3"].options[formsize].disabled = true;
+		for ( var i = 1; EnchantListOBJ[86][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_3"].options[i+formsize] = new Option(EnchantOBJ[EnchantListOBJ[86][i]][1],EnchantOBJ[EnchantListOBJ[86][i]][0]);
+		}
+	}
+	// else if(access_id == 9999)
+	// {
+		// CleanEnchant(formAcc);
+	// }
+	else
 	{
 		CleanEnchant(formAcc);
 	}
 	StAllCalc();
 }
 
-function SetEnchant(formEq,EqRefine,Ench1,Ench2)
+function SetEnchant(formEq,EqRefine,Ench1,Ench2) //Mora Enchants
 {
 		//slot 4
 		for ( var i = 0; EnchantListOBJ[Ench1][i] != "NULL"; i++ )
@@ -1456,6 +1945,134 @@ function SetEnchant(formEq,EqRefine,Ench1,Ench2)
 		if(formEq != "A_ACCES1_ENCHANT" && formEq != "A_ACCES2_ENCHANT")
 			formElements[formEq + "_2"].disabled = false;
 }
+function SetEnchant2(formEq,EqRefine,Ench1,Ench2) //Verus Enchants
+{
+	if(formEq != "A_ARMOR_ENCHANT")
+	{
+		//slot 4 && slot 3 && slot 2
+		for ( var i = 0; EnchantListOBJ[Ench1][i] != "NULL"; i++ )
+		{
+			if(i < 1)
+			{
+				formElements[formEq + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[Ench1][i]][1],EnchantOBJ[EnchantListOBJ[Ench1][i]][0]);
+				formElements[formEq + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[Ench1][i]][1],EnchantOBJ[EnchantListOBJ[Ench1][i]][0]);
+				formElements[formEq + "_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[Ench1][i]][1],EnchantOBJ[EnchantListOBJ[Ench1][i]][0]);
+			}
+				
+			if(i == 1 && (formEq != "A_ACCES1_ENCHANT" && formEq != "A_ACCES2_ENCHANT"))
+			{
+				formElements[formEq + "_4"].options[i] = new Option(EnchToName(Ench1));
+				formElements[formEq + "_4"].options[i].disabled = true;
+				formElements[formEq + "_3"].options[i] = new Option(EnchToName(Ench1));
+				formElements[formEq + "_3"].options[i].disabled = true;
+				formElements[formEq + "_2"].options[i] = new Option(EnchToName(Ench1));
+				formElements[formEq + "_2"].options[i].disabled = true;
+			}
+			if(i >= 1 && (formEq != "A_ACCES1_ENCHANT" && formEq != "A_ACCES2_ENCHANT"))
+			{
+				formElements[formEq + "_4"].options[i+1] = new Option(EnchantOBJ[EnchantListOBJ[Ench1][i]][1],EnchantOBJ[EnchantListOBJ[Ench1][i]][0]);
+				formElements[formEq + "_3"].options[i+1] = new Option(EnchantOBJ[EnchantListOBJ[Ench1][i]][1],EnchantOBJ[EnchantListOBJ[Ench1][i]][0]);
+				formElements[formEq + "_2"].options[i+1] = new Option(EnchantOBJ[EnchantListOBJ[Ench1][i]][1],EnchantOBJ[EnchantListOBJ[Ench1][i]][0]);
+			}
+			else if(i >= 1)
+			{
+				formElements[formEq + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[Ench1][i]][1],EnchantOBJ[EnchantListOBJ[Ench1][i]][0]);
+				formElements[formEq + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[Ench1][i]][1],EnchantOBJ[EnchantListOBJ[Ench1][i]][0]);
+			}
+		}
+		if(EqRefine >= 9)
+		{
+			//slot 4
+			var formsize = formElements[formEq + "_4"].length;
+			formElements[formEq + "_4"].options[formsize] = new Option(EnchToName(Ench2));
+			formElements[formEq + "_3"].options[formsize] = new Option(EnchToName(Ench2));
+			formElements[formEq + "_2"].options[formsize] = new Option(EnchToName(Ench2));
+			formElements[formEq + "_4"].options[formsize].disabled = true;
+			formElements[formEq + "_3"].options[formsize].disabled = true;
+			formElements[formEq + "_2"].options[formsize].disabled = true;
+			for ( var i = 1; EnchantListOBJ[Ench2][i] != "NULL"; i++ )
+			{
+				formElements[formEq + "_4"].options[i+formsize] = new Option(EnchantOBJ[EnchantListOBJ[Ench2][i]][1],EnchantOBJ[EnchantListOBJ[Ench2][i]][0]);
+				formElements[formEq + "_3"].options[i+formsize] = new Option(EnchantOBJ[EnchantListOBJ[Ench2][i]][1],EnchantOBJ[EnchantListOBJ[Ench2][i]][0]);
+				formElements[formEq + "_2"].options[i+formsize] = new Option(EnchantOBJ[EnchantListOBJ[Ench2][i]][1],EnchantOBJ[EnchantListOBJ[Ench2][i]][0]);
+			}
+		}
+		formElements[formEq + "_4"].disabled = false;
+		formElements[formEq + "_3"].disabled = false;
+		if(formEq != "A_ACCES1_ENCHANT" && formEq != "A_ACCES2_ENCHANT")
+			formElements[formEq + "_2"].disabled = false;
+	}
+	else
+	{
+		//slot 4
+		for ( var i = 0; EnchantListOBJ[Ench1][i] != "NULL"; i++ )
+		{
+			if(i < 1)
+			{
+				formElements[formEq + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[Ench1][i]][1],EnchantOBJ[EnchantListOBJ[Ench1][i]][0]);
+			}
+				
+			if(i == 1)
+			{
+				formElements[formEq + "_4"].options[i] = new Option(EnchToName(Ench1));
+				formElements[formEq + "_4"].options[i].disabled = true;
+			}
+			if(i >= 1)
+			{
+				formElements[formEq + "_4"].options[i+1] = new Option(EnchantOBJ[EnchantListOBJ[Ench1][i]][1],EnchantOBJ[EnchantListOBJ[Ench1][i]][0]);
+			}
+		}
+		Ench1++;
+		//slot 3 && slot 2
+		for ( var i = 0; EnchantListOBJ[Ench1][i] != "NULL"; i++ )
+		{
+			if(i < 1)
+			{
+				formElements[formEq + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[Ench1][i]][1],EnchantOBJ[EnchantListOBJ[Ench1][i]][0]);
+				formElements[formEq + "_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[Ench1][i]][1],EnchantOBJ[EnchantListOBJ[Ench1][i]][0]);
+			}
+				
+			if(i == 1)
+			{
+				formElements[formEq + "_3"].options[i] = new Option(EnchToName(Ench1));
+				formElements[formEq + "_3"].options[i].disabled = true;
+				formElements[formEq + "_2"].options[i] = new Option(EnchToName(Ench1));
+				formElements[formEq + "_2"].options[i].disabled = true;
+			}
+			if(i >= 1)
+			{
+				formElements[formEq + "_3"].options[i+1] = new Option(EnchantOBJ[EnchantListOBJ[Ench1][i]][1],EnchantOBJ[EnchantListOBJ[Ench1][i]][0]);
+				formElements[formEq + "_2"].options[i+1] = new Option(EnchantOBJ[EnchantListOBJ[Ench1][i]][1],EnchantOBJ[EnchantListOBJ[Ench1][i]][0]);
+			}
+		}
+		if(EqRefine >= 9)
+		{
+			//slot 4
+			var formsize = formElements[formEq + "_4"].length;
+			formElements[formEq + "_4"].options[formsize] = new Option(EnchToName(Ench2));
+			formElements[formEq + "_4"].options[formsize].disabled = true;
+			for ( var i = 1; EnchantListOBJ[Ench2][i] != "NULL"; i++ )
+			{
+				formElements[formEq + "_4"].options[i+formsize] = new Option(EnchantOBJ[EnchantListOBJ[Ench2][i]][1],EnchantOBJ[EnchantListOBJ[Ench2][i]][0]);
+			}
+			//slot 3 && slot 2
+			Ench2++;
+			formsize = formElements[formEq + "_3"].length;
+			formElements[formEq + "_3"].options[formsize] = new Option(EnchToName(Ench2));
+			formElements[formEq + "_2"].options[formsize] = new Option(EnchToName(Ench2));
+			formElements[formEq + "_3"].options[formsize].disabled = true;
+			formElements[formEq + "_2"].options[formsize].disabled = true;
+			for ( var i = 1; EnchantListOBJ[Ench2][i] != "NULL"; i++ )
+			{
+				formElements[formEq + "_3"].options[i+formsize] = new Option(EnchantOBJ[EnchantListOBJ[Ench2][i]][1],EnchantOBJ[EnchantListOBJ[Ench2][i]][0]);
+				formElements[formEq + "_2"].options[i+formsize] = new Option(EnchantOBJ[EnchantListOBJ[Ench2][i]][1],EnchantOBJ[EnchantListOBJ[Ench2][i]][0]);
+			}
+		}
+		formElements[formEq + "_4"].disabled = false;
+		formElements[formEq + "_3"].disabled = false;
+		formElements[formEq + "_2"].disabled = false;
+	}
+}
 
 function EnchToName(numEnch)
 {
@@ -1522,6 +2139,47 @@ function EnchToName(numEnch)
 		case 39 :
 		case 40 :
 			return "Healer";
+			break;
+		case 50 :
+		case 51 :
+		case 52 :
+			return "Arch Bishop";
+			break;
+		case 68 :
+		case 69 :
+			return "Speed";
+			break;
+		case 70 :
+		case 71 :
+			return "Attack";
+			break;
+		case 72 :
+		case 74 :
+			return "Regular";
+			break;
+		case 73 :
+		case 75 :
+			return "Superior";
+			break;
+		case 77 :
+		case 78 :
+			return "Defense";
+			break;
+		case 79 :
+		case 80 :
+			return "Crit";
+			break;
+		case 81 :
+		case 82 :
+			return "Expert Archer/Perfect Dodge";
+			break;
+		case 83 :
+		case 84 :
+			return "Magic";
+			break;
+		case 85 :
+		case 86 :
+			return "ASPD";
 			break;
 		default :
 			return "not a mora enchant";
