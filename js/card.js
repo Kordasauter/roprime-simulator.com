@@ -782,7 +782,7 @@ function SetCard()
 ,[702,   card_comp_WEAPON,"T W O","Adds a chance of casting Level 2 Wide Soul Drain when dealing a physical attack. For each 3 refine Lv of weapon chance is increasing",bon_PHY_ATK,10,0]
 //Central Laboratory
 ,[703,   card_comp_WEAPON,"General Daehyun","[if compounded to One-Handed or Two-Handed Sword]<br>  ATK +100.",0]
-,[704,   card_comp_WEAPON,"Dark Guardian Kades","",bon_RED_ELE_SHADOW,50,bon_RED_ELE_UNDEAD,50,bon_RED_ELE_WATER,50,bon_RED_ELE_EARTH,50,bon_RED_ELE_FIRE,50,bon_RED_ELE_WIND,50,bon_RED_ELE_HOLY,-100,bon_RED_ELE_GHOST,-100,0]
+,[704,   card_com_GARMENT,"Dark Guardian Kades","",bon_RED_ELE_SHADOW,50,bon_RED_ELE_UNDEAD,50,bon_RED_ELE_WATER,50,bon_RED_ELE_EARTH,50,bon_RED_ELE_FIRE,50,bon_RED_ELE_WIND,50,bon_RED_ELE_HOLY,-100,bon_RED_ELE_GHOST,-100,0]
 
 //,[694,   ,"","",0]
 ];
