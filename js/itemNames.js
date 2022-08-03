@@ -1567,7 +1567,7 @@ ITEM_NAME = [
 ,[1564,0,0,"Soloplay Box","",0]
 ,[1565,0,0,"Flying Angel Wings","Animated",0]
 ,[1566,0,0,"Samurai Mask","",0]
-,[1567,0,0,"Poring Fedora Hat","[For each refine level]</br>Max HP +75</br>Vit/Dex +1 [<span style =\"color:#FF0000\">not implanted yet on the simulator</span style =\"color:#000000\">]</br>[If refined to +9]</br>Damage from Demihuman monsters -5%",0]
+,[1567,0,0,"Poring Fedora Hat","[For each refine level]</br>Max HP +75</br>Vit/Dex +1</br>[If refined to +9]</br>Damage from Demihuman monsters -5%",0]
 ,[1568,0,0,"Winged Diadem","[For each refine level]</br>Damage from [Boss] monsters reduces by 1%[<span style =\"color:#FF0000\">Unsourced value</span style =\"color:#000000\">]",0]
 ,[1569,0,0,"Warlock King's Crown","</br>[For each refine level from +5 and higher]</br><ul><li>Additional weapon damage to Boss monsters +1%</ul></br>[Set Bonus with Abysmal Knight Card]</br><ul><li>Additional weapon damage to Boss monsters +5%<li>Damage from normal monsters and players -1% for each refine level from +6 to +10 inclusive.</ul>",0]
 ,[1570,0,0,"Golden Fish Hat","When attacking with magic, has a chance that the Holy property magical damage is increased by 10% for 60 seconds.</br>[If refined to +6 or higher]</br>Has a chance to grant a Holy property, higher chance to cast the Holy property magical damage increasing.</br>[If refined to +9 or higher]</br>Adds a chance of casting Level 1 Quagmire when receiving a physical attack.",0]
@@ -2136,7 +2136,12 @@ ITEM_NAME = [
 ,[2133,0,0,"Sarah's Battle Robe","Has a chance to activate effect for 10 seconds when dealing magical damage:<br>Matk +8 for each refine lv",0]
 ,[2134,0,0,"Sarah's Left Earring","Account Bound.",0]
 ,[2135,0,0,"Sarah's Right Earring","Account Bound.",0]
-// ,[2136,0,0,"Item_Name","Item_Desc",0]
+,[2136,0,0,"Runaway Chip",0]
+,[2137,0,0,"Broken Chip 01",0]
+,[2138,0,0,"Broken Chip 02",0]
+,[2139,0,0,"Chip set","Increase movement speed.<br>[If refine Lv of Runaway Chip is +9 or higher]<br>Max HP +10%<br>Max SP +50%",0]
+,[2140,0,0,"Broken chip set",0]
+// ,[2141,0,0,"Item_Name","Item_Desc",0]
 ]
 };
 

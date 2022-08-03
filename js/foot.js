@@ -1009,6 +1009,11 @@ function StPlusCalc()
 		if(n_A_SHOES_DEF_PLUS >= 9)
 			wSPC_AGI += 1;
 	}
+	if (EquipNumSearch(1567))
+	{//Poring Fedora Hat
+		wSPC_VIT += n_A_HEAD_DEF_PLUS;
+		wSPC_DEX += n_A_HEAD_DEF_PLUS;
+	}
 	
 
 	wSPCall = StPlusCard(bon_ALL_STATS);

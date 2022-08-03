@@ -769,6 +769,20 @@ function SetCard()
 ,[691,   card_com_ACC,"Gigantes","[If str 120 or higher]<br>ATK +20.<br>ASPD +3%. ",bon_ATK,20,0]
 ,[692,   card_com_ARMOR,"Sarah","Damage to the player cannot exceed 40%.",0]
 ,[693,   itm_type_SET,"Sarah & Irene","Chance of transforming into Sarah Irene for 60 seconds when dealing physical attack.",bon_ATK,100,0]
+//Verus part 2
+,[694,   card_com_SHOES,"Green Cenere","Add a chance to recover 1000 HP per second for 5 seconds   when the user receiving physical or magical damage.",bon_HP_MUL,2,0]
+,[695,   card_comp_WEAPON,"Exploration Rover Turbo","",bon_CRIT_RC_FORMLESS,30,0]
+,[696,   card_comp_HEAD,"Repair Robot Turbo","Recover +30 HP and +3 SP each time a monster is killed by Physical Melee Damage.<br><br>[If refine Lv of Headgear +7 or higher]<br>Additional +10 HP and +1 SP each time a monster is killed by Physical Melee Damage.",bon_HP_REG,25,bon_SP_REG,25,0]
+,[697,   itm_type_SET,"Turbo Card set","",bon_CRIT,10,0]
+//The Last Room
+,[698,   card_com_GARMENT,"Scrap Robots","[If refine lv +7 and higher]<br>Physical and magical damage taken from Formless monsters -5%.<br><br>Chance to obtain items while killing monsters:<br>  Rusty Screw<br>  Iron<br>  Used Iron Plate<br>  Metal Fragment",bon_RED_RC_FORMLESS,10,0]
+,[699,   card_com_ACC,"DR815","[If base level is 90 or higher]<br>  HIT +1.<br>[If base level is 120 or higher]<br>  HIT +1.",bon_HIT,1,0]
+,[700,   card_com_ACC,"GC109","[If base level is 90 or higher]<br>  ASPD +1%.<br>[If base level is 120 or higher]<br>  ASPD +1%.",bon_ASPD_MUL,1,0]
+,[701,   itm_type_SET,"Chip Card set","Has a chance to activate effects for 5 seconds when dealing physical damage:<br>  ASPD +5.",0]
+,[702,   card_comp_WEAPON,"T W O","Adds a chance of casting Level 2 Wide Soul Drain when dealing a physical attack. For each 3 refine Lv of weapon chance is increasing",bon_PHY_ATK,10,0]
+//Central Laboratory
+,[703,   card_comp_WEAPON,"General Daehyun","[if compounded to One-Handed or Two-Handed Sword]<br>  ATK +100.",0]
+,[704,   card_comp_WEAPON,"Dark Guardian Kades","",bon_RED_ELE_SHADOW,50,bon_RED_ELE_UNDEAD,50,bon_RED_ELE_WATER,50,bon_RED_ELE_EARTH,50,bon_RED_ELE_FIRE,50,bon_RED_ELE_WIND,50,bon_RED_ELE_HOLY,-100,bon_RED_ELE_GHOST,-100,0]
 
 //,[694,   ,"","",0]
 ];
@@ -844,7 +858,9 @@ w_SC = [[429,306,235,"NULL"],
 [663,658,660,"NULL"], //"Kick Step + Charleston"
 [666,664,665,"NULL"],  //"Undead Knight Card Set"
 [688,686,687,"NULL"],  //"Evil Shadow Card + Evil Fanatics Card"
-[693,692,636,"NULL"]  //"Sarah & Irene"
+[693,692,636,"NULL"],  //"Sarah & Irene"
+[697,695,696,"NULL"],  //"Turbo Card set"
+[701,699,700,"NULL"]  //"Chip Card set"
 ];
 }
 

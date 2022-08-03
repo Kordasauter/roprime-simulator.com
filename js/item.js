@@ -2161,7 +2161,14 @@
 ,[2133,itm_type_ARMOR,2000,35,0,1,80,145,bon_NONE] // "Sarah's Battle Robe"
 ,[2134,itm_type_ACCESSORY,2000,0,0,0,0,145,bon_SKILL_ENABLE,5,bon_NONE] // "Sarah's Left Earring"
 ,[2135,itm_type_ACCESSORY,2000,0,0,0,0,145,bon_SKILL_ENABLE,17,bon_NONE] // "Sarah's Right Earring"
-// ,[2136,itm_,0,0,0,0,0,0,bon_NONE] // ""
+//The Last Room
+,[2136,itm_type_HEAD_UPPER,2000,0,0,1,30,100,bon_SP_MUL,-50,bon_HIT,50,bon_FLEE,50,bon_NONE] // "Runaway Chip"
+,[2137,itm_type_ACCESSORY,2000,0,0,1,10,100,bon_STR,4,bon_NONE] // "Broken Chip 01"
+,[2138,itm_type_ACCESSORY,2000,0,0,1,10,100,bon_INT,4,bon_NONE] // "Broken Chip 02"
+,[2139,itm_type_SET,0,0,0,0,0,0,bon_PHY_ATK,50,bon_MATK,50,bon_NONE] // "Chip set"
+,[2140,itm_type_SET,0,0,0,0,0,0,bon_STR,8,bon_INT,8,bon_NONE] // "Broken chip set"
+//
+// ,[2141,itm_,0,0,0,0,0,0,bon_NONE] // ""
 
 ];
 ItemMax = ItemOBJ.length -1;
@@ -2671,6 +2678,8 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2118,2115,2112,2113,2114,"NULL"] // "Robe Of Gray Set"
 ,[2128,2125,2126,2127,"NULL"] // "Airship's Set"
 ,[2132,2129,2130,2131,"NULL"] // "Felrock's Set"
+,[2139,2136,2137,2138,"NULL"] // "Chip set"
+,[2140,2137,2138,"NULL"] // "Broken chip set"
 // ,[itm_set,item1,item2,...,"NULL"] // 
 
 //,[itm_set,item1,item2,...,"NULL"] // 

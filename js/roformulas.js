@@ -897,7 +897,7 @@ function CalcEquipAtk()
 	{
 		equipmentAttack += 15 * Math.floor((n_A_Weapon_ATKplus) / 3);
 	}
-	//Cards
+//Cards
 	if(CardNumSearch(557))
 	{//Faithful Manager Card
 		if (  n_A_WeaponType == weapTyp_BOOK)
@@ -924,7 +924,13 @@ function CalcEquipAtk()
 		if(SU_AGI >= 120)
 			equipmentAttack += 20 * CardNumSearch(691);
 	}
-	//shadows
+	if(CardNumSearch(703))
+	{//General Daehyun Card
+		if(n_A_WeaponType == weapTyp_SWORD || n_A_WeaponType == weapTyp_2HSWORD)
+			equipmentAttack += 100 * CardNumSearch(703);
+	}
+	
+//shadows
 	if ( EquipNumSearch( 1661 ) )
 	{ // "Shadow Strongman Ring"
 		equipmentAttack += n_A_SHADOW_EARRING_DEF_PLUS;
@@ -2700,7 +2706,7 @@ function calcHP()
 	}
 	if ( EquipNumSearch( 1567 ) )
 	{//Poring Fedora Hat
-		additiveHP += (n_A_BODY_DEF_PLUS * 75);
+		additiveHP += (n_A_HEAD_DEF_PLUS * 75);
 	}
 	if ( EquipNumSearch( 1794 ) )
 	{//Vit Glove
@@ -3078,6 +3084,11 @@ function calcHP()
 	{//Felrock‘s Set
 		if((n_A_BODY_DEF_PLUS + n_A_SHOULDER_DEF_PLUS + n_A_SHOES_DEF_PLUS) >= 30)
 			hpMultiplier += 5;
+	}
+	if(EquipNumSearch(2139))
+	{//Chip set
+		if((n_A_HEAD_DEF_PLUS) >= 9)
+			hpMultiplier += 10;
 	}
 	
 //Cards
@@ -3677,6 +3688,11 @@ function calcSP( n_A_MaxSP )
 		if((n_A_BODY_DEF_PLUS + n_A_SHOULDER_DEF_PLUS + n_A_SHOES_DEF_PLUS) >= 30)
 			spMultiplier += 5;
 	}
+	if(EquipNumSearch(2139))
+	{//Chip set
+		if((n_A_HEAD_DEF_PLUS) >= 9)
+			spMultiplier += 50;
+	}
 	
 //Shadows
 	if ( EquipNumSearch( 1654 ) )
@@ -4214,7 +4230,19 @@ function calcHit(n_A_HIT)
 		n_A_HIT += Math.floor(n_A_JobLV /10) * CardNumSearch(492);
 	if(CardNumSearch(636)) // Irene Elder Card 
 		n_A_HIT += Math.floor(n_A_SHOULDER_DEF_PLUS / 3) * 5;
-
+	if(CardNumSearch(584))
+	{//Stalker Card
+		if(SU_LUK >= 110)
+			n_A_HIT += 20;
+	}
+	if(CardNumSearch(699))
+	{//DR815 Card
+		if(n_A_BaseLV >= 90)
+			n_A_HIT += CardNumSearch(699);
+		if(n_A_BaseLV >= 120)
+			n_A_HIT += CardNumSearch(699);
+	}
+	
 	// Equipment
 	if ( EquipNumSearch( 442 ) && SU_STR >= 90 )
 	{ // Rogue's Treasure
@@ -4333,13 +4361,9 @@ function calcHit(n_A_HIT)
 		n_A_HIT += 20;
 	}
 	
-	if(CardNumSearch(584))
-	{//Stalker Card
-		if(SU_LUK >= 110)
-			n_A_HIT += 20;
-	}
+
 	
-	// Items
+// Items
 	if ( usableItems[ksSesamePastry] )
 	{
 		n_A_HIT += 30;
@@ -5316,6 +5340,14 @@ function calcASPD()
 		if(SU_AGI >= 120)
 			equipASPD += 3 * CardNumSearch(691);
 	}
+	if(CardNumSearch(700))
+	{//GC109 Card
+		if(n_A_BaseLV >= 90)
+			equipASPD += CardNumSearch(700);
+		if(n_A_BaseLV >= 120)
+			equipASPD += CardNumSearch(700);
+	}
+	
 //Shadows
 	if ( EquipNumSearch( 1747 ) )// "Shadow Sage Armor"
 	{ 
@@ -6257,7 +6289,7 @@ function getArmorElement(n_A_BodyZokusei)
 
 function calcRaceElementalReduction()
 {
-	// Card modifiers
+// Card modifiers
 	if ( CardNumSearch( 452 ) && n_A_JobSearch() === cls_ACO )
 	{ // Enchanted Peach Tree Card and Acolyte
 		n_tok[bon_RED_RC_UNDEAD] += 30;
@@ -6277,6 +6309,11 @@ function calcRaceElementalReduction()
 			n_tok[bon_RED_ELE_FIRE] += 1;
 		if(n_A_SHOES_DEF_PLUS >= 9)
 			n_tok[bon_RED_ELE_FIRE] += 2;
+	}
+	if ( CardNumSearch( 698 ))
+	{ // Scrap Robots Card
+		if(n_A_SHOULDER_DEF_PLUS >= 7)
+			n_tok[bon_RED_RC_FORMLESS] += 5;
 	}
 	
 	// Equipment modifiers

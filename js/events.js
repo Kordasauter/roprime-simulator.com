@@ -997,6 +997,7 @@ function ClickWeapon( data,isRefine )
 		/*Whips*/weapon== 425 || weapon== 426 || weapon== 141 || weapon== 498 || weapon== 499 || weapon== 650 || weapon== 652 || weapon== 653 || weapon== 951 || weapon== 1271 || weapon== 1272 
 		)
 	{//two or less slot weapons
+		formElements["A_WEAPON_ENCHANT_2"].disabled = true;
 		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
 		formElements["A_WEAPON_ENCHANT_4"].disabled = false;
 		for ( var i = 0; EnchantListOBJ[1][i] != "NULL" && !isRefine; i++ )
@@ -1010,6 +1011,7 @@ function ClickWeapon( data,isRefine )
 			weapon== 932 /*Twin Edge of Naght Sieger(blue)*/|| 
 			weapon== 1160 /*Krasnaya*/)
 	{//tree slot weapons
+		formElements["A_WEAPON_ENCHANT_2"].disabled = true;
 		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
 		formElements["A_WEAPON_ENCHANT_4"].disabled = true;
 		for ( var i = 0; EnchantListOBJ[1][i] != "NULL" && !isRefine; i++ )
@@ -1027,6 +1029,7 @@ function ClickWeapon( data,isRefine )
 			weapon== 1700 /*Huuma Fluttering Snow*/ || 
 			weapon== 1701 /*Huuma Thunderstorm*/)
 	{
+		formElements["A_WEAPON_ENCHANT_2"].disabled = true;
 		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
 		formElements["A_WEAPON_ENCHANT_4"].disabled = false;
 		var enchlv = 0;
@@ -1053,6 +1056,7 @@ function ClickWeapon( data,isRefine )
 			weapon== 1426 /*Crimson Rod Staff*/ || 
 			weapon== 1433 /*Forest Rod Staff*/ )
 	{
+		formElements["A_WEAPON_ENCHANT_2"].disabled = true;
 		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
 		formElements["A_WEAPON_ENCHANT_4"].disabled = false;
 		for ( var i = 0; EnchantListOBJ[45][i] != "NULL" && !isRefine; i++ )
@@ -1063,6 +1067,7 @@ function ClickWeapon( data,isRefine )
 	}
 	else if(weapon == 1506)
 	{// Wand Of Affection
+		formElements["A_WEAPON_ENCHANT_2"].disabled = true;
 		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
 		formElements["A_WEAPON_ENCHANT_4"].disabled = false;
 		for ( var i = 0; EnchantListOBJ[53][i] != "NULL" && !isRefine; i++ )
@@ -1076,6 +1081,7 @@ function ClickWeapon( data,isRefine )
 	}
 	else if(weapon == 1537)
 	{// Mace Of Judgement
+		formElements["A_WEAPON_ENCHANT_2"].disabled = true;
 		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
 		formElements["A_WEAPON_ENCHANT_4"].disabled = false;
 		for ( var i = 0; EnchantListOBJ[53][i] != "NULL" && !isRefine; i++ )
@@ -1140,6 +1146,62 @@ function ClickWeapon( data,isRefine )
 			formElements["A_WEAPON_ENCHANT_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[87][i]][1],EnchantOBJ[EnchantListOBJ[87][i]][0]);
 			formElements["A_WEAPON_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[87][i]][1],EnchantOBJ[EnchantListOBJ[87][i]][0]);
 			formElements["A_WEAPON_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[87][i]][1],EnchantOBJ[EnchantListOBJ[87][i]][0]);
+		}
+	}
+	else if(weapon >= 2050 && weapon <= 2083)
+	{//Ancient Weapons 
+		formElements["A_WEAPON_ENCHANT_2"].disabled = true;
+		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
+		formElements["A_WEAPON_ENCHANT_4"].disabled = false;
+		//Slot 4
+		for ( var i = 0; EnchantListOBJ[90][i] != "NULL" && !isRefine; i++ )
+		{
+			if(i < 1)
+			{
+				formElements["A_WEAPON_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[90][i]][1],EnchantOBJ[EnchantListOBJ[90][i]][0]);
+			}
+				
+			if(i == 1)
+			{
+				formElements["A_WEAPON_ENCHANT_4"].options[i] = new Option("Physical");
+				formElements["A_WEAPON_ENCHANT_4"].options[i].disabled = true;
+			}
+			if(i >= 1)
+			{
+				formElements["A_WEAPON_ENCHANT_4"].options[i+1] = new Option(EnchantOBJ[EnchantListOBJ[90][i]][1],EnchantOBJ[EnchantListOBJ[90][i]][0]);
+			}
+		}
+		var formsize = formElements["A_WEAPON_ENCHANT_4"].length;
+		formElements["A_WEAPON_ENCHANT_4"].options[formsize] = new Option("Magical");
+		formElements["A_WEAPON_ENCHANT_4"].options[formsize].disabled = true;
+		for ( var i = 1; EnchantListOBJ[92][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_WEAPON_ENCHANT_4"].options[i + formsize] = new Option(EnchantOBJ[EnchantListOBJ[92][i]][1],EnchantOBJ[EnchantListOBJ[92][i]][0]);
+		}
+		//Slot 3
+		for ( var i = 0; EnchantListOBJ[91][i] != "NULL" && !isRefine; i++ )
+		{
+			if(i < 1)
+			{
+				formElements["A_WEAPON_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[91][i]][1],EnchantOBJ[EnchantListOBJ[91][i]][0]);
+			}
+				
+			if(i == 1)
+			{
+				formElements["A_WEAPON_ENCHANT_3"].options[i] = new Option("Physical");
+				formElements["A_WEAPON_ENCHANT_3"].options[i].disabled = true;
+			}
+			if(i >= 1)
+			{
+				formElements["A_WEAPON_ENCHANT_3"].options[i+1] = new Option(EnchantOBJ[EnchantListOBJ[91][i]][1],EnchantOBJ[EnchantListOBJ[91][i]][0]);
+			}
+		}
+		formsize = formElements["A_WEAPON_ENCHANT_3"].length;
+		formElements["A_WEAPON_ENCHANT_3"].options[formsize] = new Option("Magical");
+		formElements["A_WEAPON_ENCHANT_3"].options[formsize].disabled = true;
+		for ( var i = 1; EnchantListOBJ[93][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_WEAPON_ENCHANT_3"].options[i + formsize] = new Option(EnchantOBJ[EnchantListOBJ[93][i]][1],EnchantOBJ[EnchantListOBJ[93][i]][0]);
 		}
 	}
 	// else if(weapon == 9999)
@@ -1594,6 +1656,28 @@ function ClickArmor( data, isRefine )
 		CleanEnchant("A_ARMOR_ENCHANT");
 		SetEnchant2("A_ARMOR_ENCHANT",armor_ref,68,77);
 	}
+	else if(armor_id == 2037 || // "Armor of Sixtus the Mighty"
+			armor_id == 2038 || // "Armor of Sixtus the Agile"
+			armor_id == 2039 || // "Armor of Sixtus the Tough"
+			armor_id == 2040 || // "Armor of Sixtus the Wise"
+			armor_id == 2041 || // "Armor of Sixtus the Dexterous"
+			armor_id == 2042 )  // "Armor of Sixtus the Lucky"
+	{
+		if(!isRefine)
+			CleanEnchant("A_ARMOR_ENCHANT");
+		//slot 4
+		for ( var i = 0; EnchantListOBJ[88][i] != "NULL"; i++ )
+		{
+			formElements["A_ARMOR_ENCHANT" + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[88][i]][1],EnchantOBJ[EnchantListOBJ[88][i]][0]);
+		}
+		//slot 3
+		for ( var i = 0; EnchantListOBJ[89][i] != "NULL"; i++ )
+		{
+			formElements["A_ARMOR_ENCHANT" + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[89][i]][1],EnchantOBJ[EnchantListOBJ[89][i]][0]);
+		}
+		formElements["A_ARMOR_ENCHANT" + "_4"].disabled = false;
+		formElements["A_ARMOR_ENCHANT" + "_3"].disabled = false;
+	}
 	// else if(armor_id == 9999)
 	// {
 		// if(!isRefine)
@@ -1945,6 +2029,7 @@ function SetEnchant(formEq,EqRefine,Ench1,Ench2) //Mora Enchants
 		if(formEq != "A_ACCES1_ENCHANT" && formEq != "A_ACCES2_ENCHANT")
 			formElements[formEq + "_2"].disabled = false;
 }
+
 function SetEnchant2(formEq,EqRefine,Ench1,Ench2) //Verus Enchants
 {
 	if(formEq != "A_ARMOR_ENCHANT")

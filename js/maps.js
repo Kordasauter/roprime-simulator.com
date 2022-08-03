@@ -85,5 +85,6 @@ MAP_NAME = [
 ,["","Devil's Tower"]
 ,["","Assault on the Airship"]
 ,["","Fenrir and Sarah"]
+,["","The Last Room"]
 ];
 }
