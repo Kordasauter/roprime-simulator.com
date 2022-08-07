@@ -1488,6 +1488,11 @@ function CalcRacialMod()
 		if (n_A_SHADOW_SHIELD_DEF_PLUS >= 7) { n_tok[bon_DMG_RC_BRUTE] += 1; }
 		if (n_A_SHADOW_SHIELD_DEF_PLUS >= 9) { n_tok[bon_DMG_RC_BRUTE] += 3; }
 	}
+//Cards
+	if ( CardNumSearch( 711 ) )
+	{ // "Piranha Card"
+		if (n_A_SHOES_DEF_PLUS >= 9) { n_tok[bon_DMG_RC_FISH] += 5; }
+	}
 	
 	if (not_use_card == 1)
 		racialMod = 0;
@@ -4360,6 +4365,10 @@ function calcHit(n_A_HIT)
 	{
 		n_A_HIT += 20;
 	}
+	if ( n_A_WeaponType == weapTyp_2HSWORD  && SkillSearch( skill_KN_TWOHAND_QUICKEN )  )
+	{ // Two Hand Quicken
+		n_A_HIT += 2 * SkillSearch( skill_KN_TWOHAND_QUICKEN ) ;
+	}
 	
 
 	
@@ -4795,6 +4804,10 @@ function calcCrit( n_A_CRI )
 	if ( ( n_A_WeaponType == weapTyp_SPEAR || n_A_WeaponType == weapTyp_2HSPEAR ) && SkillSearch( skill_CR_SPEAR_QUICKEN ) )
 	{ // Spear Quicken
 		n_A_CRI += SkillSearch( skill_CR_SPEAR_QUICKEN ) * 3;
+	}
+	if ( n_A_WeaponType == weapTyp_2HSWORD  && SkillSearch( skill_KN_TWOHAND_QUICKEN ) )
+	{ // Two Hand Quicken
+		n_A_CRI += 2 + SkillSearch( skill_KN_TWOHAND_QUICKEN ) ;
 	}
 	if ( ( n_A_WeaponType == weapTyp_MACE ) && SkillSearch( skill_PR_MACE_MASTERY ) )
 	{ // Mace Mastery

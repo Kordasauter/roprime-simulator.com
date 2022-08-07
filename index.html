@@ -89,13 +89,41 @@
 							<tr>
 								<td class="bgLtRow3 padded optCaption">
 								<center><u><b>If you have any issue with update try to force refresh the page (CTRL + F5)</b></u></center>
+								<u><b>07/08/2022:</b></u> 
+									<ul style="margin-left: 5px;">
+										<li><b>Has been added :</b></li>
+										<ul>
+											<li>Green Apple Ring (accessory)</li>
+											<li>Brasilis Cards <input type="button" value="Show/Hide" onclick="javascript:$('#note07082022cards').toggle()">
+												<span style="display: none;" id="note07082022cards">
+													<ul>
+														<li>Headless Mule Card</li>
+														<li>Jaguar Card</li>
+														<li>Toucan Card</li>
+														<li>Curupira Card</li>
+														<li>Iara Card</li>
+														<li>Piranha Card</li>
+														<li>Boitata Card</li>
+													</ul>
+												</span></li> 
+										</ul>
+										<li><b>Has been fixed :</b></li>
+										<ul>
+											<li>Adopted char max stat set to 80 (117 for 3rd class)</li>
+											<li>Twohand Quicken can now be select from level 0 to 10</li>
+											<li>Twohand Quicken Crit and Hit bonus now applies</li>
+											<li>Licheni Card, Ordre Card, Geffen Shoplifter Card, Dio Anemos Card, Dwigh Card, now increases magic element damage</li>
+										</ul>
+									</ul>
+								-Kord
+								<br>
 								<u><b>03/08/2022:</b></u> 
 									<ul style="margin-left: 5px;">
 										<li><b>Has been added :</b></li>
 											<ul>
 												<li>Enchants for Sixtus armors</li>
 												<li>Enchants for Ancient weapons</li>
-												<li>Memory record monsters</li> <input type="button" value="Show/Hide" onclick="javascript:$('#note03082022monsters').toggle()">
+												<li>Memory record monsters <input type="button" value="Show/Hide" onclick="javascript:$('#note03082022monsters').toggle()">
 												<span style="display: none;" id="note03082022monsters">
 													<ul>
 														<li>Green Cenere</li>
@@ -111,8 +139,8 @@
 														<li>Dark Guardian Kades</li>
 														<li>Kublin</li>
 													</ul>
-												</span>
-												<li>Memory record cards</li> <input type="button" value="Show/Hide" onclick="javascript:$('#note03082022cards').toggle()">
+												</span></li>
+												<li>Memory record cards <input type="button" value="Show/Hide" onclick="javascript:$('#note03082022cards').toggle()">
 												<span style="display: none;" id="note03082022cards">
 													<ul>
 														<li>Green Cenere Card</li>
@@ -125,7 +153,7 @@
 														<li>General Daehyun Card</li>
 														<li>Dark Guardian Kades Card</li>
 													</ul>
-												</span>
+												</span></li>
 												<li>Runaway Chip (Headgear-Upper)</li>
 												<li>Broken Chip 01 (Accessory)</li>
 												<li>Broken Chip 02 (Accessory)</li>
@@ -136,7 +164,18 @@
 									</ul>
 								-Kord
 								<br>
-								<u><b>26/07/2022:</b></u> 
+							</tr>
+						</tbody>
+					</table>
+	            </div>
+				<div class="bgMdTitle mdTitle" onclick="ToggleVisibility('oldnews')">Old News</div>
+	        	<div id="oldnews" style="display:none">
+					<table class="bgLtTable aligned">
+						<tbody>
+							<tr>
+								<td class="bgLtRow3 padded optCaption">
+								<u><b>26/07/2022:</b></u> <input type="button" value="Show/Hide" onclick="javascript:$('#note26072022').toggle()">
+									<span style="display: none;" id="note26072022">
 									<ul style="margin-left: 5px;">
 										<li><b>Has been added :</b></li>
 											<ul>
@@ -154,19 +193,9 @@
 											</ul>
 									</ul>
 								-Kord
-								<br>
-							</tr>
-						</tbody>
-					</table>
-	            </div>
-				<div class="bgMdTitle mdTitle" onclick="ToggleVisibility('oldnews')">Old News</div>
-	        	<div id="oldnews" style="display:none">
-					<table class="bgLtTable aligned">
-						<tbody>
-							<tr>
-								<td class="bgLtRow3 padded optCaption">
-									<u><b>24/07/2022:</b></u> <input type="button" value="Show/Hide" onclick="javascript:$('#note27072022').toggle()">
-									<span style="display: none;" id="note27072022">
+								</span><br>
+									<u><b>24/07/2022:</b></u> <input type="button" value="Show/Hide" onclick="javascript:$('#note24072022').toggle()">
+									<span style="display: none;" id="note24072022">
 										<ul style="margin-left: 5px;">
 											<li><b>Has been added :</b></li>
 												<ul>
@@ -2239,7 +2268,7 @@
 												<td class="bgLtRow4 padded optCaption">Points<br>left</td>
 												<td class="bgLtRow2 padded optArea"><span id="A_STPOINT"></span></td>
 												<td class="bgLtRow4 padded optCaption" id="adoptedLabel">Adopted</td>
-												<td class="bgLtRow2 padded optArea"><input id="adoptedCheck" name="A_youshi" onclick="calc()" type="checkbox"></td>
+												<td class="bgLtRow2 padded optArea"><input id="adoptedCheck" name="A_youshi" onclick="ClickAdopted()" type="checkbox"></td>
 												<td class="bgLtRow4 padded optCaption">Auto<br>Base Lv.</td>
 												<td class="bgLtRow2 padded optArea">
 													<input name="BLVauto" checked="checked" type="checkbox">

@@ -2546,6 +2546,14 @@ with(document.calcForm)
 }
 }
 
+function ClickAdopted()
+{
+	AdjustStatLists( n_A_JOB );
+	calc();
+	StCalc();
+	StAllCalc();
+}
+
 function ClickActiveSkill()
 {
 with(document.calcForm)

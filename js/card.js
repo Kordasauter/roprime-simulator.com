@@ -744,17 +744,17 @@ function SetCard()
 ,[670,	 card_com_SHOES,"Archi","",bon_ATK,15,bon_MATK,15,bon_HP_ADD,500,bon_FLEE,15,bon_HIT,15,0]
 ,[671,	 card_com_SHOES,"Odoric","",bon_ASPD_MUL,3,bon_DMG_RANGE,5,0]
 ,[672,	 card_comp_WEAPON,"Ju","[If card inserted in a Book]<br>[Cold Bolt], [Fire Bolt] and [Lightning Bolt] damage +20%.<br>[If Book refine lv +14 and higher]<br>[Cold Bolt], [Fire Bolt] and [Lightning Bolt] damage +20%",bon_DMG_SKILL + skill_MA_COLD_BOLT,10,bon_DMG_SKILL + skill_MA_FIRE_BOLT,10,bon_DMG_SKILL + skill_MA_LIGHTNING_BOLT,10,0]
-,[673,	 card_com_ACC,"Dwigh","",bon_MDMG_ELE_NEUTRAL,20,bon_MDMG_ELE_DARK,20,0]
-,[674,	 card_com_SHOES,"Dio Anemos","",bon_MATK_MUL,3,bon_MDMG_ELE_NEUTRAL,5,bon_MDMG_ELE_EARTH,5,0]
-,[675,	 card_com_SHOES,"Geffen Shoplifter","",bon_MATK_MUL,3,bon_MDMG_ELE_HOLY,5,bon_MDMG_ELE_FIRE,5,0]
+,[673,	 card_com_ACC,"Dwigh","",bon_INC_MAGIC_NEUTRAL,20,bon_INC_MAGIC_DARK,20,0]
+,[674,	 card_com_SHOES,"Dio Anemos","",bon_MATK_MUL,3,bon_INC_MAGIC_NEUTRAL,5,bon_INC_MAGIC_EARTH,5,0]
+,[675,	 card_com_SHOES,"Geffen Shoplifter","",bon_MATK_MUL,3,bon_INC_MAGIC_HOLY,5,bon_INC_MAGIC_FIRE,5,0]
 ,[676,	 card_com_SHOES,"Geffen Bully","",bon_ASPD_MUL,3,bon_CRIT,5,0]
 ,[677,	 card_com_SHOES,"Geffen Gangster","",bon_ASPD_MUL,5,bon_CRIT,3,0]
 ,[678,	 card_com_SHOES,"Faymont"," SP regen +10%<br>Has a chance of auto casting Lv 1 [Zen] when taking physical damage.",0]
-,[679,	 card_com_SHOES,"Ordre","",bon_MATK_MUL,3,bon_MDMG_ELE_WIND,5,bon_MDMG_ELE_WATER,5,0]
+,[679,	 card_com_SHOES,"Ordre","",bon_MATK_MUL,3,bon_INC_MAGIC_WIND,5,bon_INC_MAGIC_WATER,5,0]
 ,[680,	 card_com_SHOES,"Blut Hase","",bon_DMG_RANGE,5,bon_PHY_ATK,5,0]
 ,[681,	 card_com_SHOES,"Kuro Akuma","",bon_RED_CAST,3,bon_DMG_SKILL + skill_NIN_FLAMING_PETALS,5,bon_DMG_SKILL + skill_NIN_FREEZING_SPEAR,5,bon_DMG_SKILL + skill_NIN_WIND_BLADE,5,bon_DMG_RANGE,5,0]
 ,[682,	 card_com_SHOES,"Ifodes","",bon_PHY_ATK,3,bon_ASPD_MUL,5,0]
-,[683,	 card_com_SHOES,"Licheni","",bon_MATK_MUL,3,bon_MDMG_ELE_HOLY,5,bon_HEAL_MUL,5,0]
+,[683,	 card_com_SHOES,"Licheni","",bon_MATK_MUL,3,bon_INC_MAGIC_HOLY,5,bon_HEAL_MUL,5,0]
 ,[684,	 card_com_SHOES,"Fay Kanavian","Has a chance to transform into [Golem] for 7 sec. when attacks<br>[During transform]<br>DEF +300",0]
 //Ghost Palace
 ,[685,	 card_comp_WEAPON,"Lord Sakray","",bon_ATK,20,bon_DMG_RC_DEMON,30,bon_DMG_RC_UNDEAD,30,0]
@@ -783,8 +783,18 @@ function SetCard()
 //Central Laboratory
 ,[703,   card_comp_WEAPON,"General Daehyun","[if compounded to One-Handed or Two-Handed Sword]<br>  ATK +100.",0]
 ,[704,   card_com_GARMENT,"Dark Guardian Kades","",bon_RED_ELE_SHADOW,50,bon_RED_ELE_UNDEAD,50,bon_RED_ELE_WATER,50,bon_RED_ELE_EARTH,50,bon_RED_ELE_FIRE,50,bon_RED_ELE_WIND,50,bon_RED_ELE_HOLY,-100,bon_RED_ELE_GHOST,-100,0]
-
-//,[694,   ,"","",0]
+//Brasilis
+,[705,   card_com_ACC,"Headless Mule","",bon_INC_MAGIC_WATER,20,bon_INC_MAGIC_HOLY,20,0]
+,[706,   card_comp_HEAD,"Jaguar","[If refine lv +9 and higher]<br>Increases magical damage inflicted on Brute monsters and Doram race +10%",bon_MDMG_RC_BRUTE,10,0]
+,[707,   card_comp_HEAD,"Toucan","[If refine lv +9 and higher]<br>Increases magical damage inflicted on Insect monsters +5%",bon_MDMG_RC_INSECT,10,0]
+,[708,   card_comp_WEAPON,"Curupira","[If refine lv +7 and higher]<br>Increases magical damage inflicted on Water elemental monsters +5%<br>[If refine lv +9 and higher]<br>Increases magical damage inflicted on Water elemental monsters +7%",bon_MDMG_ELE_WATER,3,0]
+,[709,   card_com_ACC,"Iara","Enables use of Level 1 Status Recovery.",0]
+,[710,   itm_type_SET,"Obeaune + Iara","",bon_SP_ADD,50,0]
+,[711,   card_com_SHOES,"Piranha","[If refine lv +9 and higher]<br>Weapon damage inflicted on Fish monsters +5%",bon_DMG_RC_FISH,10,0]
+,[712,   card_com_ARMOR,"Boitata","",bon_DMG_RC_BRUTE,40,bon_DMG_RC_INSECT,40,bon_DMG_ELE_WIND,40,bon_DMG_ELE_EARTH,40,0]
+//,[713,   ,"","",0]
+//
+//,[713714,   ,"","",0]
 ];
 
 CardNum = cardOBJ.length -1;
@@ -860,7 +870,8 @@ w_SC = [[429,306,235,"NULL"],
 [688,686,687,"NULL"],  //"Evil Shadow Card + Evil Fanatics Card"
 [693,692,636,"NULL"],  //"Sarah & Irene"
 [697,695,696,"NULL"],  //"Turbo Card set"
-[701,699,700,"NULL"]  //"Chip Card set"
+[701,699,700,"NULL"],  //"Chip Card set"
+[710,709,148,"NULL"]  //"Obeaune + Iara"
 ];
 }
 

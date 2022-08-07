@@ -2141,7 +2141,7 @@ ITEM_NAME = [
 ,[2138,0,0,"Broken Chip 02",0]
 ,[2139,0,0,"Chip set","Increase movement speed.<br>[If refine Lv of Runaway Chip is +9 or higher]<br>Max HP +10%<br>Max SP +50%",0]
 ,[2140,0,0,"Broken chip set",0]
-// ,[2141,0,0,"Item_Name","Item_Desc",0]
+,[2141,0,0,"Green Apple Ring","[Every 5 job lvls]<br>All stats -1.<br>-------------<br>[30th job lvl]<br>Stats bonus is cancelled out.",0]
 ]
 };
 

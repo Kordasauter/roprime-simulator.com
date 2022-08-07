@@ -333,6 +333,8 @@ WordData = [
 ,["","Mind Potion"]//270
 ,["","Damage on Port Malaya monsters (not implemented yet)"]
 ,["","Str Biscuit Stick"]
+,["","Increases magic damage to "]
+,["","Increases "]
 //,["","xxx"]
 ];
 }

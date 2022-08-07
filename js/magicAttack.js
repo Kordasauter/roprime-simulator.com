@@ -967,6 +967,14 @@ function CalcMagicDamage( rawDamage )
 	{//Ice Guardian
 		wX += 10;
 	}
+	if ( n_B[en_RACE] == race_BRUTE  && CardNumSearch(706) && n_A_HEAD_DEF_PLUS >= 9)
+	{//Jaguar Card
+		wX += 10;
+	}
+	if ( n_B[en_RACE] == race_INSECT  && CardNumSearch(707) && n_A_HEAD_DEF_PLUS >= 9)
+	{//Toucan Card
+		wX += 5;
+	}
 	
 	if (SkillSearch(skill_WAR_INTENSE_TELEKINESIS) && 
 		(n_A_ActiveSkill === skill_MA_NAPALM_BEAT ||
@@ -1067,6 +1075,14 @@ function CalcMagicDamage( rawDamage )
 				wX += 10;
 		}
 	}
+	if ( n_B[en_ELEMENT] == ele_WATER  && CardNumSearch(708))
+	{//Curupira Card
+		if(n_A_Weapon_ATKplus >= 7)
+			wX += 5 * CardNumSearch(708);
+		if(n_A_Weapon_ATKplus >= 9)
+			wX += 7 * CardNumSearch(708);
+	}
+	
 	//Cards
 	if(CardNumSearch(558))
 	{ //Lichtern Blue Card
@@ -1125,6 +1141,9 @@ function CalcMagicDamage( rawDamage )
 			wX += 3 * n_A_SHOULDER_DEF_PLUS;
 		}
 	}
+//skill (element)
+	if(SkillSearch( skill_SA_ENDOW_BLAZE ) && n_A_Weapon_element == ele_FIRE)
+		wX += 5;
 	
 	wBMC2 = wBMC2 * ( 100 + wX ) / 100;
 

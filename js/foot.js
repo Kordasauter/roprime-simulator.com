@@ -1014,6 +1014,27 @@ function StPlusCalc()
 		wSPC_VIT += n_A_HEAD_DEF_PLUS;
 		wSPC_DEX += n_A_HEAD_DEF_PLUS;
 	}
+	if (EquipNumSearch(2141))
+	{//Green Apple Ring
+		if(n_A_JobLV < 30)
+		{
+			wSPC_STR -= Math.floor(n_A_JobLV / 5);
+			wSPC_AGI -= Math.floor(n_A_JobLV / 5);
+			wSPC_VIT -= Math.floor(n_A_JobLV / 5);
+			wSPC_INT -= Math.floor(n_A_JobLV / 5);
+			wSPC_DEX -= Math.floor(n_A_JobLV / 5);
+			wSPC_LUK -= Math.floor(n_A_JobLV / 5);
+		}
+		else
+		{
+			wSPC_STR -= 6;
+			wSPC_AGI -= 6;
+			wSPC_VIT -= 6;
+			wSPC_INT -= 6;
+			wSPC_DEX -= 6;
+			wSPC_LUK -= 6;
+		}
+	}
 	
 
 	wSPCall = StPlusCard(bon_ALL_STATS);

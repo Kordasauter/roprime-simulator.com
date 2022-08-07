@@ -674,13 +674,20 @@ function AdjustStatLists( job )
 	if ( thirdClass === 1 || job == cls_REB || job == cls_SUM) // third cls
 	{
 		maxStatLvl = CONST_MAXSTAT_THIRD; // maxStats
+		if(formElements["A_youshi"].checked)
+			maxStatLvl = CONST_MAXSTAT_THIRD_BABY;
 	}
 	else
 	{
-                if (job == cls_KAGOB || job == cls_ENOVI || job == cls_REB) {
+                if (job == cls_KAGOB || job == cls_ENOVI || job == cls_REB) 
+				{
                     maxStatLvl = CONST_MAXSTAT_KAGOB_ENOVI;
-                } else {
+                } 
+				else 
+				{
                     maxStatLvl = CONST_MAXSTAT; // maxStats
+					if(formElements["A_youshi"].checked)
+						maxStatLvl = CONST_MAXSTAT_BABY;
                 }
 	}
 	
@@ -918,7 +925,7 @@ function BuildPassiveSkillTable()
 	{ // SkillLevel
 		var skillIndex = JobSkillPassOBJ[job][j];
 		// on-off skills
-		var toggleSkills = [12,68,74,152,153,155,196,253,258,301,309,310,322,345,364,365,383,379,385,386,389,390,392,420,421,422];
+		var toggleSkills = [12,68,152,153,155,196,253,258,301,309,310,322,345,364,365,383,379,385,386,389,390,392,420,421,422];
 
 		if ( skillIndex !== 999 )
 		{

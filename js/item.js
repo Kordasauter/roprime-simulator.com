@@ -2168,7 +2168,7 @@
 ,[2139,itm_type_SET,0,0,0,0,0,0,bon_PHY_ATK,50,bon_MATK,50,bon_NONE] // "Chip set"
 ,[2140,itm_type_SET,0,0,0,0,0,0,bon_STR,8,bon_INT,8,bon_NONE] // "Broken chip set"
 //
-// ,[2141,itm_,0,0,0,0,0,0,bon_NONE] // ""
+,[2141,itm_type_ACCESSORY,2000,0,0,0,0,99,bon_ALL_STATS,6,bon_NONE] // "Green Apple Ring"
 
 ];
 ItemMax = ItemOBJ.length -1;
@@ -2366,6 +2366,8 @@ function BuildItemDescription( bonusType, bonusValue )
 	if(330 <= bonusType && bonusType <=339)
 		CBIstr += GetWord(184) + "[" + ZokuseiOBJ[bonusType-330][Language] + "] element monsters by" + wIS + bonusValue +"%<br/>";
 		//CBIstr += ZokuseiOBJ[bonusType-330][Language] +"Monster Tolerance Attributes "+ wIS + bonusValue +"%<br/>";
+	if(350 <= bonusType && bonusType <=359)
+		CBIstr += GetWord(273) + "[" + ZokuseiOBJ[bonusType-350][Language] + "] element monsters by" + wIS + bonusValue +"%<br/>";
 	if(bon_DMG_SKILL <= bonusType && bonusType <= 6999)
 		CBIstr += "[" + SKILL_NAME[bonusType -5000][Language] + GetWord(223) + wIS + bonusValue +"%<br/>";
 	if(bon_CAST_SKILL <= bonusType && bonusType <= 8999)
