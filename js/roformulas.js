@@ -460,7 +460,7 @@ function CalcEquipAtk()
 		equipmentAttack += otherBuffs[ksElementFieldLvl] * 10;
 	}
 
-	// items
+// items
 	if ( usableItems[ksRainbowCake] )
 	{
 		equipmentAttack += 10;
@@ -534,7 +534,7 @@ function CalcEquipAtk()
 		equipmentAttack += Math.floor( n_B[en_HARDDEF] / 2 );
 	}
 		
-	// Equipment
+// Equipment
 	if ( SU_STR >= 95 && EquipNumSearch( 621 ) )
 	{ //DoomSlayer
 		equipmentAttack += 340;
@@ -897,6 +897,13 @@ function CalcEquipAtk()
 	{
 		equipmentAttack += 15 * Math.floor((n_A_Weapon_ATKplus) / 3);
 	}
+	if(EquipNumSearch(2142) || // "Chronocloak of Strength"
+	   EquipNumSearch(2143) || // "Chronocloak of Agility"
+	   EquipNumSearch(2144) || // "Chronocloak of Vitality"
+	   EquipNumSearch(2146) )  // "Chronocloak of Dexterity"
+	{
+		equipmentAttack += 10 * Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
+	}
 //Cards
 	if(CardNumSearch(557))
 	{//Faithful Manager Card
@@ -980,7 +987,7 @@ function CalcEquipAtk()
 		equipmentAttack += n_A_SHADOW_WEAPON_DEF_PLUS;
 	}
 	
-	//Enchante
+//Enchants
 	if(EnchNumSearch( 281 ))//Special STR = 281
 	{
 		if(n_A_SHOULDER_DEF_PLUS >8)
@@ -995,7 +1002,7 @@ function CalcEquipAtk()
 			equipmentAttack += 1;
 		}
 	}
-	// Skills
+// Skills
 	if( SkillSearch( skill_GS_LAST_STAND ) )
 	{ // LastStand
 		equipmentAttack += 100;
@@ -1421,9 +1428,40 @@ function CalcRacialMod()
 	{//Demon's Shot
 		n_tok[bon_DMG_RC_UNDEAD] += 15;
 		n_tok[bon_DMG_RC_DEMON] += 15;
-	}	
+	}
+	if(EquipNumSearch(2142) || 
+	   EquipNumSearch(2143) || 
+	   EquipNumSearch(2144) || 
+	   EquipNumSearch(2145) || 
+	   EquipNumSearch(2146) || 
+	   EquipNumSearch(2147) ) 
+	{//Chronocloak (all)
+		if(n_A_SHOULDER_DEF_PLUS >= 9)
+		{
+			n_tok[bon_IGN_DEF_RC_BRUTE] += 20;
+			n_tok[bon_IGN_DEF_RC_DEMON] += 20;
+		}
+		if(n_A_SHOULDER_DEF_PLUS >= 11)
+		{
+			n_tok[bon_IGN_DEF_RC_BRUTE] += 10;
+			n_tok[bon_IGN_DEF_RC_DEMON] += 10;
+		}
+	}
+	if(EquipNumSearch(2148) || 
+	   EquipNumSearch(2149) || 
+	   EquipNumSearch(2150) || 
+	   EquipNumSearch(2151) || 
+	   EquipNumSearch(2152) || 
+	   EquipNumSearch(2153) ) 
+	{//Chronocloak + Temporal Boots Sets (all)
+		if(n_A_SHOES_DEF_PLUS >= 10)
+		{
+			n_tok[bon_IGN_DEF_RC_BRUTE] += 30;
+			n_tok[bon_IGN_DEF_RC_DEMON] += 30;
+		}
+	}
 	
-	// Magical
+// Magical
 	if ( EquipNumSearch( 1250 ) && n_A_HEAD_DEF_PLUS >= 5 )
 	{ // Red Pom Hat
 		n_tok[bon_MDMG_RC_DEMI_HUMAN] += n_A_HEAD_DEF_PLUS * 2;
@@ -1472,7 +1510,7 @@ function CalcRacialMod()
 		}
 	}
 	
-	//Shadows
+//Shadows
 	if ( EquipNumSearch( 1673 ) )
 	{ // "Shadow Dragonslayer Boots"
 		if (n_A_SHADOW_SHIELD_DEF_PLUS >= 7) { n_tok[bon_DMG_RC_DRAGON] += 1; }
@@ -1541,6 +1579,20 @@ function CalcSizeMod()
 		if (n_A_Weapon_ATKplus >= 6) { n_tok[bon_DMG_SIZ_SMALL] += 5; n_tok[bon_DMG_SIZ_MEDIUM] += 5; n_tok[bon_DMG_SIZ_LARGE] += 5; }
 		if (n_A_Weapon_ATKplus >= 9) { n_tok[bon_DMG_SIZ_SMALL] += 5; n_tok[bon_DMG_SIZ_MEDIUM] += 5; n_tok[bon_DMG_SIZ_LARGE] += 5; }
 	}
+	if(EquipNumSearch(2067) && n_A_Weapon_ATKplus >= 11) //Avenger
+	{
+		n_tok[bon_DMG_SIZ_SMALL] += 15; 
+		n_tok[bon_DMG_SIZ_MEDIUM] += 15; 
+		n_tok[bon_DMG_SIZ_LARGE] += 15;
+	}
+	if(EquipNumSearch(2142) ||// "Chronocloak of Strength"
+	   EquipNumSearch(2143) )  // "Chronocloak of Agility"
+	{
+		n_tok[bon_DMG_SIZ_SMALL] += 5 * Math.floor(n_A_SHOULDER_DEF_PLUS / 4); 
+		n_tok[bon_DMG_SIZ_MEDIUM] += 5 * Math.floor(n_A_SHOULDER_DEF_PLUS / 4); 
+		n_tok[bon_DMG_SIZ_LARGE] += 5 * Math.floor(n_A_SHOULDER_DEF_PLUS / 4);
+	}
+//Shadows
 	if ( EquipNumSearch( 1726 ) )
 	{ // "Shadow Blacksmith Armor"
 		if( SkillSearch( skill_BS_WEAPON_PERFECTION ) )
@@ -1556,12 +1608,7 @@ function CalcSizeMod()
 			}
 		}
 	}
-	if(EquipNumSearch(2067) && n_A_Weapon_ATKplus >= 11) //Avenger
-	{
-		n_tok[bon_DMG_SIZ_SMALL] += 15; 
-		n_tok[bon_DMG_SIZ_MEDIUM] += 15; 
-		n_tok[bon_DMG_SIZ_LARGE] += 15;
-	}
+
 	sizeMod = n_tok[bon_DMG_SIZ_SMALL + n_B[en_SIZE]];
 	if ( monsterBuffs[status_en_buff_Size] )
 	{ // Size Reduction
@@ -1605,7 +1652,7 @@ function CalcAttackMod()
 	// Attack Mod is physical mod *
 	attackMod = 1;
 	
-	// Equipment
+// Equipment
 	if ( n_A_JobSearch2() === cls_ROG && CardNumSearch( 479 ) )
 	{ // Byrogue Card
 		n_tok[bon_PHY_ATK] += 10;
@@ -1704,6 +1751,19 @@ function CalcAttackMod()
 		if(n_A_Weapon_ATKplus >= 7)
 			n_tok[bon_PHY_ATK] += 5;
 		if(n_A_Weapon_ATKplus >= 9)
+			n_tok[bon_PHY_ATK] += 7;
+	}
+	if(EquipNumSearch(2142))
+	{// "Chronocloak of Strength"
+		n_tok[bon_PHY_ATK] += Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
+	}
+	if(EquipNumSearch(2142) || // "Chronocloak of Strength"
+	   EquipNumSearch(2143) || // "Chronocloak of Agility"
+	   EquipNumSearch(2144) || // "Chronocloak of Vitality"
+	   EquipNumSearch(2146) || // "Chronocloak of Dexterity"
+	   EquipNumSearch(2147) )  // "Chronocloak of Luck"
+	{
+		if(n_A_SHOULDER_DEF_PLUS >= 7)
 			n_tok[bon_PHY_ATK] += 7;
 	}
 	
@@ -1888,13 +1948,22 @@ function CalcCriticalMod()
 	{//Crimson Rose
 		n_tok[bon_DMG_CRIT] += 20;
 	}
-	
+	if(EquipNumSearch(2143) || // "Chronocloak of Agility"
+	   EquipNumSearch(2147) )  // "Chronocloak of Luck"
+	{
+		n_tok[bon_DMG_CRIT] += 3 * Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
+	}
+	if(EquipNumSearch(2146) )
+	{// "Chronocloak of Dexterity"
+		n_tok[bon_DMG_CRIT] += 3 * Math.floor(n_A_SHOULDER_DEF_PLUS / 4);
+	}
+//Shadow
 	if( EquipNumSearch(1825))
 	{//Shadow Gunslinger Shield
 		if(n_A_SHADOW_SHIELD_DEF_PLUS >= 7){n_tok[bon_DMG_CRIT] += 2;}
 		if(n_A_SHADOW_SHIELD_DEF_PLUS >= 9){n_tok[bon_DMG_CRIT] += 3;}
 	}
-	//Cards
+//Cards
 	if(CardNumSearch(562))
 	{//Petal Card
 		n_tok[bon_DMG_CRIT] += Math.floor(SU_LUK/10) * 2;
@@ -2168,7 +2237,12 @@ function CalcRangedMod()
 	{//Empyrean
 		n_tok[bon_DMG_RANGE] += 5;
 	}
+	if(EquipNumSearch(2146))
+	{// "Chronocloak of Dexterity"
+		n_tok[bon_DMG_RANGE] += Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
+	}
 	
+//Shadow
 	if( EquipNumSearch(1842))
 	{//Shadow Gunslinger Gloves
 		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7){n_tok[bon_DMG_RANGE] += 3;}
@@ -2754,6 +2828,10 @@ function calcHP()
 		if(n_A_BODY_DEF_PLUS >= 12)
 			additiveHP += 300;
 	}
+	if(EquipNumSearch(2144))
+	{// "Chronocloak of Vitality"
+		additiveHP += 400 * Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
+	}
 	
 //Cards
 	if(CardNumSearch(565))
@@ -2925,7 +3003,7 @@ function calcHP()
 		}
 	}
 	
-	// Items
+// Items
 	if ( usableItems[ksIncreaseHP] > 0 )
 	{
 		var modifier = 1500;
@@ -2941,7 +3019,7 @@ function calcHP()
 		additiveHP += Math.floor( 10 / 3 * n_A_BaseLV ) + modifier;
 	}
 
-	// Skills
+// Skills
 	if ( SkillSearch( skill_CR_FAITH ) )
 	{ // Faith
 		n_A_MaxHP += SkillSearch(skill_CR_FAITH) * 200;
@@ -2972,12 +3050,12 @@ function calcHP()
 	if(n_A_MaxHP < 1)
 		n_A_MaxHP = 1;
 	
-	// Multipliers ---
+// Multipliers ---
 	var hpMultiplier = 100;
 	
 	hpMultiplier += n_tok[bon_HP_MUL];
 
-	// Cards
+// Cards
 	if(SU_VIT >= 80 && CardNumSearch(267))
 	{ // Giant Whisper
 		hpMultiplier += 3;
@@ -3004,7 +3082,7 @@ function calcHP()
 		hpMultiplier += 4;
 	}
 
-	// Equipment
+// Equipment
 	if(EquipNumSearch(715))
 	{ // Variant Shoes
 		hpMultiplier -= n_A_SHOES_DEF_PLUS;
@@ -3094,6 +3172,10 @@ function calcHP()
 	{//Chip set
 		if((n_A_HEAD_DEF_PLUS) >= 9)
 			hpMultiplier += 10;
+	}
+	if(EquipNumSearch(2144))
+	{// "Chronocloak of Vitality"
+		hpMultiplier += 3 * Math.floor(n_A_SHOULDER_DEF_PLUS / 4);
 	}
 	
 //Cards
@@ -3725,6 +3807,11 @@ function calcSP( n_A_MaxSP )
 		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7){spMultiplier += 5;}
 		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9){spMultiplier += 5;}
 	}
+	if ( EquipNumSearch( 1662 ) )
+	{ // "Shadow Strongman Pendant"
+		if (n_A_SHADOW_PENDANT_DEF_PLUS >= 7) { spMultiplier += 1; }
+	}
+	
 //Enchant
 	if(EnchNumSearch( 283 ))//Special VIT = 283
 	{
@@ -4781,7 +4868,11 @@ function calcCrit( n_A_CRI )
 		if(n_A_LEFT_DEF_PLUS >= 9)
 			n_A_CRI += 2;
 	}
-	
+	if(EquipNumSearch(2147))
+	{// "Chronocloak of Luck"
+		n_A_CRI += 3 * Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
+	}
+//Shadow
 	if( EquipNumSearch(1825))
 	{//Shadow Gunslinger Shield
 		n_A_CRI += n_A_SHADOW_SHIELD_DEF_PLUS;
@@ -5332,6 +5423,11 @@ function calcASPD()
 		if(n_A_SHOES_DEF_PLUS >= 9)
 			equipASPD += 5;
 	}
+	if(EquipNumSearch(2147))
+	{// "Chronocloak of Luck"
+		equipASPD += 5 * Math.floor(n_A_SHOULDER_DEF_PLUS / 4);
+	}
+	
 //Cards
 	if(CardNumSearch(556))
 	{//Cenere Card

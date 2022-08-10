@@ -40,37 +40,37 @@ function calcMAtk( includeMultipliers )
 	// Item Multipliers
 	if ( includeMultipliers )
 	{
-		w = 100;
-		w += n_tok[bon_MATK_MUL];
+		matk_mul = 100;
+		matk_mul += n_tok[bon_MATK_MUL];
 		
 		if(n_A_HEAD_DEF_PLUS >= 9 && n_A_card[8]==177) // KatheryneK
-			w += 2;
+			matk_mul += 2;
 		if(n_A_JobSearch()==cls_MAG && CardNumSearch(card_ISET_MAGESET))
-			w +=3;
+			matk_mul +=3;
 		if(n_A_JobSearch2() == cls_ROG)
-			w += 10 * CardNumSearch(card_BODY_BYORGUE); // Byorgue
+			matk_mul += 10 * CardNumSearch(card_BODY_BYORGUE); // Byorgue
 
 		if(EquipNumSearch(484) && SU_INT >= 70) // SageDiary
-			w += 5;
+			matk_mul += 5;
 		if(n_A_Weapon_ATKplus >= 9 && EquipNumSearch(642)) // LBW
-			w += 3;
+			matk_mul += 3;
 		if(EquipNumSearch(646)) // SoDestru
-			w += Math.floor(n_A_Weapon_ATKplus / 2);
+			matk_mul += Math.floor(n_A_Weapon_ATKplus / 2);
 		if(EquipNumSearch(737)) // ??
-			w += Min(n_A_Weapon_ATKplus,10);
+			matk_mul += Min(n_A_Weapon_ATKplus,10);
 		if ( EquipNumSearch( 849 ) ) // Balloon Hat
-			w += 2 + Math.floor(n_A_HEAD_DEF_PLUS / 2);
+			matk_mul += 2 + Math.floor(n_A_HEAD_DEF_PLUS / 2);
 		if(EquipNumSearch(897) && (n_A_JobSearch2() == cls_ROG || n_A_JOB == cls_NIN))
-			w += 15 * EquipNumSearch(897); // AssaDamaB
+			matk_mul += 15 * EquipNumSearch(897); // AssaDamaB
 		if(EquipNumSearch(898) && (n_A_JobSearch2() == cls_ROG || n_A_JOB == cls_NIN))
-			w += 15 * EquipNumSearch(898); // AssaDamaV
+			matk_mul += 15 * EquipNumSearch(898); // AssaDamaV
 		if(EquipNumSearch(1029) && n_A_HEAD_DEF_PLUS >= 6) // Pagdayaw
-			w += n_A_HEAD_DEF_PLUS - 5;
+			matk_mul += n_A_HEAD_DEF_PLUS - 5;
 		if(EquipNumSearch(1042)) // GentlemanSet
-			w += n_A_Weapon_ATKplus;
+			matk_mul += n_A_Weapon_ATKplus;
 		if(EquipNumSearch(1083))
 		{ // Glorious DestruStaff
-			w += n_A_Weapon_ATKplus;
+			matk_mul += n_A_Weapon_ATKplus;
 			if (n_A_Weapon_ATKplus >= 6)
 				n_tok[bon_MDMG_RC_DEMI_HUMAN] += Math.min(20, 2*(n_A_Weapon_ATKplus-5));
 		}
@@ -79,84 +79,84 @@ function calcMAtk( includeMultipliers )
 			n_tok[bon_MDMG_RC_DEMON] += 5 ;
 		}
 		if(n_A_Weapon_ATKplus >= 9 && EquipNumSearch(1084)) // GloArcWand
-			w += 5;
+			matk_mul += 5;
 		if(n_A_Weapon_ATKplus >= 9 && EquipNumSearch(1095)) // GloApocalypse
-			w += 5;
+			matk_mul += 5;
 		if(EquipNumSearch(1173)) // StaffOfThea
-			w += Math.floor(n_A_Weapon_ATKplus / 2);
+			matk_mul += Math.floor(n_A_Weapon_ATKplus / 2);
 		if ( EquipNumSearch( 565 ) && n_A_HEAD_DEF_PLUS >= 7 )
 		{ // Dress Hat
-			w += 1;
+			matk_mul += 1;
 		}
 		if ( EquipNumSearch( 872 ) )
 		{ // Crown of Deceit
 			if ( n_A_HEAD_DEF_PLUS >= 7 )
 			{
-				w += 5;
+				matk_mul += 5;
 			}
 			if ( n_A_HEAD_DEF_PLUS >= 9 )
 			{
-				w += 5;
+				matk_mul += 5;
 			}
 		}
 		if ( EquipNumSearch( 1214 ) )
 		{ // Red Wing Hat
 			if ( n_A_HEAD_DEF_PLUS >= 7 )
 			{
-				w += 2;
+				matk_mul += 2;
 			}
 			if ( n_A_HEAD_DEF_PLUS >= 9 )
 			{
-				w += 2;
+				matk_mul += 2;
 			}
 		}
 		if ( EquipNumSearch( 1149 ) )
 		{ // Skull Cap
 			if ( n_A_HEAD_DEF_PLUS >= 5 )
 			{
-				w += 3;
+				matk_mul += 3;
 			}
 			if ( n_A_HEAD_DEF_PLUS >= 7 )
 			{
-				w += 3;
+				matk_mul += 3;
 			}
 		}
 		if ( EquipNumSearch( 1338 ) && n_A_HEAD_DEF_PLUS >= 7 )
 		{ // Cancer Diadem
-			w += 2;
+			matk_mul += 2;
 		}
 		if ( EquipNumSearch( 1340 ) && n_A_HEAD_DEF_PLUS >= 7 )
 		{ // Gemini Diadem
-			w += 8;
+			matk_mul += 8;
 		}
 		if ( EquipNumSearch( 1343 ) && n_A_HEAD_DEF_PLUS >= 7 )
 		{ // Pisces Diadem
-			w += 2;
+			matk_mul += 2;
 		}
 		if ( EquipNumSearch( 1344 ) && n_A_HEAD_DEF_PLUS >= 10 )
 		{ // Sagittarius Diadem
-			w += 4;
+			matk_mul += 4;
 		}
 		if ( EquipNumSearch( 1348 ) && n_A_HEAD_DEF_PLUS >= 10 )
 		{ // Aries Crown
-			w += 2;
+			matk_mul += 2;
 		}
 		if ( EquipNumSearch( 1353 ) && n_A_HEAD_DEF_PLUS >= 9 )
 		{ // Pisces Crown
-			w += 2;
+			matk_mul += 2;
 		}
 		if ( EquipNumSearch( 1352 ) && n_A_HEAD_DEF_PLUS >= 7 )
 		{ // Libra Crown
-			w += 3;
+			matk_mul += 3;
 			if ( EquipNumSearch( 1352 ) && n_A_HEAD_DEF_PLUS >= 9 )
 			{ // Libra Crown
-				w += 5;
+				matk_mul += 5;
 			}
 		}
 		if(EquipNumSearch(1401))
 		{ // Ancient Gold Ornament
 			if(n_A_JobSearch()==cls_ACO || n_A_JobSearch()==cls_MAG)
-				w += 8;
+				matk_mul += 8;
 		}
 		if( EquipNumSearch(1401) ) 
 		{ // RWC Memory Staff
@@ -170,7 +170,7 @@ function calcMAtk( includeMultipliers )
 		}
 		if( EquipNumSearch(1519) ) 
 		{ // Orlean's glove + Plate
-			w += n_A_LEFT_DEF_PLUS;
+			matk_mul += n_A_LEFT_DEF_PLUS;
 		}
 		if( EquipNumSearch(1522) ) 
 		{ // Chibi Pope
@@ -181,18 +181,18 @@ function calcMAtk( includeMultipliers )
 		{//Loli Ruri's Cat
 			if(n_A_HEAD_DEF_PLUS >= 7)
 			{
-				w += 2;
+				matk_mul += 2;
 			}
 			if(n_A_HEAD_DEF_PLUS >= 9)
 			{
-				w += 3;
+				matk_mul += 3;
 			}
 		}
 		if ( (EquipNumSearch( 1637 ) ) )
 		{// "Thanatos' Dolor Hat"
 			if(n_A_HEAD_DEF_PLUS > 6)
 			{
-				w += 5;
+				matk_mul += 5;
 			}
 		}
 		if(EquipNumSearch(1681))
@@ -203,42 +203,48 @@ function calcMAtk( includeMultipliers )
 		{ //"Officer's Cap"
 			if(n_A_HEAD_DEF_PLUS > 6)
 			{
-				w += 5;
+				matk_mul += 5;
 			}
 		}
 		if ( EquipNumSearch( 1795 ) )
 		{//INT Glove
 			if(SU_INT >= 110)
-				w += 1;
+				matk_mul += 1;
 		}
 		if(EquipNumSearch(1883))
 		{ //"Magic Foxtrail Staff"
-			w += 2 * Math.floor(n_A_Weapon_ATKplus / 3);
+			matk_mul += 2 * Math.floor(n_A_Weapon_ATKplus / 3);
 		}
 		if(EquipNumSearch(1884))
 		{ //"Magic Yellow Foxtrail Staff"
-			w += 3 * Math.floor(n_A_Weapon_ATKplus / 2);
+			matk_mul += 3 * Math.floor(n_A_Weapon_ATKplus / 2);
 		}
 		if(EquipNumSearch(1877))
 		{ //"Wondrous Foxtail Staff"
-			w += 2 * Math.floor(n_A_Weapon_ATKplus / 3);
+			matk_mul += 2 * Math.floor(n_A_Weapon_ATKplus / 3);
 		}
 		if ( EquipNumSearch( 2040 ) )
 		{//Armor of Sixtus the Wise
-				w += 2 * Math.floor(n_A_BODY_DEF_PLUS / 3);
+				matk_mul += 2 * Math.floor(n_A_BODY_DEF_PLUS / 3);
 		}
 		if(EquipNumSearch(2079) && n_A_Weapon_ATKplus >= 7)
 		{//Crimson Rose
-			w += 5;
+			matk_mul += 5;
 		}
 		if(EquipNumSearch(2119))
 		{//Evil Slayer Vanquisher Staff
 			if(n_A_Weapon_ATKplus >= 7)
-				w += 5;
+				matk_mul += 5;
 			if(n_A_Weapon_ATKplus >= 9)
-				w += 7;
+				matk_mul += 7;
 		}
-		//Shadows
+		if(EquipNumSearch(2145))
+		{// "Chronocloak of Intellect"
+			matk_mul += Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
+			if(n_A_SHOULDER_DEF_PLUS >= 7)
+				matk_mul += 7;
+		}
+//Shadows
 		if ( EquipNumSearch( 1656 ) )
 		{ // "Shadow Mystic Gloves"
 			if (n_A_SHADOW_WEAPON_DEF_PLUS >= 7) { w += 1; }
@@ -273,7 +279,7 @@ function calcMAtk( includeMultipliers )
 		}
 		if ( EquipNumSearch(1840) )
 		{ // Shadow Taekwon Gloves
-			w += n_A_SHADOW_WEAPON_DEF_PLUS;
+			matk_mul += n_A_SHADOW_WEAPON_DEF_PLUS;
 		}
 		if ( EquipNumSearch(1996) )
 		{ // Shadow Doram Mage Gloves
@@ -286,34 +292,34 @@ function calcMAtk( includeMultipliers )
 		{
 			if(n_A_SHOULDER_DEF_PLUS >8)
 			{
-				w += 1;
+				matk_mul += 1;
 			}
 		}
 		if(EnchNumSearch( 285 ))//Special DEX = 285
 		{
 			if(n_A_SHOULDER_DEF_PLUS >8)
 			{
-				w += 1;
+				matk_mul += 1;
 			}
 		}
 		
 		if(CardNumSearch(582))
 		{//Professor Card
 			if(SU_DEX >= 110)
-			w += 7;
+			matk_mul += 7;
 		}
 		
 		//items
 		if ( usableItems[ksArchmagePotion] )
 		{
-			w += 1;
+			matk_mul += 1;
 		}
 		if(otherBuffs[ksMurderBonus])
-			w += 10;
+			matk_mul += 10;
 
-		n_A_StatMATK = (n_A_StatMATK * w / 100);
-		n_A_MATK_Variance = (n_A_MATK_Variance * w / 100);
-		n_A_EquipMATK = (n_A_EquipMATK * w / 100);
+		n_A_StatMATK = (n_A_StatMATK * matk_mul / 100);
+		n_A_MATK_Variance = (n_A_MATK_Variance * matk_mul / 100);
+		n_A_EquipMATK = (n_A_EquipMATK * matk_mul / 100);
 	}
 
 	// Items
@@ -524,7 +530,11 @@ function calcMAtk( includeMultipliers )
 		if(n_A_LEFT_DEF_PLUS >= 9)
 			n_A_EquipMATK += 5;
 	}
-	//shadows
+	if(EquipNumSearch(2145))
+	{// "Chronocloak of Intellect"
+		n_A_EquipMATK += 10 * Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
+	}
+//shadows
 	if ( EquipNumSearch( 1657 ) )
 	{ // "Shadow Mystic Ring"
 		n_A_EquipMATK += n_A_SHADOW_EARRING_DEF_PLUS ;
@@ -616,7 +626,7 @@ function calcMAtk( includeMultipliers )
 	{ // Fenrir Card
 		n_A_EquipMATK += 5 * n_A_HEAD_DEF_PLUS;
 	}
-	// Skills
+// Skills
 	if ( performerBuffs[ksWandererSolo] === ksMoonlightSerenade &&
 		 performerBuffs[ksWandererSoloLevel] > 0 )
 	{ // Moonlight Serenade
@@ -865,6 +875,7 @@ function CalcMagicDamage( rawDamage )
 { // Magic Damage (rawMDmg)	
 	wBMC_MDEF = n_B[en_HARDMDEF];
 	var MDEF_Musi = 0;
+	var Ign_MDEF = 0;
 	
 	if ( n_B[en_BOSS] == 0 && CardNumSearch(card_HEAD_HIGHWIZARD) ) //High Wizard
 	{
@@ -878,49 +889,74 @@ function CalcMagicDamage( rawDamage )
 	}
 	if( EquipNumSearch( 645 ) )
 	{//piercing staff
-		wBMC_MDEF = wBMC_MDEF - ((wBMC_MDEF /100) *10) ;
-		n_B_MDEF2 = n_B_MDEF2 - ((n_B_MDEF2 /100) *10) ;
+		Ign_MDEF += 10 ;
 	}
 	if( EquipNumSearch( 1582 ) )
 	{//Loli Ruri's Cat
 		if(n_A_HEAD_DEF_PLUS >= 7)
 		{
-			wBMC_MDEF = wBMC_MDEF - ((wBMC_MDEF /100) * (n_A_HEAD_DEF_PLUS + 5 )) ;
-			n_B_MDEF2 = n_B_MDEF2 - ((n_B_MDEF2 /100) * (n_A_HEAD_DEF_PLUS + 5 )) ;		
+			Ign_MDEF += n_A_HEAD_DEF_PLUS + 5;
 		}
 		else
 		{
-			wBMC_MDEF = wBMC_MDEF - ((wBMC_MDEF /100) *n_A_HEAD_DEF_PLUS) ;
-			n_B_MDEF2 = n_B_MDEF2 - ((n_B_MDEF2 /100) *n_A_HEAD_DEF_PLUS) ;
+			Ign_MDEF += n_A_HEAD_DEF_PLUS;
 		}
 	}
 	if ( EquipNumSearch( 2040 ) )
-	{//Armor of Sixtus the Lucky
+	{//Armor of Sixtus the Wise
 		if(n_A_BODY_DEF_PLUS >= 7)
 		{
 			for(var i = 1; i <= 4 ; i++)
 			{
 				if(n_B[en_ELEMENT] == ((ele_WIND * 10) + i)  || n_B[en_ELEMENT] ==  ((ele_EARTH * 10) + i))
 				{
-					wBMC_MDEF = wBMC_MDEF - ((wBMC_MDEF /100) * 30) ;
+					Ign_MDEF += 30;
 				}
 			}
 			
 		}
 	}
 	if ( EquipNumSearch( 2046 ) )
-		{//Armor of Sixtus Set (all)
-			if((n_A_BODY_DEF_PLUS + n_A_SHOES_DEF_PLUS) >= 21)
+	{//Armor of Sixtus Wise Set (INT)
+		if((n_A_BODY_DEF_PLUS + n_A_SHOES_DEF_PLUS) >= 21)
+		{
+			if(n_B[en_RACE] == race_BRUTE || n_B[en_RACE] == race_DEMON)
 			{
-				for(var i = 1; i <= 4 ; i++)
-				{
-					if(n_B[en_ELEMENT] == ((ele_WIND * 10) + i)  || n_B[en_ELEMENT] ==  ((ele_EARTH * 10) + i))
-					{
-						wBMC_MDEF = wBMC_MDEF - ((wBMC_MDEF /100) * 30) ;
-					}
-				}
+				Ign_MDEF += 20;
 			}
 		}
+	}
+	if(EquipNumSearch(2142) || 
+	   EquipNumSearch(2143) || 
+	   EquipNumSearch(2144) || 
+	   EquipNumSearch(2145) || 
+	   EquipNumSearch(2146) || 
+	   EquipNumSearch(2147) ) 
+	{//Chronocloak (all)
+		if((n_B[en_RACE] == race_BRUTE || n_B[en_RACE] == race_DEMON))
+		{
+			if(n_A_SHOULDER_DEF_PLUS >= 9)
+				Ign_MDEF += 20;
+			if(n_A_SHOULDER_DEF_PLUS >= 11)
+				Ign_MDEF += 10;
+		}
+	}
+	if(EquipNumSearch(2148) || 
+	   EquipNumSearch(2149) || 
+	   EquipNumSearch(2150) || 
+	   EquipNumSearch(2151) || 
+	   EquipNumSearch(2152) || 
+	   EquipNumSearch(2153) ) 
+	{//Chronocloak (all)
+		if((n_B[en_RACE] == race_BRUTE || n_B[en_RACE] == race_DEMON) && n_A_SHOES_DEF_PLUS >= 10)
+		{
+			Ign_MDEF += 30;
+		}
+	}
+	
+	//Calc MDEF after bypass MDEF
+	wBMC_MDEF = wBMC_MDEF - ((wBMC_MDEF /100) * Ign_MDEF) ;
+	n_B_MDEF2 = n_B_MDEF2 - ((n_B_MDEF2 /100) * Ign_MDEF) ;
 	// Calc Damage based on MDEF of opponent
 	if ( n_A_ActiveSkill == skill_WI_FIRE_PILLAR )
 	{
@@ -956,7 +992,7 @@ function CalcMagicDamage( rawDamage )
 		wBMC2 = Math.floor( wBMC2 * ( 1 + 0.05 * n_A_ActiveSkillLV ) );
 	}
 	
-	// Multiplier (race)
+// Multiplier (race)
 	var wX = n_tok[bon_MDMG_RC_FORMLESS + n_B[en_RACE]];
 	
 	if ( n_B[en_RACE] == race_DRAGON  && SkillSearch( skill_SA_DRAGONOLOGY ) )
@@ -967,6 +1003,18 @@ function CalcMagicDamage( rawDamage )
 	{//Ice Guardian
 		wX += 10;
 	}
+	if ( EquipNumSearch( 2040 ) )
+	{//Armor of Sixtus the Wise
+		if(n_A_BODY_DEF_PLUS >= 9)
+		{
+			if(n_B[en_RACE] == race_BRUTE || n_B[en_RACE] == race_DEMON )
+			{
+				wX += 10;
+			}
+			
+		}
+	}
+//Cards
 	if ( n_B[en_RACE] == race_BRUTE  && CardNumSearch(706) && n_A_HEAD_DEF_PLUS >= 9)
 	{//Jaguar Card
 		wX += 10;
@@ -986,7 +1034,7 @@ function CalcMagicDamage( rawDamage )
 	
 	wBMC2 = wBMC2 * ( 100 + wX ) / 100;
 	
-	//Multiplier (element)
+//Multiplier (element)
 	wX = n_tok[bon_MDMG_ELE_NEUTRAL + n_B[en_ELEMENT]];
 	if(CardNumSearch(620) && n_B[en_ELEMENT] == ele_EARTH )
 	{
@@ -1075,6 +1123,22 @@ function CalcMagicDamage( rawDamage )
 				wX += 10;
 		}
 	}
+	if ( EquipNumSearch( 2040 ) )
+	{//Armor of Sixtus the Wise
+		if(n_A_BODY_DEF_PLUS >= 11)
+		{
+			for(var i = 1; i <= 4 ; i++)
+			{
+				if(n_B[en_ELEMENT] == ((ele_WIND * 10) + i)  || n_B[en_ELEMENT] ==  ((ele_EARTH * 10) + i))
+				{
+					wX += 10;
+				}
+			}
+			
+		}
+	}
+	
+//Cards
 	if ( n_B[en_ELEMENT] == ele_WATER  && CardNumSearch(708))
 	{//Curupira Card
 		if(n_A_Weapon_ATKplus >= 7)
@@ -1082,8 +1146,6 @@ function CalcMagicDamage( rawDamage )
 		if(n_A_Weapon_ATKplus >= 9)
 			wX += 7 * CardNumSearch(708);
 	}
-	
-	//Cards
 	if(CardNumSearch(558))
 	{ //Lichtern Blue Card
 		if(n_A_HEAD_DEF_PLUS >= 9) 
@@ -1140,6 +1202,10 @@ function CalcMagicDamage( rawDamage )
 		{
 			wX += 3 * n_A_SHOULDER_DEF_PLUS;
 		}
+	}
+	if(EquipNumSearch(2145))
+	{// "Chronocloak of Intellect"
+		wX += 3 * Math.floor(n_A_SHOULDER_DEF_PLUS / 4);
 	}
 //skill (element)
 	if(SkillSearch( skill_SA_ENDOW_BLAZE ) && n_A_Weapon_element == ele_FIRE)

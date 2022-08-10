@@ -2169,7 +2169,19 @@
 ,[2140,itm_type_SET,0,0,0,0,0,0,bon_STR,8,bon_INT,8,bon_NONE] // "Broken chip set"
 //
 ,[2141,itm_type_ACCESSORY,2000,0,0,0,0,99,bon_ALL_STATS,6,bon_NONE] // "Green Apple Ring"
-
+//
+,[2142,itm_type_GARMENT,226,38,0,1,40,100,bon_NONE] // "Chronocloak of Strength"
+,[2143,itm_type_GARMENT,226,38,0,1,40,100,bon_NONE] // "Chronocloak of Agility"
+,[2144,itm_type_GARMENT,226,38,0,1,40,100,bon_NONE] // "Chronocloak of Vitality"
+,[2145,itm_type_GARMENT,226,38,0,1,40,100,bon_NONE] // "Chronocloak of Intellect"
+,[2146,itm_type_GARMENT,226,38,0,1,40,100,bon_NONE] // "Chronocloak of Dexterity"
+,[2147,itm_type_GARMENT,226,38,0,1,40,100,bon_NONE] // "Chronocloak of Luck"
+,[2148,itm_type_SET,0,0,0,0,0,0,bon_ATK,50,bon_NONE] // "Chronocloak of Strength + Temporal STR Shoes [1]"
+,[2149,itm_type_SET,0,0,0,0,0,0,bon_DMG_CRIT,7,bon_NONE] // "Chronocloak of Agility + Temporal AGI Shoes [1]"
+,[2150,itm_type_SET,0,0,0,0,0,0,bon_RED_CASTDELAY,5,bon_NONE] // "Chronocloak of Vitality + Temporal VIT Shoes [1]"
+,[2151,itm_type_SET,0,0,0,0,0,0,bon_MATK,50,bon_NONE] // "Chronocloak of Intellect + Temporal INT Shoes [1]"
+,[2152,itm_type_SET,0,0,0,0,0,0,bon_DMG_RANGE,7,bon_NONE] // "Chronocloak of Dexterity + Temporal DEX Shoes [1]"
+,[2153,itm_type_SET,0,0,0,0,0,0,bon_ASPD_ADD,1,bon_NONE] // "Chronocloak of Luck + Temporal STR LUK [1]"
 ];
 ItemMax = ItemOBJ.length -1;
 }
@@ -2682,6 +2694,12 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2132,2129,2130,2131,"NULL"] // "Felrock's Set"
 ,[2139,2136,2137,2138,"NULL"] // "Chip set"
 ,[2140,2137,2138,"NULL"] // "Broken chip set"
+,[2148,2142,1946,"NULL"] // "Chronocloak + Temporal Str"
+,[2149,2143,1947,"NULL"] // "Chronocloak + Temporal Agi"
+,[2150,2144,1948,"NULL"] // "Chronocloak + Temporal Vit"
+,[2151,2145,1949,"NULL"] // "Chronocloak + Temporal Int"
+,[2152,2146,1950,"NULL"] // "Chronocloak + Temporal Dex"
+,[2153,2147,1951,"NULL"] // "Chronocloak + Temporal Luk"
 // ,[itm_set,item1,item2,...,"NULL"] // 
 
 //,[itm_set,item1,item2,...,"NULL"] // 
