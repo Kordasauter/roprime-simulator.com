@@ -75,7 +75,13 @@ var RANGED_SKILLS = [
 	skill_SUM_PICKY_PECK,
 	skill_SUM_SCAR_OF_TAROU,
 	skill_SUM_LUNATIC_CARROT_BEAT,
-	skill_SUM_SPIRIT_OF_SAVAGE
+	skill_SUM_SPIRIT_OF_SAVAGE,
+	skill_MEC_ARM_CANNON,
+	skill_MEC_AXE_BOOMERANG,
+	skill_MEC_FLAME_LAUNCHER,
+	skill_MEC_COLD_SLOWER,
+	skill_MEC_BOOST_KNUCKLE,
+	skill_MEC_VULCAN_ARM
 ];
 var MAGICAL_SKILLS = [
     skill_MON_DARK_STRIKE,
@@ -2124,6 +2130,7 @@ function CalcSkillDamage()
 		}
 		else if ( n_A_ActiveSkill === skill_MEC_AXE_BOOMERANG )
 		{ // Axe Boomerang
+			damageType = kDmgTypeRanged;
 			var axeWeight = ItemOBJ[n_A_Equip[eq_WEAPON]][itm_WEIGHT];
 			
 			// ATK [ { ( Skill Level x 50 ) + 250 + Axe Weight } x Caster s Base Level / 100 ] %
@@ -2150,6 +2157,7 @@ function CalcSkillDamage()
 		else if ( n_A_ActiveSkill === skill_MEC_BOOST_KNUCKLE )
 		{
 			// ATK [ { ( Skill Level x 100 ) + 200 + (Caster s DEX) } x Caster s Base Level / 120 ] %
+			damageType = kDmgTypeRanged;
 			w_SkillMod = ( n_A_ActiveSkillLV + 2.0 + n_A_DEX / 100.0 ) * n_A_BaseLV / 120.0;
 			
 			fixedCastTime *= 0.0;
@@ -2167,6 +2175,7 @@ function CalcSkillDamage()
 		}
 		else if ( n_A_ActiveSkill === skill_MEC_VULCAN_ARM )
 		{
+			damageType = kDmgTypeRanged;
 			// ATK [ { ( Skill Level x 70 ) + Caster s DEX } x Caster s Base Level / 120 ] %
 			w_SkillMod = ( n_A_ActiveSkillLV * 0.7 + n_A_DEX / 100.0 ) * n_A_BaseLV / 120.0;
 			
@@ -2179,6 +2188,7 @@ function CalcSkillDamage()
 			// Small Monster:  ATK [ { ( Skill Level x 400 ) + 300 } x Caster s Base Level / 120 ] %
 			// Medium Monster: ATK { { ( Skill Level x 350 ) + 300 } x Caster s Base Level / 120 ] %
 			// Large Monster:  ATK [ { ( Skill Level x 300 ) + 300 } x Caster s Base Level / 120 ] %
+			damageType = kDmgTypeRanged;
 			var sizeModifier = 4.0 - n_B[en_SIZE] * 0.5;
 			w_SkillMod = ( ( n_A_ActiveSkillLV * sizeModifier ) + 3.0 ) * n_A_BaseLV / 120.0;
 			
@@ -2193,6 +2203,7 @@ function CalcSkillDamage()
 		else if ( n_A_ActiveSkill === skill_MEC_FLAME_LAUNCHER )
 		{
 			// ATK [ { ( Skill Level x 300 ) + 300 } x Caster s Base Level / 150 ] %
+			damageType = kDmgTypeRanged;
 			n_A_Weapon_element = ele_FIRE;
 			w_SkillMod = ( n_A_ActiveSkillLV * 3.0 + 3.0 ) * n_A_BaseLV / 150.0;
 			
@@ -2203,6 +2214,7 @@ function CalcSkillDamage()
 		else if ( n_A_ActiveSkill === skill_MEC_COLD_SLOWER )
 		{
 			// ATK [ { ( Skill Level x 300 ) + 300 } x Caster s Base Level / 150 ] %
+			damageType = kDmgTypeRanged;
 			n_A_Weapon_element = ele_WATER;
 			w_SkillMod = ( n_A_ActiveSkillLV * 3.0 + 3.0 ) * n_A_BaseLV / 150.0;
 			

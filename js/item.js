@@ -1402,7 +1402,7 @@
 ,[1396,itm_type_ARMOR,2119,66,0,1,66,100,bon_DEX,1,bon_SP_ADD,30,bon_NONE] // "Green Surgical Gown"
 ,[1397,weapTyp_MACE,1053,170,4,0,150,100,bon_ELEMENT,7,bon_SKILL_AUTOCAST,116,bon_NONE] // "Bloody Cross"
 ,[1398,weapTyp_BOW,2114,150,4,2,110,100,bon_NONE] // "Catapult""Thief Crossbow" "Each refine increase damage of Triangle shot, but increases it's sp cost"
-,[1399,weapTyp_BOW,2110,160,4,2,110,90,bon_NONE] // "Giant Crossbow"
+,[1399,weapTyp_BOW,2110,160,4,2,90,110,bon_NONE] // "Giant Crossbow"
 ,[1400,weapTyp_BOW,2054,150,3,2,120,150,bon_DEX,1,bon_SKILL_AUTOCAST,117,bon_NONE] // "Creeper Bow"
 ,[1401,itm_type_HEAD_UPPER,2001,7,0,1,40,100,bon_NONE] // "Ancient Gold Ornament"
 ,[1402,itm_type_SET,0,0,0,0,0,0,bon_ATK,50,bon_FLEE,-30,bon_NONE] // Assassin's Glove + Krisna

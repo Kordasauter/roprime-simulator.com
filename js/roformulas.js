@@ -3177,6 +3177,13 @@ function calcHP()
 	{// "Chronocloak of Vitality"
 		hpMultiplier += 3 * Math.floor(n_A_SHOULDER_DEF_PLUS / 4);
 	}
+	if(EquipNumSearch(2049))
+	{// "Ancient Hero Boots"
+		if(n_A_SHOES_DEF_PLUS > 15)
+			hpMultiplier += 10;
+		else
+			hpMultiplier += 2 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
+	}
 	
 //Cards
 	if(CardNumSearch(563))
@@ -3779,6 +3786,13 @@ function calcSP( n_A_MaxSP )
 	{//Chip set
 		if((n_A_HEAD_DEF_PLUS) >= 9)
 			spMultiplier += 50;
+	}
+	if(EquipNumSearch(2049))
+	{// "Ancient Hero Boots"
+		if(n_A_SHOES_DEF_PLUS > 15)
+			spMultiplier += 5;
+		else
+			spMultiplier += Math.floor(n_A_SHOES_DEF_PLUS / 3);
 	}
 	
 //Shadows
@@ -5977,6 +5991,19 @@ function CalcFixedCast()
 		if(SkillSearch(skill_SUM_SPIRIT_OF_LAND))
 			reductionFlat += -0.1;
 	}
+	if(EquipNumSearch(2049))
+	{// "Ancient Hero Boots"
+		if(n_A_SHOES_DEF_PLUS >= 9)
+			reductionFlat += -0.3;
+		if(n_A_SHOES_DEF_PLUS >= 12)
+			reductionFlat += -0.5;
+	}
+	if(EquipNumSearch(1905) || // "Doram Gear Set"
+	   EquipNumSearch(1909) || // "Luxury Doram Gear Set"
+	   EquipNumSearch(1913) )  // "Elegant Doram Gear Set"
+	{
+		reductionPercentage += n_A_SHOULDER_DEF_PLUS + n_A_BODY_DEF_PLUS + n_A_SHOES_DEF_PLUS;
+	}
 	//Enchant
 	for(var i = 0; i < 6; i++)
 	{
@@ -6129,6 +6156,11 @@ function CalcDelay()
 	if(EquipNumSearch(2062)) 
 	{//Scarlet Dragon's Bow
 		n_tok[bon_RED_CASTDELAY] += 4 * Math.floor(n_A_Weapon_ATKplus / 3);
+	}
+	if(EquipNumSearch(2049))
+	{// "Ancient Hero Boots"
+		if(n_A_SHOES_DEF_PLUS >= 14)
+			n_tok[bon_RED_CASTDELAY] += 5;
 	}
 	
 	// Skills
