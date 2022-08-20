@@ -1336,7 +1336,8 @@ JobSkillActiveOBJ = [
 [56,0,157,3],  // Auto Guard 3
 [57,0,240,1],  // Hocus Pocus 1 (Abracadabra)
 [58,0,185,2],  // Summon Spirit Sphere 2
-[59,0,383,1]  // Close Confine 1
+[59,0,383,1],  // Close Confine 1
+[60,0,227,5]  // Spell Breaker 5
 ];
 }
 

@@ -1204,6 +1204,38 @@ function ClickWeapon( data,isRefine )
 			formElements["A_WEAPON_ENCHANT_3"].options[i + formsize] = new Option(EnchantOBJ[EnchantListOBJ[93][i]][1],EnchantOBJ[EnchantListOBJ[93][i]][0]);
 		}
 	}
+	else if(weapon >= 2162 && weapon <= 2163)
+	{//Vicious Mind Weapons (magical)
+		formElements["A_WEAPON_ENCHANT_2"].disabled = true;
+		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
+		formElements["A_WEAPON_ENCHANT_4"].disabled = false;
+		//Slot 4
+		for ( var i = 0; EnchantListOBJ[95][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_WEAPON_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[95][i]][1],EnchantOBJ[EnchantListOBJ[95][i]][0]);
+		}
+		//Slot 3
+		for ( var i = 0; EnchantListOBJ[96][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_WEAPON_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[96][i]][1],EnchantOBJ[EnchantListOBJ[96][i]][0]);
+		}
+	}
+	else if(weapon >= 2164 && weapon <= 2178)
+	{//Vicious Mind Weapons 
+		formElements["A_WEAPON_ENCHANT_2"].disabled = true;
+		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
+		formElements["A_WEAPON_ENCHANT_4"].disabled = false;
+		//Slot 4
+		for ( var i = 0; EnchantListOBJ[97][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_WEAPON_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[97][i]][1],EnchantOBJ[EnchantListOBJ[97][i]][0]);
+		}
+		//Slot 3
+		for ( var i = 0; EnchantListOBJ[98][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_WEAPON_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[98][i]][1],EnchantOBJ[EnchantListOBJ[98][i]][0]);
+		}
+	}
 	// else if(weapon == 9999)
 	// {
 		

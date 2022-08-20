@@ -904,6 +904,67 @@ function CalcEquipAtk()
 	{
 		equipmentAttack += 10 * Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
 	}
+	if(EquipNumSearch(2164) || // Vicious Mind Revolver
+	   EquipNumSearch(2165) || // Vicious Mind Wire
+	   EquipNumSearch(2166) || // Vicious Mind Violin
+	   EquipNumSearch(2167) || // Vicious Mind Bow
+	   EquipNumSearch(2168) || // Vicious Mind Book
+	   EquipNumSearch(2169) || // Vicious Mind Katar
+	   EquipNumSearch(2170) || // Vicious Mind Huuma Shuriken
+	   EquipNumSearch(2171) || // Vicious Mind Two Handed Axe
+	   EquipNumSearch(2172) || // Vicious Mind Mace
+	   EquipNumSearch(2173) || // Vicious Mind Knuckle
+	   EquipNumSearch(2174) || // Vicious Mind Dagger
+	   EquipNumSearch(2175) || // Vicious Mind Sabre
+	   EquipNumSearch(2176) || // Vicious Mind Two-Handed Sword
+	   EquipNumSearch(2177) || // Vicious Mind Spear
+	   EquipNumSearch(2178) || // Vicious Mind Lance
+	   EquipNumSearch(2182) || // Crimson Revolver
+	   EquipNumSearch(2183) || // Crimson Wire
+	   EquipNumSearch(2184) || // Crimson Violin
+	   EquipNumSearch(2185) || // Crimson Bow
+	   EquipNumSearch(2186) || // Crimson Book
+	   EquipNumSearch(2187) || // Crimson Katar
+	   EquipNumSearch(2188) || // Crimson Huuma Shuriken
+	   EquipNumSearch(2189) || // Crimson Two Handed Axe
+	   EquipNumSearch(2190) || // Crimson Mace
+	   EquipNumSearch(2191) || // Crimson Knuckle
+	   EquipNumSearch(2192) || // Crimson Dagger
+	   EquipNumSearch(2193) || // Crimson Sabre
+	   EquipNumSearch(2194) || // Crimson Two-Handed Sword
+	   EquipNumSearch(2195) || // Crimson Spear
+	   EquipNumSearch(2196) )  // Crimson Lance
+	{
+		if(n_A_Weapon_ATKplus <= 15)
+		{
+			equipmentAttack += n_A_Weapon_ATKplus * n_A_Weapon_ATKplus;
+		}
+		else
+		{
+			equipmentAttack += 15 * 15;
+		}
+	}
+	if(EquipNumSearch(2182) || // Crimson Revolver
+	   EquipNumSearch(2183) || // Crimson Wire
+	   EquipNumSearch(2184) || // Crimson Violin
+	   EquipNumSearch(2185) || // Crimson Bow
+	   EquipNumSearch(2186) || // Crimson Bible
+	   EquipNumSearch(2187) || // Crimson Katar
+	   EquipNumSearch(2188) || // Crimson Huuma Shuriken
+	   EquipNumSearch(2189) || // Crimson Two Handed Axe
+	   EquipNumSearch(2190) || // Crimson Mace
+	   EquipNumSearch(2191) || // Crimson Knuckle
+	   EquipNumSearch(2192) || // Crimson Dagger
+	   EquipNumSearch(2193) || // Crimson Sabre
+	   EquipNumSearch(2194) || // Crimson Two-Handed Sword
+	   EquipNumSearch(2195) || // Crimson Spear
+	   EquipNumSearch(2196) )  // Crimson Lance
+	{
+		if(n_A_BaseLV >= 70)
+		{
+			equipmentAttack += Math.floor((n_A_BaseLV - 70)/10) * 5;
+		}
+	}
 //Cards
 	if(CardNumSearch(557))
 	{//Faithful Manager Card
@@ -1765,6 +1826,11 @@ function CalcAttackMod()
 	{
 		if(n_A_SHOULDER_DEF_PLUS >= 7)
 			n_tok[bon_PHY_ATK] += 7;
+	}
+	if(EquipNumSearch(2160) || //Lindy Hop
+	   EquipNumSearch(2179) )  //Juliette D Rachel
+	{
+		n_tok[bon_PHY_ATK] += Math.floor(n_A_Weapon_ATKplus / 2);
 	}
 	
 //shadows
@@ -5441,6 +5507,11 @@ function calcASPD()
 	{// "Chronocloak of Luck"
 		equipASPD += 5 * Math.floor(n_A_SHOULDER_DEF_PLUS / 4);
 	}
+	if(EquipNumSearch(2160) || //Lindy Hop
+	   EquipNumSearch(2179) )  //Juliette D Rachel
+	{
+		equipASPD += n_A_Weapon_ATKplus;
+	}
 	
 //Cards
 	if(CardNumSearch(556))
@@ -6087,7 +6158,7 @@ function CalcDelay()
 {
 	globalCastDelay = 0;
 	
-	// Equipment
+// Equipment
 	if ( n_A_Weapon_ATKplus >= 9 && EquipNumSearch( 934 ) )
 	{ // Tae Goo Lyeon
 		n_tok[bon_RED_CASTDELAY] += 20;
@@ -6161,6 +6232,10 @@ function CalcDelay()
 	{// "Ancient Hero Boots"
 		if(n_A_SHOES_DEF_PLUS >= 14)
 			n_tok[bon_RED_CASTDELAY] += 5;
+	}
+	if(EquipNumSearch(2161))
+	{// "Sunflower Boy"
+		n_tok[bon_RED_CASTDELAY] += n_A_Weapon_ATKplus;
 	}
 	
 	// Skills

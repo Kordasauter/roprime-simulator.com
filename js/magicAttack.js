@@ -244,38 +244,42 @@ function calcMAtk( includeMultipliers )
 			if(n_A_SHOULDER_DEF_PLUS >= 7)
 				matk_mul += 7;
 		}
+		if(EquipNumSearch(2161))
+		{// "Sunflower Boy"
+			matk_mul += Math.floor(n_A_Weapon_ATKplus / 2);
+		}
 //Shadows
 		if ( EquipNumSearch( 1656 ) )
 		{ // "Shadow Mystic Gloves"
-			if (n_A_SHADOW_WEAPON_DEF_PLUS >= 7) { w += 1; }
-			if (n_A_SHADOW_WEAPON_DEF_PLUS >= 9) { w += 1; }
+			if (n_A_SHADOW_WEAPON_DEF_PLUS >= 7) { matk_mul += 1; }
+			if (n_A_SHADOW_WEAPON_DEF_PLUS >= 9) { matk_mul += 1; }
 		}
 		if ( EquipNumSearch( 1657 ) )
 		{ // "Shadow Mystic Ring"
-			if (n_A_SHADOW_EARRING_DEF_PLUS >= 7) { w += 1; }
+			if (n_A_SHADOW_EARRING_DEF_PLUS >= 7) { matk_mul += 1; }
 		}
 		if ( EquipNumSearch( 1658 ) )
 		{ // "Shadow Mystic Pendant"
-			if (n_A_SHADOW_PENDANT_DEF_PLUS >= 7) { w += 1; }
+			if (n_A_SHADOW_PENDANT_DEF_PLUS >= 7) { matk_mul += 1; }
 		}
 		if ( EquipNumSearch( 1662 ) )
 		{ // "Shadow Strongman Pendant"
-			if (n_A_SHADOW_PENDANT_DEF_PLUS >= 7) { w += 1; }
+			if (n_A_SHADOW_PENDANT_DEF_PLUS >= 7) { matk_mul += 1; }
 		}
 		if ( EquipNumSearch( 1659 ) )
 		{ // "Shadow Mystic Set"
-			if ((n_A_SHADOW_PENDANT_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_WEAPON_DEF_PLUS)>= 20) { w += 1; }
-			if ((n_A_SHADOW_PENDANT_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_WEAPON_DEF_PLUS)>= 25) { w += 1; }
+			if ((n_A_SHADOW_PENDANT_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_WEAPON_DEF_PLUS)>= 20) { matk_mul += 1; }
+			if ((n_A_SHADOW_PENDANT_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_WEAPON_DEF_PLUS)>= 25) { matk_mul += 1; }
 		}
 		if ( EquipNumSearch(1823) || EquipNumSearch(1824))
 		{ // Shadow Taekwon  Shield or Shadow Super Novice Shield
-			if(n_A_SHADOW_SHIELD_DEF_PLUS >=7){w += 2;}
-			if(n_A_SHADOW_SHIELD_DEF_PLUS >=9){w += 3;}
+			if(n_A_SHADOW_SHIELD_DEF_PLUS >=7){matk_mul += 2;}
+			if(n_A_SHADOW_SHIELD_DEF_PLUS >=9){matk_mul += 3;}
 		}
 		if ( EquipNumSearch(1839) )
 		{ // Shadow Ninja Gloves
-			if(n_A_SHADOW_WEAPON_DEF_PLUS >=7){w += 3;}
-			if(n_A_SHADOW_WEAPON_DEF_PLUS >=9){w += 4;}
+			if(n_A_SHADOW_WEAPON_DEF_PLUS >=7){matk_mul += 3;}
+			if(n_A_SHADOW_WEAPON_DEF_PLUS >=9){matk_mul += 4;}
 		}
 		if ( EquipNumSearch(1840) )
 		{ // Shadow Taekwon Gloves
@@ -283,8 +287,8 @@ function calcMAtk( includeMultipliers )
 		}
 		if ( EquipNumSearch(1996) )
 		{ // Shadow Doram Mage Gloves
-			if(n_A_SHADOW_WEAPON_DEF_PLUS >=7){w += 5;}
-			if(n_A_SHADOW_WEAPON_DEF_PLUS >=9){w += 5;}
+			if(n_A_SHADOW_WEAPON_DEF_PLUS >=7){matk_mul += 5;}
+			if(n_A_SHADOW_WEAPON_DEF_PLUS >=9){matk_mul += 5;}
 		}
 		
 		//Enchant
@@ -533,6 +537,48 @@ function calcMAtk( includeMultipliers )
 	if(EquipNumSearch(2145))
 	{// "Chronocloak of Intellect"
 		n_A_EquipMATK += 10 * Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
+	}
+	if(EquipNumSearch(2162) || // Vicious Mind Staff
+	   EquipNumSearch(2163) || // Vicious Mind Rod
+	   EquipNumSearch(2168) || // Vicious Mind Book
+	   EquipNumSearch(2180) || // Crimson Staff
+	   EquipNumSearch(2181) ) // Crimson Rod
+	{
+		if(n_A_Weapon_ATKplus <= 15)
+		{
+			n_A_EquipMATK += n_A_Weapon_ATKplus * n_A_Weapon_ATKplus;
+		}
+		else
+		{
+			n_A_EquipMATK += 15 * 15;
+		}
+	}
+	if(EquipNumSearch(2164) || // Vicious Mind Wire
+	   EquipNumSearch(2165) || // Vicious Mind Violin
+	   EquipNumSearch(2170) || // Vicious Mind Huuma Shuriken
+	   EquipNumSearch(2174) || // Vicious Mind Dagger
+	   EquipNumSearch(2176) || // Vicious Mind Two-Handed Sword
+	   EquipNumSearch(2186) || // Crimson Bible
+	   EquipNumSearch(2188) || // Crimson Huuma Shuriken
+	   EquipNumSearch(2192) || // Crimson Dagger
+	   EquipNumSearch(2194) )  // Crimson Two-Handed Sword
+	{
+		if(n_A_Weapon_ATKplus <= 15)
+		{
+			n_A_EquipMATK += (n_A_Weapon_ATKplus * n_A_Weapon_ATKplus) / 2;
+		}
+		else
+		{
+			n_A_EquipMATK += (15 * 15) / 2;
+		}
+	}
+	if(EquipNumSearch(2180) || // Crimson Staff
+	   EquipNumSearch(2181) ) // Crimson Rod
+	{
+		if(n_A_BaseLV >= 70)
+		{
+			n_A_EquipMATK += Math.floor((n_A_BaseLV - 70)/10) * 5;
+		}
 	}
 //shadows
 	if ( EquipNumSearch( 1657 ) )

@@ -1117,6 +1117,12 @@ function ApplySkillModifiers( damage )
 	{ //"Plump Earthworm Charm"
 		damage *= 1 + ((Math.floor(SU_DEX /6) * n_A_ActiveSkillLV) / 100) * EquipNumSearch(1904);
 	}
+	if(EquipNumSearch(1902) && n_A_ActiveSkill == skill_SUM_SILVERVINE_STEM_SPEAR)
+	{ //"Shining Branch Charm"
+		// var SV_StemLv = parseInt(formElements["SkillSubNum2"].value);
+		// damage *= 1 + ((Math.floor(SU_INT /6) * 5) / 100) * EquipNumSearch(1902);
+	}
+	
 	
 	if ( n_A_ActiveSkill == skill_RG_BACK_STAB &&
 		 n_A_WeaponType == weapTyp_BOW )

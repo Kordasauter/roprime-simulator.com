@@ -5800,8 +5800,8 @@ function CalcSkillDamage()
 			fixedCastTime *= 0.5;
 			if(EquipNumSearch(1902))
 			{ //"Shining Branch Charm"
-				w_SkillMod += Math.floor(SU_INT /6) * SV_StemLv;
-				variableCastTime *= 1.0;
+				w_SkillMod += ((Math.floor(SU_INT /6) * SV_StemLv) / 100) * EquipNumSearch(1902);
+				variableCastTime *=  2.0 / (1 + EquipNumSearch(1902)) ;
 			}
 			else
 			{
