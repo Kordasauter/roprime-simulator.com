@@ -2228,6 +2228,13 @@
 ,[2194,weapTyp_2HSWORD,1,170,3,2,170,70,bon_NONE] // "Crimson Two-Handed Sword"
 ,[2195,weapTyp_SPEAR,1,90,3,2,90,70,bon_NONE] // "Crimson Spear"
 ,[2196,weapTyp_2HSPEAR,1,175,3,2,175,70,bon_NONE] // "Crimson Lance"
+//unslotted temps boot
+,[2197,itm_type_SHOES,2001,25,0,0,60,99,bon_HP_ADD,300,bon_SP_ADD,30,bon_NONE] // "Temporal Str Boots"
+,[2198,itm_type_SHOES,2001,25,0,0,60,99,bon_HP_ADD,300,bon_SP_ADD,30,bon_NONE] // "Temporal Agi Boots"
+,[2199,itm_type_SHOES,2001,25,0,0,60,99,bon_HP_ADD,300,bon_SP_ADD,30,bon_NONE] // "Temporal Vit Boots"
+,[2200,itm_type_SHOES,2001,25,0,0,60,99,bon_HP_ADD,300,bon_SP_ADD,30,bon_NONE] // "Temporal Int Boots"
+,[2201,itm_type_SHOES,2001,25,0,0,60,99,bon_HP_ADD,300,bon_SP_ADD,30,bon_NONE] // "Temporal Dex Boots"
+,[2202,itm_type_SHOES,2001,25,0,0,60,99,bon_HP_ADD,300,bon_SP_ADD,30,bon_NONE] // "Temporal Luk Boots"
 ];
 ItemMax = ItemOBJ.length -1;
 }

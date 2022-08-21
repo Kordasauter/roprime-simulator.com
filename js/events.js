@@ -1483,7 +1483,7 @@ function ClickShoes( data, isRefine )
 		shoes_id = data;
 	}
 	
-	if(shoes_id >= 1946 && shoes_id <= 1957 )
+	if(shoes_id >= 2197 && shoes_id <= 2202 )
 	{// "Temporal Shoes"
 		if(!isRefine)
 			CleanEnchant("A_SHOES_ENCHANT");

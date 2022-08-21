@@ -1712,8 +1712,9 @@ function CalcSkillDamage()
 			// Old formula: w_SkillMod = ( 1.4 + n_A_ActiveSkillLV * 0.6 ) + ( SkillSearch( skill_GEN_CART_REMODELING ) * ( n_A_INT ) ) / 100.0;
 			// Current Wiki Formula: [(( Cart Remodeling Skill Level * 50 ) * ( INT / 40 )) + ( Cart Cannon Skill Level * 60 )] % ATK
 			
-			w_SkillMod = (((SkillSearch( skill_GEN_CART_REMODELING ) * 50) * ( n_A_INT / 40)) + (n_A_ActiveSkillLV * 60))/100
-			
+			// w_SkillMod = (((SkillSearch( skill_GEN_CART_REMODELING ) * 50) * ( n_A_INT / 40)) + (n_A_ActiveSkillLV * 60))/100
+			w_SkillMod = (n_A_ActiveSkillLV * 2.5) + ((n_A_ActiveSkillLV * 0.2) * SkillSearch( skill_GEN_CART_REMODELING )) + ( n_A_INT * 2);
+			w_SkillMod *= n_A_BaseLV / 100.0;
 			if(EquipNumSearch(1681))
 			{ //"Amistr Hat"
 				if(EquipNumSearch(932)||EquipNumSearch(933))//Twin Edge of Naght Sieger
@@ -1721,8 +1722,6 @@ function CalcSkillDamage()
 					w_SkillMod += 0.1 * Math.floor(n_A_Weapon_ATKplus / 2);
 				}
 			}
-			
-			//w_SkillMod *= n_A_BaseLV / 100.0;
 			
 			fixedCastTime *= 0.0;
 			variableCastTime *= 0.5 + 0.5 * n_A_ActiveSkillLV;

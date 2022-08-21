@@ -958,7 +958,7 @@ function StPlusCalc()
 	{ //"Foxtail Replica"
 		wSPC_DEX += 2 * Math.floor(n_A_Weapon_ATKplus / 3);
 	}
-	if(EquipNumSearch(1950) || EquipNumSearch(1956))  //Dex Boots
+	if(EquipNumSearch(1950) || EquipNumSearch(1956) || EquipNumSearch(2201))  //Dex Boots
 	{
 		wSPC_DEX += Math.floor(n_A_SHOES_DEF_PLUS / 3) * 3;
 	}

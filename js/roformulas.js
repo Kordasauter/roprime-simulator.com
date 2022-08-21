@@ -851,12 +851,20 @@ function CalcEquipAtk()
 	{//General's Helmet + Zweihander 
 		equipmentAttack += 20 * Math.floor(n_A_Weapon_ATKplus / 2);
 	}
-	if(EquipNumSearch(1946) || EquipNumSearch(1952))  //Str Boots
+	if(EquipNumSearch(2197) || EquipNumSearch(1952))  //Str Boots
 	{
 		equipmentAttack += 7 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
 		if(SU_STR >= 120)
 		{
 			equipmentAttack += 50;
+		}
+	}
+	if(EquipNumSearch(1946))  //Str Boots slot
+	{
+		equipmentAttack += 5 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
+		if(SU_STR >= 120)
+		{
+			equipmentAttack += 30;
 		}
 	}
 	if( EquipNumSearch(2019) )
@@ -1992,11 +2000,17 @@ function CalcCriticalMod()
 		if(n_A_HEAD_DEF_PLUS >= 11)
 			n_tok[bon_DMG_CRIT] += 15;
 	}
-	if(EquipNumSearch(1951) || EquipNumSearch(1957))  //Luk Boots
+	if(EquipNumSearch(2202) || EquipNumSearch(1957))  //Luk Boots
 	{
 		n_tok[bon_DMG_CRIT] += 2 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
 		if(SU_LUK >= 120)
 			n_tok[bon_DMG_CRIT] += 30;
+	}
+	if(EquipNumSearch(1951))  //Luk Boots Slot
+	{
+		n_tok[bon_DMG_CRIT] += 2 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
+		if(SU_LUK >= 120)
+			n_tok[bon_DMG_CRIT] += 20;
 	}
 	if( EquipNumSearch(2021) )
 	{//Gigant Blade 
@@ -2268,7 +2282,7 @@ function CalcRangedMod()
 		if(SU_DEX >= 110)
 			n_tok[bon_DMG_RANGE] += 1;
 	}
-	if(EquipNumSearch(1950) || EquipNumSearch(1956))  //Dex Boots
+	if(EquipNumSearch(1950) || EquipNumSearch(1956) || EquipNumSearch(2201))  //Dex Boots
 	{
 		if(SU_DEX >= 120)
 			n_tok[bon_DMG_RANGE] += 5;
@@ -2869,15 +2883,15 @@ function calcHP()
 		}
 	}
 	
-	if(EquipNumSearch(1946) || EquipNumSearch(1952)  //Str Boots
-	|| EquipNumSearch(1947) || EquipNumSearch(1953)  //Agi Boots
-	|| EquipNumSearch(1949) || EquipNumSearch(1955)  //Int Boots
-	|| EquipNumSearch(1950) || EquipNumSearch(1956)  //Dex Boots
-	|| EquipNumSearch(1951) || EquipNumSearch(1957)) //Luk Boots
+	if(EquipNumSearch(1946) || EquipNumSearch(1952) || EquipNumSearch(2197)  //Str Boots
+	|| EquipNumSearch(1947) || EquipNumSearch(1953) || EquipNumSearch(2198)  //Agi Boots
+	|| EquipNumSearch(1949) || EquipNumSearch(1955) || EquipNumSearch(2200)  //Int Boots
+	|| EquipNumSearch(1950) || EquipNumSearch(1956) || EquipNumSearch(2201)  //Dex Boots
+	|| EquipNumSearch(1951) || EquipNumSearch(1957) || EquipNumSearch(2202)) //Luk Boots
 	{
 		additiveHP += 100 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
 	}
-	if(EquipNumSearch(1948) || EquipNumSearch(1954))  //Vit Boots
+	if(EquipNumSearch(1948) || EquipNumSearch(1954) || EquipNumSearch(2199))  //Vit Boots
 	{
 		additiveHP += 300 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
 	}
@@ -3706,12 +3720,12 @@ function calcSP( n_A_MaxSP )
 			w += 50;
 		}
 	}
-	if(EquipNumSearch(1946) || EquipNumSearch(1952)  //Str Boots
-	|| EquipNumSearch(1947) || EquipNumSearch(1953)  //Agi Boots
-	|| EquipNumSearch(1948) || EquipNumSearch(1954)  //Vit Boots
-	|| EquipNumSearch(1949) || EquipNumSearch(1955)  //Int Boots
-	|| EquipNumSearch(1950) || EquipNumSearch(1956)  //Dex Boots
-	|| EquipNumSearch(1951) || EquipNumSearch(1957)) //Luk Boots
+	if(EquipNumSearch(1946) || EquipNumSearch(1952) || EquipNumSearch(2197)  //Str Boots
+	|| EquipNumSearch(1947) || EquipNumSearch(1953) || EquipNumSearch(2198)  //Agi Boots
+	|| EquipNumSearch(1948) || EquipNumSearch(1954) || EquipNumSearch(2199)  //Vit Boots
+	|| EquipNumSearch(1949) || EquipNumSearch(1955) || EquipNumSearch(2200)  //Int Boots
+	|| EquipNumSearch(1950) || EquipNumSearch(1956) || EquipNumSearch(2201)  //Dex Boots
+	|| EquipNumSearch(1951) || EquipNumSearch(1957) || EquipNumSearch(2202)) //Luk Boots
 	{
 		w += 10 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
 	}
@@ -5488,9 +5502,13 @@ function calcASPD()
 		if(n_A_HEAD_DEF_PLUS >=7)
 			equipASPD += 10;
 	}
-	if(EquipNumSearch(1947) || EquipNumSearch(1953))  //Agi Boots
+	if(EquipNumSearch(2198) || EquipNumSearch(1953))  //Agi Boots
 	{
 		equipASPD += 3 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
+	}
+	if(EquipNumSearch(1947))  //Agi Boots Slot
+	{
+		equipASPD += 2 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
 	}
 	if(EquipNumSearch(2092))
 	{//Revised Encyclopedia + Giant Encyclopedia
@@ -5657,7 +5675,7 @@ function calcASPD()
 		if(n_A_HEAD_DEF_PLUS >= 9)
 			flatASPD += 1;
 	}
-	if(EquipNumSearch(1947) || EquipNumSearch(1953))  //Agi Boots
+	if(EquipNumSearch(1947) || EquipNumSearch(1953) || EquipNumSearch(2198))  //Agi Boots
 	{
 		if(SU_AGI >= 120)
 		{
@@ -6052,7 +6070,7 @@ function CalcFixedCast()
 			reductionFlat += -0.5;
 		}
 	}
-	if(EquipNumSearch(1950) || EquipNumSearch(1956))  //Dex Boots
+	if(EquipNumSearch(1950) || EquipNumSearch(1956) || EquipNumSearch(2201))  //Dex Boots
 	{
 		if(SU_DEX >= 120)
 			reductionFlat += -0.5;

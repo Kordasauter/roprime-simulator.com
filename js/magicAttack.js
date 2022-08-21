@@ -509,11 +509,17 @@ function calcMAtk( includeMultipliers )
 	{ // Diabolic Halo
 		n_A_EquipMATK += Math.floor(n_A_HEAD_DEF_PLUS / 2) * 15;
 	}
-	if(EquipNumSearch(1949) || EquipNumSearch(1955))  //Int Boots
+	if(EquipNumSearch(2200) || EquipNumSearch(1955))  //Int Boots
 	{
 		n_A_EquipMATK += Math.floor(n_A_SHOES_DEF_PLUS / 3) * 10;
 		if(SU_INT >= 120)
-			n_A_EquipMATK += 120;
+			n_A_EquipMATK += 60;
+	}
+	if(EquipNumSearch(1949))  //Int Boots Slot
+	{
+		n_A_EquipMATK += Math.floor(n_A_SHOES_DEF_PLUS / 3) * 5;
+		if(SU_INT >= 120)
+			n_A_EquipMATK += 30;
 	}
 	if( EquipNumSearch(2053) || //Blade of Light
 		EquipNumSearch(2055) || //Tide Conch
