@@ -1713,7 +1713,7 @@ function CalcSkillDamage()
 			// Current Wiki Formula: [(( Cart Remodeling Skill Level * 50 ) * ( INT / 40 )) + ( Cart Cannon Skill Level * 60 )] % ATK
 			
 			// w_SkillMod = (((SkillSearch( skill_GEN_CART_REMODELING ) * 50) * ( n_A_INT / 40)) + (n_A_ActiveSkillLV * 60))/100
-			w_SkillMod = (n_A_ActiveSkillLV * 2.5) + ((n_A_ActiveSkillLV * 0.2) * SkillSearch( skill_GEN_CART_REMODELING )) + ( n_A_INT * 2);
+			w_SkillMod = (n_A_ActiveSkillLV * 2.5) + ((n_A_ActiveSkillLV * 0.2) * SkillSearch( skill_GEN_CART_REMODELING )) + ( n_A_INT * 0.02);
 			w_SkillMod *= n_A_BaseLV / 100.0;
 			if(EquipNumSearch(1681))
 			{ //"Amistr Hat"
