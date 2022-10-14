@@ -29,7 +29,7 @@ var RANGED_SKILLS = [
     skill_GEN_CART_CANNON,
     skill_SUR_RAMPAGE_BLASTER,
     skill_SUR_KNUCKLE_ARROW,
-    skill_SUR_LIGHTENING_RIDE,
+    skill_SUR_LIGHTNING_RIDE,
     skill_HW_STAVE_CRASHER,
     skill_AR_DOUBLE_STRAFE,
     skill_MO_THROW_SPIRIT_SPHERES,
@@ -735,7 +735,7 @@ function CalcSkillDamage()
 			skill_SUR_KNUCKLE_ARROW,
 			skill_SUR_WINDMILL,
 			skill_SUR_LION_HOWLING,
-			skill_SUR_LIGHTENING_RIDE,
+			skill_SUR_LIGHTNING_RIDE,
 			skill_SUR_GENTLE_TOUCH_SILENCE,
 			skill_RAN_ARROW_STORM,
 			skill_RAN_CLUSTER_BOMB,
@@ -1704,7 +1704,7 @@ function CalcSkillDamage()
 			variableCastTime *= 1.0;
 			n_Delay[ksDelayCooldown] = 10.0;
 		}
-		else if ( n_A_ActiveSkill === skill_SUR_LIGHTENING_RIDE )
+		else if ( n_A_ActiveSkill === skill_SUR_LIGHTNING_RIDE )
 		{ // Ride in Lightning
 			var windBonus = 0;
 			damageType = kDmgTypeRanged;

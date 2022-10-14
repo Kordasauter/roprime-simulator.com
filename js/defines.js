@@ -532,9 +532,12 @@ ench_ACC2_4=18;
 ench_SHIELD2=19;
 ench_SHIELD3=20;
 ench_SHIELD4=21;
-ench_HSE_Armor=22;
-ench_HSE_Head=23;
-ench_MAX=21;
+ench_HEAD_UP2=22;
+ench_HEAD_UP3=23;
+ench_HEAD_UP4=24;
+ench_HSE_Armor=25;
+ench_HSE_Head=26;
+ench_MAX=24;
 
 }
 
@@ -1581,7 +1584,7 @@ skill_SUR_CURSED_CIRCLE = 633;
 skill_SUR_LIGHTNING_WALK = 634;
 skill_SUR_RISING_DRAGON = 635;
 skill_SUR_LION_HOWLING = 636;
-skill_SUR_LIGHTENING_RIDE = 637;
+skill_SUR_LIGHTNING_RIDE = 637;
 skill_SUR_GENTLE_TOUCH_SILENCE = 638;
 skill_SUR_GENTLE_TOUCH_CURE = 639;
 skill_SUR_GENTLE_TOUCH_ENERGY_GAIN = 640;

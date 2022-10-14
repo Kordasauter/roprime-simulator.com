@@ -2235,6 +2235,38 @@
 ,[2200,itm_type_SHOES,2001,25,0,0,60,99,bon_HP_ADD,300,bon_SP_ADD,30,bon_NONE] // "Temporal Int Boots"
 ,[2201,itm_type_SHOES,2001,25,0,0,60,99,bon_HP_ADD,300,bon_SP_ADD,30,bon_NONE] // "Temporal Dex Boots"
 ,[2202,itm_type_SHOES,2001,25,0,0,60,99,bon_HP_ADD,300,bon_SP_ADD,30,bon_NONE] // "Temporal Luk Boots"
+
+//Room of Consciousness
+,[2203,itm_type_ACCESSORY,0,0,0,1,10,40,bon_SKILL_ENABLE,61,bon_NONE] // City Map (Accessory)
+,[2204,itm_type_ACCESSORY,0,0,0,1,15,100,bon_NONE] // Shining Holy Water (Accessory)
+,[2205,itm_type_SHIELD,0,30,0,1,300,100,bon_SKILL_ENABLE,62,bon_SKILL_AUTOCAST,145,bon_NONE] // Royal Guard Shield
+,[2206,itm_type_ACCESSORY,0,0,0,0,10,40,bon_NONE] // Prontera Badge (Accessory)
+,[2207,itm_type_ARMOR,0,0,0,1,10,100,bon_SKILL_ENABLE,63,bon_MATK,50,bon_NONE] // Flattery Robe
+,[2208,itm_type_SET,0,0,0,0,0,0,bon_SP_MUL,10,bon_FLEE,10,bon_NONE] // Flattery Robe + Ancient Cape[0]\[1]
+,[2209,itm_type_SET,0,0,0,0,0,0,bon_HP_MUL,10,bon_MATK_MUL,2,bon_NONE] // Flattery Robe + Survivor's Manteau
+,[2210,itm_type_ARMOR,0,0,0,1,10,100,bon_SKILL_ENABLE,64,bon_NONE] // Abusive Robe
+,[2211,itm_type_SET,0,0,0,0,0,0,bon_IGN_DEF_RC_DEMI_HUMAN,15,bon_IGN_DEF_RC_DEMON,15,bon_IGN_DEF_RC_UNDEAD,15,bon_LUK,3,bon_CRIT,10,bon_NONE] // Abusive Robe + Morrigane's Manteau
+,[2212,itm_type_SET,0,0,0,0,0,0,bon_IGN_DEF_RC_DEMI_HUMAN,15,bon_IGN_DEF_RC_DEMON,15,bon_IGN_DEF_RC_UNDEAD,15,bon_HP_MUL,10,bon_PHY_ATK,2,bon_NONE] // Abusive Robe + Valkyrie Manteau
+,[2213,weapTyp_MACE,0,80,3,1,100,40,bon_ASPD_ADD,10,bon_NONE] // Spoon
+//Nightmare Glastheim
+,[2214,itm_type_HEAD_UPPER,1001,3,0,1,30,99,bon_NONE] // Cursed Book [1]
+
+//Tomb of Honor
+,[2215,itm_type_HEAD_UPPER,207,10,0,1,10,170,bon_ALL_STATS,1,bon_MDEF,5,bon_NONE] // Old Rune Circlet [1]
+,[2216,itm_type_HEAD_UPPER,209,10,0,1,10,170,bon_ALL_STATS,1,bon_NONE] // Old Mitra [1]
+,[2217,itm_type_HEAD_UPPER,212,10,0,1,10,170,bon_ALL_STATS,1,bon_NONE] // Old Driver Band (Red) [1]
+,[2218,itm_type_HEAD_UPPER,212,10,0,1,10,170,bon_ALL_STATS,1,bon_NONE] // Old Driver Band (Yellow) [1]
+,[2219,itm_type_HEAD_UPPER,214,10,0,1,10,170,bon_ALL_STATS,1,bon_NONE] // Old Shadow Handicraft [1]
+,[2220,itm_type_HEAD_UPPER,216,10,0,1,10,170,bon_ALL_STATS,1,bon_NONE] // Old Maestro Song's Hat [1]
+,[2221,itm_type_HEAD_UPPER,219,10,0,1,10,170,bon_ALL_STATS,1,bon_NONE] // Old Midas Whisper [1]
+,[2222,itm_type_HEAD_UPPER,211,10,0,1,10,170,bon_ALL_STATS,1,bon_MDEF,5,bon_SP_REGEN,5,bon_DELAY_SKILL_FLAT + skill_WAR_CRIMSON_ROCK,1,bon_NONE] // Old Magic Stone Hat [1]
+,[2223,itm_type_HEAD_UPPER,215,10,0,1,10,170,bon_ALL_STATS,1,bon_NONE] // Old Blazing Soul [1]
+,[2224,itm_type_HEAD_UPPER,218,10,0,1,10,170,bon_ALL_STATS,1,bon_MDEF,5,bon_NONE] // Old Wind Whisper [1]
+,[2225,itm_type_HEAD_UPPER,217,10,0,1,10,170,bon_ALL_STATS,1,bon_NONE] // Old Dying Swan [1]
+,[2226,itm_type_HEAD_UPPER,210,10,0,1,10,170,bon_ALL_STATS,1,bon_NONE] // Old Camouflage Bunny Hood [1]
+,[2227,itm_type_HEAD_UPPER,208,10,0,1,10,170,bon_ALL_STATS,1,bon_NONE] // Old Bone Circlet [1]
+,[2228,itm_type_HEAD_UPPER,213,10,0,1,10,170,bon_MDEF,5,bon_NONE] // Old Casket of Protection [1]
+,[2229,itm_type_GARMENT,0,30,0,1,60,170,bon_NONE] // Fallen Warrior Manteau [1]
 ];
 ItemMax = ItemOBJ.length -1;
 }
@@ -2398,7 +2430,8 @@ function BuildItemDescription( bonusType, bonusValue )
 	if(170 <= bonusType && bonusType <=179) // Race MagDmg
 		CBIstr += "Magical " + GetWord(183) + "["+ SyuzokuOBJ[bonusType-170][Language] + "]" + GetWord(181) + wIS + bonusValue +"%<br/>";
 	if(180 <= bonusType && bonusType <=189)
-		CBIstr += "Ignore " + "["+ SyuzokuOBJ[bonusType-180][Language] + "]" +"% of the monster's defence<br/>";
+		CBIstr += "Ignore " + bonusValue +"% of the " + "[" + SyuzokuOBJ[bonusType-180][Language] + "] monster's defence<br/>";
+		// CBIstr += "Ignore " + "["+ SyuzokuOBJ[bonusType-180][Language] + "]" +"% of the monster's defence<br/>";
 	if(190 <= bonusType && bonusType <=192)
 		CBIstr += GetWord(184) + "[" + SizeOBJ[bonusType-190][Language] + "]" + GetWord(211) + wIS + bonusValue +"%<br/>";
 	if(193 == bonusType)
@@ -2753,6 +2786,11 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2151,2145,1949,"NULL"] // "Chronocloak + Temporal Int"
 ,[2152,2146,1950,"NULL"] // "Chronocloak + Temporal Dex"
 ,[2153,2147,1951,"NULL"] // "Chronocloak + Temporal Luk"
+,[22,2147,1951,"NULL"] // "Chronocloak + Temporal Luk"
+,[2208,2207,315,"NULL"] // Flattery Robe + Ancient Cape[0]\[1]
+,[2209,2207,436,"NULL"] // Flattery Robe + Survivor's Manteau
+,[2211,2210,701,"NULL"] // Flattery Robe + Morrigane's Manteau
+,[2212,2210,535,"NULL"] // Flattery Robe + Valkyrie Manteau
 // ,[itm_set,item1,item2,...,"NULL"] // 
 
 //,[itm_set,item1,item2,...,"NULL"] // 

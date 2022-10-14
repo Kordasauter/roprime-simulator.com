@@ -752,7 +752,7 @@ function SetCard()
 ,[678,	 card_com_SHOES,"Faymont"," SP regen +10%<br>Has a chance of auto casting Lv 1 [Zen] when taking physical damage.",0]
 ,[679,	 card_com_SHOES,"Ordre","",bon_MATK_MUL,3,bon_INC_MAGIC_WIND,5,bon_INC_MAGIC_WATER,5,0]
 ,[680,	 card_com_SHOES,"Blut Hase","",bon_DMG_RANGE,5,bon_PHY_ATK,5,0]
-,[681,	 card_com_SHOES,"Kuro Akuma","",bon_RED_CAST,3,bon_DMG_SKILL + skill_NIN_FLAMING_PETALS,5,bon_DMG_SKILL + skill_NIN_FREEZING_SPEAR,5,bon_DMG_SKILL + skill_NIN_WIND_BLADE,5,bon_DMG_RANGE,5,0]
+,[681,	 card_com_SHOES,"Kuro Akuma","",bon_RED_CAST,-3,bon_DMG_SKILL + skill_NIN_FLAMING_PETALS,5,bon_DMG_SKILL + skill_NIN_FREEZING_SPEAR,5,bon_DMG_SKILL + skill_NIN_WIND_BLADE,5,bon_DMG_RANGE,5,0]
 ,[682,	 card_com_SHOES,"Ifodes","",bon_PHY_ATK,3,bon_ASPD_MUL,5,0]
 ,[683,	 card_com_SHOES,"Licheni","",bon_MATK_MUL,3,bon_INC_MAGIC_HOLY,5,bon_HEAL_MUL,5,0]
 ,[684,	 card_com_SHOES,"Fay Kanavian","Has a chance to transform into [Golem] for 7 sec. when attacks<br>[During transform]<br>DEF +300",0]
@@ -792,9 +792,65 @@ function SetCard()
 ,[710,   itm_type_SET,"Obeaune + Iara","",bon_SP_ADD,50,0]
 ,[711,   card_com_SHOES,"Piranha","[If refine lv +9 and higher]<br>Weapon damage inflicted on Fish monsters +5%",bon_DMG_RC_FISH,10,0]
 ,[712,   card_com_ARMOR,"Boitata","",bon_DMG_RC_BRUTE,40,bon_DMG_RC_INSECT,40,bon_DMG_ELE_WIND,40,bon_DMG_ELE_EARTH,40,0]
-//,[713,   ,"","",0]
-//
-//,[713714,   ,"","",0]
+//The Royal Banquet
+,[713,   card_com_ACC,"Frozen Wolf","",bon_MATK_MUL,1,0]
+,[714,   card_com_ACC,"Taffy","",bon_PHY_ATK,1,0]
+,[715,   card_com_ARMOR,"Watcher","Drain 5 SP from wearer when receiving physical attack.",bon_ATK,30,0]
+// Sky Fortress Invasion
+,[716,   card_comp_WEAPON,"Immortal Cursed Knight","",bon_PHY_ATK,10,bon_SKILL_AUTOCAST,146,0]
+,[717,   card_comp_WEAPON,"Immortal Wind Ghost","",bon_MATK_MUL,10,bon_SKILL_AUTOCAST,147,0]
+,[718,   card_com_SHOES,"Stephen Jack Ernest Wolf","	Adds a chance of increasing FLEE by 200 for 10 second when dealing physical attacks.<br>Adds a chance of increasing movement speed for 10 second when dealing magical attacks.<br>Adds a chance of autocasting Level 5 Fire Walk when wearer receive physical attacks.<br>Adds a chance of autocasting Level 5 Electric Walk when wearer receive magical attacks.",0]
+,[719,   itm_type_SET,"Stephen J.E. Wolf + Immortal Cursed Knight","",bon_ASPD_ADD,1,0]
+,[720,   itm_type_SET,"Stephen J.E. Wolf + Immortal Wind Ghost","",bon_RED_CAST,-10,0]
+// Room of Consciousness
+,[721,   card_com_ARMOR,"Powerful Amdarais","[For every refine level]<br>DEF +10.<br>Flee -2.<br>[If base level 100 or higher]<br>Max HP +500.",0]
+,[722,   card_comp_WEAPON,"Powerful Archer Skeleton","[If base level is 100 or higher]<br>Ranged attack +2%.",bon_DMG_RANGE,10,0]
+,[723,   card_comp_WEAPON,"Powerful Skeleton","[If base level 100 or higher]<br>Additional chance to inflict [Stun] when dealing physical melee damage.",bon_ATK,15,bon_CH_STATUS_STUN,2,0]
+,[724,   card_comp_WEAPON,"Powerful Soldier Skeleton","[If base level 100 or higher]<br>CRIT +1.<br>Critical damage +5%",bon_CRIT,9,0]
+,[725,	 card_com_SHIELD,"Bijou","",bon_RES_STATUS_FREEZE,100,bon_PHY_ATK,10,bon_MATK,10,0]
+,[726,   itm_type_SET,"Powerful Amdarais + Bijou","immune to Burning status.",0]
+// Tomb of Honor
+,[727,   card_comp_WEAPON,"True Alphoccio Basil","[If weapon Lv4]<br>Additional [Reverberation] damage +20%.<br>[If refine Lv 10 or higher]<br>Additional [Reverberation] damage +20%.",bon_DMG_SKILL + skill_MIWA_REVERBERATION,20,0]
+,[728,   card_comp_WEAPON,"True Celia Alde","[If weapon Lv4]<br>Additional [Varetyr Spear] damage +20%.<br>[If refine Lv 10 or higher]<br>Additional [Varetyr Spear] damage +20%.",bon_DMG_SKILL + skill_SOR_VARETYR_SPEAR,20,0]
+,[729,   card_comp_WEAPON,"True Chen Lio","[If weapon Lv4]<br>Additional [Rampage Blaster] damage +20%.<br>[If refine Lv 10 or higher]<br>Additional [Rampage Blaster] damage +20%.",bon_DMG_SKILL + skill_SUR_RAMPAGE_BLASTER,20,0]
+,[730,   card_comp_WEAPON,"True Eremes Guile","[If weapon Lv4]<br>Additional [Cross Impact] damage +20%.<br>[If refine Lv 10 or higher]<br>Additional [Cross Impact] damage +20%.",bon_DMG_SKILL + skill_GLT_CROSS_IMPACT,20,0]
+,[731,   card_comp_WEAPON,"True Flamel Emure","[If weapon Lv4]<br>Additional [Cart Tornado] damage +20%.<br>[If refine Lv 10 or higher]<br>Additional [Cart Tornado] damage +20%.",bon_DMG_SKILL + skill_GEN_CART_TORNADO,20,0]
+,[732,   card_comp_WEAPON,"True Gertie Wie","[If weapon Lv4]<br>Additional [Feint Bomb] damage +20%.<br>[If refine Lv 10 or higher]<br>Additional [Feint Bomb] damage +20%.",bon_DMG_SKILL + skill_SHA_FEINT_BOMB,20,0]
+,[733,   card_comp_WEAPON,"True Howard Alt-Eisen","[If weapon Lv4]<br>Additional [Axe Tornado] damage +20%.<br>[If refine Lv 10 or higher]<br>Additional [Axe Tornado] damage +20%.",bon_DMG_SKILL + skill_MEC_AXE_TORNADO,20,0]
+,[734,   card_comp_WEAPON,"True Kathryne Keyron","[If weapon Lv4]<br>Additional [Crimson Rock] damage +20%.<br>[If refine Lv 10 or higher]<br>Additional [Crimson Rock] damage +20%.",bon_DMG_SKILL + skill_WAR_CRIMSON_ROCK,20,0]
+,[735,   card_comp_WEAPON,"True Margaretha Sorin","[If weapon Lv4]<br>Additional [Adoramus] damage +20%.<br>[If refine Lv 10 or higher]<br>Additional [Adoramus] damage +20%.",bon_DMG_SKILL + skill_ABI_ADORAMUS,20,0]
+,[736,   card_comp_WEAPON,"True Randel Lawrence","[If weapon Lv4]<br>Additional [Earth Drive] damage +20%.<br>[If refine Lv 10 or higher]<br>Additional [Earth Drive] damage +20%.",bon_DMG_SKILL + skill_ROY_EARTH_DRIVE,20,0]
+,[737,   card_comp_WEAPON,"True Seyren Windsor","[If weapon Lv4]<br>Additional [Ignition Brake] damage +20%.<br>[If refine Lv 10 or higher]<br>Additional [Ignition Brake] damage +20%.",bon_DMG_SKILL + skill_RUN_IGNITION_BREAK,20,0]
+,[738,   card_comp_WEAPON,"True Cecil Damon","[If weapon Lv4]<br>Additional [Cluster Bomb] damage +20%.<br>[If refine Lv 10 or higher]<br>Additional [Cluster Bomb] damage +20%.",bon_DMG_SKILL + skill_RAN_CLUSTER_BOMB,20,0]
+,[739,   card_comp_WEAPON,"True Trentini","[If weapon Lv4]<br>Additional [Severe Rainstorm] damage +20%.<br>[If refine Lv 10 or higher]<br>Additional [Severe Rainstorm] damage +20%.",bon_DMG_SKILL + skill_MIWA_SEVERE_RAINSTORM,20,0]
+,[740,   card_com_GARMENT,"Maestro Alphoccio","[When use by Minstrel]<br>MaxHP +15%, MaxSP +10%.<br>[If character Lv 175 or higher]<br>All Stats +10.<br>[If refine Lv 10 or higher]<br>All Stats +10.",0]
+,[741,   card_com_GARMENT,"Sorcerer Celia","[When use by Sorcerer]<br>MaxHP +10%, MATK +10%.<br>[If character Lv 175 or higher]<br>All Stats +10.<br>[If refine Lv 10 or higher]<br>All Stats +10.",0]
+,[742,   card_com_GARMENT,"Sura Chen","[When use by Sura]<br>MaxHP +10%, ATK +10%.<br>[If character Lv 175 or higher]<br>All Stats +10.<br>[If refine Lv 10 or higher]<br>All Stats +10.",0]
+,[743,   card_com_GARMENT,"Guillotine Cross Eremes","[When use by Guillotine Cross]<br>Perfect Dodge +10, ATK +15%.<br>[If character Lv 175 or higher]<br>All Stats +10.<br>[If refine Lv 10 or higher]<br>All Stats +10.",0]
+,[744,   card_com_GARMENT,"Geneticist Flamel","[When use by Geneticist]<br>Flee +20, ATK +15%.<br>[If character Lv 175 or higher]<br>All Stats +10.<br>[If refine Lv 10 or higher]<br>All Stats +10.",0]
+,[745,   card_com_GARMENT,"Shadow Chaser Gertie","[When use by Shadow Chaser]<br>ATK +5%, MATK +15%.<br>[If character Lv 175 or higher]<br>All Stats +10.<br>[If refine Lv 10 or higher]<br>All Stats +10.",0]
+,[746,   card_com_GARMENT,"Mechanic Howard","[When use by Mechanic]<br>Hit +20, ATK +15%.<br>[If character Lv 175 or higher]<br>All Stats +10.<br>[If refine Lv 10 or higher]<br>All Stats +10.",0]
+,[747,   card_com_GARMENT,"Warlock Kathryne","[When use by Warlock]<br>MDEF +80, MATK +15%.<br>[If character Lv 175 or higher]<br>All Stats +10.<br>[If refine Lv 10 or higher]<br>All Stats +10.",0]
+,[748,   card_com_GARMENT,"Arch Bishop Margaretha","[When use by Archbishop]<br>MaxHP +10%, Healing skills +15%.<br>[If character Lv 175 or higher]<br>All Stats +10.<br>[If refine Lv 10 or higher]<br>All Stats +10.",0]
+,[749,   card_com_GARMENT,"Royal Guard Randel","[When use by Royal Guard]<br>DEF +350, ATK +10%.<br>[If character Lv 175 or higher]<br>All Stats +10.<br>[If refine Lv 10 or higher]<br>All Stats +10.",0]
+,[750,   card_com_GARMENT,"Rune Knight Seyren","[When use by Rune Knight]<br>ASPD +2, ATK +15%.<br>[If character Lv 175 or higher]<br>All Stats +10.<br>[If refine Lv 10 or higher]<br>All Stats +10.",0]
+,[751,   card_com_GARMENT,"Ranger Cecil","[When use by Ranger]<br>CRIT +20, Bow damage +15%.<br>[If character Lv 175 or higher]<br>All Stats +10.<br>[If refine Lv 10 or higher]<br>All Stats +10.",0]
+,[752,   card_com_GARMENT,"Wanderer Trentini","[When use by Wanderer]<br>MaxHP +10%, MaxSP +15%.<br>[If character Lv 175 or higher]<br>All Stats +10.<br>[If refine Lv 10 or higher]<br>All Stats +10.",0]
+,[753,   itm_type_SET,"Alphoccio Set","Adds a chance of buffing the user for 6 seconds when performing a physical attack: ATK +100",0]
+,[754,   itm_type_SET,"Celia Set","Adds a chance of buffing the user for 6 seconds when performing a magical attack; Matk + 100.",0]
+,[755,   itm_type_SET,"Chen Set","Adds a chance of buffing the user for 6 seconds when performing a physical attack; Atk + 100.",0]
+,[756,   itm_type_SET,"Eremes Set","Adds a 3% chance of buffing the user for 6 seconds when performing a physical attack; Atk + 100.",0]
+,[757,   itm_type_SET,"Flamel Set","Adds a chance of buffing the user for 6 seconds when performing a physical attack; Atk + 100.",0]
+,[758,   itm_type_SET,"Gertie Set","Adds a 3% chance of buffing the user for 6 seconds when performing a physical attack; Atk + 100.",0]
+,[759,   itm_type_SET,"Howard Set","Adds a chance of buffing the user for 6 seconds when performing a physical attack; Atk + 100.",0]
+,[760,   itm_type_SET,"Kathryne Set","Adds a chance of buffing the user for 6 seconds when performing a magical attack; Matk + 100.",0]
+,[761,   itm_type_SET,"Margaretha Set","Adds a chance of buffing the user for 6 seconds when performing a magical attack; Matk + 100.",0]
+,[762,   itm_type_SET,"Randel Set","Adds a chance of buffing the user for 6 seconds when performing a physical attack; Atk + 100.",0]
+,[763,   itm_type_SET,"Seyren Set","Adds a chance of buffing the user for 6 seconds when performing a physical attack; Atk + 100.",0]
+,[764,   itm_type_SET,"Cecil Set","Adds a chance of buffing the user for 6 seconds when performing a physical attack; Atk + 100.",0]
+,[765,   itm_type_SET,"Trentini Set","Adds a chance of buffing the user for 6 seconds when performing a physical attack; Atk + 100.",0]
+
+//,[766,   ,"","",0]
 ];
 
 CardNum = cardOBJ.length -1;
@@ -866,12 +922,15 @@ w_SC = [[429,306,235,"NULL"],
 [661,658,657,"NULL"], //"Kick Step + Rock Step"
 [662,658,659,"NULL"], //"Kick Step + Kick and Kick Step"
 [663,658,660,"NULL"], //"Kick Step + Charleston"
-[666,664,665,"NULL"],  //"Undead Knight Card Set"
-[688,686,687,"NULL"],  //"Evil Shadow Card + Evil Fanatics Card"
-[693,692,636,"NULL"],  //"Sarah & Irene"
-[697,695,696,"NULL"],  //"Turbo Card set"
-[701,699,700,"NULL"],  //"Chip Card set"
-[710,709,148,"NULL"]  //"Obeaune + Iara"
+[666,664,665,"NULL"], //"Undead Knight Card Set"
+[688,686,687,"NULL"], //"Evil Shadow Card + Evil Fanatics Card"
+[693,692,636,"NULL"], //"Sarah & Irene"
+[697,695,696,"NULL"], //"Turbo Card set"
+[701,699,700,"NULL"], //"Chip Card set"
+[710,709,148,"NULL"], //"Obeaune + Iara"
+[719,718,716,"NULL"], //Stephen J.E. Wolf + Immortal Cursed Knight
+[720,718,717,"NULL"], //Stephen J.E. Wolf + Immortal Wind Ghost
+[726,721,725,"NULL"]  //Powerful Amdarais + Bijou
 ];
 }
 

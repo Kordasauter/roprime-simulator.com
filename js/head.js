@@ -980,6 +980,10 @@ function ApplySkillModifiers( damage )
 		{ //Rock Step Card
 			dmgMultiplier += 20;
 		}
+		if(EquipNumSearch(2218))
+		{// Old Driver Band (Yellow) [1]
+			dmgMultiplier += 5 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
 	}
 	if(n_A_ActiveSkill == skill_MEC_VULCAN_ARM)
 	{
@@ -1107,6 +1111,291 @@ function ApplySkillModifiers( damage )
 	// { // Giant Crossbow
 		// dmgMultiplier += 5 * n_A_Weapon_ATKplus;
 	// }
+	
+	if(n_A_ActiveSkill == skill_MIWA_REVERBERATION)
+	{
+		if(ItemOBJ[n_A_Equip[eq_WEAPON]][itm_WLVL] == 4)
+			dmgMultiplier += 20 * CardNumSearch( 727 ); //True Alphoccio Basil
+		if(n_A_Weapon_ATKplus >= 10)
+			dmgMultiplier += 20 * CardNumSearch( 727 ); //True Alphoccio Basil
+	}
+	
+	if(n_A_ActiveSkill == skill_SOR_VARETYR_SPEAR)
+	{
+		if(ItemOBJ[n_A_Equip[eq_WEAPON]][itm_WLVL] == 4)
+			dmgMultiplier += 20 * CardNumSearch( 728 ); //True Celia Alde
+		if(n_A_Weapon_ATKplus >= 10)
+			dmgMultiplier += 20 * CardNumSearch( 728 ); //True Celia Alde
+		if( EquipNumSearch(2224) )  // Old Wind Whisper [1]
+		{
+			dmgMultiplier += 20 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
+	}
+	
+	if(n_A_ActiveSkill == skill_SUR_RAMPAGE_BLASTER)
+	{
+		if(ItemOBJ[n_A_Equip[eq_WEAPON]][itm_WLVL] == 4)
+			dmgMultiplier += 20 * CardNumSearch( 729 ); //True Chen Lio
+		if(n_A_Weapon_ATKplus >= 10)
+			dmgMultiplier += 20 * CardNumSearch( 729 ); //True Chen Lio
+		if( EquipNumSearch(2223) )  // Old Blazing Soul [1]
+		{
+			dmgMultiplier += 15 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
+	}
+	
+	if(n_A_ActiveSkill == skill_GLT_CROSS_IMPACT)
+	{
+		if(ItemOBJ[n_A_Equip[eq_WEAPON]][itm_WLVL] == 4)
+		{
+			for(var i = 0; i < 4 ; i++)
+			{
+				if(n_A_card[card_loc_WEAPON_I + i] == 730)//True Eremes Guile
+				{
+					dmgMultiplier += 20 ;
+					if(n_A_Weapon_ATKplus >= 10)
+						dmgMultiplier += 20;
+				}
+
+			}
+		}
+		if(ItemOBJ[n_A_Equip[eq_LEFT_WEAPON]][itm_WLVL] == 4)
+		{
+			for(var i = 0; i < 4 ; i++)
+			{
+				if(n_A_card[card_loc_WEAPONII_I + i] == 730)//True Eremes Guile
+				{
+					dmgMultiplier += 20 ;
+					if(n_A_Weapon_ATKplus >= 10)
+						dmgMultiplier += 20;
+				}
+
+			}
+		}
+		if(EquipNumSearch(2227) )  // Old Bone Circlet [1]
+		{
+			dmgMultiplier += 10 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
+	}
+	
+	if(n_A_ActiveSkill == skill_GEN_CART_TORNADO)
+	{
+		if(ItemOBJ[n_A_Equip[eq_WEAPON]][itm_WLVL] == 4)
+			dmgMultiplier += 20 * CardNumSearch( 731 ); //True Flamel Emure
+		if(n_A_Weapon_ATKplus >= 10)
+			dmgMultiplier += 20 * CardNumSearch( 731 ); //True Flamel Emure
+	}
+	
+	if(n_A_ActiveSkill == skill_SHA_FEINT_BOMB)
+	{
+		if(ItemOBJ[n_A_Equip[eq_WEAPON]][itm_WLVL] == 4)
+		{
+			for(var i = 0; i < 4 ; i++)
+			{
+				if(n_A_card[card_loc_WEAPON_I + i] == 732)//True Gertie Wie
+				{
+					dmgMultiplier += 20 ;
+					if(n_A_Weapon_ATKplus >= 10)
+						dmgMultiplier += 20;
+				}
+
+			}
+		}
+		if(ItemOBJ[n_A_Equip[eq_LEFT_WEAPON]][itm_WLVL] == 4)
+		{
+			for(var i = 0; i < 4 ; i++)
+			{
+				if(n_A_card[card_loc_WEAPONII_I + i] == 732)//True Gertie Wie
+				{
+					dmgMultiplier += 20 ;
+					if(n_A_Weapon_ATKplus >= 10)
+						dmgMultiplier += 20;
+				}
+
+			}
+		}
+	}
+	
+	if(n_A_ActiveSkill == skill_MEC_AXE_TORNADO)
+	{
+		if(ItemOBJ[n_A_Equip[eq_WEAPON]][itm_WLVL] == 4)
+			dmgMultiplier += 20 * CardNumSearch( 733 ); //True Howard Alt-Eisen
+		if(n_A_Weapon_ATKplus >= 10)
+			dmgMultiplier += 20 * CardNumSearch( 733 ); //True Howard Alt-Eisen
+	}
+	
+	if(n_A_ActiveSkill == skill_WAR_CRIMSON_ROCK)
+	{
+		if(ItemOBJ[n_A_Equip[eq_WEAPON]][itm_WLVL] == 4)
+			dmgMultiplier += 20 * CardNumSearch( 734 ); //True Kathryne Keyron
+		if(n_A_Weapon_ATKplus >= 10)
+			dmgMultiplier += 20 * CardNumSearch( 734 ); //True Kathryne Keyron
+	}
+	
+	if(n_A_ActiveSkill == skill_ABI_ADORAMUS)
+	{
+		if(ItemOBJ[n_A_Equip[eq_WEAPON]][itm_WLVL] == 4)
+			dmgMultiplier += 20 * CardNumSearch( 735 ); //True Margaretha Sorin
+		if(n_A_Weapon_ATKplus >= 10)
+			dmgMultiplier += 20 * CardNumSearch( 735 ); //True Margaretha Sorin
+	}
+	
+	if(n_A_ActiveSkill == skill_ROY_EARTH_DRIVE)
+	{
+		if(ItemOBJ[n_A_Equip[eq_WEAPON]][itm_WLVL] == 4)
+			dmgMultiplier += 20 * CardNumSearch( 736 ); //True Randel Lawrence
+		if(n_A_Weapon_ATKplus >= 10)
+			dmgMultiplier += 20 * CardNumSearch( 736 ); //True Randel Lawrence
+	}
+	
+	if(n_A_ActiveSkill == skill_RUN_IGNITION_BREAK)
+	{
+		if(ItemOBJ[n_A_Equip[eq_WEAPON]][itm_WLVL] == 4)
+			dmgMultiplier += 20 * CardNumSearch( 737 ); //True Seyren Windsor
+		if(n_A_Weapon_ATKplus >= 10)
+			dmgMultiplier += 20 * CardNumSearch( 737 ); //True Seyren Windsor
+		if(EquipNumSearch(2215))
+		{// Old Rune Circlet [1]
+			dmgMultiplier += 20 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
+	}
+	
+	if(n_A_ActiveSkill == skill_RAN_CLUSTER_BOMB)
+	{
+		if(ItemOBJ[n_A_Equip[eq_WEAPON]][itm_WLVL] == 4)
+			dmgMultiplier += 20 * CardNumSearch( 738 ); //True Cecil Damon
+		if(n_A_Weapon_ATKplus >= 10)
+			dmgMultiplier += 20 * CardNumSearch( 738 ); //True Cecil Damon
+		if(EquipNumSearch(2226) )  // Old Camouflage Bunny Hood [1]
+		{
+			dmgMultiplier += 15 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
+	}
+	
+	if(n_A_ActiveSkill == skill_MIWA_SEVERE_RAINSTORM)
+	{
+		if(ItemOBJ[n_A_Equip[eq_WEAPON]][itm_WLVL] == 4)
+			dmgMultiplier += 20 * CardNumSearch( 739 ); //True Trentini
+		if(n_A_Weapon_ATKplus >= 10)
+			dmgMultiplier += 20 * CardNumSearch( 739 ); //True Trentini
+		if(EquipNumSearch(2220) || // Old Maestro Song's Hat [1]
+		   EquipNumSearch(2225) )  // Old Dying Swan [1]
+		{
+			dmgMultiplier += 5 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
+	}
+	
+	if(n_A_ActiveSkill == skill_RUN_HUNDRED_SPEAR)
+	{
+		if(EquipNumSearch(2215))
+		{// Old Rune Circlet [1]
+			dmgMultiplier += 15 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
+	}
+	
+	if(n_A_ActiveSkill == skill_ABI_JUDEX)
+	{
+		if(EquipNumSearch(2216))
+		{// Old Mitra [1]
+			dmgMultiplier += 20 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
+	}
+	if(n_A_ActiveSkill == skill_PR_MAGNUS_EXORCISMUS)
+	{
+		if(EquipNumSearch(2216))
+		{// Old Mitra [1]
+			dmgMultiplier += 10 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
+	}
+	
+	if(n_A_ActiveSkill == skill_MEC_POWER_SWING || n_A_ActiveSkill == skill_MEC_AXE_TORNADO)
+	{
+		if(EquipNumSearch(2217))
+		{// Old Driver Band (Red) [1]
+			dmgMultiplier += 20 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
+	}
+
+	if(n_A_ActiveSkill == skill_SHA_TRIANGLE_SHOT)
+	{
+		if(EquipNumSearch(2219))
+		{// Old Shadow Handicraft [1]
+			dmgMultiplier += 25 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
+	}
+	
+	if(n_A_ActiveSkill == skill_CG_ARROW_VULCAN)
+	{
+		if(EquipNumSearch(2220) || // Old Maestro Song's Hat [1]
+		   EquipNumSearch(2225) )  // Old Dying Swan [1]
+		{
+			dmgMultiplier += 20 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
+	}
+	
+	if(n_A_ActiveSkill == skill_GEN_CART_CANNON)
+	{
+		if( EquipNumSearch(2221) )  // Old Midas Whisper [1]
+		{
+			dmgMultiplier += 15 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
+	}
+	
+	if(n_A_ActiveSkill == skill_WAR_SOUL_EXPANSION)
+	{
+		if( EquipNumSearch(2222) )  // Old Magic Stone Hat [1]
+		{
+			dmgMultiplier += 5 *Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
+	}
+	
+	if(n_A_ActiveSkill == skill_SUR_LIGHTNING_RIDE)
+	{
+		if( EquipNumSearch(2223) )  // Old Blazing Soul [1]
+		{
+			dmgMultiplier += 20 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
+	}
+	
+	if(n_A_ActiveSkill == skill_SOR_POISON_BUSTER)
+	{
+		if( EquipNumSearch(2224) )  // Old Wind Whisper [1]
+		{
+			dmgMultiplier += 15 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
+	}
+	
+	if(n_A_ActiveSkill == skill_RAN_WARG_STRIKE)
+	{
+		if(EquipNumSearch(2226) )  // Old Camouflage Bunny Hood [1]
+		{
+			dmgMultiplier += 10 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
+	}
+	
+	if(n_A_ActiveSkill == skill_GLT_CROSS_RIPPER_SLASHER)
+	{
+		if(EquipNumSearch(2227) )  // Old Bone Circlet [1]
+		{
+			dmgMultiplier += 20 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
+	}
+	
+	if(n_A_ActiveSkill == skill_ROY_SPEAR_CANNON)
+	{
+		if(EquipNumSearch(2228) )  // Old Casket of Protection [1]
+		{
+			dmgMultiplier += 20 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
+	}
+	if(n_A_ActiveSkill == skill_ROY_OVERBRAND)
+	{
+		if(EquipNumSearch(2228) )  // Old Casket of Protection [1]
+		{
+			dmgMultiplier += 5 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
+	}
+	
 	
 	damage = damage * (100+StPlusCalc2(bon_DMG_SKILL+n_A_ActiveSkill)+StPlusCard(bon_DMG_SKILL+n_A_ActiveSkill) + dmgMultiplier) /100;
 	

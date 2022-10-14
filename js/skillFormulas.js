@@ -30,7 +30,7 @@ var RANGED_SKILLS = [
     skill_GEN_CART_CANNON,
     skill_SUR_RAMPAGE_BLASTER,
     skill_SUR_KNUCKLE_ARROW,
-    skill_SUR_LIGHTENING_RIDE,
+    skill_SUR_LIGHTNING_RIDE,
     skill_HW_STAVE_CRASHER,
     skill_AR_DOUBLE_STRAFE,
     skill_MO_THROW_SPIRIT_SPHERES,
@@ -783,7 +783,7 @@ function CalcSkillDamage()
 			skill_SUR_KNUCKLE_ARROW,
 			skill_SUR_WINDMILL,
 			skill_SUR_LION_HOWLING,
-			skill_SUR_LIGHTENING_RIDE,
+			skill_SUR_LIGHTNING_RIDE,
 			skill_SUR_GENTLE_TOUCH_SILENCE,
 			skill_RAN_ARROW_STORM,
 			skill_RAN_CLUSTER_BOMB,
@@ -1793,6 +1793,10 @@ function CalcSkillDamage()
 			{//Iron Claw
 				n_Delay[ksDelayCooldown] -= 1.0;
 			}
+			if(EquipNumSearch(1831))
+			{//// "Shadow Sura Gloves"
+				n_Delay[ksDelayCooldown] -= 0.5 * n_A_SHADOW_WEAPON_DEF_PLUS; 
+			}
 		}
 		else if ( n_A_ActiveSkill === skill_SUR_KNUCKLE_ARROW )
 		{
@@ -1832,7 +1836,7 @@ function CalcSkillDamage()
 			variableCastTime *= 1.0;
 			n_Delay[ksDelayCooldown] = 10.0;
 		}
-		else if ( n_A_ActiveSkill === skill_SUR_LIGHTENING_RIDE )
+		else if ( n_A_ActiveSkill === skill_SUR_LIGHTNING_RIDE )
 		{ // Ride in Lightning
 			var windBonus = 0;
 			damageType = kDmgTypeRanged;
@@ -4436,6 +4440,11 @@ function CalcSkillDamage()
 		fixedCastTime *= 0.5;
 		variableCastTime *= 2.5 - 0.5 * n_A_ActiveSkillLV;
 		n_Delay[ksDelayCooldown] = 300.0;
+		
+		if(EquipNumSearch(2218))  // Old Driver Band (Yellow) [1]
+		{
+			n_Delay[ksDelayCooldown] -= Math.floor(n_A_HEAD_DEF_PLUS / 4) * 10;
+		}
 	}
 	else if ( n_A_ActiveSkill === skill_WAR_HELL_INFERNO )
 	{
@@ -5453,6 +5462,10 @@ function CalcSkillDamage()
 			variableCastTime *= 5.0;
 			n_Delay[ksDelayGlobal] = 2.0;
 			n_Delay[ksDelayCooldown] = 5.0;
+			if( EquipNumSearch(2222) )  // Old Magic Stone Hat [1]
+			{
+				n_Delay[ksDelayCooldown] -= n_A_HEAD_DEF_PLUS * 0.1;
+			}
 		}
 		else if ( n_A_ActiveSkill == skill_WAR_COMET )
 		{

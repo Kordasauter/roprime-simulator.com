@@ -973,6 +973,25 @@ function CalcEquipAtk()
 			equipmentAttack += Math.floor((n_A_BaseLV - 70)/10) * 5;
 		}
 	}
+	if(EquipNumSearch(2215) || // Old Rune Circlet [1]
+	   EquipNumSearch(2216) || // Old Mitra [1]
+	   EquipNumSearch(2217) || // Old Driver Band (Red) [1]
+	   EquipNumSearch(2218) || // Old Driver Band (Yellow) [1]
+	   EquipNumSearch(2219) || // Old Shadow Handicraft [1]
+	   EquipNumSearch(2221) || // Old Midas Whisper [1]
+	   EquipNumSearch(2223) || // Old Blazing Soul [1]
+	   EquipNumSearch(2224) || // Old Wind Whisper [1]
+	   EquipNumSearch(2228) )  // Old Casket of Protection [1]
+	{
+		equipmentAttack += n_A_HEAD_DEF_PLUS * 4;
+	}
+	if(EquipNumSearch(2229))
+	{// Fallen Warrior Manteau
+		equipmentAttack += 2 * n_A_SHOULDER_DEF_PLUS;
+		if(SU_STR >= 90)
+			equipmentAttack += 10;
+	}
+	
 //Cards
 	if(CardNumSearch(557))
 	{//Faithful Manager Card
@@ -1242,7 +1261,7 @@ function CalcMasteryAtk()
 	}
 	if ( n_A_WeaponType !== weapTyp_NONE && SkillSearch( skill_LK_AURA_BLADE ) )
 	{ // aura blade
-		masteryAttack += 20 * SkillSearch( skill_LK_AURA_BLADE );
+		masteryAttack += n_A_BaseLV * (SkillSearch( skill_LK_AURA_BLADE ) + 3);
 	}
 	if ( n_A_WeaponType == weapTyp_NONE && SkillSearch( skill_TK_SPRINT ) )
 	{ // sprint bonus to kicks
@@ -1528,6 +1547,12 @@ function CalcRacialMod()
 			n_tok[bon_IGN_DEF_RC_BRUTE] += 30;
 			n_tok[bon_IGN_DEF_RC_DEMON] += 30;
 		}
+	}
+	if( EquipNumSearch(2210) )   
+	{// Abusive Robe
+		n_tok[bon_IGN_DEF_RC_DEMI_HUMAN] += 4 * n_A_BODY_DEF_PLUS;
+		n_tok[bon_IGN_DEF_RC_DEMON] += 4 * n_A_BODY_DEF_PLUS;
+		n_tok[bon_IGN_DEF_RC_UNDEAD] += 4 * n_A_BODY_DEF_PLUS;
 	}
 	
 // Magical
@@ -1840,6 +1865,10 @@ function CalcAttackMod()
 	{
 		n_tok[bon_PHY_ATK] += Math.floor(n_A_Weapon_ATKplus / 2);
 	}
+	if(EquipNumSearch(2212))
+	{// Abusive Robe + Valkyrie Manteau
+		n_tok[bon_PHY_ATK] += n_A_BODY_DEF_PLUS;
+	}
 	
 //shadows
 	if ( EquipNumSearch( 1660 ) )
@@ -1900,6 +1929,29 @@ function CalcAttackMod()
 			n_tok[bon_PHY_ATK] += 7;
 	}
 	
+	if((CardNumSearch(742) && (n_A_JOB == cls_SUR || n_A_JOB == cls_SURt)) || //Sura Chen Card
+	   (CardNumSearch(749) && (n_A_JOB == cls_ROY || n_A_JOB == cls_ROYt)) )  //Royal Guard Randel Card
+	{
+		n_tok[bon_PHY_ATK] += 10;
+	}
+	
+	if((CardNumSearch(743) && (n_A_JOB == cls_GLT || n_A_JOB == cls_GLTt)) || //Guillotine Cross Eremes Card
+	   (CardNumSearch(744) && (n_A_JOB == cls_GEN || n_A_JOB == cls_GENt)) || //Geneticist Flamel Card
+	   (CardNumSearch(746) && (n_A_JOB == cls_MEC || n_A_JOB == cls_MECt)) || //Mechanic Howard Card
+	   (CardNumSearch(750) && (n_A_JOB == cls_RUN || n_A_JOB == cls_RUNt)) )  //Rune Knight Seyren Card
+	{
+		n_tok[bon_PHY_ATK] += 15;
+	}
+	
+	if(CardNumSearch(745) && (n_A_JOB == cls_SHA || n_A_JOB == cls_SHAt))
+	{//Shadow Chaser Gertie Card
+		n_tok[bon_PHY_ATK] += 5;
+	}
+	if(CardNumSearch(751) && (n_A_JOB == cls_RAN || n_A_JOB == cls_RANt))
+	{//Ranger Cecil Card
+		if(n_A_WeaponType == weapTyp_BOW)
+			n_tok[bon_PHY_ATK] += 15;
+	}
 	attackMod *= ( 100 + n_tok[bon_PHY_ATK] ) / 100;
 	
 	var cardnEquipBonus = StPlusCalc2( bon_DMG_MONSTER+n_B[en_ID] ) + StPlusCard( bon_DMG_MONSTER+n_B[en_ID] );
@@ -1917,6 +1969,31 @@ function CalcAttackMod()
 	if(SkillSearch(skill_SUM_BUNCH_OF_SHRIMP) || summonerBuffs[ksBunchOfShrimp])
 	{
 		attackMod += 0.1;
+	}
+	//TEST
+	if ( SkillSearch( skill_MS_MAXIMUM_POWER_THUST ) )
+	{
+		attackMod += 0.20 * SkillSearch( skill_MS_MAXIMUM_POWER_THUST );
+	}
+	else
+	{
+		if ( SkillSearch( skill_BS_POWER_THRUST ) )
+		{
+			attackMod += SkillSearch( skill_BS_POWER_THRUST ) * 0.05;
+		}
+		else if ( otherBuffs[ksPowerThrust] )
+		{
+			attackMod += 0.05;
+			if (otherBuffs[ksPowerThrust] >= 3 )
+			{
+				attackMod += 0.05;
+			}
+			if (otherBuffs[ksPowerThrust] >= 5 )
+			{
+				attackMod += 0.05;
+			}
+			
+		}
 	}
 	
 	var multiplier = 0;
@@ -2037,6 +2114,17 @@ function CalcCriticalMod()
 	{// "Chronocloak of Dexterity"
 		n_tok[bon_DMG_CRIT] += 3 * Math.floor(n_A_SHOULDER_DEF_PLUS / 4);
 	}
+	if(EquipNumSearch(2227) )  // Old Bone Circlet [1]
+	{
+		n_tok[bon_DMG_CRIT] += n_A_HEAD_DEF_PLUS;
+	}
+	if(EquipNumSearch(2229))
+	{// Fallen Warrior Manteau
+		n_tok[bon_DMG_CRIT] +=  n_A_SHOULDER_DEF_PLUS;
+		if(SU_LUK >= 90)
+			n_tok[bon_DMG_CRIT] += 15;
+	}
+	
 //Shadow
 	if( EquipNumSearch(1825))
 	{//Shadow Gunslinger Shield
@@ -2063,7 +2151,13 @@ function CalcCriticalMod()
 	{ // Faceworm Queen Card
 		n_tok[bon_DMG_CRIT] += n_A_SHOES_DEF_PLUS;
 	}
-	// Pets
+	if(CardNumSearch(724))
+	{//Powerful Soldier  Skeleton Card
+		if(n_A_BaseLV >= 100)
+			n_tok[bon_DMG_CRIT] += 5;
+	}
+	
+// Pets
 	if ( miscEffects[ksPetEffects] == 22 )
 	{ // Dullahan Pet
 		n_tok[bon_DMG_CRIT] += 5;
@@ -2322,6 +2416,20 @@ function CalcRangedMod()
 		n_tok[bon_DMG_RANGE] += Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
 	}
 	
+	if(EquipNumSearch(2220) || // Old Maestro Song's Hat [1]
+	   EquipNumSearch(2225) || // Old Dying Swan [1]
+	   EquipNumSearch(2221) || // Old Midas Whisper [1]
+	   EquipNumSearch(2226) )  // Old Camouflage Bunny Hood [1]
+	{
+		n_tok[bon_DMG_RANGE] += n_A_HEAD_DEF_PLUS;
+	}
+	if(EquipNumSearch(2229))
+	{// Fallen Warrior Manteau
+		n_tok[bon_DMG_RANGE] +=  n_A_SHOULDER_DEF_PLUS;
+		if(SU_DEX >= 90)
+			n_tok[bon_DMG_RANGE] += 3;
+	}
+	
 //Shadow
 	if( EquipNumSearch(1842))
 	{//Shadow Gunslinger Gloves
@@ -2365,6 +2473,11 @@ function CalcRangedMod()
 	if ( CardNumSearch( 689 ))
 	{ // Airship Raid Card
 		n_tok[bon_DMG_RANGE] += Math.floor(n_A_Weapon_ATKplus / 2) * CardNumSearch(689);
+	}
+	if(CardNumSearch(722))
+	{//Powerful Archer Skeleton Card
+		if(n_A_BaseLV >= 100)
+			n_tok[bon_DMG_RANGE] += 2;
 	}
 	
 //Skills
@@ -2869,7 +2982,7 @@ function calcHP()
 	}
 	if ( EquipNumSearch( 1794 ) )
 	{//Vit Glove
-		additiveHP+= Math.floor(SU_VIT / 10)
+		additiveHP+= Math.floor(SU_VIT / 10);
 	}
 	if(EquipNumSearch(1919))
 	{ //"Foxtail Ring"
@@ -2917,6 +3030,11 @@ function calcHP()
 	if(CardNumSearch(565))
 	{//Jejeling Card
 		additiveHP += Math.floor(SU_VIT / 10) * 200;
+	}
+	if(CardNumSearch(721))
+	{//Powerful Amdarais Card
+		if(n_A_BaseLV >= 100)
+			additiveHP += 500;
 	}
 //Shadows
 	
@@ -3161,7 +3279,37 @@ function calcHP()
 	{ // GoldAcidus
 		hpMultiplier += 4;
 	}
-
+	if(CardNumSearch(563))
+	{//Bungisngis Card
+		hpMultiplier += Math.floor(n_A_HEAD_DEF_PLUS / 2);
+	}
+	if(CardNumSearch(578))
+	{//Alphoccio Basil Card
+		if(n_A_JobSearch2() == cls_BAR)
+		hpMultiplier += 10;
+	}
+	if(CardNumSearch(579))
+	{//Trentini Card
+		if(n_A_JobSearch2() == cls_DAN)
+		hpMultiplier += 10;
+	}
+	if(CardNumSearch(580))
+	{//Paladin Card
+		if(SU_INT >= 110)
+		hpMultiplier += 10;
+	}
+    if((CardNumSearch(740) && (n_A_JOB == cls_MIN || n_A_JOB == cls_MINt)) || //Maestro Alphoccio Card
+	   (CardNumSearch(752) && (n_A_JOB == cls_WAN || n_A_JOB == cls_WANt)) )  //Wanderer Trentini Card
+	{//Maestro Alphoccio Card
+		hpMultiplier += 15;
+	}
+	if((CardNumSearch(741) && (n_A_JOB == cls_SOR || n_A_JOB == cls_SORt)) || //Sorcerer Celia Card
+	   (CardNumSearch(742) && (n_A_JOB == cls_SUR || n_A_JOB == cls_SURt)) || //Sura Chen Card
+	   (CardNumSearch(748) && (n_A_JOB == cls_ABI || n_A_JOB == cls_ABIt)) )  //Arch Bishop Margaretha Card
+	{
+		hpMultiplier += 10;
+	}
+	
 // Equipment
 	if(EquipNumSearch(715))
 	{ // Variant Shoes
@@ -3264,26 +3412,24 @@ function calcHP()
 		else
 			hpMultiplier += 2 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
 	}
-	
-//Cards
-	if(CardNumSearch(563))
-	{//Bungisngis Card
-		hpMultiplier += Math.floor(n_A_HEAD_DEF_PLUS / 2);
+	if(EquipNumSearch(2209))
+	{// Flattery Robe + Survivor's Manteau
+		hpMultiplier += n_A_BODY_DEF_PLUS;
 	}
-	if(CardNumSearch(578))
-	{//Alphoccio Basil Card
-		if(n_A_JobSearch2() == cls_BAR)
-		hpMultiplier += 10;
+	if(EquipNumSearch(2212))
+	{// Abusive Robe + Valkyrie Manteau
+		hpMultiplier += n_A_BODY_DEF_PLUS;
 	}
-	if(CardNumSearch(579))
-	{//Trentini Card
-		if(n_A_JobSearch2() == cls_DAN)
-		hpMultiplier += 10;
+	for(var i = 0 ; i < 14 ; i++)
+	{
+		if(EquipNumSearch(2215 + i))
+		{// Bio 5 Headgears
+			hpMultiplier += Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
 	}
-	if(CardNumSearch(580))
-	{//Paladin Card
-		if(SU_INT >= 110)
-		hpMultiplier += 10;
+	if(EquipNumSearch(2229))
+	{// Fallen Warrior Manteau
+		hpMultiplier += Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
 	}
 	
 //Shadows
@@ -3802,6 +3948,11 @@ function calcSP( n_A_MaxSP )
 		if(n_A_JobSearch2() == cls_DAN)
 		spMultiplier += 5;
 	}
+	if((CardNumSearch(740) && (n_A_JOB == cls_MIN || n_A_JOB == cls_MINt)) || //Maestro Alphoccio Card
+	   (CardNumSearch(752) && (n_A_JOB == cls_WAN || n_A_JOB == cls_WANt)) )  //Wanderer Trentini Card
+	{
+		spMultiplier += 10;
+	}
 	
 // Equipment
 	if ( n_A_SHOES_DEF_PLUS <= 4 && CardNumSearch( 407 ) )
@@ -3873,6 +4024,21 @@ function calcSP( n_A_MaxSP )
 			spMultiplier += 5;
 		else
 			spMultiplier += Math.floor(n_A_SHOES_DEF_PLUS / 3);
+	}
+	if(EquipNumSearch(2208))
+	{// Flattery Robe + Ancient Cape[0]\[1]
+		spMultiplier += n_A_BODY_DEF_PLUS;
+	}
+	for(var i = 0 ; i < 14 ; i++)
+	{
+		if(EquipNumSearch(2215 + i))
+		{// Bio 5 Headgears
+			spMultiplier += Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
+	}
+	if(EquipNumSearch(2229))
+	{// Fallen Warrior Manteau
+		spMultiplier += Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
 	}
 	
 //Shadows
@@ -3995,6 +4161,14 @@ function calcHardDef( n_A_totalDEF )
 		n_A_DEF += 2;
 	if(n_A_BODY_DEF_PLUS >= 12 && CardNumSearch(519)) // Hardrock Mammoth
 		n_A_DEF += 20;
+	if(CardNumSearch(721))
+	{//Powerful Amdarais Card
+		n_A_DEF += n_A_BODY_DEF_PLUS * 10;
+	}
+	if(CardNumSearch(749) && (n_A_JOB == cls_ROY || n_A_JOB == cls_ROYt))
+	{//Royal Guard Randel Card
+		n_A_DEF += 350;
+	}
 		
 	if (otherBuffs[ksOdinsPower] >= 1) { //Odin's Power
 		n_A_DEF -= 20;
@@ -4065,6 +4239,12 @@ function calcHardDef( n_A_totalDEF )
 	{ // Enhanced Variant Shoes
 		n_A_DEF += Math.floor(n_A_SHOES_DEF_PLUS /2);
 	}
+	if(EquipNumSearch(2205))
+	{ // Royal Guard Shield
+		n_A_DEF += n_A_LEFT_DEF_PLUS * 10;
+	}
+	
+// Shadows
 	if(EquipNumSearch(1812))
 	{ // Shadow Genetic Shield
 		n_A_DEF += n_A_SHADOW_SHIELD_DEF_PLUS * (SkillSearch(skill_GEN_CART_TORNADO) + SkillSearch(skill_GEN_CART_CANNON) + SkillSearch(skill_GEN_CART_BOOST));
@@ -4078,7 +4258,7 @@ function calcHardDef( n_A_totalDEF )
 		n_A_DEF += n_A_SHADOW_SHIELD_DEF_PLUS * (SkillSearch(skill_WAN_MOONLIGHT) + SkillSearch(skill_WAN_SYMPHONY) + SkillSearch(skill_WAN_SWING_DANCE));
 	}
 	
-	// Skills
+// Skills
 	if ( performerBuffs[ksEnsemble] === ksBattleTheme && performerBuffs[ksEnsembleLevel] > 0 )
 	{ // Battle Theme
 		n_A_DEF += 15 * performerBuffs[ksEnsembleLevel];
@@ -4254,7 +4434,11 @@ function calcHardMDef(n_A_MDEF)
 		n_A_MDEF += 7;
 	if(n_A_JobSearch()==cls_ACO) // AcolyteCls
 		n_A_MDEF += CardNumSearch(383); // RideWord
-		
+	if(CardNumSearch(747) && (n_A_JOB == cls_WAR || n_A_JOB == cls_WARt))
+	{//Warlock Kathryne Card
+		n_A_MDEF += 80;
+	}
+	
 	if (otherBuffs[ksOdinsPower] >= 1) { //Odin's Power
 		n_A_MDEF -= 20;
 	}
@@ -4319,6 +4503,10 @@ function calcHardMDef(n_A_MDEF)
 			n_A_MDEF += 5;
 		if(n_A_BODY_DEF_PLUS >=9)
 			n_A_MDEF += 5;
+	}
+	if(EquipNumSearch(2205))
+	{ // Royal Guard Shield
+		n_A_MDEF += n_A_LEFT_DEF_PLUS;
 	}
 	
 	if(EquipNumSearch(1820))
@@ -4427,6 +4615,10 @@ function calcHit(n_A_HIT)
 			n_A_HIT += CardNumSearch(699);
 		if(n_A_BaseLV >= 120)
 			n_A_HIT += CardNumSearch(699);
+	}
+	if(CardNumSearch(746) && (n_A_JOB == cls_MEC || n_A_JOB == cls_MECt))
+	{//Mechanic Howard Card
+		n_A_HIT += 20;
 	}
 	
 	// Equipment
@@ -4640,6 +4832,10 @@ function calcFlee( n_A_FLEE )
 	{//Agi Glove
 		n_A_FLEE += Math.floor(SU_AGI / 10);
 	}
+	if(EquipNumSearch(2208))
+	{// Flattery Robe + Ancient Cape[0]\[1]
+		n_A_FLEE += n_A_BODY_DEF_PLUS;
+	}
 	
 	if(n_A_JobSearch2() == cls_ASS || n_A_JobSearch2() == cls_ROG)
 		n_A_FLEE += 4 * SkillSearch(skill_TH_IMPROVE_DODGE);
@@ -4673,7 +4869,7 @@ function calcFlee( n_A_FLEE )
 	if(battleChantBuffs[pass_V_HIT_FLEE])
 		n_A_FLEE += 50;
 	
-	// Items
+// Items
 	if ( usableItems[ksHoneyPastry] )
 	{
 		n_A_FLEE += 30;
@@ -4694,7 +4890,7 @@ function calcFlee( n_A_FLEE )
 	{
 		n_A_FLEE += 30;
 	}
-	// Skills
+// Skills
 	if ( performerBuffs[ksBardSolo] === ksPerfectTablature && performerBuffs[ksBardSoloLevel] > 0 )
 	{ // Perfect Tablature
 		var skillBonus = performerBuffs[ksBardSoloLevel];
@@ -4723,7 +4919,7 @@ function calcFlee( n_A_FLEE )
 	{
 		n_A_FLEE += 20;
 	}
-	
+// Cards
 	if(CardNumSearch(585))
 	{//Clown Card
 		if(SU_VIT >= 110)
@@ -4733,6 +4929,14 @@ function calcFlee( n_A_FLEE )
 	{//Gypsy Card
 		if(SU_VIT >= 110)
 			n_A_FLEE += 20;
+	}
+	if(CardNumSearch(721))
+	{//Powerful Amdarais Card
+		n_A_FLEE -= n_A_BODY_DEF_PLUS * 2;
+	}
+	if(CardNumSearch(744) && (n_A_JOB == cls_GEN || n_A_JOB == cls_GENt))
+	{//Geneticist Flamel Card
+		n_A_FLEE += 20;
 	}
 	
 	// Multipliers
@@ -4809,8 +5013,18 @@ function calcPDodge( n_A_LUCKY )
 	{//Elegant Doram Manteau
 		n_A_LUCKY += Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
 	}
+	if(EquipNumSearch(2226) )  // Old Camouflage Bunny Hood [1]
+	{
+		n_A_LUCKY += Math.floor(n_A_HEAD_DEF_PLUS / 3);
+	}
 	
-	//Shadows
+//Cards
+	if(CardNumSearch(743) && (n_A_JOB == cls_GLT || n_A_JOB == cls_GLTt))
+	{//Guillotine Cross Eremes Card
+		n_A_LUCKY += 10;
+	}
+	
+//Shadows
 	if( EquipNumSearch(1995))
 	{//Shadow Doram Battler Gloves
 		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7){n_A_LUCKY += 2;}
@@ -4879,6 +5093,15 @@ function calcCrit( n_A_CRI )
 	if ( CardNumSearch( 689 ))
 	{ // Airship Raid Card
 		n_A_CRI += Math.floor(n_A_Weapon_ATKplus / 2) * CardNumSearch(689);
+	}
+	if(CardNumSearch(724))
+	{//Powerful Soldier  Skeleton Card
+		if(n_A_BaseLV >= 100)
+			n_A_CRI += 1;
+	}
+	if(CardNumSearch(751) && (n_A_JOB == cls_RAN || n_A_JOB == cls_RANt))
+	{//Ranger Cecil Card
+		n_A_CRI += 20;
 	}
 	
 // Equipment modifiers
@@ -4966,6 +5189,15 @@ function calcCrit( n_A_CRI )
 	{// "Chronocloak of Luck"
 		n_A_CRI += 3 * Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
 	}
+	if( EquipNumSearch(2211) )   
+	{// Abusive Robe + Morrigane's Manteau
+		n_A_CRI += n_A_BODY_DEF_PLUS;
+	}
+	if( EquipNumSearch(2223) )  // Old Blazing Soul [1]
+	{
+		n_A_CRI += 2 * n_A_HEAD_DEF_PLUS;
+	}
+	
 //Shadow
 	if( EquipNumSearch(1825))
 	{//Shadow Gunslinger Shield
@@ -5530,6 +5762,16 @@ function calcASPD()
 	{
 		equipASPD += n_A_Weapon_ATKplus;
 	}
+	if(EquipNumSearch(2227) )  // Old Bone Circlet [1]
+	{
+		equipASPD += n_A_HEAD_DEF_PLUS;
+	}
+	if(EquipNumSearch(2229))
+	{// Fallen Warrior Manteau
+		equipASPD += Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
+		if(SU_AGI >= 90)
+			equipASPD += 3;
+	}
 	
 //Cards
 	if(CardNumSearch(556))
@@ -5695,7 +5937,24 @@ function calcASPD()
 		if(n_A_SHOES_DEF_PLUS >= 12)
 			flatASPD += 1;
 	}
-	
+	if(EquipNumSearch(2215) || // Old Rune Circlet [1]
+	   EquipNumSearch(2217) || // Old Driver Band (Red) [1]
+	   EquipNumSearch(2218) || // Old Driver Band (Yellow) [1]
+	   EquipNumSearch(2228) )  // Old Casket of Protection [1]
+	{
+		flatASPD += Math.floor(n_A_HEAD_DEF_PLUS / 5);
+	}
+	if(EquipNumSearch(2229))
+	{// Fallen Warrior Manteau
+		if(n_A_SHOULDER_DEF_PLUS >= 10)
+			flatASPD += 1;
+	}
+//Cards
+	if(CardNumSearch(750) && (n_A_JOB == cls_RUN || n_A_JOB == cls_RUNt))
+	{//Rune Knight Seyren Card
+		flatASPD += 2;
+	}
+//Shadows
 	if( (EquipNumSearch( 1809 ) &&  SkillSearch(skill_RUN_ENCHANT_BLADE) ) || // Shadow Runeknight Shield
 		(EquipNumSearch( 1816 ) &&  SkillSearch(skill_SHA_AUTO_SHADOW_SPELL) ) ) // Shadow Shadowchaser Shield
 	{
@@ -6634,6 +6893,15 @@ function calcRaceElementalReduction()
 			n_tok[bon_RED_ELE_NEUTRAL] += 10;
 		
 	}
+	if(EquipNumSearch(2229))
+	{// Fallen Warrior Manteau
+		if(SU_VIT >= 90)
+			n_tok[bon_RED_ELE_NEUTRAL] += 3;
+		if(n_A_SHOULDER_DEF_PLUS >= 8)
+			n_tok[bon_RED_ELE_NEUTRAL] += 3;
+		if(n_A_SHOULDER_DEF_PLUS >= 10)
+			n_tok[bon_RED_ELE_NEUTRAL] += 4;
+	}
 
 	//Shadows
 	if ( EquipNumSearch( 1672 ) )
@@ -7208,30 +7476,30 @@ function calcIncomingDamage()
 function CalcSkillModAdditions( skillMod )
 { // skillmod + x
 	// Power Thrust and Maximum Power Thrust
-	if ( SkillSearch( skill_MS_MAXIMUM_POWER_THUST ) )
-	{
-		skillMod += 20 * SkillSearch( skill_MS_MAXIMUM_POWER_THUST );
-	}
-	else
-	{
-		if ( SkillSearch( skill_BS_POWER_THRUST ) )
-		{
-			skillMod += SkillSearch( skill_BS_POWER_THRUST ) * 5;
-		}
-		else if ( otherBuffs[ksPowerThrust] )
-		{
-			skillMod += 5;
-			if (otherBuffs[ksPowerThrust] >= 3 )
-			{
-				skillMod += 5;
-			}
-			if (otherBuffs[ksPowerThrust] >= 5 )
-			{
-				skillMod += 5;
-			}
+	// if ( SkillSearch( skill_MS_MAXIMUM_POWER_THUST ) )
+	// {
+		// skillMod += 20 * SkillSearch( skill_MS_MAXIMUM_POWER_THUST );
+	// }
+	// else
+	// {
+		// if ( SkillSearch( skill_BS_POWER_THRUST ) )
+		// {
+			// skillMod += SkillSearch( skill_BS_POWER_THRUST ) * 5;
+		// }
+		// else if ( otherBuffs[ksPowerThrust] )
+		// {
+			// skillMod += 5;
+			// if (otherBuffs[ksPowerThrust] >= 3 )
+			// {
+				// skillMod += 5;
+			// }
+			// if (otherBuffs[ksPowerThrust] >= 5 )
+			// {
+				// skillMod += 5;
+			// }
 			
-		}
-	}
+		// }
+	// }
 	
 	// Spear Dynamo
 	if ( SkillSearch( skill_LK_SPEAR_DYNAMO ) )

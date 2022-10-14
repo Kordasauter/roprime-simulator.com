@@ -248,6 +248,16 @@ function calcMAtk( includeMultipliers )
 		{// "Sunflower Boy"
 			matk_mul += Math.floor(n_A_Weapon_ATKplus / 2);
 		}
+		if(EquipNumSearch(2209))
+		{// Flattery Robe + Survivor's Manteau
+			matk_mul += n_A_BODY_DEF_PLUS;
+		}
+		if(EquipNumSearch(2222) || // Old Magic Stone Hat [1]
+		   EquipNumSearch(2224) )  // Old Wind Whisper [1]
+		{
+			matk_mul += n_A_HEAD_DEF_PLUS;
+		}
+		
 //Shadows
 		if ( EquipNumSearch( 1656 ) )
 		{ // "Shadow Mystic Gloves"
@@ -291,7 +301,7 @@ function calcMAtk( includeMultipliers )
 			if(n_A_SHADOW_WEAPON_DEF_PLUS >=9){matk_mul += 5;}
 		}
 		
-		//Enchant
+//Enchant
 		if(EnchNumSearch( 284 ))//Special INT = 284
 		{
 			if(n_A_SHOULDER_DEF_PLUS >8)
@@ -307,13 +317,24 @@ function calcMAtk( includeMultipliers )
 			}
 		}
 		
+//Cards
 		if(CardNumSearch(582))
 		{//Professor Card
 			if(SU_DEX >= 110)
 			matk_mul += 7;
 		}
 		
-		//items
+		if(CardNumSearch(741) && (n_A_JOB == cls_SOR || n_A_JOB == cls_SORt))
+		{//Sorcerer Celia Card
+			matk_mul += 10;
+		}
+		if((CardNumSearch(745) && (n_A_JOB == cls_SHA || n_A_JOB == cls_SHAt)) ||
+		   (CardNumSearch(747) && (n_A_JOB == cls_WAR || n_A_JOB == cls_WARt)) )
+		{//Shadow Chaser Gertie Card
+			matk_mul += 15;
+		}
+	
+//items
 		if ( usableItems[ksArchmagePotion] )
 		{
 			matk_mul += 1;
@@ -586,6 +607,28 @@ function calcMAtk( includeMultipliers )
 			n_A_EquipMATK += Math.floor((n_A_BaseLV - 70)/10) * 5;
 		}
 	}
+	if(EquipNumSearch(2207))
+	{// Flattery Robe
+		if(n_A_BaseLV >= 120)
+			n_A_EquipMATK += 50;
+		if(n_A_BaseLV >= 140)
+			n_A_EquipMATK += 50;
+	}
+	if(EquipNumSearch(2216))  // Old Mitra [1]
+	{
+		n_A_EquipMATK += n_A_HEAD_DEF_PLUS * 2;
+	}
+	if(EquipNumSearch(2219))  // Old Shadow Handicraft [1]
+	{
+		n_A_EquipMATK += n_A_HEAD_DEF_PLUS * 4;
+	}
+	if(EquipNumSearch(2229))
+	{// Fallen Warrior Manteau
+		n_A_EquipMATK += 3 * n_A_SHOULDER_DEF_PLUS;
+		if(SU_INT >= 90)
+			n_A_EquipMATK += 20;
+	}
+	
 //shadows
 	if ( EquipNumSearch( 1657 ) )
 	{ // "Shadow Mystic Ring"

@@ -161,6 +161,14 @@ function CalcBaseHeal( HealLv, maxHeal )
 			healMultiplier += 20;
 		}
 	}
+	if(CardNumSearch(748) && (n_A_JOB == cls_ABI || n_A_JOB == cls_ABIt))
+	{//Arch Bishop Margaretha Card
+		healMultiplier += 10;
+	}
+	if(EquipNumSearch(2216))  // Old Mitra [1]
+	{
+		healMultiplier += n_A_HEAD_DEF_PLUS * 2;
+	}
 	
 	
 	// Apply Multiplier

@@ -1593,6 +1593,7 @@ function ClickArmor( data, isRefine )
 	{
 		armor_id = data;
 	}
+	
 	if(armor_id == 1440)
 	{// Ur's Plate
 		CleanEnchant("A_ARMOR_ENCHANT");
@@ -1973,6 +1974,45 @@ function ClickAcces( data, numAccess )
 	StAllCalc();
 }
 
+function ClickHeadUp( data, isRefine )
+{
+	//upper head id
+	var head_up_id = ItemOBJ[n_A_Equip[eq_ARMOR]][itm_ID];
+	//upper head refine level
+	var head_up_ref = n_A_BODY_DEF_PLUS;
+	if(isRefine)
+	{
+		head_up_ref = data;
+	}
+	else
+	{
+		head_up_id = data;
+	}
+	
+	if(head_up_id >= 2215 && head_up_id <= 2229)
+	{
+		CleanEnchant("A_HEAD_UPPER_ENCHANT");
+		//slot 4 & 3
+		for ( var i = 0; EnchantListOBJ[99][i] != "NULL"; i++ )
+		{
+			formElements["A_HEAD_UPPER_ENCHANT" + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[99][i]][1],EnchantOBJ[EnchantListOBJ[99][i]][0]);
+			formElements["A_HEAD_UPPER_ENCHANT" + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[99][i]][1],EnchantOBJ[EnchantListOBJ[99][i]][0]);
+		}
+		formElements["A_HEAD_UPPER_ENCHANT" + "_4"].disabled = false;
+		formElements["A_HEAD_UPPER_ENCHANT" + "_3"].disabled = false;
+		//slot 2
+		for ( var i = 0; EnchantListOBJ[100][i] != "NULL"; i++ )
+		{
+			formElements["A_HEAD_UPPER_ENCHANT" + "_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[100][i]][1],EnchantOBJ[EnchantListOBJ[100][i]][0]);
+		}
+		formElements["A_HEAD_UPPER_ENCHANT" + "_2"].disabled = false;
+	}
+	else
+	{
+		CleanEnchant("A_HEAD_UPPER_ENCHANT");
+	}	
+}
+
 function SetEnchant(formEq,EqRefine,Ench1,Ench2) //Mora Enchants
 {
 		//slot 4
@@ -2328,6 +2368,8 @@ function CleanEnchant(formEq)
 	formElements[formEq + "_2"].disabled = true;
 	formElements[formEq + "_3"].disabled = true;
 	formElements[formEq + "_4"].disabled = true;
+	StAllCalc();
+	
 }
 
 function ClickWeaponType( weaponType )

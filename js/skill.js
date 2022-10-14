@@ -952,7 +952,7 @@ JobSkillPassOBJ = [
 	[],
 	[skill_SHA_FEINT_BOMB, skill_SHA_TRIANGLE_SHOT,skill_SHA_FATAL_MENACE], // Shadow Chaser
 	[],
-	[skill_SUR_CRESCENT_ELBOW, skill_SUR_DRAGON_COMBO, skill_SUR_FLASH_COMBO, skill_SUR_EARTH_SHAKER, skill_SUR_FALLEN_EMPIRE, skill_SUR_GATE_OF_HELL, skill_SUR_GENTLE_TOUCH_SILENCE, skill_SUR_KNUCKLE_ARROW, skill_SUR_LIGHTENING_RIDE, skill_SUR_LIGHTNING_WALK, skill_SUR_LION_HOWLING, skill_SUR_RAMPAGE_BLASTER, skill_SUR_SKY_NET_BLOW, skill_SUR_TIGER_CANNON, skill_SUR_WINDMILL], // Sura
+	[skill_SUR_CRESCENT_ELBOW, skill_SUR_DRAGON_COMBO, skill_SUR_FLASH_COMBO, skill_SUR_EARTH_SHAKER, skill_SUR_FALLEN_EMPIRE, skill_SUR_GATE_OF_HELL, skill_SUR_GENTLE_TOUCH_SILENCE, skill_SUR_KNUCKLE_ARROW, skill_SUR_LIGHTNING_RIDE, skill_SUR_LIGHTNING_WALK, skill_SUR_LION_HOWLING, skill_SUR_RAMPAGE_BLASTER, skill_SUR_SKY_NET_BLOW, skill_SUR_TIGER_CANNON, skill_SUR_WINDMILL], // Sura
 	[],
 	[skill_MIWA_SOUND_OF_DESTRUCTION, skill_MIWA_GREAT_ECHO, skill_MIWA_METALLIC_SOUND, skill_MIWA_REVERBERATION, skill_MIWA_SEVERE_RAINSTORM], // Maestro
 	[],
@@ -1033,7 +1033,7 @@ JobSkillPassOBJ = [
 	[],
 	[], // Shadow Chaser
 	[],
-	[skill_SUR_EARTH_SHAKER, skill_SUR_GATE_OF_HELL, skill_SUR_GENTLE_TOUCH_SILENCE, skill_SUR_KNUCKLE_ARROW, skill_SUR_LIGHTENING_RIDE, skill_SUR_LION_HOWLING, skill_SUR_RAMPAGE_BLASTER, skill_SUR_SKY_NET_BLOW, skill_SUR_TIGER_CANNON, skill_SUR_WINDMILL], // Sura
+	[skill_SUR_EARTH_SHAKER, skill_SUR_GATE_OF_HELL, skill_SUR_GENTLE_TOUCH_SILENCE, skill_SUR_KNUCKLE_ARROW, skill_SUR_LIGHTNING_RIDE, skill_SUR_LION_HOWLING, skill_SUR_RAMPAGE_BLASTER, skill_SUR_SKY_NET_BLOW, skill_SUR_TIGER_CANNON, skill_SUR_WINDMILL], // Sura
 	[],
 	[skill_MIWA_METALLIC_SOUND, skill_MIWA_REVERBERATION, skill_MIWA_SEVERE_RAINSTORM], // Maestro
 	[],
@@ -1337,7 +1337,12 @@ JobSkillActiveOBJ = [
 [57,0,240,1],  // Hocus Pocus 1 (Abracadabra)
 [58,0,185,2],  // Summon Spirit Sphere 2
 [59,0,383,1],  // Close Confine 1
-[60,0,227,5]  // Spell Breaker 5
+[60,0,227,5],  // Spell Breaker 5
+[61,1,27,3],  //Increase Agi 3
+[62,1,591,1],  //Shield Spell 1
+[63,1,9,1],  //Endure 1
+[64,1,42,1]  //Improve Concentration 1
+
 ];
 }
 
@@ -1487,6 +1492,9 @@ JobSkillActiveOBJ = [
 ,[142,0,94,3,0,6]// Sanctuary 3  When recieving physical damage
 ,[143,0,620,1,0,9]// Maelstrom 1  When recieving magical damage
 ,[144,0,534,3,0,6]// Drain Life 3  When recieving physical damage
+,[145,0,267,3,0,6]// Assumptio 3
+,[146,1,450,5,0,1]// Ignition Break 5
+,[147,1,679,5,0,4]// Killing Cloud 5
 
  //IDAutocast, Type(0=when hit, 1=when attack), SkillID, SkillLVL, Chance, AutoCastTrigger
 ];

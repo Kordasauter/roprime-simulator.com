@@ -217,6 +217,9 @@ with ( document.calcForm )
 	n_A_Enchant[ench_SHIELD2] = parseInt(formElements["A_SHIELD_ENCHANT_2"].value);
 	n_A_Enchant[ench_SHIELD3] = parseInt(formElements["A_SHIELD_ENCHANT_3"].value);
 	n_A_Enchant[ench_SHIELD4] = parseInt(formElements["A_SHIELD_ENCHANT_4"].value);
+	n_A_Enchant[ench_HEAD_UP2] = parseInt(formElements["A_HEAD_UPPER_ENCHANT_2"].value);
+	n_A_Enchant[ench_HEAD_UP3] = parseInt(formElements["A_HEAD_UPPER_ENCHANT_3"].value);
+	n_A_Enchant[ench_HEAD_UP4] = parseInt(formElements["A_HEAD_UPPER_ENCHANT_4"].value);
 	n_A_Enchant[ench_HSE_Armor] = parseInt(formElements["A_HSE"].value);
 	n_A_Enchant[ench_HSE_Head] = parseInt(formElements["A_HSE_HEAD1"].value);
 	
@@ -1086,10 +1089,41 @@ function StPlusCalc()
 		if(n_A_JobSearch()==cls_ARC)
 			wSPC_DEX += Math.floor(n_A_HEAD_DEF_PLUS / 3);
 	}
+	
+	for(var i = 0 ; i <= 12; i++)
+	{
+		if(CardNumSearch(740 + i))
+		{
+			if(n_A_BaseLV >= 175)
+			{
+				wSPC_STR += 10;
+				wSPC_AGI += 10;
+				wSPC_VIT += 10;
+				wSPC_INT += 10;
+				wSPC_DEX += 10;
+				wSPC_LUK += 10;
+			}
+			if(n_A_SHOULDER_DEF_PLUS >= 10)
+			{
+				wSPC_STR += 10;
+				wSPC_AGI += 10;
+				wSPC_VIT += 10;
+				wSPC_INT += 10;
+				wSPC_DEX += 10;
+				wSPC_LUK += 10;
+			}
+		}
+	}
+	
 	var numMegs = EquipNumSearch( 348 );
 	for ( var i = 0; i < numMegs; i++ )
 	{ // Megingjard
 		wSPC_STR += Math.floor( n_A_BaseLV / 5 );
+	}
+	
+	if( EquipNumSearch(2211) )   
+	{// Abusive Robe + Morrigane's Manteau
+		wSPC_LUK += n_A_BODY_DEF_PLUS;
 	}
 	
 	// Acolyte Buffs

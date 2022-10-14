@@ -1320,6 +1320,76 @@
 ,[1318,"Magic damage against dragon +18%",0,bon_MDMG_RC_DRAGON,18,bon_NONE]
 ,[1319,"Magic damage against dragon +19%",0,bon_MDMG_RC_DRAGON,19,bon_NONE]
 ,[1320,"Magic damage against dragon +20%",0,bon_MDMG_RC_DRAGON,20,bon_NONE]
+,[1321,"Mettle 1",0,bon_PHY_ATK,4,bon_HIT,10,bon_NONE]
+,[1322,"Mettle 2",0,bon_PHY_ATK,8,bon_HIT,20,bon_NONE]
+,[1323,"Mettle 3",0,bon_PHY_ATK,12,bon_HIT,30,bon_NONE]
+,[1324,"Mettle 4",0,bon_PHY_ATK,16,bon_HIT,40,bon_NONE]
+,[1325,"Mettle 5",0,bon_PHY_ATK,20,bon_HIT,50,bon_NONE]
+,[1326,"Mettle 6",0,bon_PHY_ATK,24,bon_HIT,60,bon_NONE]
+,[1327,"Mettle 7",0,bon_PHY_ATK,28,bon_HIT,70,bon_NONE]
+,[1328,"Mettle 8",0,bon_PHY_ATK,32,bon_HIT,80,bon_NONE]
+,[1329,"Mettle 9",0,bon_PHY_ATK,36,bon_HIT,90,bon_NONE]
+,[1330,"Mettle 10",0,bon_PHY_ATK,44,bon_HIT,100,bon_NONE]
+,[1331,"Tenacity 1","Perfect Hit +1",bon_PHY_ATK,4,bon_NONE]
+,[1332,"Tenacity 2","Perfect Hit +2",bon_PHY_ATK,8,bon_NONE]
+,[1333,"Tenacity 3","Perfect Hit +3",bon_PHY_ATK,12,bon_NONE]
+,[1334,"Tenacity 4","Perfect Hit +4",bon_PHY_ATK,16,bon_NONE]
+,[1335,"Tenacity 5","Perfect Hit +5",bon_PHY_ATK,20,bon_NONE]
+,[1336,"Tenacity 6","Perfect Hit +6",bon_PHY_ATK,24,bon_NONE]
+,[1337,"Tenacity 7","Perfect Hit +7",bon_PHY_ATK,28,bon_NONE]
+,[1338,"Tenacity 8","Perfect Hit +8",bon_PHY_ATK,32,bon_NONE]
+,[1339,"Tenacity 9","Perfect Hit +9",bon_PHY_ATK,36,bon_NONE]
+,[1340,"Tenacity 10","Perfect Hit +10",bon_PHY_ATK,44,bon_NONE]
+,[1341,"Master Archer 1",0,bon_DMG_RANGE,4,bon_ASPD_MUL,1,bon_NONE]
+,[1342,"Master Archer 2",0,bon_DMG_RANGE,8,bon_ASPD_MUL,2,bon_NONE]
+,[1343,"Master Archer 3",0,bon_DMG_RANGE,12,bon_ASPD_MUL,3,bon_NONE]
+,[1344,"Master Archer 4",0,bon_DMG_RANGE,16,bon_ASPD_MUL,4,bon_NONE]
+,[1345,"Master Archer 5",0,bon_DMG_RANGE,20,bon_ASPD_MUL,5,bon_NONE]
+,[1346,"Master Archer 6",0,bon_DMG_RANGE,24,bon_ASPD_MUL,6,bon_NONE]
+,[1347,"Master Archer 7",0,bon_DMG_RANGE,28,bon_ASPD_MUL,7,bon_NONE]
+,[1348,"Master Archer 8",0,bon_DMG_RANGE,32,bon_ASPD_MUL,8,bon_NONE]
+,[1349,"Master Archer 9",0,bon_DMG_RANGE,36,bon_ASPD_MUL,9,bon_NONE]
+,[1350,"Master Archer 10",0,bon_DMG_RANGE,44,bon_ASPD_MUL,10,bon_NONE]
+,[1351,"Acute 1",0,bon_DMG_CRIT,20,bon_CRIT,3,bon_NONE]
+,[1352,"Acute 2",0,bon_DMG_CRIT,35,bon_CRIT,6,bon_NONE]
+,[1353,"Acute 3",0,bon_DMG_CRIT,50,bon_CRIT,9,bon_NONE]
+,[1354,"Acute 4",0,bon_DMG_CRIT,65,bon_CRIT,12,bon_NONE]
+,[1355,"Acute 5",0,bon_DMG_CRIT,80,bon_CRIT,15,bon_NONE]
+,[1356,"Acute 6",0,bon_DMG_CRIT,95,bon_CRIT,18,bon_NONE]
+,[1357,"Acute 7",0,bon_DMG_CRIT,110,bon_CRIT,21,bon_NONE]
+,[1358,"Acute 8",0,bon_DMG_CRIT,125,bon_CRIT,24,bon_NONE]
+,[1359,"Acute 9",0,bon_DMG_CRIT,140,bon_CRIT,27,bon_NONE]
+,[1360,"Acute 10",0,bon_DMG_CRIT,170,bon_CRIT,30,bon_NONE]
+,[1361,"Magic Essence 1",0,bon_MATK_MUL,4,bon_RED_FIXEDCAST,0.1,bon_NONE]
+,[1362,"Magic Essence 2",0,bon_MATK_MUL,8,bon_RED_FIXEDCAST,0.2,bon_NONE]
+,[1363,"Magic Essence 3",0,bon_MATK_MUL,12,bon_RED_FIXEDCAST,0.3,bon_NONE]
+,[1364,"Magic Essence 4",0,bon_MATK_MUL,16,bon_RED_FIXEDCAST,0.4,bon_NONE]
+,[1365,"Magic Essence 5",0,bon_MATK_MUL,20,bon_RED_FIXEDCAST,0.5,bon_NONE]
+,[1366,"Magic Essence 6",0,bon_MATK_MUL,24,bon_RED_FIXEDCAST,0.6,bon_NONE]
+,[1367,"Magic Essence 7",0,bon_MATK_MUL,28,bon_RED_FIXEDCAST,0.7,bon_NONE]
+,[1368,"Magic Essence 8",0,bon_MATK_MUL,32,bon_RED_FIXEDCAST,0.8,bon_NONE]
+,[1369,"Magic Essence 9",0,bon_MATK_MUL,36,bon_RED_FIXEDCAST,0.9,bon_NONE]
+,[1370,"Magic Essence 10",0,bon_MATK_MUL,44,bon_RED_FIXEDCAST,1,bon_NONE]
+,[1371,"Affection 1","Increases the recovery rate of recovery skills by 5%",bon_SP_MUL,3,bon_NONE]
+,[1372,"Affection 2","Increases the recovery rate of recovery skills by 10%",bon_SP_MUL,6,bon_NONE]
+,[1373,"Affection 3","Increases the recovery rate of recovery skills by 15%",bon_SP_MUL,9,bon_NONE]
+,[1374,"Affection 4","Increases the recovery rate of recovery skills by 20%",bon_SP_MUL,12,bon_NONE]
+,[1375,"Affection 5","Increases the recovery rate of recovery skills by 25%",bon_SP_MUL,15,bon_NONE]
+,[1376,"Affection 6","Increases the recovery rate of recovery skills by 30%",bon_SP_MUL,18,bon_NONE]
+,[1377,"Affection 7","Increases the recovery rate of recovery skills by 35%",bon_SP_MUL,21,bon_NONE]
+,[1378,"Affection 8","Increases the recovery rate of recovery skills by 40%",bon_SP_MUL,24,bon_NONE]
+,[1379,"Affection 9","Increases the recovery rate of recovery skills by 45%",bon_SP_MUL,27,bon_NONE]
+,[1380,"Affection 10","Increases the recovery rate of recovery skills by 55%",bon_SP_MUL,30,bon_NONE]
+,[1381,"Adamantine 1",0,bon_HP_MUL,5,bon_DEF,140,bon_MDEF,20,bon_NONE]
+,[1382,"Adamantine 2",0,bon_HP_MUL,10,bon_DEF,140,bon_MDEF,40,bon_NONE]
+,[1383,"Adamantine 3",0,bon_HP_MUL,15,bon_DEF,220,bon_MDEF,60,bon_NONE]
+,[1384,"Adamantine 4",0,bon_HP_MUL,20,bon_DEF,260,bon_MDEF,80,bon_NONE]
+,[1385,"Adamantine 5",0,bon_HP_MUL,25,bon_DEF,300,bon_MDEF,100,bon_NONE]
+,[1386,"Adamantine 6",0,bon_HP_MUL,30,bon_DEF,340,bon_MDEF,120,bon_NONE]
+,[1387,"Adamantine 7",0,bon_HP_MUL,35,bon_DEF,380,bon_MDEF,140,bon_NONE]
+,[1388,"Adamantine 8",0,bon_HP_MUL,40,bon_DEF,420,bon_MDEF,160,bon_NONE]
+,[1389,"Adamantine 9",0,bon_HP_MUL,45,bon_DEF,460,bon_MDEF,180,bon_NONE]
+,[1390,"Adamantine 10",0,bon_HP_MUL,55,bon_DEF,500,bon_MDEF,200,bon_NONE]
 ];
 //,[  x,"name",0,bon_NONE]
 EnchantNum = EnchantOBJ.length -1;
@@ -1496,7 +1566,15 @@ EnchantNum = EnchantOBJ.length -1;
 841,842,843,844,845,846,847,848,849,850,851,852,853,854,855,856,857,858,859,860,
 861,862,863,864,865,866,867,868,869,870,871,872,873,874,875,876,877,878,879,880,
 881,882,883,884,885,886,887,888,889,890,891,892,893,894,895,896,897,898,899,900,
-901,902,903,904,905,906,907,908,909,910,911,912,913,914,915,916,917,918,919,920,"NULL"]
+901,902,903,904,905,906,907,908,909,910,911,912,913,914,915,916,917,918,919,920,"NULL"],
+/* 99 Bio 5 Headgears 1 */ [0,1,2,3,4,5,11,12,13,14,15,21,22,23,24,25,31,32,33,34,35,41,42,43,44,45,51,52,53,54,55,"NULL"],
+/* 100 Bio 5 Headgears 2 */ [0,1321,1322,1323,1324,1325,1326,1327,1328,1329,1330,
+1331,1332,1333,1334,1335,1336,1337,1338,1339,1340,
+1341,1342,1343,1344,1345,1346,1347,1348,1349,1350,
+1351,1352,1353,1354,1355,1356,1357,1358,1359,1360,
+1361,1362,1363,1364,1365,1366,1367,1368,1369,1370,
+1371,1372,1373,1374,1375,1376,1377,1378,1379,1380,
+1381,1382,1383,1384,1385,1386,1387,1388,1389,1390,"NULL"]
 ];
 }
 // /*  */[0,"NULL"],
