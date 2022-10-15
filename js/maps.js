@@ -86,5 +86,12 @@ MAP_NAME = [
 ,["","Assault on the Airship"]
 ,["","Fenrir and Sarah"]
 ,["","The Last Room"]
+,["","The Royal Banquet"]
+,["","Sky Fortress Invasion"]
+,["","Room of Consciousness"]
+,["","Nightmare Glast Heim"]
+,["","Tomb of Honor"]
+// ,["","Place_Holder"]
+// ,["","Place_Holder"]
 ];
 }
