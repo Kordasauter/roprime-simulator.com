@@ -1099,6 +1099,47 @@ function ApplySkillModifiers( damage )
 				dmgMultiplier += 30 * CardNumSearch( 672 );
 		}
 	}
+	if(n_A_ActiveSkill == skill_REB_ANTI_MATERIAL_BLAST || n_A_ActiveSkill == skill_REB_MASS_SPIRAL )
+	{
+		if(EquipNumSearch(2242))
+		{//Finisher [2]
+			if(n_A_Weapon_ATKplus >=7)
+				dmgMultiplier += 30;
+		}
+	}
+	if(n_A_ActiveSkill == skill_REB_SHATTERING_STORM )
+	{
+		if(EquipNumSearch(2243))
+		{//Dustfire [2]
+			if(n_A_Weapon_ATKplus >=7)
+				dmgMultiplier += 15;
+		}
+	}
+	if(n_A_ActiveSkill == skill_REB_VANISHING_BUSTER )
+	{
+		if(EquipNumSearch(2243))
+		{//Dustfire [2]
+			if(n_A_Weapon_ATKplus >=9)
+				dmgMultiplier += 15;
+		}
+	}
+	if(n_A_ActiveSkill == skill_REB_FIRE_RAIN )
+	{
+		if(EquipNumSearch(2244))
+		{//Burning Rose [2]
+			if(n_A_Weapon_ATKplus >=7)
+				dmgMultiplier += 30;
+		}
+	}
+	if(n_A_ActiveSkill == skill_REB_DRAGON_TAIL )
+	{
+		if(EquipNumSearch(2245))
+		{//Avenger [2]
+			if(n_A_Weapon_ATKplus >=7)
+				dmgMultiplier += 15;
+		}
+	}
+	
 	// if(n_A_ActiveSkill == )
 	// {
 		// if(EquipNumSearch() && n_A_Weapon_ATKplus >= )

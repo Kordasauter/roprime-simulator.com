@@ -65,6 +65,7 @@ MAP_NAME = [
 ,["","Outskirts of Kamidal Mountain"]
 ,["","Kamidal Tunnel"]
 ,["","Scaraba Hall"]
+,["","Skarava hall"]
 ,["","Brasilis Field"]
 ,["","Brasilis Dungeon"]
 ,["","Overlook Water Dungeon"]
@@ -91,6 +92,9 @@ MAP_NAME = [
 ,["","Room of Consciousness"]
 ,["","Nightmare Glast Heim"]
 ,["","Tomb of Honor"]
+,["","Terra Gloria"]
+,["","Werner Laboratory Central Room"]
+,["","Heart Hunter War Base 2"]
 // ,["","Place_Holder"]
 // ,["","Place_Holder"]
 ];

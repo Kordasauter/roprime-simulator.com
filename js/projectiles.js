@@ -35,7 +35,13 @@ NONEARROW = [0,0,"","None"];
 BulletOBJ = [
 [10,0,"","Bullet"],
 [15,6,"","Silver Bullet"],
-[30,0,"","Blood Bullet"]
+[30,0,"","Blood Bullet"],
+[50,0,"","Armor-Piercing Bullet"],
+[40,0,"","Blazing Bullet"],
+[40,0,"","Freezing Bullet"],
+[40,0,"","Lightning Bullet"],
+[40,0,"","Magic Stone Bullet"],
+[40,0,"","Purifying Bullet"],
 ];
 
 GrenadeOBJ = [

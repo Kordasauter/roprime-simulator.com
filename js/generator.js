@@ -155,36 +155,36 @@ function BuildGeneratorTable()
 	
 	formElements["ID"].value = EnemyNum + 1;
 	
-	formElements["Race"].options[0] = new Option( "Formless", "  race_FORMLESS" );
-	formElements["Race"].options[1] = new Option( "Undead", "    race_UNDEAD" );
-	formElements["Race"].options[2] = new Option( "Brute", "     race_BRUTE" );
-	formElements["Race"].options[3] = new Option( "Plant", "     race_PLANT" );
-	formElements["Race"].options[4] = new Option( "Insect", "    race_INSECT" );
-	formElements["Race"].options[5] = new Option( "Fish", "      race_FISH" );
-	formElements["Race"].options[6] = new Option( "Demon", "     race_DEMON" );
+	formElements["Race"].options[0] = new Option( "Formless", "race_FORMLESS" );
+	formElements["Race"].options[1] = new Option( "Undead", "race_UNDEAD" );
+	formElements["Race"].options[2] = new Option( "Brute", "race_BRUTE" );
+	formElements["Race"].options[3] = new Option( "Plant", "race_PLANT" );
+	formElements["Race"].options[4] = new Option( "Insect", "race_INSECT" );
+	formElements["Race"].options[5] = new Option( "Fish", "race_FISH" );
+	formElements["Race"].options[6] = new Option( "Demon", "race_DEMON" );
 	formElements["Race"].options[7] = new Option( "Demi Human", "race_DEMI_HUMAN" );
-	formElements["Race"].options[8] = new Option( "Angel", "     race_ANGEL" );
-	formElements["Race"].options[9] = new Option( "Dragon", "    race_DRAGON" );
+	formElements["Race"].options[8] = new Option( "Angel", "race_ANGEL" );
+	formElements["Race"].options[9] = new Option( "Dragon", "race_DRAGON" );
 	
 	formElements["Element"].options[0] = new Option( "Neutral", "ele_NEUTRAL" );
-	formElements["Element"].options[1] = new Option( "Water", "  ele_WATER" );
-	formElements["Element"].options[2] = new Option( "Earth", "  ele_EARTH" );
-	formElements["Element"].options[3] = new Option( "Fire", "   ele_FIRE" );
-	formElements["Element"].options[4] = new Option( "Wind", "   ele_WIND" );
-	formElements["Element"].options[5] = new Option( "Poison", " ele_POISON" );
-	formElements["Element"].options[6] = new Option( "Holy", "   ele_HOLY" );
-	formElements["Element"].options[7] = new Option( "Dark", "   ele_DARK" );
-	formElements["Element"].options[8] = new Option( "Ghost", "  ele_GHOST" );
-	formElements["Element"].options[9] = new Option( "Undead", " ele_UNDEAD" );
+	formElements["Element"].options[1] = new Option( "Water", "ele_WATER" );
+	formElements["Element"].options[2] = new Option( "Earth", "ele_EARTH" );
+	formElements["Element"].options[3] = new Option( "Fire", "ele_FIRE" );
+	formElements["Element"].options[4] = new Option( "Wind", "ele_WIND" );
+	formElements["Element"].options[5] = new Option( "Poison", "ele_POISON" );
+	formElements["Element"].options[6] = new Option( "Holy", "ele_HOLY" );
+	formElements["Element"].options[7] = new Option( "Dark", "ele_DARK" );
+	formElements["Element"].options[8] = new Option( "Ghost", "ele_GHOST" );
+	formElements["Element"].options[9] = new Option( "Undead", "ele_UNDEAD" );
 	
 	formElements["ElementLevel"].options[0] = new Option( "1", 1 );
 	formElements["ElementLevel"].options[1] = new Option( "2", 2 );
 	formElements["ElementLevel"].options[2] = new Option( "3", 3 );
 	formElements["ElementLevel"].options[3] = new Option( "4", 4 );
 	
-	formElements["Size"].options[0] = new Option( "Small", " siz_SMALL" );
+	formElements["Size"].options[0] = new Option( "Small", "siz_SMALL" );
 	formElements["Size"].options[1] = new Option( "Medium", "siz_MEDIUM" );
-	formElements["Size"].options[2] = new Option( "Large", " siz_LARGE" );
+	formElements["Size"].options[2] = new Option( "Large", "siz_LARGE" );
 	
 	formElements["BossFlag"].options[0] = new Option( "Normal", 0 );
 	formElements["BossFlag"].options[1] = new Option( "MVP", 1 );
@@ -195,60 +195,82 @@ function BuildGeneratorTable()
 function GenerateMonster()
 {
 	var str;
+	// var word='';
 	str = ',[ ';
 	str += formElements["ID"].value;
-	str += ', "';
-	str += formElements["Name"].value;
-	str += '",';
+	str += ',';
+	str += formatting(formElements["Name"].value,30)
+	str += '"' + formElements["Name"].value + '"';
+	str += ',';
+	str += formatting(formElements["Race"].value,15)
 	str += formElements["Race"].value;
 	str += ',';
+	str += formatting(formElements["Element"].value,11)
 	str += formElements["Element"].value;
 	str += '*10+';
 	str += formElements["ElementLevel"].value;
 	str += ',';
+	str += formatting(formElements["Size"].value,10)
 	str += formElements["Size"].value;
-	str += ', 	';
+	str += ',';
+	str += formatting(formElements["Level"].value,7)
 	str += formElements["Level"].value;
-	str += ', ';
+	str += ',';
+	str += formatting(formElements["HP"].value,8)
 	str += formElements["HP"].value;
-	str += ',	  ';
+	str += ',';
+	str += formatting(formElements["Vit"].value,7)
 	str += formElements["Vit"].value;
-	str += ',	';
+	str += ',';
+	str += formatting(formElements["Agi"].value,6)
 	str += formElements["Agi"].value;
-	str += ',	 ';
+	str += ',';
+	str += formatting(formElements["Int"].value,8)
 	str += formElements["Int"].value;
-	str += ',	 ';
+	str += ',';
+	str += formatting(formElements["Dex"].value,7)
 	str += formElements["Dex"].value;
-	str += ',	 ';
+	str += ',';
+	str += formatting(formElements["Luk"].value,7)
 	str += formElements["Luk"].value;
-	str += ',	  ';
+	str += ',';
+	str += formatting(formElements["MinAtk"].value,9)
 	str += formElements["MinAtk"].value;
-	str += ',	  ';
+	str += ',';
+	str += formatting(formElements["MaxAtk"].value,7)
 	str += formElements["MaxAtk"].value;
-	str += ', 	';
+	str += ',';
+	str += formatting(formElements["Def"].value,7)
 	str += formElements["Def"].value;
-	str += ', 	 ';
+	str += ',';
+	str += formatting(formElements["MDef"].value,9)
 	str += formElements["MDef"].value;
-	str += ', 	   ';
+	str += ',';
+	str += formatting(formElements["BExp"].value,11)
 	str += formElements["BExp"].value;
-	str += ', 	   ';
+	str += ',';
+	str += formatting(formElements["JExp"].value,11)
 	str += formElements["JExp"].value;
 	str += ',   ,       ';
 	str += formElements["BossFlag"].value;
-	str += ', 		0,		';
-	// str += formElements["PerfHit"].value;
-	str += 200 + parseInt(formElements["Level"].value) + parseInt(formElements["Agi"].value) + Math.floor(parseInt(formElements["Luk"].value) / 5);
-	str += ', 		  ';
-	// str += formElements["PerfDodge"].value;
-	str += 170 + parseInt(formElements["Level"].value) + parseInt(formElements["Dex"].value) + Math.floor(parseInt(formElements["Luk"].value) / 3);
-	str += ',	   ';
+	str += ',      0,';
+	var hit100 = 200 + parseInt(formElements["Level"].value) + parseInt(formElements["Agi"].value) + Math.floor(parseInt(formElements["Luk"].value) / 5);
+	str += formatting(hit100.toString(),9)
+	str += hit100;
+	str += ',';
+	var flee95 = 170 + parseInt(formElements["Level"].value) + parseInt(formElements["Dex"].value) + Math.floor(parseInt(formElements["Luk"].value) / 3);
+	str += formatting(flee95.toString(),13);
+	str += flee95;
+	str += ',';
 	var mlevel = parseInt(formElements["Level"].value);
 	var mvit = parseInt(formElements["Vit"].value);
 	var sdef = Math.floor((mlevel + mvit)/2);
+	str += formatting(sdef.toString(),8);
 	str += sdef;
-	str += ',		';
+	str += ',';
+	str += formatting(sdef.toString(),8);
 	str += sdef;
-	str += ',		  0]';
+	str += ',          0]';
 	
 	
 	
@@ -257,4 +279,15 @@ function GenerateMonster()
 	
 	formElements["Output"].value = str;
 	
+}
+
+function formatting(word,count)
+{
+	var space='';
+	// word = formElements["Name"].value
+	for(var i = 0; i < (count - word.length);i++)
+	{
+		space += ' ';
+	}
+	return space;
 }

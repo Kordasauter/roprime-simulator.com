@@ -257,6 +257,17 @@ function calcMAtk( includeMultipliers )
 		{
 			matk_mul += n_A_HEAD_DEF_PLUS;
 		}
+		if(EquipNumSearch(2230))
+		{// Agenda Robe [1]
+			if(n_A_BaseLV >= 120)
+			{
+				matk_mul += 4;
+			}
+			if(n_A_BaseLV >= 140)
+			{
+				matk_mul += 5;
+			}
+		}
 		
 //Shadows
 		if ( EquipNumSearch( 1656 ) )
@@ -627,6 +638,28 @@ function calcMAtk( includeMultipliers )
 		n_A_EquipMATK += 3 * n_A_SHOULDER_DEF_PLUS;
 		if(SU_INT >= 90)
 			n_A_EquipMATK += 20;
+	}
+	if(n_A_Equip[eq_WEAPON] == 2246)
+	{// Sealed Magic Sword [2]
+		if(n_A_Weapon_ATKplus >= 7)
+		{
+			n_A_EquipMATK += 85;
+		}
+		if(n_A_Weapon_ATKplus >= 10)
+		{
+			n_A_EquipMATK += 45;
+		}
+	}
+	if(n_A_Equip[eq_WEAPONII] == 2246)
+	{// Sealed Magic Sword [2]
+		if(n_A_Weapon2_ATKplus >= 7)
+		{
+			n_A_EquipMATK += 85;
+		}
+		if(n_A_Weapon2_ATKplus >= 10)
+		{
+			n_A_EquipMATK += 45;
+		}
 	}
 	
 //shadows

@@ -1038,6 +1038,15 @@ function StPlusCalc()
 			wSPC_LUK -= 6;
 		}
 	}
+	if(EquipNumSearch(2238))
+	{//Consultation Robe [1] + Morrigane's Manteau
+		wSPC_AGI += n_A_BODY_DEF_PLUS;
+	}
+	if(EquipNumSearch(2239))
+	{//Consultation Robe [1] + Valkyrie Manteau
+		wSPC_VIT += n_A_BODY_DEF_PLUS;
+		wSPC_LUK += n_A_BODY_DEF_PLUS;
+	}
 	
 
 	wSPCall = StPlusCard(bon_ALL_STATS);
@@ -1113,6 +1122,10 @@ function StPlusCalc()
 				wSPC_LUK += 10;
 			}
 		}
+	}
+	if(CardNumSearch(770))
+	{//Cutie Card
+		wSPC_AGI += Math.floor(n_A_SHOES_DEF_PLUS / 2);
 	}
 	
 	var numMegs = EquipNumSearch( 348 );

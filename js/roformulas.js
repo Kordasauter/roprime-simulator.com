@@ -991,6 +991,33 @@ function CalcEquipAtk()
 		if(SU_STR >= 90)
 			equipmentAttack += 10;
 	}
+	if(n_A_Equip[eq_WEAPON] == 2247)
+	{// Sealed Maximum Sword [2]
+		if(n_A_Weapon_ATKplus >= 7)
+		{
+			equipmentAttack += 65;
+		}
+		if(n_A_Weapon_ATKplus >= 10)
+		{
+			equipmentAttack += 45;
+		}
+	}
+	if(n_A_Equip[eq_WEAPONII] == 2247)
+	{// Sealed Maximum Sword [2]
+		if(n_A_Weapon2_ATKplus >= 7)
+		{
+			equipmentAttack += 65;
+		}
+		if(n_A_Weapon2_ATKplus >= 10)
+		{
+			equipmentAttack += 45;
+		}
+	}
+	if(EquipNumSearch(2250))
+	{//YSF01 Manteau
+		if(n_A_SHOULDER_DEF_PLUS >= 8)
+			equipmentAttack += 20;
+	}
 	
 //Cards
 	if(CardNumSearch(557))
@@ -1869,6 +1896,18 @@ function CalcAttackMod()
 	{// Abusive Robe + Valkyrie Manteau
 		n_tok[bon_PHY_ATK] += n_A_BODY_DEF_PLUS;
 	}
+	if(EquipNumSearch(2249))
+	{//YSF01 Plate
+		if(n_A_BODY_DEF_PLUS >= 8)
+			n_tok[bon_PHY_ATK] += 5;
+		if(n_A_BODY_DEF_PLUS >= 11)
+			n_tok[bon_PHY_ATK] += 2;
+		if(n_A_BODY_DEF_PLUS >= 13)
+			n_tok[bon_PHY_ATK] += 4;
+		if(SU_STR >= 125)
+			n_tok[bon_PHY_ATK] += n_A_BODY_DEF_PLUS;
+			
+	}
 	
 //shadows
 	if ( EquipNumSearch( 1660 ) )
@@ -2123,6 +2162,13 @@ function CalcCriticalMod()
 		n_tok[bon_DMG_CRIT] +=  n_A_SHOULDER_DEF_PLUS;
 		if(SU_LUK >= 90)
 			n_tok[bon_DMG_CRIT] += 15;
+	}
+	if(EquipNumSearch(2251))
+	{//YSF01 Greave
+		if(n_A_SHOES_DEF_PLUS >= 13)
+			n_tok[bon_DMG_CRIT] += 10;
+		if(SU_LUK >= 125)
+			n_tok[bon_DMG_CRIT] += 30;
 	}
 	
 //Shadow
@@ -2429,6 +2475,25 @@ function CalcRangedMod()
 		if(SU_DEX >= 90)
 			n_tok[bon_DMG_RANGE] += 3;
 	}
+	if(EquipNumSearch(2232))
+	{// Republic Hat [1]
+		if(n_A_HEAD_DEF_PLUS >= 7)
+			n_tok[bon_DMG_RANGE] += 2;
+		if(n_A_HEAD_DEF_PLUS >= 10)
+			n_tok[bon_DMG_RANGE] += 4;
+	}
+	if(EquipNumSearch(2241))
+	{//Dark Rose [2]
+		if(n_A_Weapon_ATKplus >= 7)
+			n_tok[bon_DMG_RANGE] += 15;
+	}
+	else if ( EquipNumSearch( 2243 ) && n_A_Arrow == bulTyp_ArmorPiercing )
+	{ // Dustfire [2]
+		n_tok[bon_DMG_RANGE] += 30;
+	}
+	// if(EquipNumSearch())
+	// {
+	// }
 	
 //Shadow
 	if( EquipNumSearch(1842))
@@ -2477,7 +2542,17 @@ function CalcRangedMod()
 	if(CardNumSearch(722))
 	{//Powerful Archer Skeleton Card
 		if(n_A_BaseLV >= 100)
-			n_tok[bon_DMG_RANGE] += 2;
+			n_tok[bon_DMG_RANGE] += 2 * CardNumSearch(722);
+	}
+	if(CardNumSearch(771))
+	{//Heart Hunter Card
+		if(n_A_WeaponType == weapTyp_HANDGUN || n_A_WeaponType == weapTyp_RIFLE || n_A_WeaponType == weapTyp_GRENADE_LAUNCHER)
+		{
+			n_tok[bon_DMG_RANGE] += (5 * CardNumSearch(771)) + (n_A_Weapon_ATKplus * CardNumSearch(771));
+			if(n_A_Weapon_ATKplus >= 10)
+				n_tok[bon_DMG_RANGE] += (5 * CardNumSearch(771));
+		}
+
 	}
 	
 //Skills
@@ -3025,6 +3100,35 @@ function calcHP()
 	{// "Chronocloak of Vitality"
 		additiveHP += 400 * Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
 	}
+	if(EquipNumSearch(2233))
+	{//Mercenary Ring Type A
+		if(n_A_JobSearch() == cls_NOV)
+		{
+			additiveHP += 1000;
+		}
+	}
+	if(n_A_Equip[eq_WEAPON] == 2247)
+	{// Sealed Maximum Sword [2]
+		if(n_A_Weapon_ATKplus >= 7)
+		{
+			additiveHP += 500;
+		}
+		if(n_A_Weapon_ATKplus >= 10)
+		{
+			additiveHP += 500;
+		}
+	}
+	if(n_A_Equip[eq_WEAPONII] == 2247)
+	{// Sealed Maximum Sword [2]
+		if(n_A_Weapon2_ATKplus >= 7)
+		{
+			additiveHP += 500;
+		}
+		if(n_A_Weapon2_ATKplus >= 10)
+		{
+			additiveHP += 500;
+		}
+	}
 	
 //Cards
 	if(CardNumSearch(565))
@@ -3308,6 +3412,11 @@ function calcHP()
 	   (CardNumSearch(748) && (n_A_JOB == cls_ABI || n_A_JOB == cls_ABIt)) )  //Arch Bishop Margaretha Card
 	{
 		hpMultiplier += 10;
+	}
+	if(CardNumSearch(769))
+	{//Venomous Chimera Card
+		if(n_A_SHOES_DEF_PLUS >= 12)
+			hpMultiplier += 15;
 	}
 	
 // Equipment
@@ -3888,6 +3997,37 @@ function calcSP( n_A_MaxSP )
 		if(n_A_BODY_DEF_PLUS >= 12)
 			w += 30;
 	}
+	if(EquipNumSearch(2233))
+	{//Mercenary Ring Type A
+		if(n_A_JobSearch() == cls_NOV)
+		{
+			w += 200;
+		}
+	}
+	if(n_A_Equip[eq_WEAPON] == 2246)
+	{// Sealed Magic Sword [2]
+		if(n_A_Weapon_ATKplus >= 7)
+		{
+			w += 50;
+		}
+		if(n_A_Weapon_ATKplus >= 10)
+		{
+			w += 50;
+		}
+	}
+	if(n_A_Equip[eq_WEAPONII] == 2246)
+	{// Sealed Magic Sword [2]
+		if(n_A_Weapon2_ATKplus >= 7)
+		{
+			w += 50;
+		}
+		if(n_A_Weapon2_ATKplus >= 10)
+		{
+			w += 50;
+		}
+	}
+	
+	
 //Shadows
 	if ( EquipNumSearch( 1655 ) )
 	{ // "Shadow Champion Set"
@@ -3952,6 +4092,11 @@ function calcSP( n_A_MaxSP )
 	   (CardNumSearch(752) && (n_A_JOB == cls_WAN || n_A_JOB == cls_WANt)) )  //Wanderer Trentini Card
 	{
 		spMultiplier += 10;
+	}
+	if(CardNumSearch(769))
+	{//Venomous Chimera Card
+		if(n_A_SHOES_DEF_PLUS >= 12)
+			spMultiplier += 15;
 	}
 	
 // Equipment
@@ -4243,6 +4388,20 @@ function calcHardDef( n_A_totalDEF )
 	{ // Royal Guard Shield
 		n_A_DEF += n_A_LEFT_DEF_PLUS * 10;
 	}
+	if(n_A_Equip[eq_WEAPON] == 2248)
+	{// Sealed Evil Sword [2]
+		if(n_A_Weapon_ATKplus >= 10)
+		{
+			n_A_DEF += 50;
+		}
+	}
+	if(n_A_Equip[eq_WEAPONII] == 2248)
+	{// Sealed Evil Sword [2]
+		if(n_A_Weapon2_ATKplus >= 10)
+		{
+			n_A_DEF += 50;
+		}
+	}
 	
 // Shadows
 	if(EquipNumSearch(1812))
@@ -4508,6 +4667,20 @@ function calcHardMDef(n_A_MDEF)
 	{ // Royal Guard Shield
 		n_A_MDEF += n_A_LEFT_DEF_PLUS;
 	}
+	if(n_A_Equip[eq_WEAPON] == 2248)
+	{// Sealed Evil Sword [2]
+		if(n_A_Weapon_ATKplus >= 7)
+		{
+			n_A_MDEF += 10;
+		}
+	}
+	if(n_A_Equip[eq_WEAPONII] == 2248)
+	{// Sealed Evil Sword [2]
+		if(n_A_Weapon2_ATKplus >= 7)
+		{
+			n_A_MDEF += 10;
+		}
+	}
 	
 	if(EquipNumSearch(1820))
 	{ // Shadow Minstrel Shield
@@ -4619,6 +4792,11 @@ function calcHit(n_A_HIT)
 	if(CardNumSearch(746) && (n_A_JOB == cls_MEC || n_A_JOB == cls_MECt))
 	{//Mechanic Howard Card
 		n_A_HIT += 20;
+	}
+	if(CardNumSearch(766))
+	{//Humanoid Chimera Card
+		if(n_A_BaseLV >= 90)
+			n_A_HIT += 10 * CardNumSearch(766);
 	}
 	
 	// Equipment
@@ -4836,6 +5014,10 @@ function calcFlee( n_A_FLEE )
 	{// Flattery Robe + Ancient Cape[0]\[1]
 		n_A_FLEE += n_A_BODY_DEF_PLUS;
 	}
+	if(EquipNumSearch(2238))
+	{//Consultation Robe [1] + Morrigane's Manteau
+		n_A_FLEE += n_A_BODY_DEF_PLUS * 2;
+	}
 	
 	if(n_A_JobSearch2() == cls_ASS || n_A_JobSearch2() == cls_ROG)
 		n_A_FLEE += 4 * SkillSearch(skill_TH_IMPROVE_DODGE);
@@ -4938,7 +5120,11 @@ function calcFlee( n_A_FLEE )
 	{//Geneticist Flamel Card
 		n_A_FLEE += 20;
 	}
-	
+	if(CardNumSearch(767))
+	{//Material Chimera Card
+		if(n_A_BaseLV >= 90)
+			n_A_FLEE += 10 * CardNumSearch(767);
+	}
 	// Multipliers
 	var fleeMultiplier = 1;
 	
@@ -5057,14 +5243,14 @@ function calcCrit( n_A_CRI )
 	n_A_CRI = 1 + Math.floor( n_A_LUK / 3 );
 
 	n_A_CRI += n_tok[bon_CRIT];
-	w = n_tok[bon_CRIT_RC_FORMLESS+n_B[en_RACE]];
+	var Race_Crit = n_tok[bon_CRIT_RC_FORMLESS+n_B[en_RACE]];
 
 // Card modifiers
 	if(n_A_JobSearch()==cls_ACO)
 	{
 		if(n_B[en_RACE]==race_UNDEAD || n_B[en_RACE] == race_DEMON )
 		{
-			w += 9 * CardNumSearch(253); // FurSeal
+			Race_Crit += 9 * CardNumSearch(253); // FurSeal
 		}
 	}
 	if(SU_LUK >= 80 && CardNumSearch(267)) // GiantWhisper
@@ -5122,7 +5308,7 @@ function calcCrit( n_A_CRI )
 	if(n_A_HEAD_DEF_PLUS >= 6 && EquipNumSearch(785)) // DevilringHat
 		n_A_CRI += (n_A_HEAD_DEF_PLUS -5);	
 	if(n_A_Weapon_ATKplus >= 6 && n_B[en_RACE]==race_DEMI_HUMAN && EquipNumSearch(1091)) // GlorJamadhar
-		w += 5;
+		Race_Crit += 5;
 	if(EquipNumSearch(1122) && n_A_JobSearch()==cls_MER) // Merchant Figurine
 		n_A_CRI += 5 * EquipNumSearch(1122) ;
 	if(EquipNumSearch(1161)) // VeteranHammer
@@ -5196,6 +5382,28 @@ function calcCrit( n_A_CRI )
 	if( EquipNumSearch(2223) )  // Old Blazing Soul [1]
 	{
 		n_A_CRI += 2 * n_A_HEAD_DEF_PLUS;
+	}
+	if(n_A_Equip[eq_WEAPON] == 2248)
+	{// Sealed Evil Sword [2]
+		if(n_A_Weapon_ATKplus >= 7)
+		{
+			n_A_CRI += 30;
+		}
+		if(n_A_Weapon_ATKplus >= 10)
+		{
+			n_A_CRI += 20;
+		}
+	}
+	if(n_A_Equip[eq_WEAPONII] == 2248)
+	{// Sealed Evil Sword [2]
+		if(n_A_Weapon2_ATKplus >= 7)
+		{
+			n_A_CRI += 30;
+		}
+		if(n_A_Weapon2_ATKplus >= 10)
+		{
+			n_A_CRI += 20;
+		}
 	}
 	
 //Shadow
@@ -5772,6 +5980,25 @@ function calcASPD()
 		if(SU_AGI >= 90)
 			equipASPD += 3;
 	}
+	if(EquipNumSearch(2240))
+	{// Ultralight Magic Shield [1]
+		if(n_A_LEFT_DEF_PLUS >= 7)
+			equipASPD += 2;
+		if(n_A_LEFT_DEF_PLUS >= 9)
+			equipASPD += 3;
+	}
+	if(EquipNumSearch(2251))
+	{//YSF01 Greave
+		if(n_A_SHOES_DEF_PLUS >= 8)
+			equipASPD += 8;
+	}
+	if(EquipNumSearch(2253))
+	{//YSF01 Plate + Greave
+			equipASPD += n_A_SHOES_DEF_PLUS;
+	}
+	// if(EquipNumSearch())
+	// {
+	// }
 	
 //Cards
 	if(CardNumSearch(556))
@@ -5800,6 +6027,10 @@ function calcASPD()
 			equipASPD += CardNumSearch(700);
 		if(n_A_BaseLV >= 120)
 			equipASPD += CardNumSearch(700);
+	}
+	if(CardNumSearch(770))
+	{//Cutie Card
+		equipASPD += Math.floor(n_A_SHOES_DEF_PLUS / 2);
 	}
 	
 //Shadows
@@ -5949,6 +6180,48 @@ function calcASPD()
 		if(n_A_SHOULDER_DEF_PLUS >= 10)
 			flatASPD += 1;
 	}
+	if(EquipNumSearch(2241))
+	{//Dark Rose [2]
+		if(n_A_Weapon_ATKplus >= 9)
+			flatASPD += 1;
+	}
+	if(n_A_Equip[eq_WEAPON] == 2247)
+	{// Sealed Maximum Sword [2]
+		if(n_A_Weapon_ATKplus >= 10)
+		{
+			flatASPD += 1;
+		}
+	}
+	if(n_A_Equip[eq_WEAPONII] == 2247)
+	{// Sealed Maximum Sword [2]
+		if(n_A_Weapon2_ATKplus >= 10)
+		{
+			flatASPD += 1;
+		}
+	}
+	if(n_A_Equip[eq_WEAPON] == 2248)
+	{// Sealed Evil Sword [2]
+		if(n_A_Weapon_ATKplus >= 10)
+		{
+			flatASPD += 1;
+		}
+	}
+	if(n_A_Equip[eq_WEAPONII] == 2248)
+	{// Sealed Evil Sword [2]
+		if(n_A_Weapon2_ATKplus >= 10)
+		{
+			flatASPD += 1;
+		}
+	}
+	if(EquipNumSearch(2251))
+	{//YSF01 Greave
+		if(n_A_SHOES_DEF_PLUS >= 11)
+			flatASPD += 1;
+	}
+	// if(EquipNumSearch())
+	// {
+	// }
+	
 //Cards
 	if(CardNumSearch(750) && (n_A_JOB == cls_RUN || n_A_JOB == cls_RUNt))
 	{//Rune Knight Seyren Card
@@ -6035,58 +6308,58 @@ function CalcVariableCast()
 	variableCastTime = Max( variableCastTime, 0 );
 	
 	
-	var w=100;
-	w += n_tok[bon_RED_CAST];
+	var VCT=100;
+	VCT += n_tok[bon_RED_CAST];
 	
 	if ( n_A_JobSearch() == cls_MAG && CardNumSearch( 454 ) )
 	{ // MageSet ?
-		w -= 15;
+		VCT -= 15;
 	}
 	if ( n_A_JobSearch2() == cls_SAG && CardNumSearch( 460 ) )
 	{ // SageSet ?
-		w -= 15;
+		VCT -= 15;
 	}
 	if ( EquipNumSearch( 750 ) )
 	{ // Set ?
-		w -= n_A_Weapon_ATKplus;
+		VCT -= n_A_Weapon_ATKplus;
 	}
 	if ( n_A_card[8] == 177 )
 	{ // Katheryne
-		w -= n_A_HEAD_DEF_PLUS;
+		VCT -= n_A_HEAD_DEF_PLUS;
 	}
 	/*if ( EquipNumSearch( 849 ) )
 	{ // Balloon Hat
-		w -= n_A_HEAD_DEF_PLUS;
+		VCT -= n_A_HEAD_DEF_PLUS;
 	}*/
 	if ( n_A_Weapon_ATKplus >= 9 &&EquipNumSearch(1084))
 	{ // Glorious Arc Wand
-		w -= 5;
+		VCT -= 5;
 	}
 	if ( n_A_Weapon_ATKplus >= 9 &&EquipNumSearch(1095))
 	{ // Glorious Apocalypse
-		w -= 5;
+		VCT -= 5;
 	}
 	if(SU_DEX >= 120 && EquipNumSearch(1260))
 	{ // Magic Stone Hat
-		w -= 2;
+		VCT -= 2;
 	}
 	if ( EquipNumSearch( 1145 ) )
 	{ // Mini Propeller (Kafra)
-		w -= n_A_HEAD_DEF_PLUS;
+		VCT -= n_A_HEAD_DEF_PLUS;
 	}
 	if ( EquipNumSearch( 750 ) )
 	{ // Spiritual Ring/Soul Staff/Wizardry Staff
-		w -= n_A_Weapon_ATKplus;
+		VCT -= n_A_Weapon_ATKplus;
 	}
 	if ( EquipNumSearch( 872 ) )
 	{ // Crown of Deceit
 		if ( n_A_HEAD_DEF_PLUS >= 7 )
 		{
-			w -= 5;
+			VCT -= 5;
 		}
 		if ( n_A_HEAD_DEF_PLUS >= 9 )
 		{
-			w -= 5;
+			VCT -= 5;
 		}
 	}
 	if ( EquipNumSearch( 1149 ) )
@@ -6095,108 +6368,119 @@ function CalcVariableCast()
 		{ // Evil Bone Wand or Thorn Staff of Darkness
 			if ( n_A_Weapon_ATKplus >= 10 )
 			{
-				w -= 10;
+				VCT -= 10;
 			}
 		}
 	}
 	if ( EquipNumSearch( 1339 ) && n_A_HEAD_DEF_PLUS >= 8 )
 	{ // Capricorn Diadem
-		w -= 3;
+		VCT -= 3;
 	}
 	if ( EquipNumSearch( 1344 ) && n_A_HEAD_DEF_PLUS >= 7 )
 	{ // Sagittarius Diadem
-		w -= 3;
+		VCT -= 3;
 		if ( n_A_HEAD_DEF_PLUS >= 9 )
 		{
-			w -= 2;
+			VCT -= 2;
 		}
 	}
 	if ( EquipNumSearch( 1006 ) )
 	{ // Rogue's Treasure + Black Cat
-		w -= Math.floor( n_A_Weapon_ATKplus / 2 );
+		VCT -= Math.floor( n_A_Weapon_ATKplus / 2 );
 	}
 	if ( EquipNumSearch( 1497 ) )
 	{ // UFO Poring Hat
 		if ( n_A_HEAD_DEF_PLUS >= 7 )
 		{
-			w -= 5;
+			VCT -= 5;
 		}
 	}
 	if(EquipNumSearch(1681))
 	{ //"Amistr Hat"
 		if ( n_A_HEAD_DEF_PLUS >= 7 )
 		{
-			w -= 10;
+			VCT -= 10;
 		}
 	}
 	if( EquipNumSearch( 1759 ) )
 	{ // Diabolic Halo
 		if(n_A_HEAD_DEF_PLUS >= 7)
 		{
-			w -= 10;
+			VCT -= 10;
 		}
 		if(EquipNumSearch( 1452 ) && EquipNumSearch( 1453 ))
 		{// Mikatsuki + Raksasa Dagger
-			w -= n_A_Weapon_ATKplus + n_A_Weapon2_ATKplus;
+			VCT -= n_A_Weapon_ATKplus + n_A_Weapon2_ATKplus;
 		}
 	}	
 	if( EquipNumSearch( 1964 ) )
 	{//Hero Magic Coat
 		if(n_A_BODY_DEF_PLUS % 2 == 1) // If an odd refine level
 		{
-			w += 20;
+			VCT += 20;
 		}
 		else
 		{
-			w -= Math.floor(n_A_BODY_DEF_PLUS / 2);
+			VCT -= Math.floor(n_A_BODY_DEF_PLUS / 2);
 		}
 	}
 	if( EquipNumSearch( 1968 ) )
 	{//Hero Nependess Shoes
 		if(n_A_SHOES_DEF_PLUS >=8)
-			w -= 5;
+			VCT -= 5;
 		if(n_A_SHOES_DEF_PLUS >=8 && n_A_SHOES_DEF_PLUS < 11) 
-			w -= n_A_SHOES_DEF_PLUS - 8;
+			VCT -= n_A_SHOES_DEF_PLUS - 8;
 		if(n_A_SHOES_DEF_PLUS >=11)
-			w -= 3;
+			VCT -= 3;
 		if(n_A_SHOES_DEF_PLUS >=11 && n_A_SHOES_DEF_PLUS < 13)
-			w -= (n_A_SHOES_DEF_PLUS - 11) * 3;
+			VCT -= (n_A_SHOES_DEF_PLUS - 11) * 3;
 		if(n_A_SHOES_DEF_PLUS >=13)
-			w -= 9;
+			VCT -= 9;
 	}
 	if( (EquipNumSearch(2053) || EquipNumSearch(2063) || EquipNumSearch(2065) || EquipNumSearch(2072))&& n_A_Weapon_ATKplus >= 9)
 	{//Blade of Light || Rusty Dragon's Wand || Shadow Eater || Mace of the Righteous
-		w -= 10;
+		VCT -= 10;
 	}
 	if(EquipNumSearch(2068) && n_A_Weapon_ATKplus >= 11) 
 	{//Big Badaboom
-		w -= 15;
+		VCT -= 15;
 	}
 	if(EquipNumSearch(2130))
 	{//Felrock's Cloak
 		if(n_A_SHOULDER_DEF_PLUS >= 7)
-			w -= 10;
+			VCT -= 10;
 		if(n_A_SHOULDER_DEF_PLUS >= 9)
-			w -= 10;
+			VCT -= 10;
 		if(n_A_SHOULDER_DEF_PLUS >= 12)
-			w -= 5;
+			VCT -= 5;
+	}
+	if(EquipNumSearch(2236))
+	{// Agenda Robe + Ancient Cape[0]\[1]
+		VCT -= n_A_BODY_DEF_PLUS * 2;
+	}
+	if(EquipNumSearch(2234))
+	{//Mercenary Ring Type B
+		if(n_A_JobSearch() == cls_NOV)
+		{
+			VCT -= 30;
+		}
 	}
 	
 	if(EquipNumSearch(1745))
 	{ //"Shadow Wizard Boots"
 		if ( n_A_ActiveSkill == skill_WI_METEOR_STORM || n_A_ActiveSkill == skill_WI_LORD_OF_VERMILLION || n_A_ActiveSkill == skill_WI_STORM_GUST )
 		{
-			w -= 3 * n_A_SHADOW_SHOES_DEF_PLUS;
+			VCT -= 3 * n_A_SHADOW_SHOES_DEF_PLUS;
 		}
 	}
 	if( EquipNumSearch( 1824 ) ) //Shadow Super Novice Shield
 	{
-		w -= n_A_SHADOW_SHIELD_DEF_PLUS;
-		if(n_A_SHADOW_SHIELD_DEF_PLUS >= 9){ w -= SkillSearch(skill_AR_OWLS_EYE);}
+		VCT -= n_A_SHADOW_SHIELD_DEF_PLUS;
+		if(n_A_SHADOW_SHIELD_DEF_PLUS >= 9){ VCT -= SkillSearch(skill_AR_OWLS_EYE);}
 	}
 	if ( EquipNumSearch(1996) )
 	{ // Shadow Doram Mage Gloves
-		w -= n_A_SHADOW_WEAPON_DEF_PLUS;
+		VCT -= n_A_SHADOW_WEAPON_DEF_PLUS;
 	}
 	
 // Skills
@@ -6205,16 +6489,16 @@ function CalcVariableCast()
 		var skillBonus = performerBuffs[ksBardSoloLevel];
 		/*var musicLessonsBonus = performerBuffs[ksMusicLessons];
 		var dexBonus = Math.floor( performerBuffs[ksBardDex] / 10 );
-		w -= skillBonus + musicLessonsBonus + dexBonus;*/
-		w -= skillBonus * 2;
+		VCT -= skillBonus + musicLessonsBonus + dexBonus;*/
+		VCT -= skillBonus * 2;
 	}
 	if ( SkillSearch(skill_KAG_16TH_NIGHT) ) {
-		w -= 50;
+		VCT -= 50;
 	}
 	
 	if ( TimeItemNumSearch( temp_ISILLA ) )
 	{ // Isilla
-		w -= 50;
+		VCT -= 50;
 	}
 
 	if ( w < 0 )
@@ -6227,37 +6511,37 @@ function CalcVariableCast()
 	w = 100;
 	
 	if(StPlusCalc2(bon_CAST_SKILL+ n_A_ActiveSkill) != 0)
-		w -= StPlusCalc2(bon_CAST_SKILL+ n_A_ActiveSkill);
+		VCT -= StPlusCalc2(bon_CAST_SKILL+ n_A_ActiveSkill);
 	if(StPlusCard(bon_CAST_SKILL+ n_A_ActiveSkill) != 0)
-		w -= StPlusCard(bon_CAST_SKILL+ n_A_ActiveSkill);
+		VCT -= StPlusCard(bon_CAST_SKILL+ n_A_ActiveSkill);
 	if(StPlusEnchant(bon_CAST_SKILL+ n_A_ActiveSkill) != 0)
-		w -= StPlusEnchant(bon_CAST_SKILL+ n_A_ActiveSkill);
+		VCT -= StPlusEnchant(bon_CAST_SKILL+ n_A_ActiveSkill);
 	if ( n_A_ActiveSkill==321 || n_A_ActiveSkill==197)
 	{ // Guillotine Fist
 		if ( SkillSearch(195) && n_A_Weapon_ATKplus >= 9 && EquipNumSearch(1097))
 		{ // Glorious Fist
-			w -= 100;
+			VCT -= 100;
 		}
 	}
 	if ( n_A_ActiveSkill === 430 )
 	{ // Tracking
 		if ( n_A_Weapon_ATKplus >= 9 && EquipNumSearch( 1100 ) )
 		{ // Glorious Rifle
-			w += 25;
+			VCT += 25;
 		}
 	}
 	if ( n_A_ActiveSkill === 131 )
 	{
 		if ( n_A_Weapon_ATKplus >= 10 && EquipNumSearch( 1169 ) )
 		{ // Lacrima Stick
-			w -= 8;
+			VCT -= 8;
 		}
 	}
 	if ( (EquipNumSearch( 1637 ) ) )
 	{// "Thanatos' Dolor Hat"
 		if(n_A_HEAD_DEF_PLUS > 8)
 		{
-			w -= 10;
+			VCT -= 10;
 		}
 	}
 	
@@ -6265,18 +6549,18 @@ function CalcVariableCast()
 	{// "Shadow Diviner Ring"
 		if(n_A_SHADOW_EARRING_DEF_PLUS >= 7)
 		{
-			w -= 2;
+			VCT -= 2;
 		}
 	}
 	
 	
 	
-	if ( w < 0 )
+	if ( VCT < 0 )
 	{
-		w = 0;
+		VCT = 0;
 	}
 	
-	variableCastTime *= w /100;
+	variableCastTime *= VCT /100;
 
 	if ( acolyteBuffs[ksSuffragium] )
 	{
@@ -6513,6 +6797,19 @@ function CalcDelay()
 	if(EquipNumSearch(2161))
 	{// "Sunflower Boy"
 		n_tok[bon_RED_CASTDELAY] += n_A_Weapon_ATKplus;
+	}
+	if(EquipNumSearch(2250))
+	{//YSF01 Manteau
+		if(n_A_SHOULDER_DEF_PLUS >= 11)
+			n_tok[bon_RED_CASTDELAY] += 3;
+		if(n_A_SHOULDER_DEF_PLUS >= 13)
+			n_tok[bon_RED_CASTDELAY] += 4;
+		if(SU_VIT >= 125)
+			n_tok[bon_RED_CASTDELAY] += 10;
+	}
+	if(EquipNumSearch(2252))
+	{//YSF01 Plate + Manteau
+			n_tok[bon_RED_CASTDELAY] += n_A_SHOULDER_DEF_PLUS;
 	}
 	
 	// Skills
@@ -6902,8 +7199,25 @@ function calcRaceElementalReduction()
 		if(n_A_SHOULDER_DEF_PLUS >= 10)
 			n_tok[bon_RED_ELE_NEUTRAL] += 4;
 	}
+	if(EquipNumSearch(2231))
+	{//Consultation Robe [1]
+		n_tok[bon_RED_ELE_FIRE] += n_A_BODY_DEF_PLUS * 3;
+		n_tok[bon_RED_ELE_SHADOW] += n_A_BODY_DEF_PLUS * 3;
+	}
+	if(EquipNumSearch(2239))
+	{//Consultation Robe [1] + Valkyrie Manteau
+		if(n_A_SHOULDER_DEF_PLUS >= 10)
+			n_tok[bon_RED_ELE_NEUTRAL] += n_A_BODY_DEF_PLUS * 10;
+	}
+	if(EquipNumSearch(2240))
+	{// Ultralight Magic Shield [1]
+		if(n_A_LEFT_DEF_PLUS >= 7)
+			n_tok[bon_RED_ELE_NEUTRAL] += 2;
+		if(n_A_LEFT_DEF_PLUS >= 9)
+			n_tok[bon_RED_ELE_NEUTRAL] += 3;
+	}
 
-	//Shadows
+//Shadows
 	if ( EquipNumSearch( 1672 ) )
 	{ // "Shadow Dragonslayer Shield"
 		if (n_A_SHADOW_SHIELD_DEF_PLUS >= 7) { n_tok[bon_RED_RC_DRAGON] += 1; }
@@ -6920,7 +7234,7 @@ function calcRaceElementalReduction()
 		if (n_A_SHADOW_SHIELD_DEF_PLUS >= 9) { n_tok[bon_RED_RC_BRUTE] += 1; }
 	}
 	
-	// Skill modifiers
+// Skill modifiers
 	if ( otherBuffs[ksResistantSouls] && n_A_JobSearch2() != cls_CRU )
 	{ // Resistant Souls given to other classes other than crusader
 		n_tok[bon_RED_RC_DEMON] += otherBuffs[ksResistantSouls] * 5;

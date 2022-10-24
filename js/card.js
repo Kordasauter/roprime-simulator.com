@@ -727,7 +727,7 @@ function SetCard()
 ,[655,   card_com_SPE,"Darklord Essence Luck 3",0,bon_LUK,4,bon_CRIT,4,bon_DEX,-4,0]
 //Charleston
 ,[656,	 card_comp_WEAPON,"Step","[If refine level is +10 or higher]<br>[Axe Boomerang] damage +30%.",bon_DMG_SKILL + skill_MEC_AXE_BOOMERANG,30,0]
-,[657,	 card_com_ARMOR,"Rock Step","[If refine level is +10 or higher]<br>[Arm Cannon] damage +20%.",bon_DMG_SKILL + skill_MEC_ARM_CANNON,20,0]
+,[657,	 card_comp_WEAPON,"Rock Step","[If refine level is +10 or higher]<br>[Arm Cannon] damage +20%.",bon_DMG_SKILL + skill_MEC_ARM_CANNON,20,0]
 ,[658,	 card_com_ARMOR,"Kick Step","[When using by Mechanic class]<br>Resistance to long-range physical damage +30%.",bon_HP_MUL,8,0]
 ,[659,	 card_comp_WEAPON,"Kick and Kick","[If refine level is +10 or higher]<br>[Vulcan Arm] damage +20%.",bon_DMG_SKILL + skill_MEC_VULCAN_ARM,10,0]
 ,[660,	 card_comp_WEAPON,"Charleston","Has a chance to destroy an enemy's armor. ",bon_SP_ADD,-300,0]
@@ -850,7 +850,15 @@ function SetCard()
 ,[764,   itm_type_SET,"Cecil Set","Adds a chance of buffing the user for 6 seconds when performing a physical attack; Atk + 100.",0]
 ,[765,   itm_type_SET,"Trentini Set","Adds a chance of buffing the user for 6 seconds when performing a physical attack; Atk + 100.",0]
 
-//,[766,   ,"","",0]
+,[766,   card_com_ACC,"Humanoid Chimera","",bon_HIT,5,0]
+,[767,   card_com_ACC,"Material Chimera","",bon_FLEE,5,0]
+,[768,   itm_type_SET,"Humanoid + Material Chimera","",bon_RED_CASTDELAY,3,0]
+,[769,   card_com_SHOES,"Venomous Chimera","Refine Level +12:<br>MaxHP +15%, MaxSP +15%.",bon_HP_ADD,1000,bon_SP_ADD,200,0]
+,[770,   card_com_SHOES,"Cutie","Every 2 refine levels: AGI +1, ASPD +1%.",bon_HP_MUL,10,0]
+,[771,   card_comp_WEAPON,"Heart Hunter","Increases long-ranged damage on targets by 5%, if the user has a Grenade Launcher, Revolver or Rifle equipped.<br>Increases long-ranged damage on targets by an additional 1% per upgrade level of the compounded item, if the user has a Grenade Launcher, Revolver or Rifle equipped.<br>If upgrade level is +10 or higher,<br>Increases long-ranged damage on targets by an additional 5%",0]
+,[772,   card_com_ARMOR,"Evil","Adds a 30% chance of inflicting Freezing<br>on the attacker when receiving a physical attack.<br>Adds an additional 10% chance of inflicting<br>Freezing on the attacker when receiving<br>a physical attack, if the users base Int is 110 or higher.",bon_MDEF,5,0]
+//,[773,   ,"","",0]
+//,[774,   ,"","",0]
 ];
 
 CardNum = cardOBJ.length -1;
@@ -870,67 +878,82 @@ CardNum = cardOBJ.length -1;
 }
 
 { // CardSets
-w_SC = [[429,306,235,"NULL"],
-[430,349,305,"NULL"],
-[431,254,259,356,"NULL"],
-[432,229,280,352,"NULL"],
-[433,291,234,"NULL"],
-[434,322,320,"NULL"],
-[435,273,98,"NULL"],
-[436,274,73,"NULL"],
-[437,245,40,"NULL"],
-[438,9,308,"NULL"],
-[439,58,276,"NULL"],
-[440,50,344,"NULL"],
-[441,125,370,393,"NULL"],
-[442,294,10,"NULL"],
-[442,341,88,"NULL"],
-[442,243,7,"NULL"],
-[442,372,64,"NULL"],
-[442,369,68,"NULL"],
-[442,338,72,"NULL"],
-[448,218,212,"NULL"],
-[449,248,247,"NULL"],
-[450,223,317,347,354,362,"NULL"],
-[451,233,295,391,395,260,"NULL"],
-[452,253,383,307,301,270,"NULL"],
-[453,279,224,340,351,230,"NULL"],
-[454,337,358,220,346,379,350,"NULL"],
-[455,326,376,281,388,216,"NULL"],
-[456,190,347,354,362,"NULL"],
-[457,413,113,295,391,260,"NULL"],
-[458,253,383,181,270,"NULL"],
-[459,279,408,224,340,230,"NULL"],
-[460,337,193,346,379,350,"NULL"],
-[461,326,175,281,388,104,"NULL"],
-[496,485,494,"NULL"],
-[599,598,403,"NULL"], //"Birth and Death + Orc Baby",0,bon_RED_ELE_NEUTRAL,5,bon_FLEE,5,0]
-[600,598,69,"NULL"], //"Birth and Death + Baby Desert Wolf"
-[601,598,110,"NULL"], //"Birth and Death + Familiar"
-[602,598,57,"NULL"], //"Birth and Death + Orc Warrior"
-[603,598,28,"NULL"], //"Birth and Death + Desert Wolf"
-[604,598,105,"NULL"], //"Birth and Death + Phen"
-[605,598,85,"NULL"], //"Birth and Death + Orc Zombie"
-[606,598,92,"NULL"], //"Birth and Death + Verit"
-[607,598,123,"NULL"], //"Birth and Death + Megalodon"
-[615,613,614,"NULL"], //"Ahat + Shnaim"
-[617,616,609,"NULL"], //"Morroc Necromancer + Morocc the Desperate"
-[627,625,626,"NULL"], //"Playing Pere + Singing Pere"
-[628,625,626,624,"NULL"], //"Playing Pere + Singing Pere + Jitterbug"
-[631,629,630,"NULL"], //"Faceworm + Faceworm Dark"
-[634,632,633,"NULL"], //"Faceworm Egg + Faceworm Larva"
-[661,658,657,"NULL"], //"Kick Step + Rock Step"
-[662,658,659,"NULL"], //"Kick Step + Kick and Kick Step"
-[663,658,660,"NULL"], //"Kick Step + Charleston"
-[666,664,665,"NULL"], //"Undead Knight Card Set"
-[688,686,687,"NULL"], //"Evil Shadow Card + Evil Fanatics Card"
-[693,692,636,"NULL"], //"Sarah & Irene"
-[697,695,696,"NULL"], //"Turbo Card set"
-[701,699,700,"NULL"], //"Chip Card set"
-[710,709,148,"NULL"], //"Obeaune + Iara"
-[719,718,716,"NULL"], //Stephen J.E. Wolf + Immortal Cursed Knight
-[720,718,717,"NULL"], //Stephen J.E. Wolf + Immortal Wind Ghost
-[726,721,725,"NULL"]  //Powerful Amdarais + Bijou
+w_SC = [
+ [429,306,235,"NULL"]
+,[430,349,305,"NULL"]
+,[431,254,259,356,"NULL"]
+,[432,229,280,352,"NULL"]
+,[433,291,234,"NULL"]
+,[434,322,320,"NULL"]
+,[435,273, 98,"NULL"]
+,[436,274, 73,"NULL"]
+,[437,245, 40,"NULL"]
+,[438,  9,308,"NULL"]
+,[439, 58,276,"NULL"]
+,[440, 50,344,"NULL"]
+,[441,125,370,393,"NULL"]
+,[442,294, 10,"NULL"]
+,[442,341, 88,"NULL"]
+,[442,243,  7,"NULL"]
+,[442,372, 64,"NULL"]
+,[442,369, 68,"NULL"]
+,[442,338, 72,"NULL"]
+,[448,218,212,"NULL"]
+,[449,248,247,"NULL"]
+,[450,223,317,347,354,362,"NULL"]
+,[451,233,295,391,395,260,"NULL"]
+,[452,253,383,307,301,270,"NULL"]
+,[453,279,224,340,351,230,"NULL"]
+,[454,337,358,220,346,379,350,"NULL"]
+,[455,326,376,281,388,216,"NULL"]
+,[456,190,347,354,362,"NULL"]
+,[457,413,113,295,391,260,"NULL"]
+,[458,253,383,181,270,"NULL"]
+,[459,279,408,224,340,230,"NULL"]
+,[460,337,193,346,379,350,"NULL"]
+,[461,326,175,281,388,104,"NULL"]
+,[496,485,494,"NULL"]
+,[599,598,403,"NULL"] //"Birth and Death + Orc Baby",0,bon_RED_ELE_NEUTRAL,5,bon_FLEE,5,0]
+,[600,598, 69,"NULL"] //"Birth and Death + Baby Desert Wolf"
+,[601,598,110,"NULL"] //"Birth and Death + Familiar"
+,[602,598, 57,"NULL"] //"Birth and Death + Orc Warrior"
+,[603,598, 28,"NULL"] //"Birth and Death + Desert Wolf"
+,[604,598,105,"NULL"] //"Birth and Death + Phen"
+,[605,598, 85,"NULL"] //"Birth and Death + Orc Zombie"
+,[606,598, 92,"NULL"] //"Birth and Death + Verit"
+,[607,598,123,"NULL"] //"Birth and Death + Megalodon"
+,[615,613,614,"NULL"] //"Ahat + Shnaim"
+,[617,616,609,"NULL"] //"Morroc Necromancer + Morocc the Desperate"
+,[627,625,626,"NULL"] //"Playing Pere + Singing Pere"
+,[628,625,626,624,"NULL"] //"Playing Pere + Singing Pere + Jitterbug"
+,[631,629,630,"NULL"] //"Faceworm + Faceworm Dark"
+,[634,632,633,"NULL"] //"Faceworm Egg + Faceworm Larva"
+,[661,658,657,"NULL"] //"Kick Step + Rock Step"
+,[662,658,659,"NULL"] //"Kick Step + Kick and Kick Step"
+,[663,658,660,"NULL"] //"Kick Step + Charleston"
+,[666,664,665,"NULL"] //"Undead Knight Card Set"
+,[688,686,687,"NULL"] //"Evil Shadow Card + Evil Fanatics Card"
+,[693,692,636,"NULL"] //"Sarah & Irene"
+,[697,695,696,"NULL"] //"Turbo Card set"
+,[701,699,700,"NULL"] //"Chip Card set"
+,[710,709,148,"NULL"] //"Obeaune + Iara"
+,[719,718,716,"NULL"] //Stephen J.E. Wolf + Immortal Cursed Knight
+,[720,718,717,"NULL"] //Stephen J.E. Wolf + Immortal Wind Ghost
+,[726,721,725,"NULL"] //Powerful Amdarais + Bijou
+,[753,727,740,"NULL"] //bio 5
+,[754,728,741,"NULL"] //  |
+,[755,729,742,"NULL"] //  |
+,[756,730,743,"NULL"] //  |
+,[757,731,744,"NULL"] //  |
+,[758,732,745,"NULL"] //  |
+,[759,733,746,"NULL"] //  |
+,[760,734,747,"NULL"] //  |
+,[761,735,748,"NULL"] //  |
+,[762,736,749,"NULL"] //  |
+,[763,737,750,"NULL"] //  |
+,[764,738,751,"NULL"] //  |
+,[765,739,752,"NULL"] //bio 5
+,[767,766,767,"NULL"] //Humanoid + Material Chimera
 ];
 }
 

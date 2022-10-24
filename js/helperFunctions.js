@@ -326,7 +326,6 @@ function n_A_JobSearch()
 	{
 		return cls_NOV;
 	}
-		
 	var w = n_A_JobSearch2();
 	if(w == cls_KNI || w == cls_CRU || n_A_JOB == cls_HSWO)
 		return cls_SWO;

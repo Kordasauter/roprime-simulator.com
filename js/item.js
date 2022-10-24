@@ -223,7 +223,7 @@
 ,[219,itm_type_HEAD_UPPER,72,8,0,"0/1",50,0,bon_MDEF,3,bon_NONE] // "Jewel Helm"
 ,[220,itm_type_HEAD_UPPER,1,7,0,0,40,45,bon_INT,2,bon_NONE] // "Tiara"
 ,[221,itm_type_HEAD_UPPER,53,8,0,"0/1",10,0,bon_NONE] // "Bireta"
-,[222,itm_type_HEAD_UPPER,72,8,0,0,40,0,bon_NONE] // "Army Hat"
+,[222,itm_type_HEAD_UPPER,72,8,0,0,40,0,bon_NONE] // "Army Cap"
 ,[223,itm_type_HEAD_UPPER,0,8,0,0,40,19,bon_NO_UPGRADES,1,bon_NONE] // "Rainbow Eggshell"
 ,[224,itm_type_HEAD_UPPER,54,8,0,0,30,0,bon_AGI,1,bon_NONE] // "Feather Bonnet"
 ,[225,itm_type_HEAD_UPPER,78,9,0,0,150,55,bon_DEX,2,bon_NONE] // "Mine Hat"
@@ -496,7 +496,7 @@
 ,[492,weapTyp_INSTRUMENT,0,150,4,"0/2",120,65,5199,10,5292,10,bon_NONE] // "Oriental Lute"
 ,[493,weapTyp_WHIP,0,110,3,0,90,30,bon_ELEMENT,3,bon_NONE] // "Red Flame Whip"
 ,[494,weapTyp_WHIP,0,110,3,0,90,30,bon_ELEMENT,1,bon_NONE] // "Icicle Whip"
-,[495,itm_type_UNOBTAINABLE,999,110,3,0,90,30,bon_ELEMENT,4,bon_NONE] // "Breeze Whip"
+,[495,weapTyp_WHIP,0,110,3,0,90,30,bon_ELEMENT,4,bon_NONE] // "Breeze Whip"
 ,[496,weapTyp_WHIP,0,110,3,0,90,30,bon_ELEMENT,2,bon_NONE] // "Gaia Whip"
 ,[497,weapTyp_WHIP,0,120,3,0,40,30,bon_CRIT,20,bon_NONE] // "Skipping Rope"
 ,[498,weapTyp_WHIP,0,140,4,0,120,30,bon_NONE] // "Blade Whip"
@@ -2267,7 +2267,42 @@
 ,[2227,itm_type_HEAD_UPPER,208,10,0,1,10,170,bon_ALL_STATS,1,bon_NONE] // Old Bone Circlet [1]
 ,[2228,itm_type_HEAD_UPPER,213,10,0,1,10,170,bon_MDEF,5,bon_NONE] // Old Casket of Protection [1]
 ,[2229,itm_type_GARMENT,0,30,0,1,60,170,bon_NONE] // Fallen Warrior Manteau [1]
-];
+
+//Terra Gloria
+,[2230,itm_type_ARMOR,0,0,0,1,10,100,bon_MATK_MUL,5,bon_SKILL_ENABLE,65,bon_NONE] // Agenda Robe [1]
+,[2231,itm_type_ARMOR,0,0,0,1,10,100,bon_VIT,5,bon_SKILL_ENABLE,66,bon_NONE] // Consultation Robe [1]
+,[2232,itm_type_HEAD_UPPER,0,3,0,1,40,100,bon_DMG_RANGE,6,bon_NONE] // Republic Hat [1]
+,[2233,itm_type_ACCESSORY,0,3,0,0,20,99,bon_VIT,3,bon_NONE] // Mercenary Ring Type A
+,[2234,itm_type_ACCESSORY,0,3,0,0,20,99,bon_INT,3,bon_NONE] // Mercenary Ring Type B
+,[2235,weapTyp_SPEAR,2000,150,4,3,50,100,bon_ELEMENT,ele_POISON,bon_CRIT,10,bon_SKILL_ENABLE,50,bon_CH_STATUS_POISON,10,bon_NONE] // Poison Forged Spear [3]
+,[2236,itm_type_SET,0,0,0,0,0,0,bon_NONE] // Agenda Robe + Ancient Cape[0]\[1]
+,[2237,itm_type_SET,0,0,0,0,0,0,bon_NONE] // Agenda Robe [1] + Survivor's Manteau
+,[2238,itm_type_SET,0,0,0,0,0,0,bon_USR_ELEMENT,ele_GHOST,bon_NONE] // Consultation Robe [1] + Morrigane's Manteau
+,[2239,itm_type_SET,0,0,0,0,0,0,bon_VIT,5,bon_RED_ELE_NEUTRAL,10,bon_RED_ELE_FIRE,10,bon_RED_ELE_SHADOW,10,bon_NONE] // Consultation Robe [1] + Valkyrie Manteau
+
+//Werner Laboratory Central Room
+,[2240,itm_type_SHIELD,0,50,0,1,10,100,bon_ASPD_MUL,5,bon_RED_ELE_NEUTRAL,5,bon_IGN_DEF_SIZ_MEDIUM,10,bon_NONE] // Ultralight Magic Shield [1]
+
+//Heart Hunter War Base 1
+,[2241,weapTyp_HANDGUN,222,150,3,2,180,120,bon_ASPD_MUL,10,bon_NONE] // Dark Rose [2]
+,[2242,weapTyp_RIFLE,222,200,3,2,200,120,bon_DMG_RANGE,15,bon_NONE] // Finisher [2]
+,[2243,weapTyp_SHOTGUN,222,300,3,2,130,120,bon_CH_STATUS_BLIND,1,bon_NONE] // Dustfire [2]
+,[2244,weapTyp_GATLING_GUN,222,200,3,2,250,120,bon_DMG_RANGE,15,bon_NONE] // Burning Rose [2]
+,[2245,weapTyp_GRENADE_LAUNCHER,222,350,3,2,180,120,bon_DMG_RANGE,20,bon_NONE] // Avenger [2]
+
+//Heart Hunter War Base 2
+,[2246,weapTyp_SWORD,2000,100,4,2,150,100,bon_SP_ADD,-100,bon_SKILL_AUTOCAST,148,bon_NONE]//Sealed Magic Sword [2]
+,[2247,weapTyp_SWORD,2000,100,4,2,150,100,bon_HP_ADD,-1000,bon_SKILL_AUTOCAST,149,bon_NONE]//Sealed Maximum Sword [2]
+,[2248,weapTyp_SWORD,2000,100,4,2,150,100,bon_DEF,-50,bon_MDEF,-10,bon_SKILL_AUTOCAST,150,bon_NONE]//Sealed Evil Sword [2]
+
+//YSF1
+,[2249,itm_type_ARMOR,0,78,0,1,210,170,bon_NONE]//YSF01 Plate
+,[2250,itm_type_GARMENT,0,78,0,1,210,170,bon_NONE]//YSF01 Manteau
+,[2251,itm_type_SHOES,0,78,0,1,210,170,bon_NONE]//YSF01 Greave
+,[2252,itm_type_SET,0,0,0,0,0,0,bon_NONE]//YSF01 Plate + Manteau
+,[2253,itm_type_SET,0,0,0,0,0,0,bon_NONE]//YSF01 Plate + Greave
+,[2254,itm_type_SET,0,0,0,0,0,0,bon_NONE]//YSF01 Plate + Manteau + Greave
+]
 ItemMax = ItemOBJ.length -1;
 }
 
@@ -2791,6 +2826,13 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2209,2207,436,"NULL"] // Flattery Robe + Survivor's Manteau
 ,[2211,2210,701,"NULL"] // Flattery Robe + Morrigane's Manteau
 ,[2212,2210,535,"NULL"] // Flattery Robe + Valkyrie Manteau
+,[2236,2230,315,"NULL"] // Flattery Robe + Ancient Cape[0]\[1]
+,[2237,2230,436,"NULL"] // Flattery Robe + Survivor's Manteau
+,[2238,2231,701,"NULL"] // Flattery Robe + Morrigane's Manteau
+,[2239,2231,535,"NULL"] // Flattery Robe + Valkyrie Manteau
+,[2252,2249,2250,"NULL"] // YSF01 Plate + Manteau
+,[2253,2249,2251,"NULL"] // YSF01 Plate + Greave
+,[2234,2249,2250,2251,"NULL"] // YSF01 Plate + Manteau + Greave
 // ,[itm_set,item1,item2,...,"NULL"] // 
 
 //,[itm_set,item1,item2,...,"NULL"] // 

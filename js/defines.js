@@ -699,6 +699,12 @@ arr_att_DESC = 2; // + Language
 bulTyp_BULLET = 0;
 bulTyp_SILVER = 1;
 bulTyp_BLOOD = 2;
+bulTyp_ArmorPiercing = 3;
+bulTyp_Blazing = 4;
+bulTyp_Freezing = 5;
+bulTyp_Lightning = 6;
+bulTyp_MagicStone = 7;
+bulTyp_Purifying = 8;
 }
 
 { // GrenadeTypes

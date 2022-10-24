@@ -440,3 +440,35 @@ table.bgDkTable{
 .highlight{
 	color:#297A9F;
 }
+
+.eqWindow{
+	/* display: inline-block; */
+	/* border: solid; */
+	width:103px;
+	height:23px;
+	max-width:103px;
+	max-height:23px;
+	/* position:relative; */
+	/* bottom:1px */
+}
+
+.eqTxt{
+	/* border: solid red; */
+	width:75px;
+	max-width:75px;
+	height:30px;
+	max-height:30px;
+	position:relative;
+	bottom:27px;
+	left:25px;
+	
+	word-wrap: break-word;
+	overflow: auto;	
+		
+	font-size:9pt;
+}
+	
+}
+
+.eqTxt2{
+}

@@ -2376,6 +2376,11 @@ function CalcSkillDamage()
 			fixedCastTime *= 1.0;
 			variableCastTime *= 2.0;
 			n_Delay[ksDelayCooldown] = 5.0;
+			if(EquipNumSearch(2242))
+			{//Finisher [2]
+				if(n_A_Weapon_ATKplus >= 9)
+					n_Delay[ksDelayCooldown] -= 1.0;
+			}
 		}
 		else if(n_A_ActiveSkill==skill_REB_GODS_HAMMER)
 		{
@@ -2409,6 +2414,11 @@ function CalcSkillDamage()
 			variableCastTime *=  0.0;
 			n_Delay[ksDelayGlobal] = 1.0;
 			n_Delay[ksDelayCooldown] = 5.0;
+			if(EquipNumSearch(2244))
+			{//Burning Rose [2]
+				if(n_A_Weapon_ATKplus >=9)
+					n_Delay[ksDelayCooldown] -= 1.0;
+			}
 		}
 		else if(n_A_ActiveSkill==skill_SUM_SOUL_ATTACK)
 		{
@@ -4746,6 +4756,11 @@ function CalcSkillDamage()
 		variableCastTime *= 1.0;
 		//n_Delay[ksDelayGlobal] = 1.0;
 		n_Delay[ksDelayCooldown] = 5.5 - (n_A_ActiveSkillLV * 0.5);
+		if(EquipNumSearch(2245))
+		{//Avenger [2]
+			if(n_A_Weapon_ATKplus >=7)
+				n_Delay[ksDelayCooldown] -= 1.0;
+		}
 	}
 	else if ( n_A_ActiveSkill == skill_REB_ROUND_TRIP  ) 
 	{
