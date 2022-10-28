@@ -1390,6 +1390,24 @@
 ,[1388,"Adamantine 8",0,bon_HP_MUL,40,bon_DEF,420,bon_MDEF,160,bon_NONE]
 ,[1389,"Adamantine 9",0,bon_HP_MUL,45,bon_DEF,460,bon_MDEF,180,bon_NONE]
 ,[1390,"Adamantine 10",0,bon_HP_MUL,55,bon_DEF,500,bon_MDEF,200,bon_NONE]
+,[1391,"Rune of Strength Lv 1","[If upgrade level is +7 or higher]<br>Str + 5<br><br>[If upgrade level is +10 or higher]<br>Atk + 5%",bon_NONE]
+,[1392,"Rune of Strength Lv 2","[If upgrade level is +7 or higher]<br>Str + 6<br><br>[If upgrade level is +11 or higher]<br>Additional Str + 1<br>Atk + 7%",bon_NONE]
+,[1393,"Rune of Strength Lv 3","[If upgrade level is +7 or higher]<br>Str + 7<br><br>[If upgrade level is +12 or higher]<br>Additional Str + 1<br>Atk + 8%<br><br>[If upgrade level is +13 or higher]<br>Additional Str + 1<br>Additional Atk + 2%",bon_NONE]
+,[1394,"Rune of Agility Lv 1","[If upgrade level is +7 or higher]<br>Agi + 5<br><br>[If upgrade level is +10 or higher]<br>Perfect Dodge + 5",bon_NONE]
+,[1395,"Rune of Agility Lv 2","[If upgrade level is +7 or higher]<br>Agi + 6<br><br>[If upgrade level is +11 or higher]<br>Additional Agi + 1<br>Perfect Dodge + 7",bon_NONE]
+,[1396,"Rune of Agility Lv 3","[If upgrade level is +7 or higher]<br>Agi + 7<br><br>[If upgrade level is +12 or higher]<br>Additional Agi + 1<br>Perfect Dodge + 5<br><br>[If upgrade level is +13 or higher]<br>Additional Agi + 1<br>Additional Perfect Dodge + 5",bon_NONE]
+,[1397,"Rune of Vitality Lv 1","[If upgrade level is +7 or higher]<br>Vit + 5<br><br>[If upgrade level is +10 or higher]<br>Max HP + 5%",bon_NONE]
+,[1398,"Rune of Vitality Lv 2","[If upgrade level is +7 or higher]<br>Vit + 6<br><br>[If upgrade level is +11 or higher]<br>Additional Vit + 1<br>Max HP + 7%",bon_NONE]
+,[1399,"Rune of Vitality Lv 3","[If upgrade level is +7 or higher]<br>Vit + 7<br><br>[If upgrade level is +12 or higher]<br>Additional Vit + 1<br>Max HP + 8%<br><br>[If upgrade level is +13 or higher]<br>Additional Vit + 1<br>Additional Max HP + 2%",bon_NONE]
+,[1400,"Rune of Intellect Lv 1","[If upgrade level is +7 or higher]<br>Int + 5<br><br>[If upgrade level is +10 or higher]<br>Matk + 5%",bon_NONE]
+,[1401,"Rune of Intellect Lv 2","[If upgrade level is +7 or higher]<br>Int + 6<br><br>[If upgrade level is +11 or higher]<br>Additional Int + 1<br>Matk + 7%",bon_NONE]
+,[1402,"Rune of Intellect Lv 3","[If upgrade level is +7 or higher]<br>Int + 7<br><br>[If upgrade level is +12 or higher]<br>Additional Int + 1<br>Matk + 8%<br><br>[If upgrade level is +13 or higher]<br>Additional Int + 1<br>Additional Matk + 2%",bon_NONE]
+,[1403,"Rune of Dexterity Lv 1","[If upgrade level is +7 or higher]<br>Dex + 5<br><br>[If upgrade level is +10 or higher]<br>Increases long-ranged damage on targets by 5%",bon_NONE]
+,[1404,"Rune of Dexterity Lv 2","[If upgrade level is +7 or higher]<br>Dex + 6<br><br>[If upgrade level is +11 or higher]<br>Additional Dex + 1<br>Increases long-ranged damage on targets by 7%",bon_NONE]
+,[1405,"Rune of Dexterity Lv 3","[If upgrade level is +7 or higher]<br>Dex + 7<br><br>[If upgrade level is +12 or higher]<br>Additional Dex + 1<br>Increases long-ranged damage on targets by 8%.<br><br>[If upgrade level is +13 or higher]<br>Additional Dex + 1<br>Increases long-ranged damage on targets by an additional 2%",bon_NONE]
+,[1406,"Rune of Luck Lv 1","[If upgrade level is +7 or higher]<br>Luk + 5<br><br>[If upgrade level is +10 or higher]<br>Increases critical damage on targets by 5%",bon_NONE]
+,[1407,"Rune of Luck Lv 2","[If upgrade level is +7 or higher]<br>Luk + 6<br><br>[If upgrade level is +11 or higher]<br>Additional Luk + 1<br>Increases critical damage on targets by 7%",bon_NONE]
+,[1408,"Rune of Luck Lv 3","[If upgrade level is +7 or higher]<br>Luk + 7<br><br>[If upgrade level is +12 or higher]<br>Additional Luk + 1<br>Increases critical damage on targets by 8%.<br><br>[If upgrade level is +13 or higher]<br>Additional Luk + 1<br>Increases critical damage on targets by an additional 6%",bon_NONE]
 ];
 //,[  x,"name",0,bon_NONE]
 EnchantNum = EnchantOBJ.length -1;
@@ -1574,7 +1592,8 @@ EnchantNum = EnchantOBJ.length -1;
 1351,1352,1353,1354,1355,1356,1357,1358,1359,1360,
 1361,1362,1363,1364,1365,1366,1367,1368,1369,1370,
 1371,1372,1373,1374,1375,1376,1377,1378,1379,1380,
-1381,1382,1383,1384,1385,1386,1387,1388,1389,1390,"NULL"]
+1381,1382,1383,1384,1385,1386,1387,1388,1389,1390,"NULL"],
+/* 101 Terra Gloria */ [0,1391,1392,1393,1394,1395,1396,1397,1398,1399,1400,1401,1402,1403,1404,1405,1406,1407,1408,"NULL"]
 ];
 }
 // /*  */[0,"NULL"],

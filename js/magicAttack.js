@@ -327,6 +327,23 @@ function calcMAtk( includeMultipliers )
 				matk_mul += 1;
 			}
 		}
+		if(EnchNumSearch( 1400 ))
+		{//Rune of Intellect 1
+			if(n_A_BODY_DEF_PLUS >= 10)
+				matk_mul += 5;
+		}
+		if(EnchNumSearch( 1401 ))
+		{//Rune of Intellect 2
+			if(n_A_BODY_DEF_PLUS >= 11)
+				matk_mul += 7;
+		}
+		if(EnchNumSearch( 1402 ))
+		{//Rune of Intellect 3
+			if(n_A_BODY_DEF_PLUS >= 12)
+				matk_mul += 8;
+			if(n_A_BODY_DEF_PLUS >= 13)
+				matk_mul += 2;
+		}
 		
 //Cards
 		if(CardNumSearch(582))

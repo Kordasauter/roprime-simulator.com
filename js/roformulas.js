@@ -1956,11 +1956,32 @@ function CalcAttackMod()
 		n_tok[bon_PHY_ATK] += n_A_SHADOW_WEAPON_DEF_PLUS;
 	}
 	
+//enchants
+	if(EnchNumSearch( 1391 ))
+	{//Rune of Strength 1
+		if(n_A_BODY_DEF_PLUS >= 10)
+			n_tok[bon_PHY_ATK] += 5;
+	}
+	if(EnchNumSearch( 1392 ))
+	{//Rune of Strength 2
+		if(n_A_BODY_DEF_PLUS >= 11)
+			n_tok[bon_PHY_ATK] += 7;
+	}
+	if(EnchNumSearch( 1393 ))
+	{//Rune of Strength 3
+		if(n_A_BODY_DEF_PLUS >= 12)
+			n_tok[bon_PHY_ATK] += 8;
+		if(n_A_BODY_DEF_PLUS >= 13)
+			n_tok[bon_PHY_ATK] += 2;
+	}
+	
+	
 //items
 	if ( usableItems[ksArchmagePotion] )
 	{
 		n_tok[bon_PHY_ATK] += 1;
 	}
+	
 //Cards
 	if(CardNumSearch(583))
 	{//Champion Card
@@ -2070,6 +2091,8 @@ function CalcCriticalMod()
 	criticalMod = 0;
 	
 	// Critical
+	
+//Equipment
 	if ( EquipNumSearch( 1089 ) )
 	{ // Glorious Hunter Bow
 		n_tok[bon_DMG_CRIT] += ( 2 * n_A_Weapon_ATKplus );
@@ -2171,12 +2194,32 @@ function CalcCriticalMod()
 			n_tok[bon_DMG_CRIT] += 30;
 	}
 	
+//Enchants
+	if(EnchNumSearch( 1406 ))
+	{//Rune of Luck 1
+		if(n_A_BODY_DEF_PLUS >= 10)
+			n_tok[bon_DMG_CRIT] += 5;
+	}
+	if(EnchNumSearch( 1407 ))
+	{//Rune of Luck 2
+		if(n_A_BODY_DEF_PLUS >= 11)
+			n_tok[bon_DMG_CRIT] += 7;
+	}
+	if(EnchNumSearch( 1408 ))
+	{//Rune of Luck 3
+		if(n_A_BODY_DEF_PLUS >= 12)
+			n_tok[bon_DMG_CRIT] += 8;
+		if(n_A_BODY_DEF_PLUS >= 13)
+			n_tok[bon_DMG_CRIT] += 6;
+	}
+
 //Shadow
 	if( EquipNumSearch(1825))
 	{//Shadow Gunslinger Shield
 		if(n_A_SHADOW_SHIELD_DEF_PLUS >= 7){n_tok[bon_DMG_CRIT] += 2;}
 		if(n_A_SHADOW_SHIELD_DEF_PLUS >= 9){n_tok[bon_DMG_CRIT] += 3;}
 	}
+	
 //Cards
 	if(CardNumSearch(562))
 	{//Petal Card
@@ -2552,7 +2595,25 @@ function CalcRangedMod()
 			if(n_A_Weapon_ATKplus >= 10)
 				n_tok[bon_DMG_RANGE] += (5 * CardNumSearch(771));
 		}
-
+	}
+	
+//Enchants
+	if(EnchNumSearch( 1403 ))
+	{//Rune of Dexterity 1
+		if(n_A_BODY_DEF_PLUS >= 10)
+			n_tok[bon_DMG_RANGE] += 5;
+	}
+	if(EnchNumSearch( 1404 ))
+	{//Rune of Dexterity 2
+		if(n_A_BODY_DEF_PLUS >= 11)
+			n_tok[bon_DMG_RANGE] += 7;
+	}
+	if(EnchNumSearch( 1405 ))
+	{//Rune of Dexterity 3
+		if(n_A_BODY_DEF_PLUS >= 12)
+			n_tok[bon_DMG_RANGE] += 8;
+		if(n_A_BODY_DEF_PLUS >= 13)
+			n_tok[bon_DMG_RANGE] += 2;
 	}
 	
 //Skills
@@ -2564,6 +2625,7 @@ function CalcRangedMod()
 	{
 		n_tok[bon_DMG_RANGE] += 10;
 	}
+	
 //Item
 	if ( usableItems[ksRaydricArcherTransScroll] && n_A_WeaponType === weapTyp_BOW)
 	{
@@ -2819,6 +2881,7 @@ HP_COEFF = [
 /* WL */[60,500],
 /* ME */[105,500],
 /* RG */[110,500],
+// /* RG */[110,700],
 /* SC */[110,500],
 /* SU */[90,500],
 /* MI */[85,500],
@@ -3057,7 +3120,7 @@ function calcHP()
 	}
 	if ( EquipNumSearch( 1794 ) )
 	{//Vit Glove
-		additiveHP+= Math.floor(SU_VIT / 10);
+		additiveHP+= 50 * Math.floor(SU_VIT / 10);
 	}
 	if(EquipNumSearch(1919))
 	{ //"Foxtail Ring"
@@ -3576,7 +3639,7 @@ function calcHP()
 		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9){ hpMultiplier += 5;}
 	}
 	
-	//Enchant
+//Enchant
 	if(EnchNumSearch( 286 ))//Special LUK = 286
 	{
 		if(n_A_SHOULDER_DEF_PLUS >8)
@@ -3584,9 +3647,28 @@ function calcHP()
 			hpMultiplier += 1;
 		}
 	}
-	// Items
+	if(EnchNumSearch( 1397 ))
+	{//Rune of Vitality 1
+		if(n_A_BODY_DEF_PLUS >= 10)
+			hpMultiplier += 5;
+	}
+	if(EnchNumSearch( 1398 ))
+	{//Rune of Vitality 2
+		if(n_A_BODY_DEF_PLUS >= 11)
+			hpMultiplier += 7;
+	}
+	if(EnchNumSearch( 1399 ))
+	{//Rune of Vitality 3
+		if(n_A_BODY_DEF_PLUS >= 12)
+			hpMultiplier += 8;
+		if(n_A_BODY_DEF_PLUS >= 13)
+			hpMultiplier += 2;
+	}
 	
-	// Skills
+	
+// Items
+	
+// Skills
 	if ( performerBuffs[ksBardSolo] === ksSongOfLutie && performerBuffs[ksBardSoloLevel] > 0 )
 	{ // Song of Lutie
 		var skillBonus = performerBuffs[ksBardSoloLevel];
@@ -3692,16 +3774,16 @@ function calcHP()
 	    var buffHPFriggsSong;
 	    
 	    if (performerBuffs[ksMaestroSolo] && performerBuffs[ksWandererSolo]) {
-		if (performerBuffs[ksMaestroSoloLevel] >= performerBuffs[ksWandererSoloLevel]) {
-		    buffHPFriggsSong = performerBuffs[ksMaestroSoloLevel];
+			if (performerBuffs[ksMaestroSoloLevel] >= performerBuffs[ksWandererSoloLevel]) {
+				buffHPFriggsSong = performerBuffs[ksMaestroSoloLevel];
+			} else {
+				buffHPFriggsSong = performerBuffs[ksWandererSoloLevel];
+			}
 		} else {
-		    buffHPFriggsSong = performerBuffs[ksWandererSoloLevel];
-		}
-	    } else {
 		if (performerBuffs[ksMaestroSoloLevel]) {
-		    buffHPFriggsSong = performerBuffs[ksMaestroSoloLevel];
+			buffHPFriggsSong = performerBuffs[ksMaestroSoloLevel];
 		} else {
-		    buffHPFriggsSong = performerBuffs[ksWandererSoloLevel];
+			buffHPFriggsSong = performerBuffs[ksWandererSoloLevel];
 		}
 	    }
 	 
@@ -5233,6 +5315,25 @@ function calcPDodge( n_A_LUCKY )
 		n_A_LUCKY += 50;
 	}
 
+//Enchants
+	if(EnchNumSearch( 1394 ))
+	{//Rune of Agility 1
+		if(n_A_BODY_DEF_PLUS >= 10)
+			n_A_LUCKY += 5;
+	}
+	if(EnchNumSearch( 1395 ))
+	{//Rune of Agility 2
+		if(n_A_BODY_DEF_PLUS >= 11)
+			n_A_LUCKY += 7;
+	}
+	if(EnchNumSearch( 1396 ))
+	{//Rune of Agility 3
+		if(n_A_BODY_DEF_PLUS >= 12)
+			n_A_LUCKY += 5;
+		if(n_A_BODY_DEF_PLUS >= 13)
+			n_A_LUCKY += 5;
+	}
+
 	n_A_LUCKY = Math.round( n_A_LUCKY * 10 ) / 10;
 	
 	return n_A_LUCKY;
@@ -5341,7 +5442,7 @@ function calcCrit( n_A_CRI )
 			n_A_CRI += CardNumSearch( 462 ) * 15;
 		}
 		
-		n_A_CRI += w;
+		n_A_CRI += Race_Crit;
 	}
 	if ( EquipNumSearch( 1361 ) && n_A_HEAD_DEF_PLUS >= 7 )
 	{ // Black Cat (bRO) + Black Cat Tail

@@ -1583,7 +1583,7 @@ function StPlusCalc()
 	    wSPC_LUK += Math.floor(n_A_LUK * 0.2);
 	}
 	
-	//Special Enchants
+//Special Enchants
 	for(var i = 0; i < 6; i++)
 	{
 		if(EnchNumSearch( 281 + i ))//Special STR = 281 ~ Special Luk = 286
@@ -1605,6 +1605,44 @@ function StPlusCalc()
 			}
 		}
 	}
+	for(var i = 0; i < 6; i++)
+	{
+		for(var j = 0; j < 3; j++)
+		{
+			if(EnchNumSearch( 1391 + (i*3) + j))//Rune of Strength 1 = 1391 ~ Rune of Luck 3 = 1408
+			{
+				var tmp_bonus = 0;
+				if(n_A_BODY_DEF_PLUS >= 7)
+				{
+					tmp_bonus += 5 + j;
+					if(j == 1)
+					{
+						if(n_A_BODY_DEF_PLUS >= 11)
+							tmp_bonus += 1;
+					}
+					if(j == 2)
+					{
+						if(n_A_BODY_DEF_PLUS >= 12)
+							tmp_bonus += 1;
+						if(n_A_BODY_DEF_PLUS >= 13)
+							tmp_bonus += 1;
+					}
+				}
+				if(i==0)
+					wSPC_STR += tmp_bonus;
+				if(i==1)
+					wSPC_AGI += tmp_bonus;
+				if(i==2)
+					wSPC_VIT += tmp_bonus;
+				if(i==3)
+					wSPC_INT += tmp_bonus;
+				if(i==4)
+					wSPC_DEX += tmp_bonus;
+				if(i==5)
+					wSPC_LUK += tmp_bonus;
+			}
+		}
+	}
 	
 	n_A_STR += wSPC_STR;
 	n_A_AGI += wSPC_AGI;
@@ -1612,6 +1650,7 @@ function StPlusCalc()
 	n_A_INT += wSPC_INT;
 	n_A_DEX += wSPC_DEX;
 	n_A_LUK += wSPC_LUK;
+	
 	// Display Stats
 	if(wSPC_STR >= 0)
 		myInnerHtml("A_STRp","+"+wSPC_STR + " (" + StCalc2(SU_STR+1) + ")",0);

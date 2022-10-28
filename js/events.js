@@ -1711,6 +1711,24 @@ function ClickArmor( data, isRefine )
 		formElements["A_ARMOR_ENCHANT" + "_4"].disabled = false;
 		formElements["A_ARMOR_ENCHANT" + "_3"].disabled = false;
 	}
+	else if(armor_id == 2230 || armor_id == 2231)
+	{// Agenda Robe || Consultation Robe
+		if(!isRefine)
+			CleanEnchant("A_ARMOR_ENCHANT");
+		var ench1 = 101;
+		var ench2 = 101;
+		for ( var i = 0; EnchantListOBJ[ench1][i] != "NULL"; i++ )
+		{
+			formElements["A_ARMOR_ENCHANT" + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench1][i]][1],EnchantOBJ[EnchantListOBJ[ench1][i]][0]);
+		}
+		//slot 3
+		for ( var i = 0; EnchantListOBJ[ench2][i] != "NULL"; i++ )
+		{
+			formElements["A_ARMOR_ENCHANT" + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench2][i]][1],EnchantOBJ[EnchantListOBJ[ench2][i]][0]);
+		}
+		formElements["A_ARMOR_ENCHANT" + "_4"].disabled = false;
+		formElements["A_ARMOR_ENCHANT" + "_3"].disabled = false;
+	}
 	// else if(armor_id == 9999)
 	// {
 		// if(!isRefine)
@@ -1962,6 +1980,24 @@ function ClickAcces( data, numAccess )
 		{
 			formElements[formAcc + "_3"].options[i+formsize] = new Option(EnchantOBJ[EnchantListOBJ[86][i]][1],EnchantOBJ[EnchantListOBJ[86][i]][0]);
 		}
+	}
+	else if(access_id == 2233 || access_id == 2234)
+	{// Mercenary Ring Type A || Mercenary Ring Type B
+		CleanEnchant(formAcc);
+		
+		var ench1 = 41;
+		var ench2 = 41;
+		for ( var i = 0; EnchantListOBJ[ench1][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench1][i]][1],EnchantOBJ[EnchantListOBJ[ench1][i]][0]);
+		}
+		//slot 3
+		for ( var i = 0; EnchantListOBJ[ench2][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench2][i]][1],EnchantOBJ[EnchantListOBJ[ench2][i]][0]);
+		}
+		formElements[formAcc + "_4"].disabled = false;
+		formElements[formAcc + "_3"].disabled = false;
 	}
 	// else if(access_id == 9999)
 	// {

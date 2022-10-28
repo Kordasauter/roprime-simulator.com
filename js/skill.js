@@ -1500,6 +1500,7 @@ JobSkillActiveOBJ = [
 ,[148,1, 51, 5, 0, 1] // Fire Bolt 5
 ,[149,1, 54, 5, 0, 1] // Cold Bolt 5
 ,[150,1,130, 5, 0, 1] // Frost Nova 5
+,[151,1,678, 3, 0, 1] // Frost Nova 5
 
  //IDAutocast, Type(0=when hit, 1=when attack), SkillID, SkillLVL, Chance, AutoCastTrigger
 ];
