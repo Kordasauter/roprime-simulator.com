@@ -2111,7 +2111,7 @@
 ,[2087,itm_type_SHIELD,0,50,0,1,100,99,bon_MDEF,10,bon_NONE] // "Magic Reflector"
 ,[2088,itm_type_ACCESSORY,0,0,0,1,10,90,bon_MATK_MUL,5,bon_NONE] // "Magic Intensifier Ring"
 ,[2089,itm_type_ACCESSORY,0,0,0,1,10,90,bon_PHY_ATK,5,bon_NONE] // "Physical Enhancer Ring"
-,[2090,itm_type_ARMOR,0,0,0,0,0,99,bon_RED_CAST,-10,bon_NONE] // "Geffen Magic Robe"
+,[2090,itm_type_ARMOR,0,0,0,0,0,99,bon_RED_CAST,15,bon_NONE] // "Geffen Magic Robe"
 ,[2091,itm_type_ARMOR,0,0,0,0,0,99,bon_NONE] // "Anti-magic Suit"
 ,[2092,itm_type_SET,0,0,0,0,0,0,bon_NONE] // "Revised Encyclopedia + Giant Encyclopedia" // Giant Encyclopedia : 640
 ,[2093,itm_type_SET,0,0,0,0,0,0,bon_RED_CASTDELAY,5,bon_NONE] // "Geffen Magic Robe + Magic Intensifier Ring"
