@@ -337,6 +337,9 @@ bon_SET_DEX = 215;
 bon_SET_LUK = 216;
 
 bon_DEFIGN_RC_ALL = 295;
+bon_MDEFIGN_RC_ALL = 296;
+bon_DEFIGN_RC_BOSS = 297;
+bon_MDEFIGN_RC_BOSS = 298;
 
 // [ +% Def-ignore on Race 300: Formless
 bon_DEFIGN_RC_FORMLESS = 300;

@@ -1019,6 +1019,11 @@ function CalcEquipAtk()
 			equipmentAttack += 20;
 	}
 	
+	if(EquipNumSearch(2315))
+	{//Dog Cap + Thanatos Katar
+		equipmentAttack += 20 * Math.floor(n_A_Weapon_ATKplus / 2);
+	}
+	
 //Cards
 	if(CardNumSearch(557))
 	{//Faithful Manager Card
@@ -1100,6 +1105,25 @@ function CalcEquipAtk()
 	if( EquipNumSearch(1995) || EquipNumSearch(1996))
 	{// Shadow Doram Battler Gloves ||Shadow Doram Mage Glove
 		equipmentAttack += n_A_SHADOW_WEAPON_DEF_PLUS;
+	}
+	if( EquipNumSearch(2255) || // Wyrmeater's Shadow Gloves
+		EquipNumSearch(2256) || // Tiger Spirit Shadow Gloves
+		EquipNumSearch(2257) || // Katra's Shadow Gloves
+		EquipNumSearch(2258) || // Exorcist Shadow Gloves
+		EquipNumSearch(2259) || // Rondius' Shadow Gloves
+		EquipNumSearch(2260) || // Gunther's Shadow Gloves
+		EquipNumSearch(2261) || // Talos' Shadow Gloves
+		EquipNumSearch(2262) || // Sylphir's Shadow Gloves
+		EquipNumSearch(2263) || // Dordaleon's Shadow Gloves
+		EquipNumSearch(2264) || // Osma's Shadow Gloves
+		EquipNumSearch(2265) || // Garmia's Shadow Gloves
+		EquipNumSearch(2266) )  // Boscard's Shadow Gloves
+	{
+		equipmentAttack += n_A_SHADOW_WEAPON_DEF_PLUS;
+	}
+	if( EquipNumSearch(2293) ) // Katra's Shadow Set
+	{
+		equipmentAttack += n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_PENDANT_DEF_PLUS;
 	}
 	
 //Enchants
@@ -1516,8 +1540,8 @@ function CalcRacialMod()
 		{//Armor of Sixtus (all)
 			if(n_A_BODY_DEF_PLUS >= 7)
 			{
-				n_tok[bon_IGN_DEF_RC_BRUTE] += 30;
-				n_tok[bon_IGN_DEF_RC_DEMON] += 30;
+				n_tok[bon_DEFIGN_RC_BRUTE] += 30;
+				n_tok[bon_DEFIGN_RC_DEMON] += 30;
 			}
 			if(n_A_BODY_DEF_PLUS >= 9)
 			{
@@ -1529,10 +1553,24 @@ function CalcRacialMod()
 		{//Armor of Sixtus Set (all)
 			if((n_A_BODY_DEF_PLUS + n_A_SHOES_DEF_PLUS) >= 21)
 			{
-				n_tok[bon_IGN_DEF_RC_BRUTE] += 20;
-				n_tok[bon_IGN_DEF_RC_DEMON] += 20;
+				n_tok[bon_DEFIGN_RC_BRUTE] += 20;
+				n_tok[bon_DEFIGN_RC_DEMON] += 20;
 			}
 		}
+	}
+	if( EquipNumSearch(2305) || //Guillotine Cross set
+		EquipNumSearch(2307) || //Ranger set
+		EquipNumSearch(2313) )  //Wanderer Set
+	{
+		n_tok[bon_DEFIGN_RC_ALL] += n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_SHIELD_DEF_PLUS;
+	}
+	if( EquipNumSearch(2306) || //Arch Bishop set
+		EquipNumSearch(2308) || //Royal Guard set
+		EquipNumSearch(2310) || //Sorcerer set
+		EquipNumSearch(2311) || //Shadow Chaser set
+		EquipNumSearch(2312) )  //Warlock set
+	{
+		n_tok[bon_MDEFIGN_RC_ALL] += n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_SHIELD_DEF_PLUS;
 	}
 	if(EquipNumSearch(2075) && n_A_Weapon_ATKplus >= 11)
 	{//Four Mirrors
@@ -1553,13 +1591,13 @@ function CalcRacialMod()
 	{//Chronocloak (all)
 		if(n_A_SHOULDER_DEF_PLUS >= 9)
 		{
-			n_tok[bon_IGN_DEF_RC_BRUTE] += 20;
-			n_tok[bon_IGN_DEF_RC_DEMON] += 20;
+			n_tok[bon_DEFIGN_RC_BRUTE] += 20;
+			n_tok[bon_DEFIGN_RC_DEMON] += 20;
 		}
 		if(n_A_SHOULDER_DEF_PLUS >= 11)
 		{
-			n_tok[bon_IGN_DEF_RC_BRUTE] += 10;
-			n_tok[bon_IGN_DEF_RC_DEMON] += 10;
+			n_tok[bon_DEFIGN_RC_BRUTE] += 10;
+			n_tok[bon_DEFIGN_RC_DEMON] += 10;
 		}
 	}
 	if(EquipNumSearch(2148) || 
@@ -1571,15 +1609,15 @@ function CalcRacialMod()
 	{//Chronocloak + Temporal Boots Sets (all)
 		if(n_A_SHOES_DEF_PLUS >= 10)
 		{
-			n_tok[bon_IGN_DEF_RC_BRUTE] += 30;
-			n_tok[bon_IGN_DEF_RC_DEMON] += 30;
+			n_tok[bon_DEFIGN_RC_BRUTE] += 30;
+			n_tok[bon_DEFIGN_RC_DEMON] += 30;
 		}
 	}
 	if( EquipNumSearch(2210) )   
 	{// Abusive Robe
-		n_tok[bon_IGN_DEF_RC_DEMI_HUMAN] += 4 * n_A_BODY_DEF_PLUS;
-		n_tok[bon_IGN_DEF_RC_DEMON] += 4 * n_A_BODY_DEF_PLUS;
-		n_tok[bon_IGN_DEF_RC_UNDEAD] += 4 * n_A_BODY_DEF_PLUS;
+		n_tok[bon_DEFIGN_RC_DEMI_HUMAN] += 4 * n_A_BODY_DEF_PLUS;
+		n_tok[bon_DEFIGN_RC_DEMON] += 4 * n_A_BODY_DEF_PLUS;
+		n_tok[bon_DEFIGN_RC_UNDEAD] += 4 * n_A_BODY_DEF_PLUS;
 	}
 	
 // Magical
@@ -1729,7 +1767,33 @@ function CalcSizeMod()
 			}
 		}
 	}
-
+	if( EquipNumSearch(2256) )
+	{// Tiger Spirit Shadow Gloves
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7)
+		{
+			n_tok[bon_DMG_SIZ_SMALL] += 3; 
+			n_tok[bon_DMG_SIZ_MEDIUM] += 3; 
+			n_tok[bon_DMG_SIZ_LARGE] += 3;
+		}
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9)
+		{
+			n_tok[bon_DMG_SIZ_SMALL] += 4; 
+			n_tok[bon_DMG_SIZ_MEDIUM] += 4; 
+			n_tok[bon_DMG_SIZ_LARGE] += 4;
+		}
+	}
+	if( EquipNumSearch(2269) || EquipNumSearch(2278) )
+	{// Katra's Shadow Ring || Boscard's Shadow Ring
+		n_tok[bon_DMG_SIZ_SMALL] += Math.floor(n_A_SHADOW_EARRING_DEF_PLUS / 2); 
+		n_tok[bon_DMG_SIZ_MEDIUM] += Math.floor(n_A_SHADOW_EARRING_DEF_PLUS / 2); 
+		n_tok[bon_DMG_SIZ_LARGE] += Math.floor(n_A_SHADOW_EARRING_DEF_PLUS / 2);
+	}
+	if( EquipNumSearch(2271) )
+	{// Rondius' Shadow Ring
+		n_tok[bon_DMG_SIZ_SMALL] += 2 * Math.floor(n_A_SHADOW_EARRING_DEF_PLUS / 2); 
+		n_tok[bon_DMG_SIZ_MEDIUM] += 2 * Math.floor(n_A_SHADOW_EARRING_DEF_PLUS / 2); 
+		n_tok[bon_DMG_SIZ_LARGE] += 2 * Math.floor(n_A_SHADOW_EARRING_DEF_PLUS / 2);
+	}
 	sizeMod = n_tok[bon_DMG_SIZ_SMALL + n_B[en_SIZE]];
 	if ( monsterBuffs[status_en_buff_Size] )
 	{ // Size Reduction
@@ -2219,6 +2283,10 @@ function CalcCriticalMod()
 		if(n_A_SHADOW_SHIELD_DEF_PLUS >= 7){n_tok[bon_DMG_CRIT] += 2;}
 		if(n_A_SHADOW_SHIELD_DEF_PLUS >= 9){n_tok[bon_DMG_CRIT] += 3;}
 	}
+	if( EquipNumSearch(2281))
+	{//Katra's Shadow Pendant
+		n_tok[bon_DMG_CRIT] += Math.floor(n_A_SHADOW_PENDANT_DEF_PLUS / 2);
+	}
 	
 //Cards
 	if(CardNumSearch(562))
@@ -2560,6 +2628,17 @@ function CalcRangedMod()
 	if ( EquipNumSearch( 2041 ) )
 	{//Armor of Sixtus the Dexterous
 			n_tok[bon_DMG_RANGE] += 2 * Math.floor(n_A_BODY_DEF_PLUS / 3);
+	}
+	if( EquipNumSearch(2255) || // Wyrmeater's Shadow Gloves
+		EquipNumSearch(2259) || // Rondius' Shadow Gloves
+		EquipNumSearch(2261) || // Talos' Shadow Gloves
+		EquipNumSearch(2265) || // Garmia's Shadow Gloves
+		EquipNumSearch(2266) )  // Boscard's Shadow Gloves
+	{
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7)
+			n_tok[bon_DMG_RANGE] += 3;
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9)
+			n_tok[bon_DMG_RANGE] += 4;
 	}
 	
 //Cards	
@@ -3355,7 +3434,37 @@ function calcHP()
 	{ // Shadow Taekwon Gloves
 		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7){additiveHP += 1000;}
 	}
-	//cards
+	if( EquipNumSearch(2267) || // Wyrmeater's Shadow Ring
+		EquipNumSearch(2268) || // Tiger Spirit Shadow Ring
+		EquipNumSearch(2269) || // Katra's Shadow Ring
+		EquipNumSearch(2270) || // Exorcist Shadow Ring
+		EquipNumSearch(2271) || // Rondius' Shadow Ring
+		EquipNumSearch(2272) || // Gunther's Shadow Ring
+		EquipNumSearch(2273) || // Talos' Shadow Ring
+		EquipNumSearch(2274) || // Sylphir's Shadow Ring
+		EquipNumSearch(2275) || // Dordaleon's Shadow Ring
+		EquipNumSearch(2276) || // Osma's Shadow Ring
+		EquipNumSearch(2277) || // Garmia's Shadow Ring
+		EquipNumSearch(2278) )  // Boscard's Shadow Ring
+	{
+		additiveHP += n_A_SHADOW_EARRING_DEF_PLUS * 10;
+	}
+	if( EquipNumSearch(2278) || // Wyrmeater's Shadow Pendant
+		EquipNumSearch(2279) || // Tiger Spirit Shadow Pendant
+		EquipNumSearch(2280) || // Katra's Shadow Pendant
+		EquipNumSearch(2281) || // Exorcist Shadow Pendant
+		EquipNumSearch(2282) || // Rondius' Shadow Pendant
+		EquipNumSearch(2283) || // Gunther's Shadow Pendant
+		EquipNumSearch(2284) || // Talos' Shadow Pendant
+		EquipNumSearch(2285) || // Sylphir's Shadow Pendant
+		EquipNumSearch(2286) || // Dordaleon's Shadow Pendant
+		EquipNumSearch(2287) || // Osma's Shadow Pendant
+		EquipNumSearch(2288) || // Garmia's Shadow Pendant
+		EquipNumSearch(2289) )  // Boscard's Shadow Pendant
+	{
+		additiveHP += n_A_SHADOW_PENDANT_DEF_PLUS * 10;
+	}
+//cards
 	if(CardNumSearch(589))
 	{//Big Eggring Card
 		if(SU_VIT <=50)
@@ -3637,6 +3746,10 @@ function calcHP()
 	{ // Shadow Super Novice Gloves
 		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7){ hpMultiplier += 5;}
 		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9){ hpMultiplier += 5;}
+	}
+	if(EquipNumSearch(2291) || EquipNumSearch(2292))
+	{// Wyrmeater's Shadow Set || Tiger Spirit Shadow Set
+		hpMultiplier += Math.floor((n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_PENDANT_DEF_PLUS)/2);
 	}
 	
 //Enchant
@@ -4297,6 +4410,10 @@ function calcSP( n_A_MaxSP )
 	if ( EquipNumSearch( 1662 ) )
 	{ // "Shadow Strongman Pendant"
 		if (n_A_SHADOW_PENDANT_DEF_PLUS >= 7) { spMultiplier += 1; }
+	}
+	if(EquipNumSearch(2291) || EquipNumSearch(2292))
+	{// Wyrmeater's Shadow Set || Tiger Spirit Shadow Set
+		spMultiplier += Math.floor((n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_PENDANT_DEF_PLUS)/2);
 	}
 	
 //Enchant
@@ -6574,6 +6691,13 @@ function CalcVariableCast()
 			VCT -= 3 * n_A_SHADOW_SHOES_DEF_PLUS;
 		}
 	}
+	
+	if( EquipNumSearch(2309) || //Mechanic set
+		EquipNumSearch(2314) )  //Geneticist set
+	{
+		VCT -= Math.floor((n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_SHIELD_DEF_PLUS)/2);
+	}
+	
 	if( EquipNumSearch( 1824 ) ) //Shadow Super Novice Shield
 	{
 		VCT -= n_A_SHADOW_SHIELD_DEF_PLUS;

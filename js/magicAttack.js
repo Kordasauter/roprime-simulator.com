@@ -417,7 +417,7 @@ function calcMAtk( includeMultipliers )
 		n_A_EquipMATK += 30;
 	}
 		
-	// Equipment
+// Equipment
 	if(SU_STR >= 120 && EquipNumSearch(1253)) // Rune Circlet
 		n_A_EquipMATK += 5;
 	if(SU_INT >= 120 && EquipNumSearch(1254)) // Mitra
@@ -726,6 +726,22 @@ function calcMAtk( includeMultipliers )
 	{ // Shadow Ninja Gloves
 		if(n_A_SHADOW_SHIELD_DEF_PLUS >=9){n_A_EquipMATK += SkillSearch(skill_NIN_NINJA_MASTERY) * 3;}
 	}
+	if( EquipNumSearch(2255) || // Wyrmeater's Shadow Gloves
+		EquipNumSearch(2256) || // Tiger Spirit Shadow Gloves
+		EquipNumSearch(2257) || // Katra's Shadow Gloves
+		EquipNumSearch(2258) || // Exorcist Shadow Gloves
+		EquipNumSearch(2259) || // Rondius' Shadow Gloves
+		EquipNumSearch(2260) || // Gunther's Shadow Gloves
+		EquipNumSearch(2261) || // Talos' Shadow Gloves
+		EquipNumSearch(2262) || // Sylphir's Shadow Gloves
+		EquipNumSearch(2263) || // Dordaleon's Shadow Gloves
+		EquipNumSearch(2264) || // Osma's Shadow Gloves
+		EquipNumSearch(2265) || // Garmia's Shadow Gloves
+		EquipNumSearch(2266) )  // Boscard's Shadow Gloves
+	{
+		n_A_EquipMATK += n_A_SHADOW_WEAPON_DEF_PLUS;
+	}
+//Cards
 	if(CardNumSearch(555))
 	{//Antique Book Card
 		n_A_EquipMATK += 5 * Math.floor(SU_INT / 10);
@@ -1352,6 +1368,45 @@ function CalcMagicDamage( rawDamage )
 	{// "Chronocloak of Intellect"
 		wX += 3 * Math.floor(n_A_SHOULDER_DEF_PLUS / 4);
 	}
+//Shadows
+	if( (EquipNumSearch(2258) || EquipNumSearch(2260)) && n_A_Weapon_element == ele_HOLY)
+	{// Exorcist Shadow Gloves || Gunther's Shadow Gloves
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7)
+		{
+			wX += 3; 
+		}
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9)
+		{
+			wX += 4; 
+		}
+	}
+	if( EquipNumSearch(2262) && n_A_Weapon_element == ele_WIND)
+	{// Sylphir's Shadow Gloves
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7)
+		{
+			wX += 3; 
+		}
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9)
+		{
+			wX += 4; 
+		}
+	}
+	if( EquipNumSearch(2264) && n_A_Weapon_element == ele_EARTH)
+	{// Osma's Shadow Gloves
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7)
+		{
+			wX += 3; 
+		}
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9)
+		{
+			wX += 4; 
+		}
+	}
+	if( EquipNumSearch(2275) && (n_A_Weapon_element == ele_WATER || n_A_Weapon_element == ele_NEUTRAL || n_A_Weapon_element == ele_FIRE))
+	{// Dordaleon's Shadow Ring
+		wX += 2 * Math.floor(n_A_SHADOW_EARRING_DEF_PLUS/3); 
+	}
+
 //skill (element)
 	if(SkillSearch( skill_SA_ENDOW_BLAZE ) && n_A_Weapon_element == ele_FIRE)
 		wX += 5;

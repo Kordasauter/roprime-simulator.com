@@ -1218,6 +1218,10 @@ function CalcSkillDamage()
 			variableCastTime *= 1.5;
 			n_Delay[ksDelayGlobal] = 0.5;
 			n_Delay[ksDelayCooldown] = 1.5;
+			if(EquipNumSearch(2277))
+			{// Garmia's Shadow Ring
+				n_Delay[ksDelayCooldown] -= 0.1 * Math.floor(n_A_SHADOW_EARRING_DEF_PLUS / 3);
+			}
 		}
 		else if(n_A_ActiveSkill==skill_ALL_TOMAHAWK_THROWING)//prime
 		{
@@ -4356,6 +4360,10 @@ function CalcSkillDamage()
 		variableCastTime *= 1.5 + 0.5 * n_A_ActiveSkillLV;
 		n_Delay[ksDelayGlobal] = 2.0;
 		n_Delay[ksDelayCooldown] = 5.0;
+		if(EquipNumSearch(2272))
+		{// Gunther's Shadow Ring
+			n_Delay[ksDelayCooldown] -= 0.1 * Math.floor(n_A_SHADOW_EARRING_DEF_PLUS / 3);
+		}
 	}
 	else if ( n_A_ActiveSkill === skill_MEC_FAW_SILVER_SNIPER )
 	{
@@ -5565,6 +5573,10 @@ function CalcSkillDamage()
 			n_Delay[ksDelayCooldown] = 10.0;
 			if(EquipNumSearch(2063) && n_A_Weapon_ATKplus >= 11)//Rusty Dragon's Wand
 				n_Delay[ksDelayCooldown] -= 1;
+			if(EquipNumSearch(2276))
+			{// Osma's Shadow Ring
+				n_Delay[ksDelayCooldown] -= 0.1 * Math.floor(n_A_SHADOW_EARRING_DEF_PLUS / 3);
+			}
 		}
 		else if ( n_A_ActiveSkill == skill_WAR_TETRA_VORTEX )
 		{

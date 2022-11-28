@@ -1139,7 +1139,49 @@ function ApplySkillModifiers( damage )
 				dmgMultiplier += 15;
 		}
 	}
+	if((EquipNumSearch(2279) && n_A_ActiveSkill == skill_RUN_DRAGON_BREATH) 	|| // Wyrmeater's Shadow Pendant
+	   (EquipNumSearch(2280) && n_A_ActiveSkill == skill_SUR_TIGER_CANNON) 		|| // Tiger Spirit Shadow Pendant
+	   (EquipNumSearch(2282) && n_A_ActiveSkill == skill_PR_MAGNUS_EXORCISMUS) 	|| // Exorcist Shadow Pendant
+	   (EquipNumSearch(2283) && n_A_ActiveSkill == skill_RAN_AIMED_BOLT) 		|| // Rondius' Shadow Pendant
+	   (EquipNumSearch(2284) && n_A_ActiveSkill == skill_ROY_RAY_OF_GENESIS) 	|| // Gunther's Shadow Pendant
+	   (EquipNumSearch(2285) && n_A_ActiveSkill == skill_MEC_ARM_CANNON) 		|| // Talos' Shadow Pendant
+	   (EquipNumSearch(2286) && n_A_ActiveSkill == skill_SOR_VARETYR_SPEAR) 	|| // Sylphir's Shadow Pendant
+	   (EquipNumSearch(2288) && n_A_ActiveSkill == skill_WAR_EARTH_STRAIN) 		|| // Osma's Shadow Pendant
+	   (EquipNumSearch(2289) && n_A_ActiveSkill == skill_CG_ARROW_VULCAN) 		|| // Garmia's Shadow Pendant
+	   (EquipNumSearch(2290) && n_A_ActiveSkill == skill_GEN_CART_CANNON) 		)  // Boscard's Shadow Pendant
+	{
+		dmgMultiplier += 2 * Math.floor(n_A_SHADOW_PENDANT_DEF_PLUS/2);
+	}
 	
+	if((EquipNumSearch(2287) && n_A_ActiveSkill == skill_WI_METEOR_STORM))// Dordaleon's Shadow Pendant
+		dmgMultiplier += 3 * Math.floor(n_A_SHADOW_PENDANT_DEF_PLUS/2);
+		
+	if((EquipNumSearch(2294) && n_A_ActiveSkill == skill_PR_MAGNUS_EXORCISMUS) 	|| // Exorcist Shadow Set
+	   (EquipNumSearch(2295) && n_A_ActiveSkill == skill_RAN_AIMED_BOLT) 		|| // Rondius' Shadow Set
+	   (EquipNumSearch(2296) && n_A_ActiveSkill == skill_ROY_RAY_OF_GENESIS) 	|| // Gunther's Shadow Set
+	   (EquipNumSearch(2298) && n_A_ActiveSkill == skill_SOR_VARETYR_SPEAR) 	|| // Sylphir's Shadow Set
+	   (EquipNumSearch(2299) && n_A_ActiveSkill == skill_SOR_PSYCHIC_WAVE) 		|| // Dordaleon's Shadow Set
+	   (EquipNumSearch(2300) && n_A_ActiveSkill == skill_WAR_EARTH_STRAIN) 		|| // Osma's  Shadow Set
+	   (EquipNumSearch(2301) && n_A_ActiveSkill == skill_CG_ARROW_VULCAN) 		)  // Garmia's  Shadow Set
+		dmgMultiplier += n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_PENDANT_DEF_PLUS;
+		
+	if((EquipNumSearch(2297) && n_A_ActiveSkill == skill_MEC_ARM_CANNON) 		|| // Talos' Shadow Set
+	   (EquipNumSearch(2302) && n_A_ActiveSkill == skill_GEN_CART_CANNON) 		)  // Boscard's Shadow Set
+		dmgMultiplier += Math.floor((n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_PENDANT_DEF_PLUS)/2);
+	
+	if( EquipNumSearch(2304) && n_A_ActiveSkill == skill_SUR_TIGER_CANNON )  //Sura set
+	{
+		dmgMultiplier += Math.floor((n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_SHIELD_DEF_PLUS)/2);
+	}
+	if( EquipNumSearch(2303) && n_A_ActiveSkill == skill_RUN_DRAGON_BREATH)  //Rune Knight Set
+	{
+		dmgMultiplier += n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_SHIELD_DEF_PLUS;
+	}
+	
+	if( EquipNumSearch(2316) && n_A_ActiveSkill == skill_REB_FIRE_DANCE)  //Rune Knight Set
+	{//Dog Cap + Dark Rose
+		dmgMultiplier += 6 * Math.floor(n_A_Weapon_ATKplus / 2);
+	}
 	// if(n_A_ActiveSkill == )
 	// {
 		// if(EquipNumSearch() && n_A_Weapon_ATKplus >= )

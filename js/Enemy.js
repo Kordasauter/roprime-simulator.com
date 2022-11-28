@@ -298,7 +298,7 @@ with( document.calcForm )
 
 	// DEF--------------------------------
 	var w = 0; // Def
-	w += n_tok[290];
+	w += n_tok[bon_DEFIGN_RC_ALL];
 	w += n_tok[300+n_B[en_RACE]]; // Race
 	// RSmiting / ShieldBoom / ShieldBoom(SL) / GCross / OImpact / FinalStrike / FinalStrike(MHP)
 	// DefIgnore ?
@@ -390,7 +390,7 @@ with( document.calcForm )
 	
 	// MDEF-------------------------------------------------
 	var w = 0; // MDef
-	w += n_tok[bon_DEFIGN_RC_ALL];
+	w += n_tok[bon_MDEFIGN_RC_ALL];
 	w += n_tok[310+n_B[en_RACE]]; // Race
 	if ( w )
 	{

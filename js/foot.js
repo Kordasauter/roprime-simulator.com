@@ -513,11 +513,11 @@ with ( document.calcForm )
 
 	if ( EquipNumSearch(645) )
 	{ // Piercing Staff
-		n_tok[bon_DEFIGN_RC_ALL] += 10 + n_A_Weapon_ATKplus;
+		n_tok[bon_MDEFIGN_RC_ALL] += 10 + n_A_Weapon_ATKplus;
 	}
 	if ( n_A_WeaponType === weapTyp_STAFF )
 	{ // necromancer card
-		n_tok[bon_DEFIGN_RC_ALL] += 2 * CardNumSearch(card_WEPN_NECROMANCER);
+		n_tok[bon_MDEFIGN_RC_ALL] += 2 * CardNumSearch(card_WEPN_NECROMANCER);
 	}
 	if ( n_B[en_BOSS]==1 && CardNumSearch(card_HEAD_VESPER) )
 	{ // Vesper card
@@ -525,23 +525,23 @@ with ( document.calcForm )
 	}
 	if ( EquipNumSearch(936) )
 	{ // Thorn Staff of Darkness
-		n_tok[bon_DEFIGN_RC_ALL] += n_A_Weapon_ATKplus * 1;
+		n_tok[bon_MDEFIGN_RC_ALL] += n_A_Weapon_ATKplus * 1;
 	}
 	if ( EquipNumSearch(1822) )
 	{ // Shadow Ninja Shield
 		n_tok[bon_DEFIGN_RC_ALL] += n_A_SHADOW_SHIELD_DEF_PLUS * 4;
+		n_tok[bon_MDEFIGN_RC_ALL] += n_A_SHADOW_SHIELD_DEF_PLUS * 4;
+		if (n_A_SHADOW_SHIELD_DEF_PLUS >= 7) { n_tok[bon_MDEFIGN_RC_ALL] += 10;}
 		if (n_A_SHADOW_SHIELD_DEF_PLUS >= 7) { n_tok[bon_DEFIGN_RC_ALL] += 10;}
+		if (n_A_SHADOW_SHIELD_DEF_PLUS >= 9) { n_tok[bon_MDEFIGN_RC_ALL] += 10;}
 		if (n_A_SHADOW_SHIELD_DEF_PLUS >= 9) { n_tok[bon_DEFIGN_RC_ALL] += 10;}
 	}
 	if ( EquipNumSearch(1823) )
 	{ // Shadow Taekwon  Shield
-		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9){n_tok[bon_DEFIGN_RC_ALL] += SkillSearch(skill_TK_PEACEFUL_BREAK) * 3;}
+		n_tok[bon_DEFIGN_RC_ALL] += SkillSearch(skill_TK_PEACEFUL_BREAK) * 3;
 		n_tok[bon_DEFIGN_RC_ALL] += n_A_SHADOW_SHIELD_DEF_PLUS * 3;
-		for(var i = 310 ; i<=319 ; i++)
-		{
-			if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9){n_tok[i] += SkillSearch(skill_TK_HAPPY_BREAK) * 3;
-			n_tok[i] += n_A_SHADOW_SHIELD_DEF_PLUS * 3;
-		}
+		n_tok[bon_MDEFIGN_RC_ALL] += SkillSearch(skill_TK_HAPPY_BREAK) * 3;
+		n_tok[bon_MDEFIGN_RC_ALL] += n_A_SHADOW_SHIELD_DEF_PLUS * 3;
 	}
 	if ( EquipNumSearch(1841) )
 	{ // Shadow Super Novice Gloves
@@ -552,7 +552,6 @@ with ( document.calcForm )
 			if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9){n_tok[i] += SkillSearch(skill_MA_INCREASED_SP_RECOVERY) * 3;}
 			n_tok[i] += n_A_SHADOW_WEAPON_DEF_PLUS * 3;
 		}
-	}
 	}
 	if ( EquipNumSearch(1842) )
 	{ // Shadow Gunslinger Gloves

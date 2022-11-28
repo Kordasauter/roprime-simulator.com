@@ -2304,70 +2304,74 @@
 ,[2254,itm_type_SET,0,0,0,0,0,0,bon_NONE]//YSF01 Plate + Manteau + Greave
 
 //26-10-2022 new shadows
-// ,[2255,itm_type_SHADOW_WEAPON,0,0,0,0,0,0,bon_DMG_RANGE,3,bon_NONE] //Wyrmeater's Shadow Gloves
-// ,[2256,itm_type_SHADOW_WEAPON,0,0,0,0,0,0,bon_DMG_SIZ_SMALL,3,bon_DMG_SIZ_MEDIUM,3,bon_DMG_SIZ_LARGE,3,bon_NONE] //Tiger Spirit Shadow Gloves
-// ,[2257,itm_type_SHADOW_WEAPON,0,0,0,0,0,0,bon_NONE] //Katra's Shadow Gloves
-// ,[2258,itm_type_SHADOW_WEAPON,0,0,0,0,0,0,bon_INC_MAGIC_HOLY,3,bon_NONE] //Exorcist Shadow Gloves
-// ,[2259,itm_type_SHADOW_WEAPON,0,0,0,0,0,0,bon_DMG_RANGE,3,bon_NONE] //Rondius' Shadow Gloves
-// ,[2260,itm_type_SHADOW_WEAPON,0,0,0,0,0,0,bon_INC_MAGIC_HOLY,3,bon_NONE] //Gunther's Shadow Gloves
-// ,[2261,itm_type_SHADOW_WEAPON,0,0,0,0,0,0,bon_DMG_RANGE,3,bon_NONE] //Talos' Shadow Gloves
-// ,[2262,itm_type_SHADOW_WEAPON,0,0,0,0,0,0,bon_INC_MAGIC_WIND,3,bon_NONE] //Sylphir's Shadow Gloves
-// ,[2263,itm_type_SHADOW_WEAPON,0,0,0,0,0,0,bon_SKILL_AUTOCAST,151,bon_NONE] //Dordaleon's Shadow Gloves
-// ,[2264,itm_type_SHADOW_WEAPON,0,0,0,0,0,0,bon_INC_MAGIC_EARTH,3,bon_NONE] //Osma's Shadow Gloves
-// ,[2265,itm_type_SHADOW_WEAPON,0,0,0,0,0,0,bon_DMG_RANGE,3,bon_NONE] //Garmia's Shadow Gloves
-// ,[2266,itm_type_SHADOW_WEAPON,0,0,0,0,0,0,bon_DMG_RANGE,3,bon_NONE] //Boscard's Shadow Gloves
+,[2255,itm_type_SHADOW_WEAPON,207,0,0,0,0,0,bon_DMG_RANGE,3,bon_NONE] //Wyrmeater's Shadow Gloves
+,[2256,itm_type_SHADOW_WEAPON,215,0,0,0,0,0,bon_DMG_SIZ_SMALL,3,bon_DMG_SIZ_MEDIUM,3,bon_DMG_SIZ_LARGE,3,bon_NONE] //Tiger Spirit Shadow Gloves
+,[2257,itm_type_SHADOW_WEAPON,208,0,0,0,0,0,bon_NONE] //Katra's Shadow Gloves
+,[2258,itm_type_SHADOW_WEAPON,209,0,0,0,0,0,bon_INC_MAGIC_HOLY,3,bon_NONE] //Exorcist Shadow Gloves
+,[2259,itm_type_SHADOW_WEAPON,210,0,0,0,0,0,bon_DMG_RANGE,3,bon_NONE] //Rondius' Shadow Gloves
+,[2260,itm_type_SHADOW_WEAPON,213,0,0,0,0,0,bon_INC_MAGIC_HOLY,3,bon_NONE] //Gunther's Shadow Gloves
+,[2261,itm_type_SHADOW_WEAPON,212,0,0,0,0,0,bon_DMG_RANGE,3,bon_NONE] //Talos' Shadow Gloves
+,[2262,itm_type_SHADOW_WEAPON,218,0,0,0,0,0,bon_INC_MAGIC_WIND,3,bon_NONE] //Sylphir's Shadow Gloves
+,[2263,itm_type_SHADOW_WEAPON,214,0,0,0,0,0,bon_SKILL_AUTOCAST,151,bon_NONE] //Dordaleon's Shadow Gloves
+,[2264,itm_type_SHADOW_WEAPON,211,0,0,0,0,0,bon_INC_MAGIC_EARTH,3,bon_NONE] //Osma's Shadow Gloves
+,[2265,itm_type_SHADOW_WEAPON,2054,0,0,0,0,0,bon_DMG_RANGE,3,bon_NONE] //Garmia's Shadow Gloves
+,[2266,itm_type_SHADOW_WEAPON,219,0,0,0,0,0,bon_DMG_RANGE,3,bon_NONE] //Boscard's Shadow Gloves
 
-// ,[2267,itm_type_SHADOW_EARRING,0,0,0,0,0,0,bon_NONE] //Wyrmeater's Shadow Ring
-// ,[2268,itm_type_SHADOW_EARRING,0,0,0,0,0,0,bon_NONE] //Tiger Spirit Shadow Ring
-// ,[2269,itm_type_SHADOW_EARRING,0,0,0,0,0,0,bon_DMG_SIZ_SMALL,5,bon_DMG_SIZ_MEDIUM,5,bon_DMG_SIZ_LARGE,5,bon_NONE] //Katra's Shadow Ring
-// ,[2270,itm_type_SHADOW_EARRING,0,0,0,0,0,0,bon_NONE] //Exorcist Shadow Ring
-// ,[2271,itm_type_SHADOW_EARRING,0,0,0,0,0,0,bon_DMG_SIZ_SMALL,3,bon_DMG_SIZ_MEDIUM,3,bon_DMG_SIZ_LARGE,3,bon_NONE] //Rondius' Shadow Ring
-// ,[2272,itm_type_SHADOW_EARRING,0,0,0,0,0,0,bon_NONE] //Gunther's Shadow Ring
-// ,[2273,itm_type_SHADOW_EARRING,0,0,0,0,0,0,bon_NONE] //Talos' Shadow Ring
-// ,[2274,itm_type_SHADOW_EARRING,0,0,0,0,0,0,bon_NONE] //Sylphir's Shadow Ring
-// ,[2275,itm_type_SHADOW_EARRING,0,0,0,0,0,0,bon_INC_MAGIC_WATER,2,bon_INC_MAGIC_NEUTRAL,2,bon_INC_MAGIC_FIRE,2,bon_NONE] //Dordaleon's Shadow Ring
-// ,[2276,itm_type_SHADOW_EARRING,0,0,0,0,0,0,bon_NONE] //Osma's Shadow Ring
-// ,[2277,itm_type_SHADOW_EARRING,0,0,0,0,0,0,bon_NONE] //Garmia's Shadow Ring
-// ,[2278,itm_type_SHADOW_EARRING,0,0,0,0,0,0,bon_DMG_SIZ_SMALL,5,bon_DMG_SIZ_MEDIUM,5,bon_DMG_SIZ_LARGE,5,bon_NONE] //Boscard's Shadow Ring
+,[2267,itm_type_SHADOW_EARRING,207,0,0,0,0,0,bon_NONE] //Wyrmeater's Shadow Ring
+,[2268,itm_type_SHADOW_EARRING,215,0,0,0,0,0,bon_NONE] //Tiger Spirit Shadow Ring
+,[2269,itm_type_SHADOW_EARRING,208,0,0,0,0,0,bon_DMG_SIZ_SMALL,5,bon_DMG_SIZ_MEDIUM,5,bon_DMG_SIZ_LARGE,5,bon_NONE] //Katra's Shadow Ring
+,[2270,itm_type_SHADOW_EARRING,209,0,0,0,0,0,bon_NONE] //Exorcist Shadow Ring
+,[2271,itm_type_SHADOW_EARRING,210,0,0,0,0,0,bon_DMG_SIZ_SMALL,3,bon_DMG_SIZ_MEDIUM,3,bon_DMG_SIZ_LARGE,3,bon_NONE] //Rondius' Shadow Ring
+,[2272,itm_type_SHADOW_EARRING,213,0,0,0,0,0,bon_DELAY_SKILL_FLAT + skill_ROY_RAY_OF_GENESIS,0.2,bon_NONE] //Gunther's Shadow Ring
+,[2273,itm_type_SHADOW_EARRING,212,0,0,0,0,0,bon_NONE] //Talos' Shadow Ring
+,[2274,itm_type_SHADOW_EARRING,218,0,0,0,0,0,bon_NONE] //Sylphir's Shadow Ring
+,[2275,itm_type_SHADOW_EARRING,214,0,0,0,0,0,bon_INC_MAGIC_WATER,2,bon_INC_MAGIC_NEUTRAL,2,bon_INC_MAGIC_FIRE,2,bon_NONE] //Dordaleon's Shadow Ring
+,[2276,itm_type_SHADOW_EARRING,211,0,0,0,0,0,bon_DELAY_SKILL_FLAT + skill_WAR_EARTH_STRAIN,0.2,bon_NONE] //Osma's Shadow Ring
+,[2277,itm_type_SHADOW_EARRING,2054,0,0,0,0,0,bon_DELAY_SKILL_FLAT + skill_CG_ARROW_VULCAN,0.2,bon_NONE] //Garmia's Shadow Ring
+,[2278,itm_type_SHADOW_EARRING,219,0,0,0,0,0,bon_DMG_SIZ_SMALL,5,bon_DMG_SIZ_MEDIUM,5,bon_DMG_SIZ_LARGE,5,bon_NONE] //Boscard's Shadow Ring
 
-// ,[2279,itm_type_SHADOW_PENDANT,0,0,0,0,0,0,bon_DMG_SKILL + skill_RUN_DRAGON_BREATH,5,bon_NONE] //Wyrmeater's Shadow Pendant
-// ,[2280,itm_type_SHADOW_PENDANT,0,0,0,0,0,0,bon_DMG_SKILL + skill_SUR_TIGER_CANNON,5,bon_NONE] //Tiger Spirit Shadow Pendant
-// ,[2281,itm_type_SHADOW_PENDANT,0,0,0,0,0,0,bon_DMG_CRIT,5,bon_NONE] //Katra's Shadow Pendant
-// ,[2282,itm_type_SHADOW_PENDANT,0,0,0,0,0,0,bon_DMG_SKILL + skill_PR_MAGNUS_EXORCISMUS,5,bon_NONE] //Exorcist Shadow Pendant
-// ,[2283,itm_type_SHADOW_PENDANT,0,0,0,0,0,0,bon_DMG_SKILL + skill_RAN_AIMED_BOLT,5,bon_NONE] //Rondius' Shadow Pendant
-// ,[2284,itm_type_SHADOW_PENDANT,0,0,0,0,0,0,bon_DMG_SKILL + skill_ROY_RAY_OF_GENESIS,5,bon_NONE] //Gunther's Shadow Pendant
-// ,[2285,itm_type_SHADOW_PENDANT,0,0,0,0,0,0,bon_DMG_SKILL + skill_MEC_ARM_CANNON,5,bon_NONE] //Talos' Shadow Pendant
-// ,[2286,itm_type_SHADOW_PENDANT,0,0,0,0,0,0,bon_DMG_SKILL + skill_SOR_VARETYR_SPEAR,5,bon_NONE] //Sylphir's Shadow Pendant
-// ,[2287,itm_type_SHADOW_PENDANT,0,0,0,0,0,0,bon_DMG_SKILL + skill_WI_METEOR_STORM,5,bon_NONE] //Dordaleon's Shadow Pendant
-// ,[2288,itm_type_SHADOW_PENDANT,0,0,0,0,0,0,bon_DMG_SKILL + skill_WAR_EARTH_STRAIN,5,bon_NONE] //Osma's Shadow Pendant
-// ,[2289,itm_type_SHADOW_PENDANT,0,0,0,0,0,0,bon_DMG_SKILL + skill_CG_ARROW_VULCAN,5,bon_NONE] //Garmia's Shadow Pendant
-// ,[2290,itm_type_SHADOW_PENDANT,0,0,0,0,0,0,bon_DMG_SKILL + skill_GEN_CART_CANNON,5,bon_NONE] //Boscard's Shadow Pendant
+,[2279,itm_type_SHADOW_PENDANT,207,0,0,0,0,0,bon_DMG_SKILL + skill_RUN_DRAGON_BREATH,5,bon_NONE] //Wyrmeater's Shadow Pendant
+,[2280,itm_type_SHADOW_PENDANT,215,0,0,0,0,0,bon_DMG_SKILL + skill_SUR_TIGER_CANNON,5,bon_NONE] //Tiger Spirit Shadow Pendant
+,[2281,itm_type_SHADOW_PENDANT,208,0,0,0,0,0,bon_DMG_CRIT,5,bon_NONE] //Katra's Shadow Pendant
+,[2282,itm_type_SHADOW_PENDANT,209,0,0,0,0,0,bon_DMG_SKILL + skill_PR_MAGNUS_EXORCISMUS,5,bon_NONE] //Exorcist Shadow Pendant
+,[2283,itm_type_SHADOW_PENDANT,210,0,0,0,0,0,bon_DMG_SKILL + skill_RAN_AIMED_BOLT,5,bon_NONE] //Rondius' Shadow Pendant
+,[2284,itm_type_SHADOW_PENDANT,213,0,0,0,0,0,bon_DMG_SKILL + skill_ROY_RAY_OF_GENESIS,5,bon_NONE] //Gunther's Shadow Pendant
+,[2285,itm_type_SHADOW_PENDANT,212,0,0,0,0,0,bon_DMG_SKILL + skill_MEC_ARM_CANNON,5,bon_NONE] //Talos' Shadow Pendant
+,[2286,itm_type_SHADOW_PENDANT,218,0,0,0,0,0,bon_DMG_SKILL + skill_SOR_VARETYR_SPEAR,5,bon_NONE] //Sylphir's Shadow Pendant
+,[2287,itm_type_SHADOW_PENDANT,214,0,0,0,0,0,bon_DMG_SKILL + skill_WI_METEOR_STORM,5,bon_NONE] //Dordaleon's Shadow Pendant
+,[2288,itm_type_SHADOW_PENDANT,211,0,0,0,0,0,bon_DMG_SKILL + skill_WAR_EARTH_STRAIN,5,bon_NONE] //Osma's Shadow Pendant
+,[2289,itm_type_SHADOW_PENDANT,2054,0,0,0,0,0,bon_DMG_SKILL + skill_CG_ARROW_VULCAN,5,bon_NONE] //Garmia's Shadow Pendant
+,[2290,itm_type_SHADOW_PENDANT,219,0,0,0,0,0,bon_DMG_SKILL + skill_GEN_CART_CANNON,5,bon_NONE] //Boscard's Shadow Pendant
 
-// ,[2291,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Wyrmeater's Shadow Set
-// ,[2292,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Tiger Spirit Shadow Set
-// ,[2293,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Katra's Shadow Set
-// ,[2294,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Exorcist Shadow Set
-// ,[2295,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Rondius' Shadow Set
-// ,[2296,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Gunther's Shadow Set
-// ,[2297,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Talos' Shadow Set
-// ,[2298,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Sylphir's Shadow Set
-// ,[2299,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Dordaleon's Shadow Set
-// ,[2300,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Osma's Shadow Set
-// ,[2301,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Garmia's Shadow Set
-// ,[2302,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Boscard's Shadow Set
+,[2291,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Wyrmeater's Shadow Set
+,[2292,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Tiger Spirit Shadow Set
+,[2293,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Katra's Shadow Set
+,[2294,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Exorcist Shadow Set
+,[2295,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Rondius' Shadow Set
+,[2296,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Gunther's Shadow Set
+,[2297,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Talos' Shadow Set
+,[2298,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Sylphir's Shadow Set
+,[2299,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Dordaleon's Shadow Set
+,[2300,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Osma's Shadow Set
+,[2301,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Garmia's Shadow Set
+,[2302,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Boscard's Shadow Set
 
-// ,[2303,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Rune Knight Set
-// ,[2304,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Sura Set
-// ,[2305,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Guillotine Cross Set
-// ,[2306,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Arch Bishop Set
-// ,[2307,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Ranger Set
-// ,[2308,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Royal Guard Set
-// ,[2309,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Mechanic Set
-// ,[2310,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Sorcerer Set
-// ,[2311,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Shadow Chaser Set
-// ,[2312,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Warlock Set
-// ,[2313,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Wanderer Set
-// ,[2314,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Geneticist Set
+,[2303,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Rune Knight Set
+,[2304,itm_type_SET,0,0,0,0,0,0,bon_DEFIGN_RC_ALL,40,bon_NONE] //Sura Set
+,[2305,itm_type_SET,0,0,0,0,0,0,bon_DEFIGN_RC_ALL,40,bon_NONE] //Guillotine Cross Set
+,[2306,itm_type_SET,0,0,0,0,0,0,bon_MDEFIGN_RC_ALL,40,bon_NONE] //Arch Bishop Set
+,[2307,itm_type_SET,0,0,0,0,0,0,bon_DEFIGN_RC_ALL,40,bon_NONE] //Ranger Set
+,[2308,itm_type_SET,0,0,0,0,0,0,bon_MDEFIGN_RC_ALL,40,bon_NONE] //Royal Guard Set
+,[2309,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Mechanic Set
+,[2310,itm_type_SET,0,0,0,0,0,0,bon_MDEFIGN_RC_ALL,40,bon_NONE] //Sorcerer Set
+,[2311,itm_type_SET,0,0,0,0,0,0,bon_MDEFIGN_RC_ALL,40,bon_NONE] //Shadow Chaser Set
+,[2312,itm_type_SET,0,0,0,0,0,0,bon_MDEFIGN_RC_ALL,40,bon_NONE] //Warlock Set
+,[2313,itm_type_SET,0,0,0,0,0,0,bon_MDEFIGN_RC_ALL,40,bon_NONE] //Wanderer Set
+,[2314,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Geneticist Set
+
+//Dog Cap missing setSeconds
+,[2315,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Dog Cap + Thanatos Katar
+,[2316,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Dog Cap + Dark Rose
 
 ]
 ItemMax = ItemOBJ.length -1;
@@ -2900,8 +2904,33 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2252,2249,2250,"NULL"] // YSF01 Plate + Manteau
 ,[2253,2249,2251,"NULL"] // YSF01 Plate + Greave
 ,[2234,2249,2250,2251,"NULL"] // YSF01 Plate + Manteau + Greave
-// ,[itm_set,item1,item2,...,"NULL"] // 
+,[2291,2255,2267,2279,"NULL"] // Wyrmeater's Shadow Set
+,[2292,2256,2268,2280,"NULL"] // Tiger Spirit Shadow Set
+,[2293,2257,2269,2281,"NULL"] // Katra's Shadow Set
+,[2294,2258,2270,2282,"NULL"] // Exorcist Shadow Set
+,[2295,2259,2271,2283,"NULL"] // Rondius' Shadow Set
+,[2296,2260,2272,2284,"NULL"] // Gunther's Shadow Set
+,[2297,2261,2273,2285,"NULL"] // Talos' Shadow Set
+,[2298,2262,2274,2286,"NULL"] // Sylphir's Shadow Set
+,[2299,2263,2275,2287,"NULL"] // Dordaleon's Shadow Set
+,[2300,2264,2276,2288,"NULL"] // Osma's Shadow Set
+,[2301,2265,2277,2289,"NULL"] // Garmia's Shadow Set
+,[2302,2266,2278,2290,"NULL"] // Boscard's Shadow Set
+,[2303,2255,1809,"NULL"] // Rune Knight Shadow Set
+,[2304,2256,1814,"NULL"] // Sura Shadow Set
+,[2305,2257,1815,"NULL"] // Guillotine Cross Shadow Set
+,[2306,2258,1813,"NULL"] // Arch Bishop Shadow Set
+,[2307,2259,1819,"NULL"] // Ranger Shadow Set
+,[2308,2260,1810,"NULL"] // Royal Guard Shadow Set
+,[2309,2261,1811,"NULL"] // Mechanic Shadow Set
+,[2310,2262,1818,"NULL"] // Sorcerer Shadow Set
+,[2311,2263,1816,"NULL"] // Shadow Chaser Shadow Set
+,[2312,2264,1817,"NULL"] // Warlock Shadow Set
+,[2313,2265,1821,"NULL"] // Wanderer Shadow Set
+// ,[2313,2265,1820,"NULL"] // Minstrel Shadow Set - Not in item description ??
+,[2314,2266,1812,"NULL"] // Genetic Shadow Set
 
+// ,[itm_set,item1,item2,...,"NULL"] // 
 //,[itm_set,item1,item2,...,"NULL"] // 
 ];
 SE_MAXnum = w_SE.length -1;
