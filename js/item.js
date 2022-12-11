@@ -2381,6 +2381,15 @@ ItemMax = ItemOBJ.length -1;
 // ID, WeapType, ReqJob, Atk/Def, wLVL, slots, Weight, reqBLVL, bonus[type], bonusamount, bonus2[type], .., 0
 // ID, WeapType, ReqJob, Atk, wLVL, slots, Weight, reqBLVL, bonus[type], bonusamount, bonus2[type], .., bon_NONE
 
+//New way for adding effect on every x refine or effect if refine > x
+//exemple : for every two upgrade str +1
+//,[ID, WeapType, ReqJob, Atk/Def, wLVL, slots, Weight, reqBLVL,"ev_ref",2,bon_STR,1,bon_NONE]
+//exemple : for str +1 if refine +7 or more
+//,[ID, WeapType, ReqJob, Atk/Def, wLVL, slots, Weight, reqBLVL,"ref_lvl",7,bon_STR,1,bon_NONE]
+//Bonus_condition ("ev_ref" or "ov_ref"), refine, Bonus, bonus_amount
+//ev_ref = for every refine
+//ref_lvl = refine level over
+
 function BuildItemDescription( bonusType, bonusValue )
 {
 	var wNAME1 = new Array();
@@ -2892,7 +2901,7 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2151,2145,1949,"NULL"] // "Chronocloak + Temporal Int"
 ,[2152,2146,1950,"NULL"] // "Chronocloak + Temporal Dex"
 ,[2153,2147,1951,"NULL"] // "Chronocloak + Temporal Luk"
-,[22,2147,1951,"NULL"] // "Chronocloak + Temporal Luk"
+// ,[22,2147,1951,"NULL"] // "Chronocloak + Temporal Luk"
 ,[2208,2207,315,"NULL"] // Flattery Robe + Ancient Cape[0]\[1]
 ,[2209,2207,436,"NULL"] // Flattery Robe + Survivor's Manteau
 ,[2211,2210,701,"NULL"] // Flattery Robe + Morrigane's Manteau

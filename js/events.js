@@ -3365,10 +3365,37 @@ function DisplayItemDescription( ItemIndex )
 
 	// Description String
 	descriptionString = "";
+	var tempDesc = "";
+	
 	for ( var i = itm_BONUS_START; ItemOBJ[ItemIndex][i] !== bon_NONE; i += 2 )
 	{ // Collect Bonusses
-		descriptionString += BuildItemDescription(ItemOBJ[ItemIndex][i], ItemOBJ[ItemIndex][i + 1] ); // add them to Strings
+		if(isNaN(ItemOBJ[ItemIndex][i] ))//NEW
+		{
+			if(ItemOBJ[ItemIndex][i] == "ev_ref")
+			{
+				if(tempDesc != "[For each "+ ItemOBJ[ItemIndex][i + 1] + " refine lvl]<br>")
+				{
+					tempDesc = "[For each "+ ItemOBJ[ItemIndex][i + 1] + " refine lvl]<br>";
+					descriptionString += "<br>[For each "+ ItemOBJ[ItemIndex][i + 1] + " refine lvl]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "ref_lvl")
+			{
+				if(tempDesc != "[If refine lv +"+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc = "[If refine lv +"+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+					descriptionString += "<br>[If refine lv +"+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			
+			descriptionString += "-"+ BuildItemDescription(ItemOBJ[ItemIndex][i + 2], ItemOBJ[ItemIndex][i + 3] ); // add them to Strings
+			i += 2;
+		}
+		else
+			descriptionString += BuildItemDescription(ItemOBJ[ItemIndex][i], ItemOBJ[ItemIndex][i + 1] ); // add them to Strings
+		// descriptionString += BuildItemDescription(ItemOBJ[ItemIndex][i], ItemOBJ[ItemIndex][i + 1] ); // add them to Strings
 	}
+	
 	if ( ITEM_NAME[ItemIndex][2 + 2 * Language] !== bon_NONE )
 	{
 		descriptionString += ITEM_NAME[ItemIndex][2 + 2 * Language] +"<BR>";
@@ -3492,11 +3519,150 @@ function Click_Card( CardIndex )
 
 	CBIstr = "";
 	var tempDesc = "";
+	var tempDesc2 = "";
+	
 	for(i=card_att_BONUS_START;cardOBJ[CardIndex][i] != bon_NONE;i+=2) // Collect Bonusses
-		tempDesc += BuildItemDescription(cardOBJ[CardIndex][i],cardOBJ[CardIndex][i+1]); // add them to String
+	{
+		if(isNaN(cardOBJ[CardIndex][i] ))//NEW
+		{
+			if(cardOBJ[CardIndex][i] == "ev_ref")
+			{
+				if(tempDesc2 != "[For each "+ cardOBJ[CardIndex][i + 1] + " refine lvl]<br>")
+				{
+					tempDesc2 = "[For each "+ cardOBJ[CardIndex][i + 1] + " refine lvl]<br>";
+					tempDesc += "<br>[For each "+ cardOBJ[CardIndex][i + 1] + " refine lvl]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "ev_bstr")
+			{
+				if(tempDesc2 != "[For each "+ cardOBJ[CardIndex][i + 1] + " base STR]<br>")
+				{
+					tempDesc2 = "[For each "+ cardOBJ[CardIndex][i + 1] + " base STR]<br>";
+					tempDesc += "<br>[For each "+ cardOBJ[CardIndex][i + 1] + " base STR]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "ev_bagi")
+			{
+				if(tempDesc2 != "[For each "+ cardOBJ[CardIndex][i + 1] + " base AGI]<br>")
+				{
+					tempDesc2 = "[For each "+ cardOBJ[CardIndex][i + 1] + " base AGI]<br>";
+					tempDesc += "<br>[For each "+ cardOBJ[CardIndex][i + 1] + " base AGI]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "ev_bvit")
+			{
+				if(tempDesc2 != "[For each "+ cardOBJ[CardIndex][i + 1] + " base VIT]<br>")
+				{
+					tempDesc2 = "[For each "+ cardOBJ[CardIndex][i + 1] + " base VIT]<br>";
+					tempDesc += "<br>[For each "+ cardOBJ[CardIndex][i + 1] + " base VIT]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "ev_bint")
+			{
+				if(tempDesc2 != "[For each "+ cardOBJ[CardIndex][i + 1] + " base INT]<br>")
+				{
+					tempDesc2 = "[For each "+ cardOBJ[CardIndex][i + 1] + " base INT]<br>";
+					tempDesc += "<br>[For each "+ cardOBJ[CardIndex][i + 1] + " base INT]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "ev_bdex")
+			{
+				if(tempDesc2 != "[For each "+ cardOBJ[CardIndex][i + 1] + " base DEX]<br>")
+				{
+					tempDesc2 = "[For each "+ cardOBJ[CardIndex][i + 1] + " base DEX]<br>";
+					tempDesc += "<br>[For each "+ cardOBJ[CardIndex][i + 1] + " base DEX]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "ev_bluk")
+			{
+				if(tempDesc2 != "[For each "+ cardOBJ[CardIndex][i + 1] + " base LUK]<br>")
+				{
+					tempDesc2 = "[For each "+ cardOBJ[CardIndex][i + 1] + " base LUK]<br>";
+					tempDesc += "<br>[For each "+ cardOBJ[CardIndex][i + 1] + " base LUK]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "ref_lvl")
+			{
+				if(tempDesc2 != "[If refine lv +"+ cardOBJ[CardIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc2 = "[If refine lv +"+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+					tempDesc += "<br>[If refine lv +"+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "bstr_hi")
+			{
+				if(tempDesc2 != "[If base STR is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc2 = "[If base STR is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+					tempDesc += "<br>[If base STR is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "bagi_hi")
+			{
+				if(tempDesc2 != "[If base AGI is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc2 = "[If base AGI is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+					tempDesc += "<br>[If base AGI is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "bvit_hi")
+			{
+				if(tempDesc2 != "[If base VIT is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc2 = "[If base VIT is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+					tempDesc += "<br>[If base VIT is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "bint_hi")
+			{
+				if(tempDesc2 != "[If base INT is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc2 = "[If base INT is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+					tempDesc += "<br>[If base INT is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "bdex_hi")
+			{
+				if(tempDesc2 != "[If base DEX is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc2 = "[If base DEX is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+					tempDesc += "<br>[If base DEX is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "bluk_hi")
+			{
+				if(tempDesc2 != "[If base LUK is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc2 = "[If base LUK is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+					tempDesc += "<br>[If base LUK is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "blvl_hi")
+			{
+				if(tempDesc2 != "[If base level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc2 = "[If base level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+					tempDesc += "<br>[If base level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "jlvl_hi")
+			{
+				if(tempDesc2 != "[If job level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc2 = "[If job level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+					tempDesc += "<br>[If job level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			tempDesc += "-"+ BuildItemDescription(cardOBJ[CardIndex][i + 2], cardOBJ[CardIndex][i + 3] ); // add them to Strings
+			i += 2;
+		}
+		else
+			tempDesc += BuildItemDescription(cardOBJ[CardIndex][i], cardOBJ[CardIndex][i + 1] ); // add them to Strings
+		// tempDesc += BuildItemDescription(cardOBJ[CardIndex][i],cardOBJ[CardIndex][i+1]); // add them to String
+	}
 	CBIstr += tempDesc;
 	if(cardOBJ[CardIndex][card_att_DESC] != 0)
-		CBIstr += cardOBJ[CardIndex][card_att_DESC] +"<BR>";
+		CBIstr += "<br>"+ cardOBJ[CardIndex][card_att_DESC] +"<BR>";
 	
 	// Build Set Bonus Descriptions if any
 	var check = 0;

@@ -95,7 +95,7 @@ MAP_NAME = [
 ,["","Terra Gloria"]
 ,["","Werner Laboratory Central Room"]
 ,["","Heart Hunter War Base 2"]
-// ,["","Place_Holder"]
+,["","Rock Ridge"]
 // ,["","Place_Holder"]
 ];
 }

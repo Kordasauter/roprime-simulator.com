@@ -213,16 +213,16 @@ function GenerateMonster()
 	str += formatting(formElements["Size"].value,10)
 	str += formElements["Size"].value;
 	str += ',';
-	str += formatting(formElements["Level"].value,7)
+	str += formatting(formElements["Level"].value,8)
 	str += formElements["Level"].value;
 	str += ',';
 	str += formatting(formElements["HP"].value,8)
 	str += formElements["HP"].value;
 	str += ',';
-	str += formatting(formElements["Vit"].value,7)
+	str += formatting(formElements["Vit"].value,8)
 	str += formElements["Vit"].value;
 	str += ',';
-	str += formatting(formElements["Agi"].value,6)
+	str += formatting(formElements["Agi"].value,7)
 	str += formElements["Agi"].value;
 	str += ',';
 	str += formatting(formElements["Int"].value,8)
@@ -231,13 +231,13 @@ function GenerateMonster()
 	str += formatting(formElements["Dex"].value,7)
 	str += formElements["Dex"].value;
 	str += ',';
-	str += formatting(formElements["Luk"].value,7)
+	str += formatting(formElements["Luk"].value,8)
 	str += formElements["Luk"].value;
 	str += ',';
-	str += formatting(formElements["MinAtk"].value,9)
+	str += formatting(formElements["MinAtk"].value,11)
 	str += formElements["MinAtk"].value;
 	str += ',';
-	str += formatting(formElements["MaxAtk"].value,7)
+	str += formatting(formElements["MaxAtk"].value,10)
 	str += formElements["MaxAtk"].value;
 	str += ',';
 	str += formatting(formElements["Def"].value,7)
@@ -246,39 +246,33 @@ function GenerateMonster()
 	str += formatting(formElements["MDef"].value,9)
 	str += formElements["MDef"].value;
 	str += ',';
-	str += formatting(formElements["BExp"].value,11)
+	str += formatting(formElements["BExp"].value,13)
 	str += formElements["BExp"].value;
 	str += ',';
-	str += formatting(formElements["JExp"].value,11)
+	str += formatting(formElements["JExp"].value,13)
 	str += formElements["JExp"].value;
 	str += ',   ,       ';
 	str += formElements["BossFlag"].value;
-	str += ',      0,';
+	str += ',         0,';
 	var hit100 = 200 + parseInt(formElements["Level"].value) + parseInt(formElements["Agi"].value) + Math.floor(parseInt(formElements["Luk"].value) / 5);
-	str += formatting(hit100.toString(),9)
+	str += formatting(hit100.toString(),11)
 	str += hit100;
 	str += ',';
 	var flee95 = 170 + parseInt(formElements["Level"].value) + parseInt(formElements["Dex"].value) + Math.floor(parseInt(formElements["Luk"].value) / 3);
-	str += formatting(flee95.toString(),13);
+	str += formatting(flee95.toString(),14);
 	str += flee95;
 	str += ',';
 	var mlevel = parseInt(formElements["Level"].value);
 	var mvit = parseInt(formElements["Vit"].value);
 	var sdef = Math.floor((mlevel + mvit)/2);
-	str += formatting(sdef.toString(),8);
+	str += formatting(sdef.toString(),10);
 	str += sdef;
 	str += ',';
-	str += formatting(sdef.toString(),8);
+	str += formatting(sdef.toString(),11);
 	str += sdef;
 	str += ',          0]';
 	
-	
-	
-	
-// 	PerfHit,	PerfDodge,	MinSDef,MaxSDef,   SoftMDef]
-	
 	formElements["Output"].value = str;
-	
 }
 
 function formatting(word,count)

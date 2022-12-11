@@ -712,7 +712,7 @@ function CalcEquipAtk()
 	}
 	if ( EquipNumSearch( 1792 ) )
 	{//Str Glove
-		equipmentAttack += Math.floor(SU_STR / 10);
+		equipmentAttack += Math.floor(SU_STR / 10) * EquipNumSearch( 1792 );
 	}
 	if ( EquipNumSearch( 1822 ) )
 	{//Shadow Ninja Shield
@@ -1056,6 +1056,36 @@ function CalcEquipAtk()
 		if(n_A_WeaponType == weapTyp_SWORD || n_A_WeaponType == weapTyp_2HSWORD)
 			equipmentAttack += 100 * CardNumSearch(703);
 	}
+
+	for(var i = 0;i<8;i++)
+	{
+		if(n_A_card[card_loc_WEAPON_I+i] == 775)
+		{//Cowraiders Class 3 Card
+			if(i<4)
+			{
+				if(n_A_WeaponType == weapTyp_DAGGER)
+				{
+					if(n_A_Weapon_ATKplus >= 10)
+						equipmentAttack += 20;
+					if(n_A_Weapon_ATKplus >= 14)
+						equipmentAttack += 20;
+				}
+			}
+			else
+			{
+				if(n_A_Weapon2Type == weapTyp_DAGGER)
+				{
+					if(n_A_Weapon2_ATKplus >= 10)
+						equipmentAttack += 20;
+					if(n_A_Weapon2_ATKplus >= 14)
+						equipmentAttack += 20;
+				}
+			}
+		}
+	}
+	
+	
+	
 	
 //shadows
 	if ( EquipNumSearch( 1661 ) )
@@ -1905,7 +1935,7 @@ function CalcAttackMod()
 	if ( EquipNumSearch( 1792 ) )
 	{//Str Glove
 		if(SU_STR >= 110)
-			n_tok[bon_PHY_ATK] += 1;
+			n_tok[bon_PHY_ATK] += 1 * EquipNumSearch( 1792 );
 	}
 	if ( EquipNumSearch( 2028 ) )
 	{//Supplement Part Str
@@ -2196,7 +2226,7 @@ function CalcCriticalMod()
 	if ( EquipNumSearch( 1797 ) )
 	{//LUK Glove
 		if(SU_LUK >= 110)
-			n_tok[bon_DMG_CRIT] += 1;
+			n_tok[bon_DMG_CRIT] += 1 * EquipNumSearch( 1797 );
 	}
 	if(EquipNumSearch(1942))
 	{ //"General's Helmet"
@@ -2531,7 +2561,7 @@ function CalcRangedMod()
 	if ( EquipNumSearch( 1796 ) )
 	{//DEX Glove
 		if(SU_DEX >= 110)
-			n_tok[bon_DMG_RANGE] += 1;
+			n_tok[bon_DMG_RANGE] += 1 * EquipNumSearch( 1796 );
 	}
 	if(EquipNumSearch(1950) || EquipNumSearch(1956) || EquipNumSearch(2201))  //Dex Boots
 	{
@@ -3199,7 +3229,7 @@ function calcHP()
 	}
 	if ( EquipNumSearch( 1794 ) )
 	{//Vit Glove
-		additiveHP+= 50 * Math.floor(SU_VIT / 10);
+		additiveHP+= 50 * Math.floor(SU_VIT / 10) * EquipNumSearch( 1794 );
 	}
 	if(EquipNumSearch(1919))
 	{ //"Foxtail Ring"
@@ -3644,7 +3674,7 @@ function calcHP()
 	if ( EquipNumSearch( 1794 ) )
 	{//Vit Glove
 		if(SU_VIT >= 110)
-			hpMultiplier += 1;
+			hpMultiplier += 1 * EquipNumSearch( 1794 );
 	}
 	if(EquipNumSearch(1948) || EquipNumSearch(1954))
 	{//Vit Boots
@@ -5033,7 +5063,7 @@ function calcHit(n_A_HIT)
 	}
 	if ( EquipNumSearch( 1796 ) )
 	{//Dex Glove
-		n_A_HIT += Math.floor(SU_DEX / 10);
+		n_A_HIT += Math.floor(SU_DEX / 10) * EquipNumSearch( 1796 );
 	}
 	
 	
@@ -5207,7 +5237,7 @@ function calcFlee( n_A_FLEE )
 	}
 	if ( EquipNumSearch( 1793 ) )
 	{//Agi Glove
-		n_A_FLEE += Math.floor(SU_AGI / 10);
+		n_A_FLEE += Math.floor(SU_AGI / 10) * EquipNumSearch( 1793 );
 	}
 	if(EquipNumSearch(2208))
 	{// Flattery Robe + Ancient Cape[0]\[1]
@@ -5384,7 +5414,7 @@ function calcPDodge( n_A_LUCKY )
 	if ( EquipNumSearch( 1793 ) )
 	{//Agi Glove
 		if(SU_AGI >= 110)
-			n_A_LUCKY += 1;
+			n_A_LUCKY += 1 * EquipNumSearch( 1793 );
 	}
 	if( EquipNumSearch(1665))
 	{//Doram Manteau
@@ -5580,7 +5610,7 @@ function calcCrit( n_A_CRI )
 	}
 	if ( EquipNumSearch( 1797 ) )
 	{//Luk Glove
-		n_A_CRI += Math.floor(SU_LUK / 10);
+		n_A_CRI += Math.floor(SU_LUK / 10) * EquipNumSearch( 1797 );
 	}
 	if ( EquipNumSearch( 2086 ) )
 	{//Revised Encyclopedia

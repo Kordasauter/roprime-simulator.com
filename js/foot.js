@@ -1684,10 +1684,78 @@ function StPlusCalc2( nSTP2 )
 	{	 // for each equip/ card
 		for ( var j = 0; ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START] != bon_NONE; j += 2 )
 		{
-			if ( nSTP2 == ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START] )
+			if(nSTP2 == ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START + 2] && isNaN(ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START]))
 			{
+				// w += ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START + 1];
+				var refine = 0;
+				var bonus_condition = ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START];
+				var ref_opt = ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START + 1]
+				var bonus_eq = ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START + 3];
+				
+				switch(i){
+					case eq_HEAD_UPPER:
+						refine = n_A_HEAD_DEF_PLUS;
+						break;
+					case eq_ARMOR:
+						refine = n_A_BODY_DEF_PLUS;
+						break;
+					case eq_SHIELD:
+						refine = n_A_LEFT_DEF_PLUS;
+						break;
+					case eq_GARMENT:
+						refine = n_A_SHOULDER_DEF_PLUS;
+						break;
+					case eq_SHOES:
+						refine = n_A_SHOES_DEF_PLUS;
+						break;
+					case eq_WEAPON:
+						refine = n_A_Weapon_ATKplus;
+						break;
+					case eq_WEAPONII:
+						refine = n_A_Weapon2_ATKplus;
+						break;
+					case eq_SHADOW_ARMOR:
+						refine = n_A_SHADOW_BODY_DEF_PLUS;
+						break;
+					case eq_SHADOW_WEAPON:
+						refine = n_A_SHADOW_WEAPON_DEF_PLUS;
+						break;
+					case eq_SHADOW_SHIELD:
+						refine = n_A_SHADOW_SHIELD_DEF_PLUS;
+						break;
+					case eq_SHADOW_SHOES:
+						refine = n_A_SHADOW_SHOES_DEF_PLUS;
+						break;
+					case eq_SHADOW_EARRING:
+						refine = n_A_SHADOW_EARRING_DEF_PLUS;
+						break;
+					case eq_SHADOW_PENDANT:
+						refine = n_A_SHADOW_PENDANT_DEF_PLUS;
+						break;
+					default:
+						refine = 0;
+						break;
+				}
+				switch(bonus_condition){
+					case "ev_ref":
+						w += Math.floor(refine / ref_opt) * bonus_eq;
+						break;
+					case "ref_lvl":
+						if(refine >= ref_opt)
+						{
+							w += bonus_eq;
+						}
+						break;
+					default:
+						w += 0;
+						break;
+				}
+			}
+			if ( nSTP2 == ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START] && !isNaN(ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START - 2]))
+			{	//if there is no "refine over" or "for every x refine before" 
 				w += ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START + 1];
 			}
+			
 		}
 	}
 	return w;
@@ -1700,8 +1768,135 @@ function StPlusCard( nSTP2 )
 	{
 		for(var j=0;cardOBJ[n_A_card[i]][j +4] != 0;j += 2)
 		{
-			if(nSTP2 == cardOBJ[n_A_card[i]][j +4])
-				w += cardOBJ[n_A_card[i]][j +5];
+			// if(nSTP2 == cardOBJ[n_A_card[i]][j +4])
+				// w += cardOBJ[n_A_card[i]][j +5];
+			if(nSTP2 == cardOBJ[n_A_card[i]][j + 4 + 2] && isNaN(cardOBJ[n_A_card[i]][j + 4]))
+			{
+				// w += cardOBJ[n_A_card[i]][j + 4 + 1];
+				var refine = 0;
+				var bonus_condition = cardOBJ[n_A_card[i]][j + 4];
+				var ref_opt = cardOBJ[n_A_card[i]][j + 4 + 1]
+				var bonus_eq = cardOBJ[n_A_card[i]][j + 4 + 3];
+
+				switch(cardOBJ[n_A_card[i]][card_att_COMP]){
+					case card_comp_HEAD:
+						refine = n_A_HEAD_DEF_PLUS;
+						break;
+					case card_com_ARMOR:
+						refine = n_A_BODY_DEF_PLUS;
+						break;
+					case card_com_SHIELD:
+						refine = n_A_LEFT_DEF_PLUS;
+						break;
+					case card_com_GARMENT:
+						refine = n_A_SHOULDER_DEF_PLUS;
+						break;
+					case card_com_SHOES:
+						refine = n_A_SHOES_DEF_PLUS;
+						break;
+					case card_comp_WEAPON:
+						if(i <=3)
+							refine = n_A_Weapon_ATKplus;
+						if(i > 3)
+							refine = n_A_Weapon2_ATKplus;
+						break;
+					default:
+						refine = 0;
+						break;
+				}
+				switch(bonus_condition){
+					case "ev_ref":
+						w += Math.floor(refine / ref_opt) * bonus_eq;
+						break;
+					case "ref_lvl":
+						if(refine >= ref_opt)
+						{
+							w += bonus_eq;
+						}
+						break;
+					case "ev_bstr":
+						w += Math.floor(SU_STR / ref_opt) * bonus_eq;
+						break;
+					case "ev_bagi":
+						w += Math.floor(SU_AGI / ref_opt) * bonus_eq;
+						break;
+					case "ev_bvit":
+						w += Math.floor(SU_VIT / ref_opt) * bonus_eq;
+						break;
+					case "ev_bint":
+						w += Math.floor(SU_INT / ref_opt) * bonus_eq;
+						break;
+					case "ev_bdex":
+						w += Math.floor(SU_DEX / ref_opt) * bonus_eq;
+						break;
+					case "ev_bluk":
+						w += Math.floor(SU_LUK / ref_opt) * bonus_eq;
+						break;
+					case "ev_blvl":
+						w += Math.floor(n_A_BaseLV / ref_opt) * bonus_eq;
+						break;
+					case "ev_jlvl":
+						w += Math.floor(n_A_JobLV / ref_opt) * bonus_eq;
+						break;
+					case "bstr_hi":
+						if(SU_STR >= ref_opt)
+							w += bonus_eq;
+						break;
+					case "bagi_hi":
+						if(SU_AGI >= ref_opt)
+							w += bonus_eq;
+						break;
+					case "bvit_hi":
+						if(SU_VIT >= ref_opt)
+							w += bonus_eq;
+						break
+					case "bint_hi":
+						if(SU_INT >= ref_opt)
+							w += bonus_eq;
+						break
+					case "bdex_hi":
+						if(SU_DEX >= ref_opt)
+							w += bonus_eq;
+						break
+					case "bluk_hi":
+						if(SU_LUK >= ref_opt)
+							w += bonus_eq;
+						break
+					case "blvl_hi":
+						if(n_A_BaseLV >= ref_opt)
+							w += bonus_eq;
+						break
+					case "jlvl_hi":
+						if(n_A_JobLV >= ref_opt)
+							w += bonus_eq;
+						break
+					default:
+						w += 0;
+						break;
+				}
+			}
+			if ( nSTP2 == cardOBJ[n_A_card[i]][j + 4] && 
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "ev_ref" && 
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "ref_lvl" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "ev_bstr" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "ev_bagi" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "ev_bvit" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "ev_bint" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "ev_bdex" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "ev_bluk" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "ev_blvl" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "ev_jlvl" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "bstr_hi" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "bagi_hi" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "bvit_hi" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "bint_hi" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "bdex_hi" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "bluk_hi" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "blvl_hi" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "jlvl_hi" )
+			{	//if there is no "refine over" or "for every x refine before" 
+				w += cardOBJ[n_A_card[i]][j + 4 + 1];
+			}
 		}
 	}
 	

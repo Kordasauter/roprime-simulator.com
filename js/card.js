@@ -857,8 +857,27 @@ function SetCard()
 ,[770,   card_com_SHOES,"Cutie","Every 2 refine levels: AGI +1, ASPD +1%.",bon_HP_MUL,10,0]
 ,[771,   card_comp_WEAPON,"Heart Hunter","Increases long-ranged damage on targets by 5%, if the user has a Grenade Launcher, Revolver or Rifle equipped.<br>Increases long-ranged damage on targets by an additional 1% per upgrade level of the compounded item, if the user has a Grenade Launcher, Revolver or Rifle equipped.<br>If upgrade level is +10 or higher,<br>Increases long-ranged damage on targets by an additional 5%",0]
 ,[772,   card_com_ARMOR,"Evil","Adds a 30% chance of inflicting Freezing<br>on the attacker when receiving a physical attack.<br>Adds an additional 10% chance of inflicting<br>Freezing on the attacker when receiving<br>a physical attack, if the users base Int is 110 or higher.",bon_MDEF,5,0]
-//,[773,   ,"","",0]
-//,[774,   ,"","",0]
+//Rock Ridge
+,[773,   card_com_ACC_L,"Cowraiders Class 1","",bon_AGI,7,bon_HIT,7,0]
+,[774,   card_com_ACC_R,"Cowraiders Class 2","",bon_STR,4,bon_PHY_ATK,4,0]
+,[775,   card_comp_WEAPON,"Cowraiders Class 3","When compounded on Dagger class weapon:<br>Refine Level +10: ATK +20, MATK +20.<br>Refine Level +14: ATK +20, MATK +20.",bon_ATK,5,bon_MATK,5,0]
+,[776,   card_com_SHOES,"Coyote","Skill casts cannot be interrupted (except in WoE)",bon_HP_MUL,-12,bon_SP_MUL,-6,"ref_lvl",10,bon_HP_MUL,6,"ref_lvl",10,bon_SP_MUL,3,0]
+,[777,   card_comp_WEAPON,"Mine Cowraiders Class 1","",bon_DMG_SKILL + skill_GS_SPREAD_SHOT,10,"ref_lvl",10,bon_DMG_SKILL + skill_GS_SPREAD_SHOT,20,"ref_lvl",14,bon_DMG_SKILL + skill_GS_SPREAD_SHOT,20,0]
+,[778,   card_comp_WEAPON,"Mine Cowraiders Class 2","",bon_DMG_SKILL + skill_GS_TRIGGER_HAPPY_SHOT,10,"ref_lvl",10,bon_DMG_SKILL + skill_GS_TRIGGER_HAPPY_SHOT,20,"ref_lvl",14,bon_DMG_SKILL + skill_GS_TRIGGER_HAPPY_SHOT,20,0]
+,[779,   card_comp_WEAPON,"Mine Cowraiders Class 3","",bon_DMG_SIZ_SMALL,10,0]
+,[780,   card_com_SHIELD,"Gaster","",bon_RED_NON_BOSS,25,bon_RED_BOSS,-50,0]
+,[781,   card_com_GARMENT,"Rockridge Arclouse","","ev_bint",10,bon_MATK,3,"ev_bint",10,bon_ASPD_MUL,1,"bint_hi",120,bon_MATK,40,0]
+,[782,   card_com_GARMENT,"Rockridge Cramp","","ev_bstr",10,bon_ATK,3,"ev_bstr",10,bon_ASPD_MUL,1,"bstr_hi",120,bon_ATK,40,0]
+,[783,   card_com_ACC_L,"Mechaspider","Adds a chance of damaging the targets weapon when performing a physical attack.<br>Adds a chance of damaging the targets armor when performing a physical attack.",0]
+,[784,   itm_type_SET,"Cowraiders Class 1 & 2","",bon_STR,3,bon_PHY_ATK,3,0]
+,[785,   itm_type_SET,"Cowraiders Class 1 & 3","",bon_DMG_SIZ_SMALL,15,0]
+,[786,   itm_type_SET,"Cowraiders Class 1 & Mine Cowraiders Class 1","",bon_DMG_SKILL + skill_GS_SPREAD_SHOT,50,0]
+,[787,   itm_type_SET,"Cowraiders Class 2 & Mine Cowraiders Class 2","",bon_DMG_SKILL + skill_GS_TRIGGER_HAPPY_SHOT,50,0]
+,[788,   itm_type_SET,"Cowraiders Class 3 & Mine Cowraiders Class 3","",bon_DMG_SIZ_SMALL,10,0]
+//,[789,   ,"","",0]
+//,[790,   ,"","",0]
+//,[791,   ,"","",0]
+//,[792,   ,"","",0]
 ];
 
 CardNum = cardOBJ.length -1;
@@ -954,6 +973,12 @@ w_SC = [
 ,[764,738,751,"NULL"] //  |
 ,[765,739,752,"NULL"] //bio 5
 ,[767,766,767,"NULL"] //Humanoid + Material Chimera
+,[784,773,774,"NULL"] //Cowraiders Class 1 & 2
+,[785,773,775,"NULL"] //Cowraiders Class 1 & 3
+,[786,773,777,"NULL"] //Cowraiders Class 1 & Mine Cowraiders Class 1
+,[787,774,778,"NULL"] //Cowraiders Class 2 & Mine Cowraiders Class 2
+,[788,775,779,"NULL"] //Cowraiders Class 3 & Mine Cowraiders Class 3
+
 ];
 }
 

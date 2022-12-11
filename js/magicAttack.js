@@ -209,7 +209,7 @@ function calcMAtk( includeMultipliers )
 		if ( EquipNumSearch( 1795 ) )
 		{//INT Glove
 			if(SU_INT >= 110)
-				matk_mul += 1;
+				matk_mul += 1 * EquipNumSearch( 1795 );
 		}
 		if(EquipNumSearch(1883))
 		{ //"Magic Foxtrail Staff"
@@ -492,7 +492,7 @@ function calcMAtk( includeMultipliers )
 	}
 	if ( EquipNumSearch( 1795 ) )
 	{//Int Glove
-		n_A_EquipMATK+= Math.floor(SU_INT / 10)
+		n_A_EquipMATK+= Math.floor(SU_INT / 10) * EquipNumSearch( 1795 );
 	}
 	if(EquipNumSearch(1883))
 	{ //"Magical Foxtail Staff"
@@ -786,6 +786,32 @@ function calcMAtk( includeMultipliers )
 	if(n_A_card[8]==669)
 	{ // Fenrir Card
 		n_A_EquipMATK += 5 * n_A_HEAD_DEF_PLUS;
+	}
+	for(var i = 0;i<8;i++)
+	{
+		if(n_A_card[card_loc_WEAPON_I+i] == 775)
+		{//Cowraiders Class 3 Card
+			if(i<4)
+			{
+				if(n_A_WeaponType == weapTyp_DAGGER)
+				{
+					if(n_A_Weapon_ATKplus >= 10)
+						n_A_EquipMATK += 20;
+					if(n_A_Weapon_ATKplus >= 14)
+						n_A_EquipMATK += 20;
+				}
+			}
+			else
+			{
+				if(n_A_Weapon2Type == weapTyp_DAGGER)
+				{
+					if(n_A_Weapon2_ATKplus >= 10)
+						n_A_EquipMATK += 20;
+					if(n_A_Weapon2_ATKplus >= 14)
+						n_A_EquipMATK += 20;
+				}
+			}
+		}
 	}
 // Skills
 	if ( performerBuffs[ksWandererSolo] === ksMoonlightSerenade &&
