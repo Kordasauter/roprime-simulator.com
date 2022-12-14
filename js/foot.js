@@ -3386,8 +3386,115 @@ function Init()
 	formElements["saveName"].value = GetWord(84);
 	
 	LoadDataINIT(); // loads cookies
+	InitNews();
 }
 
+function InitNews()
+{
+	var str = "";
+	var str_new = "";
+	var str_old = "";
+	
+	for (var i = NewsMax;i>=0;i--)
+	{
+		var hide=0;
+		var tmp = 0;
+		var date = NewsOBJ[i][0].replace('/', '');
+		date = date.replace('/', '');
+		if(i > (NewsMax - 2))
+		{
+			str_new += "<div>";
+			str_new += "	<u><b>"+ NewsOBJ[i][0] +":</b></u> ";
+			str_new += "	<ul style=\"margin-left: 5px;\">";
+			
+		}
+		else
+		{
+			str_old += "<div>";
+			str_old += "	<u><b>"+ NewsOBJ[i][0] +":</b></u> <input type=\"button\" value=\"Show/Hide\" onclick=\"javascript:$('#note"+ date +"').toggle()\">";
+			str_old += "	<span style=\"display: none;\" id=\"note"+ date +"\">";
+			str_old += "	<ul style=\"margin-left: 5px;\">";
+		}
+		str = "";
+		for (var j = 1;NewsOBJ[i][j]!=0;j++)
+		{
+			if(NewsOBJ[i][j] == News_Added)
+			{
+				if(tmp > 0)
+				{
+					str += "			</ul>";
+				}
+				tmp++;
+				str += "		<li><b>Has been added :</b></li>";
+				str += "			<ul>";
+			}
+			else if(NewsOBJ[i][j] == News_Fixed)
+			{
+				if(tmp > 0)
+				{
+					str += "			</ul>";
+				}
+				tmp++;
+				str += "		<li><b>Has been fixed :</b></li>";
+				str += "			<ul>";
+			}
+			else if(NewsOBJ[i][j] == List_Start)
+			{
+				tmp++;
+				str += "			<ul>";
+			}
+			else if(NewsOBJ[i][j] == List_End)
+			{
+				tmp--;
+				str += "			</ul>";
+			}
+			else if(NewsOBJ[i][j] == Hide_Start)
+			{
+				str += "<input type=\"button\" value=\"Show details\" onclick=\"javascript:$('#note"+ date + hide.toString() +"').toggle()\">";
+				str += "<span style=\"display: none;\" id=\"note"+ date + hide.toString() +"\">";
+				str += "<ul>";
+				hide++;
+			}
+			else if(NewsOBJ[i][j] == Hide_End)
+			{
+				str += "</ul>";
+				str += "</span>";
+			}
+			else if(NewsOBJ[i][j] == Note)
+			{
+				if(tmp > 0)
+				{
+					str += "			</ul>";
+				}
+				tmp++;
+				str += "		<li><b>Note :</b></li>";
+				str += "			<ul>";
+			}
+			else
+				str += "				<li>" + NewsOBJ[i][j] +"</li>";
+		}
+		if(tmp > 0)
+		{
+			str += "			</ul>";
+		}
+		str += "	</ul>";
+		str += "-Kord";
+		if(i > (NewsMax - 2))
+		{		
+			str_new += str;
+			str_new += "</div>";
+		}
+		else
+		{
+			str_old += str;
+			str_old += "	</span>";
+			str_old += "</div>";
+		}
+	}
+	myInnerHtml("news",str_new,0);
+	myInnerHtml("old",str_old,0);
+	
+}
 function sortSelect(selElem) 
 {
     var tmpAry = new Array();

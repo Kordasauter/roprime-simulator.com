@@ -2159,6 +2159,15 @@ ench_Spell_Ability_2=35;
 ench_Healer=38;
 }
 {
+News_Added = 1;
+News_Fixed = 2;
+List_Start= 3;
+List_End= 4;
+Hide_Start = 5;
+Hide_End = 6;
+Note = 7;
+}
+{
 var CONST_MAXLVL = 99;
 var CONST_MAXLVL_THIRD = 175;
 var CONST_MAXLVL_KAGOB_ENOVI = 175;

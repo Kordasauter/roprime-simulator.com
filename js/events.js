@@ -963,21 +963,25 @@ function ClickWeapon( data,isRefine )
 	{
 		weapon = data;
 	}
-	var len = formElements["A_WEAPON_ENCHANT_2"].length;
-	for ( var i = len; i > 0 ; i-- )
+	if(!isRefine)
 	{
-		formElements["A_WEAPON_ENCHANT_2"].options[i] = null;
+		var len = formElements["A_WEAPON_ENCHANT_2"].length;
+		for ( var i = len; i > 0 ; i-- )
+		{
+			formElements["A_WEAPON_ENCHANT_2"].options[i] = null;
+		}
+		len = formElements["A_WEAPON_ENCHANT_3"].length;
+		for ( var i = len; i > 0 ; i-- )
+		{
+			formElements["A_WEAPON_ENCHANT_3"].options[i] = null;
+		}
+		len = formElements["A_WEAPON_ENCHANT_4"].length;
+		for ( var i = len; i > 0 ; i-- )
+		{
+			formElements["A_WEAPON_ENCHANT_4"].options[i] = null;
+		}
 	}
-	len = formElements["A_WEAPON_ENCHANT_3"].length;
-	for ( var i = len; i > 0 ; i-- )
-	{
-		formElements["A_WEAPON_ENCHANT_3"].options[i] = null;
-	}
-	len = formElements["A_WEAPON_ENCHANT_4"].length;
-	for ( var i = len; i > 0 ; i-- )
-	{
-		formElements["A_WEAPON_ENCHANT_4"].options[i] = null;
-	}
+
 	
 	if (/*Daggers*/weapon== 390 || weapon== 391 || weapon== 392 || weapon== 387 || weapon== 13 || weapon== 394 || weapon== 396 || weapon== 14 || weapon== 15 || weapon== 389 || weapon== 397 || weapon== 398 || weapon== 799 || weapon== 1157 || weapon== 1267 || weapon== 12 || weapon== 393 || weapon== 11 || weapon== 388 || weapon== 607 || weapon== 395 || weapon== 1268 || 
 		/*Katars*/weapon== 634 || weapon== 482 || weapon== 633 || weapon== 1175 || weapon== 1176 || weapon== 631 || weapon== 632 || weapon== 483 || weapon== 113 || 
