@@ -9,7 +9,7 @@
 	/* max-width:55%; */
 	/* margin:0px auto; */
 /* } */
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
   body {
 	font-family:Tahoma, Sans-Serif;
 	font-size:18pt;
@@ -493,7 +493,7 @@
 	.eqTxt2{
 	}
 }
-@media (min-width: 1024px) {
+@media (min-width: 1367px) {
   body {
 	font-family:Tahoma, Sans-Serif;
 	font-size:14pt;
