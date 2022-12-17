@@ -141,12 +141,12 @@
 
 	.entryNorm, .bgTabNorm{
 		background-color:#68B5D8;
-		background-image:url('./style/tabnorm.png');
+		background-image:url('https://roprime-simulator.com/style/tabnorm.png');
 		background-repeat:repeat-x;
 	}
 	.entrySel, .bgTabSel{
 		background-color:#88C4E0;
-		background-image:url('./style/tabsel.png');
+		background-image:url('https://roprime-simulator.com/style/tabsel.png');
 		background-repeat:repeat-x;
 	}
 
@@ -163,17 +163,17 @@
 	}
 	table.tabMenu td.title{
 		background-color:#389DCC;
-		background-image:url('./style/dksub.png');
+		background-image:url('https://roprime-simulator.com/style/dksub.png');
 		background-repeat:repeat-x;
 	}
 	table.tabMenu td.entryNorm{
 		background-color:#68B5D8;
-		background-image:url('./style/tabnorm.png');
+		background-image:url('https://roprime-simulator.com/style/tabnorm.png');
 		background-repeat:repeat-x;
 	}
 	table.tabMenu td.entrySel{
 		background-color:#88C4E0;
-		background-image:url('./style/tabsel.png');
+		background-image:url('https://roprime-simulator.com/style/tabsel.png');
 		background-repeat:repeat-x;
 	}
 
@@ -287,7 +287,7 @@
 	}
 	.tabBar li div{
 		background-color:#68B5D8;
-		background-image:url('./style/tabnorm.png');
+		background-image:url('https://roprime-simulator.com/style/tabnorm.png');
 		background-repeat:repeat-x;
 		border-color:#58ADD4;
 		border-style:solid;
@@ -302,7 +302,7 @@
 	}
 	.tabBar li div.active{
 		background-color:#68B5D8;
-		background-image:url('./style/tabsel.png');
+		background-image:url('https://roprime-simulator.com/style/tabsel.png');
 		background-repeat:repeat-x;
 		position:relative;
 		height:19px;
@@ -344,7 +344,7 @@
 	}
 	.siteMenuArea li a{
 		background-color:#68B5D8;
-		background-image:url('./style/menu.png');
+		background-image:url('https://roprime-simulator.com/style/menu.png');
 		background-repeat:repeat-x;
 		border-color:#58ADD4;
 		border-style:solid;
@@ -392,44 +392,44 @@
 
 	.bgLgTitle{
 		background-color:#78BCDC;
-		background-image:url('./style/lgtitle.png');
+		background-image:url('https://roprime-simulator.com/style/lgtitle.png');
 		background-repeat:repeat-x;
 	}
 	.bgMdTitle{
 		background-color:#78BCDC;
-		background-image:url('./style/mdtitle.png');
+		background-image:url('https://roprime-simulator.com/style/mdtitle.png');
 		background-repeat:repeat-x;
 	}
 	.bgSmTitle{
 		background-color:#78BCDC;
-		background-image:url('./style/smtitle.png');
+		background-image:url('https://roprime-simulator.com/style/smtitle.png');
 		background-repeat:repeat-x;
 	}
 
 	.bgDkSub{
 		background-color:#389DCC;
-		background-image:url('./style/dksub.png');
+		background-image:url('https://roprime-simulator.com/style/dksub.png');
 		background-repeat:repeat-x;
 	}
 
 	.bgHeader1{
 		background-color:#A0A0A0;
-		background-image:url('./style/header1.png');
+		background-image:url('https://roprime-simulator.com/style/header1.png');
 		background-repeat:repeat-x;
 	}
 	.bgHeader2{
 		background-color:#969696;
-		background-image:url('./style/header2.png');
+		background-image:url('https://roprime-simulator.com/style/header2.png');
 		background-repeat:repeat-x;
 	}
 	.bgHeader3{
 		background-color:#8C8C8C;
-		background-image:url('./style/header3.png');
+		background-image:url('https://roprime-simulator.com/style/header3.png');
 		background-repeat:repeat-x;
 	}
 	.bgHeader4{
 		background-color:#828282;
-		background-image:url('./style/header4.png');
+		background-image:url('https://roprime-simulator.com/style/header4.png');
 		background-repeat:repeat-x;
 	}
 
@@ -614,12 +614,12 @@
 
 	.entryNorm, .bgTabNorm{
 		background-color:#68B5D8;
-		background-image:url('./style/tabnorm.png');
+		background-image:url('https://roprime-simulator.com/style/tabnorm.png');
 		background-repeat:repeat-x;
 	}
 	.entrySel, .bgTabSel{
 		background-color:#88C4E0;
-		background-image:url('./style/tabsel.png');
+		background-image:url('https://roprime-simulator.com/style/tabsel.png');
 		background-repeat:repeat-x;
 	}
 
@@ -636,17 +636,17 @@
 	}
 	table.tabMenu td.title{
 		background-color:#389DCC;
-		background-image:url('./style/dksub.png');
+		background-image:url('https://roprime-simulator.com/style/dksub.png');
 		background-repeat:repeat-x;
 	}
 	table.tabMenu td.entryNorm{
 		background-color:#68B5D8;
-		background-image:url('./style/tabnorm.png');
+		background-image:url('https://roprime-simulator.com/style/tabnorm.png');
 		background-repeat:repeat-x;
 	}
 	table.tabMenu td.entrySel{
 		background-color:#88C4E0;
-		background-image:url('./style/tabsel.png');
+		background-image:url('https://roprime-simulator.com/style/tabsel.png');
 		background-repeat:repeat-x;
 	}
 
@@ -760,7 +760,7 @@
 	}
 	.tabBar li div{
 		background-color:#68B5D8;
-		background-image:url('./style/tabnorm.png');
+		background-image:url('https://roprime-simulator.com/style/tabnorm.png');
 		background-repeat:repeat-x;
 		border-color:#58ADD4;
 		border-style:solid;
@@ -775,7 +775,7 @@
 	}
 	.tabBar li div.active{
 		background-color:#68B5D8;
-		background-image:url('./style/tabsel.png');
+		background-image:url('https://roprime-simulator.com/style/tabsel.png');
 		background-repeat:repeat-x;
 		position:relative;
 		height:19px;
@@ -817,7 +817,7 @@
 	}
 	.siteMenuArea li a{
 		background-color:#68B5D8;
-		background-image:url('./style/menu.png');
+		background-image:url('https://roprime-simulator.com/style/menu.png');
 		background-repeat:repeat-x;
 		border-color:#58ADD4;
 		border-style:solid;
@@ -865,44 +865,44 @@
 
 	.bgLgTitle{
 		background-color:#78BCDC;
-		background-image:url('./style/lgtitle.png');
+		background-image:url('https://roprime-simulator.com/style/lgtitle.png');
 		background-repeat:repeat-x;
 	}
 	.bgMdTitle{
 		background-color:#78BCDC;
-		background-image:url('./style/mdtitle.png');
+		background-image:url('https://roprime-simulator.com/style/mdtitle.png');
 		background-repeat:repeat-x;
 	}
 	.bgSmTitle{
 		background-color:#78BCDC;
-		background-image:url('./style/smtitle.png');
+		background-image:url('https://roprime-simulator.com/style/smtitle.png');
 		background-repeat:repeat-x;
 	}
 
 	.bgDkSub{
 		background-color:#389DCC;
-		background-image:url('./style/dksub.png');
+		background-image:url('https://roprime-simulator.com/style/dksub.png');
 		background-repeat:repeat-x;
 	}
 
 	.bgHeader1{
 		background-color:#A0A0A0;
-		background-image:url('./style/header1.png');
+		background-image:url('https://roprime-simulator.com/style/header1.png');
 		background-repeat:repeat-x;
 	}
 	.bgHeader2{
 		background-color:#969696;
-		background-image:url('./style/header2.png');
+		background-image:url('https://roprime-simulator.com/style/header2.png');
 		background-repeat:repeat-x;
 	}
 	.bgHeader3{
 		background-color:#8C8C8C;
-		background-image:url('./style/header3.png');
+		background-image:url('https://roprime-simulator.com/style/header3.png');
 		background-repeat:repeat-x;
 	}
 	.bgHeader4{
 		background-color:#828282;
-		background-image:url('./style/header4.png');
+		background-image:url('https://roprime-simulator.com/style/header4.png');
 		background-repeat:repeat-x;
 	}
 
