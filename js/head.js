@@ -1478,7 +1478,13 @@ function ApplySkillModifiers( damage )
 			dmgMultiplier += 5 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
 		}
 	}
-	
+	if(n_A_ActiveSkill == skill_KAG_THROW_EXPLOSIVE_KUNAI)
+	{
+		if(EquipNumSearch(2318) )  //Monokage
+		{
+			dmgMultiplier += SkillSearch(skill_NIN_DAGGER_THROWING_PRACTICE);
+		}
+	}
 	
 	damage = damage * (100+StPlusCalc2(bon_DMG_SKILL+n_A_ActiveSkill)+StPlusCard(bon_DMG_SKILL+n_A_ActiveSkill) + dmgMultiplier) /100;
 	

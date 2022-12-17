@@ -1746,6 +1746,62 @@ function StPlusCalc2( nSTP2 )
 							w += bonus_eq;
 						}
 						break;
+					case "ev_bstr":
+						w += Math.floor(SU_STR / ref_opt) * bonus_eq;
+						break;
+					case "ev_bagi":
+						w += Math.floor(SU_AGI / ref_opt) * bonus_eq;
+						break;
+					case "ev_bvit":
+						w += Math.floor(SU_VIT / ref_opt) * bonus_eq;
+						break;
+					case "ev_bint":
+						w += Math.floor(SU_INT / ref_opt) * bonus_eq;
+						break;
+					case "ev_bdex":
+						w += Math.floor(SU_DEX / ref_opt) * bonus_eq;
+						break;
+					case "ev_bluk":
+						w += Math.floor(SU_LUK / ref_opt) * bonus_eq;
+						break;
+					case "ev_blvl":
+						w += Math.floor(n_A_BaseLV / ref_opt) * bonus_eq;
+						break;
+					case "ev_jlvl":
+						w += Math.floor(n_A_JobLV / ref_opt) * bonus_eq;
+						break;
+					case "bstr_hi":
+						if(SU_STR >= ref_opt)
+							w += bonus_eq;
+						break;
+					case "bagi_hi":
+						if(SU_AGI >= ref_opt)
+							w += bonus_eq;
+						break;
+					case "bvit_hi":
+						if(SU_VIT >= ref_opt)
+							w += bonus_eq;
+						break
+					case "bint_hi":
+						if(SU_INT >= ref_opt)
+							w += bonus_eq;
+						break
+					case "bdex_hi":
+						if(SU_DEX >= ref_opt)
+							w += bonus_eq;
+						break
+					case "bluk_hi":
+						if(SU_LUK >= ref_opt)
+							w += bonus_eq;
+						break
+					case "blvl_hi":
+						if(n_A_BaseLV >= ref_opt)
+							w += bonus_eq;
+						break
+					case "jlvl_hi":
+						if(n_A_JobLV >= ref_opt)
+							w += bonus_eq;
+						break
 					default:
 						w += 0;
 						break;
@@ -3411,7 +3467,7 @@ function InitNews()
 		else
 		{
 			str_old += "<div>";
-			str_old += "	<u><b>"+ NewsOBJ[i][0] +":</b></u> <input type=\"button\" value=\"Show/Hide\" onclick=\"javascript:$('#note"+ date +"').toggle()\">";
+			str_old += "	<u><b>"+ NewsOBJ[i][0] +":</b></u> <input class=\"button\" type=\"button\" value=\"Show/Hide\" onclick=\"javascript:$('#note"+ date +"').toggle()\">";
 			str_old += "	<span style=\"display: none;\" id=\"note"+ date +"\">";
 			str_old += "	<ul style=\"margin-left: 5px;\">";
 		}
@@ -3450,7 +3506,7 @@ function InitNews()
 			}
 			else if(NewsOBJ[i][j] == Hide_Start)
 			{
-				str += "<input type=\"button\" value=\"Show details\" onclick=\"javascript:$('#note"+ date + hide.toString() +"').toggle()\">";
+				str += "<input class=\"button\" type=\"button\" value=\"Show details\" onclick=\"javascript:$('#note"+ date + hide.toString() +"').toggle()\">";
 				str += "<span style=\"display: none;\" id=\"note"+ date + hide.toString() +"\">";
 				str += "<ul>";
 				hide++;

@@ -2372,7 +2372,49 @@
 //Dog Cap missing setSeconds
 ,[2315,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Dog Cap + Thanatos Katar
 ,[2316,itm_type_SET,0,0,0,0,0,0,bon_NONE] //Dog Cap + Dark Rose
+// ID, WeapType, ReqJob, Atk/Def, wLVL, slots, Weight, reqBLVL, bonus[type], bonusamount, bonus2[type], .., 0
+//Rock Ridge
+,[2317,weapTyp_BOW,214,140,3,2,100,100,"ev_bdex",20,bon_DMG_RANGE,5,"ref_lvl",7,bon_DMG_RANGE,10,"ref_lvl",9,bon_DMG_SKILL + skill_AR_DOUBLE_STRAFE,50,bon_NONE] // "Vigilante Bow"
+,[2318,weapTyp_DAGGER,221,100,3,2,80,100,"ref_lvl",7,bon_DMG_RANGE,2,"ref_lvl",9,bon_DMG_RANGE,3,bon_NONE] // "Monokage"
+,[2319,weapTyp_HUUMA_SHURIKEN,221,250,4,2,200,100,bon_DMG_SKILL + skill_KAG_SWIRLING_PETAL,20,"ref_lvl",7,bon_DMG_RANGE,3,"ref_lvl",9,bon_DMG_SKILL + skill_KAG_SWIRLING_PETAL,20,bon_NONE] // Huuma Shuriken of Dancing Petals [2]
+,[2320,weapTyp_BOOK,218,120,3,2,80,100,bon_INT,4,bon_MATK,150,bon_DMG_SKILL + skill_MA_COLD_BOLT,10,bon_DMG_SKILL + skill_MA_FIRE_BOLT,10,bon_DMG_SKILL + skill_MA_LIGHTNING_BOLT,10,"ref_lvl",7,bon_DMG_SKILL + skill_MA_COLD_BOLT,10,"ref_lvl",7,bon_DMG_SKILL + skill_MA_FIRE_BOLT,10,"ref_lvl",7,bon_DMG_SKILL + skill_MA_LIGHTNING_BOLT,10,"ref_lvl",9,bon_DMG_SKILL + skill_MA_COLD_BOLT,10,"ref_lvl",9,bon_DMG_SKILL + skill_MA_FIRE_BOLT,10,"ref_lvl",9,bon_DMG_SKILL + skill_MA_LIGHTNING_BOLT,10,bon_NONE] // Elemental Origin [2]
+,[2321,weapTyp_AXEII,212,300,3,2,400,100,bon_UNBREAKABLE,1,"ref_lvl",7,bon_DMG_CRIT,5,"ref_lvl",9,bon_DMG_CRIT,10,bon_NONE] // Mine Worker's Pickaxe [2]
+,[2322,weapTyp_INSTRUMENT,216,140,3,2,100,100,"ref_lvl",9,bon_ASPD_ADD,1,bon_NONE] // Hippie Guitar [2]
+,[2323,weapTyp_WHIP,217,140,3,2,100,100,"ref_lvl",9,bon_ASPD_ADD,1,bon_NONE] // Hippie Rope [2]
+,[2324,weapTyp_SHOTGUN,222,305,4,2,140,150,bon_SP_MUL,2,"ev_ref",2,bon_DMG_RANGE,5,"ref_lvl",7,bon_DMG_SKILL + skill_REB_VANISHING_BUSTER,20,"ref_lvl",9,bon_DMG_RANGE,5,bon_NONE] // Calf Anaconda [2]
+,[2325,weapTyp_GRENADE_LAUNCHER,222,360,4,2,200,150,bon_DEX,2,bon_PHY_ATK,2,"ev_ref",2,bon_DMG_RANGE,5,"ref_lvl",7,bon_ASPD_MUL,5,"ref_lvl",9,bon_DMG_SKILL + skill_REB_DRAGON_TAIL,15,"ref_lvl",12,bon_DMG_SKILL + skill_REB_DRAGON_TAIL,15,bon_NONE] // Calf Python [2]
+,[2326,weapTyp_HANDGUN,222,170,4,2,140,120,bon_ASPD_MUL,10,"ev_ref",2,bon_DMG_RANGE,5,"ref_lvl",7,bon_ASPD_MUL,5,"ref_lvl",9,bon_DMG_SKILL + skill_REB_FIRE_DANCE,25,"ref_lvl",12,bon_DMG_RANGE,5,bon_NONE] // Calf Deathadder [2]
+,[2327,weapTyp_RIFLE,222,230,4,2,90,150,bon_ASPD_MUL,10,"ev_ref",2,bon_DMG_RANGE,5,"ref_lvl",7,bon_ASPD_MUL,5,"ref_lvl",9,bon_DMG_CRIT,15,"ref_lvl",12,bon_DMG_RANGE,5,bon_NONE] // Calf Kingcobra [2]
+,[2328,weapTyp_GATLING_GUN,222,220,4,2,300,150,bon_DEX,2,bon_PHY_ATK,2,"ev_ref",2,bon_DMG_RANGE,5,"ref_lvl",7,bon_DMG_SKILL + skill_REB_ROUND_TRIP,20,"ref_lvl",12,bon_DMG_RANGE,5,bon_NONE] // Calf Diamondback [2]
+,[2329,weapTyp_SPEAR,2051,180,4,3,200,150,bon_DMG_SKILL + skill_ROY_VANISHING_POINT,10,"ref_lvl",7,bon_DMG_SKILL + skill_ROY_OVERBRAND,10,"ref_lvl",9,bon_DMG_SKILL + skill_ROY_OVERBRAND,15,"ref_lvl",12,bon_RED_CASTDELAY,15,bon_NONE] // Metal Stick [3]
 
+,[2330,itm_type_ARMOR,214,50,0,0,50,100,bon_DEX,5,"ev_ref",2,bon_DMG_RANGE,3,"ref_lvl",9,bon_DMG_SKILL + skill_SHA_TRIANGLE_SHOT,20,bon_NONE] // Vigilante Suit
+,[2331,itm_type_ARMOR,218,40,0,0,50,100,bon_ASPD_MUL,10,"ev_ref",2,bon_MATK,5,"ref_lvl",9,bon_SKILL_AUTOCAST,152,bon_NONE] // Elemental Robe
+,[2332,itm_type_ARMOR,221,50,0,0,50,100,"ev_ref",2,bon_FLEE,5,"ref_lvl",9,bon_DMG_SKILL + skill_KAG_KUNAI_SPLASH,20,bon_NONE] // Golden Ninja Suit
+,[2333,itm_type_ARMOR,212,80,0,0,150,100,bon_FLEE,10,"ev_ref",2,bon_FLEE,4,"ref_lvl",9,bon_CRIT,5,bon_NONE] // Mine Worker's Vest
+,[2334,itm_type_ARMOR,2054,50,0,0,50,100,bon_ATK,20,"ref_lvl",9,bon_SKILL_AUTOCAST,153,bon_NONE] // Hippie Clothes
+,[2335,itm_type_GARMENT,226,0,0,0,40,100,bon_RED_ELE_NEUTRAL,20,"ref_lvl",7,bon_RED_ELE_NEUTRAL,5,"ref_lvl",9,bon_RED_ELE_NEUTRAL,5,bon_NONE] // Drifter's Cape
+,[2336,itm_type_SHOES,226,0,0,1,50,100,bon_SP_MUL,5,"ref_lvl",7,bon_SP_MUL,5,"ref_lvl",9,bon_SP_MUL,5,bon_NONE] // Spurred Boots
+,[2337,weapTyp_MACE,226,120,3,3,70,100,"ev_ref",2,bon_CH_STATUS_STUN,3,bon_NONE] // Liquor Bottle
+,[2338,weapTyp_ROD,2053,60,3,3,50,100,bon_MATK,150,bon_HEAL_MUL,10,"ref_lvl",7,bon_HEAL_MUL,5,"ref_lvl",9,bon_HEAL_MUL,10,bon_NONE] // Elder Staff
+
+,[2339,itm_type_GARMENT,218,12,0,0,50,100,bon_FLEE,10,"ev_ref",3,bon_FLEE,5,"ev_ref",3,bon_RED_ELE_NEUTRAL,10,"ref_lvl",9,bon_ASPD_MUL,5,bon_NONE] // Elemental Cape
+,[2340,itm_type_GARMENT,221,12,0,0,50,100,bon_FLEE,20,"ref_lvl",7,bon_DMG_RANGE,5,"ref_lvl",9,bon_DMG_RANGE,5,bon_NONE] // Golden Scarf
+,[2341,itm_type_GARMENT,212,16,0,0,60,100,bon_ASPD_MUL,5,"ev_ref",2,bon_ASPD_MUL,1,"ref_lvl",9,bon_ATK,20,bon_NONE] // Mine Worker's Backpack
+,[2342,itm_type_ACCESSORY,214,0,0,0,20,100,bon_FLEE,10,bon_DMG_RANGE,5,bon_NONE] // Vigilante Badge
+,[2343,itm_type_ACCESSORY,2054,0,0,0,20,100,bon_FLEE,10,bon_DMG_RANGE,5,bon_NONE] // Hippie Feather
+
+,[2344,itm_type_SET,0,0,0,0,0,0,bon_DMG_SKILL + skill_AR_DOUBLE_STRAFE,50,bon_NONE] // "Vigilante Set"
+,[2345,itm_type_SET,0,0,0,0,0,0,bon_SKILL_AUTOCAST,154,bon_NONE] // "Elemental Set"
+,[2346,itm_type_SET,0,0,0,0,0,0,bon_DELAY_SKILL_FLAT + skill_KAG_KUNAI_SPLASH,1,bon_DMG_RANGE,15,bon_NONE] // "Golden Ninja Set (Huuma)"
+,[2347,itm_type_SET,0,0,0,0,0,0,bon_DMG_SKILL + skill_KAG_THROW_EXPLOSIVE_KUNAI,20,bon_DMG_SKILL + skill_KAG_KUNAI_SPLASH,50,bon_NONE] // "Golden Ninja Set (Kunai)"
+,[2348,itm_type_SET,0,0,0,0,0,0,bon_PHY_ATK,5,bon_ASPD_MUL,10,bon_DMG_CRIT,10,bon_NONE] // "Mine Worker's Set"
+,[2349,itm_type_SET,0,0,0,0,0,0,bon_ATK,30,bon_ASPD_ADD,1,bon_DMG_CRIT,20,bon_NONE] // "Hippie Set"
+
+//"ev_ref",2,,,
+//"ref_lvl",7,,,
+//"ref_lvl",9,,,
+//"ref_lvl",12,,,
 ]
 ItemMax = ItemOBJ.length -1;
 }
@@ -2938,6 +2980,14 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2313,2265,1821,"NULL"] // Wanderer Shadow Set
 // ,[2313,2265,1820,"NULL"] // Minstrel Shadow Set - Not in item description ??
 ,[2314,2266,1812,"NULL"] // Genetic Shadow Set
+,[2344,2317,2330,2342,"NULL"] // "Vigilante Set"
+,[2345,2320,2331,2339,"NULL"] // "Elemental Set"
+,[2346,2319,2332,2340,"NULL"] // "Golden Ninja Set (Huuma)"
+,[2347,2318,2332,2340,"NULL"] // "Golden Ninja Set (Kunai)"
+,[2348,2321,2333,2341,"NULL"] // "Mine Worker's Set"
+,[2349,2322,2334,2343,"NULL"] // "Hippie Set"
+,[2349,2323,2334,2343,"NULL"] // "Hippie Set"
+// ,[,,,,"NULL"]
 
 // ,[itm_set,item1,item2,...,"NULL"] // 
 //,[itm_set,item1,item2,...,"NULL"] // 

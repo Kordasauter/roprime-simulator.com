@@ -3375,12 +3375,61 @@ function DisplayItemDescription( ItemIndex )
 	{ // Collect Bonusses
 		if(isNaN(ItemOBJ[ItemIndex][i] ))//NEW
 		{
+			
 			if(ItemOBJ[ItemIndex][i] == "ev_ref")
 			{
 				if(tempDesc != "[For each "+ ItemOBJ[ItemIndex][i + 1] + " refine lvl]<br>")
 				{
 					tempDesc = "[For each "+ ItemOBJ[ItemIndex][i + 1] + " refine lvl]<br>";
 					descriptionString += "<br>[For each "+ ItemOBJ[ItemIndex][i + 1] + " refine lvl]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "ev_bstr")
+			{
+				if(tempDesc != "[For each "+ ItemOBJ[ItemIndex][i + 1] + " base STR]<br>")
+				{
+					tempDesc = "[For each "+ ItemOBJ[ItemIndex][i + 1] + " base STR]<br>";
+					descriptionString += "<br>[For each "+ ItemOBJ[ItemIndex][i + 1] + " base STR]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "ev_bagi")
+			{
+				if(tempDesc != "[For each "+ ItemOBJ[ItemIndex][i + 1] + " base AGI]<br>")
+				{
+					tempDesc = "[For each "+ ItemOBJ[ItemIndex][i + 1] + " base AGI]<br>";
+					descriptionString += "<br>[For each "+ ItemOBJ[ItemIndex][i + 1] + " base AGI]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "ev_bvit")
+			{
+				if(tempDesc != "[For each "+ ItemOBJ[ItemIndex][i + 1] + " base VIT]<br>")
+				{
+					tempDesc = "[For each "+ ItemOBJ[ItemIndex][i + 1] + " base VIT]<br>";
+					descriptionString += "<br>[For each "+ ItemOBJ[ItemIndex][i + 1] + " base VIT]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "ev_bint")
+			{
+				if(tempDesc != "[For each "+ ItemOBJ[ItemIndex][i + 1] + " base INT]<br>")
+				{
+					tempDesc = "[For each "+ ItemOBJ[ItemIndex][i + 1] + " base INT]<br>";
+					descriptionString += "<br>[For each "+ ItemOBJ[ItemIndex][i + 1] + " base INT]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "ev_bdex")
+			{
+				if(tempDesc != "[For each "+ ItemOBJ[ItemIndex][i + 1] + " base DEX]<br>")
+				{
+					tempDesc = "[For each "+ ItemOBJ[ItemIndex][i + 1] + " base DEX]<br>";
+					descriptionString += "<br>[For each "+ ItemOBJ[ItemIndex][i + 1] + " base DEX]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "ev_bluk")
+			{
+				if(tempDesc != "[For each "+ ItemOBJ[ItemIndex][i + 1] + " base LUK]<br>")
+				{
+					tempDesc = "[For each "+ ItemOBJ[ItemIndex][i + 1] + " base LUK]<br>";
+					descriptionString += "<br>[For each "+ ItemOBJ[ItemIndex][i + 1] + " base LUK]<br>";
 				}
 			}
 			if(ItemOBJ[ItemIndex][i] == "ref_lvl")
@@ -3391,7 +3440,70 @@ function DisplayItemDescription( ItemIndex )
 					descriptionString += "<br>[If refine lv +"+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
 				}
 			}
-			
+			if(ItemOBJ[ItemIndex][i] == "bstr_hi")
+			{
+				if(tempDesc != "[If base STR is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc = "[If base STR is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+					descriptionString += "<br>[If base STR is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "bagi_hi")
+			{
+				if(tempDesc != "[If base AGI is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc = "[If base AGI is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+					descriptionString += "<br>[If base AGI is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "bvit_hi")
+			{
+				if(tempDesc != "[If base VIT is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc = "[If base VIT is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+					descriptionString += "<br>[If base VIT is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "bint_hi")
+			{
+				if(tempDesc != "[If base INT is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc = "[If base INT is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+					descriptionString += "<br>[If base INT is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "bdex_hi")
+			{
+				if(tempDesc != "[If base DEX is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc = "[If base DEX is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+					descriptionString += "<br>[If base DEX is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "bluk_hi")
+			{
+				if(tempDesc != "[If base LUK is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc = "[If base LUK is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+					descriptionString += "<br>[If base LUK is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "blvl_hi")
+			{
+				if(tempDesc != "[If base level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc = "[If base level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+					descriptionString += "<br>[If base level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "jlvl_hi")
+			{
+				if(tempDesc != "[If job level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc = "[If job level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+					descriptionString += "<br>[If job level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+				}
+			}
 			descriptionString += "-"+ BuildItemDescription(ItemOBJ[ItemIndex][i + 2], ItemOBJ[ItemIndex][i + 3] ); // add them to Strings
 			i += 2;
 		}
