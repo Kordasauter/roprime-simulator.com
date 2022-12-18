@@ -1449,7 +1449,8 @@ function ClickGarment( data, isRefine )
 	}
 	else if(garm_id == 1392)
 	{// "Salvage Cape"
-		CleanEnchant("A_GARMENT_ENCHANT");
+		if(!isRefine)
+			CleanEnchant("A_GARMENT_ENCHANT");
 		formElements["A_GARMENT_ENCHANT_3"].disabled = false;
 		formElements["A_GARMENT_ENCHANT_4"].disabled = false;
 		for ( var i = 0; EnchantListOBJ[63][i] != "NULL" && !isRefine; i++ )
@@ -1462,6 +1463,35 @@ function ClickGarment( data, isRefine )
 	{// "Supplement Part Con" || "Upgrade Part - Engine"
 		CleanEnchant("A_GARMENT_ENCHANT");
 		SetEnchant2("A_GARMENT_ENCHANT",garm_ref,72,73);
+	}
+	else if(garm_id >= 2142 && garm_id <= 2147)
+	{//Chronocloak
+		if(!isRefine)
+			CleanEnchant("A_GARMENT_ENCHANT");
+		formElements["A_GARMENT_ENCHANT_4"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[94][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_GARMENT_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[94][i]][1],EnchantOBJ[EnchantListOBJ[94][i]][0]);
+		}
+	}
+	else if(garm_id == 2339 || garm_id == 2340 || garm_id == 2341)
+	{//Elemental Cape || Golden Scarf || Mine Worker's Backpack
+		CleanEnchant("A_GARMENT_ENCHANT");
+		formElements["A_GARMENT_ENCHANT_4"].disabled = false;
+		if(garm_ref < 9)
+		{
+			for ( var i = 0; EnchantListOBJ[102][i] != "NULL"; i++ )
+			{
+				formElements["A_GARMENT_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[102][i]][1],EnchantOBJ[EnchantListOBJ[102][i]][0]);
+			}
+		}
+		else
+		{
+			for ( var i = 0; EnchantListOBJ[103][i] != "NULL"; i++ )
+			{
+				formElements["A_GARMENT_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[103][i]][1],EnchantOBJ[EnchantListOBJ[103][i]][0]);
+			}
+		}
 	}
 	// else if(garm_id == 9999)
 	// {
@@ -1733,6 +1763,26 @@ function ClickArmor( data, isRefine )
 		formElements["A_ARMOR_ENCHANT" + "_4"].disabled = false;
 		formElements["A_ARMOR_ENCHANT" + "_3"].disabled = false;
 	}
+	else if(armor_id >= 2330 && armor_id <= 2334 )
+	{//Vigilante Suit || Elemental Robe || Golden Ninja Suit || Mine Worker's Vest || Hippie Clothes
+		CleanEnchant("A_ARMOR_ENCHANT");
+		formElements["A_ARMOR_ENCHANT_4"].disabled = false;
+		if(armor_ref < 9)
+		{
+			for ( var i = 0; EnchantListOBJ[102][i] != "NULL"; i++ )
+			{
+				formElements["A_ARMOR_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[102][i]][1],EnchantOBJ[EnchantListOBJ[102][i]][0]);
+			}
+		}
+		else
+		{
+			for ( var i = 0; EnchantListOBJ[103][i] != "NULL"; i++ )
+			{
+				formElements["A_ARMOR_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[103][i]][1],EnchantOBJ[EnchantListOBJ[103][i]][0]);
+			}
+		}
+		
+	}
 	// else if(armor_id == 9999)
 	// {
 		// if(!isRefine)
@@ -2002,6 +2052,16 @@ function ClickAcces( data, numAccess )
 		}
 		formElements[formAcc + "_4"].disabled = false;
 		formElements[formAcc + "_3"].disabled = false;
+	}
+	else if(access_id == 2342 || access_id == 2343)
+	{//Vigilante Badge || Hippie Feather
+		CleanEnchant(formAcc);
+		var ench1 = 104;
+		for ( var i = 0; EnchantListOBJ[ench1][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench1][i]][1],EnchantOBJ[EnchantListOBJ[ench1][i]][0]);
+		}
+		formElements[formAcc + "_4"].disabled = false;
 	}
 	// else if(access_id == 9999)
 	// {
