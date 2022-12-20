@@ -177,17 +177,6 @@ function calcMAtk( includeMultipliers )
 			if (n_A_HEAD_DEF_PLUS >= 9) { w += 7; }
 			if (n_A_HEAD_DEF_PLUS >= 12) { w += 5; }
 		}
-		if( EquipNumSearch( 1582 ) )
-		{//Loli Ruri's Cat
-			if(n_A_HEAD_DEF_PLUS >= 7)
-			{
-				matk_mul += 2;
-			}
-			if(n_A_HEAD_DEF_PLUS >= 9)
-			{
-				matk_mul += 3;
-			}
-		}
 		if ( (EquipNumSearch( 1637 ) ) )
 		{// "Thanatos' Dolor Hat"
 			if(n_A_HEAD_DEF_PLUS > 6)
@@ -223,10 +212,10 @@ function calcMAtk( includeMultipliers )
 		{ //"Wondrous Foxtail Staff"
 			matk_mul += 2 * Math.floor(n_A_Weapon_ATKplus / 3);
 		}
-		if ( EquipNumSearch( 2040 ) )
-		{//Armor of Sixtus the Wise
-				matk_mul += 2 * Math.floor(n_A_BODY_DEF_PLUS / 3);
-		}
+		// if ( EquipNumSearch( 2040 ) )
+		// {//Armor of Sixtus the Wise
+				// matk_mul += 2 * Math.floor(n_A_BODY_DEF_PLUS / 3);
+		// }
 		if(EquipNumSearch(2079) && n_A_Weapon_ATKplus >= 7)
 		{//Crimson Rose
 			matk_mul += 5;
@@ -1074,76 +1063,15 @@ function CalcMagicDamage( rawDamage )
 		wBMC_MDEF = 0;
 		n_B_MDEF2 = 0;
 	}
-	if( EquipNumSearch( 645 ) )
-	{//piercing staff
-		Ign_MDEF += 10 ;
-	}
-	if( EquipNumSearch( 1582 ) )
-	{//Loli Ruri's Cat
-		if(n_A_HEAD_DEF_PLUS >= 7)
-		{
-			Ign_MDEF += n_A_HEAD_DEF_PLUS + 5;
-		}
-		else
-		{
-			Ign_MDEF += n_A_HEAD_DEF_PLUS;
-		}
-	}
-	if ( EquipNumSearch( 2040 ) )
-	{//Armor of Sixtus the Wise
-		if(n_A_BODY_DEF_PLUS >= 7)
-		{
-			for(var i = 1; i <= 4 ; i++)
-			{
-				if(n_B[en_ELEMENT] == ((ele_WIND * 10) + i)  || n_B[en_ELEMENT] ==  ((ele_EARTH * 10) + i))
-				{
-					Ign_MDEF += 30;
-				}
-			}
-			
-		}
-	}
-	if ( EquipNumSearch( 2046 ) )
-	{//Armor of Sixtus Wise Set (INT)
-		if((n_A_BODY_DEF_PLUS + n_A_SHOES_DEF_PLUS) >= 21)
-		{
-			if(n_B[en_RACE] == race_BRUTE || n_B[en_RACE] == race_DEMON)
-			{
-				Ign_MDEF += 20;
-			}
-		}
-	}
-	if(EquipNumSearch(2142) || 
-	   EquipNumSearch(2143) || 
-	   EquipNumSearch(2144) || 
-	   EquipNumSearch(2145) || 
-	   EquipNumSearch(2146) || 
-	   EquipNumSearch(2147) ) 
-	{//Chronocloak (all)
-		if((n_B[en_RACE] == race_BRUTE || n_B[en_RACE] == race_DEMON))
-		{
-			if(n_A_SHOULDER_DEF_PLUS >= 9)
-				Ign_MDEF += 20;
-			if(n_A_SHOULDER_DEF_PLUS >= 11)
-				Ign_MDEF += 10;
-		}
-	}
-	if(EquipNumSearch(2148) || 
-	   EquipNumSearch(2149) || 
-	   EquipNumSearch(2150) || 
-	   EquipNumSearch(2151) || 
-	   EquipNumSearch(2152) || 
-	   EquipNumSearch(2153) ) 
-	{//Chronocloak (all)
-		if((n_B[en_RACE] == race_BRUTE || n_B[en_RACE] == race_DEMON) && n_A_SHOES_DEF_PLUS >= 10)
-		{
-			Ign_MDEF += 30;
-		}
-	}
+
 	
 	//Calc MDEF after bypass MDEF
 	wBMC_MDEF = wBMC_MDEF - ((wBMC_MDEF /100) * Ign_MDEF) ;
+	if(wBMC_MDEF < 0)
+		wBMC_MDEF = 0;
 	n_B_MDEF2 = n_B_MDEF2 - ((n_B_MDEF2 /100) * Ign_MDEF) ;
+	if(n_B_MDEF2 < 0)
+		n_B_MDEF2 = 0;
 	// Calc Damage based on MDEF of opponent
 	if ( n_A_ActiveSkill == skill_WI_FIRE_PILLAR )
 	{

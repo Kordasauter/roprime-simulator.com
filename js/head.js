@@ -852,9 +852,9 @@ function ApplySkillModifiers( damage )
 	
 	if( (EquipNumSearch( 1810 ) && n_A_ActiveSkill==skill_ROY_EARTH_DRIVE) || // Shadow Royalguard Shield
 		(EquipNumSearch( 1811 ) && n_A_ActiveSkill==skill_MEC_FLAME_LAUNCHER) || // Shadow Mechanic Shield
-		(EquipNumSearch( 1813 ) && n_A_ActiveSkill==skill_ABI_ADORAMUS) || // Shadow Archbishop Shield
-		(EquipNumSearch( 1814 ) && n_A_ActiveSkill==skill_SUR_SKY_NET_BLOW) || // Shadow Sura Shield
-		(EquipNumSearch( 1817 ) && n_A_ActiveSkill==skill_WAR_EARTH_STRAIN) ) // Shadow Warlock Shield
+		// (EquipNumSearch( 1813 ) && n_A_ActiveSkill==skill_ABI_ADORAMUS) || // Shadow Archbishop Shield
+		(EquipNumSearch( 1814 ) && n_A_ActiveSkill==skill_SUR_SKY_NET_BLOW) ) // Shadow Sura Shield
+		// (EquipNumSearch( 1817 ) && n_A_ActiveSkill==skill_WAR_EARTH_STRAIN) ) // Shadow Warlock Shield
 	{ 
 		dmgMultiplier += n_A_SHADOW_SHIELD_DEF_PLUS * 5;
 	}
@@ -863,10 +863,10 @@ function ApplySkillModifiers( damage )
 		(EquipNumSearch( 1827 ) && n_A_ActiveSkill==skill_ROY_SPEAR_CANNON) || // Shadow Royalguard Gloves
 		(EquipNumSearch( 1828 ) && n_A_ActiveSkill==skill_MEC_VULCAN_ARM) || // Shadow Mechanic Gloves
 		(EquipNumSearch( 1829 ) && n_A_ActiveSkill==skill_GEN_CART_TORNADO) || // Shadow Genetic Gloves
-		(EquipNumSearch( 1830 ) && n_A_ActiveSkill==skill_ABI_DUPLE_LIGHT) || // Shadow Archbishop Gloves
+		// (EquipNumSearch( 1830 ) && n_A_ActiveSkill==skill_ABI_DUPLE_LIGHT) || // Shadow Archbishop Gloves
 		(EquipNumSearch( 1831 ) && n_A_ActiveSkill==skill_SUR_RAMPAGE_BLASTER) || // Shadow Sura Gloves
 		(EquipNumSearch( 1833 ) && n_A_ActiveSkill==skill_SHA_TRIANGLE_SHOT) || // Shadow Shadowchaser Gloves
-		(EquipNumSearch( 1834 ) && n_A_ActiveSkill==skill_WAR_DRAIN_LIFE) || // Shadow Warlock Gloves
+		// (EquipNumSearch( 1834 ) && n_A_ActiveSkill==skill_WAR_DRAIN_LIFE) || // Shadow Warlock Gloves
 		(EquipNumSearch( 1836 ) && n_A_ActiveSkill==skill_RAN_CLUSTER_BOMB) )		// Shadow Ranger Gloves
 	{ 
 		dmgMultiplier += n_A_SHADOW_WEAPON_DEF_PLUS * 5;

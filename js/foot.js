@@ -515,14 +515,69 @@ with ( document.calcForm )
 	{ // Piercing Staff
 		n_tok[bon_MDEFIGN_RC_ALL] += 10 + n_A_Weapon_ATKplus;
 	}
+	////////////////////////////////////////////////////
+	// if ( EquipNumSearch( 2040 ) )
+	// {//Armor of Sixtus the Wise
+		// if(n_A_BODY_DEF_PLUS >= 7)
+		// {
+			// if(Math.floor(n_B[en_ELEMENT]/10) == ele_WIND   || Math.floor(n_B[en_ELEMENT]/10) ==  ele_EARTH )
+			// {
+				// Ign_MDEF += 30;
+			// }
+		// }
+	// }
+	if ( EquipNumSearch( 2046 ) )
+	{//Armor of Sixtus Wise Set (INT)
+		if((n_A_BODY_DEF_PLUS + n_A_SHOES_DEF_PLUS) >= 21)
+		{//Ign_MDEF += 20;
+			n_tok[bon_MDEFIGN_RC_BRUTE] += 20;
+			n_tok[bon_MDEFIGN_RC_DEMON] += 20;
+		}
+	}
+	if(EquipNumSearch(2142) || 
+	   EquipNumSearch(2143) || 
+	   EquipNumSearch(2144) || 
+	   EquipNumSearch(2145) || 
+	   EquipNumSearch(2146) || 
+	   EquipNumSearch(2147) ) 
+	{//Chronocloak (all)
+
+		if(n_A_SHOULDER_DEF_PLUS >= 9)
+		{// Ign_MDEF += 20;
+			n_tok[bon_MDEFIGN_RC_BRUTE] += 20;
+			n_tok[bon_MDEFIGN_RC_DEMON] += 20;
+		}
+			
+		if(n_A_SHOULDER_DEF_PLUS >= 11)
+		{//Ign_MDEF += 10;
+			n_tok[bon_MDEFIGN_RC_BRUTE] += 10;
+			n_tok[bon_MDEFIGN_RC_DEMON] += 10;
+		}
+				
+		
+	}
+	if(EquipNumSearch(2148) || 
+	   EquipNumSearch(2149) || 
+	   EquipNumSearch(2150) || 
+	   EquipNumSearch(2151) || 
+	   EquipNumSearch(2152) || 
+	   EquipNumSearch(2153) ) 
+	{//Chronocloak (all)
+		if(n_A_SHOES_DEF_PLUS >= 10)
+		{//Ign_MDEF += 30;
+			n_tok[bon_MDEFIGN_RC_BRUTE] += 30;
+			n_tok[bon_MDEFIGN_RC_DEMON] += 30;
+		}
+	}
+	////////////////////////////////////////////////////
 	if ( n_A_WeaponType === weapTyp_STAFF )
 	{ // necromancer card
 		n_tok[bon_MDEFIGN_RC_ALL] += 2 * CardNumSearch(card_WEPN_NECROMANCER);
 	}
-	if ( n_B[en_BOSS]==1 && CardNumSearch(card_HEAD_VESPER) )
-	{ // Vesper card
-		n_tok[297] += 30 * CardNumSearch(card_HEAD_VESPER);
-	}
+	// if ( n_B[en_BOSS]==1 && CardNumSearch(card_HEAD_VESPER) )
+	// { // Vesper card
+		// n_tok[298] += 30 * CardNumSearch(card_HEAD_VESPER);
+	// }
 	if ( EquipNumSearch(936) )
 	{ // Thorn Staff of Darkness
 		n_tok[bon_MDEFIGN_RC_ALL] += n_A_Weapon_ATKplus * 1;

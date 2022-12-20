@@ -1585,7 +1585,11 @@
 ,[1579,itm_type_ACCESSORY,0,0,0,0,0,1,bon_DEX,4,bon_NONE] // "Trickster's Glove (7d.)"
 ,[1580,itm_type_ACCESSORY,0,0,0,0,0,1,bon_LUK,4,bon_MDEF,5,bon_NONE] // "White God's Sigil (7d.)"
 ,[1581,itm_type_ACCESSORY,0,0,0,0,0,1,bon_CRIT,10,bon_NONE] // "Vorpal Ring (7d.)"
-,[1582,itm_type_HEAD_UPPER,0,0,0,1,10,1,bon_INT,2,bon_MATK,5,bon_MDEFIGN_RC_FORMLESS,5,bon_MDEFIGN_RC_UNDEAD,5,bon_MDEFIGN_RC_BRUTE,5,bon_MDEFIGN_RC_PLANT,5,bon_MDEFIGN_RC_INSECT,5,bon_MDEFIGN_RC_FISH,5,bon_MDEFIGN_RC_DEMON,5,bon_MDEFIGN_RC_DEMI_HUMAN,5,bon_MDEFIGN_RC_ANGEL,5,bon_MDEFIGN_RC_DRAGON,5,bon_NONE] // "Loli Ruri's Cat"
+// ,[1582,itm_type_HEAD_UPPER,0,0,0,1,10,1,bon_INT,2,bon_MATK,5,bon_MDEFIGN_RC_FORMLESS,5,bon_MDEFIGN_RC_UNDEAD,5,bon_MDEFIGN_RC_BRUTE,5,bon_MDEFIGN_RC_PLANT,5,bon_MDEFIGN_RC_INSECT,5,bon_MDEFIGN_RC_FISH,5,bon_MDEFIGN_RC_DEMON,5,bon_MDEFIGN_RC_DEMI_HUMAN,5,bon_MDEFIGN_RC_ANGEL,5,bon_MDEFIGN_RC_DRAGON,5,bon_NONE] // "Loli Ruri's Cat"
+,[1582,itm_type_HEAD_UPPER,0,0,0,1,10,1,bon_INT,2,bon_MATK,5,bon_MDEFIGN_RC_ALL,5,"ev_ref",1,bon_MDEFIGN_RC_ALL,1,"ref_lvl",7,bon_MATK,2,"ref_lvl",7,bon_MDEFIGN_RC_ALL,5,"ref_lvl",9,bon_MATK,5,bon_NONE] // "Loli Ruri's Cat"
+//"ev_ref",2,,,
+//"ref_lvl",7,,,
+//"ref_lvl",9,,,
 ,[1583,itm_type_GARMENT,0,20,0,1,1,1,bon_MDEF,10,bon_NONE] // "Golden Angel Wing"
 ,[1584,itm_type_HEAD_UPPER,0,10,0,0,1,1,bon_MDEF,5,bon_NONE] // "Golden Angel Hairband"
 ,[1585,itm_type_SET,0,0,0,0,0,0,bon_ALL_STATS,1,bon_NONE] // "Golden Angel Wing + Golden Angel Hairband"
@@ -1828,12 +1832,12 @@
 ,[1810,itm_type_SHADOW_SHIELD,213,0,0,0,0,99,bon_DMG_SKILL+skill_ROY_EARTH_DRIVE,20,bon_NONE] // "Shadow Royalguard Shield"
 ,[1811,itm_type_SHADOW_SHIELD,212,0,0,0,0,99,bon_DMG_SKILL+skill_MEC_FLAME_LAUNCHER,20,bon_NONE] // "Shadow Mechanic Shield"
 ,[1812,itm_type_SHADOW_SHIELD,219,0,0,0,0,99,bon_HP_MUL,3,bon_NONE] // "Shadow Genetic Shield"
-,[1813,itm_type_SHADOW_SHIELD,209,0,0,0,0,99,bon_DMG_SKILL+skill_ABI_ADORAMUS,20,bon_NONE] // "Shadow Archbishop Shield"
+,[1813,itm_type_SHADOW_SHIELD,209,0,0,0,0,99,bon_DMG_SKILL+skill_ABI_ADORAMUS,20,"ev_ref",1,bon_DMG_SKILL+skill_ABI_ADORAMUS,5,bon_NONE] // "Shadow Archbishop Shield"
 ,[1814,itm_type_SHADOW_SHIELD,215,0,0,0,0,99,bon_DMG_SKILL+skill_SUR_SKY_NET_BLOW,20,bon_NONE] // "Shadow Sura Shield"
 ,[1815,itm_type_SHADOW_SHIELD,208,0,0,0,0,99,bon_DELAY_SKILL_FLAT+skill_GLT_DARK_CLAW,10,bon_NONE] // "Shadow Guillotine Cross Shield"
 ,[1816,itm_type_SHADOW_SHIELD,214,0,0,0,0,99,bon_NONE] // "Shadow Shadowchaser Shield"
-,[1817,itm_type_SHADOW_SHIELD,211,0,0,0,0,99,bon_DMG_SKILL+skill_WAR_EARTH_STRAIN,20,bon_NONE] // "Shadow Warlock Shield"
-,[1818,itm_type_SHADOW_SHIELD,218,0,0,0,0,99,bon_DELAY_SKILL_FLAT+skill_SOR_EARTH_GRAVE,1,bon_NONE] // "Shadow Sorcerer Shield"
+,[1817,itm_type_SHADOW_SHIELD,211,0,0,0,0,99,bon_DMG_SKILL+skill_WAR_EARTH_STRAIN,20,bon_DMG_SKILL+skill_WAR_EARTH_STRAIN,5,bon_NONE] // "Shadow Warlock Shield"
+,[1818,itm_type_SHADOW_SHIELD,218,0,0,0,0,99,bon_DELAY_SKILL_FLAT+skill_SOR_EARTH_GRAVE,1,"ev_ref",1,bon_NONE] // "Shadow Sorcerer Shield"
 ,[1819,itm_type_SHADOW_SHIELD,210,0,0,0,0,99,bon_NONE] // "Shadow Ranger Shield"
 ,[1820,itm_type_SHADOW_SHIELD,216,0,0,0,0,99,bon_SP_MUL,3,bon_NONE] // "Shadow Minstrel Shield"
 ,[1821,itm_type_SHADOW_SHIELD,217,0,0,0,0,99,bon_SP_MUL,3,bon_NONE] // "Shadow Wanderer Shield"
@@ -1845,11 +1849,11 @@
 ,[1827,itm_type_SHADOW_WEAPON,213,0,0,0,0,99,bon_DMG_SKILL+skill_ROY_SPEAR_CANNON,20,bon_NONE] // "Shadow Royalguard Gloves"
 ,[1828,itm_type_SHADOW_WEAPON,212,0,0,0,0,99,bon_DMG_SKILL+skill_MEC_VULCAN_ARM,20,bon_NONE] // "Shadow Mechanic Gloves"
 ,[1829,itm_type_SHADOW_WEAPON,219,0,0,0,0,99,bon_DMG_SKILL+skill_GEN_CART_TORNADO,20,bon_NONE] // "Shadow Genetic Gloves"
-,[1830,itm_type_SHADOW_WEAPON,209,0,0,0,0,99,bon_DMG_SKILL+skill_ABI_DUPLE_LIGHT,20,bon_NONE] // "Shadow Archbishop Gloves"
+,[1830,itm_type_SHADOW_WEAPON,209,0,0,0,0,99,bon_DMG_SKILL+skill_ABI_DUPLE_LIGHT,20,"ev_ref",1,bon_DMG_SKILL+skill_ABI_DUPLE_LIGHT,5,bon_NONE] // "Shadow Archbishop Gloves"
 ,[1831,itm_type_SHADOW_WEAPON,215,0,0,0,0,99,bon_DELAY_SKILL_FLAT+skill_SUR_RAMPAGE_BLASTER,2,bon_NONE] // "Shadow Sura Gloves"
 ,[1832,itm_type_SHADOW_WEAPON,208,0,0,0,0,99,bon_NONE] // "Shadow Guillotine Cross Gloves"
 ,[1833,itm_type_SHADOW_WEAPON,214,0,0,0,0,99,bon_DMG_SKILL+skill_SHA_TRIANGLE_SHOT,20,bon_NONE] // "Shadow Shadowchaser Gloves"
-,[1834,itm_type_SHADOW_WEAPON,211,0,0,0,0,99,bon_DMG_SKILL+skill_WAR_DRAIN_LIFE,20,bon_NONE] // "Shadow Warlock Gloves"
+,[1834,itm_type_SHADOW_WEAPON,211,0,0,0,0,99,bon_DMG_SKILL+skill_WAR_DRAIN_LIFE,20,"ev_ref",1,bon_DMG_SKILL+skill_WAR_DRAIN_LIFE,5,bon_NONE] // "Shadow Warlock Gloves"
 ,[1835,itm_type_SHADOW_WEAPON,218,0,0,0,0,99,bon_DELAY_SKILL_FLAT+skill_SOR_DIAMOND_DUST,1,bon_NONE] // "Shadow Sorcerer Gloves"
 ,[1836,itm_type_SHADOW_WEAPON,210,0,0,0,0,99,bon_DMG_SKILL+skill_RAN_CLUSTER_BOMB,20,bon_NONE] // "Shadow Ranger Gloves"
 ,[1837,itm_type_SHADOW_WEAPON,216,0,0,0,0,99,bon_HP_MUL,3,bon_NONE] // "Shadow Minstrel Gloves"
@@ -2060,7 +2064,7 @@
 ,[2037,itm_type_ARMOR,0,120,0,1,200,1,bon_ATK,50,bon_NONE] // "Armor of Sixtus the Mighty"
 ,[2038,itm_type_ARMOR,0,120,0,1,200,1,bon_ATK,50,bon_NONE] // "Armor of Sixtus the Agile"
 ,[2039,itm_type_ARMOR,0,120,0,1,200,1,bon_ATK,50,bon_NONE] // "Armor of Sixtus the Tough"
-,[2040,itm_type_ARMOR,0,120,0,1,200,1,bon_MATK,50,bon_NONE] // "Armor of Sixtus the Wise"
+,[2040,itm_type_ARMOR,0,120,0,1,200,1,bon_MATK,50,"ev_ref",3,bon_MATK_MUL,2,"ref_lvl",7,bon_MDEFIGN_RC_BRUTE,30,"ref_lvl",7,bon_MDEFIGN_RC_DEMON,30,bon_NONE] // "Armor of Sixtus the Wise"
 ,[2041,itm_type_ARMOR,0,120,0,1,200,1,bon_ATK,50,bon_NONE] // "Armor of Sixtus the Dexterous"
 ,[2042,itm_type_ARMOR,0,120,0,1,200,1,bon_ATK,50,bon_NONE] // "Armor of Sixtus the Lucky"
 ,[2043,itm_type_SET,0,0,0,0,0,0,bon_PHY_ATK,10,bon_NONE] // "Sixtus + Temporal Str"
@@ -2687,6 +2691,22 @@ function BuildItemDescription( bonusType, bonusValue )
 	if(bonusType  == bon_IGN_MDEF_SIZ_LARGE)
 	{
 		CBIstr += "Ignores " + bonusValue + "% of magical defense rate of large size enemies<br>";
+	}
+	if(bonusType  == bon_DEFIGN_RC_ALL)//
+	{
+		CBIstr += "Ignores " + bonusValue + "% of target's DEF.<br>";
+	}
+	if(bonusType  == bon_MDEFIGN_RC_ALL)
+	{
+	CBIstr += "Ignores " + bonusValue + "% of target's MDEF.<br>";
+	}
+	if(bonusType  == bon_DEFIGN_RC_BOSS)
+	{
+		CBIstr += "On [Boss] monsters<br>Ignores " + bonusValue + "% of target's DEF.<br>";
+	}
+	if(bonusType  == bon_MDEFIGN_RC_BOSS)
+	{
+		CBIstr += "On [Boss] monsters<br>Ignores " + bonusValue + "% of target's DEF.<br>";
 	}
 	
 	return CBIstr;

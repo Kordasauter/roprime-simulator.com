@@ -397,6 +397,8 @@ with( document.calcForm )
 		if(w < 0)
 			w = 0;
 		n_B[en_HARDMDEF] -= Math.floor(n_B[en_HARDMDEF] * w /100); // MDef
+		if(n_B[en_HARDMDEF] < 0)
+			n_B[en_HARDMDEF] = 0;
 	}
 	
 	// monster buffs
