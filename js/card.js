@@ -1,4 +1,3 @@
-
 function SetCardName(SENw)
 { // return SetCards (String) from w_SE[%]
 	var SENstr = "";
@@ -874,10 +873,58 @@ function SetCard()
 ,[786,   itm_type_SET,"Cowraiders Class 1 & Mine Cowraiders Class 1","",bon_DMG_SKILL + skill_GS_SPREAD_SHOT,50,0]
 ,[787,   itm_type_SET,"Cowraiders Class 2 & Mine Cowraiders Class 2","",bon_DMG_SKILL + skill_GS_TRIGGER_HAPPY_SHOT,50,0]
 ,[788,   itm_type_SET,"Cowraiders Class 3 & Mine Cowraiders Class 3","",bon_DMG_SIZ_SMALL,10,0]
-//,[789,   ,"","",0]
-//,[790,   ,"","",0]
-//,[791,   ,"","",0]
-//,[792,   ,"","",0]
+//Triple Trouble
+//Horror Toy Factory
+,[789,   card_com_ARMOR,"Decorated Evil Tree","",bon_HP_ADD,1000,bon_SP_ADD,150,bon_FLEE,-25,0]
+,[790,   card_com_SHOES,"Vicious Cookie","",bon_PHY_ATK,1,bon_MATK_MUL,1,bon_HP_MUL,-2,"ev_ref",2,bon_PHY_ATK,1,"ev_ref",2,bon_MATK_MUL,1,"ev_ref",2,bon_HP_MUL,-2,0]
+,[791,   card_comp_WEAPON,"Evil Dwelling Box","Adds a chance of inflicting Curse on the target when performing a magical attack.",bon_HP_ADD,-1225,0]
+,[792,   card_com_ACC,"Creepy Demon","Adds a chance of inflicting Curse on the attacker when receiving a magical attack.",bon_HP_MUL,13,0]
+,[793,   card_com_ACC,"Malicious Baby Ghost","Adds a chance of inflicting Curse on the attacker when receiving a physical attack.",bon_HP_MUL,13,0]
+,[794,   card_comp_WEAPON,"Dancing Marionette","",bon_ASPD_MUL,10,bon_PHY_ATK,-3,0]
+,[795,   card_com_SHOES,"Abandoned Teddy Bear","Has a chance to inflict Curse on wearer when dealing physical and magical attack.",bon_SP_MUL,20,0]
+,[796,   card_comp_WEAPON,"Celine Kimi","Has a chance to autocast Level 3 Critical Wound to all enemies when dealing magical attack.<br>Every 3 refine levels, increases the trigger rate.",bon_MATK_MUL,10,0]
+//Nightmare Pyramids
+,[797,   card_com_SHOES,"Nightmare Verit","",bon_MATK_MUL,5,"ref_lvl",7,bon_MATK_MUL,3,"ref_lvl",9,bon_MATK_MUL,2,0]
+,[798,   card_com_SHOES,"Nightmare Mummy","When receiving physical or magical attacks, has a chance to cause Sleep to all targets within 11x11 cells.",0]
+,[799,   card_comp_WEAPON,"Nightmare Minorous","",bon_DMG_RC_BRUTE,10,bon_DMG_RC_UNDEAD,10,0]
+,[800,   card_comp_WEAPON,"Nightmare Mimic","",bon_MDMG_RC_BRUTE,5,bon_MDMG_RC_UNDEAD,5,0]
+,[801,   card_com_SHIELD,"Nightmare Arclouse","",bon_RED_RC_BRUTE,20,bon_RED_RC_UNDEAD,20,0]
+,[802,   card_com_GARMENT,"Nightmare Ancient Mummy","",bon_RED_ELE_NEUTRAL,15,"ev_ref",1,bon_DMG_ELE_FIRE,3,0]
+,[803,   itm_type_SET,"Nightmare Mummy Set","Increase the probability of causing Sleep to all targets on 11x11 cells.",bon_RED_ELE_NEUTRAL,5,0]
+,[804,   itm_type_SET,"Nightmare Arclouse + Nightmare Minotaur","",bon_RED_RC_BRUTE,5,bon_RED_RC_UNDEAD,5,bon_DEFIGN_RC_BRUTE,50,bon_DEFIGN_RC_UNDEAD,50,0]
+,[805,   itm_type_SET,"Nightmare Arclouse + Nightmare Mimic","",bon_RED_RC_BRUTE,5,bon_RED_RC_UNDEAD,5,bon_MDEFIGN_RC_BRUTE,50,bon_MDEFIGN_RC_UNDEAD,50,0]
+,[806,   card_comp_WEAPON,"Nightmare Amon Ra","",bon_MDMG_ELE_DARK,50,bon_MDMG_ELE_UNDEAD,50,bon_MDMG_RC_DEMON,50,bon_MDMG_RC_UNDEAD,50,0]
+//Undersea Tunnel (6 floor)
+,[807,   card_comp_HEAD,"King Dramoh","[Swordman jobs]<br>[For each 3 refine Lv or item]<br>STR +1.",bon_STR,2,0]
+,[808,   card_comp_WEAPON,"Sropho","When dealing melee physical attack, has a small chance to cause Crystalisation status to the target.",0]
+,[809,   card_com_ARMOR,"Pot Dofle","",bon_USR_ELEMENT,ele_WATER,bon_RED_RC_FISH,10,0]
+,[810,   card_comp_WEAPON,"Sedora","",bon_DMG_CRIT,15,0]
+,[811,   card_com_GARMENT,"Kraken","Sightless Mind has a chance to cause Bleeding status.",bon_FLEE,10,bon_SKILL_ENABLE,22,bon_SKILL_ENABLE,67,0]
+//,[812,   ,"","",0]
+//,[813,   ,"","",0]
+//,[814,   ,"","",0]
+//,[815,   ,"","",0]
+//,[816,   ,"","",0]
+//,[817,   ,"","",0]
+//,[818,   ,"","",0]
+//,[819,   ,"","",0]
+//,[820,   ,"","",0]
+//,[821,   ,"","",0]
+//,[822,   ,"","",0]
+//,[823,   ,"","",0]
+//,[824,   ,"","",0]
+//,[825,   ,"","",0]
+//,[826,   ,"","",0]
+//,[827,   ,"","",0]
+//,[828,   ,"","",0]
+//,[829,   ,"","",0]
+//,[830,   ,"","",0]
+//,[831,   ,"","",0]
+//,[832,   ,"","",0]
+//,[833,   ,"","",0]
+//,[834,   ,"","",0]
+//,[835,   ,"","",0]
+
 ];
 
 CardNum = cardOBJ.length -1;
@@ -978,7 +1025,18 @@ w_SC = [
 ,[786,773,777,"NULL"] //Cowraiders Class 1 & Mine Cowraiders Class 1
 ,[787,774,778,"NULL"] //Cowraiders Class 2 & Mine Cowraiders Class 2
 ,[788,775,779,"NULL"] //Cowraiders Class 3 & Mine Cowraiders Class 3
-
+,[803,798,802,"NULL"] //Nightmare Mummy Set
+,[804,801,799,"NULL"] //Nightmare Arclouse + Nightmare Minotaur
+,[805,801,800,"NULL"] //Nightmare Arclouse + Nightmare Mimic
+// ,[,,,"NULL"] //
+// ,[,,,"NULL"] //
+// ,[,,,"NULL"] //
+// ,[,,,"NULL"] //
+// ,[,,,"NULL"] //
+// ,[,,,"NULL"] //
+// ,[,,,"NULL"] //
+// ,[,,,"NULL"] //
+// ,[,,,"NULL"] //
 ];
 }
 

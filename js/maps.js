@@ -96,6 +96,9 @@ MAP_NAME = [
 ,["","Werner Laboratory Central Room"]
 ,["","Heart Hunter War Base 2"]
 ,["","Rock Ridge"]
+,["","Horror Toy Factory"]
+,["","Nightmare Pyramids"]
+,["","Undersea Tunnel (6 floor)"]
 // ,["","Place_Holder"]
 ];
 }

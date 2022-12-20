@@ -1098,8 +1098,19 @@ function StPlusCalc()
 			wSPC_DEX += Math.floor(n_A_HEAD_DEF_PLUS / 3);
 	}
 	
+	if(CardNumSearch(770))
+	{//Cutie Card
+		wSPC_AGI += Math.floor(n_A_SHOES_DEF_PLUS / 2);
+	}
+	
+	if(CardNumSearch(807))
+	{//King Dramoh Card
+		if(n_A_JobSearch()==cls_SWO)
+			wSPC_STR += Math.floor(n_A_HEAD_DEF_PLUS / 3);
+	}
+	
 	for(var i = 0 ; i <= 12; i++)
-	{
+	{//bio 5 cards
 		if(CardNumSearch(740 + i))
 		{
 			if(n_A_BaseLV >= 175)
@@ -1121,10 +1132,6 @@ function StPlusCalc()
 				wSPC_LUK += 10;
 			}
 		}
-	}
-	if(CardNumSearch(770))
-	{//Cutie Card
-		wSPC_AGI += Math.floor(n_A_SHOES_DEF_PLUS / 2);
 	}
 	
 	var numMegs = EquipNumSearch( 348 );

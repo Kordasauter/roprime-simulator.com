@@ -1293,7 +1293,7 @@ JobSkillActiveOBJ = [
 ,[13,1, 55,5]
 ,[14,1,125,3]
 ,[15,1, 71,5]
-,[16,0, 50,1]
+,[16,0, 50,1] //Sight 1
 ,[17,0, 35,1] // Teleport lv. 1
 ,[18,1, 56,1]
 ,[19,0, 82,1]
@@ -1316,7 +1316,7 @@ JobSkillActiveOBJ = [
 ,[36,1, 54,5]
 ,[37,1, 56,5]
 ,[38,1,132,5]
-,[39,1, 47,5]
+,[39,1, 47,5] // Soul Strike 5
 ,[40,1, 97,1]
 ,[41,0,108,1]
 ,[42,1,130,2]
@@ -1344,7 +1344,10 @@ JobSkillActiveOBJ = [
 ,[64,1, 42,1] // Improve Concentration 1
 ,[65,1,227,1] // Spell Breaker 1
 ,[66,1,284,1] // Martyr's Reckoning 1
-
+,[67,1,171,1] // Sightless Mind 1
+,[68,1, 47,10] // Soul Strike 10
+,[69,1,209,3] // Dazzler 3
+,[70,1,722,1] // Fiber Lock 1
 ];
 }
 
@@ -1466,7 +1469,7 @@ JobSkillActiveOBJ = [
 ,[114,1,382, 1, 0, 1]
 ,[115,1,130, 5, 0, 6]
 ,[116,1,541, 1, 0, 1]
-,[117,1,722, 1, 0, 1]
+,[117,1,722, 1, 0, 1] // Fiber Lock 1
 ,[118,1, 51, 5, 1, 4]
 ,[119,1, 52, 5, 1, 1]
 ,[120,0,126, 3, 1,10] //Golden ROD SETS
@@ -1504,6 +1507,11 @@ JobSkillActiveOBJ = [
 ,[152,1, 57, 5, 0, 1] // Thunder Storm 5
 ,[153,1, 40, 3, 1, 1] // Double Strafe 3
 ,[154,1, 52, 5, 0, 4] // Fire Ball 5
+,[155,1,130,10, 0, 1] // Frost Nova 10
+,[156,1,678, 1, 0, 1] // Psychic Wave 1
+,[157,1,276, 1, 0, 4] // Mystical Amplification 1
+,[158,0,209, 1, 0, 1] // Dazzler 1
+,[159,1,102, 6, 0, 1] // Turn Undead 6
 
  //IDAutocast, Type(0=when hit, 1=when attack), SkillID, SkillLVL, Chance, AutoCastTrigger
 ];

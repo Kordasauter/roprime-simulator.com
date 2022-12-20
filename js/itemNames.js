@@ -2361,7 +2361,22 @@ ITEM_NAME = [
 ,[2347,0,0,"Golden Ninja Set (Kunai)","",0]
 ,[2348,0,0,"Mine Worker's Set","",0]
 ,[2349,0,0,"Hippie Set","",0]
-// ,[2350,0,0,"","",0]
+//Triple Trouble
+//Horror Toy Factory
+,[2350,0,0,"Old Parasol","",0]
+,[2351,0,0,"Red Lantern","Randomly a defeated monster will drop Alcohol, Detrimindexta or Karvodailnirol.",0]
+,[2352,0,0,"Hurt Mind","",0]
+,[2353,0,0,"Kind Heart","Recover 300 HP every 10 seconds.",0]
+,[2354,0,0,"Lush Rose","Drains 50 HP every 5 seconds.<br>Recovers 100 HP each time an enemy is killed with a magic attack.",0]
+// ,[2355,0,0,"Evil Spirit Gloves","When attacked, chance to activate Kimmy's mind confusion.",0]
+,[2355,0,0,"Evil Spirit Gloves","",0]
+,[2356,0,0,"Celine's Ribbon","Recover 200 HP for each kill with magical attack.<br>Drain 50 HP every 5 seconds.",0]
+,[2357,0,0,"Noble Cross","Recovers 1 SP each time you hit an Undead monster.<br>Recovers 12 SP each time you kill an Undead monster with a physical attack.",0]
+,[2358,0,0,"Hurt Mind + Kind Heart","",0]
+// ,[2359,0,0,"Place_Holder","",0]
+// ,[2360,0,0,"Place_Holder","",0]
+// ,[2361,0,0,"Place_Holder","",0]
+// ,[2362,0,0,"Place_Holder","",0]
 ]
 };
 

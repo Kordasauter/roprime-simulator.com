@@ -719,7 +719,7 @@
 ,[715,itm_type_SHOES,1001,13,0,0,50,85,bon_HP_MUL,20,bon_SP_MUL,20,bon_NONE] // "Variant Shoes"
 ,[716,itm_type_SHOES,1001,13,0,1,30,55,bon_RED_ELE_WATER,5,bon_NONE] // "Tidal Shoes"
 ,[717,itm_type_SHOES,1001,16,0,"0/1",50,55,bon_AGI,1,bon_NONE] // "Black Leather Boots"
-,[718,itm_type_SHOES,1001,0,0,0,200,75,bon_MDEF,10,bon_NONE] // "Shadow Walk"
+,[718,itm_type_SHOES,1001,0,0,"0/1",200,75,bon_MDEF,10,bon_NONE] // "Shadow Walk"
 ,[719,itm_type_ACCESSORY,1,0,0,0,10,33,bon_INT,1,bon_SP_MUL,5,bon_NONE] // "Morpheus's Ring"
 ,[720,itm_type_ACCESSORY,1,0,0,0,10,33,bon_INT,1,bon_SP_MUL,5,bon_NONE] // "Morpheus's Bracelet"
 ,[721,itm_type_ACCESSORY,1,0,0,0,20,61,bon_ATK,5,bon_CRIT,3,bon_NONE] // "Morrigane's Belt"
@@ -2410,6 +2410,21 @@
 ,[2347,itm_type_SET,0,0,0,0,0,0,bon_DMG_SKILL + skill_KAG_THROW_EXPLOSIVE_KUNAI,20,bon_DMG_SKILL + skill_KAG_KUNAI_SPLASH,50,bon_NONE] // "Golden Ninja Set (Kunai)"
 ,[2348,itm_type_SET,0,0,0,0,0,0,bon_PHY_ATK,5,bon_ASPD_MUL,10,bon_DMG_CRIT,10,bon_NONE] // "Mine Worker's Set"
 ,[2349,itm_type_SET,0,0,0,0,0,0,bon_ATK,30,bon_ASPD_ADD,1,bon_DMG_CRIT,20,bon_NONE] // "Hippie Set"
+//Triple Trouble
+//Horror Toy Factory
+,[2350,weapTyp_SWORD,1,120,3,3,50,80,bon_MATK,80,"ev_ref",1,bon_MATK,1,bon_SKILL_ENABLE,68,bon_NONE] // "Old Parasol"
+,[2351,itm_type_ACCESSORY,2001,0,0,1,20,100,bon_SP_ADD,-300,bon_SKILL_ENABLE,16,bon_NONE] // "Red Lantern"
+,[2352,itm_type_ACCESSORY,2001,0,0,1,10,110,bon_SP_ADD,200,bon_SKILL_ENABLE,69,bon_NONE] // "Hurt Mind"
+,[2353,itm_type_ACCESSORY,2001,0,0,1,10,110,bon_HP_ADD,500,bon_NONE] // "Kind Heart"
+,[2354,itm_type_HEAD_UPPER,1,0,0,1,20,0,bon_MATK,20,"ev_ref",1,bon_MATK,5,bon_NONE] // "Lush Rose"
+,[2355,itm_type_ACCESSORY,2001,0,0,1,10,110,bon_SP_ADD,200,bon_HP_ADD,500,bon_SKILL_ENABLE,70,bon_SKILL_AUTOCAST,155,bon_SKILL_AUTOCAST,156,bon_SKILL_AUTOCAST,157,bon_SKILL_AUTOCAST,158,bon_NONE] // "Evil Spirit Gloves"
+,[2356,itm_type_HEAD_UPPER,0,0,0,1,20,0,bon_DEX,3,bon_MATK,40,"ev_ref",1,bon_MATK,1,bon_NONE] // "Celine's Ribbon"
+,[2357,weapTyp_MACE,2053,195,4,1,150,40,bon_ELEMENT,ele_HOLY,bon_MATK,150,bon_SKILL_AUTOCAST,159,bon_NONE] // "Noble Cross"
+,[2358,itm_type_SET,0,0,0,0,0,0,bon_SKILL_AUTOCAST,155,bon_SKILL_AUTOCAST,156,bon_SKILL_AUTOCAST,157,bon_SKILL_AUTOCAST,158,bon_NONE] // "Hurt Mind + Kind Heart"
+// ,[2359,itm_type,0,0,0,0,0,0,bon_NONE] // "Place_Holder"
+// ,[2360,itm_type,0,0,0,0,0,0,bon_NONE] // "Place_Holder"
+// ,[2361,itm_type,0,0,0,0,0,0,bon_NONE] // "Place_Holder"
+// ,[2362,itm_type,0,0,0,0,0,0,bon_NONE] // "Place_Holder"
 
 //"ev_ref",2,,,
 //"ref_lvl",7,,,
@@ -2987,6 +3002,7 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2348,2321,2333,2341,"NULL"] // "Mine Worker's Set"
 ,[2349,2322,2334,2343,"NULL"] // "Hippie Set"
 ,[2349,2323,2334,2343,"NULL"] // "Hippie Set"
+,[2358,2352,2353,"NULL"] // "Hurt Mind + Kind Heart"
 // ,[,,,,"NULL"]
 
 // ,[itm_set,item1,item2,...,"NULL"] // 

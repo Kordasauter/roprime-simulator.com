@@ -1240,6 +1240,17 @@ function ClickWeapon( data,isRefine )
 			formElements["A_WEAPON_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[98][i]][1],EnchantOBJ[EnchantListOBJ[98][i]][0]);
 		}
 	}
+	else if(weapon == 2350)
+	{
+		formElements["A_WEAPON_ENCHANT_2"].disabled = true;
+		formElements["A_WEAPON_ENCHANT_3"].disabled = true;
+		formElements["A_WEAPON_ENCHANT_4"].disabled = false;
+		//Slot 4
+		for ( var i = 0; EnchantListOBJ[108][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_WEAPON_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[108][i]][1],EnchantOBJ[EnchantListOBJ[108][i]][0]);
+		}
+	}
 	// else if(weapon == 9999)
 	// {
 		
@@ -1603,6 +1614,22 @@ function ClickShoes( data, isRefine )
 	{// Upgrade Part - Booster ||Supplement Part Agi
 		CleanEnchant("A_SHOES_ENCHANT");
 		SetEnchant2("A_SHOES_ENCHANT",shoes_ref,74,75);
+	}
+	else if(shoes_id == 718)
+	{
+		if(!isRefine)
+			CleanEnchant("A_SHOES_ENCHANT");
+		for ( var i = 0; EnchantListOBJ[109][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_SHOES_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[109][i]][1],EnchantOBJ[EnchantListOBJ[109][i]][0]);
+		}
+		for ( var i = 0; EnchantListOBJ[106][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_SHOES_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[106][i]][1],EnchantOBJ[EnchantListOBJ[106][i]][0]);
+		}
+		formElements["A_SHOES_ENCHANT_4"].disabled = false;
+		formElements["A_SHOES_ENCHANT_3"].disabled = false;
+		formElements["A_SHOES_ENCHANT_2"].disabled = true;
 	}
 	// else if(shoes_id == 9999)
 	// {
@@ -2067,6 +2094,28 @@ function ClickAcces( data, numAccess )
 	// {
 		// CleanEnchant(formAcc);
 	// }
+	else if(access_id == 2351 || access_id == 2352 || access_id == 2353 || access_id == 2355)
+	{//Red Lantern || Hurt Mind || Kind Heart || Evilspirit Gloves
+		CleanEnchant(formAcc);
+		var ench1 = 105;
+		var ench2 = 106;
+		var ench3 = 107;
+		for ( var i = 0; EnchantListOBJ[ench1][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench1][i]][1],EnchantOBJ[EnchantListOBJ[ench1][i]][0]);
+		}
+		formElements[formAcc + "_4"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[ench2][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench2][i]][1],EnchantOBJ[EnchantListOBJ[ench2][i]][0]);
+		}
+		formElements[formAcc + "_3"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[ench3][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench3][i]][1],EnchantOBJ[EnchantListOBJ[ench3][i]][0]);
+		}
+		formElements[formAcc + "_2"].disabled = false;
+	}
 	else
 	{
 		CleanEnchant(formAcc);
@@ -2106,6 +2155,22 @@ function ClickHeadUp( data, isRefine )
 			formElements["A_HEAD_UPPER_ENCHANT" + "_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[100][i]][1],EnchantOBJ[EnchantListOBJ[100][i]][0]);
 		}
 		formElements["A_HEAD_UPPER_ENCHANT" + "_2"].disabled = false;
+	}
+	else if(head_up_id == 2354 || head_up_id == 2356)
+	{// Lush Rose || Celine's Ribbon
+		if(!isRefine)
+			CleanEnchant("A_HEAD_UPPER_ENCHANT");
+		for ( var i = 0; EnchantListOBJ[109][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_HEAD_UPPER_ENCHANT" + "_4" ].options[i] = new Option(EnchantOBJ[EnchantListOBJ[109][i]][1],EnchantOBJ[EnchantListOBJ[109][i]][0]);
+		}
+		for ( var i = 0; EnchantListOBJ[106][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_HEAD_UPPER_ENCHANT" + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[106][i]][1],EnchantOBJ[EnchantListOBJ[106][i]][0]);
+		}
+		formElements["A_HEAD_UPPER_ENCHANT" + "_4"].disabled = false;
+		formElements["A_HEAD_UPPER_ENCHANT" + "_3"].disabled = false;
+		formElements["A_HEAD_UPPER_ENCHANT" + "_2"].disabled = true;
 	}
 	else
 	{
@@ -3438,10 +3503,21 @@ function DisplayItemDescription( ItemIndex )
 			
 			if(ItemOBJ[ItemIndex][i] == "ev_ref")
 			{
-				if(tempDesc != "[For each "+ ItemOBJ[ItemIndex][i + 1] + " refine lvl]<br>")
+				if(ItemOBJ[ItemIndex][i + 1] == 1)
 				{
-					tempDesc = "[For each "+ ItemOBJ[ItemIndex][i + 1] + " refine lvl]<br>";
-					descriptionString += "<br>[For each "+ ItemOBJ[ItemIndex][i + 1] + " refine lvl]<br>";
+					if(tempDesc != "[For each refine lvl]<br>")
+					{
+						tempDesc = "[For each refine lvl]<br>";
+						descriptionString += "<br>[For each refine lvl]<br>";
+					}
+				}
+				else
+				{
+					if(tempDesc != "[For each "+ ItemOBJ[ItemIndex][i + 1] + " refine lvl]<br>")
+					{
+						tempDesc = "[For each "+ ItemOBJ[ItemIndex][i + 1] + " refine lvl]<br>";
+						descriptionString += "<br>[For each "+ ItemOBJ[ItemIndex][i + 1] + " refine lvl]<br>";
+					}
 				}
 			}
 			if(ItemOBJ[ItemIndex][i] == "ev_bstr")
@@ -3703,10 +3779,21 @@ function Click_Card( CardIndex )
 		{
 			if(cardOBJ[CardIndex][i] == "ev_ref")
 			{
-				if(tempDesc2 != "[For each "+ cardOBJ[CardIndex][i + 1] + " refine lvl]<br>")
+				if(cardOBJ[CardIndex][i + 1] == 1)
 				{
-					tempDesc2 = "[For each "+ cardOBJ[CardIndex][i + 1] + " refine lvl]<br>";
-					tempDesc += "<br>[For each "+ cardOBJ[CardIndex][i + 1] + " refine lvl]<br>";
+					if(tempDesc2 != "[For each refine lvl]<br>")
+					{
+						tempDesc2 = "[For each refine lvl]<br>";
+						tempDesc += "<br>[For each refine lvl]<br>";
+					}
+				}
+				else
+				{
+					if(tempDesc2 != "[For each "+ cardOBJ[CardIndex][i + 1] + " refine lvl]<br>")
+					{
+						tempDesc2 = "[For each "+ cardOBJ[CardIndex][i + 1] + " refine lvl]<br>";
+						tempDesc += "<br>[For each "+ cardOBJ[CardIndex][i + 1] + " refine lvl]<br>";
+					}
 				}
 			}
 			if(cardOBJ[CardIndex][i] == "ev_bstr")
