@@ -227,12 +227,12 @@ function calcMAtk( includeMultipliers )
 			if(n_A_Weapon_ATKplus >= 9)
 				matk_mul += 7;
 		}
-		if(EquipNumSearch(2145))
-		{// "Chronocloak of Intellect"
-			matk_mul += Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
-			if(n_A_SHOULDER_DEF_PLUS >= 7)
-				matk_mul += 7;
-		}
+		// if(EquipNumSearch(2145))
+		// {// "Chronocloak of Intellect"
+			// matk_mul += Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
+			// if(n_A_SHOULDER_DEF_PLUS >= 7)
+				// matk_mul += 7;
+		// }
 		if(EquipNumSearch(2161))
 		{// "Sunflower Boy"
 			matk_mul += Math.floor(n_A_Weapon_ATKplus / 2);
@@ -578,10 +578,10 @@ function calcMAtk( includeMultipliers )
 		if(n_A_LEFT_DEF_PLUS >= 9)
 			n_A_EquipMATK += 5;
 	}
-	if(EquipNumSearch(2145))
-	{// "Chronocloak of Intellect"
-		n_A_EquipMATK += 10 * Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
-	}
+	// if(EquipNumSearch(2145))
+	// {// "Chronocloak of Intellect"
+		// n_A_EquipMATK += 10 * Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
+	// }
 	if(EquipNumSearch(2162) || // Vicious Mind Staff
 	   EquipNumSearch(2163) || // Vicious Mind Rod
 	   EquipNumSearch(2168) || // Vicious Mind Book
@@ -1318,10 +1318,10 @@ function CalcMagicDamage( rawDamage )
 			wX += 3 * n_A_SHOULDER_DEF_PLUS;
 		}
 	}
-	if(EquipNumSearch(2145))
-	{// "Chronocloak of Intellect"
-		wX += 3 * Math.floor(n_A_SHOULDER_DEF_PLUS / 4);
-	}
+	// if(EquipNumSearch(2145))
+	// {// "Chronocloak of Intellect"
+		// wX += 3 * Math.floor(n_A_SHOULDER_DEF_PLUS / 4);
+	// }
 //Shadows
 	if( (EquipNumSearch(2258) || EquipNumSearch(2260)) && n_A_Weapon_element == ele_HOLY)
 	{// Exorcist Shadow Gloves || Gunther's Shadow Gloves

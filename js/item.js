@@ -2177,7 +2177,7 @@
 ,[2142,itm_type_GARMENT,226,38,0,1,40,100,bon_NONE] // "Chronocloak of Strength"
 ,[2143,itm_type_GARMENT,226,38,0,1,40,100,bon_NONE] // "Chronocloak of Agility"
 ,[2144,itm_type_GARMENT,226,38,0,1,40,100,bon_NONE] // "Chronocloak of Vitality"
-,[2145,itm_type_GARMENT,226,38,0,1,40,100,bon_NONE] // "Chronocloak of Intellect"
+,[2145,itm_type_GARMENT,226,38,0,1,40,100,"ev_ref",2,bon_MATK,10,"ev_ref",2,bon_MATK_MUL,1,"ev_ref",4,bon_INC_MAGIC_ALL,3,"ref_lvl",7,bon_MATK_MUL,7,"ref_lvl",9,bon_MDEFIGN_RC_BRUTE,20,"ref_lvl",9,bon_MDEFIGN_RC_DEMON,20,"ref_lvl",11,bon_MDEFIGN_RC_BRUTE,10,"ref_lvl",11,bon_MDEFIGN_RC_DEMON,10,bon_NONE] // "Chronocloak of Intellect"
 ,[2146,itm_type_GARMENT,226,38,0,1,40,100,bon_NONE] // "Chronocloak of Dexterity"
 ,[2147,itm_type_GARMENT,226,38,0,1,40,100,bon_NONE] // "Chronocloak of Luck"
 ,[2148,itm_type_SET,0,0,0,0,0,0,bon_ATK,50,bon_NONE] // "Chronocloak of Strength + Temporal STR Shoes [1]"
@@ -2707,6 +2707,14 @@ function BuildItemDescription( bonusType, bonusValue )
 	if(bonusType  == bon_MDEFIGN_RC_BOSS)
 	{
 		CBIstr += "On [Boss] monsters<br>Ignores " + bonusValue + "% of target's DEF.<br>";
+	}
+	if(bonusType  == bon_MDMG_ELE_ALL)
+	{
+		CBIstr += GetWord(273) + "[All] element monsters by" + wIS + bonusValue +"%<br/>";
+	}
+	if(bonusType  == bon_INC_MAGIC_ALL)
+	{
+		CBIstr += GetWord(257) + "[All]" + GetWord(258) + wIS + bonusValue +"%<br/>";
 	}
 	
 	return CBIstr;

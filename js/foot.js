@@ -537,7 +537,7 @@ with ( document.calcForm )
 	if(EquipNumSearch(2142) || 
 	   EquipNumSearch(2143) || 
 	   EquipNumSearch(2144) || 
-	   EquipNumSearch(2145) || 
+	   // EquipNumSearch(2145) || //
 	   EquipNumSearch(2146) || 
 	   EquipNumSearch(2147) ) 
 	{//Chronocloak (all)
@@ -546,6 +546,7 @@ with ( document.calcForm )
 		{// Ign_MDEF += 20;
 			n_tok[bon_MDEFIGN_RC_BRUTE] += 20;
 			n_tok[bon_MDEFIGN_RC_DEMON] += 20;
+			console.log("ici");
 		}
 			
 		if(n_A_SHOULDER_DEF_PLUS >= 11)
