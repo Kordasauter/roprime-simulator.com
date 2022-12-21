@@ -1512,6 +1512,7 @@ JobSkillActiveOBJ = [
 ,[157,1,276, 1, 0, 4] // Mystical Amplification 1
 ,[158,0,209, 1, 0, 1] // Dazzler 1
 ,[159,1,102, 6, 0, 1] // Turn Undead 6
+,[160,1,277, 5, 0, 1] // Napalm Vulcan 5
 
  //IDAutocast, Type(0=when hit, 1=when attack), SkillID, SkillLVL, Chance, AutoCastTrigger
 ];

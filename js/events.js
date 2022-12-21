@@ -3500,7 +3500,6 @@ function DisplayItemDescription( ItemIndex )
 	{ // Collect Bonusses
 		if(isNaN(ItemOBJ[ItemIndex][i] ))//NEW
 		{
-			
 			if(ItemOBJ[ItemIndex][i] == "ev_ref")
 			{
 				if(ItemOBJ[ItemIndex][i + 1] == 1)
@@ -3566,6 +3565,22 @@ function DisplayItemDescription( ItemIndex )
 				{
 					tempDesc = "[For each "+ ItemOBJ[ItemIndex][i + 1] + " base LUK]<br>";
 					descriptionString += "<br>[For each "+ ItemOBJ[ItemIndex][i + 1] + " base LUK]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "ev_blvl")
+			{
+				if(tempDesc != "[For each "+ ItemOBJ[ItemIndex][i + 1] + " base level]<br>")
+				{
+					tempDesc = "[For each "+ ItemOBJ[ItemIndex][i + 1] + " base level]<br>";
+					descriptionString += "<br>[For each "+ ItemOBJ[ItemIndex][i + 1] + " base level]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "ev_jlvl")
+			{
+				if(tempDesc != "[For each "+ ItemOBJ[ItemIndex][i + 1] + " job level]<br>")
+				{
+					tempDesc = "[For each "+ ItemOBJ[ItemIndex][i + 1] + " job level]<br>";
+					descriptionString += "<br>[For each "+ ItemOBJ[ItemIndex][i + 1] + " job level]<br>";
 				}
 			}
 			if(ItemOBJ[ItemIndex][i] == "ref_lvl")
@@ -3640,6 +3655,102 @@ function DisplayItemDescription( ItemIndex )
 					descriptionString += "<br>[If job level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
 				}
 			}
+			if(ItemOBJ[ItemIndex][i] == "ev_head_ref")
+			{
+				if(tempDesc != "[For each "+ ItemOBJ[ItemIndex][i + 1] + " upper headgear refine level]<br>")
+				{
+					tempDesc = "[For each "+ ItemOBJ[ItemIndex][i + 1] + " upper headgear refine level]<br>";
+					descriptionString += "<br>[For each "+ ItemOBJ[ItemIndex][i + 1] + " upper headgear refine level]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "ev_body_ref")
+			{
+				if(tempDesc != "[For each "+ ItemOBJ[ItemIndex][i + 1] + " armor refine level]<br>")
+				{
+					tempDesc = "[For each "+ ItemOBJ[ItemIndex][i + 1] + " armor refine level]<br>";
+					descriptionString += "<br>[For each "+ ItemOBJ[ItemIndex][i + 1] + " armor refine level]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "ev_weap_ref")
+			{
+				if(tempDesc != "[For each "+ ItemOBJ[ItemIndex][i + 1] + " weapon refine level]<br>")
+				{
+					tempDesc = "[For each "+ ItemOBJ[ItemIndex][i + 1] + " weapon refine level]<br>";
+					descriptionString += "<br>[For each "+ ItemOBJ[ItemIndex][i + 1] + " weapon refine level]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "ev_shield_ref")
+			{
+				if(tempDesc != "[For each "+ ItemOBJ[ItemIndex][i + 1] + " shield refine level]<br>")
+				{
+					tempDesc = "[For each "+ ItemOBJ[ItemIndex][i + 1] + " shield refine level]<br>";
+					descriptionString += "<br>[For each "+ ItemOBJ[ItemIndex][i + 1] + " shield refine level]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "ev_garm_ref")
+			{
+				if(tempDesc != "[For each "+ ItemOBJ[ItemIndex][i + 1] + " garment refine level]<br>")
+				{
+					tempDesc = "[For each "+ ItemOBJ[ItemIndex][i + 1] + " garment refine level]<br>";
+					descriptionString += "<br>[For each "+ ItemOBJ[ItemIndex][i + 1] + " garment refine level]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "ev_shoes_ref")
+			{
+				if(tempDesc != "[For each "+ ItemOBJ[ItemIndex][i + 1] + " shoes refine level]<br>")
+				{
+					tempDesc = "[For each "+ ItemOBJ[ItemIndex][i + 1] + " shoes refine level]<br>";
+					descriptionString += "<br>[For each "+ ItemOBJ[ItemIndex][i + 1] + " shoes refine level]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "head_ref_lvl")
+			{
+				if(tempDesc != "[If upper headgear refine level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc = "[If upper headgear refine level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+					descriptionString += "<br>[If upper headgear refine level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "body_ref_lvl")
+			{
+				if(tempDesc != "[If armor refine level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc = "[If armor refine level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+					descriptionString += "<br>[If armor refine level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "weap_ref_lvl")
+			{
+				if(tempDesc != "[If weapon refine level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc = "[If weapon refine level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+					descriptionString += "<br>[If weapon refine level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "shield_ref_lvl")
+			{
+				if(tempDesc != "[If shield refine level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc = "[If shield refine level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+					descriptionString += "<br>[If shield refine level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "garm_ref_lvl")
+			{
+				if(tempDesc != "[If garment refine level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc = "[If garment refine level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+					descriptionString += "<br>[If garment refine level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(ItemOBJ[ItemIndex][i] == "shoes_ref_lvl")
+			{
+				if(tempDesc != "[If shoes refine level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc = "[If shoes refine level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+					descriptionString += "<br>[If shoes refine level is "+ ItemOBJ[ItemIndex][i + 1] + " or higher]<br>";
+				}
+			}
 			descriptionString += "-"+ BuildItemDescription(ItemOBJ[ItemIndex][i + 2], ItemOBJ[ItemIndex][i + 3] ); // add them to Strings
 			i += 2;
 		}
@@ -3675,9 +3786,269 @@ function DisplayItemDescription( ItemIndex )
 			}
 			descriptionString += " at the same time:</b><br/>";
 			check = 0;
+			tempDesc = "";
 			for ( var j = itm_BONUS_START; ItemOBJ[setIndex][j] !== bon_NONE; j += 2 )
 			{
-				descriptionString += BuildItemDescription( ItemOBJ[setIndex][j], ItemOBJ[setIndex][j + 1] );
+				if(isNaN(ItemOBJ[setIndex][j] ))//NEW
+				{
+					if(ItemOBJ[setIndex][j] == "ev_ref")
+					{
+						if(ItemOBJ[setIndex][j + 1] == 1)
+						{
+							if(tempDesc != "[For each refine lvl]<br>")
+							{
+								tempDesc = "[For each refine lvl]<br>";
+								descriptionString += "<br>[For each refine lvl]<br>";
+							}
+						}
+						else
+						{
+							if(tempDesc != "[For each "+ ItemOBJ[setIndex][j + 1] + " refine lvl]<br>")
+							{
+								tempDesc = "[For each "+ ItemOBJ[setIndex][j + 1] + " refine lvl]<br>";
+								descriptionString += "<br>[For each "+ ItemOBJ[setIndex][j + 1] + " refine lvl]<br>";
+							}
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "ev_bstr")
+					{
+						if(tempDesc != "[For each "+ ItemOBJ[setIndex][j + 1] + " base STR]<br>")
+						{
+							tempDesc = "[For each "+ ItemOBJ[setIndex][j + 1] + " base STR]<br>";
+							descriptionString += "<br>[For each "+ ItemOBJ[setIndex][j + 1] + " base STR]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "ev_bagi")
+					{
+						if(tempDesc != "[For each "+ ItemOBJ[setIndex][j + 1] + " base AGI]<br>")
+						{
+							tempDesc = "[For each "+ ItemOBJ[setIndex][j + 1] + " base AGI]<br>";
+							descriptionString += "<br>[For each "+ ItemOBJ[setIndex][j + 1] + " base AGI]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "ev_bvit")
+					{
+						if(tempDesc != "[For each "+ ItemOBJ[setIndex][j + 1] + " base VIT]<br>")
+						{
+							tempDesc = "[For each "+ ItemOBJ[setIndex][j + 1] + " base VIT]<br>";
+							descriptionString += "<br>[For each "+ ItemOBJ[setIndex][j + 1] + " base VIT]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "ev_bint")
+					{
+						if(tempDesc != "[For each "+ ItemOBJ[setIndex][j + 1] + " base INT]<br>")
+						{
+							tempDesc = "[For each "+ ItemOBJ[setIndex][j + 1] + " base INT]<br>";
+							descriptionString += "<br>[For each "+ ItemOBJ[setIndex][j + 1] + " base INT]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "ev_bdex")
+					{
+						if(tempDesc != "[For each "+ ItemOBJ[setIndex][j + 1] + " base DEX]<br>")
+						{
+							tempDesc = "[For each "+ ItemOBJ[setIndex][j + 1] + " base DEX]<br>";
+							descriptionString += "<br>[For each "+ ItemOBJ[setIndex][j + 1] + " base DEX]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "ev_bluk")
+					{
+						if(tempDesc != "[For each "+ ItemOBJ[setIndex][j + 1] + " base LUK]<br>")
+						{
+							tempDesc = "[For each "+ ItemOBJ[setIndex][j + 1] + " base LUK]<br>";
+							descriptionString += "<br>[For each "+ ItemOBJ[setIndex][j + 1] + " base LUK]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "ev_blvl")
+					{
+						if(tempDesc != "[For each "+ ItemOBJ[setIndex][j + 1] + " base level]<br>")
+						{
+							tempDesc = "[For each "+ ItemOBJ[setIndex][j + 1] + " base level]<br>";
+							descriptionString += "<br>[For each "+ ItemOBJ[setIndex][j + 1] + " base level]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "ev_jlvl")
+					{
+						if(tempDesc != "[For each "+ ItemOBJ[setIndex][j + 1] + " job level]<br>")
+						{
+							tempDesc = "[For each "+ ItemOBJ[setIndex][j + 1] + " job level]<br>";
+							descriptionString += "<br>[For each "+ ItemOBJ[setIndex][j + 1] + " job level]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "ref_lvl")
+					{
+						if(tempDesc != "[if refine lv +"+ ItemOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc = "[if refine lv +"+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+							descriptionString += "<br>[if refine lv +"+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "bstr_hi")
+					{
+						if(tempDesc != "[if base STR is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc = "[if base STR is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+							descriptionString += "<br>[if base STR is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "bagi_hi")
+					{
+						if(tempDesc != "[if base AGI is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc = "[if base AGI is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+							descriptionString += "<br>[if base AGI is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "bvit_hi")
+					{
+						if(tempDesc != "[if base VIT is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc = "[if base VIT is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+							descriptionString += "<br>[if base VIT is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "bint_hi")
+					{
+						if(tempDesc != "[if base INT is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc = "[if base INT is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+							descriptionString += "<br>[if base INT is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "bdex_hi")
+					{
+						if(tempDesc != "[if base DEX is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc = "[if base DEX is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+							descriptionString += "<br>[if base DEX is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "bluk_hi")
+					{
+						if(tempDesc != "[if base LUK is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc = "[if base LUK is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+							descriptionString += "<br>[if base LUK is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "blvl_hi")
+					{
+						if(tempDesc != "[if base level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc = "[if base level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+							descriptionString += "<br>[if base level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "jlvl_hi")
+					{
+						if(tempDesc != "[if job level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc = "[if job level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+							descriptionString += "<br>[if job level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					console.log(ItemOBJ[setIndex][j]);
+					if(ItemOBJ[setIndex][j] == "ev_head_ref")
+					{
+						if(tempDesc != "[For each "+ ItemOBJ[setIndex][j + 1] + " upper headgear refine level]<br>")
+						{
+							tempDesc = "[For each "+ ItemOBJ[setIndex][j + 1] + " upper headgear refine level]<br>";
+							descriptionString += "<br>[For each "+ ItemOBJ[setIndex][j + 1] + " upper headgear refine level]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "ev_body_ref")
+					{
+						if(tempDesc != "[For each "+ ItemOBJ[setIndex][j + 1] + " armor refine level]<br>")
+						{
+							tempDesc = "[For each "+ ItemOBJ[setIndex][j + 1] + " armor refine level]<br>";
+							descriptionString += "<br>[For each "+ ItemOBJ[setIndex][j + 1] + " armor refine level]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "ev_weap_ref")
+					{
+						if(tempDesc != "[For each "+ ItemOBJ[setIndex][j + 1] + " weapon refine level]<br>")
+						{
+							tempDesc = "[For each "+ ItemOBJ[setIndex][j + 1] + " weapon refine level]<br>";
+							descriptionString += "<br>[For each "+ ItemOBJ[setIndex][j + 1] + " weapon refine level]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "ev_shield_ref")
+					{
+						if(tempDesc != "[For each "+ ItemOBJ[setIndex][j + 1] + " shield refine level]<br>")
+						{
+							tempDesc = "[For each "+ ItemOBJ[setIndex][j + 1] + " shield refine level]<br>";
+							descriptionString += "<br>[For each "+ ItemOBJ[setIndex][j + 1] + " shield refine level]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "ev_garm_ref")
+					{
+						if(tempDesc != "[For each "+ ItemOBJ[setIndex][j + 1] + " garment refine level]<br>")
+						{
+							tempDesc = "[For each "+ ItemOBJ[setIndex][j + 1] + " garment refine level]<br>";
+							descriptionString += "<br>[For each "+ ItemOBJ[setIndex][j + 1] + " garment refine level]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "ev_shoes_ref")
+					{
+						if(tempDesc != "[For each "+ ItemOBJ[setIndex][j + 1] + " shoes refine level]<br>")
+						{
+							tempDesc = "[For each "+ ItemOBJ[setIndex][j + 1] + " shoes refine level]<br>";
+							descriptionString += "<br>[For each "+ ItemOBJ[setIndex][j + 1] + " shoes refine level]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "head_ref_lvl")
+					{
+						
+						if(tempDesc != "[if upper headgear refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc = "[if upper headgear refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+							descriptionString += "<br>[if upper headgear refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "body_ref_lvl")
+					{
+						if(tempDesc != "[if armor refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc = "[if armor refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+							descriptionString += "<br>[if armor refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "weap_ref_lvl")
+					{
+						if(tempDesc != "[if weapon refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc = "[if weapon refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+							descriptionString += "<br>[if weapon refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "shield_ref_lvl")
+					{
+						if(tempDesc != "[if shield refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc = "[if shield refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+							descriptionString += "<br>[if shield refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "garm_ref_lvl")
+					{
+						if(tempDesc != "[if garment refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc = "[if garment refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+							descriptionString += "<br>[if garment refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "shoes_ref_lvl")
+					{
+						if(tempDesc != "[if shoes refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc = "[if shoes refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+							descriptionString += "<br>[if shoes refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					descriptionString += "-"+ BuildItemDescription(ItemOBJ[setIndex][j + 2], ItemOBJ[setIndex][j + 3] ); // add them to Strings
+					j += 2;
+				}
+				else
+					descriptionString += BuildItemDescription( ItemOBJ[setIndex][j], ItemOBJ[setIndex][j + 1] );
 			}
 			if ( ITEM_NAME[setIndex][2 + 2 * Language] !== bon_NONE )
 			{
@@ -3844,6 +4215,22 @@ function Click_Card( CardIndex )
 					tempDesc += "<br>[For each "+ cardOBJ[CardIndex][i + 1] + " base LUK]<br>";
 				}
 			}
+			if(cardOBJ[CardIndex][i] == "ev_blvl")
+			{
+				if(tempDesc2 != "[For each "+ cardOBJ[CardIndex][i + 1] + " base level]<br>")
+				{
+					tempDesc2 = "[For each "+ cardOBJ[CardIndex][i + 1] + " base level]<br>";
+					tempDesc += "<br>[For each "+ cardOBJ[CardIndex][i + 1] + " base level]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "ev_blvl")
+			{
+				if(tempDesc2 != "[For each "+ cardOBJ[CardIndex][i + 1] + " job level]<br>")
+				{
+					tempDesc2 = "[For each "+ cardOBJ[CardIndex][i + 1] + " job level]<br>";
+					tempDesc += "<br>[For each "+ cardOBJ[CardIndex][i + 1] + " job level]<br>";
+				}
+			}
 			if(cardOBJ[CardIndex][i] == "ref_lvl")
 			{
 				if(tempDesc2 != "[If refine lv +"+ cardOBJ[CardIndex][i + 1] + " or higher]<br>")
@@ -3914,6 +4301,102 @@ function Click_Card( CardIndex )
 				{
 					tempDesc2 = "[If job level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
 					tempDesc += "<br>[If job level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "ev_head_ref")
+			{
+				if(tempDesc2 != "[For each "+ cardOBJ[CardIndex][i + 1] + " upper headgear refine level]<br>")
+				{
+					tempDesc2 = "[For each "+ cardOBJ[CardIndex][i + 1] + " upper headgear refine level]<br>";
+					tempDesc += "<br>[For each "+ cardOBJ[CardIndex][i + 1] + " upper headgear refine level]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "ev_body_ref")
+			{
+				if(tempDesc2 != "[For each "+ cardOBJ[CardIndex][i + 1] + " armor refine level]<br>")
+				{
+					tempDesc2 = "[For each "+ cardOBJ[CardIndex][i + 1] + " armor refine level]<br>";
+					tempDesc += "<br>[For each "+ cardOBJ[CardIndex][i + 1] + " armor refine level]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "ev_weap_ref")
+			{
+				if(tempDesc2 != "[For each "+ cardOBJ[CardIndex][i + 1] + " weapon refine level]<br>")
+				{
+					tempDesc2 = "[For each "+ cardOBJ[CardIndex][i + 1] + " weapon refine level]<br>";
+					tempDesc += "<br>[For each "+ cardOBJ[CardIndex][i + 1] + " weapon refine level]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "ev_shield_ref")
+			{
+				if(tempDesc2 != "[For each "+ cardOBJ[CardIndex][i + 1] + " shield refine level]<br>")
+				{
+					tempDesc2 = "[For each "+ cardOBJ[CardIndex][i + 1] + " shield refine level]<br>";
+					tempDesc += "<br>[For each "+ cardOBJ[CardIndex][i + 1] + " shield refine level]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "ev_garm_ref")
+			{
+				if(tempDesc2 != "[For each "+ cardOBJ[CardIndex][i + 1] + " garment refine level]<br>")
+				{
+					tempDesc2 = "[For each "+ cardOBJ[CardIndex][i + 1] + " garment refine level]<br>";
+					tempDesc += "<br>[For each "+ cardOBJ[CardIndex][i + 1] + " garment refine level]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "ev_shoes_ref")
+			{
+				if(tempDesc2 != "[For each "+ cardOBJ[CardIndex][i + 1] + " shoes refine level]<br>")
+				{
+					tempDesc2 = "[For each "+ cardOBJ[CardIndex][i + 1] + " shoes refine level]<br>";
+					tempDesc += "<br>[For each "+ cardOBJ[CardIndex][i + 1] + " shoes refine level]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "head_ref_lvl")
+			{
+				if(tempDesc2 != "[If upper headgear refine level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc2 = "[If upper headgear refine level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+					tempDesc += "<br>[If upper headgear refine level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "body_ref_lvl")
+			{
+				if(tempDesc2 != "[If armor refine level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc2 = "[If armor refine level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+					tempDesc += "<br>[If armor refine level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "weap_ref_lvl")
+			{
+				if(tempDesc2 != "[If weapon refine level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc2 = "[If weapon refine level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+					tempDesc += "<br>[If weapon refine level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "shield_ref_lvl")
+			{
+				if(tempDesc2 != "[If shield refine level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc2 = "[If shield refine level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+					tempDesc += "<br>[If shield refine level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "garm_ref_lvl")
+			{
+				if(tempDesc2 != "[If garment refine level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc2 = "[If garment refine level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+					tempDesc += "<br>[If garment refine level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i] == "shoes_ref_lvl")
+			{
+				if(tempDesc2 != "[If shoes refine level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>")
+				{
+					tempDesc2 = "[If shoes refine level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
+					tempDesc += "<br>[If shoes refine level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
 				}
 			}
 			tempDesc += "-"+ BuildItemDescription(cardOBJ[CardIndex][i + 2], cardOBJ[CardIndex][i + 3] ); // add them to Strings

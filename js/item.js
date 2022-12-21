@@ -2425,10 +2425,15 @@
 ,[2356,itm_type_HEAD_UPPER,0,0,0,1,20,0,bon_DEX,3,bon_MATK,40,"ev_ref",1,bon_MATK,1,bon_NONE] // "Celine's Ribbon"
 ,[2357,weapTyp_MACE,2053,195,4,1,150,40,bon_ELEMENT,ele_HOLY,bon_MATK,150,bon_SKILL_AUTOCAST,159,bon_NONE] // "Noble Cross"
 ,[2358,itm_type_SET,0,0,0,0,0,0,bon_SKILL_AUTOCAST,155,bon_SKILL_AUTOCAST,156,bon_SKILL_AUTOCAST,157,bon_SKILL_AUTOCAST,158,bon_NONE] // "Hurt Mind + Kind Heart"
-// ,[2359,itm_type,0,0,0,0,0,0,bon_NONE] // "Place_Holder"
-// ,[2360,itm_type,0,0,0,0,0,0,bon_NONE] // "Place_Holder"
-// ,[2361,itm_type,0,0,0,0,0,0,bon_NONE] // "Place_Holder"
-// ,[2362,itm_type,0,0,0,0,0,0,bon_NONE] // "Place_Holder"
+,[2359,itm_type_ACCESSORY,2001,0,0,1,50,100,bon_MATK_MUL,5,bon_RED_CAST,-10,bon_NONE] // "Celine's Brooch"
+,[2360,itm_type_GARMENT,0,20,0,1,10,1,"ev_ref",2,bon_PHY_ATK,1,"ev_ref",2,bon_MATK_MUL,1,"ref_lvl",9,bon_ATK,30,"ref_lvl",9,bon_MATK,30,bon_NONE] // "Christmas Wings"
+,[2361,itm_type_SET,0,0,0,0,0,0,bon_ATK,50,bon_MATK,50,bon_ASPD_ADD,1,bon_NONE] // "Celine's Brooch + Evilspirit Gloves"
+,[2362,itm_type_SET,0,0,0,0,0,0,bon_CAST_SKILL_FLAT,0.3,"ev_head_ref",2,bon_MATK,10,"head_ref_lvl",7,bon_MDMG_RC_DEMI_HUMAN,10,"head_ref_lvl",7,bon_MDMG_RC_DEMON,10,"head_ref_lvl",9,bon_INC_MAGIC_EARTH,10,"head_ref_lvl",9,bon_INC_MAGIC_FIRE,10,"head_ref_lvl",9,bon_INC_MAGIC_NEUTRAL,10,"head_ref_lvl",9,bon_INC_MAGIC_WIND,10,"head_ref_lvl",9,bon_INC_MAGIC_WATER,10,bon_NONE] // "Celine's Brooch + Celine's Ribbon"
+,[2363,itm_type_SET,0,0,0,0,0,0,bon_MATK,30,bon_DMG_SKILL + skill_ABI_DUPLE_LIGHT,40,"weap_ref_lvl",10,bon_DMG_SKILL + skill_ABI_DUPLE_LIGHT,20,bon_NONE] // "Christmas Wings + Hurt Mind + Noble Cross"
+,[2364,itm_type_SET,0,0,0,0,0,0,bon_ATK,30,bon_DMG_SKILL + skill_SUR_KNUCKLE_ARROW,40,"weap_ref_lvl",10,bon_DMG_SKILL + skill_SUR_KNUCKLE_ARROW,20,bon_NONE] // "Christmas Wings + Kind Heart + Noble Cross"
+,[2365,itm_type_SET,0,0,0,0,0,0,bon_MATK,80,bon_SKILL_AUTOCAST,134,"weap_ref_lvl",10,bon_SKILL_AUTOCAST,160,bon_NONE] // "Christmas Wings + Evilspirit Gloves + Old Parasol"
+,[2366,itm_type_SET,0,0,0,0,0,0,bon_ASPD_MUL,10,bon_HIT,10,bon_MATK_MUL,10,"garm_ref_lvl",10,bon_SKILL_AUTOCAST,151,bon_NONE] // "Christmas Wings + Evilspirit Gloves + Red Lantern"
+,[2367,itm_type_SET,0,0,0,0,0,0,bon_ASPD_MUL,10,bon_DMG_RANGE,10,bon_PHY_ATK,10,"garm_ref_lvl",10,bon_HIT,15,"garm_ref_lvl",10,bon_DMG_CRIT,15,bon_NONE] // "Christmas Wings + Kind Heart + Hurt Mind"
 
 //"ev_ref",2,,,
 //"ref_lvl",7,,,
@@ -3031,6 +3036,15 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2349,2322,2334,2343,"NULL"] // "Hippie Set"
 ,[2349,2323,2334,2343,"NULL"] // "Hippie Set"
 ,[2358,2352,2353,"NULL"] // "Hurt Mind + Kind Heart"
+,[2361,2359,2355,"NULL"] // Celine's Brooch + Evilspirit Gloves
+,[2362,2359,2356,"NULL"] // Celine's Brooch + Celine's Ribbon
+,[2363,2360,2352,2357,"NULL"] // "Christmas Wings + Hurt Mind + Noble Cross"
+,[2364,2360,2353,2357,"NULL"] // "Christmas Wings + Kind Heart + Noble Cross"
+,[2365,2360,2355,2350,"NULL"] // "Christmas Wings + Evilspirit Gloves + Old Parasol"
+,[2366,2360,2355,2351,"NULL"] // "Christmas Wings + Evilspirit Gloves + Red Lantern"
+,[2367,2360,2352,2353,"NULL"] // "Christmas Wings + Kind Heart + Hurt Mind"
+// ,[,,,,"NULL"]
+// ,[,,,,"NULL"]
 // ,[,,,,"NULL"]
 
 // ,[itm_set,item1,item2,...,"NULL"] // 

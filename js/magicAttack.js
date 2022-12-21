@@ -1129,6 +1129,17 @@ function CalcMagicDamage( rawDamage )
 			
 		}
 	}
+	if( EquipNumSearch( 2362 ) )
+	{ //Celine's Brooch + Celine's Ribbon
+		if(n_A_HEAD_DEF_PLUS >= 11)
+		{
+			if(n_B[en_BOSS] == 1 )
+			{
+				wX += 20;
+			}
+			
+		}
+	}
 //Cards
 	if ( n_B[en_RACE] == race_BRUTE  && CardNumSearch(706) && n_A_HEAD_DEF_PLUS >= 9)
 	{//Jaguar Card

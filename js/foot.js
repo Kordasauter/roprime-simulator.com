@@ -1749,11 +1749,7 @@ function StPlusCalc2( nSTP2 )
 		{
 			if(nSTP2 == ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START + 2] && isNaN(ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START]))
 			{
-				// w += ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START + 1];
 				var refine = 0;
-				var bonus_condition = ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START];
-				var ref_opt = ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START + 1]
-				var bonus_eq = ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START + 3];
 				
 				switch(i){
 					case eq_HEAD_UPPER:
@@ -1799,76 +1795,7 @@ function StPlusCalc2( nSTP2 )
 						refine = 0;
 						break;
 				}
-				switch(bonus_condition){
-					case "ev_ref":
-						w += Math.floor(refine / ref_opt) * bonus_eq;
-						break;
-					case "ref_lvl":
-						if(refine >= ref_opt)
-						{
-							w += bonus_eq;
-						}
-						break;
-					case "ev_bstr":
-						w += Math.floor(SU_STR / ref_opt) * bonus_eq;
-						break;
-					case "ev_bagi":
-						w += Math.floor(SU_AGI / ref_opt) * bonus_eq;
-						break;
-					case "ev_bvit":
-						w += Math.floor(SU_VIT / ref_opt) * bonus_eq;
-						break;
-					case "ev_bint":
-						w += Math.floor(SU_INT / ref_opt) * bonus_eq;
-						break;
-					case "ev_bdex":
-						w += Math.floor(SU_DEX / ref_opt) * bonus_eq;
-						break;
-					case "ev_bluk":
-						w += Math.floor(SU_LUK / ref_opt) * bonus_eq;
-						break;
-					case "ev_blvl":
-						w += Math.floor(n_A_BaseLV / ref_opt) * bonus_eq;
-						break;
-					case "ev_jlvl":
-						w += Math.floor(n_A_JobLV / ref_opt) * bonus_eq;
-						break;
-					case "bstr_hi":
-						if(SU_STR >= ref_opt)
-							w += bonus_eq;
-						break;
-					case "bagi_hi":
-						if(SU_AGI >= ref_opt)
-							w += bonus_eq;
-						break;
-					case "bvit_hi":
-						if(SU_VIT >= ref_opt)
-							w += bonus_eq;
-						break
-					case "bint_hi":
-						if(SU_INT >= ref_opt)
-							w += bonus_eq;
-						break
-					case "bdex_hi":
-						if(SU_DEX >= ref_opt)
-							w += bonus_eq;
-						break
-					case "bluk_hi":
-						if(SU_LUK >= ref_opt)
-							w += bonus_eq;
-						break
-					case "blvl_hi":
-						if(n_A_BaseLV >= ref_opt)
-							w += bonus_eq;
-						break
-					case "jlvl_hi":
-						if(n_A_JobLV >= ref_opt)
-							w += bonus_eq;
-						break
-					default:
-						w += 0;
-						break;
-				}
+				w += BonusCalc(ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START],refine,ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START + 1],ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START + 3]);
 			}
 			if ( nSTP2 == ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START] && !isNaN(ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START - 2]))
 			{	//if there is no "refine over" or "for every x refine before" 
@@ -1887,15 +1814,9 @@ function StPlusCard( nSTP2 )
 	{
 		for(var j=0;cardOBJ[n_A_card[i]][j +4] != 0;j += 2)
 		{
-			// if(nSTP2 == cardOBJ[n_A_card[i]][j +4])
-				// w += cardOBJ[n_A_card[i]][j +5];
 			if(nSTP2 == cardOBJ[n_A_card[i]][j + 4 + 2] && isNaN(cardOBJ[n_A_card[i]][j + 4]))
 			{
-				// w += cardOBJ[n_A_card[i]][j + 4 + 1];
 				var refine = 0;
-				var bonus_condition = cardOBJ[n_A_card[i]][j + 4];
-				var ref_opt = cardOBJ[n_A_card[i]][j + 4 + 1]
-				var bonus_eq = cardOBJ[n_A_card[i]][j + 4 + 3];
 
 				switch(cardOBJ[n_A_card[i]][card_att_COMP]){
 					case card_comp_HEAD:
@@ -1923,76 +1844,7 @@ function StPlusCard( nSTP2 )
 						refine = 0;
 						break;
 				}
-				switch(bonus_condition){
-					case "ev_ref":
-						w += Math.floor(refine / ref_opt) * bonus_eq;
-						break;
-					case "ref_lvl":
-						if(refine >= ref_opt)
-						{
-							w += bonus_eq;
-						}
-						break;
-					case "ev_bstr":
-						w += Math.floor(SU_STR / ref_opt) * bonus_eq;
-						break;
-					case "ev_bagi":
-						w += Math.floor(SU_AGI / ref_opt) * bonus_eq;
-						break;
-					case "ev_bvit":
-						w += Math.floor(SU_VIT / ref_opt) * bonus_eq;
-						break;
-					case "ev_bint":
-						w += Math.floor(SU_INT / ref_opt) * bonus_eq;
-						break;
-					case "ev_bdex":
-						w += Math.floor(SU_DEX / ref_opt) * bonus_eq;
-						break;
-					case "ev_bluk":
-						w += Math.floor(SU_LUK / ref_opt) * bonus_eq;
-						break;
-					case "ev_blvl":
-						w += Math.floor(n_A_BaseLV / ref_opt) * bonus_eq;
-						break;
-					case "ev_jlvl":
-						w += Math.floor(n_A_JobLV / ref_opt) * bonus_eq;
-						break;
-					case "bstr_hi":
-						if(SU_STR >= ref_opt)
-							w += bonus_eq;
-						break;
-					case "bagi_hi":
-						if(SU_AGI >= ref_opt)
-							w += bonus_eq;
-						break;
-					case "bvit_hi":
-						if(SU_VIT >= ref_opt)
-							w += bonus_eq;
-						break
-					case "bint_hi":
-						if(SU_INT >= ref_opt)
-							w += bonus_eq;
-						break
-					case "bdex_hi":
-						if(SU_DEX >= ref_opt)
-							w += bonus_eq;
-						break
-					case "bluk_hi":
-						if(SU_LUK >= ref_opt)
-							w += bonus_eq;
-						break
-					case "blvl_hi":
-						if(n_A_BaseLV >= ref_opt)
-							w += bonus_eq;
-						break
-					case "jlvl_hi":
-						if(n_A_JobLV >= ref_opt)
-							w += bonus_eq;
-						break
-					default:
-						w += 0;
-						break;
-				}
+				w += BonusCalc(cardOBJ[n_A_card[i]][j + 4],refine,cardOBJ[n_A_card[i]][j + 4 + 1],cardOBJ[n_A_card[i]][j + 4 + 3]);
 			}
 			if ( nSTP2 == cardOBJ[n_A_card[i]][j + 4] && 
 			cardOBJ[n_A_card[i]][j + 4 - 2] != "ev_ref" && 
@@ -2042,6 +1894,133 @@ function StPlusCard( nSTP2 )
 	}
 	
 	return w;
+}
+
+function BonusCalc(bonus_condition,refine,ref_opt,bonus_eq)
+{
+	var bonus = 0;
+	switch(bonus_condition){
+		case "ev_ref":
+			bonus += Math.floor(refine / ref_opt) * bonus_eq;
+			break;
+		case "ref_lvl":
+			if(refine >= ref_opt)
+			{
+				bonus += bonus_eq;
+			}
+			break;
+		case "ev_bstr":
+			bonus += Math.floor(SU_STR / ref_opt) * bonus_eq;
+			break;
+		case "ev_bagi":
+			bonus += Math.floor(SU_AGI / ref_opt) * bonus_eq;
+			break;
+		case "ev_bvit":
+			bonus += Math.floor(SU_VIT / ref_opt) * bonus_eq;
+			break;
+		case "ev_bint":
+			bonus += Math.floor(SU_INT / ref_opt) * bonus_eq;
+			break;
+		case "ev_bdex":
+			bonus += Math.floor(SU_DEX / ref_opt) * bonus_eq;
+			break;
+		case "ev_bluk":
+			bonus += Math.floor(SU_LUK / ref_opt) * bonus_eq;
+			break;
+		case "ev_blvl":
+			bonus += Math.floor(n_A_BaseLV / ref_opt) * bonus_eq;
+			break;
+		case "ev_jlvl":
+			bonus += Math.floor(n_A_JobLV / ref_opt) * bonus_eq;
+			break;
+		case "bstr_hi":
+			if(SU_STR >= ref_opt)
+				bonus += bonus_eq;
+			break;
+		case "bagi_hi":
+			if(SU_AGI >= ref_opt)
+				bonus += bonus_eq;
+			break;
+		case "bvit_hi":
+			if(SU_VIT >= ref_opt)
+				bonus += bonus_eq;
+			break;
+		case "bint_hi":
+			if(SU_INT >= ref_opt)
+				bonus += bonus_eq;
+			break;
+		case "bdex_hi":
+			if(SU_DEX >= ref_opt)
+				bonus += bonus_eq;
+			break;
+		case "bluk_hi":
+			if(SU_LUK >= ref_opt)
+				bonus += bonus_eq;
+			break;
+		case "blvl_hi":
+			if(n_A_BaseLV >= ref_opt)
+				bonus += bonus_eq;
+			break;
+		case "jlvl_hi":
+			if(n_A_JobLV >= ref_opt)
+				bonus += bonus_eq;
+			break;
+		case "ev_head_ref":
+			bonus += Math.floor(n_A_HEAD_DEF_PLUS / ref_opt) * bonus_eq;
+			break;
+		case "ev_body_ref":
+			bonus += Math.floor(n_A_BODY_DEF_PLUS / ref_opt) * bonus_eq;
+			break;
+		case "ev_weap_ref":
+			bonus += Math.floor(n_A_Weapon_ATKplus / ref_opt) * bonus_eq;
+			break;
+		case "ev_weapII_ref":
+			bonus += Math.floor(n_A_Weapon2_ATKplus / ref_opt) * bonus_eq;
+			break;
+		case "ev_shield_ref":
+			bonus += Math.floor(n_A_LEFT_DEF_PLUS / ref_opt) * bonus_eq;
+			break;
+		case "ev_garm_ref":
+			bonus += Math.floor(n_A_SHOULDER_DEF_PLUS / ref_opt) * bonus_eq;
+			break;
+		case "ev_shoes_ref":
+			bonus += Math.floor(n_A_SHOES_DEF_PLUS / ref_opt) * bonus_eq;
+			break;
+		case "head_ref_lv":
+			if(n_A_HEAD_DEF_PLUS >= ref_opt)
+				bonus += bonus_eq;
+			break;
+		case "body_ref_lv":
+			if(n_A_BODY_DEF_PLUS >= ref_opt)
+				bonus += bonus_eq;
+			break;
+		case "weap_ref_lv":
+			if(n_A_Weapon_ATKplus >= ref_opt)
+				bonus += bonus_eq;
+			break;
+		case "weapII_ref_lv":
+			if(n_A_Weapon2_ATKplus >= ref_opt)
+				bonus += bonus_eq;
+			break;
+		case "shield_ref_lv":
+			if(n_A_LEFT_DEF_PLUS >= ref_opt)
+				bonus += bonus_eq;
+			break;
+		case "garm_ref_lv":
+			if(n_A_SHOULDER_DEF_PLUS >= ref_opt)
+				bonus += bonus_eq;
+			break;
+		case "shoes_ref_lv":
+			if(n_A_SHOES_DEF_PLUS >= ref_opt)
+				bonus += bonus_eq;
+			break;
+		// case "":
+			// break;
+		default:
+			bonus += 0;
+			break;
+	}
+	return bonus;
 }
 
 function StPlusWeapon(nSTP2)
