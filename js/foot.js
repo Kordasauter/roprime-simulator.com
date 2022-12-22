@@ -1986,31 +1986,31 @@ function BonusCalc(bonus_condition,refine,ref_opt,bonus_eq)
 		case "ev_shoes_ref":
 			bonus += Math.floor(n_A_SHOES_DEF_PLUS / ref_opt) * bonus_eq;
 			break;
-		case "head_ref_lv":
+		case "head_ref_lvl":
 			if(n_A_HEAD_DEF_PLUS >= ref_opt)
 				bonus += bonus_eq;
 			break;
-		case "body_ref_lv":
+		case "body_ref_lvl":
 			if(n_A_BODY_DEF_PLUS >= ref_opt)
 				bonus += bonus_eq;
 			break;
-		case "weap_ref_lv":
+		case "weap_ref_lvl":
 			if(n_A_Weapon_ATKplus >= ref_opt)
 				bonus += bonus_eq;
 			break;
-		case "weapII_ref_lv":
+		case "weapII_ref_lvl":
 			if(n_A_Weapon2_ATKplus >= ref_opt)
 				bonus += bonus_eq;
 			break;
-		case "shield_ref_lv":
+		case "shield_ref_lvl":
 			if(n_A_LEFT_DEF_PLUS >= ref_opt)
 				bonus += bonus_eq;
 			break;
-		case "garm_ref_lv":
+		case "garm_ref_lvl":
 			if(n_A_SHOULDER_DEF_PLUS >= ref_opt)
 				bonus += bonus_eq;
 			break;
-		case "shoes_ref_lv":
+		case "shoes_ref_lvl":
 			if(n_A_SHOES_DEF_PLUS >= ref_opt)
 				bonus += bonus_eq;
 			break;
@@ -3112,7 +3112,11 @@ function Init()
 	{
 		n_tok[i] = 0;
 	}
-
+	n_tok[bon_RED_MONSTER] = 0;
+	n_tok[bon_DMG_SKILL] = 0;
+	n_tok[bon_CAST_SKILL] = 0;
+	n_tok[bon_CAST_SKILL_FLAT] = 0;
+	n_tok[bon_DELAY_SKILL_FLAT] = 0;
 	/*	
 	if(location.href.match("file:/"))
 	{

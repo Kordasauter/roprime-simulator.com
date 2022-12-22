@@ -6851,40 +6851,6 @@ function CalcFixedCast()
 	
 	reductionPercentage += n_tok[bon_RED_FIXEDCAST];
 	
-	// Equipment
-	if ( EquipNumSearch(1634) )
-	{//"Zaha Doll Hat(transformation mode)"
-		reductionFlat += -0.08;
-		if ( n_A_HEAD_DEF_PLUS >= 2) {reductionFlat += -0.08*(n_A_HEAD_DEF_PLUS-1) }; 
-	}
-	if(EquipNumSearch(1681) || EquipNumSearch(1702) || EquipNumSearch(1759) || EquipNumSearch(1860) || EquipNumSearch(1942))
-	{ //"Amistr Hat"              "Dog Cap"               "Diabolic Halo"         "Feathered Tricorn"   "General's Helmet"
-		if ( n_A_HEAD_DEF_PLUS >= 11 && n_A_HEAD_DEF_PLUS <= 15)
-		{
-			reductionFlat += -0.1*(n_A_HEAD_DEF_PLUS - 10);
-		}
-		else if( n_A_HEAD_DEF_PLUS > 15)
-		{
-			reductionFlat += -0.5;
-		}
-	}
-	if(EquipNumSearch(1950) || EquipNumSearch(1956) || EquipNumSearch(2201))  //Dex Boots
-	{
-		if(SU_DEX >= 120)
-			reductionFlat += -0.5;
-	}
-	if ( EquipNumSearch(1996) )
-	{ // Shadow Doram Mage Gloves
-		if(SkillSearch(skill_SUM_SPIRIT_OF_LAND))
-			reductionFlat += -0.1;
-	}
-	if(EquipNumSearch(2049))
-	{// "Ancient Hero Boots"
-		if(n_A_SHOES_DEF_PLUS >= 9)
-			reductionFlat += -0.3;
-		if(n_A_SHOES_DEF_PLUS >= 12)
-			reductionFlat += -0.5;
-	}
 	if(EquipNumSearch(1905) || // "Doram Gear Set"
 	   EquipNumSearch(1909) || // "Luxury Doram Gear Set"
 	   EquipNumSearch(1913) )  // "Elegant Doram Gear Set"
@@ -6968,6 +6934,47 @@ function CalcFixedCast()
 	}
 	
 	return fixedCastTime;
+}
+function CalcFixedCastFlat()
+{
+	var reductionFlat = 0;
+	
+	reductionFlat -= StPlusCalc2(bon_CAST_SKILL_FLAT);
+	// Equipment
+	if ( EquipNumSearch(1634) )
+	{//"Zaha Doll Hat(transformation mode)"
+		reductionFlat += -0.08;
+		if ( n_A_HEAD_DEF_PLUS >= 2) {reductionFlat += -0.08*(n_A_HEAD_DEF_PLUS-1) }; 
+	}
+	if(EquipNumSearch(1681) || EquipNumSearch(1702) || EquipNumSearch(1759) || EquipNumSearch(1860) || EquipNumSearch(1942))
+	{ //"Amistr Hat"              "Dog Cap"               "Diabolic Halo"         "Feathered Tricorn"   "General's Helmet"
+		if ( n_A_HEAD_DEF_PLUS >= 11 && n_A_HEAD_DEF_PLUS <= 15)
+		{
+			reductionFlat += -0.1*(n_A_HEAD_DEF_PLUS - 10);
+		}
+		else if( n_A_HEAD_DEF_PLUS > 15)
+		{
+			reductionFlat += -0.5;
+		}
+	}
+	if(EquipNumSearch(1950) || EquipNumSearch(1956) || EquipNumSearch(2201))  //Dex Boots
+	{
+		if(SU_DEX >= 120)
+			reductionFlat += -0.5;
+	}
+	if ( EquipNumSearch(1996) )
+	{ // Shadow Doram Mage Gloves
+		if(SkillSearch(skill_SUM_SPIRIT_OF_LAND))
+			reductionFlat += -0.1;
+	}
+	if(EquipNumSearch(2049))
+	{// "Ancient Hero Boots"
+		if(n_A_SHOES_DEF_PLUS >= 9)
+			reductionFlat += -0.3;
+		if(n_A_SHOES_DEF_PLUS >= 12)
+			reductionFlat += -0.5;
+	}
+	return reductionFlat;
 }
 
 function CalcDelay()

@@ -134,6 +134,7 @@ function ClearBonuses()
 		n_tok[i] += StPlusCard(i);
 		n_tok[i] += StPlusEnchant(i);
 	}
+	
 	calcSpecialTok();	
 	if ( SkillSearch(skill_SOR_SPIRIT_CONTROL) === 2 &&
 	     SkillSearch(skill_SOR_SUMMON_LEVEL) === 2 )

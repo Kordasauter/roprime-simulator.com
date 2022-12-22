@@ -5980,6 +5980,9 @@ function CalcSkillDamage()
 		fixedCastTime = Math.max(fixedCastTime - 1, 0);
 	}
 	setupPVPPlayerMods();
+	fixedCastTime += CalcFixedCastFlat();
+	if(fixedCastTime < 0)
+		fixedCastTime = 0;
 }
 function setupPVPPlayerMods() {
 	var monster = MonsterOBJ[PVP_ENEMY];

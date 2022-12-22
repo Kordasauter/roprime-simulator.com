@@ -3946,7 +3946,6 @@ function DisplayItemDescription( ItemIndex )
 							descriptionString += "<br>[if job level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
 						}
 					}
-					console.log(ItemOBJ[setIndex][j]);
 					if(ItemOBJ[setIndex][j] == "ev_head_ref")
 					{
 						if(tempDesc != "[For each "+ ItemOBJ[setIndex][j + 1] + " upper headgear refine level]<br>")
