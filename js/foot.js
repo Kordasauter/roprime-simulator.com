@@ -3115,7 +3115,8 @@ function Init()
 	n_tok[bon_RED_MONSTER] = 0;
 	n_tok[bon_DMG_SKILL] = 0;
 	n_tok[bon_CAST_SKILL] = 0;
-	n_tok[bon_CAST_SKILL_FLAT] = 0;
+	// n_tok[bon_CAST_SKILL_FLAT] = 0;
+	n_tok[bon_RED_FIXEDCAST_FLAT] = 0;
 	n_tok[bon_DELAY_SKILL_FLAT] = 0;
 	/*	
 	if(location.href.match("file:/"))

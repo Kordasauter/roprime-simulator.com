@@ -6939,7 +6939,8 @@ function CalcFixedCastFlat()
 {
 	var reductionFlat = 0;
 	
-	reductionFlat -= StPlusCalc2(bon_CAST_SKILL_FLAT);
+	// reductionFlat -= StPlusCalc2(bon_CAST_SKILL_FLAT);
+	reductionFlat -= StPlusCalc2(bon_RED_FIXEDCAST_FLAT) + StPlusCard(bon_RED_FIXEDCAST_FLAT) + StPlusEnchant(bon_RED_FIXEDCAST_FLAT);
 	// Equipment
 	if ( EquipNumSearch(1634) )
 	{//"Zaha Doll Hat(transformation mode)"

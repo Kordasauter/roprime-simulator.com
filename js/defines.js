@@ -230,11 +230,11 @@ bon_HEAL_MUL = 91; // Increases Heal
 bon_HEAL_REC = 92; // Increased incoming Heal and Items
 bon_HEAL_UNDEAD = 93; // Increases OffensiveHeal
 bon_SANC_MUL = 94; // radwisdom, gloCureWand, diaRing - don't get it
-// = 95; // free
+// = 95;
 //94: +% [Sanctuary] Effectiveness 
 //95: +% [Sanctuary] Effectiveness on Self
 bon_HEAL_UNDEADII = 96; // see 93 ?
-// = 97; // free
+bon_RED_FIXEDCAST_FLAT = 97; // free
 // = 98; // free
 // = 99; // free
 bon_DMG_SCARABA = 100;
