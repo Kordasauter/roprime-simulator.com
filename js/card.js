@@ -889,7 +889,7 @@ function SetCard()
 ,[799,   card_comp_WEAPON,"Nightmare Minorous","",bon_DMG_RC_BRUTE,10,bon_DMG_RC_UNDEAD,10,0]
 ,[800,   card_comp_WEAPON,"Nightmare Mimic","",bon_MDMG_RC_BRUTE,5,bon_MDMG_RC_UNDEAD,5,0]
 ,[801,   card_com_SHIELD,"Nightmare Arclouse","",bon_RED_RC_BRUTE,20,bon_RED_RC_UNDEAD,20,0]
-,[802,   card_com_GARMENT,"Nightmare Ancient Mummy","",bon_RED_ELE_NEUTRAL,15,"ev_ref",1,bon_DMG_ELE_FIRE,3,0]
+,[802,   card_com_GARMENT,"Nightmare Ancient Mummy","",bon_RED_ELE_NEUTRAL,15,"ev_ref",1,bon_INC_MAGIC_FIRE,3,0]
 ,[803,   itm_type_SET,"Nightmare Mummy Set","Increase the probability of causing Sleep to all targets on 11x11 cells.",bon_RED_ELE_NEUTRAL,5,0]
 ,[804,   itm_type_SET,"Nightmare Arclouse + Nightmare Minotaur","",bon_RED_RC_BRUTE,5,bon_RED_RC_UNDEAD,5,bon_DEFIGN_RC_BRUTE,50,bon_DEFIGN_RC_UNDEAD,50,0]
 ,[805,   itm_type_SET,"Nightmare Arclouse + Nightmare Mimic","",bon_RED_RC_BRUTE,5,bon_RED_RC_UNDEAD,5,bon_MDEFIGN_RC_BRUTE,50,bon_MDEFIGN_RC_UNDEAD,50,0]
