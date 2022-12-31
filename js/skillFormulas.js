@@ -635,7 +635,9 @@ function CalcSkillDamage()
 			damageType = kDmgTypeRanged;
 			// w_SkillMod += ( 1 + 0.5 * n_A_ActiveSkillLV );
 			w_SkillMod =  1.5 + (2 * n_A_ActiveSkillLV );
-			w_SkillMod *= n_A_BaseLV/100;
+			// console.log(w_SkillMod);
+			// w_SkillMod *= n_A_BaseLV/100;
+			// console.log("+ " + n_A_BaseLV/100 + " = " + w_SkillMod);
 			myInnerHtml( "CRInum", ( Math.round( w998G * 100 ) / 100 ) + SubName[0][Language], 0 );
 			
 			fixedCastTime *= 1.0;
