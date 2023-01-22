@@ -848,7 +848,7 @@ function SetCard()
 ,[763,   itm_type_SET,"Seyren Set","Adds a chance of buffing the user for 6 seconds when performing a physical attack; Atk + 100.",0]
 ,[764,   itm_type_SET,"Cecil Set","Adds a chance of buffing the user for 6 seconds when performing a physical attack; Atk + 100.",0]
 ,[765,   itm_type_SET,"Trentini Set","Adds a chance of buffing the user for 6 seconds when performing a physical attack; Atk + 100.",0]
-
+//
 ,[766,   card_com_ACC,"Humanoid Chimera","",bon_HIT,5,0]
 ,[767,   card_com_ACC,"Material Chimera","",bon_FLEE,5,0]
 ,[768,   itm_type_SET,"Humanoid + Material Chimera","",bon_RED_CASTDELAY,3,0]
@@ -1019,7 +1019,7 @@ w_SC = [
 ,[763,737,750,"NULL"] //  |
 ,[764,738,751,"NULL"] //  |
 ,[765,739,752,"NULL"] //bio 5
-,[767,766,767,"NULL"] //Humanoid + Material Chimera
+,[768,766,767,"NULL"] //Humanoid + Material Chimera
 ,[784,773,774,"NULL"] //Cowraiders Class 1 & 2
 ,[785,773,775,"NULL"] //Cowraiders Class 1 & 3
 ,[786,773,777,"NULL"] //Cowraiders Class 1 & Mine Cowraiders Class 1

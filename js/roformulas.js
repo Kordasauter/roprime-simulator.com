@@ -1528,8 +1528,9 @@ function CalcElementalMod( weaponElement )
 		weaponElementalMod += n_tok[bon_DMG_ELE_NEUTRAL + Math.floor( n_B[en_ELEMENT] / 10 )];
 }
 
+// phyisical and magical calculated, only physical saved out.
 function CalcRacialMod()
-{ // phyisical and magical calculated, only physical saved out.
+{ 
 	racialMod = 0;
 	
 	// Racial bonuses
@@ -2286,6 +2287,10 @@ function CalcCriticalMod()
 			n_tok[bon_DMG_CRIT] += 10;
 		if(SU_LUK >= 125)
 			n_tok[bon_DMG_CRIT] += 30;
+	}
+	if(EquipNumSearch(2390))
+	{// Illusion Skull Ring + Illusion Book of the Apocalypse
+		n_tok[bon_DMG_CRIT] += 5 * Math.floor(n_A_Weapon_ATKplus / 2);
 	}
 	
 //Enchants
@@ -7072,7 +7077,11 @@ function CalcDelay()
 	}
 	if(EquipNumSearch(2252))
 	{//YSF01 Plate + Manteau
-			n_tok[bon_RED_CASTDELAY] += n_A_SHOULDER_DEF_PLUS;
+		n_tok[bon_RED_CASTDELAY] += n_A_SHOULDER_DEF_PLUS;
+	}
+	if(EquipNumSearch(2400))
+	{//Illusion Survivor's Manteau + Survivor's Rod
+		n_tok[bon_RED_CASTDELAY] += 3 * Math.floor(n_A_Weapon_ATKplus / 3);
 	}
 	
 	// Skills
@@ -7341,7 +7350,7 @@ function getArmorElement(n_A_BodyZokusei)
 }
 
 function calcRaceElementalReduction()
-{
+{ 
 // Card modifiers
 	if ( CardNumSearch( 452 ) && n_A_JobSearch() === cls_ACO )
 	{ // Enchanted Peach Tree Card and Acolyte
@@ -7478,6 +7487,15 @@ function calcRaceElementalReduction()
 			n_tok[bon_RED_ELE_NEUTRAL] += 2;
 		if(n_A_LEFT_DEF_PLUS >= 9)
 			n_tok[bon_RED_ELE_NEUTRAL] += 3;
+	}
+	if(EquipNumSearch(2400))
+	{//Illusion Survivor's Manteau + Survivor's Rod
+		if(n_A_Weapon_ATKplus <= 10)
+		{
+			n_tok[bon_RED_ELE_NEUTRAL] += Math.floor(n_A_Weapon_ATKplus / 2);
+		}
+		else
+			n_tok[bon_RED_ELE_NEUTRAL] += 5;
 	}
 
 //Shadows

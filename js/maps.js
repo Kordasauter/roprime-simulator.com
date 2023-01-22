@@ -99,6 +99,9 @@ MAP_NAME = [
 ,["","Horror Toy Factory"]
 ,["","Nightmare Pyramids"]
 ,["","Undersea Tunnel (6 floor)"]
+,["","Illusion of Moonlight"]
+,["","Illusion of Vampire"]
+,["","Illusion of Frozen"]
 // ,["","Place_Holder"]
 ];
 }

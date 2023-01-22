@@ -1,5 +1,7 @@
+// init BattleCalculation
 function calc()
-{ // init BattleCalculation
+{ 
+	
 	// Init variables
 	totalCastTime = 0;
 
@@ -63,8 +65,9 @@ function calc()
 	DisplayAdditionalBattleInfo();
 }
 
+// Things that will affect base damage before anything else
 function CalcBaseDamageMods()
-{ // Things that will affect base damage before anything else
+{ 
 
 	//MOVED THIS IN CALC ATTACK TO VIEW IN ATTACK WINDOW
 	/*var baseDamageMod = 100;
@@ -100,8 +103,9 @@ function CalcBaseDamageMods()
 	}*/
 }
 
+// skillmod + x - (start skillmod, critAtk:normalatk)
 function CalcAtkMods02( skillMod, criticalAttack )
-{ // skillmod + x - (start skillmod, critAtk:normalatk)
+{ 
 	var localAttackMod = CalcSkillModAdditions( skillMod * 100 );
 		
 	if ( criticalAttack === 0 )
@@ -130,8 +134,9 @@ function CalcAtkMods02( skillMod, criticalAttack )
 	}
 }
 
+// Calculates Falcon Damage
 function CalcFalconDamage()
-{ // Calculates Falcon Damage
+{ 
 	if ( n_A_WeaponType == weapTyp_BOW && SkillSearch( skill_HU_BLITZ_BEAT ) && n_A_ActiveSkill != skill_SN_FOCUSED_ARROW_STRIKE )
 	{
 		hunterPetHits = Math.floor( ( n_A_JobLV - 1 ) / 10 + 1 );
@@ -169,8 +174,9 @@ function CalcFalconDamage()
 	}
 }
 
+// Calculates Warg Damage
 function CalcWargDamage()
-{ // Calculates Warg Damage
+{ 
 	if ( n_A_WeaponType == weapTyp_BOW && SkillSearch( skill_RAN_WARG_STRIKE ) && n_A_ActiveSkill != skill_SN_FOCUSED_ARROW_STRIKE )
 	{
 		wargHits = 1;
@@ -292,11 +298,13 @@ function CalcTrifectaBlowChance()
 		trifectaBlowActivationRate = breezeChance;
 	}
 }
+
 function CalcDupleLightChance() {
 	if (SkillSearch(skill_ABI_DUPLE_LIGHT)) {
 		dupleLightChance = SkillSearch(skill_ABI_DUPLE_LIGHT)*2 + 10;
 	}
 }
+
 function CalcDoubleAttackChance()
 {
 	doubleAttackChance = SkillSearch(skill_TH_DOUBLE_ATTACK) * 5;
@@ -399,8 +407,9 @@ function CalcFinalCriticalChance()
 	}
 }
 
+// Calc Dmg from RAWDmg (rawDmg, (min,avg,max,crit:=10))
 function CalcFinalDamage( damage, type )
-{ // Calc Dmg from RAWDmg (rawDmg, (min,avg,max,crit:=10))
+{ 
 	damage = ApplyDamageModifiers( damage );
 	damage = ApplySkillModifiers( damage );
 	var critmod;
@@ -471,8 +480,9 @@ function CalcLeftHandDamage(w998)
 	return wBC3_X;
 }
 
+// calcDef & DefIgnore - (rawAtk, (min,avg,max,crit:=10)dmg , left hand--> upgradeatk)
 function ApplyEnemyDefense( damage, index, wBC4_3 )
-{ // calcDef & DefIgnore - (rawAtk, (min,avg,max,crit:=10)dmg , left hand--> upgradeatk)
+{ 
 	if ( n_A_ActiveSkill == skill_HW_STAVE_CRASHER )
 	{
 		return Math.floor( damage * defReduction( n_B[en_HARDDEF] ) ) - n_B_DEF2[0] + wBC4_3;
@@ -524,8 +534,9 @@ function ApplyEnemyDefense( damage, index, wBC4_3 )
 	return damage;
 }
 
+// % Dmg Mod - (startMod=100)
 function ApplyDamageModifiers( damage )
-{ // % Dmg Mod - (startMod=100)
+{ 
 	var dmgMultiplier = 0;
 	
 	if ( determiningEDPdamage == 0 )
@@ -614,8 +625,9 @@ function ApplyDamageModifiers( damage )
 	return damage;
 }
 
+// skillmod + x
 function ApplySkillAdditions( skillMod )
-{ // skillmod + x
+{ 
 	// Power Thrust and Maximum Power Thrust
 	if ( SkillSearch( skill_MS_MAXIMUM_POWER_THUST ) )
 	{
@@ -1663,8 +1675,9 @@ function ApplyMagnumBreakBonus()
 */
 }
 
+// some modifiers
 function tPlusDamCut( damage )
-{ // some modifiers
+{ 
 	if ( PlayerVersusPlayer == 0 )
 	{
 		if ( battleEffects[pass_VIII_SPE_ENVIRONMENT] == 1 )
@@ -1701,7 +1714,7 @@ function tPlusDamCut( damage )
 		{ // Lex Aeterna
 			damage *= 2;
 		}
-		if (monsterDebuffs[status_en_DARK_CLAW] > 0 && n_B[en_BOSS] == 0 &&
+		if (monsterDebuffs[status_en_DARK_CLAW] > 0 /*&& n_B[en_BOSS] == 0*/ &&
 			(n_A_WeaponType != weapTyp_BOW &&
 			n_A_WeaponType != weapTyp_INSTRU &&
 			n_A_WeaponType != weapTyp_WHIP &&
@@ -1778,9 +1791,9 @@ function tPlusDamCut( damage )
 	return damage;
 }
 
+// Display lower battle results
 function DisplayAdditionalBattleInfo()
-{ // Display lower battle results
-
+{ 
 	// display FLEE information
 	w_FLEE = 100 - ( n_B_HIT - n_A_FLEE );
 	w_FLEE = Between( 0, w_FLEE, 95 );
@@ -1954,8 +1967,9 @@ function DisplayAdditionalBattleInfo()
 	}
 }
 
+// Cast times and delays
 function DisplayCastAndDelay()
-{ // Cast times and delays
+{ 
 	// print cast time
 	totalCastTime = fixedCastTime + variableCastTime;
 	if ( totalCastTime != 0 )

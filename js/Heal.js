@@ -170,7 +170,6 @@ function CalcBaseHeal( HealLv, maxHeal )
 		healMultiplier += n_A_HEAD_DEF_PLUS * 2;
 	}
 	
-	
 	// Apply Multiplier
 	wHeal = Math.floor( wHeal * healMultiplier / 100 );
 	

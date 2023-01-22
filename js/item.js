@@ -2434,11 +2434,60 @@
 ,[2365,itm_type_SET,0,0,0,0,0,0,bon_MATK,80,bon_SKILL_AUTOCAST,134,"weap_ref_lvl",10,bon_SKILL_AUTOCAST,160,bon_NONE] // "Christmas Wings + Evilspirit Gloves + Old Parasol"
 ,[2366,itm_type_SET,0,0,0,0,0,0,bon_ASPD_MUL,10,bon_HIT,10,bon_MATK_MUL,10,"garm_ref_lvl",10,bon_SKILL_AUTOCAST,151,bon_NONE] // "Christmas Wings + Evilspirit Gloves + Red Lantern"
 ,[2367,itm_type_SET,0,0,0,0,0,0,bon_ASPD_MUL,10,bon_DMG_RANGE,10,bon_PHY_ATK,10,"garm_ref_lvl",10,bon_HIT,15,"garm_ref_lvl",10,bon_DMG_CRIT,15,bon_NONE] // "Christmas Wings + Kind Heart + Hurt Mind"
+// ID, WeapType, ReqJob, Atk, wLVL, slots, Weight, reqBLVL, bonus[type], bonusamount, bonus2[type], .., bon_NONE
+//Illusion Dungeon 1
+//Illusion of Moonlight
+,[2368,itm_type_ARMOR,0,52,0,1,40,99,bon_RED_FIXEDCAST,3,bon_HEAL_MUL,5,"ev_ref",1,bon_HEAL_MUL,1,bon_NONE] //Illusion Puente Robe [1]
+,[2369,weapTyp_MACE,53,185,4,2,80,99,bon_RED_RANGE,10,"ev_ref",2,bon_RED_RANGE,3,bon_NONE] //Illusion Long Mace [2]
+,[2370,itm_type_HEAD_UPPER,53,4,0,1,10,99,bon_INT,1,"ev_ref",2,bon_INT,1,"ev_ref",2,bon_HEAL_MUL,3,bon_NONE] //Illusion Nurse Cap [1]
+,[2371,itm_type_SET,0,0,0,0,0,0,bon_MATK,100,bon_HEAL_MUL,20,"set_ref"+(fl_WEAPON+fl_ARMOR),7,bon_MATK,50,"set_sum"+(fl_WEAPON+fl_ARMOR),18,bon_HEAL_MUL,15,"set_sum"+(fl_WEAPON+fl_ARMOR),22,bon_RED_CASTDELAY,15,bon_NONE] // Illusion Puente Robe + Illusion Long Mace
+,[2372,itm_type_SET,0,0,0,0,0,0,bon_HEAL_MUL,10,bon_NONE] // Illusion Puente Robe + Illusion Nurse Cap
+,[2373,itm_type_HEAD_UPPER,1,1,0,1,20,99,bon_DEX,3,"ev_ref",2,bon_DEX,1,bon_NONE] //Illusion Apple of Archer [1]
+,[2374,itm_type_GARMENT,1,8,0,1,40,99,bon_HP_ADD,100,bon_SP_ADD,10,"ev_ref",1,bon_HP_ADD,100,"ev_ref",1,bon_SP_ADD,5,bon_NONE] //Illusion Muffler [1]
+,[2375,itm_type_SHOES,1,10,0,1,40,99,bon_HP_ADD,100,bon_SP_ADD,10,"ev_ref",1,bon_HP_ADD,100,"ev_ref",1,bon_SP_ADD,5,bon_NONE] //Illusion Shoes [1]
+,[2376,weapTyp_SPEARII,51,240,4,2,200,99,bon_DMG_ELE_SHADOW,20,bon_DMG_RC_DEMON,20,bon_DMG_RC_UNDEAD,20,bon_RED_ELE2_SHADOW,10,bon_RED_RC_DEMON,10,bon_RED_RC_UNDEAD,10,"ev_ref",2,bon_DMG_ELE_SHADOW,3,"ev_ref",2,bon_DMG_RC_DEMON,3,"ev_ref",2,bon_DMG_RC_UNDEAD,3,"ev_ref",2,bon_RED_ELE2_SHADOW,3,"ev_ref",2,bon_RED_RC_DEMON,3,"ev_ref",2,bon_RED_RC_UNDEAD,3,bon_NONE] //Illusion Spectral Spear [1]
+,[2377,itm_type_SET,0,0,0,0,0,0,bon_ASPD_MUL,8,"set_ref"+(fl_WEAPON+fl_SHOES),7,bon_DMG_SKILL + skill_ROY_VANISHING_POINT,20,"set_sum"+(fl_WEAPON+fl_SHOES),18,bon_DMG_RANGE,10,"set_sum"+(fl_WEAPON+fl_SHOES),22,bon_DMG_SKILL + skill_ROY_VANISHING_POINT,30,bon_NONE] //Illusion Shoes + Illusion Spectral Spear
+,[2378,weapTyp_ROD,1055,60,4,2,50,99,bon_MATK,180,bon_INT,3,bon_DEX,2,bon_NONE] //Illusion Staff of Bordeaux [2]
+,[2379,itm_type_SET,0,0,0,0,0,0,bon_DMG_SKILL + skill_SOR_PSYCHIC_WAVE,10,"set_ref" + (fl_WEAPON+fl_GARMENT),7,bon_DMG_SKILL + skill_SOR_EARTH_GRAVE,40,"set_sum" + (fl_WEAPON+fl_GARMENT),18,bon_INC_MAGIC_NEUTRAL,10,"set_sum" + (fl_WEAPON+fl_GARMENT),18,bon_INC_MAGIC_EARTH,10,"set_sum" + (fl_WEAPON+fl_GARMENT),22,bon_INC_MAGIC_WATER,10,bon_NONE] //Illusion Staff of Bordeaux + Illusion Muffler
+,[2380,weapTyp_DAGGER,1,150,4,1,70,99,bon_SP_MUL,10,bon_NONE] //Illusion Moonlight Dagger [1]
+//Illusion of Vampire
+,[2381,weapTyp_KATAR,208,200,4,2,150,100,bon_DEF,3,bon_FLEE,5,bon_PDODGE,2,bon_DMG_RC_DEMI_HUMAN,60,"ref_lvl",9,bon_FLEE,5,"ref_lvl",9,bon_PDODGE,2,"ref_lvl",10,bon_PHY_ATK,5,bon_NONE] // Illusion Infiltrator [2]
+,[2382,weapTyp_KATAR,208,220,3,2,170,100,bon_NONE] // Illusion Sharpened Legbone of Ghoul [2]
+,[2383,weapTyp_STAFF,2055,150,4,2,240,100,bon_MATK,250,bon_INT,6,bon_DEX,2,"ev_ref",2,bon_INT,1,"ev_ref",2,bon_DEX,1,bon_NONE] // Illusion Wizardry Staff [2]
+,[2384,weapTyp_BOW,2054,0,0,0,0,0,"ev_ref",1,bon_DMG_RANGE,1,bon_NONE] // Illusion Ballista [2]
+,[2385,itm_type_SET,0,0,0,0,0,0,bon_ATK,50,bon_DMG_RANGE,5,"set_ref" + (fl_WEAPON+fl_HEAD),7,bon_DMG_SKILL + skill_RAN_ARROW_STORM,20,"set_sum" + (fl_WEAPON+fl_HEAD),18,bon_PHY_ATK,10,"set_sum" + (fl_WEAPON+fl_HEAD),22,bon_DMG_SKILL + skill_RAN_ARROW_STORM,30,bon_NONE] // Illusion Ballista + Illusion Apple of Archer
+,[2386,weapTyp_BOOK,2000,170,4,2,80,100,bon_DMG_ELE_WATER,10,bon_DMG_ELE_EARTH,10,bon_DMG_ELE_FIRE,10,bon_DMG_ELE_WIND,10,bon_RED_ELE_HOLY,-30,"ev_ref",3,bon_DMG_ELE_WATER,10,"ev_ref",3,bon_DMG_ELE_EARTH,10,"ev_ref",3,bon_DMG_ELE_FIRE,10,"ev_ref",3,bon_DMG_ELE_WIND,10,bon_NONE] // Illusion Book of the Apocalypse
+,[2387,itm_type_GARMENT,1,18,0,1,60,100,bon_AGI,2,"ev_ref",2,bon_AGI,1,bon_NONE] //Illusion Ancient Cape [1]
+,[2388,itm_type_SET,0,0,0,0,0,0,bon_NONE] // Illusion Ancient Cape + Illusion Moonlight Dagger
+,[2389,itm_type_ACCESSORY,0,0,0,1,100,100,bon_CH_STATUS_CURSE,50,bon_NONE] // Illusion Skull Ring [1]
+,[2390,itm_type_SET,0,0,0,0,0,0,bon_ASPD_MUL,8,"set_ref" + (fl_WEAPON),9,bon_CRIT,15,"set_ref" + (fl_WEAPON),9,bon_RES_STATUS_CURSE,100,"set_ref" + (fl_WEAPON),11,bon_ATK,100,bon_NONE] // Illusion Skull Ring + Illusion Book of the Apocalypse
+,[2391,itm_type_ACCESSORY,2001,0,0,1,20,100,bon_STR,3,"blvl_hi",100,bon_ATK,100,bon_NONE] // Illusion Ring [1]
+,[2392,itm_type_SET,0,0,0,0,0,0,bon_ASPD_MUL,10,"set_ref" + (fl_WEAPON),9,bon_DMG_CRIT,10,"set_ref" + (fl_WEAPON),11,bon_DMG_RC_BRUTE,25,bon_NONE] // Illusion Ring + Illusion Infiltrator
+,[2393,itm_type_ACCESSORY,0,1,0,1,10,100,bon_NONE] //Vampire's Familiar [1]
+//Illusion of Frozen
+,[2394,weapTyp_KNUCKLE,215,250,4,2,50,120,bon_DMG_SKILL + skill_SUR_SKY_NET_BLOW,10,bon_DMG_SKILL + skill_SUR_DRAGON_COMBO,10,"ev_ref",2,bon_DMG_SKILL + skill_SUR_SKY_NET_BLOW,5,"ev_ref",2,bon_DMG_SKILL + skill_SUR_DRAGON_COMBO,5,"ev_ref",3,bon_DMG_SKILL + skill_SUR_TIGER_CANNON,5,bon_NONE] // Illusion Combo Battle Glove [2]
+,[2395,itm_type_SET,0,0,0,0,0,0,bon_ATK,40,"set_ref"+(fl_WEAPON+fl_GARMENT),7,bon_DMG_SKILL + skill_SUR_TIGER_CANNON,20,"set_sum"+(fl_WEAPON+fl_GARMENT),18,bon_DELAY_SKILL_FLAT + skill_SUR_FLASH_COMBO,1,"set_sum"+(fl_WEAPON+fl_GARMENT),22,bon_DMG_SKILL + skill_SUR_TIGER_CANNON,15,bon_NONE] // Illusion Combo Battle Glove + Illusion Muffler
+,[2396,weapTyp_HUUMA_SHURIKEN,221,250,4,2,150,120,bon_MATK,50,"ev_ref",1,bon_DMG_RANGE,3,"ev_ref",3,bon_ATK,30,bon_NONE] // Illusion Huuma Fluttering Snow [2]
+,[2397,itm_type_SET,0,0,0,0,0,0,bon_RED_CAST,-15,"set_sum" + (fl_WEAPON+fl_HEAD),7,bon_DMG_SKILL + skill_KAG_SWIRLING_PETAL,25,"set_sum" + (fl_WEAPON+fl_HEAD),18,bon_DMG_SKILL + skill_KAG_SWIRLING_PETAL,25,"set_sum" + (fl_WEAPON+fl_HEAD),22,bon_DELAY_SKILL_FLAT + skill_KAG_SWIRLING_PETAL,1,bon_NONE] // Illusion Huuma Fluttering Snow + Illusion Apple of Archer
+,[2398,itm_type_HEAD_UPPER,2096,15,0,1,40,120,bon_PHY_ATK,1,"ev_ref",1,bon_ATK,2,bon_NONE] // Illusion Cap [1]
+,[2399,itm_type_GARMENT,2055,30,0,1,55,130,bon_VIT,15,bon_NONE] // Illusion Survivor's Manteau [1]
+,[2400,itm_type_SET,0,0,0,0,0,0,bon_HP_ADD,1000,bon_MATK,-50,bon_NONE] // Illusion Survivor's Manteau + Survivor's Rod
+,[2401,itm_type_SET,0,0,0,0,0,0,bon_DMG_SKILL + skill_WAR_CRIMSON_ROCK,10,"set_ref" + (fl_WEAPON+fl_GARMENT),7,bon_DMG_SKILL + skill_WAR_HELL_INFERNO,40,"set_sum" + (fl_WEAPON+fl_GARMENT),18,bon_INC_MAGIC_WIND,10,"set_sum" + (fl_WEAPON+fl_GARMENT),18,bon_INC_MAGIC_DARK,10,"set_sum" + (fl_WEAPON+fl_GARMENT),22,bon_INC_MAGIC_FIRE,10,bon_NONE] // Illusion Survivor's Manteau + Illusion Wizardry Staff
+,[2402,itm_type_SHIELD,213,190,0,1,160,120,bon_INT,2,bon_VIT,3,bon_MDEF,3,"ev_ref",1,bon_DMG_SKILL + skill_ROY_EARTH_DRIVE,7,bon_UNBREAKABLE,1,bon_NONE] // Illusion Sacred Mission [1]
+//
+//,[2402,itm_type_,0,0,0,0,0,0,bon_NONE] 
 
-//"ev_ref",2,,,
-//"ref_lvl",7,,,
-//"ref_lvl",9,,,
-//"ref_lvl",12,,,
+//
+//"ev_ref" = for every x refine
+//"ev_ref",x,bonus,amount,
+//"ref_lvl" = refine level over
+//"ref_lvl",x,bonus,amount,
+//"set_ref" = all item listed with flag have to be refine +x or more
+//"set_ref" + (flags),x,bonus,amount,
+//"set_sum" = the sum of item listed with flag refinement have to be x or more
+//"set_sum" + (flags),x,bonus,amount,
+//flags 
+//Weapon 1 = 1,/Weapon 2 = 2,Head = 4,Armor = 8,Shield = 16,Garment = 32,Shoes = 64
 ]
 ItemMax = ItemOBJ.length -1;
 }
@@ -2446,15 +2495,6 @@ ItemMax = ItemOBJ.length -1;
 // ,[,,,,,,,,bon_NONE] // ""
 // ID, WeapType, ReqJob, Atk/Def, wLVL, slots, Weight, reqBLVL, bonus[type], bonusamount, bonus2[type], .., 0
 // ID, WeapType, ReqJob, Atk, wLVL, slots, Weight, reqBLVL, bonus[type], bonusamount, bonus2[type], .., bon_NONE
-
-//New way for adding effect on every x refine or effect if refine > x
-//exemple : for every two upgrade str +1
-//,[ID, WeapType, ReqJob, Atk/Def, wLVL, slots, Weight, reqBLVL,"ev_ref",2,bon_STR,1,bon_NONE]
-//exemple : for str +1 if refine +7 or more
-//,[ID, WeapType, ReqJob, Atk/Def, wLVL, slots, Weight, reqBLVL,"ref_lvl",7,bon_STR,1,bon_NONE]
-//Bonus_condition ("ev_ref" or "ov_ref"), refine, Bonus, bonus_amount
-//ev_ref = for every refine
-//ref_lvl = refine level over
 
 function BuildItemDescription( bonusType, bonusValue )
 {
@@ -2807,7 +2847,7 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[1211,1208,805,"NULL"]
 ,[1212,1208,887,"NULL"]
 ,[1213,1208,1037,"NULL"]
-//,[1217,804,1216,"NULL"] // Ship captain hat + captain pipe
+// ,[1217,804,1216,"NULL"] // Ship captain hat + captain pipe
 ,[1237,1235,1236,"NULL"]
 ,[1238,684,1236,"NULL"]
 ,[1278,1269,1277,"NULL"]
@@ -3045,8 +3085,19 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2365,2360,2355,2350,"NULL"] // "Christmas Wings + Evilspirit Gloves + Old Parasol"
 ,[2366,2360,2355,2351,"NULL"] // "Christmas Wings + Evilspirit Gloves + Red Lantern"
 ,[2367,2360,2352,2353,"NULL"] // "Christmas Wings + Kind Heart + Hurt Mind"
-// ,[,,,,"NULL"]
-// ,[,,,,"NULL"]
+,[2371,2368,2369,"NULL"] // Illusion Puente Robe + Illusion Long Mace
+,[2372,2368,2370,"NULL"] // Illusion Puente Robe + Illusion Nurse Cap
+,[2377,2375,2376,"NULL"] // Illusion Shoes + Illusion Spectral Spear
+,[2379,2378,2374,"NULL"] // Illusion Staff of Bordeaux + Illusion Muffler
+,[2385,2384,2373,"NULL"] // Illusion Ballista + Illusion Apple of Archer
+,[2388,2387,2380,"NULL"] // Illusion Ancient Cape + Illusion Moonlight Dagger
+,[2390,2389,2386,"NULL"] // Illusion Skull Ring + Illusion Book of the Apocalypse
+,[2392,2391,2381,"NULL"] // Illusion Ring + Illusion Infiltrator
+,[2395,2394,2374,"NULL"] // Illusion Combo Battle Glove+ Illusion Muffler
+,[2397,2396,2373,"NULL"] // Illusion Huuma Fluttering Snow + Illusion Apple of Archer
+,[2400,2399,477,"NULL"] // Illusion Survivor's Manteau + Survivor's Rod (int)
+,[2400,2399,475,"NULL"] // Illusion Survivor's Manteau + Survivor's Rod (dex)
+,[2401,2399,2383,"NULL"] // Illusion Survivor's Manteau + Illusion Wizardry Staff
 // ,[,,,,"NULL"]
 
 // ,[itm_set,item1,item2,...,"NULL"] // 

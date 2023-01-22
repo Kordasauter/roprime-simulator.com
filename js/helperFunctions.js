@@ -234,11 +234,11 @@ function StCalc(nSC)
 				wStPoint += Math.floor(i / 5) + 3;
 			}
 			else if (i <= 159 || i == 161 || i == 170)
-                        {
-                                wStPoint += Math.floor( ( i - 100 ) / 10 ) + 23;
-                        } else {
-                                wStPoint += Math.floor( ( i - 100 ) / 10 ) + 24;
-                        }
+			{
+				wStPoint += Math.floor( ( i - 100 ) / 10 ) + 23;
+			} else {
+				wStPoint += Math.floor( ( i - 100 ) / 10 ) + 24;
+			}
 		}
 	}
 	else

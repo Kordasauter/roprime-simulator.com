@@ -71,6 +71,7 @@ var RANGED_SKILLS = [
 	skill_REB_FIRE_RAIN,
 	skill_REB_ROUND_TRIP,
 	skill_ROY_VANISHING_POINT,
+	skill_ROY_SPEAR_CANNON,
 	skill_SUM_SOUL_ATTACK,
 	skill_SUM_PICKY_PECK,
 	skill_SUM_SCAR_OF_TAROU,
@@ -2749,7 +2750,7 @@ function CalcSkillDamage()
 			// ATK [{Skill Level x 100) + 1000} x (Caster's Base Level / 120)]
 			w_SkillMod = ( ( n_A_ActiveSkillLV * 1.0 ) + 10.0 ) * n_A_BaseLV / 120.0;
 			w_TotalHits = 7;
-			w_SkillMod = w_SkillMod / w_TotalHits;
+			// w_SkillMod = w_SkillMod / w_TotalHits;
 			
 			/*if ( SkillSearch( skill_AX_ENCHANT_DEADLY_POISON ) )
 			{ // half with edp on

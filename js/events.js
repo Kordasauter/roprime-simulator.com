@@ -953,6 +953,7 @@ function CalcExtendedInfo()
 
 function ClickWeapon( data,isRefine )
 {
+	// console.log("data = " + data + " /isRefine = " + isRefine);
 	var weapon = ItemOBJ[n_A_Equip[eq_WEAPON]][itm_ID];
 	var weapon_ref = n_A_Weapon_ATKplus;
 	if(isRefine)
@@ -963,6 +964,7 @@ function ClickWeapon( data,isRefine )
 	{
 		weapon = data;
 	}
+
 	if(!isRefine)
 	{
 		var len = formElements["A_WEAPON_ENCHANT_2"].length;
@@ -2126,9 +2128,9 @@ function ClickAcces( data, numAccess )
 function ClickHeadUp( data, isRefine )
 {
 	//upper head id
-	var head_up_id = ItemOBJ[n_A_Equip[eq_ARMOR]][itm_ID];
+	var head_up_id = ItemOBJ[n_A_Equip[eq_HEAD_UPPER]][itm_ID];
 	//upper head refine level
-	var head_up_ref = n_A_BODY_DEF_PLUS;
+	var head_up_ref = n_A_HEAD_DEF_PLUS;
 	if(isRefine)
 	{
 		head_up_ref = data;
@@ -4041,6 +4043,150 @@ function DisplayItemDescription( ItemIndex )
 						{
 							tempDesc = "[if shoes refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
 							descriptionString += "<br>[if shoes refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j].substr(0,7) == "set_ref")
+					{
+						let flag = 0;
+						let first = true;
+						let tmp_str = "";
+						flag = parseInt(ItemOBJ[setIndex][j].substr(7));
+						if((flag - 64)>=0)
+						{
+							tmp_str += "Shoes";
+							first = false;
+							flag = flag - 64;
+						}
+						if((flag - 32)>=0)
+						{
+							if(first)
+								tmp_str += "Garment";
+							else
+								tmp_str += " and Garment";
+							first = false;
+							flag = flag - 32;
+						}
+						if((flag - 16)>=0)
+						{
+							if(first)
+								tmp_str += "Shield";
+							else
+								tmp_str += " and Shield";
+							first = false;
+							flag = flag - 16;
+						}
+						if((flag - 8)>=0)
+						{
+							if(first)
+								tmp_str += "Armor";
+							else
+								tmp_str += " and Armor";
+							first = false;
+							flag = flag - 8;
+						}
+						if((flag - 4)>=0)
+						{
+							if(first)
+								tmp_str += "Headgear";
+							else
+								tmp_str += " and Headgear";
+							first = false;
+							flag = flag - 4;
+						}
+						if((flag - 2)>=0)
+						{
+							if(first)
+								tmp_str += "Weapon (left)";
+							else
+								tmp_str += " and Weapon (left)";
+							first = false;
+							flag = flag - 2;
+						}
+						if((flag - 1)>=0)
+						{
+							if(first)
+								tmp_str += "Weapon";
+							else
+								tmp_str += " and Weapon";
+							first = false;
+							flag = flag - 1;
+						}
+						if(tempDesc != "[if "+tmp_str+" refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc = "[if "+tmp_str+" refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+							descriptionString += "<br>[if "+tmp_str+" refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j].substr(0,7) == "set_sum")
+					{
+						let flag = 0;
+						let first = true;
+						let tmp_str = "";
+						flag = parseInt(ItemOBJ[setIndex][j].substr(7));
+						if((flag - 64)>=0)
+						{
+							tmp_str += "Shoes";
+							first = false;
+							flag = flag - 64;
+						}
+						if((flag - 32)>=0)
+						{
+							if(first)
+								tmp_str += "Garment";
+							else
+								tmp_str += " and Garment";
+							first = false;
+							flag = flag - 32;
+						}
+						if((flag - 16)>=0)
+						{
+							if(first)
+								tmp_str += "Shield";
+							else
+								tmp_str += " and Shield";
+							first = false;
+							flag = flag - 16;
+						}
+						if((flag - 8)>=0)
+						{
+							if(first)
+								tmp_str += "Armor";
+							else
+								tmp_str += " and Armor";
+							first = false;
+							flag = flag - 8;
+						}
+						if((flag - 4)>=0)
+						{
+							if(first)
+								tmp_str += "Headgear";
+							else
+								tmp_str += " and Headgear";
+							first = false;
+							flag = flag - 4;
+						}
+						if((flag - 2)>=0)
+						{
+							if(first)
+								tmp_str += "Weapon (left)";
+							else
+								tmp_str += " and Weapon (left)";
+							first = false;
+							flag = flag - 2;
+						}
+						if((flag - 1)>=0)
+						{
+							if(first)
+								tmp_str += "Weapon";
+							else
+								tmp_str += " and Weapon";
+							first = false;
+							flag = flag - 1;
+						}
+						if(tempDesc != "[if the sum of "+tmp_str+" refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc = "[if the sum of "+tmp_str+" refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
+							descriptionString += "<br>[if the sum of "+tmp_str+" refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
 						}
 					}
 					descriptionString += "-"+ BuildItemDescription(ItemOBJ[setIndex][j + 2], ItemOBJ[setIndex][j + 3] ); // add them to Strings

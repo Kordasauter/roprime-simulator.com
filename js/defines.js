@@ -515,6 +515,18 @@ eq_SHADOW_SHOES = 14;
 eq_SHADOW_EARRING = 15;
 eq_SHADOW_PENDANT = 16;
 }
+
+{//flags
+//Weapon 1 = 1,Weapon 2 = 2,Head = 4,Armor = 8,Shield = 16,Garment = 32,Shoes = 64
+fl_WEAPON = 1;
+fl_WEAPON2 = 2;
+fl_HEAD = 4;
+fl_ARMOR = 8;
+fl_SHIELD = 16;
+fl_GARMENT = 32;
+fl_SHOES = 64;
+}
+
 {
 ench_mal1=0;
 ench_mal2=1;

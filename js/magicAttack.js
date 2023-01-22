@@ -667,6 +667,27 @@ function calcMAtk( includeMultipliers )
 			n_A_EquipMATK += 45;
 		}
 	}
+
+	if(EquipNumSearch(2388))
+	{ // Illusion Ancient Cape + Illusion Moonlight Dagger
+		if(n_A_JOB == cls_SHA || n_A_JOB == cls_SHAt )
+		{ 
+			n_A_EquipMATK += 80;
+			if(n_A_SHOULDER_DEF_PLUS >= 7 && n_A_Weapon_ATKplus >= 7)
+				n_A_EquipMATK += 80;
+			if((n_A_SHOULDER_DEF_PLUS + n_A_Weapon_ATKplus) >= 18)
+				n_A_EquipMATK += 40;
+		}
+	}
+	if(EquipNumSearch(2400))
+	{//Illusion Survivor's Manteau + Survivor's Rod
+		if(n_A_Weapon_ATKplus <= 10)
+		{
+			n_A_EquipMATK += 20 * n_A_Weapon_ATKplus;
+		}
+		else
+			n_A_EquipMATK += 200;
+	}
 	
 //shadows
 	if ( EquipNumSearch( 1657 ) )
@@ -1047,8 +1068,9 @@ function CalcOverRefineMatk2()
 	}
 }
 
+// Magic Damage (rawMDmg)
 function CalcMagicDamage( rawDamage )
-{ // Magic Damage (rawMDmg)	
+{ 	
 	wBMC_MDEF = n_B[en_HARDMDEF];
 	var MDEF_Musi = 0;
 	var Ign_MDEF = 0;
@@ -1262,6 +1284,20 @@ function CalcMagicDamage( rawDamage )
 			}
 			
 		}
+	}
+	if(EquipNumSearch(2388))
+	{ // Illusion Ancient Cape + Illusion Moonlight Dagger
+		if(n_A_JOB == cls_SHA || n_A_JOB == cls_SHAt )
+		{
+			if((n_A_SHOULDER_DEF_PLUS + n_A_Weapon_ATKplus) >= 18)
+			{
+				if(n_A_Weapon_element == ele_FIRE)
+				{
+					wX += 15;
+				}
+			}
+		}
+		
 	}
 	
 //Cards

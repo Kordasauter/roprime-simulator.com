@@ -1899,6 +1899,105 @@ function StPlusCard( nSTP2 )
 function BonusCalc(bonus_condition,refine,ref_opt,bonus_eq)
 {
 	var bonus = 0;
+	let flag = 0;
+	//flags 
+	//Weapon 1 = 1,/Weapon 2 = 2,Head = 4,Armor = 8,Shield = 16,Garment = 32,Shoes = 64
+	let ref2 = 0;
+	if(bonus_condition.substr(0,3) == "set")
+	{
+		flag = parseInt(bonus_condition.substr(7));
+		bonus_condition = bonus_condition.substr(0,7);
+		
+		if(bonus_condition == "set_sum")
+		{
+			if((flag - 64)>=0)
+			{
+				flag = flag - 64;
+				ref2 += n_A_SHOES_DEF_PLUS;
+			}
+			if((flag - 32)>=0)
+			{
+				flag = flag - 32;
+				ref2 += n_A_SHOULDER_DEF_PLUS;
+			}
+			if((flag - 16)>=0)
+			{
+				flag = flag - 16;
+				ref2 += n_A_LEFT_DEF_PLUS;
+			}
+			if((flag - 8)>=0)
+			{
+				flag = flag - 8;
+				ref2 += n_A_BODY_DEF_PLUS;
+			}
+			if((flag - 4)>=0)
+			{
+				flag = flag - 4;
+				ref2 += n_A_HEAD_DEF_PLUS;
+			}
+			if((flag - 2)>=0)
+			{
+				flag = flag - 2;
+				ref2 += n_A_Weapon2_ATKplus;
+			}
+			if((flag - 1)>=0)
+			{
+				flag = flag - 1;
+				ref2 += n_A_Weapon_ATKplus;
+			}
+		}
+		else if (bonus_condition == "set_ref")
+		{
+			ref2 = 1;
+			if((flag - 64)>=0)
+			{
+				flag = flag - 64;
+				if(n_A_SHOES_DEF_PLUS < ref_opt)
+					ref2 = 0;
+			}
+			if((flag - 32)>=0)
+			{
+				flag = flag - 32;
+				if(n_A_SHOULDER_DEF_PLUS < ref_opt)
+					ref2 = 0;
+			}
+			if((flag - 16)>=0)
+			{
+				flag = flag - 16;
+				if(n_A_LEFT_DEF_PLUS < ref_opt)
+					ref2 = 0;
+			}
+			if((flag - 8)>=0)
+			{
+				flag = flag - 8;
+				if(n_A_BODY_DEF_PLUS < ref_opt)
+					ref2 = 0;
+			}
+			if((flag - 4)>=0)
+			{
+				flag = flag - 4;
+				if(n_A_HEAD_DEF_PLUS < ref_opt)
+					ref2 = 0;
+			}
+			if((flag - 2)>=0)
+			{
+				flag = flag - 2;
+				if(n_A_Weapon2_ATKplus < ref_opt)
+					ref2 = 0;
+			}
+			if((flag - 1)>=0)
+			{
+				flag = flag - 1;
+				if(n_A_Weapon_ATKplus < ref_opt)
+					ref2 = 0;
+			}
+			
+		}
+	}
+	
+	
+	
+	
 	switch(bonus_condition){
 		case "ev_ref":
 			bonus += Math.floor(refine / ref_opt) * bonus_eq;
@@ -2012,6 +2111,14 @@ function BonusCalc(bonus_condition,refine,ref_opt,bonus_eq)
 			break;
 		case "shoes_ref_lvl":
 			if(n_A_SHOES_DEF_PLUS >= ref_opt)
+				bonus += bonus_eq;
+			break;
+		case "set_ref":
+			if(ref2)
+				bonus += bonus_eq;
+			break;
+		case "set_sum":
+			if(ref2 >= ref_opt)
 				bonus += bonus_eq;
 			break;
 		// case "":
@@ -3433,6 +3540,40 @@ function Init()
 	document.calcForm.E_BOOST_ASPD_PERC.value = 0;
 	document.calcForm.E_BOOST_CASTING.value = 0;
 	
+	formElements["A_WEAPON_ENCHANT_2"].disabled = true;
+	formElements["A_WEAPON_ENCHANT_3"].disabled = true;
+	formElements["A_WEAPON_ENCHANT_4"].disabled = true;
+	
+	formElements["A_Mal_Ench3"].disabled = true;
+	formElements["A_Mal_Ench4"].disabled = true;
+	
+	formElements["A_SHIELD_ENCHANT_2"].disabled = true;
+	formElements["A_SHIELD_ENCHANT_3"].disabled = true;
+	formElements["A_SHIELD_ENCHANT_4"].disabled = true;
+	
+	formElements["A_GARMENT_ENCHANT_4"].disabled = true;
+	formElements["A_GARMENT_ENCHANT_3"].disabled = true;
+	formElements["A_GARMENT_ENCHANT_2"].disabled = true;
+	
+	formElements["A_SHOES_ENCHANT_4"].disabled = true;
+	formElements["A_SHOES_ENCHANT_3"].disabled = true;
+	formElements["A_SHOES_ENCHANT_2"].disabled = true;
+	
+	formElements["A_ARMOR_ENCHANT_4"].disabled = true;
+	formElements["A_ARMOR_ENCHANT_3"].disabled = true;
+	formElements["A_ARMOR_ENCHANT_2"].disabled = true;
+	
+	formElements["A_ACCES1_ENCHANT_4"].disabled = true;
+	formElements["A_ACCES1_ENCHANT_3"].disabled = true;
+	formElements["A_ACCES1_ENCHANT_2"].disabled = true;
+	
+	formElements["A_ACCES2_ENCHANT_4"].disabled = true;
+	formElements["A_ACCES2_ENCHANT_3"].disabled = true;
+	formElements["A_ACCES2_ENCHANT_2"].disabled = true;
+	
+	formElements["A_HEAD_UPPER_ENCHANT_4"].disabled = true;
+	formElements["A_HEAD_UPPER_ENCHANT_3"].disabled = true;
+	formElements["A_HEAD_UPPER_ENCHANT_2"].disabled = true;
 	
 	// -------------------------------------------------
 	
