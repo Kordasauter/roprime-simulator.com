@@ -267,60 +267,62 @@ function LoadCookie()
 		formElements["A_SHOES_DEF_PLUS"].value = 0;
 	}
 	
-	formElements["A_SHADOW_BODY_DEF_PLUS"].value = SaveData[89];
-	formElements["A_SHADOW_body"].value = SaveData[90];
-	formElements["A_SHADOW_WEAPON_DEF_PLUS"].value = SaveData[91];
-	formElements["A_SHADOW_weapon"].value = SaveData[92];
-	formElements["A_SHADOW_SHIELD_DEF_PLUS"].value = SaveData[93];
-	formElements["A_SHADOW_shield"].value = SaveData[94];
-	formElements["A_SHADOW_SHOES_DEF_PLUS"].value = SaveData[95];
-	formElements["A_SHADOW_shoes"].value = SaveData[96];
-	formElements["A_SHADOW_EARRING_DEF_PLUS"].value = SaveData[97];
-	formElements["A_SHADOW_earring"].value = SaveData[98];
-	formElements["A_SHADOW_PENDANT_DEF_PLUS"].value = SaveData[99];
-	formElements["A_SHADOW_pendant"].value = SaveData[100];
-	
-	
-	formElements["A_WEAPON_ENCHANT_2"].value = SaveData[101];
-	formElements["A_WEAPON_ENCHANT_3"].value = SaveData[102];
-	formElements["A_WEAPON_ENCHANT_4"].value = SaveData[103];
-	formElements["A_SHIELD_ENCHANT_2"] = SaveData[104];
-	formElements["A_SHIELD_ENCHANT_3"].value = SaveData[105];
-	formElements["A_SHIELD_ENCHANT_4"].value = SaveData[106];
-	formElements["A_GARMENT_ENCHANT_4"].value = SaveData[107];
-	formElements["A_GARMENT_ENCHANT_3"].value = SaveData[108];
-	formElements["A_GARMENT_ENCHANT_2"].value = SaveData[109];
-	formElements["A_SHOES_ENCHANT_4"].value = SaveData[110];
-	formElements["A_SHOES_ENCHANT_3"].value = SaveData[111];
-	formElements["A_SHOES_ENCHANT_2"].value = SaveData[112];
-	formElements["A_ARMOR_ENCHANT_4"].value = SaveData[113];
-	formElements["A_ARMOR_ENCHANT_3"].value = SaveData[114];
-	formElements["A_ARMOR_ENCHANT_2"].value = SaveData[115];
-	formElements["A_ACCES1_ENCHANT_4"].value = SaveData[116];
-	formElements["A_ACCES1_ENCHANT_3"].value = SaveData[117];
-	formElements["A_ACCES1_ENCHANT_2"].value = SaveData[118];
-	formElements["A_ACCES2_ENCHANT_4"].value = SaveData[119];
-	formElements["A_ACCES2_ENCHANT_3"].value = SaveData[120];
-	formElements["A_ACCES2_ENCHANT_2"].value = SaveData[121];
-	formElements["A_HEAD_UPPER_ENCHANT_4"].value = SaveData[122];
-	formElements["A_HEAD_UPPER_ENCHANT_3"].value = SaveData[123];
-	formElements["A_HEAD_UPPER_ENCHANT_2"].value = SaveData[124];
-
-	if ( n_Nitou )
-	{	
-		ClickWeapon2(formElements["A_Weapon2_ATKplus"].value,1);
-		ClickWeapon2(formElements["A_Weapon2_ATKplus"].value,1);
-		formElements["A_Mal_Ench3"].value = SaveData[125];
-		formElements["A_Mal_Ench4"].value = SaveData[126];
-		// formElements[""].value = SaveData[127];// not used yet
-	}
-	else
+	if(!isNaN(SaveData[89]))
 	{
-		formElements["A_Mal_Ench3"].value = 0;
-		formElements["A_Mal_Ench4"].value = 0;
-		//formElements[""].value = 0; // not used yet
+		formElements["A_SHADOW_BODY_DEF_PLUS"].value = SaveData[89];
+		formElements["A_SHADOW_body"].value = SaveData[90];
+		formElements["A_SHADOW_WEAPON_DEF_PLUS"].value = SaveData[91];
+		formElements["A_SHADOW_weapon"].value = SaveData[92];
+		formElements["A_SHADOW_SHIELD_DEF_PLUS"].value = SaveData[93];
+		formElements["A_SHADOW_shield"].value = SaveData[94];
+		formElements["A_SHADOW_SHOES_DEF_PLUS"].value = SaveData[95];
+		formElements["A_SHADOW_shoes"].value = SaveData[96];
+		formElements["A_SHADOW_EARRING_DEF_PLUS"].value = SaveData[97];
+		formElements["A_SHADOW_earring"].value = SaveData[98];
+		formElements["A_SHADOW_PENDANT_DEF_PLUS"].value = SaveData[99];
+		formElements["A_SHADOW_pendant"].value = SaveData[100];
+		
+		
+		formElements["A_WEAPON_ENCHANT_2"].value = SaveData[101];
+		formElements["A_WEAPON_ENCHANT_3"].value = SaveData[102];
+		formElements["A_WEAPON_ENCHANT_4"].value = SaveData[103];
+		formElements["A_SHIELD_ENCHANT_2"] = SaveData[104];
+		formElements["A_SHIELD_ENCHANT_3"].value = SaveData[105];
+		formElements["A_SHIELD_ENCHANT_4"].value = SaveData[106];
+		formElements["A_GARMENT_ENCHANT_4"].value = SaveData[107];
+		formElements["A_GARMENT_ENCHANT_3"].value = SaveData[108];
+		formElements["A_GARMENT_ENCHANT_2"].value = SaveData[109];
+		formElements["A_SHOES_ENCHANT_4"].value = SaveData[110];
+		formElements["A_SHOES_ENCHANT_3"].value = SaveData[111];
+		formElements["A_SHOES_ENCHANT_2"].value = SaveData[112];
+		formElements["A_ARMOR_ENCHANT_4"].value = SaveData[113];
+		formElements["A_ARMOR_ENCHANT_3"].value = SaveData[114];
+		formElements["A_ARMOR_ENCHANT_2"].value = SaveData[115];
+		formElements["A_ACCES1_ENCHANT_4"].value = SaveData[116];
+		formElements["A_ACCES1_ENCHANT_3"].value = SaveData[117];
+		formElements["A_ACCES1_ENCHANT_2"].value = SaveData[118];
+		formElements["A_ACCES2_ENCHANT_4"].value = SaveData[119];
+		formElements["A_ACCES2_ENCHANT_3"].value = SaveData[120];
+		formElements["A_ACCES2_ENCHANT_2"].value = SaveData[121];
+		formElements["A_HEAD_UPPER_ENCHANT_4"].value = SaveData[122];
+		formElements["A_HEAD_UPPER_ENCHANT_3"].value = SaveData[123];
+		formElements["A_HEAD_UPPER_ENCHANT_2"].value = SaveData[124];
+
+		if ( n_Nitou )
+		{	
+			ClickWeapon2(formElements["A_Weapon2_ATKplus"].value,1);
+			ClickWeapon2(formElements["A_Weapon2_ATKplus"].value,1);
+			formElements["A_Mal_Ench3"].value = SaveData[125];
+			formElements["A_Mal_Ench4"].value = SaveData[126];
+			// formElements[""].value = SaveData[127];// not used yet
+		}
+		else
+		{
+			formElements["A_Mal_Ench3"].value = 0;
+			formElements["A_Mal_Ench4"].value = 0;
+			//formElements[""].value = 0; // not used yet
+		}
 	}
-	
 	StCalc(1);
 
 	calc();
