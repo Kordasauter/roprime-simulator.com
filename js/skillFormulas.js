@@ -2750,7 +2750,7 @@ function CalcSkillDamage()
 			// ATK [{Skill Level x 100) + 1000} x (Caster's Base Level / 120)]
 			w_SkillMod = ( ( n_A_ActiveSkillLV * 1.0 ) + 10.0 ) * n_A_BaseLV / 120.0;
 			w_TotalHits = 7;
-			// w_SkillMod = w_SkillMod / w_TotalHits;
+			w_SkillMod = w_SkillMod / w_TotalHits;
 			
 			/*if ( SkillSearch( skill_AX_ENCHANT_DEADLY_POISON ) )
 			{ // half with edp on
@@ -2790,7 +2790,7 @@ function CalcSkillDamage()
 			damageType = kDmgTypeRanged;
 			w_TotalHits = 5;
 			// w_SkillMod = (2 + n_A_ActiveSkillLV);
-			w_SkillMod = (2 + n_A_ActiveSkillLV)/5;
+			w_SkillMod = (2 + n_A_ActiveSkillLV)/w_TotalHits;
 			
 			
 			fixedCastTime *= 0.0;

@@ -3630,22 +3630,26 @@ function Init()
 	formElements["saveName"].value = GetWord(84);
 	
 	LoadDataINIT(); // loads cookies
-	InitNews();
+	InitNews(1);
 }
 
-function InitNews()
+function InitNews(news)
 {
 	var str = "";
 	var str_new = "";
 	var str_old = "";
-	
-	for (var i = NewsMax;i>=0;i--)
+	var news_min = 0;
+	if(news)
+		news_min = NewsMax-2;
+		
+	for (var i = NewsMax;i>=news_min;i--)
 	{
 		var hide=0;
 		var tmp = 0;
 		var date = NewsOBJ[i][0].replace('/', '');
 		date = date.replace('/', '');
-		if(i > (NewsMax - 2))
+		// if(i > (NewsMax - 2))
+		if(news)
 		{
 			str_new += "<div>";
 			str_new += "	<u><b>"+ NewsOBJ[i][0] +":</b></u> ";
@@ -3723,7 +3727,7 @@ function InitNews()
 		}
 		str += "	</ul>";
 		str += "-Kord";
-		if(i > (NewsMax - 2))
+		if(news)
 		{		
 			str_new += str;
 			str_new += "</div>";
@@ -3735,10 +3739,13 @@ function InitNews()
 			str_old += "</div>";
 		}
 	}
-	myInnerHtml("news",str_new,0);
-	myInnerHtml("old",str_old,0);
+	if(news)
+		myInnerHtml("news",str_new,0);
+	else
+		myInnerHtml("old",str_old,0);
 	
 }
+
 function sortSelect(selElem) 
 {
     var tmpAry = new Array();

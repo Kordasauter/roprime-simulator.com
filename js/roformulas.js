@@ -7977,10 +7977,11 @@ function calcIncomingDamage()
 		for ( var i = 0; i <= 6; i++ )
 		{ 
 			var _def = n_A_totalDEF;
-			if (enemySkills[n_A_MobSkill][n_A_MobSkillLV+1] == 2) _def = n_A_totalMDEF;
+			// if (enemySkills[n_A_MobSkill][n_A_MobSkillLV+1] == 2) _def = n_A_totalMDEF;
+			if (enemySkills[n_A_MobSkill][n_A_MobSkillLV+1] == 2) _def = n_A_MDEF;
 			w_HiDam[i] = w_HiDam[i] * defReduction(_def);
 			if (enemySkills[n_A_MobSkill][n_A_MobSkillLV+1] == 2) 
-				w_HiDam[i] = w_HiDam[i] - n_A_INTDEF;
+				w_HiDam[i] = w_HiDam[i] - n_A_INTMDEF;
 			else w_HiDam[i] = w_HiDam[i] - n_A_VITDEF;
 		}
 	}
