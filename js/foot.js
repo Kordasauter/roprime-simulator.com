@@ -3630,7 +3630,7 @@ function Init()
 	formElements["saveName"].value = GetWord(84);
 	
 	LoadDataINIT(); // loads cookies
-	InitNews(1);
+	// InitNews(1);
 }
 
 function InitNews(news)
@@ -3640,7 +3640,7 @@ function InitNews(news)
 	var str_old = "";
 	var news_min = 0;
 	if(news)
-		news_min = NewsMax-2;
+		news_min = NewsMax-1;
 		
 	for (var i = NewsMax;i>=news_min;i--)
 	{
@@ -3651,9 +3651,9 @@ function InitNews(news)
 		// if(i > (NewsMax - 2))
 		if(news)
 		{
-			str_new += "<div>";
-			str_new += "	<u><b>"+ NewsOBJ[i][0] +":</b></u> ";
-			str_new += "	<ul style=\"margin-left: 5px;\">";
+			str_new += "<div>\n";
+			str_new += "	<u><b>"+ NewsOBJ[i][0] +":</b></u> \n";
+			str_new += "	<ul style=\"margin-left: 5px;\">\n";
 			
 		}
 		else
@@ -3670,67 +3670,67 @@ function InitNews(news)
 			{
 				if(tmp > 0)
 				{
-					str += "			</ul>";
+					str += "			</ul>\n";
 				}
 				tmp++;
-				str += "		<li><b>Has been added :</b></li>";
-				str += "			<ul>";
+				str += "		<li><b>Has been added :</b></li>\n";
+				str += "			<ul>\n";
 			}
 			else if(NewsOBJ[i][j] == News_Fixed)
 			{
 				if(tmp > 0)
 				{
-					str += "			</ul>";
+					str += "			</ul>\n";
 				}
 				tmp++;
-				str += "		<li><b>Has been fixed :</b></li>";
-				str += "			<ul>";
+				str += "		<li><b>Has been fixed :</b></li>\n";
+				str += "			<ul>\n";
 			}
 			else if(NewsOBJ[i][j] == List_Start)
 			{
 				tmp++;
-				str += "			<ul>";
+				str += "			<ul>\n";
 			}
 			else if(NewsOBJ[i][j] == List_End)
 			{
 				tmp--;
-				str += "			</ul>";
+				str += "			</ul>\n";
 			}
 			else if(NewsOBJ[i][j] == Hide_Start)
 			{
-				str += "<input class=\"button\" type=\"button\" value=\"Show details\" onclick=\"javascript:$('#note"+ date + hide.toString() +"').toggle()\">";
-				str += "<span style=\"display: none;\" id=\"note"+ date + hide.toString() +"\">";
-				str += "<ul>";
+				str += "<input class=\"button\" type=\"button\" value=\"Show details\" onclick=\"javascript:$('#note"+ date + hide.toString() +"').toggle()\">\n";
+				str += "<span style=\"display: none;\" id=\"note"+ date + hide.toString() +"\">\n";
+				str += "<ul>\n";
 				hide++;
 			}
 			else if(NewsOBJ[i][j] == Hide_End)
 			{
-				str += "</ul>";
-				str += "</span>";
+				str += "</ul>\n";
+				str += "</span>\n";
 			}
 			else if(NewsOBJ[i][j] == Note)
 			{
 				if(tmp > 0)
 				{
-					str += "			</ul>";
+					str += "			</ul>\n";
 				}
 				tmp++;
-				str += "		<li><b>Note :</b></li>";
-				str += "			<ul>";
+				str += "		<li><b>Note :</b></li>\n";
+				str += "			<ul>\n";
 			}
 			else
-				str += "				<li>" + NewsOBJ[i][j] +"</li>";
+				str += "				<li>" + NewsOBJ[i][j] +"</li>\n";
 		}
 		if(tmp > 0)
 		{
-			str += "			</ul>";
+			str += "			</ul>\n";
 		}
-		str += "	</ul>";
-		str += "-Kord";
+		str += "	</ul>\n";
+		str += "-Kord\n";
 		if(news)
 		{		
 			str_new += str;
-			str_new += "</div>";
+			str_new += "</div>\n";
 		}
 		else
 		{
