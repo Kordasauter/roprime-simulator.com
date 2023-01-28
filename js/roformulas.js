@@ -2407,6 +2407,11 @@ function CalcFinalDamage2( damage, type )
 { // Calc Dmg from RAWDmg (rawDmg, (min,avg,max,crit:=10))
 	damage = ApplyDamageModifiers( damage );
 	damage = ApplySkillModifiers( damage );
+	var aura_blade = 0;
+	if ( n_A_WeaponType !== weapTyp_NONE && SkillSearch( skill_LK_AURA_BLADE ) )
+	{ // aura blade
+		aura_blade += n_A_BaseLV * (SkillSearch( skill_LK_AURA_BLADE ) + 3);
+	}
 	//--------------------------------------
 	criticalMod = 0;
 	/*
@@ -2452,10 +2457,12 @@ function CalcFinalDamage2( damage, type )
 	if ( type == 10 )
 	{
 		// damage = ApplyEnemyDefense( damage * 1.4, type, 0 );
+		damage += aura_blade;
 		damage = ApplyEnemyDefense( (damage * 1.4) * ((100+criticalMod)/100), type, 0 );
 	}
 	else
 	{
+		damage += aura_blade;
 		damage = ApplyEnemyDefense( damage, type, 0 );
 	}
 	damage = Math.floor(tPlusDamCut(damage));	

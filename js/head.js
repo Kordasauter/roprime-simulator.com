@@ -412,16 +412,23 @@ function CalcFinalDamage( damage, type )
 { 
 	damage = ApplyDamageModifiers( damage );
 	damage = ApplySkillModifiers( damage );
+	var aura_blade = 0;
+	if ( n_A_WeaponType !== weapTyp_NONE && SkillSearch( skill_LK_AURA_BLADE ) )
+	{ // aura blade
+		aura_blade += n_A_BaseLV * (SkillSearch( skill_LK_AURA_BLADE ) + 3);
+	}
 	var critmod;
 	critmod = CalcCriticalMod();
 	
 	if ( type == 10 )
 	{
+		damage += aura_blade;
 		damage = ApplyEnemyDefense( damage * 1.4, type, 0 );
 		// damage = ApplyEnemyDefense( damage * critmod, type, 0 );
 	}
 	else
 	{
+		damage += aura_blade;
 		damage = ApplyEnemyDefense( damage, type, 0 );
 	}
 	damage = Math.floor(tPlusDamCut(damage));	

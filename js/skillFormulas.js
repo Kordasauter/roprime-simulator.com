@@ -279,9 +279,10 @@ function CalcSkillDamage()
 		
 		// Crit is a guarantee, calc it.
 		wCriTyuu=1;
+		
 		for ( var i = 0; i < 3; i++ )
 		{
-			n_A_CriATK[i] = CalcFinalDamage( n_A_CriATK[i], 10 );
+			n_A_CriATK[i] = CalcFinalDamage( n_A_CriATK[i], 10 );	
 		}
 		wCriTyuu=0;
 		
@@ -539,15 +540,10 @@ function CalcSkillDamage()
 			
 			// Get other ATK Mods and apply to working damage.
 			CalcAtkMods02( w_SkillMod , 0 );
-			var aura_blade = 0;
-			if ( n_A_WeaponType !== weapTyp_NONE && SkillSearch( skill_LK_AURA_BLADE ) )
-			{ // aura blade
-				aura_blade += n_A_BaseLV * (SkillSearch( skill_LK_AURA_BLADE ) + 3);
-			}
+
 			for ( var i = 0; i < 3; i++ )
 			{
 				w_DMG[i] = CalcFinalDamage( n_A_DMG[i], i );
-				w_DMG[i] += aura_blade;
 			}
 
 			var w_KATARU = [0,0,0];
@@ -688,13 +684,15 @@ function CalcSkillDamage()
 			n_Delay[ksDelayCooldown] = 0.0;
 		}
 		 // Crit Part -----------------------------
+		 
 		for ( var i = 0; i < 3; i++ )
 		{
 			n_A_CriATK[i] = n_A_DMG[i];
 		}
 		CalcAtkMods02( w_SkillMod, 1 );
-
+		
 		wCriTyuu=1;
+
 		for ( var i = 0; i < 3; i++ )
 		{
 			n_A_CriATK[i] = CalcFinalDamage2(n_A_CriATK[i],10);
@@ -2754,16 +2752,10 @@ function CalcSkillDamage()
 
 		CalcAtkMods02( w_SkillMod, 0 );
 		
-		var aura_blade = 0;
-		if ( n_A_WeaponType !== weapTyp_NONE && SkillSearch( skill_LK_AURA_BLADE ) )
-		{ // aura blade
-			aura_blade += n_A_BaseLV * (SkillSearch( skill_LK_AURA_BLADE ) + 3);
-		}
 		for ( var i = 0; i < 3; i++ )
 		{
 			w_MagiclBulet = i;
 			w_DMG[i] = CalcFinalDamage(n_A_DMG[i],i);
-			w_DMG[i] += aura_blade * wActiveHitNum;
 			if ( n_A_ActiveSkill==skill_CR_SHIELD_BOOMERANG_SL )
 			{
 				w_DMG[i] *= 2; 
@@ -3133,15 +3125,10 @@ function CalcSkillDamage()
 			n_Delay[ksDelayCooldown] = 0.5;
 		}
 		CalcAtkMods02(w_SkillMod,0);
-		var aura_blade = 0;
-		if ( n_A_WeaponType !== weapTyp_NONE && SkillSearch( skill_LK_AURA_BLADE ) )
-		{ // aura blade
-			aura_blade += n_A_BaseLV * (SkillSearch( skill_LK_AURA_BLADE ) + 3);
-		}
+		
 		for ( var i = 0; i < 3; i++ )
 		{
 			w_DMG[i] = CalcFinalDamage(n_A_DMG[i],i);
-			w_DMG[i] += aura_blade;
 
 			if ( n_A_ActiveSkill == skill_HU_BEAST_STRAFING &&
 				 n_B[en_RACE]!= 2 && n_B[en_RACE] != 4 )
@@ -3419,7 +3406,7 @@ function CalcSkillDamage()
 		//w_SkillMod *= bonusDMG * (n_A_BaseLV / 100);
 		w_TotalHits = 5;
 		//CalcAtkMods02(w_SkillMod,0);
-		
+
 		for ( var i = 0; i < 3; i++ )
 		{
 			w_DMG[i] = baseATK[i] * w_SkillMod;
