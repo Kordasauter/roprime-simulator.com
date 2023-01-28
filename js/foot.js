@@ -509,6 +509,10 @@ with ( document.calcForm )
 		n_tok[bon_DEFIGN_RC_DEMI_HUMAN] += acolyteBuffs[ksExpiatio] * 5;
 		n_tok[bon_DEFIGN_RC_ANGEL] += acolyteBuffs[ksExpiatio] * 5;
 		n_tok[bon_DEFIGN_RC_DRAGON] += acolyteBuffs[ksExpiatio] * 5;
+		if(PATCH >= 1)
+		{
+			n_tok[bon_MDEFIGN_RC_ALL] += acolyteBuffs[ksExpiatio] * 5;
+		}
 	}
 
 	if ( EquipNumSearch(645) )
@@ -1250,7 +1254,10 @@ function StPlusCalc()
 	}
 	if ( acolyteBuffs[ksLaudaRamus] )
 	{
-		wSPC_LUK += 4 + acolyteBuffs[ksLaudaRamus];
+		if(PATCH == 0)
+			wSPC_LUK += 4 + acolyteBuffs[ksLaudaRamus];
+		else
+			n_tok[bon_DMG_CRIT] += 5 * acolyteBuffs[ksLaudaRamus];
 	}
 	
 	if ( performerBuffs[ksChorus] === ksSinkingMelody &&
@@ -1301,8 +1308,17 @@ function StPlusCalc()
 		wSPC_INT += SkillSearch( skill_RAN_RESEARCH_TRAP );
 	}
 	if ( SkillSearch( skill_ROY_INSPIRATION ) )
-	{ // Inspiration stats increase by [(Caster s Base Level / 10 ) + (Caster s Job Level / 5 )]
-		var statIncrease = Math.floor( ( n_A_BaseLV / 10 ) + ( n_A_JobLV / 5 ) );
+	{ 
+		var statIncrease = 0;
+		if(PATCH < 2)
+		{
+			// Inspiration stats increase by [(Caster s Base Level / 10 ) + (Caster s Job Level / 5 )]
+			statIncrease = Math.floor( ( n_A_BaseLV / 10 ) + ( n_A_JobLV / 5 ) );
+		}
+		else if(PATCH ==2)
+		{
+			statIncrease = SkillSearch( skill_ROY_INSPIRATION ) * 6;
+		}
 		wSPC_STR += statIncrease;
 		wSPC_AGI += statIncrease;
 		wSPC_VIT += statIncrease;
@@ -3614,7 +3630,7 @@ function Init()
 	BuildMonsterBuffTable();
 	BuildItemsTable();
 	FillPerformerBuffOptions();
-	BuildSearchTable();
+	// BuildSearchTable();
 	
 	// init player
 	formElements["A_JOB"].value = 0;

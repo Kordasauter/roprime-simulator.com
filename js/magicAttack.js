@@ -849,7 +849,16 @@ function calcMAtk( includeMultipliers )
 	{
 		n_A_EquipMATK += n_A_BaseLV;
 	}
-
+	if ( SkillSearch( skill_ROY_SHIELD_SPELL ) === 3 && PATCH == 2)
+	{ // Shield Spell
+		n_A_EquipMATK += 150;
+	}
+	//TODO
+	//Add Shadow Spell to the passiv skill for SC
+	// if ( SkillSearch( skill_SHA_AUTO_SHADOW_SPELL ) )
+	// {
+		// n_A_EquipMATK += 5 * SkillSearch( skill_SHA_AUTO_SHADOW_SPELL );
+	// }
 	// Skill Multipliers
 	if ( includeMultipliers )
 	{

@@ -1723,7 +1723,14 @@ function tPlusDamCut( damage )
 			n_A_WeaponType != weapTyp_SHOTGUN &&
 			n_A_WeaponType != weapTyp_GATLING_GUN &&
 			n_A_WeaponType != weapTyp_GRENADE_LAUNCHER)) {
-		    damage *= 1 + (0.3 * monsterDebuffs[status_en_DARK_CLAW]);
+			if(PATCH < 2)
+			{
+				damage *= 1 + (0.3 * monsterDebuffs[status_en_DARK_CLAW]);
+			}
+			else if(PATCH == 2)
+			{
+				damage *= 1 + (0.15 * monsterDebuffs[status_en_DARK_CLAW]);
+			}
 		}
 		if ( monsterDebuffs[status_en_FIBER] && n_A_Weapon_element === ele_FIRE )
 		{ // Fiberlock
@@ -2145,4 +2152,158 @@ function DisplayCriticalDamage()
 	}
 
 	myInnerHtml( "CRInum", ( Math.round( w998G * 100 ) / 100 ) + SubName[0][Language], 0 );
+}
+
+function ChangePatch()
+{
+	PATCH = parseInt(formElements["A_Patch_Num"].value);
+	if(PATCH == 0)
+	{
+		//Update Max Blv
+		CONST_MAXLVL_THIRD = 175;
+		CONST_MAXLVL_KAGOB_ENOVI = 175;
+		CONST_MAXJOBLVL_THIRD = 60;
+		
+		//update skill level from updates
+		//RK
+		SkillOBJ[445][1]=5;//[445,5,"Enchant Blade"],
+		SkillOBJ[446][1]=5;//[446,5,"Sonic Wave"],
+		//GX
+		SkillOBJ[473][1]=5;//[473,5,"Counter Slash"],
+		//AB
+		SkillOBJ[490][1]=5;//[490,5,"Judex"],
+		SkillOBJ[502][1]=1;//[502,1,"Renovatio"],
+		//RAN
+		SkillOBJ[518][1]=5;//[518,5,"Research Trap"],
+		//WAR
+		SkillOBJ[532][1]=5;//[532,5,"Freezing Spell"],
+		SkillOBJ[549][1]=5;//[549,5,"Summon Fire Ball"],
+		SkillOBJ[550][1]=5;//[550,5,"Summon Water Ball"],
+		SkillOBJ[551][1]=5;//[551,5,"Summon Lightning Ball"],
+		SkillOBJ[552][1]=5;//[552,5,"Summon Stone"],
+		SkillOBJ[553][1]=5;//[553,5,"Tetra Vortex"],
+		//MEC
+		SkillOBJ[557][1]=5;//[557,5,"Power Swing"],
+		SkillOBJ[573][1]=3;//[573,3,"Arm Cannon"],
+		//RG
+		SkillOBJ[586][1]=5;//[586,5,"Shield Press"],
+		SkillOBJ[597][1]=5;//[597,5,"Ray of Genesis"],
+		//SC
+		SkillOBJ[602][1]=5;//[602,5,"Fatal Menace"],
+		SkillOBJ[622][1]=3;//[622,3,"Feint Bomb"],
+		//SUR
+		SkillOBJ[627][1]=5;//[627,5,"Knuckle Arrow"],
+		SkillOBJ[628][1]=5;//[628,5,"Fallen Empire"],
+		//MIWA
+		SkillOBJ[654][1]=5;//[654,5,"Metallic Sound"],
+		//SOR
+		SkillOBJ[674][1]=5;//[674,5,"Spell Fist FBolt"],
+		SkillOBJ[675][1]=5;//[675,5,"Spell Fist CBolt"],
+		SkillOBJ[676][1]=5;//[676,5,"Spell Fist LBolt"],
+		SkillOBJ[685][1]=5;//[685,5,"Varetyr Spear"],
+		//GEN
+		SkillOBJ[689][1]=5;//[689,5,"Cart Tornado"], 
+		SkillOBJ[694][1]=5;//[694,5,"Spore Explosion"],
+		// SkillOBJ[xxx][1]=y;
+	}
+	if(PATCH >= 1)
+	{
+		//Update Max Blv
+		CONST_MAXLVL_THIRD = 185;
+		CONST_MAXLVL_KAGOB_ENOVI = 185;
+		CONST_MAXJOBLVL_THIRD = 65;
+		
+		//update skill level from updates
+		SkillOBJ[445][1]=10;//[445,10,"Enchant Blade"],
+		SkillOBJ[446][1]=10;//[446,10,"Sonic Wave"],
+		//GX
+		SkillOBJ[473][1]=10;//[473,10,"Counter Slash"],
+		//AB
+		SkillOBJ[490][1]=10;//[490,10,"Judex"],
+		SkillOBJ[502][1]=4;//[502,4,"Renovatio"]
+		//RAN
+		SkillOBJ[518][1]=10;//[518,10,"Research Trap"],
+		//WAR
+		SkillOBJ[532][1]=10;//[532,10,"Freezing Spell"],
+		SkillOBJ[549][1]=5;//[549,5,"Summon Fire Ball"],
+		SkillOBJ[550][1]=5;//[550,5,"Summon Water Ball"],
+		SkillOBJ[551][1]=5;//[551,5,"Summon Lightning Ball"],
+		SkillOBJ[552][1]=5;//[552,5,"Summon Stone"],
+		SkillOBJ[553][1]=10;//[553,10,"Tetra Vortex"],
+		//MEC
+		SkillOBJ[557][1]=10;//[557,10,"Power Swing"],
+		SkillOBJ[573][1]=5;//[573,5,"Arm Cannon"],
+		//RG
+		SkillOBJ[586][1]=10;//[586,10,"Shield Press"],
+		SkillOBJ[597][1]=10;//[597,10,"Ray of Genesis"],
+		//SC
+		SkillOBJ[602][1]=10;//[602,10,"Fatal Menace"],
+		SkillOBJ[622][1]=10;//[622,10,"Feint Bomb"],
+		//SUR
+		SkillOBJ[627][1]=10;//[627,10,"Knuckle Arrow"],
+		SkillOBJ[628][1]=10;//[628,10,"Fallen Empire"],
+		//MIWA
+		SkillOBJ[654][1]=10;//[654,10,"Metallic Sound"],
+		//SOR
+		SkillOBJ[674][1]=10;//[674,10,"Spell Fist FBolt"],
+		SkillOBJ[675][1]=10;//[675,10,"Spell Fist CBolt"],
+		SkillOBJ[676][1]=10;//[676,10,"Spell Fist LBolt"],
+		SkillOBJ[685][1]=10;//[685,10,"Varetyr Spear"],
+		//GEN
+		SkillOBJ[689][1]=10;//[689,10,"Cart Tornado"]
+		SkillOBJ[694][1]=10;//[694,10,"Spore Explosion"]
+		// SkillOBJ[573][1]=5;
+	}
+	if(PATCH == 2)
+	{
+		//Update Max Blv
+		CONST_MAXLVL_THIRD = 185;
+		CONST_MAXLVL_KAGOB_ENOVI = 185;
+		CONST_MAXJOBLVL_THIRD = 65;
+		//RK
+		SkillOBJ[445][1]=10;//[445,10,"Enchant Blade"],
+		SkillOBJ[446][1]=10;//[446,10,"Sonic Wave"],
+		//GX
+		SkillOBJ[473][1]=10;//[473,10,"Counter Slash"],
+		//AB
+		SkillOBJ[490][1]=10;//[490,10,"Judex"],
+		SkillOBJ[502][1]=4;//[502,4,"Renovatio"]
+		//RAN
+		SkillOBJ[518][1]=10;//[518,10,"Research Trap"],
+		//WAR
+		SkillOBJ[532][1]=10;//[532,10,"Freezing Spell"],
+		SkillOBJ[549][1]=2;//[549,2,"Summon Fire Ball"],
+		SkillOBJ[550][1]=2;//[550,2,"Summon Water Ball"],
+		SkillOBJ[551][1]=2;//[551,2,"Summon Lightning Ball"],
+		SkillOBJ[552][1]=2;//[552,2,"Summon Stone"],
+		SkillOBJ[553][1]=10;//[553,10,"Tetra Vortex"],
+		//MEC
+		SkillOBJ[557][1]=10;//[557,10,"Power Swing"],
+		SkillOBJ[573][1]=5;//[573,5,"Arm Cannon"],
+		//RG
+		SkillOBJ[586][1]=10;//[586,10,"Shield Press"],
+		SkillOBJ[597][1]=10;//[597,10,"Ray of Genesis"],
+		//SC
+		SkillOBJ[602][1]=10;//[602,10,"Fatal Menace"],
+		SkillOBJ[622][1]=10;//[622,10,"Feint Bomb"],
+		//SUR
+		SkillOBJ[627][1]=10;//[627,10,"Knuckle Arrow"],
+		SkillOBJ[628][1]=10;//[628,10,"Fallen Empire"],
+		//MIWA
+		SkillOBJ[654][1]=10;//[654,10,"Metallic Sound"],
+		//SOR
+		SkillOBJ[674][1]=10;//[674,10,"Spell Fist FBolt"],
+		SkillOBJ[675][1]=10;//[675,10,"Spell Fist CBolt"],
+		SkillOBJ[676][1]=10;//[676,10,"Spell Fist LBolt"],
+		SkillOBJ[685][1]=10;//[685,10,"Varetyr Spear"],
+		//GEN
+		SkillOBJ[689][1]=10;//[689,10,"Cart Tornado"]
+		SkillOBJ[694][1]=10;//[694,10,"Spore Explosion"]
+	}
+	let temp = "";
+	if(formElements["A_JOB"].value != 0)
+		temp += TempSaveActual();
+	ChangeJob( formElements["A_JOB"].value );
+	if(formElements["A_JOB"].value != 0)
+		TempLoadActual(temp);
 }

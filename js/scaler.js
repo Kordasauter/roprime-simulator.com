@@ -268,13 +268,13 @@ function BuildMonsterTable()
 	{
 		for( var i = 0 ; i <= (Rlv*2) ; i++)
 		{
-			for( var j = 1 ; j < MonsterOBJ.length ; j++)
+			for( var j = 1 ; j < MonsterOBJ2.length ; j++)
 			{
-				if( MonsterOBJ[MonsterABC[j]][5] ==  (Number(Blv) + (Number(Rlv) - Number(i))) && MonsterOBJ[MonsterABC[j]][16] > 1 && MonsterOBJ[MonsterABC[j]][19] == 0 )
+				if( MonsterOBJ2[MonsterABC2[j]][5] ==  (Number(Blv) + (Number(Rlv) - Number(i))) && MonsterOBJ2[MonsterABC2[j]][16] > 1 && MonsterOBJ2[MonsterABC2[j]][19] == 0 )
 				{
-					if(CheckRC[MonsterOBJ[MonsterABC[j]][2]].checked && CheckELE[Math.floor(MonsterOBJ[MonsterABC[j]][3]/10)].checked && CheckSIZE[MonsterOBJ[MonsterABC[j]][4]].checked)
+					if(CheckRC[MonsterOBJ2[MonsterABC2[j]][2]].checked && CheckELE[Math.floor(MonsterOBJ2[MonsterABC2[j]][3]/10)].checked && CheckSIZE[MonsterOBJ2[MonsterABC2[j]][4]].checked)
 					{
-						MonstersID[MonstersCount] = MonsterOBJ[MonsterABC[j]][0];
+						MonstersID[MonstersCount] = MonsterOBJ2[MonsterABC2[j]][0];
 						MonstersCount++;
 					}
 				}
@@ -285,13 +285,13 @@ function BuildMonsterTable()
 	{
 		for( var i = 0 ; i <= (15+(5*(Rlv-15))) ; i++)
 		{
-			for( var j = 1 ; j < MonsterOBJ.length ; j++)
+			for( var j = 1 ; j < MonsterOBJ2.length ; j++)
 			{
-				if( MonsterOBJ[MonsterABC[j]][5] ==  (Number(Blv) + (15 - Number(i))) && MonsterOBJ[MonsterABC[j]][16] > 1 && MonsterOBJ[MonsterABC[j]][19] == 0 )
+				if( MonsterOBJ2[MonsterABC2[j]][5] ==  (Number(Blv) + (15 - Number(i))) && MonsterOBJ2[MonsterABC2[j]][16] > 1 && MonsterOBJ2[MonsterABC2[j]][19] == 0 )
 				{
-					if(CheckRC[MonsterOBJ[MonsterABC[j]][2]].checked && CheckELE[Math.floor(MonsterOBJ[MonsterABC[j]][3]/10)].checked && CheckSIZE[MonsterOBJ[MonsterABC[j]][4]].checked)
+					if(CheckRC[MonsterOBJ2[MonsterABC2[j]][2]].checked && CheckELE[Math.floor(MonsterOBJ2[MonsterABC2[j]][3]/10)].checked && CheckSIZE[MonsterOBJ2[MonsterABC2[j]][4]].checked)
 					{
-						MonstersID[MonstersCount] = MonsterOBJ[MonsterABC[j]][0];
+						MonstersID[MonstersCount] = MonsterOBJ2[MonsterABC2[j]][0];
 						MonstersCount++;
 					}
 				}
@@ -394,13 +394,13 @@ function BuildMonsterTable()
 //  ID,(Name),Race,Element*10+lvl,Size,Lvl,HP,Vit,Agi,Int,Dex,Luk,MinAtk,MaxAtk,Def,MDef,bExp,jExp, ,BossFlag, 0,PerfHit,PerfDodge,MinSDef,MaxSDef,SoftMDef
 	for(var i = 0;i < MonstersCount;i++)
 	{
-		for(var j = 0 ; j < MonsterOBJ.length ; j++)
+		for(var j = 0 ; j < MonsterOBJ2.length ; j++)
 		{
 			//MonstersID[MonstersCount]
-			if( MonsterOBJ[MonsterABC[j]][0] == MonstersID[i] ) 
+			if( MonsterOBJ2[MonsterABC2[j]][0] == MonstersID[i] ) 
 			{
 				var exp_mul=1;
-				switch( ( MonsterOBJ[MonsterABC[j]][5] - Number(Blv)) )//Exp multiplier
+				switch( ( MonsterOBJ2[MonsterABC2[j]][5] - Number(Blv)) )//Exp multiplier
 				{
 					case 15:
 					case 5:
@@ -481,58 +481,58 @@ function BuildMonsterTable()
 				if(CheckPremium.checked)
 					exp_mul*=1.5;
 				
-				var bexphp = (exp_mul*MonsterOBJ[MonsterABC[j]][16]) / MonsterOBJ[MonsterABC[j]][6];
-				var jexphp = (exp_mul*MonsterOBJ[MonsterABC[j]][17]) / MonsterOBJ[MonsterABC[j]][6];
+				var bexphp = (exp_mul*MonsterOBJ2[MonsterABC2[j]][16]) / MonsterOBJ2[MonsterABC2[j]][6];
+				var jexphp = (exp_mul*MonsterOBJ2[MonsterABC2[j]][17]) / MonsterOBJ2[MonsterABC2[j]][6];
 				
-				myInnerHtml( "NameLabel"+i.toString(),  MonsterOBJ[MonsterABC[j]][1], 0 );
-				myInnerHtml( "LevelLabel"+i.toString(), MonsterOBJ[MonsterABC[j]][5], 0 );
+				myInnerHtml( "NameLabel"+i.toString(),  MonsterOBJ2[MonsterABC2[j]][1], 0 );
+				myInnerHtml( "LevelLabel"+i.toString(), MonsterOBJ2[MonsterABC2[j]][5], 0 );
 				switch(SelectBBM.options[SelectBBM.selectedIndex].value)
 				{
 					case "1":
-						myInnerHtml( "BaseExpLabel"+i.toString(), Math.floor((exp_mul*1.3)*MonsterOBJ[MonsterABC[j]][16]), 0 );
-						bexphp = ((exp_mul*1.3)*MonsterOBJ[MonsterABC[j]][16]) / MonsterOBJ[MonsterABC[j]][6];
+						myInnerHtml( "BaseExpLabel"+i.toString(), Math.floor((exp_mul*1.3)*MonsterOBJ2[MonsterABC2[j]][16]), 0 );
+						bexphp = ((exp_mul*1.3)*MonsterOBJ2[MonsterABC2[j]][16]) / MonsterOBJ2[MonsterABC2[j]][6];
 						break;
 					case "2":
-						myInnerHtml( "BaseExpLabel"+i.toString(), Math.floor((exp_mul*1.5)*MonsterOBJ[MonsterABC[j]][16]), 0 );
-						bexphp = ((exp_mul*1.5)*MonsterOBJ[MonsterABC[j]][16]) / MonsterOBJ[MonsterABC[j]][6];
+						myInnerHtml( "BaseExpLabel"+i.toString(), Math.floor((exp_mul*1.5)*MonsterOBJ2[MonsterABC2[j]][16]), 0 );
+						bexphp = ((exp_mul*1.5)*MonsterOBJ2[MonsterABC2[j]][16]) / MonsterOBJ2[MonsterABC2[j]][6];
 						break;
 					case "3":
-						myInnerHtml( "BaseExpLabel"+i.toString(), Math.floor((exp_mul*1.75)*MonsterOBJ[MonsterABC[j]][16]), 0 );
-						bexphp = ((exp_mul*1.75)*MonsterOBJ[MonsterABC[j]][16]) / MonsterOBJ[MonsterABC[j]][6];
+						myInnerHtml( "BaseExpLabel"+i.toString(), Math.floor((exp_mul*1.75)*MonsterOBJ2[MonsterABC2[j]][16]), 0 );
+						bexphp = ((exp_mul*1.75)*MonsterOBJ2[MonsterABC2[j]][16]) / MonsterOBJ2[MonsterABC2[j]][6];
 						break;
 					case "4":
-						myInnerHtml( "BaseExpLabel"+i.toString(), Math.floor((exp_mul*2)*MonsterOBJ[MonsterABC[j]][16]), 0 );
-						bexphp = ((exp_mul*2)*MonsterOBJ[MonsterABC[j]][16]) / MonsterOBJ[MonsterABC[j]][6];
+						myInnerHtml( "BaseExpLabel"+i.toString(), Math.floor((exp_mul*2)*MonsterOBJ2[MonsterABC2[j]][16]), 0 );
+						bexphp = ((exp_mul*2)*MonsterOBJ2[MonsterABC2[j]][16]) / MonsterOBJ2[MonsterABC2[j]][6];
 						break;
 					default:
-						myInnerHtml( "BaseExpLabel"+i.toString(), Math.floor(exp_mul*MonsterOBJ[MonsterABC[j]][16]), 0 );
+						myInnerHtml( "BaseExpLabel"+i.toString(), Math.floor(exp_mul*MonsterOBJ2[MonsterABC2[j]][16]), 0 );
 						break;
 				}
 				switch(SelectJBM.options[SelectJBM.selectedIndex].value)
 				{
 					case "1":
-						myInnerHtml( "JobExpLabel"+i.toString(),  Math.floor((exp_mul*1.3)*MonsterOBJ[MonsterABC[j]][17]), 0 );
-						jexphp = ((exp_mul*1.3)*MonsterOBJ[MonsterABC[j]][17]) / MonsterOBJ[MonsterABC[j]][6];
+						myInnerHtml( "JobExpLabel"+i.toString(),  Math.floor((exp_mul*1.3)*MonsterOBJ2[MonsterABC2[j]][17]), 0 );
+						jexphp = ((exp_mul*1.3)*MonsterOBJ2[MonsterABC2[j]][17]) / MonsterOBJ2[MonsterABC2[j]][6];
 						break;
 					case "2":
-						myInnerHtml( "JobExpLabel"+i.toString(),  Math.floor((exp_mul*1.5)*MonsterOBJ[MonsterABC[j]][17]), 0 );
-						jexphp = ((exp_mul*1.5)*MonsterOBJ[MonsterABC[j]][17]) / MonsterOBJ[MonsterABC[j]][6];
+						myInnerHtml( "JobExpLabel"+i.toString(),  Math.floor((exp_mul*1.5)*MonsterOBJ2[MonsterABC2[j]][17]), 0 );
+						jexphp = ((exp_mul*1.5)*MonsterOBJ2[MonsterABC2[j]][17]) / MonsterOBJ2[MonsterABC2[j]][6];
 						break;
 					case "3":
-						myInnerHtml( "JobExpLabel"+i.toString(),  Math.floor((exp_mul*1.75)*MonsterOBJ[MonsterABC[j]][17]), 0 );
-						jexphp = ((exp_mul*1.75)*MonsterOBJ[MonsterABC[j]][17]) / MonsterOBJ[MonsterABC[j]][6];
+						myInnerHtml( "JobExpLabel"+i.toString(),  Math.floor((exp_mul*1.75)*MonsterOBJ2[MonsterABC2[j]][17]), 0 );
+						jexphp = ((exp_mul*1.75)*MonsterOBJ2[MonsterABC2[j]][17]) / MonsterOBJ2[MonsterABC2[j]][6];
 						break;
 					case "4":
-						myInnerHtml( "JobExpLabel"+i.toString(),  Math.floor((exp_mul*2)*MonsterOBJ[MonsterABC[j]][17]), 0 );
-						jexphp = ((exp_mul*2)*MonsterOBJ[MonsterABC[j]][17]) / MonsterOBJ[MonsterABC[j]][6];
+						myInnerHtml( "JobExpLabel"+i.toString(),  Math.floor((exp_mul*2)*MonsterOBJ2[MonsterABC2[j]][17]), 0 );
+						jexphp = ((exp_mul*2)*MonsterOBJ2[MonsterABC2[j]][17]) / MonsterOBJ2[MonsterABC2[j]][6];
 						break;
 					default:
-						myInnerHtml( "JobExpLabel"+i.toString(),  Math.floor(exp_mul*MonsterOBJ[MonsterABC[j]][17]), 0 );
+						myInnerHtml( "JobExpLabel"+i.toString(),  Math.floor(exp_mul*MonsterOBJ2[MonsterABC2[j]][17]), 0 );
 						break;
 				}
-				myInnerHtml( "HPLabel"+i.toString(), MonsterOBJ[MonsterABC[j]][6], 0 );
-				myInnerHtml( "AtkLabel"+i.toString(), MonsterOBJ[MonsterABC[j]][12] + "~" + MonsterOBJ[MonsterABC[j]][13] , 0 );
-				switch(MonsterOBJ[MonsterABC[j]][4])//monster size
+				myInnerHtml( "HPLabel"+i.toString(), MonsterOBJ2[MonsterABC2[j]][6], 0 );
+				myInnerHtml( "AtkLabel"+i.toString(), MonsterOBJ2[MonsterABC2[j]][12] + "~" + MonsterOBJ2[MonsterABC2[j]][13] , 0 );
+				switch(MonsterOBJ2[MonsterABC2[j]][4])//monster size
 				{
 					case 0:
 						myInnerHtml( "SizeLabel"+i.toString(), "Small", 0 );
@@ -546,7 +546,7 @@ function BuildMonsterTable()
 					default:
 						break;
 				}
-				switch(MonsterOBJ[MonsterABC[j]][2])//monster race
+				switch(MonsterOBJ2[MonsterABC2[j]][2])//monster race
 				{
 					case 0:
 						myInnerHtml( "RaceLabel"+i.toString(), "Formless", 0 );
@@ -581,76 +581,76 @@ function BuildMonsterTable()
 					default:
 						break;
 				}
-				switch(MonsterOBJ[MonsterABC[j]][3])//Monster element
+				switch(MonsterOBJ2[MonsterABC2[j]][3])//Monster element
 				{
 					case 1:
 					case 2:
 					case 3:
 					case 4:
-						myInnerHtml( "ElementLabel"+i.toString(), "Neutral "+MonsterOBJ[MonsterABC[j]][3], 0 );
+						myInnerHtml( "ElementLabel"+i.toString(), "Neutral "+MonsterOBJ2[MonsterABC2[j]][3], 0 );
 						break;
 					case 11:
 					case 12:
 					case 13:
 					case 14:
-						myInnerHtml( "ElementLabel"+i.toString(), "Water "+ (MonsterOBJ[MonsterABC[j]][3] -10), 0 );
+						myInnerHtml( "ElementLabel"+i.toString(), "Water "+ (MonsterOBJ2[MonsterABC2[j]][3] -10), 0 );
 						break;
 					case 21:
 					case 22:
 					case 23:
 					case 24:
-						myInnerHtml( "ElementLabel"+i.toString(), "Earth "+ (MonsterOBJ[MonsterABC[j]][3] -20), 0 );
+						myInnerHtml( "ElementLabel"+i.toString(), "Earth "+ (MonsterOBJ2[MonsterABC2[j]][3] -20), 0 );
 						break;
 					case 31:
 					case 32:
 					case 33:
 					case 34:
-						myInnerHtml( "ElementLabel"+i.toString(), "Fire "+ (MonsterOBJ[MonsterABC[j]][3] -30), 0 );
+						myInnerHtml( "ElementLabel"+i.toString(), "Fire "+ (MonsterOBJ2[MonsterABC2[j]][3] -30), 0 );
 						break;
 					case 41:
 					case 42:
 					case 43:
 					case 44:
-						myInnerHtml( "ElementLabel"+i.toString(), "Wind "+ (MonsterOBJ[MonsterABC[j]][3] -40), 0 );
+						myInnerHtml( "ElementLabel"+i.toString(), "Wind "+ (MonsterOBJ2[MonsterABC2[j]][3] -40), 0 );
 						break;
 					case 51:
 					case 52:
 					case 53:
 					case 54:
-						myInnerHtml( "ElementLabel"+i.toString(), "Poison "+ (MonsterOBJ[MonsterABC[j]][3] -50), 0 );
+						myInnerHtml( "ElementLabel"+i.toString(), "Poison "+ (MonsterOBJ2[MonsterABC2[j]][3] -50), 0 );
 						break;
 					case 61:
 					case 62:
 					case 63:
 					case 64:
-						myInnerHtml( "ElementLabel"+i.toString(), "Holy "+ (MonsterOBJ[MonsterABC[j]][3] -60), 0 );
+						myInnerHtml( "ElementLabel"+i.toString(), "Holy "+ (MonsterOBJ2[MonsterABC2[j]][3] -60), 0 );
 						break;
 					case 71:
 					case 72:
 					case 73:
 					case 74:
-						myInnerHtml( "ElementLabel"+i.toString(), "Shadow "+ (MonsterOBJ[MonsterABC[j]][3] -70), 0 );
+						myInnerHtml( "ElementLabel"+i.toString(), "Shadow "+ (MonsterOBJ2[MonsterABC2[j]][3] -70), 0 );
 						break;
 					case 81:
 					case 82:
 					case 83:
 					case 84:
-						myInnerHtml( "ElementLabel"+i.toString(), "Ghost "+ (MonsterOBJ[MonsterABC[j]][3] -80), 0 );
+						myInnerHtml( "ElementLabel"+i.toString(), "Ghost "+ (MonsterOBJ2[MonsterABC2[j]][3] -80), 0 );
 						break;
 					case 91:
 					case 92:
 					case 93:
 					case 94:
-						myInnerHtml( "ElementLabel"+i.toString(), "Undead "+ (MonsterOBJ[MonsterABC[j]][3] -90), 0 );
+						myInnerHtml( "ElementLabel"+i.toString(), "Undead "+ (MonsterOBJ2[MonsterABC2[j]][3] -90), 0 );
 						break;
 					default:
 						myInnerHtml( "ElementLabel"+i.toString(), "Error", 0 );
 						break;
 				}
-				myInnerHtml( "HitLabel"+i.toString(), MonsterOBJ[MonsterABC[j]][21], 0 );
-				myInnerHtml( "FleeLabel"+i.toString(), MonsterOBJ[MonsterABC[j]][22], 0 );
-				myInnerHtml( "DefLabel"+i.toString(), MonsterOBJ[MonsterABC[j]][14], 0 );
-				myInnerHtml( "MDefLabel"+i.toString(), MonsterOBJ[MonsterABC[j]][15], 0 );
+				myInnerHtml( "HitLabel"+i.toString(), MonsterOBJ2[MonsterABC2[j]][21], 0 );
+				myInnerHtml( "FleeLabel"+i.toString(), MonsterOBJ2[MonsterABC2[j]][22], 0 );
+				myInnerHtml( "DefLabel"+i.toString(), MonsterOBJ2[MonsterABC2[j]][14], 0 );
+				myInnerHtml( "MDefLabel"+i.toString(), MonsterOBJ2[MonsterABC2[j]][15], 0 );
 				myInnerHtml( "BaseExpHPLabel"+i.toString(), bexphp.toFixed(2), 0 );
 				myInnerHtml( "JobExpHPLabel"+i.toString(), jexphp.toFixed(2), 0 );
 			}

@@ -1382,7 +1382,7 @@ ITEM_NAME = [
 ,[1379,0,0,"Gentleman's Pipe","Animated", 0]
 ,[1380,0,0,"Blue Pajama Hat", 0]
 ,[1381,0,0,"Agent Katar", 0]
-,[1382,0,0,"Guillotine Katar", "Increases damage inflicted with [Cross Impact] by 30%", 0]
+,[1382,0,0,"Guillotine Katar", 0]
 ,[1383,0,0,"Ignis Steel", 0]
 ,[1384,0,0,"End Sectora", 0]
 ,[1385,0,0,"Cannon Spear", "Increases damage inflicted with [Cannon Spear] by 10%<br/>Each refine increases this skill's damage by 3%", 0]

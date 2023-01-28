@@ -10,8 +10,8 @@ SaveStr1 = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, //0-9
 			3, 1, 3, 1, 3, 1, 3, 1, 3, 1, //90-99
 			3, 3, 3, 3, 3, 3, 3, 3, 3, 3, //100-109
 			3, 3, 3, 3, 3, 3, 3, 3, 3, 3, //110-119
-			3, 3, 3, 3, 3, 3, 3];         //120-126
-maxcookie = 126;
+			3, 3, 3, 3, 3, 3, 3, 3, 1];   //120-128
+maxcookie = 128;
 
 // Load from Cookies
 function LoadCookie()
@@ -21,6 +21,7 @@ function LoadCookie()
 	cookieNum = formElements["saveList"].value;
 	SaveData = document.cookie.split("; ");
 	wStr = "";
+	
 	
 	for ( var i = 0; SaveData[i]; i++ )
 	{
@@ -107,7 +108,12 @@ function LoadCookie()
 	{
 		SuperNoviceFullWeaponCHECK = 0;
 	}
-
+	if(!isNaN(SaveData[128]))
+	{
+		formElements["A_Patch_Num"].value = SaveData[128];
+		ChangePatch();
+	}//set server patch
+	
 	formElements["A_JOB"].value = SaveData[0];
 	ChangeJob(SaveData[0]);
 	formElements["A_BaseLV"].value = SaveData[1];
@@ -736,15 +742,16 @@ function SaveCookie()
 	{
 		SaveData[125] = parseInt(formElements["A_Mal_Ench3"].value);
 		SaveData[126] = parseInt(formElements["A_Mal_Ench4"].value);
+		SaveData[127] = 0; // not used yet
 		//SaveData[127] = parseInt(formElements[""].value); // not used yet
 	}
 	else
 	{
 		SaveData[125] = 0;
 		SaveData[126] = 0;
-		 //SaveData[127] = 0; // not used yet
+		SaveData[127] = 0; // not used yet
 	}
-	// SaveData[128] = parseInt(formElements[""].value); //free
+	SaveData[128] = PATCH; //Server Patch
 	// SaveData[129] = parseInt(formElements[""].value); //free
 	// SaveData[130] = parseInt(formElements[""].value); //free
 	
@@ -955,19 +962,20 @@ function URLOUT()
 	if ( n_Nitou )
 	{
 		SaveData[index++] = NtoS2( parseInt(formElements["A_Mal_Ench3"].value), 3 );
-		SaveData[index] = NtoS2( parseInt(formElements["A_Mal_Ench4"].value), 3 );
+		SaveData[index++] = NtoS2( parseInt(formElements["A_Mal_Ench4"].value), 3 );
+		SaveData[index++] = NtoS2(0,3); // not used yet
 		// SaveData[127] = parseInt(formElements[""].value); // not used yet
 	}
 	else
 	{
 		SaveData[index++] = NtoS2( 0, 3 );
-		// console.log("SaveData[nitou "+(index -1)+"]"+ SaveData[index -1]);
-		SaveData[index] = NtoS2( 0, 3 );
-		// console.log("Index[]"+ index);
-		// console.log("SaveData[nitou2]"+ SaveData[index -1]);
-		
-		 // SaveData[127] = 0; // not used yet
+		SaveData[index++] = NtoS2( 0, 3 );
+		SaveData[index++] = NtoS2(0,3);  // not used yet
 	}
+	console.log(NtoS2(parseInt(formElements["A_Patch_Num"].value)));
+	console.log(index);
+	SaveData[index] = NtoS2(parseInt(formElements["A_Patch_Num"].value),1);  // Server Patch
+	
 	// Acolyte Buffs
 	
 /*	for ( var i = 0; i < ksAcolyteBuffCount && acolyteBuffs[i] === 0; i++ );
@@ -1176,6 +1184,16 @@ with( document.calcForm )
 			SuperNoviceFullWeaponCHECK = 1;
 		else
 			SuperNoviceFullWeaponCHECK = 0;
+		var max = StoN2(w.substr(80,2));
+		
+		if (!(StoN2(w.substr(212+max,1,1))===undefined)) 
+		{
+			document.calcForm.A_Patch_Num.value = StoN2(w.substr(212+max,1));// Server Patch
+			ChangePatch();
+		}
+		
+		
+		
 		var w_Version = StoN2(w.substr(0,1));
 		A_JOB.value = StoN2(w.substr(1,2));
 		ChangeJob(StoN2(w.substr(1,2)),2);
@@ -1259,10 +1277,10 @@ with( document.calcForm )
 		var wn = StoN2(w.substr(79,1));
 		A_youshi.checked = Math.floor(wn / 16);
 
-		var max = StoN2(w.substr(80,2));
+		
 		for(var i=0;i<max;i++)
 		{
-			formElements["A_Skill" + i].value = StoN2(w.substr(81+i,1));
+			formElements["A_Skill" + i].value = StoN2(w.substr(82+i,1));	
 		}
 
 		var index = 82 + max;
@@ -1361,7 +1379,25 @@ with( document.calcForm )
 		index=index + 3;
 		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_HEAD_UPPER_ENCHANT_2.value = StoN2(w.substr(index,3));
 		index=index + 3;
+		
+		if ( n_Nitou )
+		{
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_Mal_Ench3.value = StoN2(w.substr(index,3));
+			index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_Mal_Ench4.value = StoN2(w.substr(index,3));
+			index=index + 3;
+			// if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.[not_yet].value = StoN2(w.substr(index,3));
+			index=index + 3;
 
+			// SaveData[127] = parseInt(formElements[""].value); // not used yet
+		}
+		else
+		{
+			index=index + 3;
+			index=index + 3;
+			index=index + 3;
+		}
+		
 		StCalc();
 		/*var x = 81 + max;
 		if(StoN2(w.substr(x,1)) == 1)
@@ -1911,8 +1947,14 @@ with( document.calcForm )
 		var w_Version = StoN2(w.substr(0,1));
 		A_JOB.value = StoN2(w.substr(1,2));
 		ChangeJob(StoN2(w.substr(1,2)),2);
-		A_BaseLV.value = StoN2(w.substr(3,2));
-		A_JobLV.value = StoN2(w.substr(5,2));
+		if(StoN2(w.substr(3,2))<=CONST_MAXLVL_THIRD)
+			A_BaseLV.value = StoN2(w.substr(3,2));
+		else
+			A_BaseLV.value = CONST_MAXLVL_THIRD;
+		if(thirdClass && (StoN2(w.substr(5,2)) >= CONST_MAXJOBLVL_THIRD))
+			A_JobLV.value = CONST_MAXJOBLVL_THIRD;
+		else
+			A_JobLV.value = StoN2(w.substr(5,2));
 		A_STR.value = StoN2(w.substr(7,2));
 		A_AGI.value = StoN2(w.substr(9,2));
 		A_VIT.value = StoN2(w.substr(11,2));

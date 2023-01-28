@@ -233,12 +233,20 @@ function StCalc(nSC)
 			{
 				wStPoint += Math.floor(i / 5) + 3;
 			}
-			else if (i <= 159 || i == 161 || i == 170)
+			else if(i <= 150)
 			{
-				wStPoint += Math.floor( ( i - 100 ) / 10 ) + 23;
-			} else {
-				wStPoint += Math.floor( ( i - 100 ) / 10 ) + 24;
+				wStPoint += Math.floor(i / 10) + 13;
 			}
+			else
+			{
+				wStPoint += Math.floor((i-150) / 7) + 28;
+			}
+			// else if (i <= 159 || i == 161 || i == 170)
+			// {
+				// wStPoint += Math.floor( ( i - 100 ) / 10 ) + 23;
+			// } else {
+				// wStPoint += Math.floor( ( i - 100 ) / 10 ) + 24;
+			// }
 		}
 	}
 	else
@@ -251,12 +259,20 @@ function StCalc(nSC)
 				{
 					wStPoint += Math.floor(i / 5) + 3;
 				}
-				else if (i <= 159 || i == 161 || i == 170)
+				else if(i <= 150)
 				{
-					wStPoint += Math.floor( ( i - 100 ) / 10 ) + 23;
-				} else {
-					wStPoint += Math.floor( ( i - 100 ) / 10 ) + 24;
+					wStPoint += Math.floor(i / 10) + 13;
 				}
+				else
+				{
+					wStPoint += Math.floor((i-150) / 7) + 28;
+				}
+				// else if (i <= 159 || i == 161 || i == 170)
+				// {
+					// wStPoint += Math.floor( ( i - 100 ) / 10 ) + 23;
+				// } else {
+					// wStPoint += Math.floor( ( i - 100 ) / 10 ) + 24;
+				// }
 
 		    }
 		}
@@ -269,12 +285,20 @@ function StCalc(nSC)
 				{
 					wStPoint += Math.floor( i / 5 ) + 3;
 				}
-				else if (i <= 159 || i == 161 || i == 170)
+				else if(i <= 150)
 				{
-					wStPoint += Math.floor( ( i - 100 ) / 10 ) + 23;
-				} else {
-                                	wStPoint += Math.floor( ( i - 100 ) / 10 ) + 24;
-                                }
+					wStPoint += Math.floor(i / 10) + 13;
+				}
+				else
+				{
+					wStPoint += Math.floor((i-150) / 7) + 28;
+				}
+				// else if (i <= 159 || i == 161 || i == 170)
+				// {
+					// wStPoint += Math.floor( ( i - 100 ) / 10 ) + 23;
+				// } else {
+                                	// wStPoint += Math.floor( ( i - 100 ) / 10 ) + 24;
+                                // }
 			}
 		}
 	}
@@ -554,7 +578,10 @@ function AdjustJobLevelList( job )
 	}
         else if ( (cls_RUN <= job && job <= cls_GENt) || job == cls_REB )
         {
-		maxJobLvl = 60;
+			if(PATCH == 0)
+				maxJobLvl = 60;
+			else
+				maxJobLvl = 65;
         }    
 	else
 	{

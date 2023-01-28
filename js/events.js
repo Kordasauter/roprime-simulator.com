@@ -149,8 +149,16 @@ function ChangeJob( n )
 		else
 			JobASPD[20][7] = 0;
 	}
-
+	
 	ClickWeaponType(0);
+	ClickWeapon( 0,0 );
+	ClickWeapon2( 0,0 );
+	ClickShield( 0,0 );
+	ClickGarment( 0,0 );
+	ClickShoes( 0,0 );
+	ClickArmor( 0,0 );
+	ClickAcces( 0,0 );
+	ClickHeadUp( 0,0 );
 
 //	if(n_SaveMode == 0) // new
 //		SetShortCut();
@@ -2893,7 +2901,8 @@ with(document.calcForm)
 	myInnerHtml( "AASkill4", "", 0 );
 		
 	if ( n_A_ActiveSkill == skill_ME_CART_REVOLUTION ||
-		 n_A_ActiveSkill == skill_MS_HIGH_SPEED_CART_RAM )
+		 n_A_ActiveSkill == skill_MS_HIGH_SPEED_CART_RAM ||
+		 n_A_ActiveSkill == skill_GEN_CART_TORNADO)
 	{
 		myInnerHtml("AASkillName","<br/>Cart Weight:",0);
 		myInnerHtml("AASkill",'<input type="text" name="SkillSubNum" value="8000" size=8>',0);

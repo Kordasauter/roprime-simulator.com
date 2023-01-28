@@ -19,6 +19,7 @@
 		<!--tables-->
 		<script type="text/javascript" src="js/defines.js"></script>
 		<script type="text/javascript" src="js/monster.js"></script>
+		<script type="text/javascript" src="js/monster_new.js"></script>
 		<!--functions-->
 		<script type="text/javascript" src="js/scaler.js"></script>
 		<!--form-->
@@ -28,19 +29,45 @@
 
 		<link rel="stylesheet" type="text/css" href="js/style.css">
 		
-		<!--Google AdSense-->
+			<!-- AdSense -->
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6824539470557939"
      crossorigin="anonymous"></script>
-		<!--Google Analytics-->
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-78085FSM4Q"></script>
-		<script>
+		<!-- Analytics -->
+		<script type="text/plain" data-cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-78085FSM4Q"></script>
+		<script type="text/plain" data-cookie-consent="tracking">
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
 
 		  gtag('config', 'G-78085FSM4Q');
 		</script>
+
+		<!-- Cookie Consent by PrivacyPolicies.com https://www.PrivacyPolicies.com -->
+		<script type="text/javascript" src="https://www.privacypolicies.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
+		<script type="text/javascript" charset="UTF-8">
+		document.addEventListener('DOMContentLoaded', function () {
+		cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palette":"light","language":"en","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"Ragnarok Prime Simulator"});
+		});
+		</script>
+
+		<!-- AdSense -->
+		<script type="text/plain" data-cookie-consent="targeting" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6824539470557939" 
+			  crossorigin="anonymous"></script>
+		<!-- end of AdSense-->
+
+		<!-- Analytics -->
+		<script type="text/plain" data-cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-78085FSM4Q"></script>
+				<script type="text/plain" data-cookie-consent="tracking">
+				  window.dataLayer = window.dataLayer || [];
+				  function gtag(){dataLayer.push(arguments);}
+				  gtag('js', new Date());
+
+				  gtag('config', 'G-78085FSM4Q');
+				</script>
+		<!-- end of Analytics-->
+
+		<!-- <noscript>Cookie Consent by <a href="https://www.privacypolicies.com/" rel="noopener">Privacy Policies website</a></noscript> -->
+		<!-- End Cookie Consent by PrivacyPolicies.com https://www.PrivacyPolicies.com -->
 		
 	</head>
     <body onload="BuildSearchTable()" >
@@ -67,7 +94,175 @@
 						<tbody>
 							<tr>
 								<td class="bgDkRow1 padded">
-								<span id="Search">
+									<span id="Search">
+										<div class="bgMdTitle mdTitle" onclick="ToggleVisibility('Level')">Character</div>
+										<div id="Level" style="display:block">
+											<table class="bgLtTable">
+												<tbody>
+													<tr>
+														<td id="RangeLevelLabel" class="bgLtRow3 padded optCaption">Range Lv.</td>
+														<td id="RangeLevelInput" class="bgLtRow1 padded optArea">
+															<select id="RangeLevel" style="width:100px;">
+																<option value="0">0</option>
+																<option value="1">±1</option>
+																<option value="2">±2</option>
+																<option value="3">±3</option>
+																<option value="4">±4</option>
+																<option value="5">±5</option>
+																<option value="6">±6</option>
+																<option value="7">±7</option>
+																<option value="8">±8</option>
+																<option value="9">±9</option>
+																<option value="10">±10</option>
+																<option value="11">±11</option>
+																<option value="12">±12</option>
+																<option value="13">±13</option>
+																<option value="14">±14</option>
+																<option value="15">±15</option>
+																<option value="16">-5 to +15 (100%~140% exp)</option>
+																<option value="17">-10 to +15 (95%~140% exp)</option>
+																<option value="18">-15 to +15 (90%~140% exp)</option>
+																<option value="19">-20 to +15 (85%~140% exp)</option>
+																<option value="20">-25 to +15 (60%~140% exp)</option>
+																<option value="21">-30 to +15 (35%~140% exp)</option>
+															</select>
+														</td>
+														<td id="PremiumLabel" class="bgLtRow3 padded optCaption">Premium</td>
+														<td id="PremiumInput" class="bgLtRow1 padded optArea">
+															<input type="checkbox" id="Premium">
+														</td>
+														<td id="BaseManualLabel" class="bgLtRow3 padded optCaption">Battle Manual (Base Exp)</td>
+														<td id="BaseManualInput" class="bgLtRow1 padded optArea">
+															<select id="BaseManual" style="width:70px;">
+																<option value="0">None</option>
+																<option value="1">+30%</option>
+																<option value="2">+50%</option>
+																<option value="3">+75%</option>
+																<option value="4">+100%</option>
+															</select>
+														</td>
+														<td id="JobManualLabel" class="bgLtRow3 padded optCaption">Battle Manual (Job Exp)</td>
+														<td id="JobManualInput" class="bgLtRow1 padded optArea">
+															<select id="JobManual" style="width:70px;">
+																<option value="0">None</option>
+																<option value="1">+30%</option>
+																<option value="2">+50%</option>
+																<option value="3">+75%</option>
+																<option value="4">+100%</option>
+															</select>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bgMdTitle mdTitle" onclick="ToggleVisibility('Race')">Race &amp; Element</div>
+										<div id="Race" style="display:block">
+											<table class="bgLtTable">
+												<tbody>
+													<tr>
+														<td id="RCFormlessLabel" class="bgLtRow3 padded optCaption">Formless</td>
+														<td id="RCFormlessInput" class="bgLtRow1 padded optArea">
+															<input type="checkbox" id="RC_Formless" checked="">
+														</td><td id="RCUndeadLabel" class="bgLtRow3 padded optCaption">Undead</td>
+														<td id="RCUndeadInput" class="bgLtRow1 padded optArea">
+														<input type="checkbox" id="RC_Undead" checked="">
+														</td>
+														<td id="RCBruteLabel" class="bgLtRow3 padded optCaption">Brute </td>
+														<td id="RCBruteInput" class="bgLtRow1 padded optArea">
+														<input type="checkbox" id="RC_Brute" checked=""></td>
+														<td id="RCPlantLabel" class="bgLtRow3 padded optCaption">Plant</td>
+														<td id="RCPlantInput" class="bgLtRow1 padded optArea">
+														<input type="checkbox" id="RC_Plant" checked=""></td>
+														<td id="RCInsectLabel" class="bgLtRow3 padded optCaption">Insect</td>
+														<td id="RCInsectInput" class="bgLtRow1 padded optArea">
+														<input type="checkbox" id="RC_Insect" checked="">
+														</td>
+														<td id="RCFishLabel" class="bgLtRow3 padded optCaption">Fish</td>
+														<td id="RCFishInput" class="bgLtRow1 padded optArea">
+															<input type="checkbox" id="RC_Fish" checked="">
+														</td>
+														<td id="RCDemonLabel" class="bgLtRow3 padded optCaption">Demon</td>
+														<td id="RCDemonInput" class="bgLtRow1 padded optArea">
+														<input type="checkbox" id="RC_Demon" checked=""></td>
+														<td id="RCDemi_HumanLabel" class="bgLtRow3 padded optCaption">Demi Human</td>
+														<td id="RCDemi_HumanInput" class="bgLtRow1 padded optArea">
+														<input type="checkbox" id="RC_Demi_Human" checked=""></td>
+														<td id="RCAngelLabel" class="bgLtRow3 padded optCaption">Angel</td>
+														<td id="RCAngelInput" class="bgLtRow1 padded optArea">
+														<input type="checkbox" id="RC_Angel" checked=""></td>
+														<td id="RCDragonLabel" class="bgLtRow3 padded optCaption">Dragon</td>
+														<td id="RCDragonInput" class="bgLtRow1 padded optArea">
+															<input type="checkbox" id="RC_Dragon" checked="">
+														</td>
+													</tr>
+													<tr>
+														<td id="ELENeutralLabel" class="bgLtRow3 padded optCaption">Neutral</td>
+														<td id="ELENeutralInput" class="bgLtRow1 padded optArea">
+														<input type="checkbox" id="ELE_Neutral" checked=""></td>
+														<td id="ELEWaterLabel" class="bgLtRow3 padded optCaption">Water</td>
+														<td id="ELEWaterInput" class="bgLtRow1 padded optArea">
+														<input type="checkbox" id="ELE_Water" checked=""></td>
+														<td id="ELEEarthLabel" class="bgLtRow3 padded optCaption">Earth</td>
+														<td id="ELEEarthInput" class="bgLtRow1 padded optArea">
+														<input type="checkbox" id="ELE_Earth" checked=""></td>
+														<td id="ELEFireLabel" class="bgLtRow3 padded optCaption">Fire</td>
+														<td id="ELEFireInput" class="bgLtRow1 padded optArea">
+														<input type="checkbox" id="ELE_Fire" checked=""></td>
+														<td id="ELEWindLabel" class="bgLtRow3 padded optCaption">Wind</td>
+														<td id="ELEWindInput" class="bgLtRow1 padded optArea">
+														<input type="checkbox" id="ELE_Wind" checked=""></td>
+														<td id="ELEPoisonLabel" class="bgLtRow3 padded optCaption">Poison</td>
+														<td id="ELEPoisonInput" class="bgLtRow1 padded optArea">
+														<input type="checkbox" id="ELE_Poison" checked=""></td>
+														<td id="ELEHolyLabel" class="bgLtRow3 padded optCaption">Holy</td>
+														<td id="ELEHolyInput" class="bgLtRow1 padded optArea">
+														<input type="checkbox" id="ELE_Holy" checked=""></td>
+														<td id="ELEShadowLabel" class="bgLtRow3 padded optCaption">Shadow</td>
+														<td id="ELEShadowInput" class="bgLtRow1 padded optArea">
+														<input type="checkbox" id="ELE_Shadow" checked=""></td>
+														<td id="ELEGhostLabel" class="bgLtRow3 padded optCaption">Ghost</td>
+														<td id="ELEGhostInput" class="bgLtRow1 padded optArea">
+														<input type="checkbox" id="ELE_Ghost" checked=""></td>
+														<td id="ELEUndeadLabel" class="bgLtRow3 padded optCaption">Undead</td>
+														<td id="ELEUndeadInput" class="bgLtRow1 padded optArea">
+															<input type="checkbox" id="ELE_Undead" checked="">
+														</td>
+													</tr>
+													<tr>
+														<td id="SizeSmallLabel" class="bgLtRow3 padded optCaption">Small</td>
+														<td id="SizeSmallInput" class="bgLtRow1 padded optArea">
+															<input type="checkbox" id="SizeSmall" checked="">
+														</td>
+														<td id="SizeMediumLabel" class="bgLtRow3 padded optCaption">Medium</td>
+														<td id="SizeMediumInput" class="bgLtRow1 padded optArea">
+															<input type="checkbox" id="SizeMedium" checked="">
+														</td>
+														<td id="SizeLargeLabel" class="bgLtRow3 padded optCaption">Large</td>
+														<td id="SizeLargeInput" class="bgLtRow1 padded optArea">
+															<input type="checkbox" id="SizeLarge" checked="">
+														</td>
+														<td class="bgLtRow1 padded optCaption"></td>
+														<td class="bgLtRow1 padded optArea"></td>
+														<td class="bgLtRow1 padded optCaption"></td>
+														<td class="bgLtRow1 padded optArea"></td>
+														<td class="bgLtRow1 padded optCaption"></td>
+														<td class="bgLtRow1 padded optArea"></td>
+														<td class="bgLtRow1 padded optCaption"></td>
+														<td class="bgLtRow1 padded optArea"></td>
+														<td class="bgLtRow1 padded optCaption"></td>
+														<td class="bgLtRow1 padded optArea"></td>
+														<td class="bgLtRow1 padded optCaption"></td>
+														<td class="bgLtRow1 padded optArea"></td>
+														<td class="bgLtRow1 padded optCaption"></td>
+														<td class="bgLtRow1 padded optArea"></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div id="SearchInput" class="bgLtRow1 padded optArea">
+											<input type="button" id="Search" value="Search" onclick="BuildMonsterTable()">
+										</div>
+									</span>
 								</td>
 							</tr>
 							<tr>
