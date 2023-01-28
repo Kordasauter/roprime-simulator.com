@@ -31,6 +31,7 @@ function GetBaseDmg( weaponElement, forced, addMasteries )
 	finalWeaponAttack[2] = ( baseWeaponAttack + varianceAttack + overrefineAttack ) * weaponSizeMod;
 	finalWeaponAttack[1] = Math.floor( ( finalWeaponAttack[0] + finalWeaponAttack[2] ) / 2 );
 	var MB = 0;
+	
 	for ( var i = 0; i < 3; i++ )
 	{
 		// add equipment attack
@@ -1094,7 +1095,10 @@ function CalcEquipAtk()
 			}
 		}
 	}
-	
+	if(CardNumSearch(812) && EquipNumSearch(121))
+	{//Resentful Munak Card + Girl's Diary
+		equipmentAttack += 100;
+	}
 	
 	
 	
@@ -1365,10 +1369,10 @@ function CalcMasteryAtk()
 	{ // sprint
 		masteryAttack += 10 * SkillSearch(skill_TK_SPRINT );
 	}
-	if ( n_A_WeaponType !== weapTyp_NONE && SkillSearch( skill_LK_AURA_BLADE ) )
-	{ // aura blade
-		masteryAttack += n_A_BaseLV * (SkillSearch( skill_LK_AURA_BLADE ) + 3);
-	}
+	// if ( n_A_WeaponType !== weapTyp_NONE && SkillSearch( skill_LK_AURA_BLADE ) )
+	// { // aura blade
+		// masteryAttack += n_A_BaseLV * (SkillSearch( skill_LK_AURA_BLADE ) + 3);
+	// }
 	if ( n_A_WeaponType == weapTyp_NONE && SkillSearch( skill_TK_SPRINT ) )
 	{ // sprint bonus to kicks
 		if ( n_A_ActiveSkill == skill_TK_TORNADO_KICK ||
@@ -2132,6 +2136,12 @@ function CalcAttackMod()
 		if(n_A_WeaponType == weapTyp_BOW)
 			n_tok[bon_PHY_ATK] += 15;
 	}
+	
+	if(CardNumSearch(828) && EquipNumSearch(2393))
+	{//Restless Dead Card + Vampire's Familiar [1]
+		n_tok[bon_PHY_ATK] += Math.floor(n_A_BODY_DEF_PLUS / 3);
+	}
+	
 	attackMod *= ( 100 + n_tok[bon_PHY_ATK] ) / 100;
 	
 	var cardnEquipBonus = StPlusCalc2( bon_DMG_MONSTER+n_B[en_ID] ) + StPlusCard( bon_DMG_MONSTER+n_B[en_ID] );
@@ -2735,6 +2745,11 @@ function CalcRangedMod()
 				n_tok[bon_DMG_RANGE] += (5 * CardNumSearch(771));
 		}
 	}
+	if(CardNumSearch(818))
+	{//Resentful Soldier Card
+		if(n_A_WeaponType == weapTyp_BOW && n_A_Weapon_ATKplus >= 10)
+			n_tok[bon_DMG_RANGE] += 20;
+	}
 	
 //Enchants
 	if(EnchNumSearch( 1403 ))
@@ -2792,9 +2807,7 @@ function CalcWeaponSizeMod()
 	// Skills
 	if( SkillSearch( skill_KN_CAVALIER_MASTERY ) || SkillSearch( skill_RUN_DRAGON_TRAINING ) )
 	{
-		if ( ( n_A_WeaponType === weapTyp_SPEAR ||
-			   n_A_WeaponType === weapTyp_2HSPEAR ) &&
-			 n_B[en_SIZE] === siz_MEDIUM )
+		if ( n_A_WeaponType === weapTyp_SPEAR || n_A_WeaponType === weapTyp_2HSPEAR )
 		{
 			// spears do 100% damage to
 			// medium monsters while on a mount
@@ -5485,6 +5498,11 @@ function calcPDodge( n_A_LUCKY )
 	if(CardNumSearch(743) && (n_A_JOB == cls_GLT || n_A_JOB == cls_GLTt))
 	{//Guillotine Cross Eremes Card
 		n_A_LUCKY += 10;
+	}
+	
+	if(CardNumSearch(827) && EquipNumSearch(2393))
+	{//Matte Drainliar Card + Vampire's Familiar [1]
+		n_A_LUCKY += 5;
 	}
 	
 //Shadows

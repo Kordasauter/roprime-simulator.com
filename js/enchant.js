@@ -316,7 +316,7 @@
 ,[314,"Place Holder",0,bon_NONE]
 ,[315,"Place Holder",0,bon_NONE]
 ,[316,"Archbishop Lv1",0,bon_HEAL_MUL,3,bon_NONE]
-,[317,"Place Holder",0,bon_NONE]
+,[317,"Archbishop Lv2","Increases the SP cost of skills by 5%.",bon_HEAL_MUL,3,bon_NONE]
 ,[318,"Place Holder",0,bon_NONE]
 ,[319,"Place Holder",0,bon_NONE]
 ,[320,"Place Holder",0,bon_NONE]
@@ -1539,6 +1539,11 @@
 ,[1537,"Magic Damage against boss +18%",0,bon_DMG_BOSS,18,bon_NONE]
 ,[1538,"Magic Damage against boss +19%",0,bon_DMG_BOSS,19,bon_NONE]
 ,[1539,"Magic Damage against boss +20%",0,bon_DMG_BOSS,20,bon_NONE]
+,[1540,"Conjure 1",0,bon_MATK,5,bon_RED_CAST,-3,bon_NONE]//Spell
+,[1541,"Conjure 2",0,bon_MATK,10,bon_RED_CAST,-3,bon_NONE]
+,[1542,"Conjure 3",0,bon_MATK,15,bon_RED_CAST,-3,bon_NONE]
+,[1543,"Conjure 4",0,bon_MATK,20,bon_RED_CAST,-3,bon_NONE]
+,[1544,"Conjure 5",0,bon_MATK,30,bon_RED_CAST,-5,bon_NONE]
 ];
 //,[  x,"name",0,bon_NONE]
 EnchantNum = EnchantOBJ.length -1;
@@ -1740,6 +1745,11 @@ EnchantNum = EnchantOBJ.length -1;
 /* 107 Horror Toy Factory Acc3 */ [0,1,2,3,4,11,12,13,14,21,22,23,24,31,32,33,34,41,42,43,44,51,52,53,54,"NULL"],
 /* 108 Horror Toy Factory Weap */ [0,215,216,217,218,219,220,223,224,225,191,192,193,246,247,248,249,446,447,448,449,450,271,"NULL"],
 /* 109 Horror Toy Factory */ [0,212,213,214,215,221,222,223,191,192,243,244,245,246,446,447,448,449,450,"NULL"],
+/* 110 Illusion Armor */ [0,1,2,3,4,11,12,13,14,21,22,23,24,31,32,33,34,41,42,43,44,51,52,53,54,1391,1392,1394,1395,1397,1398,1400,1401,1403,1404,1406,1407,"NULL"],
+/* 111 Illusion Accessory */ [0,1,2,3,4,11,12,13,14,21,22,23,24,31,32,33,34,41,42,43,44,51,52,53,54,81,82,83,84,85,101,102,103,104,"NULL"],
+/* 112 Illusion Weapon Lv3 Melee*/ [0,1,2,3,4,41,42,43,44,51,52,53,54,211,212,213,214,215,1351,1352,1353,1354,1355,271,272,1321,1322,1323,1324,1325,"NULL"],
+/* 113 Illusion Weapon Lv3 Range*/ [0,11,12,13,14,41,42,43,44,51,52,53,54,221,222,223,224,225,1341,1342,1343,1344,1345,271,272,231,232,233,234,235,"NULL"],
+/* 114 Illusion Weapon Lv3 Magic*/ [0,31,32,33,34,41,42,43,44,51,52,53,54,241,242,243,244,245,1540,1541,1542,1543,1544,316,317,"NULL"],
 ];
 }
 // /*  */[0,"NULL"],

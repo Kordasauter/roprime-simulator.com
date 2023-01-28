@@ -1880,7 +1880,19 @@ function StPlusCard( nSTP2 )
 			cardOBJ[n_A_card[i]][j + 4 - 2] != "bdex_hi" &&
 			cardOBJ[n_A_card[i]][j + 4 - 2] != "bluk_hi" &&
 			cardOBJ[n_A_card[i]][j + 4 - 2] != "blvl_hi" &&
-			cardOBJ[n_A_card[i]][j + 4 - 2] != "jlvl_hi" )
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "jlvl_hi" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "ev_head_ref" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "ev_body_ref" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "ev_weap_ref" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "ev_shield_ref" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "ev_garm_ref" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "ev_shoes_ref" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "head_ref_lvl" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "body_ref_lvl" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "weap_ref_lvl" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "shield_ref_lvl" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "garm_ref_lvl" &&
+			cardOBJ[n_A_card[i]][j + 4 - 2] != "shoes_ref_lvl")
 			{	//if there is no "refine over" or "for every x refine before" 
 				w += cardOBJ[n_A_card[i]][j + 4 + 1];
 			}

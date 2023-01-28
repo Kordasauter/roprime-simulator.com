@@ -2748,11 +2748,17 @@ function CalcSkillDamage()
 		}
 
 		CalcAtkMods02( w_SkillMod, 0 );
-
+		
+		var aura_blade = 0;
+		if ( n_A_WeaponType !== weapTyp_NONE && SkillSearch( skill_LK_AURA_BLADE ) )
+		{ // aura blade
+			aura_blade += n_A_BaseLV * (SkillSearch( skill_LK_AURA_BLADE ) + 3);
+		}
 		for ( var i = 0; i < 3; i++ )
 		{
 			w_MagiclBulet = i;
 			w_DMG[i] = CalcFinalDamage(n_A_DMG[i],i);
+			w_DMG[i] += aura_blade * wActiveHitNum;
 			if ( n_A_ActiveSkill==skill_CR_SHIELD_BOOMERANG_SL )
 			{
 				w_DMG[i] *= 2; 

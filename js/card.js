@@ -900,30 +900,39 @@ function SetCard()
 ,[809,   card_com_ARMOR,"Pot Dofle","",bon_USR_ELEMENT,ele_WATER,bon_RED_RC_FISH,10,0]
 ,[810,   card_comp_WEAPON,"Sedora","",bon_DMG_CRIT,15,0]
 ,[811,   card_com_GARMENT,"Kraken","Sightless Mind has a chance to cause Bleeding status.",bon_FLEE,10,bon_SKILL_ENABLE,22,bon_SKILL_ENABLE,67,0]
-//,[812,   ,"","",0]
-//,[813,   ,"","",0]
-//,[814,   ,"","",0]
-//,[815,   ,"","",0]
-//,[816,   ,"","",0]
-//,[817,   ,"","",0]
-//,[818,   ,"","",0]
-//,[819,   ,"","",0]
-//,[820,   ,"","",0]
-//,[821,   ,"","",0]
-//,[822,   ,"","",0]
-//,[823,   ,"","",0]
-//,[824,   ,"","",0]
-//,[825,   ,"","",0]
-//,[826,   ,"","",0]
-//,[827,   ,"","",0]
-//,[828,   ,"","",0]
-//,[829,   ,"","",0]
-//,[830,   ,"","",0]
-//,[831,   ,"","",0]
-//,[832,   ,"","",0]
-//,[833,   ,"","",0]
-//,[834,   ,"","",0]
-//,[835,   ,"","",0]
+//Illusion Dungeon 1
+//Illusion of Moonlight
+,[812,   card_comp_WEAPON,"Resentful Munak","",bon_ATK,15,bon_MATK,15,0]
+,[813,   itm_type_SET,"Resentful Munak + Munak","Adds a 2% chance of buffing the user for 5 seconds when performing a short-ranged attack:<br>-Adds a 50% chance of inflicting Stun on the target when performing a physical attack.",0]
+,[814,   card_com_ARMOR,"Resentful Bongun","",bon_ATK,20,bon_MATK,20,0]
+,[815,   itm_type_SET,"Resentful Bongun + Bongun","Adds a 2% chance of buffing the user for 5 seconds when receiving a short-ranged attack:<br>-Increases damage taken from Munak by 100%.",0]
+,[816,   card_com_ARMOR,"Resentful Sohee","",bon_MATK,10,"ref_lvl",10,bon_MATK_MUL,2,0]
+,[817,   itm_type_SET,"Resentful Sohee + Sohee","Adds a 2% chance of buffing the user for 5 seconds when performing a magical attack:<br>-SP Recovery + 100%",0]
+,[818,   card_comp_WEAPON,"Resentful Soldier","[If bow refine lv +10 or higher]<br>-Ranged damage +20%",bon_SKILL_AUTOCAST,161,0]
+,[819,   itm_type_SET,"Resentful Soldier + Archer Skeleton","Adds a 2% chance of buffing the user for 5 seconds when performing a physical attack:<br>-Aspd + 1.",0]
+,[820,   card_com_ARMOR,"Angry Nine Tail","",bon_CRIT,5,bon_DMG_CRIT,10,"ref_lvl",10,bon_CRIT,10,0]
+,[821,   itm_type_SET,"Angry Nine Tail + Nine Tail","Adds a 2% chance of buffing the user for 5 seconds when performing a short-ranged attack:<br>-Flee + 10.",0]
+,[822,   card_comp_HEAD,"Fury Hero","Adds a 0.5% chance of buffing the user for 5 seconds when performing a short-ranged attack:<br>-Buff: Level 1 Endure.",bon_PHY_ATK,2,0]
+,[823,   card_comp_WEAPON,"Wizard of Veritas","Adds a 0.5% chance of buffing the user for 5 seconds when performing a magical attack:<br>-The users casting cannot be interrupted outside of WoE.",bon_MATK,25,0]
+,[824,   card_com_ARMOR,"Angry Moonlight Flower","",bon_SKILL_ENABLE,71,0]
+,[825,   itm_type_SET,"Angry Moonlight Flower + Moonlight Flower","Adds a 7% chance of buffing the user for 5 seconds when performing a short-ranged attack:<br>-Perfect Dodge + 10.",0]
+//Illusion of Vampire
+,[826,   card_com_ARMOR,"Sweet Nightmare","The user's casting cannot be interrupted outside of WoE.<br><br><b>When equipping [Sweet Nightmare Card]+[Vampire's Familiar [1]] at the same time:</b><br>-[For each 3 refine lv of the armor]MATK +1%.",bon_MATK,20,0]
+,[827,   card_comp_HEAD,"Matte Drainliar","Status effect [Burn] resistance +100%<br><br><b>When equipping [Matte Drainliar Card]+[Vampire's Familiar [1]] at the same time:</b><br>-[Perfect Dodge] +5",0]
+,[828,   card_com_ARMOR,"Restless Dead","<br><br><b>When equipping [Restless Dead Card]+[Vampire's Familiar [1]] at the same time:</b><br>-[For each 3 refine lv of the armor]ATK +1%.",bon_ATK,20,bon_UNBREAKABLE,1,0]
+,[829,   card_com_ACC_R,"Bomi","<br><br><b>When equipping [Bomi Card]+[Vampire's Familiar [1]] at the same time:</b><br>-[MATK] +30.",bon_SKILL_ENABLE,72,0]
+,[830,   card_com_GARMENT,"Angry Dracula","<br><br><b>When equipping [Angry Dracula Card]+[Vampire's Familiar [1]] at the same time:</b><br>-Restores 30 HP and 1 SP to the user every 3 seconds.",bon_SKILL_ENABLE,73,0]
+,[831,   itm_type_SET,"Bomi + Angry Dracula","",bon_HP_ADD,1000,bon_SP_ADD,50,"garm_ref_lvl",9,bon_HP_ADD,1000,"garm_ref_lvl",9,bon_SP_ADD,50,0]
+//Illusion of Frozen
+,[832,   card_com_ARMOR,"Angry Gazeti","",bon_RED_RANGE,20,0]
+,[833,   card_com_ACC,"Angry Snowier","	Increases the recovery rate of the following consumables by 50%:<br>-Red Raffle Sap<br>-Yellow Raffle Sap<br>-White Raffle Sap",0]
+,[834,   card_com_ARMOR,"Angry Ice Titan","",bon_DEF,5,"ev_body_ref",1,bon_DEF,5,0]
+,[835,   card_com_ARMOR,"Awakened Ktullanux","<br><br><b>When equipping [Awakened Ktullanux Card]+[Saphien's Armor of Ocean [1]] at the same time:<br>-When recieving physical damage, there is a 5% chance to cast the skill [Waterball] Lv 5",bon_INC_MAGIC_WATER,20,"ev_body_ref",1,bon_INC_MAGIC_WATER,3,0]
+,[836,   itm_type_SET,"Angry Gazeti + Angry Snowier","",bon_RED_SIZ_SMALL,20,0]
+,[837,   itm_type_SET,"Angry Ice Titan + Angry Snowier","",bon_RED_SIZ_MEDIUM,20,0]
+//,[838,   ,"","",0]
+//,[839,   ,"","",0]
+//,[840,   ,"","",0]
 
 ];
 
@@ -1028,12 +1037,15 @@ w_SC = [
 ,[803,798,802,"NULL"] //Nightmare Mummy Set
 ,[804,801,799,"NULL"] //Nightmare Arclouse + Nightmare Minotaur
 ,[805,801,800,"NULL"] //Nightmare Arclouse + Nightmare Mimic
-// ,[,,,"NULL"] //
-// ,[,,,"NULL"] //
-// ,[,,,"NULL"] //
-// ,[,,,"NULL"] //
-// ,[,,,"NULL"] //
-// ,[,,,"NULL"] //
+,[813,812,125,"NULL"] //Resentful Munak + Munak
+,[815,814,370,"NULL"] //Resentful Bongun + Bongun
+,[817,816, 91,"NULL"] //Resentful Sohee + Sohee
+,[819,818,107,"NULL"] //Resentful Soldier + Archer Skeleton
+,[821,820,271,"NULL"] //Angry Nine Tail + Nine Tail
+,[825,824,140,"NULL"] //Angry Moonlight Flower + Moonlight Flower
+,[831,829,830,"NULL"] //Bomi + Angry Dracula
+,[836,832,833,"NULL"] //Angry Gazeti + Angry Snowier
+,[837,834,833,"NULL"] //Angry Ice Titan + Angry Snowier
 // ,[,,,"NULL"] //
 // ,[,,,"NULL"] //
 // ,[,,,"NULL"] //

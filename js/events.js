@@ -1261,6 +1261,45 @@ function ClickWeapon( data,isRefine )
 			formElements["A_WEAPON_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[108][i]][1],EnchantOBJ[EnchantListOBJ[108][i]][0]);
 		}
 	}
+	else if(weapon == 2382)
+	{//Illusion Sharpened Legbone of Ghoul
+		formElements["A_WEAPON_ENCHANT_2"].disabled = true;
+		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
+		formElements["A_WEAPON_ENCHANT_4"].disabled = false;
+		//Slot 4 & 3
+		formElements["A_WEAPON_ENCHANT_4"].options[0] = new Option(EnchantOBJ[EnchantListOBJ[112][i]][1],EnchantOBJ[EnchantListOBJ[112][i]][0]);
+		formElements["A_WEAPON_ENCHANT_3"].options[0] = new Option(EnchantOBJ[EnchantListOBJ[112][i]][1],EnchantOBJ[EnchantListOBJ[112][i]][0]);
+		formElements["A_WEAPON_ENCHANT_4"].options[1] = new Option("Physical");
+		formElements["A_WEAPON_ENCHANT_4"].options[1].disabled = true;
+		formElements["A_WEAPON_ENCHANT_3"].options[1] = new Option("Physical");
+		formElements["A_WEAPON_ENCHANT_3"].options[1].disabled = true;	
+		for ( var i = 1; EnchantListOBJ[112][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_WEAPON_ENCHANT_4"].options[i+1] = new Option(EnchantOBJ[EnchantListOBJ[112][i]][1],EnchantOBJ[EnchantListOBJ[112][i]][0]);
+			formElements["A_WEAPON_ENCHANT_3"].options[i+1] = new Option(EnchantOBJ[EnchantListOBJ[112][i]][1],EnchantOBJ[EnchantListOBJ[112][i]][0]);
+		}
+		formsize = formElements["A_WEAPON_ENCHANT_3"].length;
+		formElements["A_WEAPON_ENCHANT_4"].options[formsize] = new Option("Ranged");
+		formElements["A_WEAPON_ENCHANT_4"].options[formsize].disabled = true;
+		formElements["A_WEAPON_ENCHANT_3"].options[formsize] = new Option("Ranged");
+		formElements["A_WEAPON_ENCHANT_3"].options[formsize].disabled = true;
+		for ( var i = 1; EnchantListOBJ[113][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_WEAPON_ENCHANT_4"].options[i+formsize] = new Option(EnchantOBJ[EnchantListOBJ[113][i]][1],EnchantOBJ[EnchantListOBJ[113][i]][0]);
+			formElements["A_WEAPON_ENCHANT_3"].options[i+formsize] = new Option(EnchantOBJ[EnchantListOBJ[113][i]][1],EnchantOBJ[EnchantListOBJ[113][i]][0]);
+		}
+		formsize = formElements["A_WEAPON_ENCHANT_3"].length;
+		formElements["A_WEAPON_ENCHANT_4"].options[formsize] = new Option("Magical");
+		formElements["A_WEAPON_ENCHANT_4"].options[formsize].disabled = true;
+		formElements["A_WEAPON_ENCHANT_3"].options[formsize] = new Option("Magical");
+		formElements["A_WEAPON_ENCHANT_3"].options[formsize].disabled = true;
+		for ( var i = 1; EnchantListOBJ[114][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_WEAPON_ENCHANT_4"].options[i+formsize] = new Option(EnchantOBJ[EnchantListOBJ[114][i]][1],EnchantOBJ[EnchantListOBJ[114][i]][0]);
+			formElements["A_WEAPON_ENCHANT_3"].options[i+formsize] = new Option(EnchantOBJ[EnchantListOBJ[114][i]][1],EnchantOBJ[EnchantListOBJ[114][i]][0]);
+		}
+		
+	}
 	// else if(weapon == 9999)
 	// {
 		
@@ -1360,6 +1399,17 @@ function ClickShield(data, isRefine)
 		{
 			formElements["A_SHIELD_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[63][i]][1],EnchantOBJ[EnchantListOBJ[63][i]][0]);
 			formElements["A_SHIELD_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[63][i]][1],EnchantOBJ[EnchantListOBJ[63][i]][0]);
+		}
+	}
+	else if(shield_id == 2402 )  // Illusion Sacred Mission
+	{
+		CleanEnchant("A_SHIELD_ENCHANT");
+		formElements["A_SHIELD_ENCHANT_3"].disabled = false;
+		formElements["A_SHIELD_ENCHANT_4"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[110][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_SHIELD_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[110][i]][1],EnchantOBJ[EnchantListOBJ[110][i]][0]);
+			formElements["A_SHIELD_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[110][i]][1],EnchantOBJ[EnchantListOBJ[110][i]][0]);
 		}
 	}
 	else
@@ -1514,9 +1564,22 @@ function ClickGarment( data, isRefine )
 			}
 		}
 	}
+	else if(garm_id == 2374 || garm_id == 2387  || garm_id == 2399 )
+	{// Illusion Muffler || Illusion Ancient Cape || Illusion Survivor's Manteau
+		CleanEnchant("A_GARMENT_ENCHANT");
+		formElements["A_GARMENT_ENCHANT_4"].disabled = false;
+		formElements["A_GARMENT_ENCHANT_3"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[110][i] != "NULL"; i++ )
+		{
+			formElements["A_GARMENT_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[110][i]][1],EnchantOBJ[EnchantListOBJ[110][i]][0]);
+			formElements["A_GARMENT_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[110][i]][1],EnchantOBJ[EnchantListOBJ[110][i]][0]);
+		}
+		
+	}
 	// else if(garm_id == 9999)
 	// {
 		// CleanEnchant("A_GARMENT_ENCHANT");
+		
 	// }
 	else
 	{
@@ -1640,6 +1703,17 @@ function ClickShoes( data, isRefine )
 		formElements["A_SHOES_ENCHANT_4"].disabled = false;
 		formElements["A_SHOES_ENCHANT_3"].disabled = false;
 		formElements["A_SHOES_ENCHANT_2"].disabled = true;
+	}
+	else if(shoes_id == 2375 )
+	{// Illusion Shoes
+		CleanEnchant("A_SHOES_ENCHANT");
+		formElements["A_SHOES_ENCHANT_4"].disabled = false;
+		formElements["A_SHOES_ENCHANT_3"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[110][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_SHOES_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[110][i]][1],EnchantOBJ[EnchantListOBJ[110][i]][0]);
+			formElements["A_SHOES_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[110][i]][1],EnchantOBJ[EnchantListOBJ[110][i]][0]);
+		}
 	}
 	// else if(shoes_id == 9999)
 	// {
@@ -1819,6 +1893,18 @@ function ClickArmor( data, isRefine )
 			}
 		}
 		
+	}
+	else if(armor_id == 2368)
+	{// Illusion Puente Robe
+		if(!isRefine)
+			CleanEnchant("A_ARMOR_ENCHANT");
+		formElements["A_ARMOR_ENCHANT_4"].disabled = false;
+		formElements["A_ARMOR_ENCHANT_3"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[110][i] != "NULL"; i++ )
+		{
+			formElements["A_ARMOR_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[110][i]][1],EnchantOBJ[EnchantListOBJ[110][i]][0]);
+			formElements["A_ARMOR_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[110][i]][1],EnchantOBJ[EnchantListOBJ[110][i]][0]);
+		}
 	}
 	// else if(armor_id == 9999)
 	// {
@@ -2100,6 +2186,19 @@ function ClickAcces( data, numAccess )
 		}
 		formElements[formAcc + "_4"].disabled = false;
 	}
+	else if(access_id == 2389 || access_id == 2391 || access_id == 2393)
+	{ // Illusion Skull Ring || Illusion Ring || Vampire's Familiar
+		CleanEnchant(formAcc);
+		var ench1 = 111;
+		//Slot 4 & 3
+		for ( var i = 0; EnchantListOBJ[ench1][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench1][i]][1],EnchantOBJ[EnchantListOBJ[ench1][i]][0]);
+			formElements[formAcc + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench1][i]][1],EnchantOBJ[EnchantListOBJ[ench1][i]][0]);
+		}
+		formElements[formAcc + "_4"].disabled = false;
+		formElements[formAcc + "_3"].disabled = false;
+	}
 	// else if(access_id == 9999)
 	// {
 		// CleanEnchant(formAcc);
@@ -2182,6 +2281,28 @@ function ClickHeadUp( data, isRefine )
 		formElements["A_HEAD_UPPER_ENCHANT" + "_3"].disabled = false;
 		formElements["A_HEAD_UPPER_ENCHANT" + "_2"].disabled = true;
 	}
+	else if(head_up_id == 2370 || head_up_id == 2373 || head_up_id == 2398)
+	{// Illusion Nurse Cap || Illusion Apple of Archer || Illusion Cap
+		if(!isRefine)
+			CleanEnchant("A_HEAD_UPPER_ENCHANT");
+		formElements["A_HEAD_UPPER_ENCHANT" + "_4"].disabled = false;
+		formElements["A_HEAD_UPPER_ENCHANT" + "_3"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[110][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_HEAD_UPPER_ENCHANT" + "_4" ].options[i] = new Option(EnchantOBJ[EnchantListOBJ[110][i]][1],EnchantOBJ[EnchantListOBJ[110][i]][0]);
+			formElements["A_HEAD_UPPER_ENCHANT" + "_3" ].options[i] = new Option(EnchantOBJ[EnchantListOBJ[110][i]][1],EnchantOBJ[EnchantListOBJ[110][i]][0]);
+		}
+	}
+	// else if(head_up_id == 9999)
+	// {
+		// if(!isRefine)
+			// CleanEnchant("A_HEAD_UPPER_ENCHANT");
+		// formElements["A_HEAD_UPPER_ENCHANT" + "_4"].disabled = false;
+		// for ( var i = 0; EnchantListOBJ[999][i] != "NULL" && !isRefine; i++ )
+		// {
+			// formElements["A_HEAD_UPPER_ENCHANT" + "_4" ].options[i] = new Option(EnchantOBJ[EnchantListOBJ[999][i]][1],EnchantOBJ[EnchantListOBJ[999][i]][0]);
+		// }
+	// }
 	else
 	{
 		CleanEnchant("A_HEAD_UPPER_ENCHANT");
@@ -4553,6 +4674,146 @@ function Click_Card( CardIndex )
 					tempDesc += "<br>[If shoes refine level is "+ cardOBJ[CardIndex][i + 1] + " or higher]<br>";
 				}
 			}
+			if(cardOBJ[CardIndex][i].substr(0,7) == "set_ref")
+			{
+				
+				let flag = 0;
+				let first = true;
+				let tempDesc = "";
+				flag = parseInt(cardOBJ[CardIndex][i].substr(7));
+				if((flag - 64)>=0)
+				{
+					tempDesc += "Shoes";
+					first = false;
+					flag = flag - 64;
+				}
+				if((flag - 32)>=0)
+				{
+					if(first)
+						tempDesc += "Garment";
+					else
+						tempDesc += " and Garment";
+					first = false;
+					flag = flag - 32;
+				}
+				if((flag - 16)>=0)
+				{
+					if(first)
+						tempDesc += "Shield";
+					else
+						tempDesc += " and Shield";
+					first = false;
+					flag = flag - 16;
+				}
+				if((flag - 8)>=0)
+				{
+					if(first)
+						tempDesc += "Armor";
+					else
+						tempDesc += " and Armor";
+					first = false;
+					flag = flag - 8;
+				}
+				if((flag - 4)>=0)
+				{
+					if(first)
+						tempDesc += "Headgear";
+					else
+						tempDesc += " and Headgear";
+					first = false;
+					flag = flag - 4;
+				}
+				if((flag - 2)>=0)
+				{
+					if(first)
+						tempDesc += "Weapon (left)";
+					else
+						tempDesc += " and Weapon (left)";
+					first = false;
+					flag = flag - 2;
+				}
+				if((flag - 1)>=0)
+				{
+					if(first)
+						tempDesc += "Weapon";
+					else
+						tempDesc += " and Weapon";
+					first = false;
+					flag = flag - 1;
+				}
+				if(tempDesc != "[if "+tempDesc+" refine level is "+ cardOBJ[CardIndex][j + 1] + " or higher]<br>")
+				{
+					tempDesc = "[if "+tempDesc+" refine level is "+ cardOBJ[CardIndex][j + 1] + " or higher]<br>";
+					descriptionString += "<br>[if "+tempDesc+" refine level is "+ cardOBJ[CardIndex][j + 1] + " or higher]<br>";
+				}
+			}
+			if(cardOBJ[CardIndex][i].substr(0,7) == "set_sum")
+			{
+				let flag = 0;
+				let first = true;
+				let tempDesc = "";
+				flag = parseInt(cardOBJ[CardIndex][i].substr(7));
+				if((flag - 64)>=0)
+				{
+					tempDesc += "Shoes";
+					first = false;
+					flag = flag - 64;
+				}
+				if((flag - 32)>=0)
+				{
+					if(first)
+						tempDesc += "Garment";
+					else
+						tempDesc += " and Garment";
+					first = false;
+					flag = flag - 32;
+				}
+				if((flag - 16)>=0)
+				{
+					if(first)
+						tempDesc += "Shield";
+					else
+						tempDesc += " and Shield";
+					first = false;
+					flag = flag - 16;
+				}
+				if((flag - 8)>=0)
+				{
+					if(first)
+						tempDesc += "Armor";
+					else
+						tempDesc += " and Armor";
+					first = false;
+					flag = flag - 8;
+				}
+				if((flag - 4)>=0)
+				{
+					if(first)
+						tempDesc += "Headgear";
+					else
+						tempDesc += " and Headgear";
+					first = false;
+					flag = flag - 4;
+				}
+				if((flag - 2)>=0)
+				{
+					if(first)
+						tempDesc += "Weapon (left)";
+					else
+						tempDesc += " and Weapon (left)";
+					first = false;
+					flag = flag - 2;
+				}
+				if((flag - 1)>=0)
+				{
+					if(first)
+						tempDesc += "Weapon";
+					else
+						tempDesc += " and Weapon";
+					first = false;
+					flag = flag - 1;
+				}
+			}
 			tempDesc += "-"+ BuildItemDescription(cardOBJ[CardIndex][i + 2], cardOBJ[CardIndex][i + 3] ); // add them to Strings
 			i += 2;
 		}
@@ -4588,12 +4849,410 @@ function Click_Card( CardIndex )
 			check = 0;
 			for ( var j = card_att_BONUS_START; cardOBJ[setIndex][j] !== bon_NONE; j += 2 )
 			{
-				CBIstr += BuildItemDescription( cardOBJ[setIndex][j], cardOBJ[setIndex][j + 1] );
+				if(isNaN(cardOBJ[setIndex][j] ))//NEW
+				{
+					if(cardOBJ[setIndex][j] == "ev_ref")
+					{
+						if(cardOBJ[setIndex][j + 1] == 1)
+						{
+							if(tempDesc2 != "[For each refine lvl]<br>")
+							{
+								tempDesc2 = "[For each refine lvl]<br>";
+								tempDesc += "<br>[For each refine lvl]<br>";
+							}
+						}
+						else
+						{
+							if(tempDesc2 != "[For each "+ cardOBJ[setIndex][j + 1] + " refine lvl]<br>")
+							{
+								tempDesc2 = "[For each "+ cardOBJ[setIndex][j + 1] + " refine lvl]<br>";
+								tempDesc += "<br>[For each "+ cardOBJ[setIndex][j + 1] + " refine lvl]<br>";
+							}
+						}
+					}
+					if(cardOBJ[setIndex][j] == "ev_bstr")
+					{
+						if(tempDesc2 != "[For each "+ cardOBJ[setIndex][j + 1] + " base STR]<br>")
+						{
+							tempDesc2 = "[For each "+ cardOBJ[setIndex][j + 1] + " base STR]<br>";
+							tempDesc += "<br>[For each "+ cardOBJ[setIndex][j + 1] + " base STR]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "ev_bagi")
+					{
+						if(tempDesc2 != "[For each "+ cardOBJ[setIndex][j + 1] + " base AGI]<br>")
+						{
+							tempDesc2 = "[For each "+ cardOBJ[setIndex][j + 1] + " base AGI]<br>";
+							tempDesc += "<br>[For each "+ cardOBJ[setIndex][j + 1] + " base AGI]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "ev_bvit")
+					{
+						if(tempDesc2 != "[For each "+ cardOBJ[setIndex][j + 1] + " base VIT]<br>")
+						{
+							tempDesc2 = "[For each "+ cardOBJ[setIndex][j + 1] + " base VIT]<br>";
+							tempDesc += "<br>[For each "+ cardOBJ[setIndex][j + 1] + " base VIT]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "ev_bint")
+					{
+						if(tempDesc2 != "[For each "+ cardOBJ[setIndex][j + 1] + " base INT]<br>")
+						{
+							tempDesc2 = "[For each "+ cardOBJ[setIndex][j + 1] + " base INT]<br>";
+							tempDesc += "<br>[For each "+ cardOBJ[setIndex][j + 1] + " base INT]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "ev_bdex")
+					{
+						if(tempDesc2 != "[For each "+ cardOBJ[setIndex][j + 1] + " base DEX]<br>")
+						{
+							tempDesc2 = "[For each "+ cardOBJ[setIndex][j + 1] + " base DEX]<br>";
+							tempDesc += "<br>[For each "+ cardOBJ[setIndex][j + 1] + " base DEX]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "ev_bluk")
+					{
+						if(tempDesc2 != "[For each "+ cardOBJ[setIndex][j + 1] + " base LUK]<br>")
+						{
+							tempDesc2 = "[For each "+ cardOBJ[setIndex][j + 1] + " base LUK]<br>";
+							tempDesc += "<br>[For each "+ cardOBJ[setIndex][j + 1] + " base LUK]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "ev_blvl")
+					{
+						if(tempDesc2 != "[For each "+ cardOBJ[setIndex][j + 1] + " base level]<br>")
+						{
+							tempDesc2 = "[For each "+ cardOBJ[setIndex][j + 1] + " base level]<br>";
+							tempDesc += "<br>[For each "+ cardOBJ[setIndex][j + 1] + " base level]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "ev_blvl")
+					{
+						if(tempDesc2 != "[For each "+ cardOBJ[setIndex][j + 1] + " job level]<br>")
+						{
+							tempDesc2 = "[For each "+ cardOBJ[setIndex][j + 1] + " job level]<br>";
+							tempDesc += "<br>[For each "+ cardOBJ[setIndex][j + 1] + " job level]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "ref_lvl")
+					{
+						if(tempDesc2 != "[If refine lv +"+ cardOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc2 = "[If refine lv +"+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+							tempDesc += "<br>[If refine lv +"+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "bstr_hi")
+					{
+						if(tempDesc2 != "[If base STR is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc2 = "[If base STR is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+							tempDesc += "<br>[If base STR is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "bagi_hi")
+					{
+						if(tempDesc2 != "[If base AGI is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc2 = "[If base AGI is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+							tempDesc += "<br>[If base AGI is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "bvit_hi")
+					{
+						if(tempDesc2 != "[If base VIT is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc2 = "[If base VIT is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+							tempDesc += "<br>[If base VIT is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "bint_hi")
+					{
+						if(tempDesc2 != "[If base INT is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc2 = "[If base INT is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+							tempDesc += "<br>[If base INT is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "bdex_hi")
+					{
+						if(tempDesc2 != "[If base DEX is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc2 = "[If base DEX is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+							tempDesc += "<br>[If base DEX is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "bluk_hi")
+					{
+						if(tempDesc2 != "[If base LUK is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc2 = "[If base LUK is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+							tempDesc += "<br>[If base LUK is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "blvl_hi")
+					{
+						if(tempDesc2 != "[If base level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc2 = "[If base level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+							tempDesc += "<br>[If base level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "jlvl_hi")
+					{
+						if(tempDesc2 != "[If job level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc2 = "[If job level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+							tempDesc += "<br>[If job level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "ev_head_ref")
+					{
+						if(tempDesc2 != "[For each "+ cardOBJ[setIndex][j + 1] + " upper headgear refine level]<br>")
+						{
+							tempDesc2 = "[For each "+ cardOBJ[setIndex][j + 1] + " upper headgear refine level]<br>";
+							tempDesc += "<br>[For each "+ cardOBJ[setIndex][j + 1] + " upper headgear refine level]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "ev_body_ref")
+					{
+						if(tempDesc2 != "[For each "+ cardOBJ[setIndex][j + 1] + " armor refine level]<br>")
+						{
+							tempDesc2 = "[For each "+ cardOBJ[setIndex][j + 1] + " armor refine level]<br>";
+							tempDesc += "<br>[For each "+ cardOBJ[setIndex][j + 1] + " armor refine level]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "ev_weap_ref")
+					{
+						if(tempDesc2 != "[For each "+ cardOBJ[setIndex][j + 1] + " weapon refine level]<br>")
+						{
+							tempDesc2 = "[For each "+ cardOBJ[setIndex][j + 1] + " weapon refine level]<br>";
+							tempDesc += "<br>[For each "+ cardOBJ[setIndex][j + 1] + " weapon refine level]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "ev_shield_ref")
+					{
+						if(tempDesc2 != "[For each "+ cardOBJ[setIndex][j + 1] + " shield refine level]<br>")
+						{
+							tempDesc2 = "[For each "+ cardOBJ[setIndex][j + 1] + " shield refine level]<br>";
+							tempDesc += "<br>[For each "+ cardOBJ[setIndex][j + 1] + " shield refine level]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "ev_garm_ref")
+					{
+						if(tempDesc2 != "[For each "+ cardOBJ[setIndex][j + 1] + " garment refine level]<br>")
+						{
+							tempDesc2 = "[For each "+ cardOBJ[setIndex][j + 1] + " garment refine level]<br>";
+							tempDesc += "<br>[For each "+ cardOBJ[setIndex][j + 1] + " garment refine level]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "ev_shoes_ref")
+					{
+						if(tempDesc2 != "[For each "+ cardOBJ[setIndex][j + 1] + " shoes refine level]<br>")
+						{
+							tempDesc2 = "[For each "+ cardOBJ[setIndex][j + 1] + " shoes refine level]<br>";
+							tempDesc += "<br>[For each "+ cardOBJ[setIndex][j + 1] + " shoes refine level]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "head_ref_lvl")
+					{
+						if(tempDesc2 != "[If upper headgear refine level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc2 = "[If upper headgear refine level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+							tempDesc += "<br>[If upper headgear refine level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "body_ref_lvl")
+					{
+						if(tempDesc2 != "[If armor refine level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc2 = "[If armor refine level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+							tempDesc += "<br>[If armor refine level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "weap_ref_lvl")
+					{
+						if(tempDesc2 != "[If weapon refine level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc2 = "[If weapon refine level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+							tempDesc += "<br>[If weapon refine level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "shield_ref_lvl")
+					{
+						if(tempDesc2 != "[If shield refine level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc2 = "[If shield refine level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+							tempDesc += "<br>[If shield refine level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "garm_ref_lvl")
+					{
+						if(tempDesc2 != "[If garment refine level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc2 = "[If garment refine level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+							tempDesc += "<br>[If garment refine level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j] == "shoes_ref_lvl")
+					{
+						if(tempDesc2 != "[If shoes refine level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc2 = "[If shoes refine level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+							tempDesc += "<br>[If shoes refine level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j].substr(0,7) == "set_ref")
+					{
+						
+						let flag = 0;
+						let first = true;
+						let tempDesc = "";
+						flag = parseInt(cardOBJ[setIndex][j].substr(7));
+						if((flag - 64)>=0)
+						{
+							tempDesc += "Shoes";
+							first = false;
+							flag = flag - 64;
+						}
+						if((flag - 32)>=0)
+						{
+							if(first)
+								tempDesc += "Garment";
+							else
+								tempDesc += " and Garment";
+							first = false;
+							flag = flag - 32;
+						}
+						if((flag - 16)>=0)
+						{
+							if(first)
+								tempDesc += "Shield";
+							else
+								tempDesc += " and Shield";
+							first = false;
+							flag = flag - 16;
+						}
+						if((flag - 8)>=0)
+						{
+							if(first)
+								tempDesc += "Armor";
+							else
+								tempDesc += " and Armor";
+							first = false;
+							flag = flag - 8;
+						}
+						if((flag - 4)>=0)
+						{
+							if(first)
+								tempDesc += "Headgear";
+							else
+								tempDesc += " and Headgear";
+							first = false;
+							flag = flag - 4;
+						}
+						if((flag - 2)>=0)
+						{
+							if(first)
+								tempDesc += "Weapon (left)";
+							else
+								tempDesc += " and Weapon (left)";
+							first = false;
+							flag = flag - 2;
+						}
+						if((flag - 1)>=0)
+						{
+							if(first)
+								tempDesc += "Weapon";
+							else
+								tempDesc += " and Weapon";
+							first = false;
+							flag = flag - 1;
+						}
+						if(tempDesc != "[If "+tempDesc+" refine level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>")
+						{
+							tempDesc = "[If "+tempDesc+" refine level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+							descriptionString += "<br>[If "+tempDesc+" refine level is "+ cardOBJ[setIndex][j + 1] + " or higher]<br>";
+						}
+					}
+					if(cardOBJ[setIndex][j].substr(0,7) == "set_sum")
+					{
+						let flag = 0;
+						let first = true;
+						let tempDesc = "";
+						flag = parseInt(cardOBJ[setIndex][j].substr(7));
+						if((flag - 64)>=0)
+						{
+							tempDesc += "Shoes";
+							first = false;
+							flag = flag - 64;
+						}
+						if((flag - 32)>=0)
+						{
+							if(first)
+								tempDesc += "Garment";
+							else
+								tempDesc += " and Garment";
+							first = false;
+							flag = flag - 32;
+						}
+						if((flag - 16)>=0)
+						{
+							if(first)
+								tempDesc += "Shield";
+							else
+								tempDesc += " and Shield";
+							first = false;
+							flag = flag - 16;
+						}
+						if((flag - 8)>=0)
+						{
+							if(first)
+								tempDesc += "Armor";
+							else
+								tempDesc += " and Armor";
+							first = false;
+							flag = flag - 8;
+						}
+						if((flag - 4)>=0)
+						{
+							if(first)
+								tempDesc += "Headgear";
+							else
+								tempDesc += " and Headgear";
+							first = false;
+							flag = flag - 4;
+						}
+						if((flag - 2)>=0)
+						{
+							if(first)
+								tempDesc += "Weapon (left)";
+							else
+								tempDesc += " and Weapon (left)";
+							first = false;
+							flag = flag - 2;
+						}
+						if((flag - 1)>=0)
+						{
+							if(first)
+								tempDesc += "Weapon";
+							else
+								tempDesc += " and Weapon";
+							first = false;
+							flag = flag - 1;
+						}
+					}
+					tempDesc += "-"+ BuildItemDescription(cardOBJ[setIndex][j + 2], cardOBJ[setIndex][j + 3] ); // add them to Strings
+					j += 2;
+				}
+				else
+					CBIstr += BuildItemDescription( cardOBJ[setIndex][j], cardOBJ[setIndex][j + 1] );
 			}
 			if ( cardOBJ[setIndex][card_att_DESC] !== bon_NONE )
 			{
 				CBIstr += cardOBJ[setIndex][card_att_DESC] + "<br/>";
 			}
+			
 			CBIstr += "";
 		}
 	}

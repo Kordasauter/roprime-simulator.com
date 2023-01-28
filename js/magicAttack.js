@@ -350,6 +350,10 @@ function calcMAtk( includeMultipliers )
 		{//Shadow Chaser Gertie Card
 			matk_mul += 15;
 		}
+		if(CardNumSearch(826) && EquipNumSearch(2393))
+		{//Sweet Nightmare Card + Vampire's Familiar [1]
+			matk_mul += Math.floor(n_A_BODY_DEF_PLUS / 3);
+		}
 	
 //items
 		if ( usableItems[ksArchmagePotion] )
@@ -823,6 +827,15 @@ function calcMAtk( includeMultipliers )
 			}
 		}
 	}
+	if(CardNumSearch(812) && EquipNumSearch(121))
+	{//Resentful Munak Card + Girl's Diary
+		n_A_EquipMATK += 100;
+	}
+	if(CardNumSearch(829) && EquipNumSearch(2393))
+	{//Bomi Card + Vampire's Familiar [1]
+		n_A_EquipMATK += 30;
+	}
+	
 // Skills
 	if ( performerBuffs[ksWandererSolo] === ksMoonlightSerenade &&
 		 performerBuffs[ksWandererSoloLevel] > 0 )

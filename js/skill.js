@@ -1350,6 +1350,9 @@ JobSkillActiveOBJ = [
 ,[68,1, 47,10] // Soul Strike 10
 ,[69,1,209,3] // Dazzler 3
 ,[70,1,722,1] // Fiber Lock 1
+,[71,0,283,4] // Gloria Domini 4
+,[72,0,277,4] // Napalm Vulcan 4
+,[73,0,295,1] // Indulge 4
 ];
 }
 
@@ -1515,6 +1518,7 @@ JobSkillActiveOBJ = [
 ,[158,0,209, 1, 0, 1] // Dazzler 1
 ,[159,1,102, 6, 0, 1] // Turn Undead 6
 ,[160,1,277, 5, 0, 1] // Napalm Vulcan 5
+,[161,1, 40, 5, 3, 1] // Double Strafe 5
 
  //IDAutocast, Type(0=when hit, 1=when attack), SkillID, SkillLVL, Chance, AutoCastTrigger
 ];
