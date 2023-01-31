@@ -202,7 +202,7 @@ function LoadCookie()
 
 //for a strange reason do not put hier in the code or 
 //the weapon used will be the first of the list instead of the equiped weapon
-	ClickWeapon(SaveData[16],1); 
+	// ClickWeapon(SaveData[16],1); 
 	
 	w = n_A_JOB;
 
