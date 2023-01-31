@@ -22,6 +22,11 @@ function LoadCookie()
 	SaveData = document.cookie.split("; ");
 	wStr = "";
 	
+	if(!isNaN(SaveData[128]))
+	{
+		formElements["A_Patch_Num"].value = SaveData[128];
+		ChangePatch();
+	}//set server patch
 	
 	for ( var i = 0; SaveData[i]; i++ )
 	{
@@ -32,7 +37,6 @@ function LoadCookie()
 		}
 	}
 	// wStr now equals the save string
-	
 	for ( var i = 0; i <= maxcookie; i++ )
 	{
 		SaveData[i] = 0;
@@ -108,12 +112,6 @@ function LoadCookie()
 	{
 		SuperNoviceFullWeaponCHECK = 0;
 	}
-	if(!isNaN(SaveData[128]))
-	{
-		formElements["A_Patch_Num"].value = SaveData[128];
-		ChangePatch();
-	}//set server patch
-	
 	formElements["A_JOB"].value = SaveData[0];
 	ChangeJob(SaveData[0]);
 	formElements["A_BaseLV"].value = SaveData[1];
@@ -202,7 +200,7 @@ function LoadCookie()
 
 //for a strange reason do not put hier in the code or 
 //the weapon used will be the first of the list instead of the equiped weapon
-	// ClickWeapon(SaveData[16],1); 
+	ClickWeapon(SaveData[16],1); 
 	
 	w = n_A_JOB;
 

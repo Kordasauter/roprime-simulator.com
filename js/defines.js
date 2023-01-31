@@ -445,6 +445,91 @@ bon_SKILL_AUTOCAST = 221;
 // ^ ColdBolt, FireBolt, Bash, TStorm, TU, 
 
 }
+{//enchant bonus
+ench_NONE = 0;
+ench_STR = 0;
+ench_AGI = ench_STR + 20;
+ench_VIT = ench_AGI + 20;
+ench_INT = ench_VIT + 20;
+ench_DEX = ench_INT + 20;
+ench_LUK = ench_DEX + 20;
+ench_DEF = ench_LUK + 20;
+ench_MDEF = ench_DEF + 30;
+ench_HP_ADD = ench_MDEF + 30;
+ench_HP_MUL = ench_HP_ADD + 60;
+ench_SP_ADD = ench_HP_MUL + 30;
+ench_SP_MUL = ench_SP_ADD + 40;
+ench_FLEE = ench_SP_MUL + 30;
+ench_PDODGE = ench_FLEE + 50;
+ench_HIT = ench_PDODGE + 20;
+ench_CRIT = ench_HIT + 30;
+ench_DMG_CRIT = ench_CRIT + 30;
+ench_ATK_MUL = ench_DMG_CRIT + 30;
+ench_ATK = ench_ATK_MUL + 30;
+ench_MATK_MUL = ench_ATK + 50;
+ench_MATK = ench_MATK_MUL + 30;
+ench_FS = ench_MATK + 50;
+ench_SHARP = ench_FS + 10;
+ench_EA = ench_SHARP + 10;
+ench_SPELL = ench_EA + 10;
+ench_MAGIC = ench_SPELL + 10;
+ench_ASPD_MAL = ench_MAGIC + 10;
+ench_ASPD_MUL = ench_ASPD_MAL + 10;
+ench_ASPD_ADD = ench_ASPD_MUL + 20;
+ench_SPE_STR = ench_ASPD_ADD + 11;
+ench_SPE_AGI = ench_SPE_STR + 1;
+ench_SPE_VIT = ench_SPE_AGI + 1;
+ench_SPE_INT = ench_SPE_VIT + 1;
+ench_SPE_DEX = ench_SPE_INT + 1;
+ench_SPE_LUK = ench_SPE_DEX + 1;
+ench_DMG_CRIT_FAW = ench_SPE_LUK + 4;
+ench_TEMP_BEAR = ench_DMG_CRIT_FAW + 11;
+ench_TEMP_HAWKEYE = ench_TEMP_BEAR +1;
+ench_TEMP_LUCKY = ench_TEMP_HAWKEYE +1;
+ench_TEMP_MUSCLE = ench_TEMP_LUCKY +1;
+ench_TEMP_RUNAWAY = ench_TEMP_MUSCLE +1;
+ench_TEMP_SPEED = ench_TEMP_RUNAWAY +1;
+ench_CURE = ench_TEMP_SPEED +4;
+ench_CATHOLIC = ench_CURE +3;
+ench_ARCHBISHOP = ench_CATHOLIC +3;
+ench_FATAL = ench_ARCHBISHOP +4;
+ench_CASTDELAY_SAR = ench_FATAL + 10;
+ench_CASTDELAY = ench_CASTDELAY_SAR + 10;
+ench_DMG_RANGE = ench_CASTDELAY + 20;
+ench_RED_CAST = ench_DMG_RANGE + 20;
+ench_HEAL_MUL = ench_RED_CAST + 20;
+ench_ARMOR_ELE = ench_HEAL_MUL + 20;
+ench_RED_ELE_NEUTRAL = ench_ARMOR_ELE + 10;
+ench_RED_ELE_WATER = ench_RED_ELE_NEUTRAL + 30;
+ench_RED_ELE_EARTH = ench_RED_ELE_WATER + 30;
+ench_RED_ELE_FIRE = ench_RED_ELE_EARTH + 30;
+ench_RED_ELE_WIND = ench_RED_ELE_FIRE + 30;
+ench_RED_ELE_POISON = ench_RED_ELE_WIND + 30;
+ench_RED_ELE_HOLY = ench_RED_ELE_POISON + 30;
+ench_RED_ELE_DARK = ench_RED_ELE_HOLY + 30;
+ench_RED_ELE_GHOST = ench_RED_ELE_DARK + 30;
+ench_RED_ELE_UNDEAD = ench_RED_ELE_GHOST + 30;
+ench_RED_RC_FORMLESS = ench_RED_ELE_UNDEAD + 30;
+ench_RED_RC_UNDEAD = ench_RED_RC_FORMLESS + 30;
+ench_RED_RC_BRUTE = ench_RED_RC_UNDEAD + 30;
+ench_RED_RC_PLANT = ench_RED_RC_BRUTE + 30;
+ench_RED_RC_INSECT = ench_RED_RC_PLANT + 30;
+ench_RED_RC_FISH = ench_RED_RC_INSECT + 30;
+ench_RED_RC_DEMON = ench_RED_RC_FISH + 30;
+ench_RED_RC_DEMI_HUMAN = ench_RED_RC_DEMON + 30;
+ench_RED_RC_ANGEL = ench_RED_RC_DEMI_HUMAN + 30;
+ench_RED_RC_DRAGON = ench_RED_RC_ANGEL + 30;
+ench_RED_BOSS = ench_RED_RC_DRAGON + 30;
+// ench_
+// ench_
+// ench_
+// ench_
+// ench_
+// ench_
+// ench_
+// ench_
+// ench_
+}
 
 { // ASPD-Pots
 spdpot_NONE = 0;
@@ -2085,69 +2170,69 @@ temp_NEMESIS = 40;
 }
 
 
-{//Enchantements 
-ench_NONE = 0;
-ench_STR_1 = 10;//str
-ench_STR_2 = 11;
-ench_STR_3 = 12;
-ench_STR_4 = 13;
-ench_STR_5 = 14;
-ench_STR_6 = 15;
-ench_STR_7 = 16;
-ench_STR_8 = 17;
-ench_STR_9 = 18;
-ench_STR_10 = 19;
-ench_AGI_1 = 20;//agi
-ench_AGI_2 = 21;
-ench_AGI_3 = 22;
-ench_AGI_4 = 23;
-ench_AGI_5 = 24;
-ench_AGI_6 = 25;
-ench_AGI_7 = 26;
-ench_AGI_8 = 27;
-ench_AGI_9 = 28;
-ench_AGI_10 = 29;
-ench_VIT_1 = 30;//vit
-ench_VIT_2 = 31;
-ench_VIT_3 = 32;
-ench_VIT_4 = 33;
-ench_VIT_5 = 34;
-ench_VIT_6 = 35;
-ench_VIT_7 = 36;
-ench_VIT_8 = 37;
-ench_VIT_9 = 38;
-ench_VIT_10 = 39;
-ench_INT_1 = 40;//int
-ench_INT_2 = 41;
-ench_INT_3 = 42;
-ench_INT_4 = 43;
-ench_INT_5 = 44;
-ench_INT_6 = 45;
-ench_INT_7 = 46;
-ench_INT_8 = 47;
-ench_INT_9 = 48;
-ench_INT_10 = 49;
-ench_DEX_1 = 50;//dex
-ench_DEX_2 = 51;
-ench_DEX_3 = 52;
-ench_DEX_4 = 53;
-ench_DEX_5 = 54;
-ench_DEX_6 = 55;
-ench_DEX_7 = 56;
-ench_DEX_8 = 57;
-ench_DEX_9 = 58;
-ench_DEX_10 = 59;
-ench_LUK_1 = 60;//luk
-ench_LUK_2 = 61;
-ench_LUK_3 = 62;
-ench_LUK_4 = 63;
-ench_LUK_5 = 64;
-ench_LUK_6 = 65;
-ench_LUK_7 = 66;
-ench_LUK_8 = 67;
-ench_LUK_9 = 68;
-ench_LUK_10 = 69;
-}
+// {//Enchantements 
+// ench_NONE = 0;
+// ench_STR_1 = 10;//str
+// ench_STR_2 = 11;
+// ench_STR_3 = 12;
+// ench_STR_4 = 13;
+// ench_STR_5 = 14;
+// ench_STR_6 = 15;
+// ench_STR_7 = 16;
+// ench_STR_8 = 17;
+// ench_STR_9 = 18;
+// ench_STR_10 = 19;
+// ench_AGI_1 = 20;//agi
+// ench_AGI_2 = 21;
+// ench_AGI_3 = 22;
+// ench_AGI_4 = 23;
+// ench_AGI_5 = 24;
+// ench_AGI_6 = 25;
+// ench_AGI_7 = 26;
+// ench_AGI_8 = 27;
+// ench_AGI_9 = 28;
+// ench_AGI_10 = 29;
+// ench_VIT_1 = 30;//vit
+// ench_VIT_2 = 31;
+// ench_VIT_3 = 32;
+// ench_VIT_4 = 33;
+// ench_VIT_5 = 34;
+// ench_VIT_6 = 35;
+// ench_VIT_7 = 36;
+// ench_VIT_8 = 37;
+// ench_VIT_9 = 38;
+// ench_VIT_10 = 39;
+// ench_INT_1 = 40;//int
+// ench_INT_2 = 41;
+// ench_INT_3 = 42;
+// ench_INT_4 = 43;
+// ench_INT_5 = 44;
+// ench_INT_6 = 45;
+// ench_INT_7 = 46;
+// ench_INT_8 = 47;
+// ench_INT_9 = 48;
+// ench_INT_10 = 49;
+// ench_DEX_1 = 50;//dex
+// ench_DEX_2 = 51;
+// ench_DEX_3 = 52;
+// ench_DEX_4 = 53;
+// ench_DEX_5 = 54;
+// ench_DEX_6 = 55;
+// ench_DEX_7 = 56;
+// ench_DEX_8 = 57;
+// ench_DEX_9 = 58;
+// ench_DEX_10 = 59;
+// ench_LUK_1 = 60;//luk
+// ench_LUK_2 = 61;
+// ench_LUK_3 = 62;
+// ench_LUK_4 = 63;
+// ench_LUK_5 = 64;
+// ench_LUK_6 = 65;
+// ench_LUK_7 = 66;
+// ench_LUK_8 = 67;
+// ench_LUK_9 = 68;
+// ench_LUK_10 = 69;
+// }
 {//ench_type
 ench_Malangdo=1;
 ench_FAW_2=2;
