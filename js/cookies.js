@@ -10,8 +10,8 @@ SaveStr1 = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, //0-9
 			3, 1, 3, 1, 3, 1, 3, 1, 3, 1, //90-99
 			3, 3, 3, 3, 3, 3, 3, 3, 3, 3, //100-109
 			3, 3, 3, 3, 3, 3, 3, 3, 3, 3, //110-119
-			3, 3, 3, 3, 3, 3, 3, 3, 1];   //120-128
-maxcookie = 128;
+			3, 3, 3, 3, 3, 3, 3, 3, 1, 2];//120-129
+maxcookie = 129;
 
 // Load from Cookies
 function LoadCookie()
@@ -286,45 +286,49 @@ function LoadCookie()
 		formElements["A_SHADOW_PENDANT_DEF_PLUS"].value = SaveData[99];
 		formElements["A_SHADOW_pendant"].value = SaveData[100];
 		
-		
-		formElements["A_WEAPON_ENCHANT_2"].value = SaveData[101];
-		formElements["A_WEAPON_ENCHANT_3"].value = SaveData[102];
-		formElements["A_WEAPON_ENCHANT_4"].value = SaveData[103];
-		formElements["A_SHIELD_ENCHANT_2"] = SaveData[104];
-		formElements["A_SHIELD_ENCHANT_3"].value = SaveData[105];
-		formElements["A_SHIELD_ENCHANT_4"].value = SaveData[106];
-		formElements["A_GARMENT_ENCHANT_4"].value = SaveData[107];
-		formElements["A_GARMENT_ENCHANT_3"].value = SaveData[108];
-		formElements["A_GARMENT_ENCHANT_2"].value = SaveData[109];
-		formElements["A_SHOES_ENCHANT_4"].value = SaveData[110];
-		formElements["A_SHOES_ENCHANT_3"].value = SaveData[111];
-		formElements["A_SHOES_ENCHANT_2"].value = SaveData[112];
-		formElements["A_ARMOR_ENCHANT_4"].value = SaveData[113];
-		formElements["A_ARMOR_ENCHANT_3"].value = SaveData[114];
-		formElements["A_ARMOR_ENCHANT_2"].value = SaveData[115];
-		formElements["A_ACCES1_ENCHANT_4"].value = SaveData[116];
-		formElements["A_ACCES1_ENCHANT_3"].value = SaveData[117];
-		formElements["A_ACCES1_ENCHANT_2"].value = SaveData[118];
-		formElements["A_ACCES2_ENCHANT_4"].value = SaveData[119];
-		formElements["A_ACCES2_ENCHANT_3"].value = SaveData[120];
-		formElements["A_ACCES2_ENCHANT_2"].value = SaveData[121];
-		formElements["A_HEAD_UPPER_ENCHANT_4"].value = SaveData[122];
-		formElements["A_HEAD_UPPER_ENCHANT_3"].value = SaveData[123];
-		formElements["A_HEAD_UPPER_ENCHANT_2"].value = SaveData[124];
-
-		if ( n_Nitou )
-		{	
-			ClickWeapon2(formElements["A_Weapon2_ATKplus"].value,1);
-			ClickWeapon2(formElements["A_Weapon2_ATKplus"].value,1);
-			formElements["A_Mal_Ench3"].value = SaveData[125];
-			formElements["A_Mal_Ench4"].value = SaveData[126];
-			// formElements[""].value = SaveData[127];// not used yet
-		}
-		else
+		if(!isNaN(SaveData[129]))
 		{
-			formElements["A_Mal_Ench3"].value = 0;
-			formElements["A_Mal_Ench4"].value = 0;
-			//formElements[""].value = 0; // not used yet
+			formElements["A_WEAPON_ENCHANT_2"].value = SaveData[101];
+			formElements["A_WEAPON_ENCHANT_3"].value = SaveData[102];
+			formElements["A_WEAPON_ENCHANT_4"].value = SaveData[103];
+			formElements["A_SHIELD_ENCHANT_2"] = SaveData[104];
+			formElements["A_SHIELD_ENCHANT_3"].value = SaveData[105];
+			formElements["A_SHIELD_ENCHANT_4"].value = SaveData[106];
+			formElements["A_GARMENT_ENCHANT_4"].value = SaveData[107];
+			formElements["A_GARMENT_ENCHANT_3"].value = SaveData[108];
+			formElements["A_GARMENT_ENCHANT_2"].value = SaveData[109];
+			formElements["A_SHOES_ENCHANT_4"].value = SaveData[110];
+			formElements["A_SHOES_ENCHANT_3"].value = SaveData[111];
+			formElements["A_SHOES_ENCHANT_2"].value = SaveData[112];
+			formElements["A_ARMOR_ENCHANT_4"].value = SaveData[113];
+			formElements["A_ARMOR_ENCHANT_3"].value = SaveData[114];
+			formElements["A_ARMOR_ENCHANT_2"].value = SaveData[115];
+			formElements["A_ACCES1_ENCHANT_4"].value = SaveData[116];
+			formElements["A_ACCES1_ENCHANT_3"].value = SaveData[117];
+			formElements["A_ACCES1_ENCHANT_2"].value = SaveData[118];
+			formElements["A_ACCES2_ENCHANT_4"].value = SaveData[119];
+			formElements["A_ACCES2_ENCHANT_3"].value = SaveData[120];
+			formElements["A_ACCES2_ENCHANT_2"].value = SaveData[121];
+			formElements["A_HEAD_UPPER_ENCHANT_4"].value = SaveData[122];
+			formElements["A_HEAD_UPPER_ENCHANT_3"].value = SaveData[123];
+			formElements["A_HEAD_UPPER_ENCHANT_2"].value = SaveData[124];
+		
+		
+
+			if ( n_Nitou )
+			{	
+				ClickWeapon2(formElements["A_Weapon2_ATKplus"].value,1);
+				ClickWeapon2(formElements["A_Weapon2_ATKplus"].value,1);
+				formElements["A_Mal_Ench3"].value = SaveData[125];
+				formElements["A_Mal_Ench4"].value = SaveData[126];
+				// formElements[""].value = SaveData[127];// not used yet
+			}
+			else
+			{
+				formElements["A_Mal_Ench3"].value = 0;
+				formElements["A_Mal_Ench4"].value = 0;
+				//formElements[""].value = 0; // not used yet
+			}
 		}
 	}
 	StCalc(1);
@@ -750,7 +754,7 @@ function SaveCookie()
 		SaveData[127] = 0; // not used yet
 	}
 	SaveData[128] = PATCH; //Server Patch
-	// SaveData[129] = parseInt(formElements[""].value); //free
+	SaveData[129] = 1; //New enchant format, will be used for echant version.
 	// SaveData[130] = parseInt(formElements[""].value); //free
 	
 	
@@ -972,7 +976,8 @@ function URLOUT()
 	}
 	console.log(NtoS2(parseInt(formElements["A_Patch_Num"].value)));
 	console.log(index);
-	SaveData[index] = NtoS2(parseInt(formElements["A_Patch_Num"].value),1);  // Server Patch
+	SaveData[index++] = NtoS2(parseInt(formElements["A_Patch_Num"].value),1);  // Server Patch
+	SaveData[index] = 1; //New enchant format, will be used for echant version.
 	
 	// Acolyte Buffs
 	
@@ -1329,72 +1334,80 @@ with( document.calcForm )
 		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_pendant.value = StoN2(w.substr(index,3));
 		index=index + 3;
 		
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_WEAPON_ENCHANT_2.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_WEAPON_ENCHANT_3.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_WEAPON_ENCHANT_4.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHIELD_ENCHANT_2.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHIELD_ENCHANT_3.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHIELD_ENCHANT_4.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_GARMENT_ENCHANT_4.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_GARMENT_ENCHANT_3.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_GARMENT_ENCHANT_2.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHOES_ENCHANT_4.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHOES_ENCHANT_3.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHOES_ENCHANT_2.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_ARMOR_ENCHANT_4.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_ARMOR_ENCHANT_3.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_ARMOR_ENCHANT_2.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_ACCES1_ENCHANT_4.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_ACCES1_ENCHANT_3.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_ACCES1_ENCHANT_2.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_ACCES2_ENCHANT_4.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_ACCES2_ENCHANT_3.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_ACCES2_ENCHANT_2.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_HEAD_UPPER_ENCHANT_4.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_HEAD_UPPER_ENCHANT_3.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_HEAD_UPPER_ENCHANT_2.value = StoN2(w.substr(index,3));
-		index=index + 3;
-		
-		if ( n_Nitou )
-		{
-			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_Mal_Ench3.value = StoN2(w.substr(index,3));
+		if (!(StoN2(w.substr(213+max,1,1))===undefined)) 
+		{ //New enchant format
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_WEAPON_ENCHANT_2.value = StoN2(w.substr(index,3));
 			index=index + 3;
-			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_Mal_Ench4.value = StoN2(w.substr(index,3));
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_WEAPON_ENCHANT_3.value = StoN2(w.substr(index,3));
 			index=index + 3;
-			// if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.[not_yet].value = StoN2(w.substr(index,3));
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_WEAPON_ENCHANT_4.value = StoN2(w.substr(index,3));
 			index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHIELD_ENCHANT_2.value = StoN2(w.substr(index,3));
+			index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHIELD_ENCHANT_3.value = StoN2(w.substr(index,3));
+			index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHIELD_ENCHANT_4.value = StoN2(w.substr(index,3));
+			index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_GARMENT_ENCHANT_4.value = StoN2(w.substr(index,3));
+			index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_GARMENT_ENCHANT_3.value = StoN2(w.substr(index,3));
+			index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_GARMENT_ENCHANT_2.value = StoN2(w.substr(index,3));
+			index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHOES_ENCHANT_4.value = StoN2(w.substr(index,3));
+			index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHOES_ENCHANT_3.value = StoN2(w.substr(index,3));
+			index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHOES_ENCHANT_2.value = StoN2(w.substr(index,3));
+			index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_ARMOR_ENCHANT_4.value = StoN2(w.substr(index,3));
+			index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_ARMOR_ENCHANT_3.value = StoN2(w.substr(index,3));
+			index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_ARMOR_ENCHANT_2.value = StoN2(w.substr(index,3));
+			index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_ACCES1_ENCHANT_4.value = StoN2(w.substr(index,3));
+			index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_ACCES1_ENCHANT_3.value = StoN2(w.substr(index,3));
+			index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_ACCES1_ENCHANT_2.value = StoN2(w.substr(index,3));
+			index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_ACCES2_ENCHANT_4.value = StoN2(w.substr(index,3));
+			index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_ACCES2_ENCHANT_3.value = StoN2(w.substr(index,3));
+			index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_ACCES2_ENCHANT_2.value = StoN2(w.substr(index,3));
+			index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_HEAD_UPPER_ENCHANT_4.value = StoN2(w.substr(index,3));
+			index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_HEAD_UPPER_ENCHANT_3.value = StoN2(w.substr(index,3));
+			index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_HEAD_UPPER_ENCHANT_2.value = StoN2(w.substr(index,3));
+			index=index + 3;
+			
+			if ( n_Nitou )
+			{
+				if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_Mal_Ench3.value = StoN2(w.substr(index,3));
+				index=index + 3;
+				if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_Mal_Ench4.value = StoN2(w.substr(index,3));
+				index=index + 3;
+				// if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.[not_yet].value = StoN2(w.substr(index,3));
+				index=index + 3;
 
-			// SaveData[127] = parseInt(formElements[""].value); // not used yet
+				// SaveData[127] = parseInt(formElements[""].value); // not used yet
+			}
+			else
+			{
+				index=index + 3;
+				index=index + 3;
+				index=index + 3;
+			}
 		}
-		else
-		{
-			index=index + 3;
-			index=index + 3;
-			index=index + 3;
-		}
+		
+		
+		
+		
+		
 		
 		StCalc();
 		/*var x = 81 + max;

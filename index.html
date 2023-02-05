@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/tr/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
-		<meta name="keywords" content="Ragnarok,Online,Ragnarok Online,EuRO,PVP,PVM,WOE,MVP,Calc,Calculator,New,Current,prime,Ragnarok Prime,RO Prime,Loki,4 Games">
+		<meta name="keywords" content="Ragnarok,Online,Ragnarok Online,EuRO,PVP,PVM,WOE,MVP,Calc,Calculator,New,Current,prime,Ragnarok Prime,RO Prime,Loki,4 Games,185/65,185">
 		<meta name="description" content="The Ragnarok Prime Calculator, able to simulate stats, equipment, status resistance, skills and damage from Characters in PVM, MVP and PVP environments">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="Content-Script-Type" content="text/javascript">
@@ -10,72 +10,61 @@
 		<title>Ragnarok Prime Stat Simulator</title>
 
 		<!--globals-->
-		<script src="js/ga.js" type="text/javascript"></script><script type="text/javascript">//<![CDATA[
+		<!-- <script src="js/ga.js" type="text/javascript"></script> -->
+		<script type="text/javascript">//<![CDATA[
 			var Language = 1; // japanese = 0, english = 1
 			var PlayerVersusPlayer = 0;
 			var PATCH = 0;
+			var REVISION = "0502"; 
 		//]]></script>
-		<script type="text/javascript" src="js/jquery.js?t=3101"></script>
-		<script type="text/javascript" src="js/variables.js?t=3101"></script>
+		<script type="text/javascript" src="js/jquery.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/variables.js?$$REVISION$$"></script>
 		<!--verbage-->
-		<script type="text/javascript" src="js/elements.js?t=3101"></script>
-		<script type="text/javascript" src="js/exposition.js?t=3101"></script>
-		<script type="text/javascript" src="js/itemNames.js?t=3101"></script>
-		<script type="text/javascript" src="js/jobClasses.js?t=3101"></script>
-		<script type="text/javascript" src="js/maps.js?t=3101"></script>
-		<script type="text/javascript" src="js/projectiles.js?t=3101"></script>
-		<script type="text/javascript" src="js/races.js?t=3101"></script>
-		<script type="text/javascript" src="js/sizes.js?t=3101"></script>
-		<script type="text/javascript" src="js/skillNames.js?t=3101"></script>
-		<script type="text/javascript" src="js/speedPotions.js?t=3101"></script>
-		<script type="text/javascript" src="js/statusAilments.js?t=3101"></script>
-		<script type="text/javascript" src="js/weaponTypes.js?t=3101"></script>
+		<script type="text/javascript" src="js/elements.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/exposition.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/itemNames.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/jobClasses.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/maps.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/projectiles.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/races.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/sizes.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/skillNames.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/speedPotions.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/statusAilments.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/weaponTypes.js?$$REVISION$$"></script>
 		<!--tables-->
-		<script type="text/javascript" src="js/defines.js?t=3101"></script>
-		<script type="text/javascript" src="js/defineItem.js?t=3101"></script>
-		<script type="text/javascript" src="js/attackSpeedNew.js?t=3101"></script>
-		<script type="text/javascript" src="js/attackSpeedOld.js?t=3101"></script>
-		<script type="text/javascript" src="js/baseExperience.js?t=3101"></script>
-		<script type="text/javascript" src="js/elementTable.js?t=3101"></script>
-		<script type="text/javascript" src="js/itemEffects.js?t=3101"></script>
-		<script type="text/javascript" src="js/jobBonus.js?t=3101"></script>
-		<script type="text/javascript" src="js/jobExperience.js?t=3101"></script>
-		<script type="text/javascript" src="js/petTable.js?t=3101"></script>
-		<script type="text/javascript" src="js/weaponSize.js?t=3101"></script>
-		<script type="text/javascript" src="js/item.js?t=3101"></script>
-		<script type="text/javascript" src="js/skill.js?t=3101"></script>
-		<script type="text/javascript" src="js/monster.js?t=3101"></script>
-		<script type="text/javascript" src="js/monster_new.js?t=3101"></script>
-		<script type="text/javascript" src="js/card.js?t=3101"></script>
-		<script type="text/javascript" src="js/enchant.js?t=3101"></script>
+		<script type="text/javascript" src="js/defines.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/defineItem.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/attackSpeedNew.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/attackSpeedOld.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/baseExperience.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/elementTable.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/itemEffects.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/jobBonus.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/jobExperience.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/petTable.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/weaponSize.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/item.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/skill.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/monster.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/monster_new.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/card.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/enchant.js?$$REVISION$$"></script>
 		<!--functions-->
-		<script type="text/javascript" src="js/magicAttack.js?t=3101"></script>
-        <script type="text/javascript" src="js/math.js?t=3101"></script>
-		<script type="text/javascript" src="js/helperFunctions.js?t=3101"></script>
-		<script type="text/javascript" src="js/Enemy.js?t=3101"></script>
-		<script type="text/javascript" src="js/Heal.js?t=3101"></script>
-		<script type="text/javascript" src="js/roformulas.js?t=3101"></script>
-		<script type="text/javascript" src="js/skillFormulas.js?t=3101"></script>
+		<script type="text/javascript" src="js/magicAttack.js?$$REVISION$$"></script>
+        <script type="text/javascript" src="js/math.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/helperFunctions.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/Enemy.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/Heal.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/roformulas.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/skillFormulas.js?$$REVISION$$"></script>
 		<!--form-->
-		<script type="text/javascript" src="js/head.js?t=3101"></script>
-		<script type="text/javascript" src="js/events.js?t=3101"></script>
+		<script type="text/javascript" src="js/head.js?$$REVISION$$"></script>
+		<script type="text/javascript" src="js/events.js?$$REVISION$$"></script>
 		<script type="text/javascript" src="js/cookies.js?t=0501"></script>
-		<script type="text/javascript" src="js/news.js?t=3101"></script>
+		<script type="text/javascript" src="js/news.js?$$REVISION$$"></script>
 
 		<link rel="stylesheet" type="text/css" href="./style.css">
-		
-		<!-- AdSense -->
-		<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6824539470557939" -->
-     <!-- crossorigin="anonymous"></script> -->
-		<!-- Analytics -->
-		<!-- <script type="text/plain" data-cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-78085FSM4Q"></script> -->
-		<!-- <script type="text/plain" data-cookie-consent="tracking"> -->
-		  <!-- window.dataLayer = window.dataLayer || []; -->
-		  <!-- function gtag(){dataLayer.push(arguments);} -->
-		  <!-- gtag('js', new Date()); -->
-
-		  <!-- gtag('config', 'G-78085FSM4Q'); -->
-		<!-- </script> -->
 
 		<!-- Cookie Consent by PrivacyPolicies.com https://www.PrivacyPolicies.com -->
 		<script type="text/javascript" src="https://www.privacypolicies.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
@@ -145,11 +134,21 @@
 										<!-- <div id="news"></div> -->
 										<div id="news">
 											<div>
-												<u><b>28/01/2023:</b></u> 
+												<u><b>05/02/2023:</b></u> 
 												<ul style="margin-left: 5px;">
+													<li><b>Important information :</b></li>
+														<ul>
+															<li>I'm trying to improve the simulator code to make it more readable and easy to maintain for me.<br>Due to a change in the item/enchantment source code, I had to delete the previous saved enchantment.</li>
+														</ul>
+													<li><b>Has been added :</b></li>
+													<ul>
+														<li>Moon Knight Shield</li>
+														<li>Bloody Knight Shield</li>
+														<li>Sun Knight Shield</li>
+													</ul>
 													<li><b>Has been fixed :</b></li>
 													<ul>
-														<li>Fixed an issue with saved builds, it should work fine now</li>
+														<li>Extended Info : Variable Cast Time is now fixed</li>
 													</ul>
 												</ul>
 											</div>
@@ -208,119 +207,7 @@
 													<ul>
 														<li>Aura Blade buff fixed</li>
 														<li>Peco Rinding size penalty fixed</li>
-													</ul>
-												</ul>
-												-Kord
-											</div>
-											<div>
-												<u><b>22/01/2023:</b></u> 
-												<ul style="margin-left: 5px;">
-													<li><b>Has been fixed :</b></li>
-													<ul>
-														<li>Humanoid Chimera Card and Material Chimera Card combo now work properly</li>
-														<li>Spear Cannon is now a ranged attack</li>
-														<li>Dark Claw (debuff) now affect Boss Type monsters</li>
-														<li>you can now save your shadows stuff and enchantments on the simulator !</li>
-													</ul>
-													<li><b>Has been added :</b></li>
-													<ul>
-														<li>Illusion Dungeons Part 1</li><input class="button" type="button" value="Show details" onclick="javascript:$('#note220120230').toggle()">
-														<span style="display: none;" id="note220120230">
-															<ul>
-																<ul>
-																<li>Illusion of Moonlight</li>
-																	<ul>
-																		<li>Monsters</li><input class="button" type="button" value="Show details" onclick="javascript:$('#note220120231').toggle()">
-																		<span style="display: none;" id="note220120231">
-																			<ul>
-																				<li>Resentful Munak</li>
-																				<li>Resentful Bongun</li>
-																				<li>Resentful Sohee</li>
-																				<li>Resentful Soldier</li>
-																				<li>Angry Nine Tail</li>
-																				<li>Deranged Adventurer</li>
-																				<li>Wizard of the Truth</li>
-																				<li>Angry Moonlight Flower</li>
-																			</ul>
-																		</span>
-																		<li>Items</li><input class="button" type="button" value="Show details" onclick="javascript:$('#note220120232').toggle()">
-																		<span style="display: none;" id="note220120232">
-																			<ul>
-																				<li>Illusion Puente Robe</li>
-																				<li>Illusion Long Mace</li>
-																				<li>Illusion Nurse Cap</li>
-																				<li>Illusion Apple of Archer</li>
-																				<li>Illusion Muffler</li>
-																				<li>Illusion Shoes</li>
-																				<li>Illusion Spectral Spear</li>
-																				<li>Illusion Staff of Bordeaux</li>
-																				<li>Illusion Moonlight Dagger</li>
-																			</ul>
-																		</span>
-																	</ul>
-																</ul>
-																<ul>
-																	<li>Illusion of Vampire</li>
-																	<ul>
-																		<li>Monsters</li><input class="button" type="button" value="Show details" onclick="javascript:$('#note220120233').toggle()">
-																		<span style="display: none;" id="note220120233">
-																			<ul>
-																							<li>Sweet Nightmare</li>
-																				<li>Matte Drainliar</li>
-																				<li>Restless Dead (Agi-Up)</li>
-																				<li>Restless Dead</li>
-																				<li>Restless Dead (Ghoul)</li>
-																				<li>Black Neon Mushroom</li>
-																				<li>Bream</li>
-																				<li>Illusion Dracula</li>
-																			</ul>
-																		</span>
-																		<li>Items</li><input class="button" type="button" value="Show details" onclick="javascript:$('#note220120234').toggle()">
-																		<span style="display: none;" id="note220120234">
-																			<ul>
-																				<li>Illusion Infiltrator</li>
-																				<li>Illusion Sharpened Ghoul Leg Bone</li>
-																				<li>Illusion Wizardry Staff</li>
-																				<li>Illusion Ballista</li>
-																				<li>Illusion Book of the Apocalypse</li>
-																				<li>Illusion Ancient Cape</li>
-																				<li>Illusion Skull Ring</li>
-																				<li>Illusion Ring</li>
-																			</ul>
-																		</span>
-																	</ul>
-																</ul>
-																<ul>
-																	<li>Illusion of Frozen</li>
-																	<ul>
-																		<li>Monsters</li><input class="button" type="button" value="Show details" onclick="javascript:$('#note220120235').toggle()">
-																		<span style="display: none;" id="note220120235">
-																			<ul>
-																				<li>Angry Gazeti</li>
-																				<li>Angry Snowier</li>
-																				<li>Angry Ice Titan</li>
-																				<li>Solid Icicle</li>
-																				<li>Angry Ktullanux</li>
-																			</ul>
-																		</span>
-																		<li>Items</li><input class="button" type="button" value="Show details" onclick="javascript:$('#note220120236').toggle()">
-																		<span style="display: none;" id="note220120236">
-																			<ul>
-																				<li>Illusion Combo Battle Glove</li>
-																				<li>Illusion Huuma Fluttering Snow</li>
-																				<li>Illusion Cap</li>
-																				<li>Illusion Survivor's Manteau</li>
-																				<li>Illusion Sacred Mission</li>
-																			</ul>
-																		</span>
-																	</ul>
-																</ul>
-															</ul>
-														</span>
-													</ul>
-													<li><b>Note :</b></li>
-													<ul>
-														<li>Enchants and cards will come later</li>
+														<li>Fixed an issue with saved builds, it should work fine now</li>
 													</ul>
 												</ul>
 												-Kord
@@ -339,8 +226,119 @@
 							<tr>
 								<td class="bgLtRow3 padded optCaption">
 									<div id="old">
-									
-										
+										<u><b>22/01/2023:</b></u> <input class="button" type="button" value="Show/Hide" onclick="javascript:$('#note22012023').toggle()">	
+										<span style="display: none;" id="note22012023">	
+											<ul style="margin-left: 5px;">
+												<li><b>Has been fixed :</b></li>
+												<ul>
+													<li>Humanoid Chimera Card and Material Chimera Card combo now work properly</li>
+													<li>Spear Cannon is now a ranged attack</li>
+													<li>Dark Claw (debuff) now affect Boss Type monsters</li>
+													<li>you can now save your shadows stuff and enchantments on the simulator !</li>
+												</ul>
+												<li><b>Has been added :</b></li>
+												<ul>
+													<li>Illusion Dungeons Part 1</li><input class="button" type="button" value="Show details" onclick="javascript:$('#note220120230').toggle()">
+													<span style="display: none;" id="note220120230">
+														<ul>
+															<ul>
+															<li>Illusion of Moonlight</li>
+																<ul>
+																	<li>Monsters</li><input class="button" type="button" value="Show details" onclick="javascript:$('#note220120231').toggle()">
+																	<span style="display: none;" id="note220120231">
+																		<ul>
+																			<li>Resentful Munak</li>
+																			<li>Resentful Bongun</li>
+																			<li>Resentful Sohee</li>
+																			<li>Resentful Soldier</li>
+																			<li>Angry Nine Tail</li>
+																			<li>Deranged Adventurer</li>
+																			<li>Wizard of the Truth</li>
+																			<li>Angry Moonlight Flower</li>
+																		</ul>
+																	</span>
+																	<li>Items</li><input class="button" type="button" value="Show details" onclick="javascript:$('#note220120232').toggle()">
+																	<span style="display: none;" id="note220120232">
+																		<ul>
+																			<li>Illusion Puente Robe</li>
+																			<li>Illusion Long Mace</li>
+																			<li>Illusion Nurse Cap</li>
+																			<li>Illusion Apple of Archer</li>
+																			<li>Illusion Muffler</li>
+																			<li>Illusion Shoes</li>
+																			<li>Illusion Spectral Spear</li>
+																			<li>Illusion Staff of Bordeaux</li>
+																			<li>Illusion Moonlight Dagger</li>
+																		</ul>
+																	</span>
+																</ul>
+															</ul>
+															<ul>
+																<li>Illusion of Vampire</li>
+																<ul>
+																	<li>Monsters</li><input class="button" type="button" value="Show details" onclick="javascript:$('#note220120233').toggle()">
+																	<span style="display: none;" id="note220120233">
+																		<ul>
+																						<li>Sweet Nightmare</li>
+																			<li>Matte Drainliar</li>
+																			<li>Restless Dead (Agi-Up)</li>
+																			<li>Restless Dead</li>
+																			<li>Restless Dead (Ghoul)</li>
+																			<li>Black Neon Mushroom</li>
+																			<li>Bream</li>
+																			<li>Illusion Dracula</li>
+																		</ul>
+																	</span>
+																	<li>Items</li><input class="button" type="button" value="Show details" onclick="javascript:$('#note220120234').toggle()">
+																	<span style="display: none;" id="note220120234">
+																		<ul>
+																			<li>Illusion Infiltrator</li>
+																			<li>Illusion Sharpened Ghoul Leg Bone</li>
+																			<li>Illusion Wizardry Staff</li>
+																			<li>Illusion Ballista</li>
+																			<li>Illusion Book of the Apocalypse</li>
+																			<li>Illusion Ancient Cape</li>
+																			<li>Illusion Skull Ring</li>
+																			<li>Illusion Ring</li>
+																		</ul>
+																	</span>
+																</ul>
+															</ul>
+															<ul>
+																<li>Illusion of Frozen</li>
+																<ul>
+																	<li>Monsters</li><input class="button" type="button" value="Show details" onclick="javascript:$('#note220120235').toggle()">
+																	<span style="display: none;" id="note220120235">
+																		<ul>
+																			<li>Angry Gazeti</li>
+																			<li>Angry Snowier</li>
+																			<li>Angry Ice Titan</li>
+																			<li>Solid Icicle</li>
+																			<li>Angry Ktullanux</li>
+																		</ul>
+																	</span>
+																	<li>Items</li><input class="button" type="button" value="Show details" onclick="javascript:$('#note220120236').toggle()">
+																	<span style="display: none;" id="note220120236">
+																		<ul>
+																			<li>Illusion Combo Battle Glove</li>
+																			<li>Illusion Huuma Fluttering Snow</li>
+																			<li>Illusion Cap</li>
+																			<li>Illusion Survivor's Manteau</li>
+																			<li>Illusion Sacred Mission</li>
+																		</ul>
+																	</span>
+																</ul>
+															</ul>
+														</ul>
+													</span>
+												</ul>
+												<li><b>Note :</b></li>
+												<ul>
+													<li>Enchants and cards will come later</li>
+												</ul>
+											</ul>
+											-Kord 
+										</span><br>
 										<u><b>31/12/2022:</b></u> <input class="button" type="button" value="Show/Hide" onclick="javascript:$('#note31122022').toggle()">	
 										<span style="display: none;" id="note31122022">	
 											<ul style="margin-left: 5px;">		
@@ -2646,7 +2644,7 @@
 											</ul>
 										-Kord
 										</span><br>
-										<u><b>13/01/2022:</b></u></b> <input type="button" value="Show/Hide" onclick="javascript:$('#note13012022').toggle()">
+										<u><b>13/01/2022:</b></u> <input type="button" value="Show/Hide" onclick="javascript:$('#note13012022').toggle()">
 										<span style="display: none;" id="note13012022">
 											<ul style="margin-left: 5px;">
 												<li><b>Weekly cash shop update : </b></li>
@@ -3696,7 +3694,8 @@
 												<td class="bgLtRow2 padded optArea">
 													<select name="A_LEFT_DEF_PLUS" style="width: 50px; visibility: visible;" onchange="StAllCalc()">
 													</select>
-													<select name="A_left" style="float: right; width: 200px; visibility: visible;" onchange="StAllCalc()|DisplayItemDescription(this[this.selectedIndex].value|ClickShield(this[this.selectedIndex].value,0))">
+													<!-- <select name="A_left" style="float: right; width: 200px; visibility: visible;" onchange="StAllCalc()|DisplayItemDescription(this[this.selectedIndex].value)|ClickShield(this[this.selectedIndex].value,0)"> -->
+													<select name="A_left" style="float: right; width: 200px; visibility: visible;" onchange="StAllCalc()|DisplayItemDescription(this[this.selectedIndex].value)|ClickEquip(this[this.selectedIndex].value,0,5)">
 													</select>
 												</td>
 												<td class="bgLtRow4 padded optCaption">
@@ -5144,5 +5143,5 @@
 	            </div>
 	        </div>
         </form>
-		<script type="text/javascript" src="js/foot.js"></script>
+		<script type="text/javascript" src="js/foot.js?$$REVISION$$"></script>
 	</body><!--deferred loading--></html>

@@ -74,8 +74,9 @@ function SuperNoviceFullWeapon(nSNFW)
 	}
 }
 
+// stat- & subStatCalc
 function StAllCalc()
-{ // stat- & subStatCalc
+{ 
 with ( document.calcForm )
 {
 	var formElements = document.forms["calcForm"].elements;
@@ -780,8 +781,9 @@ with ( document.calcForm )
 }
 }
 
+// floor some [w_num], ignore [w_ch]
 function DamageCut(w_num,w_ch)
-{ // floor some [w_num], ignore [w_ch]
+{ 
 	
 	var w = n_tok[50+n_B[en_RACE]];
 	if(w != 0)
@@ -817,8 +819,9 @@ function DamageCut(w_num,w_ch)
 	return w_num;
 }
 
+// recalc non-base stats (bStat + %)
 function StPlusCalc()
-{ // recalc non-base stats (bStat + %)
+{ 
 	n_A_JobSet();	
 	n_A_JobLV = document.forms["calcForm"].elements["A_JobLV"].value;
 
@@ -1756,8 +1759,9 @@ function StPlusCalc()
 		myInnerHtml("A_LUKp",wSPC_LUK + " (" + StCalc2(SU_LUK+1) + ")",0);
 }
 
+// Additional [Stats] by equip
 function StPlusCalc2( nSTP2 )
-{ // Additional [Stats] by equip
+{ 
 	var w = bon_NONE;
 	for ( var i = 0; i <= 32; i++ )
 	{	 // for each equip/ card
@@ -1823,8 +1827,9 @@ function StPlusCalc2( nSTP2 )
 	return w;
 }
 
+// Additional [Stats] by cards
 function StPlusCard( nSTP2 )
-{ // Additional [Stats] by cards
+{ 
 	var w=0;
 	for(var i=0;i<=25;i++)
 	{
@@ -2158,8 +2163,9 @@ function BonusCalc(bonus_condition,refine,ref_opt,bonus_eq)
 	return bonus;
 }
 
+// Additional [Stats]/ MAtk by Weapon
 function StPlusWeapon(nSTP2)
-{ // Additional [Stats]/ MAtk by Weapon
+{ 
 	var w=bon_NONE;
 	for(var j=0;ItemOBJ[n_A_Equip[eq_WEAPON]][j +itm_BONUS_START] != bon_NONE;j += 2)
 	{
@@ -2186,8 +2192,9 @@ function StPlusEnchant(nSTP2)
 	return w;
 }
 
+// generate WeaponList
 function WeaponSet()
-{ // generate WeaponList
+{ 
 	n_A_JobSet();
 	n_A_WeaponType = document.forms["calcForm"].elements["A_WeaponType"].value;
 	var len = document.calcForm.A_weapon1.length;
@@ -2220,8 +2227,9 @@ function WeaponSet()
 		// document.calcForm.A_weapon1.options[i] = new Option(ITEM_NAME[work[i]][1+ Language*2],ItemOBJ[work[i]][0]);
 }
 
+// generate left weaponlist
 function WeaponSetLeft()
-{ // generate left weaponlist
+{ 
 	n_A_JobSet();
 	n_A_Weapon2Type = document.forms["calcForm"].elements["A_Weapon2Type"].value;
 	var len = document.forms["calcForm"].elements["A_weapon2"].length;
@@ -2243,8 +2251,9 @@ function WeaponSetLeft()
 		document.forms["calcForm"].elements["A_weapon2"].options[i] = new Option(ITEM_NAME[work[i]][1+ Language *2],ItemOBJ[work[i]][0]);
 }
 
+// generate EquipList
 function WeaponSet2()
-{ // generate EquipList
+{ 
 with(document.calcForm)
 {
 	n_A_JobSet();
@@ -2722,8 +2731,9 @@ JobEquipItemOBJ = [
 ];
 }
 
+// [Equip] matches current job ?
 function JobEquipItemSearch( nJEIS )
-{ // [Equip] matches current job ?
+{ 
 	
 	if ( nJEIS >= 2000 )
 	{
@@ -2754,8 +2764,9 @@ function JobEquipItemSearch( nJEIS )
 	return 0;
 }
 
+// Search equipCount
 function EquipNumSearch( nENS )
-{ // Search equipCount
+{ 
 	var wENS=0;
 	for(var ENSi=0;ENSi<=20;ENSi++)
 	{
@@ -2765,8 +2776,9 @@ function EquipNumSearch( nENS )
 	return wENS;
 }
 
+// Search equipCount
 function EnchNumSearch( nENS )
-{ // Search equipCount
+{ 
 	var wENS=0;
 	for(var ENSi=0;ENSi<=ench_MAX;ENSi++)
 	{
@@ -2776,8 +2788,9 @@ function EnchNumSearch( nENS )
 	return wENS;
 }
 
+// Search cardCount
 function CardNumSearch( nCNS )
-{ // Search cardCount
+{ 
 	var wCNS=0;
 	for(var CNSi=0;CNSi<=25;CNSi++)
 	{
@@ -2787,8 +2800,9 @@ function CardNumSearch( nCNS )
 	return wCNS;
 }
 
+// TemporaryEffects
 function TimeItemNumSearch( index )
-{ // TemporaryEffects
+{ 
 	var count = 0;
 	for ( var i = 0; i <= 3; i++ )
 	{
@@ -2801,8 +2815,9 @@ function TimeItemNumSearch( index )
 	return count;
 }
 
+// generate skillList ?
 function ActiveSkillSetPlus()
-{ // generate skillList ?
+{
 	w_ASSP0=new Array();
 	w_ASSP9=new Array();
 	for ( var i = 0; i <= 20; i++ )
@@ -2937,7 +2952,7 @@ function ActiveSkillSetPlus()
 }
 
 function SetEquipShortCut()
-{ // 
+{
 with(document.calcForm)
 {
 	w = eval(A_EQUIP_SET_SHORT.value);
@@ -2999,41 +3014,43 @@ with(document.calcForm)
 	ActiveSkillSetPlus();
 }
 }
-
+// ActivateShortlist (left)
 function SetCardShortLeft()
-{ // ActivateShortlist (left)
-with(document.calcForm)
-{
-	w = eval(A_cardshortLeft.value);
-
-	A_weapon2_card1.value = CardShort[w][1];
-	A_weapon2_card2.value = CardShort[w][2];
-	A_weapon2_card3.value = CardShort[w][3];
-	A_weapon2_card4.value = CardShort[w][4];
-
-
-	if(w == 9 || w == 10)
+{ 
+	with(document.calcForm)
 	{
-		w = MonsterOBJ[eval(B_Enemy.value)][3];
+		w = eval(A_cardshortLeft.value);
 
-		if(10 <= w && w <= 14)
-			A_weapon2_card1.value = 204;
-		if((20 <= w && w <= 24) || (80 <= w && w <= 94))
-			A_weapon2_card1.value = 203;
-		if(30 <= w && w <= 34)
-			A_weapon2_card1.value = 201;
-		if(40 <= w && w <= 44)
-			A_weapon2_card1.value = 202;
+		A_weapon2_card1.value = CardShort[w][1];
+		A_weapon2_card2.value = CardShort[w][2];
+		A_weapon2_card3.value = CardShort[w][3];
+		A_weapon2_card4.value = CardShort[w][4];
+
+
+		if(w == 9 || w == 10)
+		{
+			w = MonsterOBJ[eval(B_Enemy.value)][3];
+
+			if(10 <= w && w <= 14)
+				A_weapon2_card1.value = 204;
+			if((20 <= w && w <= 24) || (80 <= w && w <= 94))
+				A_weapon2_card1.value = 203;
+			if(30 <= w && w <= 34)
+				A_weapon2_card1.value = 201;
+			if(40 <= w && w <= 44)
+				A_weapon2_card1.value = 202;
+		}
 	}
 }
-}
 
-wESx = new Array();
-for(i=0;i<=EnemyNum;i++)
-	wESx[i]=new Array();
-
+// Sort Monsters by order
 function EnemySort()
-{ // Sort Monsters by order
+{ 
+	
+	wESx = new Array();
+	for(i=0;i<=EnemyNum;i++)
+		wESx[i]=new Array();
+	
 	var len = document.calcForm.B_Enemy.length; // EnemyList
 	for ( var i=0;i<len;i++) // clear
 		document.calcForm.B_Enemy.options[0] = null;
@@ -3149,8 +3166,9 @@ function EnemySort()
 	}
 }
 
+// MonsterMapFilter Event
 function SZ( wSTR )
-{ // MonsterMapFilter Event
+{ 
 	var w = document.forms["calcForm"].elements["ENEMY_SORT2"].value;
 	
 	if ( w != 0 )

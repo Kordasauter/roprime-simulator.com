@@ -2416,7 +2416,10 @@ ITEM_NAME = [
 ,[2400,0,0,"Illusion Survivor's Manteau + Survivor's Rod","<br>[For each weapon refine lvl]<br>-[MATK] +20 (up to maximum upgrade of +10.)<br><br>[For each 2 weapon refine lvl]<br>-Resistance to [Neutral] element attacks +1%(up to maximum upgrade of +10.)<br><br>[For each 3 weapon refine lvl]<br>-After cast delay -3%",0]
 ,[2401,0,0,"Illusion Survivor's Manteau + Illusion Wizardry Staff","",0]
 ,[2402,0,0,"Illusion Sacred Mission","",0]
-// ,[2403,0,0,"Place_Holder","",0]
+,[2403,0,0,"Moon Knight Shield","<br>Has a chance of activate effect for 5 seconds when recieving damage: restore 25 SP every second.<br>Has a chance of activate effect for 5 seconds when dealing physical or magical damage: restore 150 HP every second.",0]
+,[2404,0,0,"Bloody Knight Shield","<br>Has a chance of activate effect for 5 seconds when recieving damage: restore 25 SP every second.<br>Has a chance of activate effect for 5 seconds when dealing physical or magical damage: restore 150 HP every second.",0]
+,[2405,0,0,"Sun Knight Shield","<br>Has a chance of activate effect for 5 seconds when recieving damage: restore 50 SP every second.<br>Has a chance of activate effect for 5 seconds when dealing physical or magical damage: restore 300 HP every second.",0]
+// ,[2406,0,0,"Place_Holder","",0]
 ]
 };
 

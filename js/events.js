@@ -958,7 +958,127 @@ function CalcExtendedInfo()
 		myInnerHtml( "A_KakutyouData", wkk11, 0 );
 	}
 }
-
+function ClickEquip( data, isRefine, Type )
+{
+	let eq_id = ItemOBJ[n_A_Equip[Type]][itm_ID];
+	let eq_ref = 0;
+	let form_list = "";
+	
+	switch(Type)
+	{
+		case eq_WEAPON ://= 0;
+			eq_ref = n_A_Weapon_ATKplus;
+			form_list += "A_WEAPON_ENCHANT";
+			break;
+		case eq_WEAPONII ://= 1; 
+			eq_ref = n_A_Weapon2_ATKplus;
+			form_list += "";//TODO
+			break;
+		case eq_HEAD ://= 2;
+			eq_ref = n_A_HEAD_DEF_PLUS;
+			form_list += "A_HEAD_UPPER_ENCHANT";
+			break;
+		case eq_HEAD_MIDDLE ://= 3;
+			eq_ref = 0;
+			form_list += "";//TODO
+			break;
+		case eq_HEAD_LOWER ://= 4;
+			eq_ref = 0;
+			form_list += "";//TODO
+			break;
+		case eq_SHIELD ://= 5;
+			eq_ref = n_A_LEFT_DEF_PLUS;
+			form_list += "A_SHIELD_ENCHANT";
+			break;
+		case eq_ARMOR ://= 6;
+			eq_ref = n_A_BODY_DEF_PLUS;
+			form_list += "A_ARMOR_ENCHANT";
+			break;
+		case eq_GARMENT ://= 7;
+			eq_ref = n_A_SHOULDER_DEF_PLUS;
+			form_list += "A_GARMENT_ENCHANT";
+			break;
+		case eq_SHOES ://= 8;
+			eq_ref = n_A_SHOES_DEF_PLUS;
+			form_list += "A_SHOES_ENCHANT";
+			break;
+		case eq_ACCI ://= 9;
+			eq_ref = 0;
+			form_list += "A_ACCES1_ENCHANT";
+			break;
+		case eq_ACCII ://= 10;
+			eq_ref = 0;
+			form_list += "A_ACCES2_ENCHANT";
+			break;
+		case eq_SHADOW_ARMOR ://= 11;
+			eq_ref = n_A_SHADOW_BODY_DEF_PLUS;
+			form_list += "";//TODO
+			break;
+		case eq_SHADOW_WEAPON ://= 12;
+			eq_ref = n_A_SHADOW_WEAPON_DEF_PLUS;
+			form_list += "";//TODO
+			break;
+		case eq_SHADOW_SHIELD ://= 13;
+			eq_ref = n_A_SHADOW_SHIELD_DEF_PLUS;
+			form_list += "";//TODO
+			break;
+		case eq_SHADOW_SHOES ://= 14;
+			eq_ref = n_A_SHADOW_SHOES_DEF_PLUS;
+			form_list += "";//TODO
+			break;
+		case eq_SHADOW_EARRING ://= 15;
+			eq_ref = n_A_SHADOW_EARRING_DEF_PLUS;
+			form_list += "";//TODO
+			break;
+		case eq_SHADOW_PENDANT ://= 16;
+			eq_ref = n_A_SHADOW_PENDANT_DEF_PLUS;
+			form_list += "";//TODO
+			break;
+		default : 
+			eq_ref = 0;
+			break;
+	}
+	
+	if(isRefine)
+	{
+		eq_ref = data;
+	}
+	else
+	{
+		eq_id = data;
+	}
+	
+	if(ItemOBJ[eq_id][itm_ENCH_SLOT_4] != 0 && !isRefine)
+	{
+		CleanEnchant("A_SHIELD_ENCHANT");
+		formElements[form_list + "_4"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_4]][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements[form_list + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_4]][i]][1],EnchantOBJ[EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_4]][i]][0]);
+		}
+	}
+	if(ItemOBJ[eq_id][itm_ENCH_SLOT_3] != 0 && !isRefine)
+	{
+		formElements[form_list + "_3"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_3]][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements[form_list + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_3]][i]][1],EnchantOBJ[EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_3]][i]][0]);
+		}
+	}
+	if(ItemOBJ[eq_id][itm_ENCH_SLOT_2] != 0 && !isRefine)
+	{
+		formElements[form_list + "_2"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_2]][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements[form_list + "_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_2]][i]][1],EnchantOBJ[EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_2]][i]][0]);
+		}
+	}
+	if(eq_id == 1523  && !isRefine)
+	{// Bible of Promise (1st Vol.)
+		CleanEnchant("A_SHIELD_ENCHANT");
+		SetEnchant("A_SHIELD_ENCHANT",0,50,0);
+	}
+}
 function ClickWeapon( data,isRefine )
 {
 	// console.log("data = " + data + " /isRefine = " + isRefine);
@@ -994,21 +1114,21 @@ function ClickWeapon( data,isRefine )
 
 	
 	if (/*Daggers*/weapon== 390 || weapon== 391 || weapon== 392 || weapon== 387 || weapon== 13 || weapon== 394 || weapon== 396 || weapon== 14 || weapon== 15 || weapon== 389 || weapon== 397 || weapon== 398 || weapon== 799 || weapon== 1157 || weapon== 1267 || weapon== 12 || weapon== 393 || weapon== 11 || weapon== 388 || weapon== 607 || weapon== 395 || weapon== 1268 || 
-		/*Katars*/weapon== 634 || weapon== 482 || weapon== 633 || weapon== 1175 || weapon== 1176 || weapon== 631 || weapon== 632 || weapon== 483 || weapon== 113 || 
+		/*Katars*/ weapon== 113 || weapon== 482 || weapon== 483 || weapon== 631 || weapon== 632 || weapon== 633 || weapon== 634 || weapon== 1175 || weapon== 1176 ||
 		/*One Handed Axes*/weapon== 415 || weapon== 1164 || 
-		/*Two Handed Axes*/weapon== 70 || weapon== 416 || weapon== 1166 || weapon== 417 || weapon== 418 || weapon== 1167 || weapon== 419 || weapon== 68 || weapon== 623 || weapon== 624 || weapon== 69 || weapon== 621 || 
-		/*One Handed Swords*/weapon== 32 || weapon== 33 || weapon== 401 || weapon== 34 || weapon== 31 || weapon== 35 || weapon== 36 || weapon== 403 || weapon== 404 || weapon== 470 || weapon== 1158 || weapon== 1274 || weapon== 402 || weapon== 399 || weapon== 400 || 
-		/*Two Handed Swords*/weapon== 44 || weapon== 405 || weapon== 406 || weapon== 46 || weapon== 45 || weapon== 615 || weapon== 934 || weapon== 819 || weapon== 1159 || weapon== 1275 || weapon== 47 || weapon== 43 || weapon== 614 || weapon== 935 || weapon== 940 || 
-		/*One Handed Spears*/weapon== 616 || weapon== 52 || weapon== 408 || weapon== 410 || weapon== 1269 || weapon== 409 || weapon== 617 || weapon== 618 || 
-		/*Two Handed Spears*/weapon== 60 || weapon== 411 || weapon== 59 || weapon== 412 || weapon== 413 || weapon== 414 || weapon== 471 || weapon== 619 || weapon== 620 || weapon== 1289/*2 ahlspiess??*/ || weapon== 942 || 
-		/*One Handed Staves*/weapon== 478 || weapon== 1041 || weapon== 863 || weapon== 1168 || weapon== 1292 || weapon== 936 || weapon== 948 || weapon== 1881 || weapon== 1884 || 
-		/*Two Handed Staves*/weapon== 92 || weapon== 1172 || weapon== 1173 || weapon== 647 || weapon== 646 || 
-		/*Maces*/weapon== 81 || weapon== 82 || weapon== 422 || weapon== 820 || weapon== 1162 || weapon== 1163 || weapon== 1276 || weapon== 420 || weapon== 421 || weapon== 83 || 
-		/*Books*/weapon== 122 || weapon== 121 || weapon== 486 || weapon== 485 || weapon== 641 ||
-		/*Knuckles*/weapon== 423 || weapon== 424 || weapon== 487 || weapon== 1496 || weapon== 1291 /*2 Sura's Rampage?*/|| 
-		/*Bows*/weapon== 102 || weapon== 103 || weapon== 479 || weapon== 821 || weapon== 945 || weapon== 946 || weapon== 1174 || weapon== 1273 || weapon== 104 || 
+		/*Two Handed Axes*/weapon== 68 || weapon== 69 || weapon== 70 || weapon== 416 || weapon== 417 || weapon== 418 || weapon== 419 || weapon== 621 ||  weapon== 623 || weapon== 624 || weapon== 1166 || weapon== 1167 ||
+		/*One Handed Swords*/ weapon== 31 || weapon== 32 || weapon== 33 || weapon== 34 || weapon== 35 || weapon== 36 || weapon== 399 || weapon== 400 || weapon== 401 || weapon== 402 || weapon== 403 || weapon== 404 || weapon== 470 || weapon== 1158 || weapon== 1274 ||
+		/*Two Handed Swords*/ weapon== 43 || weapon== 44 || weapon== 45 || weapon== 46 || weapon== 47 || weapon== 405 || weapon== 406 || weapon== 614 || weapon== 615 || weapon== 819 || weapon== 934 || weapon== 935 || weapon== 940 || weapon== 1159 || weapon== 1275 ||
+		/*One Handed Spears*/ weapon== 52 || weapon== 408 || weapon== 409 || weapon== 410 || weapon== 616 || weapon== 617 || weapon== 618 || weapon== 1269 || 
+		/*Two Handed Spears*/weapon== 59 || weapon== 60 || weapon== 411 || weapon== 412 || weapon== 413 || weapon== 414 || weapon== 471 || weapon== 619 || weapon== 620 || weapon== 942 || weapon== 1289/*2 ahlspiess??*/ || 
+		/*One Handed Staves*/weapon== 478 || weapon== 863 || weapon== 936 || weapon== 948 || weapon== 1041 || weapon== 1168 || weapon== 1292 || weapon== 1881 || weapon== 1884 ||
+		/*Two Handed Staves*/weapon== 92 || weapon== 646 || weapon== 647 || weapon== 1172 || weapon== 1173 || 
+		/*Maces*/weapon== 81 || weapon== 82 || weapon== 83 || weapon== 420 || weapon== 421 || weapon== 422 || weapon== 820 || weapon== 1162 || weapon== 1163 || weapon== 1276 || 
+		/*Books*/ weapon== 121 || weapon== 122 || weapon== 485 || weapon== 486 || weapon== 641 ||
+		/*Knuckles*/weapon== 423 || weapon== 424 || weapon== 487 || weapon== 1291 /*2 Sura's Rampage?*/||  weapon== 1496 ||
+		/*Bows*/weapon== 102 || weapon== 103 || weapon== 104 || weapon== 479 || weapon== 821 || weapon== 945 || weapon== 946 || weapon== 1174 || weapon== 1273 || 
 		/*Instruments*/weapon== 451 || weapon== 492 || weapon== 649 || weapon== 950 || weapon== 1270 || 
-		/*Whips*/weapon== 425 || weapon== 426 || weapon== 141 || weapon== 498 || weapon== 499 || weapon== 650 || weapon== 652 || weapon== 653 || weapon== 951 || weapon== 1271 || weapon== 1272 
+		/*Whips*/ weapon== 141 || weapon== 425 || weapon== 426 || weapon== 498 || weapon== 499 || weapon== 650 || weapon== 652 || weapon== 653 || weapon== 951 || weapon== 1271 || weapon== 1272 
 		)
 	{//two or less slot weapons
 		formElements["A_WEAPON_ENCHANT_2"].disabled = true;
@@ -1037,11 +1157,11 @@ function ClickWeapon( data,isRefine )
 			formElements["A_WEAPON_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
 		}
 	}
-	else if(weapon== 1452 /*Raksasa Dagger*/ || 
-			weapon== 1453 /*Mikatsuki*/ || 
-			weapon== 1699 /*Huuma Swirling Petal*/ || 
-			weapon== 1700 /*Huuma Fluttering Snow*/ || 
-			weapon== 1701 /*Huuma Thunderstorm*/)
+	else if(weapon== 1452 /*Raksasa Dagger*/ || //spe
+			weapon== 1453 /*Mikatsuki*/ || //spe
+			weapon== 1699 /*Huuma Swirling Petal*/ || //spe
+			weapon== 1700 /*Huuma Fluttering Snow*/ || //spe
+			weapon== 1701 /*Huuma Thunderstorm*/) //spe
 	{
 		formElements["A_WEAPON_ENCHANT_2"].disabled = true;
 		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
@@ -1107,18 +1227,18 @@ function ClickWeapon( data,isRefine )
 			formElements["A_WEAPON_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[54][i]][1],EnchantOBJ[EnchantListOBJ[54][i]][0]);
 		}
 	}
-	else if(weapon == 1507)
+	else if(weapon == 1507)//spe
 	{// "Empowered Wand of Affection"
 		SetEnchant("A_WEAPON_ENCHANT",weapon_ref,ench_Healer,ench_Spell_Ability_1);
 	}
-	else if(weapon == 1541)
+	else if(weapon == 1541)//spe
 	{// Empowered Mace of Judgement
 		SetEnchant("A_WEAPON_ENCHANT",weapon_ref,ench_ATK_Type,ench_Spell_Ability_1);
 	}
-	else if(weapon == 1413 || // "Empowered Golden Rod Staff"
-			weapon == 1420 || // "Empowered Aqua Rod Staff"
-			weapon == 1427 || // "Empowered Crimson Rod Staff"
-			weapon == 1434  ) // "Empowered Forest Rod Staff"
+	else if(weapon == 1413 || // "Empowered Golden Rod Staff"//spe
+			weapon == 1420 || // "Empowered Aqua Rod Staff"//spe
+			weapon == 1427 || // "Empowered Crimson Rod Staff"//spe
+			weapon == 1434  ) // "Empowered Forest Rod Staff"//spe
 	{// Empowered Mace of Judgement
 		SetEnchant("A_WEAPON_ENCHANT",weapon_ref,ench_Spell_Ability_1,ench_Spell_Ability_2);
 	}
@@ -1162,7 +1282,7 @@ function ClickWeapon( data,isRefine )
 			formElements["A_WEAPON_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[87][i]][1],EnchantOBJ[EnchantListOBJ[87][i]][0]);
 		}
 	}
-	else if(weapon >= 2050 && weapon <= 2083)
+	else if(weapon >= 2050 && weapon <= 2083)//spe
 	{//Ancient Weapons 
 		formElements["A_WEAPON_ENCHANT_2"].disabled = true;
 		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
@@ -1261,7 +1381,7 @@ function ClickWeapon( data,isRefine )
 			formElements["A_WEAPON_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[108][i]][1],EnchantOBJ[EnchantListOBJ[108][i]][0]);
 		}
 	}
-	else if(weapon == 2382)
+	else if(weapon == 2382)//spe
 	{//Illusion Sharpened Legbone of Ghoul
 		formElements["A_WEAPON_ENCHANT_2"].disabled = true;
 		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
@@ -1388,34 +1508,36 @@ function ClickShield(data, isRefine)
 		CleanEnchant("A_SHIELD_ENCHANT");
 		SetEnchant("A_SHIELD_ENCHANT",0,50,0);
 	}
-	else if(shield_id == 1389 || // "Giant Shield"
-			shield_id == 1390 || // "Gefenia report of water"
-			shield_id == 1391 )  // "Bible of Promise (2nd vol.)"
-	{
-		CleanEnchant("A_SHIELD_ENCHANT");
-		formElements["A_SHIELD_ENCHANT_3"].disabled = false;
-		formElements["A_SHIELD_ENCHANT_4"].disabled = false;
-		for ( var i = 0; EnchantListOBJ[63][i] != "NULL" && !isRefine; i++ )
-		{
-			formElements["A_SHIELD_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[63][i]][1],EnchantOBJ[EnchantListOBJ[63][i]][0]);
-			formElements["A_SHIELD_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[63][i]][1],EnchantOBJ[EnchantListOBJ[63][i]][0]);
-		}
-	}
-	else if(shield_id == 2402 )  // Illusion Sacred Mission
-	{
-		CleanEnchant("A_SHIELD_ENCHANT");
-		formElements["A_SHIELD_ENCHANT_3"].disabled = false;
-		formElements["A_SHIELD_ENCHANT_4"].disabled = false;
-		for ( var i = 0; EnchantListOBJ[110][i] != "NULL" && !isRefine; i++ )
-		{
-			formElements["A_SHIELD_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[110][i]][1],EnchantOBJ[EnchantListOBJ[110][i]][0]);
-			formElements["A_SHIELD_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[110][i]][1],EnchantOBJ[EnchantListOBJ[110][i]][0]);
-		}
-	}
 	else
 	{
 		CleanEnchant("A_SHIELD_ENCHANT");
 	}
+
+	// if(ItemOBJ[shield_id][itm_ENCH_SLOT_4] != 0 && !isRefine)
+	// {
+		// CleanEnchant("A_SHIELD_ENCHANT");
+		// formElements["A_SHIELD_ENCHANT_4"].disabled = false;
+		// for ( var i = 0; EnchantListOBJ[ItemOBJ[shield_id][itm_ENCH_SLOT_4]][i] != "NULL" && !isRefine; i++ )
+		// {
+			// formElements["A_SHIELD_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ItemOBJ[shield_id][itm_ENCH_SLOT_4]][i]][1],EnchantOBJ[EnchantListOBJ[ItemOBJ[shield_id][itm_ENCH_SLOT_4]][i]][0]);
+		// }
+	// }
+	// if(ItemOBJ[shield_id][itm_ENCH_SLOT_3] != 0 && !isRefine)
+	// {
+		// formElements["A_SHIELD_ENCHANT_3"].disabled = false;
+		// for ( var i = 0; EnchantListOBJ[ItemOBJ[shield_id][itm_ENCH_SLOT_3]][i] != "NULL" && !isRefine; i++ )
+		// {
+			// formElements["A_SHIELD_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ItemOBJ[shield_id][itm_ENCH_SLOT_3]][i]][1],EnchantOBJ[EnchantListOBJ[ItemOBJ[shield_id][itm_ENCH_SLOT_3]][i]][0]);
+		// }
+	// }
+	// if(ItemOBJ[shield_id][itm_ENCH_SLOT_2] != 0 && !isRefine)
+	// {
+		// formElements["A_SHIELD_ENCHANT_2"].disabled = false;
+		// for ( var i = 0; EnchantListOBJ[ItemOBJ[shield_id][itm_ENCH_SLOT_2]][i] != "NULL" && !isRefine; i++ )
+		// {
+			// formElements["A_SHIELD_ENCHANT_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ItemOBJ[shield_id][itm_ENCH_SLOT_2]][i]][1],EnchantOBJ[EnchantListOBJ[ItemOBJ[shield_id][itm_ENCH_SLOT_2]][i]][0]);
+		// }
+	// }
 }
 
 function ClickGarment( data, isRefine )
@@ -2309,7 +2431,8 @@ function ClickHeadUp( data, isRefine )
 	}	
 }
 
-function SetEnchant(formEq,EqRefine,Ench1,Ench2) //Mora Enchants
+//Mora Enchants
+function SetEnchant(formEq,EqRefine,Ench1,Ench2)
 {
 		//slot 4
 		for ( var i = 0; EnchantListOBJ[Ench1][i] != "NULL"; i++ )
@@ -2398,7 +2521,8 @@ function SetEnchant(formEq,EqRefine,Ench1,Ench2) //Mora Enchants
 			formElements[formEq + "_2"].disabled = false;
 }
 
-function SetEnchant2(formEq,EqRefine,Ench1,Ench2) //Verus Enchants
+//Verus Enchants
+function SetEnchant2(formEq,EqRefine,Ench1,Ench2)
 {
 	if(formEq != "A_ARMOR_ENCHANT")
 	{
@@ -3902,6 +4026,7 @@ function DisplayItemDescription( ItemIndex )
 	{ // Check for Sets
 		if ( ItemOBJ[ItemIndex][i] === bon_SETID )
 		{			
+			
 			descriptionString += "<br/><b>When equipping "+ SetEquipName(ItemOBJ[ItemIndex][i + 1]);
 			var setIndex = w_SE[ItemOBJ[ItemIndex][i + 1]][0];
 			while ( ItemOBJ[ItemIndex][i + 2] !== bon_NONE && check === 0 )

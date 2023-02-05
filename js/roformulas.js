@@ -6622,9 +6622,9 @@ function calcASPD()
 	return n_A_ASPD.toFixed(2);
 }
 
+// reset variable cast
 function CalcVariableCast()
 {
-	// reset variable cast
 	variableCastTime = ( 1 - Math.sqrt( ( n_A_DEX * 2 + n_A_INT ) / 530 ) );
 	variableCastTime = Max( variableCastTime, 0 );
 	
@@ -6829,14 +6829,14 @@ function CalcVariableCast()
 		VCT -= 50;
 	}
 
-	if ( w < 0 )
+	if ( VCT < 0 )
 	{
-		w=0;
+		VCT=0;
 	}
 
-	variableCastTime *= w /100;
+	variableCastTime *= VCT /100;
 
-	w = 100;
+	VCT = 100;
 	
 	if(StPlusCalc2(bon_CAST_SKILL+ n_A_ActiveSkill) != 0)
 		VCT -= StPlusCalc2(bon_CAST_SKILL+ n_A_ActiveSkill);
@@ -6887,7 +6887,7 @@ function CalcVariableCast()
 	{
 		VCT = 0;
 	}
-	
+	console.log(VCT);
 	variableCastTime *= VCT /100;
 
 	if ( acolyteBuffs[ksSuffragium] )
