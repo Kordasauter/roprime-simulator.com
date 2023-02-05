@@ -6887,7 +6887,7 @@ function CalcVariableCast()
 	{
 		VCT = 0;
 	}
-	console.log(VCT);
+	
 	variableCastTime *= VCT /100;
 
 	if ( acolyteBuffs[ksSuffragium] )
