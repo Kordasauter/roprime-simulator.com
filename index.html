@@ -15,7 +15,7 @@
 			var Language = 1; // japanese = 0, english = 1
 			var PlayerVersusPlayer = 0;
 			var PATCH = 0;
-			var REVISION = "0502"; 
+			var REVISION = "0702"; 
 		//]]></script>
 		<script type="text/javascript" src="js/jquery.js?t=$$REVISION$$"></script>
 		<script type="text/javascript" src="js/variables.js?t=$$REVISION$$"></script>
@@ -134,12 +134,21 @@
 										<!-- <div id="news"></div> -->
 										<div id="news">
 											<div>
+												<u><b>07/02/2023:</b></u> 
+												<ul style="margin-left: 5px;">
+													<li><b>Important information :</b></li>
+													<ul>
+														<li>The monster database has been updated.</li>
+													</ul>
+												</ul>
+											</div>
+											<div>
 												<u><b>05/02/2023:</b></u> 
 												<ul style="margin-left: 5px;">
 													<li><b>Important information :</b></li>
-														<ul>
-															<li>I'm trying to improve the simulator code to make it more readable and easy to maintain for me.<br>Due to a change in the item/enchantment source code, I had to delete the previous saved enchantment.</li>
-														</ul>
+													<ul>
+														<li>I'm trying to improve the simulator code to make it more readable and easy to maintain for me.<br>Due to a change in the item/enchantment source code, I had to delete the previous saved enchantment.</li>
+													</ul>
 													<li><b>Has been added :</b></li>
 													<ul>
 														<li>Moon Knight Shield</li>
@@ -151,66 +160,6 @@
 														<li>Extended Info : Variable Cast Time is now fixed</li>
 													</ul>
 												</ul>
-											</div>
-											<div>
-												<u><b>28/01/2023:</b></u> 
-												<ul style="margin-left: 5px;">
-													<li><b>Has been added :</b></li>
-													<ul>
-														<li>You can now select a server update! In the "Save" area, you can select a server upgrade (max level 175/60 ​​/ max level 185/65 / 3rd class skill balance)<br>By default, the simulator is set to "175/60"
-															<ul>
-																<li>"175/60" is the current update of EuRO/RuRO</li>
-																<li>"185/65" is the level increase update + 3rd class skill balance as shown <u><a href="http://renewal.playragnarok.com/news/updatedetail.aspx?id=333">here</a></u></li>
-																<li>"3rd class skill balance" as described <u><a href ="https://www.divine-pride.net/forum/index.php?/topic/3723-kro-jobs-improvement-project/">here</a></u></li>
-															</ul>
-															Note: Bonus stat points after job level 60 may not be distributed in the correct order, but the total number of stat points at job level 65 will be correct
-														</li>
-														<li>The monsters database has been updated for the expscaler page but not yet for the calculator (needs to be sorted)</li>
-														<li>Illusion Dungeons</li>
-														<ul>
-															<li>Cards</li> <input class="button" type="button" value="Show details" onclick="javascript:$('#note2801202301').toggle()">
-															<span style="display: none;" id="note2801202301">
-																<ul>
-																	<li>Illusion of Moonlight</li>
-																	<ul>
-																		<li>Resentful Munak Card</li>
-																		<li>Resentful Bongun Card</li>
-																		<li>Resentful Sohee Card</li>
-																		<li>Resentful Soldier Card</li>
-																		<li>Angry Nine Tail Card</li>
-																		<li>Fury Hero Card</li>
-																		<li>Wizard of Veritas Card</li>
-																		<li>Angry Moonlight Flower Card</li>
-																	</ul>
-																	<li>Illusion of Vampire</li>
-																	<ul>
-																		<li>Sweet Nightmare Card</li>
-																		<li>Matte Drainliar Card</li>
-																		<li>Restless Dead Card</li>
-																		<li>Bomi Card</li>
-																		<li>Angry Dracula Card</li>
-																	</ul>
-																	<li>Illusion of Frozen</li>
-																	<ul>
-																		<li>Angry Gazeti Card</li>
-																		<li>Angry Snowier Card</li>
-																		<li>Angry Ice Titan Card</li>
-																		<li>Awakened Ktullanux Card</li>
-																	</ul>
-																</ul>
-															</span>
-															<li>Enchants</li>
-														</ul>
-														<li></li>
-													</ul>
-													<li><b>Has been fixed :</b></li>
-													<ul>
-														<li>Aura Blade buff fixed</li>
-														<li>Peco Rinding size penalty fixed</li>
-														<li>Fixed an issue with saved builds, it should work fine now</li>
-													</ul>
-												</ul>
-												-Kord
 											</div>
 										</div>
 									</div>
@@ -226,6 +175,66 @@
 							<tr>
 								<td class="bgLtRow3 padded optCaption">
 									<div id="old">
+										<u><b>28/01/2023:</b></u> <input class="button" type="button" value="Show/Hide" onclick="javascript:$('#note28012023').toggle()">	
+										<span style="display: none;" id="note28012023">	
+											<ul style="margin-left: 5px;">
+												<li><b>Has been added :</b></li>
+												<ul>
+													<li>You can now select a server update! In the "Save" area, you can select a server upgrade (max level 175/60 ​​/ max level 185/65 / 3rd class skill balance)<br>By default, the simulator is set to "175/60"
+														<ul>
+															<li>"175/60" is the current update of EuRO/RuRO</li>
+															<li>"185/65" is the level increase update + 3rd class skill balance as shown <u><a href="http://renewal.playragnarok.com/news/updatedetail.aspx?id=333">here</a></u></li>
+															<li>"3rd class skill balance" as described <u><a href ="https://www.divine-pride.net/forum/index.php?/topic/3723-kro-jobs-improvement-project/">here</a></u></li>
+														</ul>
+														Note: Bonus stat points after job level 60 may not be distributed in the correct order, but the total number of stat points at job level 65 will be correct
+													</li>
+													<li>The monsters database has been updated for the expscaler page but not yet for the calculator (needs to be sorted)</li>
+													<li>Illusion Dungeons</li>
+													<ul>
+														<li>Cards</li> <input class="button" type="button" value="Show details" onclick="javascript:$('#note2801202301').toggle()">
+														<span style="display: none;" id="note2801202301">
+															<ul>
+																<li>Illusion of Moonlight</li>
+																<ul>
+																	<li>Resentful Munak Card</li>
+																	<li>Resentful Bongun Card</li>
+																	<li>Resentful Sohee Card</li>
+																	<li>Resentful Soldier Card</li>
+																	<li>Angry Nine Tail Card</li>
+																	<li>Fury Hero Card</li>
+																	<li>Wizard of Veritas Card</li>
+																	<li>Angry Moonlight Flower Card</li>
+																</ul>
+																<li>Illusion of Vampire</li>
+																<ul>
+																	<li>Sweet Nightmare Card</li>
+																	<li>Matte Drainliar Card</li>
+																	<li>Restless Dead Card</li>
+																	<li>Bomi Card</li>
+																	<li>Angry Dracula Card</li>
+																</ul>
+																<li>Illusion of Frozen</li>
+																<ul>
+																	<li>Angry Gazeti Card</li>
+																	<li>Angry Snowier Card</li>
+																	<li>Angry Ice Titan Card</li>
+																	<li>Awakened Ktullanux Card</li>
+																</ul>
+															</ul>
+														</span>
+														<li>Enchants</li>
+													</ul>
+													<li></li>
+												</ul>
+												<li><b>Has been fixed :</b></li>
+												<ul>
+													<li>Aura Blade buff fixed</li>
+													<li>Peco Rinding size penalty fixed</li>
+													<li>Fixed an issue with saved builds, it should work fine now</li>
+												</ul>
+											</ul>
+										-Kord
+										</span><br>
 										<u><b>22/01/2023:</b></u> <input class="button" type="button" value="Show/Hide" onclick="javascript:$('#note22012023').toggle()">	
 										<span style="display: none;" id="note22012023">	
 											<ul style="margin-left: 5px;">
