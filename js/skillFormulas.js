@@ -864,6 +864,7 @@ function CalcSkillDamage()
 			skill_GEN_CART_TORNADO,
 			skill_GEN_CRAZY_WEED,
 			skill_GEN_SPORE_EXPLOSION,
+			skill_SHA_FEINT_BOMB,
 			"NULL"];
 	for ( var iw=0; w_ActS[iw] != n_A_ActiveSkill && w_ActS[iw] != "NULL"; iw++ );
 	if ( n_A_ActiveSkill == w_ActS[iw] )
@@ -2749,6 +2750,29 @@ function CalcSkillDamage()
 			n_Delay[ksDelayA] = 0.5;
 			n_Delay[ksDelayCooldown] = 5.0;
 		}
+		else if(n_A_ActiveSkill == skill_SHA_FEINT_BOMB)
+	{
+		damageType = kDmgTypeMelee;
+		// w_SkillMod = (n_A_DEX) * (0.5 + (n_A_ActiveSkillLV * 0.5));//prime
+		w_SkillMod = ((n_A_ActiveSkillLV + 1) * (n_A_DEX / 2 )/100);
+		w_SkillMod *= n_A_JobLV / 10 ;
+		w_SkillMod *= (n_A_BaseLV / 120);
+		// CalcAtkMods02(w_SkillMod,0);
+		
+		// for ( var i = 0; i < 3; i++ )
+		// {
+			// w_DMG[i] = CalcFinalDamage(n_A_DMG[i],i);
+			// w_DMG[i] = Math.floor(w_DMG[i] * element[n_B[en_ELEMENT]][ele_NEUTRAL]/100);
+			// Last_DMG_A[i] = Last_DMG_B[i] = w_DMG[i];
+			// InnStr[i] += Last_DMG_A[i];
+		// }
+		// w_DMG[1] = (w_DMG[1] * w_HIT + ApplyDamageModifiers(0) * element[n_B[en_ELEMENT]][ele_NEUTRAL]/100 *(100-w_HIT))/100;
+		// n_PerHIT_DMG = ApplyDamageModifiers(0) * element[n_B[en_ELEMENT]][ele_NEUTRAL]/100;
+		
+		fixedCastTime *= 0.0;
+		variableCastTime *= 1.0;
+		n_Delay[ksDelayCooldown] = 5.0;
+	}
 
 		CalcAtkMods02( w_SkillMod, 0 );
 		
@@ -5415,26 +5439,27 @@ function CalcSkillDamage()
 		n_Delay[ksDelayGlobal] = 1.0;
 		n_Delay[ksDelayCooldown] = 14.0 - (n_A_ActiveSkillLV - 2);
 	}
-	else if(n_A_ActiveSkill == skill_SHA_FEINT_BOMB)
-	{
-		w_SkillMod = (n_A_DEX / 100) * (0.5 + (n_A_ActiveSkillLV * 0.5));//prime
-		w_SkillMod *= ((n_A_ActiveSkillLV + 1) * (n_A_DEX / 2 ) * (n_A_JobLV / 10) * (n_A_BaseLV / 120))/100;
-		CalcAtkMods02(w_SkillMod,0);
+	// else if(n_A_ActiveSkill == skill_SHA_FEINT_BOMB)
+	// {
+		// w_SkillMod = (n_A_DEX / 100) * (0.5 + (n_A_ActiveSkillLV * 0.5));//prime
+		// w_SkillMod = ((n_A_ActiveSkillLV + 1) * (n_A_DEX / 2 ) * (n_A_JobLV / 10) )/100;
+		// w_SkillMod *= (n_A_BaseLV / 120);
+		// CalcAtkMods02(w_SkillMod,0);
 		
-		for ( var i = 0; i < 3; i++ )
-		{
-			w_DMG[i] = CalcFinalDamage(n_A_DMG[i],i);
-			w_DMG[i] = Math.floor(w_DMG[i] * element[n_B[en_ELEMENT]][ele_NEUTRAL]/100);
-			Last_DMG_A[i] = Last_DMG_B[i] = w_DMG[i];
-			InnStr[i] += Last_DMG_A[i];
-		}
-		w_DMG[1] = (w_DMG[1] * w_HIT + ApplyDamageModifiers(0) * element[n_B[en_ELEMENT]][ele_NEUTRAL]/100 *(100-w_HIT))/100;
-		n_PerHIT_DMG = ApplyDamageModifiers(0) * element[n_B[en_ELEMENT]][ele_NEUTRAL]/100;
+		// for ( var i = 0; i < 3; i++ )
+		// {
+			// w_DMG[i] = CalcFinalDamage(n_A_DMG[i],i);
+			// w_DMG[i] = Math.floor(w_DMG[i] * element[n_B[en_ELEMENT]][ele_NEUTRAL]/100);
+			// Last_DMG_A[i] = Last_DMG_B[i] = w_DMG[i];
+			// InnStr[i] += Last_DMG_A[i];
+		// }
+		// w_DMG[1] = (w_DMG[1] * w_HIT + ApplyDamageModifiers(0) * element[n_B[en_ELEMENT]][ele_NEUTRAL]/100 *(100-w_HIT))/100;
+		// n_PerHIT_DMG = ApplyDamageModifiers(0) * element[n_B[en_ELEMENT]][ele_NEUTRAL]/100;
 		
-		fixedCastTime *= 0.0;
-		variableCastTime *= 1.0;
-		n_Delay[ksDelayCooldown] = 5.0;
-	}
+		// fixedCastTime *= 0.0;
+		// variableCastTime *= 1.0;
+		// n_Delay[ksDelayCooldown] = 5.0;
+	// }
 	// Magic Skills ----------------------------------
 	else
 	{

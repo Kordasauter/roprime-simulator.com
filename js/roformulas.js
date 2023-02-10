@@ -2800,6 +2800,10 @@ function CalcRangedMod()
 	{ // Ranged Reduction
 		rangedMod -= monsterBuffs[status_en_buff_Ranged];
 	}
+	if(n_A_ActiveSkill == skill_SHA_FEINT_BOMB)
+	{
+		rangedMod=0;
+	}
 }
 
 function CalcWeaponSizeMod()
