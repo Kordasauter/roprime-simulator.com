@@ -3500,8 +3500,8 @@ function Init()
 	for(i=0;i<CardShort.length;i++) // CardShortcuts
 		document.calcForm.A_SHORTCUT_R.options[i] = new Option(CardShort[i][Language+4],i);
 	
-	for(i=0;i<EquipShortCutData.length;i++) // Sets
-		document.calcForm.A_cardshort.options[i] = new Option(EquipShortCutData[i][Language+9],i);
+	// for(i=0;i<EquipShortCutData.length;i++) // Sets
+		// document.calcForm.A_cardshort.options[i] = new Option(EquipShortCutData[i][Language+9],i);
 		//document.calcForm.A_EQUIP_SET_SHORT.options[i] = new Option(EquipShortCutData[i][9 + Language],i);
 	
 	// Hidden Slot enchant

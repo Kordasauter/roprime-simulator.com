@@ -915,7 +915,7 @@ function BuildPassiveSkillTable()
 	}
 
 	// Build Skill Table
-	var str = '<table class="bgLtTable">';
+	var str = '<table class="shadow">';
 	var rowCount = 0;
 	for ( var i = 0; i < skillCount; i += 2 )
 	{
@@ -1460,7 +1460,7 @@ with(document.calcForm)
 	n_SkillSW = 1;
 
 	var str;
-	str =  '<table class="bgLtTable"><tr>';
+	str =  '<table class="shadow"><tr>';
 	str += '<td id="AS0_1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="AS0_2" class="bgLtRow1 padded optArea"></td>';
 	str += '<td id="AS1_1" class="bgLtRow3 padded optCaption"></td>';
@@ -1660,16 +1660,17 @@ with(document.calcForm)
 {
 	// Build Table
 	var str
-	str = '<table class="bgLtTable"><tr>';
+	str = '<table class="shadow"><tr>';
 	str += '<td id="EN60_1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="EN60_2" class="bgLtRow1 padded optArea"></td>';
 	str += '<td id="EN61_1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="EN61_2" class="bgLtRow1 padded optArea"></td>';
+	str += '</tr><tr>';
 	str += '<td id="EN62_1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="EN62_2" class="bgLtRow1 padded optArea"></td>';
-	str += '</tr><tr>';
 	str += '<td id="EN63_1" class="bgLtRow4 padded optCaption"></td>';
 	str += '<td id="EN63_2" class="bgLtRow2 padded optArea"></td>';
+	str += '</tr><tr>';
 	str += '<td id="EN64_1" class="bgLtRow4 padded optCaption"></td>';
 	str += '<td id="EN64_2" class="bgLtRow2 padded optArea"></td>';
 	str += '<td id="EN65_1" class="bgLtRow4 padded optCaption"></td>';
@@ -1679,11 +1680,12 @@ with(document.calcForm)
 	str += '<td id="EN66_2" class="bgLtRow1 padded optArea"></td>';
 	str += '<td id="EN67_1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="EN67_2" class="bgLtRow1 padded optArea"></td>';
+	str += '</tr><tr>';
 	str += '<td id="EN68_1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="EN68_2" class="bgLtRow1 padded optArea"></td>';
-	str += '</tr><tr>';
 	str += '<td id="EN69_1" class="bgLtRow4 padded optCaption"></td>';
 	str += '<td id="EN69_2" class="bgLtRow2 padded optArea"></td>';
+	str += '</tr><tr>';
 	str += '<td id="EN610_1" class="bgLtRow4 padded optCaption"></td>';
 	str += '<td id="EN610_2" class="bgLtRow2 padded optArea"></td>';
 	str += '<td id="EN611_1" class="bgLtRow4 padded optCaption"></td>';
@@ -1693,11 +1695,12 @@ with(document.calcForm)
 	str += '<td id="EN612_2" class="bgLtRow1 padded optArea"></td>';
 	str += '<td id="EN613_1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="EN613_2" class="bgLtRow1 padded optArea"></td>';
+	str += '</tr><tr>';
 	str += '<td id="EN614_1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="EN614_2" class="bgLtRow1 padded optArea"></td>';
-	str += '</tr><tr>';
 	str += '<td id="EN615_1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="EN615_2" class="bgLtRow1 padded optArea"></td>';
+	str += '</tr><tr>';
 	str += '<td id="EN616_1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="EN616_2" class="bgLtRow1 padded optArea"></td>';
 	str += '<td id="EN617_1" class="bgLtRow3 padded optCaption"></td>';
@@ -1847,9 +1850,9 @@ function BuildMiscEffectsTable()
 with(document.calcForm)
 {
 	var str;
-	str = '<table class="bgLtTable"><tr>';
+	str = '<table class="shadow"><tr>';
 	str += '<td id="petsLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="petsInput" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="petsInput"  class="bgLtRow1 padded optArea"></td>';
 	str += '<td id="numEnemiesLabel" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="numEnemiesInput" class="bgLtRow1 padded optArea"></td>';
 	str += '</tr><tr>';
@@ -1887,7 +1890,7 @@ with(document.calcForm)
 	
 	// Pets
 	myInnerHtml( "petsLabel", "Pet Bonuses", 0 );
-	myInnerHtml( "petsInput", '<select id="petBonus" onchange="ToggleMiscEffects()"></select>', 0 );
+	myInnerHtml( "petsInput", '<select id="petBonus" style="width:200px" onchange="ToggleMiscEffects()"></select>', 0 );
 	for ( var i = 0; i <= PET_OBJ.length - 1; i++ )
 	{
 		petBonus.options[i] = new Option(PET_OBJ[i][1],PET_OBJ[i][0]);
@@ -1902,10 +1905,10 @@ with(document.calcForm)
 	myInnerHtml( "tempTwoLabel", "Temp Effect", 0 );
 	myInnerHtml( "tempThreeLabel", "Temp Effect", 0 );
 	myInnerHtml( "tempFourLabel", "Temp Effect", 0 );
-	myInnerHtml( "tempOneInput", '<select id="tempOne" onchange="ToggleMiscEffects()"></select>', 0 );
-	myInnerHtml( "tempTwoInput", '<select id="tempTwo" onchange="ToggleMiscEffects()"></select>', 0 );
-	myInnerHtml( "tempThreeInput", '<select id="tempThree" onchange="ToggleMiscEffects()"></select>', 0 );
-	myInnerHtml( "tempFourInput", '<select id="tempFour" onchange="ToggleMiscEffects()"></select>', 0 );
+	myInnerHtml( "tempOneInput", '<select id="tempOne" style="width:200px" onchange="ToggleMiscEffects()"></select>', 0 );
+	myInnerHtml( "tempTwoInput", '<select id="tempTwo" style="width:200px" onchange="ToggleMiscEffects()"></select>', 0 );
+	myInnerHtml( "tempThreeInput", '<select id="tempThree" style="width:200px" onchange="ToggleMiscEffects()"></select>', 0 );
+	myInnerHtml( "tempFourInput", '<select id="tempFour" style="width:200px" onchange="ToggleMiscEffects()"></select>', 0 );
 	for ( var i = 0; i < ITEM_SP_TIME_OBJ_SORT.length; i++ )
 	{
 		var n = ITEM_SP_TIME_OBJ_SORT[i];
@@ -1965,7 +1968,7 @@ function BuildBattleEffectsTable()
 with(document.calcForm)
 {
 	var str;
-	str = '<table class="bgLtTable"><tr>';
+	str = '<table class="shadow"><tr>';
 	str += '<td id="vipLabel" class="bgLtRow4 padded optCaption"></td>';
 	str += '<td id="vipInput" class="bgLtRow2 padded optArea"></td>';
 	str += '<td id="jobManualLabel" class="bgLtRow3 padded optCaption"></td>';
@@ -2069,16 +2072,17 @@ with(document.calcForm)
 {
 	// Build the table
 	var str;
-	str = '<table class="bgLtTable"><tr>';
+	str = '<table class="shadow"><tr>';
 	str += '<td id="BI0_1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="BI0_2" class="bgLtRow1 padded optArea"></td>';
 	str += '<td id="BI1_1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="BI1_2" class="bgLtRow1 padded optArea"></td>';
+	str += '</tr><tr>';
 	str += '<td id="BI2_1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="BI2_2" class="bgLtRow1 padded optArea"></td>';
-	str += '</tr><tr>';
 	str += '<td id="BI3_1" class="bgLtRow4 padded optCaption"></td>';
 	str += '<td id="BI3_2" class="bgLtRow2 padded optArea"></td>';
+	str += '</tr><tr>';
 	str += '<td id="BI4_1" class="bgLtRow4 padded optCaption"></td>';
 	str += '<td id="BI4_2" class="bgLtRow2 padded optArea"></td>';
 	str += '<td id="BI5_1" class="bgLtRow4 padded optCaption"></td>';
@@ -2088,11 +2092,12 @@ with(document.calcForm)
 	str += '<td id="BI6_2" class="bgLtRow1 padded optArea"></td>';
 	str += '<td id="BI7_1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="BI7_2" class="bgLtRow1 padded optArea"></td>';
+	str += '</tr><tr>';
 	str += '<td id="BI8_1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="BI8_2" class="bgLtRow1 padded optArea"></td>';
-	str += '</tr><tr>';
 	str += '<td id="BI9_1" class="bgLtRow4 padded optCaption"></td>';
 	str += '<td id="BI9_2" class="bgLtRow2 padded optArea"></td>';
+	str += '</tr><tr>';
 	str += '<td id="BI10_1" class="bgLtRow4 padded optCaption"></td>';
 	str += '<td id="BI10_2" class="bgLtRow2 padded optArea"></td>';
 	str += '<td id="BI11_1" class="bgLtRow4 padded optCaption"></td>';
@@ -2102,11 +2107,12 @@ with(document.calcForm)
 	str += '<td id="BI12_2" class="bgLtRow1 padded optArea"></td>';
 	str += '<td id="BI13_1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="BI13_2" class="bgLtRow1 padded optArea"></td>';
+	str += '</tr><tr>';
 	str += '<td id="BI14_1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="BI14_2" class="bgLtRow1 padded optArea"></td>';
-	str += '</tr><tr>';
 	str += '<td id="BI15_1" class="bgLtRow4 padded optCaption"></td>';
 	str += '<td id="BI15_2" class="bgLtRow2 padded optArea"></td>';
+	str += '</tr><tr>';
 	str += '<td id="BI16_1" class="bgLtRow4 padded optCaption"></td>';
 	str += '<td id="BI16_2" class="bgLtRow2 padded optArea"></td>';
 	str += '<td id="BI17_1" class="bgLtRow4 padded optCaption"></td>';
@@ -2116,13 +2122,14 @@ with(document.calcForm)
 	str += '<td id="BI18_2" class="bgLtRow1 padded optArea"></td>';
 	str += '<td id="BI19_1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="BI19_2" class="bgLtRow1 padded optArea"></td>';
+	str += '</tr><tr>';
 	str += '<td id="BI20_1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="BI20_2" class="bgLtRow1 padded optArea"></td>';
-	str += '</tr><tr>';
 	str += '<td id="BI24_1" class="bgLtRow4 padded optCaption"></td>';
 	str += '<td id="BI24_2" class="bgLtRow2 padded optArea"></td>';
 	if ( PlayerVersusPlayer === 0 )
 	{
+		str += '</tr><tr>';
 		str += '<td id="BI21_1" class="bgLtRow4 padded optCaption"></td>';
 		str += '<td id="BI21_2" class="bgLtRow2 padded optArea"></td>';
 		str += '<td id="BI22_1" class="bgLtRow4 padded optCaption"></td>';
@@ -2132,23 +2139,24 @@ with(document.calcForm)
 		str += '<td id="BI23_2" class="bgLtRow1 padded optArea"></td>';
 		str += '<td id="deepSleepLabel" class="bgLtRow3 padded optCaption"></td>';
 		str += '<td id="deepSleepInput" class="bgLtRow1 padded optArea"></td>';
+		str += '</tr><tr>';
 		str += '<td id="venomImpressLabel" class="bgLtRow3 padded optCaption"></td>';
 		str += '<td id="venomImpressInput" class="bgLtRow1 padded optArea"></td>';
-		str += '</tr><tr>';
 		str += '<td id="MarshOfAbyssLabel" class="bgLtRow4 padded optCaption"></td>';
 		str += '<td id="MarshOfAbyssInput" class="bgLtRow2 padded optArea"></td>';
+		str += '</tr><tr>';
 		str += '<td id="GloomyDayLabel" class="bgLtRow4 padded optCaption"></td>';
 		str += '<td id="GloomyDayInput" class="bgLtRow2 padded optArea"></td>';
 		str += '<td id="DarkClawLabel"class="bgLtRow4 padded optCaption"></td>';
 		str += '<td id="DarkClawInput" class="bgLtRow2 padded optArea"></td>';
 	}
-	else
-	{
-		str += '<td class="bgLtRow4 padded optCaption"></td>';
-		str += '<td class="bgLtRow2 padded optArea"></td>';
-		str += '<td class="bgLtRow4 padded optCaption"></td>';
-		str += '<td class="bgLtRow2 padded optArea"></td>';
-	}
+	// else
+	// {
+		// str += '<td class="bgLtRow4 padded optCaption"></td>';
+		// str += '<td class="bgLtRow2 padded optArea"></td>';
+		// str += '<td class="bgLtRow4 padded optCaption"></td>';
+		// str += '<td class="bgLtRow2 padded optArea"></td>';
+	// }
 	str += '</tr></table>';
 	myInnerHtml( "MonsterDebuffs", str, 0 );
 	
@@ -2305,18 +2313,19 @@ with( document.calcForm )
 {
 	// Build Table
 	var str;
-	str = '<table class="bgLtTable"><tr>';
+	str = '<table class="shadow"><tr>';
 	str += '<td id="ID_K0" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="ID_Kb0" class="bgLtRow1 padded optArea"></td>';
 	str += '<td id="ID_K1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="ID_Kb1" class="bgLtRow1 padded optArea"></td>';
 	if ( PlayerVersusPlayer === 0 )
 	{ // not human
+		str += '</tr><tr>';
 		str += '<td id="ID_K2" class="bgLtRow3 padded optCaption"></td>';
 		str += '<td id="ID_Kb2" class="bgLtRow1 padded optArea"></td>';
-		str += '</tr><tr>';
 		str += '<td id="ID_K3" class="bgLtRow4 padded optCaption"></td>';
 		str += '<td id="ID_Kb3" class="bgLtRow2 padded optArea"></td>';
+		str += '</tr><tr>';
 		str += '<td id="ID_K4" class="bgLtRow4 padded optCaption"></td>';
 		str += '<td id="ID_Kb4" class="bgLtRow2 padded optArea"></td>';
 		str += '<td id="ID_K5" class="bgLtRow4 padded optCaption"></td>';
@@ -2326,11 +2335,12 @@ with( document.calcForm )
 		str += '<td id="ID_Kb6" class="bgLtRow1 padded optArea"></td>';
 		str += '<td id="ID_K7" class="bgLtRow3 padded optCaption"></td>';
 		str += '<td id="ID_Kb7" class="bgLtRow1 padded optArea"></td>';
+		str += '</tr><tr>';
 		str += '<td id="ID_K8" class="bgLtRow3 padded optCaption"></td>';
 		str += '<td id="ID_Kb8" class="bgLtRow1 padded optArea"></td>';
-		str += '</tr><tr>';
 		str += '<td id="ID_K9" class="bgLtRow4 padded optCaption"></td>';
 		str += '<td id="ID_Kb9" class="bgLtRow2 padded optArea"></td>';
+		str += '</tr><tr>';
 		str += '<td id="ID_K10" class="bgLtRow4 padded optCaption"></td>';
 		str += '<td id="ID_Kb10" class="bgLtRow2 padded optArea"></td>';
 		str += '<td id="ID_K11" class="bgLtRow4 padded optCaption"></td>';
@@ -2340,21 +2350,23 @@ with( document.calcForm )
 		str += '<td id="ID_Kb12" class="bgLtRow1 padded optArea"></td>';
 		str += '<td id="ID_K13" class="bgLtRow3 padded optCaption"></td>';
 		str += '<td id="ID_Kb13" class="bgLtRow1 padded optArea"></td>';
+		str += '</tr><tr>';
 		str += '<td id="ID_K14" class="bgLtRow3 padded optCaption"></td>';
 		str += '<td id="ID_Kb14" class="bgLtRow1 padded optArea"></td>';
-		str += '</tr><tr>';
 		str += '<td id="ID_K15" class="bgLtRow3 padded optCaption"></td>';
 		str += '<td id="ID_Kb15" class="bgLtRow1 padded optArea"></td>';
+		str += '</tr><tr>';
 		str += '<td id="ID_K16" class="bgLtRow3 padded optCaption"></td>';
 		str += '<td id="ID_Kb16" class="bgLtRow1 padded optArea"></td>';
 		str += '<td id="ID_K17" class="bgLtRow3 padded optCaption"></td>';
 		str += '<td id="ID_Kb17" class="bgLtRow1 padded optArea"></td>';
 	}
-	else
-	{
-		str += '<td class="bgLtRow3 padded optCaption"></td>';
-		str += '<td class="bgLtRow1 padded optArea"></td>';
-	}
+	// else
+	// {
+		// str += '</tr><tr>';
+		// str += '<td class="bgLtRow3 padded optCaption"></td>';
+		// str += '<td class="bgLtRow1 padded optArea"></td>';
+	// }
 	str += '</tr></table>';
 	myInnerHtml( "MonsterBuffs", str, 0 );
 
@@ -2482,7 +2494,7 @@ function BuildSearchTable()
 	str = '';
 	str += '<div class="bgMdTitle mdTitle" onclick="ToggleVisibility(\'Level\')">Character</div>';
 	str += '<div id="Level" style="display:block">';
-	str += '<table class="bgLtTable"><tr>';
+	str += '<table class="shadow"><tr>';
 	// str += '<td id="BaseLevelLabel" class="bgLtRow3 padded optCaption"></td>';
 	// str += '<td id="BaseLevelInput" class="bgLtRow1 padded optArea"></td>';
 	str += '<td id="RangeLevelLabel" class="bgLtRow3 padded optCaption"></td>';
@@ -2497,7 +2509,7 @@ function BuildSearchTable()
 	
 	str += '<div class="bgMdTitle mdTitle" onclick="ToggleVisibility(\'Race\')">Race & Element</div>';
 	str += '<div id="Race" style="display:block">';
-	str += '<table class="bgLtTable"><tr>';
+	str += '<table class="shadow"><tr>';
 	str += '<td id="RCFormlessLabel" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="RCFormlessInput" class="bgLtRow1 padded optArea"></td>';
 	str += '<td id="RCUndeadLabel" class="bgLtRow3 padded optCaption"></td>';
@@ -2524,7 +2536,7 @@ function BuildSearchTable()
 	str += '</tr><tr>';
 	/*str += '<div class="bgMdTitle mdTitle" onclick="ToggleVisibility(\'Element\')">Element</div>';
 	str += '<div id="Element" style="display:block">';
-	str += '<table class="bgLtTable"><tr>';*/
+	str += '<table class="shadow"><tr>';*/
 	str += '<td id="ELENeutralLabel" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="ELENeutralInput" class="bgLtRow1 padded optArea"></td>';
 	str += '<td id="ELEWaterLabel" class="bgLtRow3 padded optCaption"></td>';
@@ -2690,7 +2702,7 @@ function BuildMonsterTable()
 	str = '';
 	str += '<div class="bgMdTitle mdTitle" onclick="ToggleVisibility(\'Mobs\')">Monsters</div>';
 	str += '<div id="Mobs" style="display:block">';
-	str += '<table class="bgLtTable"><tr>';
+	str += '<table class="shadow"><tr>';
 	str += "<td id=\"NameLabel\" class=\"bgLtRow1 padded optCaption\"></td>";
 	str += '<td id="LevelLabel" class="bgLtRow1 padded optCaption"></td>';
 	str += '<td id="BaseExpLabel" class="bgLtRow1 padded optCaption"></td>';
@@ -3136,7 +3148,7 @@ function BuildItemsTable()
 	
 	// Build Table
 	var str;
-	str = '<table class="bgLtTable"><tr>';
+	str = '<table class="shadow"><tr>';
 	str += '<td id="aspdLabel" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="aspdInput" class="bgLtRow1 padded optArea"></td>';
 	str += '<td id="sesameLabel" class="bgLtRow3 padded optCaption"></td>';

@@ -2895,6 +2895,14 @@ function ClickWeaponType( weaponType )
 			var element = document.getElementById( "offweapon" );
 			var state = element.style.display;
 			element.style.display = 'block';
+				// show the shield table
+			with(document.calcForm)
+			{		
+				A_LEFT_DEF_PLUS.disabled = false;
+				A_left.disabled = false;
+				A_left_card.disabled = false;
+			}
+
 		//}
 			
 	}
@@ -2911,15 +2919,23 @@ function ClickWeaponType( weaponType )
 		myInnerHtml("nA_weapon2_c3","",0);
 		myInnerHtml("nA_weapon2_c4","",0);
 		n_Nitou = 0;
-		formElements["A_LEFT_DEF_PLUS"].style.visibility = "visible";
-		formElements["A_left"].style.visibility = "visible";
-		formElements["A_left_card"].style.visibility = "visible";
-		//myInnerHtml("ID_A_SHORTCUT_LOAD_BUTTON_L","",0); // soll
+		// formElements["A_LEFT_DEF_PLUS"].style.visibility = "visible";
+		// formElements["A_left"].style.visibility = "visible";
+		// formElements["A_left_card"].style.visibility = "visible";
+		// formElements["Shield_Pannel"].style.visibility = "visible";
+		with(document.calcForm)
+		{		
+			A_LEFT_DEF_PLUS.disabled = false;
+			A_left.disabled = false;
+			A_left_card.disabled = false;
+		}
+		// myInnerHtml("ID_A_SHORTCUT_LOAD_BUTTON_L","",0); // soll
 		
 		// hide the off hand table
 		var element = document.getElementById( "offweapon" );
 		var state = element.style.display;
 		element.style.display = 'none';
+		// show the shield table
 	}
 
 	n_A_Equip[0] = parseInt(formElements["A_weapon1"].value);
@@ -3000,12 +3016,21 @@ with(document.calcForm)
 				document.calcForm.A_weapon2_card1.add(ReturnOption(201+i),i+1);
 			}
 
-			A_LEFT_DEF_PLUS.style.visibility = "hidden";
-			A_LEFT_DEF_PLUS.value = 0;
-			A_left.style.visibility = "hidden";
+			// A_LEFT_DEF_PLUS.style.visibility = "hidden";
+			// A_LEFT_DEF_PLUS.value = 0;
+			// A_left.style.visibility = "hidden";
+			// A_left.value = 305;
+			// A_left_card.style.visibility = "hidden";
+			// A_left_card.value = 0;
+			A_LEFT_DEF_PLUS.disabled = true;
+			A_left.disabled = true;
 			A_left.value = 305;
-			A_left_card.style.visibility = "hidden";
+			A_left_card.disabled = true;
 			A_left_card.value = 0;
+			// hide the shield table
+			// var element = document.getElementById( "Shield_Pannel" );
+			// var state = element.style.display;
+			// element.style.display = 'none';
 		}
 		myInnerHtml("spanA_weapon2_CardShort",'<select name="A_cardshortLeft" style="width:200px;" onChange="SetCardShortLeft()|StAllCalc()|ActiveSkillSetPlus()"></select>',0);
 		A_cardshortLeft.options[0] = new Option("Card Shortcuts",0);
@@ -3030,6 +3055,10 @@ with(document.calcForm)
 		A_LEFT_DEF_PLUS.style.visibility = "visible";
 		A_left.style.visibility = "visible"
 		A_left_card.style.visibility = "visible"
+		// Show the shield table
+		A_LEFT_DEF_PLUS.disabled = false;
+		A_left.disabled = false;
+		A_left_card.disabled = false;
 	}
 	if ( n_Nitou )
 	{
