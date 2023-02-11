@@ -1307,6 +1307,33 @@ function CalcEquipAtk()
 	{ // Meow Meow
 		equipmentAttack += 100;
 	}
+	//TEST
+	if ( SkillSearch( skill_MS_MAXIMUM_POWER_THUST ) )
+	{
+		equipmentAttack += n_A_Weapon_ATK * (0.20 * SkillSearch( skill_MS_MAXIMUM_POWER_THUST ));
+	}
+	else
+	{
+		if ( SkillSearch( skill_BS_POWER_THRUST ) )
+		{
+			equipmentAttack += n_A_Weapon_ATK * (SkillSearch( skill_BS_POWER_THRUST ) * 0.05);
+		}
+		else if ( otherBuffs[ksPowerThrust] )
+		{
+			equipmentAttack += n_A_Weapon_ATK * 0.05;
+			if (otherBuffs[ksPowerThrust] >= 3 )
+			{
+				equipmentAttack += n_A_Weapon_ATK * 0.05;
+			}
+			if (otherBuffs[ksPowerThrust] >= 5 )
+			{
+				equipmentAttack += n_A_Weapon_ATK * 0.05;
+			}
+			
+		}
+	}
+	
+	
 
 	return equipmentAttack;
 }
@@ -2161,30 +2188,30 @@ function CalcAttackMod()
 		attackMod += 0.1;
 	}
 	//TEST
-	if ( SkillSearch( skill_MS_MAXIMUM_POWER_THUST ) )
-	{
-		attackMod += 0.20 * SkillSearch( skill_MS_MAXIMUM_POWER_THUST );
-	}
-	else
-	{
-		if ( SkillSearch( skill_BS_POWER_THRUST ) )
-		{
-			attackMod += SkillSearch( skill_BS_POWER_THRUST ) * 0.05;
-		}
-		else if ( otherBuffs[ksPowerThrust] )
-		{
-			attackMod += 0.05;
-			if (otherBuffs[ksPowerThrust] >= 3 )
-			{
-				attackMod += 0.05;
-			}
-			if (otherBuffs[ksPowerThrust] >= 5 )
-			{
-				attackMod += 0.05;
-			}
+	// if ( SkillSearch( skill_MS_MAXIMUM_POWER_THUST ) )
+	// {
+		// attackMod += 0.20 * SkillSearch( skill_MS_MAXIMUM_POWER_THUST );
+	// }
+	// else
+	// {
+		// if ( SkillSearch( skill_BS_POWER_THRUST ) )
+		// {
+			// attackMod += SkillSearch( skill_BS_POWER_THRUST ) * 0.05;
+		// }
+		// else if ( otherBuffs[ksPowerThrust] )
+		// {
+			// attackMod += 0.05;
+			// if (otherBuffs[ksPowerThrust] >= 3 )
+			// {
+				// attackMod += 0.05;
+			// }
+			// if (otherBuffs[ksPowerThrust] >= 5 )
+			// {
+				// attackMod += 0.05;
+			// }
 			
-		}
-	}
+		// }
+	// }
 	
 	var multiplier = 0;
 	if ( SkillSearch(skill_TKM_STELLAR_WRATH) && SkillSearch(skill_TKM_SOLAR_LUNAR_AND_STELLAR_MIRACLE ) )
