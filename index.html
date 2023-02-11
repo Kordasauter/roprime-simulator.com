@@ -28,52 +28,6 @@
 		var PlayerVersusPlayer = 0;
 		var PATCH = 0;
 	//]]></script>
-	<script type="text/javascript" src="js/jquery.js?t=1102"></script>
-	<script type="text/javascript" src="js/variables.js?t=1102"></script>
-	<!--verbage-->
-	<script type="text/javascript" src="js/elements.js?t=1102"></script>
-	<script type="text/javascript" src="js/exposition.js?t=1102"></script>
-	<script type="text/javascript" src="js/itemNames.js?t=1102"></script>
-	<script type="text/javascript" src="js/jobClasses.js?t=1102"></script>
-	<script type="text/javascript" src="js/maps.js?t=1102"></script>
-	<script type="text/javascript" src="js/projectiles.js?t=1102"></script>
-	<script type="text/javascript" src="js/races.js?t=1102"></script>
-	<script type="text/javascript" src="js/sizes.js?t=1102"></script>
-	<script type="text/javascript" src="js/skillNames.js?t=1102"></script>
-	<script type="text/javascript" src="js/speedPotions.js?t=1102"></script>
-	<script type="text/javascript" src="js/statusAilments.js?t=1102"></script>
-	<script type="text/javascript" src="js/weaponTypes.js?t=1102"></script>
-	<!--tables-->
-	<script type="text/javascript" src="js/defines.js?t=1102"></script>
-	<script type="text/javascript" src="js/defineItem.js?t=1102"></script>
-	<script type="text/javascript" src="js/attackSpeedNew.js?t=1102"></script>
-	<script type="text/javascript" src="js/attackSpeedOld.js?t=1102"></script>
-	<script type="text/javascript" src="js/baseExperience.js?t=1102"></script>
-	<script type="text/javascript" src="js/elementTable.js?t=1102"></script>
-	<script type="text/javascript" src="js/itemEffects.js?t=1102"></script>
-	<script type="text/javascript" src="js/jobBonus.js?t=1102"></script>
-	<script type="text/javascript" src="js/jobExperience.js?t=1102"></script>
-	<script type="text/javascript" src="js/petTable.js?t=1102"></script>
-	<script type="text/javascript" src="js/weaponSize.js?t=1102"></script>
-	<script type="text/javascript" src="js/item.js?t=1102"></script>
-	<script type="text/javascript" src="js/skill.js?t=1102"></script>
-	<script type="text/javascript" src="js/monster.js?t=1102"></script>
-	<script type="text/javascript" src="js/monster_new.js?t=1102"></script>
-	<script type="text/javascript" src="js/card.js?t=1102"></script>
-	<script type="text/javascript" src="js/enchant.js?t=1102"></script>
-	<!--functions-->
-	<script type="text/javascript" src="js/magicAttack.js?t=1102"></script>
-	<script type="text/javascript" src="js/math.js?t=1102"></script>
-	<script type="text/javascript" src="js/helperFunctions.js?t=1102"></script>
-	<script type="text/javascript" src="js/Enemy.js?t=1102"></script>
-	<script type="text/javascript" src="js/Heal.js?t=1102"></script>
-	<script type="text/javascript" src="js/roformulas.js?t=1102"></script>
-	<script type="text/javascript" src="js/skillFormulas.js?t=1102"></script>
-	<!--form-->
-	<script type="text/javascript" src="js/head.js?t=1102"></script>
-	<script type="text/javascript" src="js/events.js?t=1102"></script>
-	<script type="text/javascript" src="js/cookies.js?t=0501"></script>
-	<script type="text/javascript" src="js/news.js?t=1102"></script>
 	
 	<!-- Cookie Consent by PrivacyPolicies.com https://www.PrivacyPolicies.com -->
 	<script type="text/javascript" src="https://www.privacypolicies.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
@@ -2459,13 +2413,18 @@
 	</div>
     <!-- End of Page Wrapper -->
 
+
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
 
+
+	<script src="vendor/jquery/jquery.min.js"></script> 
+	<!-- <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> -->
+
 	<!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- jquery -->
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
@@ -2473,7 +2432,89 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
-	<script type="text/javascript" src="js/foot.js?t=1102"></script>
+
+
+	<script>
+		var version = '1'; 
+		var jsassets = [
+		'js/variables.js',
+		//<!--verbage-->
+		'js/elements.js',
+		'js/exposition.js',
+		'js/itemNames.js',
+		'js/jobClasses.js',
+		'js/maps.js',
+		'js/projectiles.js',
+		'js/races.js',
+		'js/sizes.js',
+		'js/skillNames.js',
+		'js/speedPotions.js',
+		'js/statusAilments.js',
+		'js/weaponTypes.js',
+		//<!--tables-->
+		'js/defines.js',
+		'js/defineItem.js',
+		'js/attackSpeedNew.js',
+		'js/attackSpeedOld.js',
+		'js/baseExperience.js',
+		'js/elementTable.js',
+		'js/itemEffects.js',
+		'js/jobBonus.js',
+		'js/jobExperience.js',
+		'js/petTable.js',
+		'js/weaponSize.js',
+		'js/item.js',
+		'js/skill.js',
+		'js/monster.js',
+		'js/monster_new.js',
+		'js/card.js',
+		'js/enchant.js',
+		//<!--functions-->
+		'js/magicAttack.js',
+		'js/math.js',
+		'js/helperFunctions.js',
+		'js/Enemy.js',
+		'js/Heal.js',
+		'js/roformulas.js',
+		'js/skillFormulas.js',
+		//<!--form-->
+		'js/head.js',
+		'js/events.js',
+		'js/cookies.js',
+		'js/news.js',
+
+		'js/foot.js',
+		];
+		var loadQueue = [];
+		
+		function addToLoadQueue(src, next) {
+			var script = document.createElement( 'script' );
+			script.setAttribute('src', src);
+			loadQueue.push(script);
+		}
+		function loadScript() {
+			var script = loadQueue.shift(1);
+			if(script) {
+				script.onload = loadScript;
+				//console.log('start loading ' + script.src);
+				document.body.appendChild(script);
+			}
+		}
+		function initAssets() {
+			// () {}  []
+			Object.values(jsassets).forEach(function(e) {
+				var filename = `${e}?v=${version}`;
+				addToLoadQueue(filename);
+			});
+
+			loadScript();
+		}
+		
+		// $(function() {
+		// 	initAssets();
+		// 	$(".card" ).draggable();
+		// });
+	</script>
 </body>
 
 </html>
