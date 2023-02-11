@@ -1035,6 +1035,10 @@ function CalcEquipAtk()
 	{//Dog Cap + Thanatos Katar
 		equipmentAttack += 20 * Math.floor(n_A_Weapon_ATKplus / 2);
 	}
+	// if ( EquipNumSearch( 1646 ) )
+	// { // "Dragan's Shadow Gloves"
+		// equipmentAttack += n_A_SHADOW_WEAPON_DEF_PLUS;
+	// }
 	
 //Cards
 	if(CardNumSearch(557))

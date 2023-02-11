@@ -1653,7 +1653,7 @@
 ,[1643,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "(No Shadow Shoes)"
 ,[1644,itm_type_SHADOW_EARRING,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "(No Shadow Earring)"
 ,[1645,itm_type_SHADOW_PENDANT,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "(No Shadow Pendant)"
-,[1646,itm_type_SHADOW_WEAPON,0,0,0,0,0,1,0,0,0,0,bon_DEX,1,bon_NONE] // "Dragan''s Shadow Gloves"'
+,[1646,itm_type_SHADOW_WEAPON,0,0,0,0,0,1,0,0,0,0,bon_DEX,1,"ev_ref",1,bon_ATK,1,bon_NONE] // "Dragan''s Shadow Gloves"'
 ,[1647,itm_type_SHADOW_SHOES,0,0,0,0,0,1,0,0,0,0,bon_AGI,1,bon_NONE] // "Dragan''s Shadow Boots"'
 ,[1648,itm_type_SHADOW_ARMOR,0,0,0,0,0,1,0,0,0,0,bon_LUK,1,bon_NONE] // "Dragan''s Shadow Armor"'
 ,[1649,itm_type_SHADOW_SHIELD,0,0,0,0,0,1,0,0,0,0,bon_VIT,1,bon_NONE] // "Dragan''s Shadow Shield"'
