@@ -1035,10 +1035,6 @@ function CalcEquipAtk()
 	{//Dog Cap + Thanatos Katar
 		equipmentAttack += 20 * Math.floor(n_A_Weapon_ATKplus / 2);
 	}
-	// if ( EquipNumSearch( 1646 ) )
-	// { // "Dragan's Shadow Gloves"
-		// equipmentAttack += n_A_SHADOW_WEAPON_DEF_PLUS;
-	// }
 	
 //Cards
 	if(CardNumSearch(557))
@@ -2786,7 +2782,7 @@ function CalcRangedMod()
 	if(CardNumSearch(818))
 	{//Resentful Soldier Card
 		if(n_A_WeaponType == weapTyp_BOW && n_A_Weapon_ATKplus >= 10)
-			n_tok[bon_DMG_RANGE] += 20;
+			n_tok[bon_DMG_RANGE] += 20 * CardNumSearch(818);
 	}
 	
 //Enchants
