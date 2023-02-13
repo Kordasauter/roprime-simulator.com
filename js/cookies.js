@@ -977,7 +977,7 @@ function URLOUT()
 	console.log(NtoS2(parseInt(formElements["A_Patch_Num"].value)));
 	console.log(index);
 	SaveData[index++] = NtoS2(parseInt(formElements["A_Patch_Num"].value),1);  // Server Patch
-	SaveData[index] = 1; //New enchant format, will be used for echant version.
+	SaveData[index] = NtoS2(1,1); //New enchant format, will be used for echant version.
 	
 	// Acolyte Buffs
 	

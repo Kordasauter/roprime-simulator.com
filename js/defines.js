@@ -984,6 +984,7 @@ status_en_VENOM_IMPRESS = 26;
 status_en_MARSH_OF_ABYSS = 27;
 status_en_GLOOMY_DAY = 28;
 status_en_DARK_CLAW = 29;
+status_en_ANALYZE = 30;
 
 // monsterBuffs
 var status_en_buff_IncreaseAGI = 0;

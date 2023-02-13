@@ -900,10 +900,10 @@ function BuildPassiveSkillTable()
 {
 	var job = n_A_JOB;
 	var skillCount = 0;
-	var rowCaptionA = 'class="bgLtRow3 padded optCaption"';
-	var rowAreaA = 'class="bgLtRow1 padded optArea"';
-	var rowCaptionB = 'class="bgLtRow4 padded optCaption"';
-	var rowAreaB = 'class="bgLtRow2 padded optArea"';
+	var rowCaptionA = 'class="bgLtRow3 padded"';
+	var rowAreaA = 'class="bgLtRow1 padded"';
+	var rowCaptionB = 'class="bgLtRow4 padded"';
+	var rowAreaB = 'class="bgLtRow2 padded"';
 	var formElements = document.forms["calcForm"].elements;
 	
 	// Calc total number of passive skills
@@ -1025,7 +1025,7 @@ function BuildPassiveSkillTable()
 			skillBSelect.options[i] = new Option(w_name[i],i);
 		}
 		// adjust the width
-		skillBSelect.style.width = 85+'px';
+		skillBSelect.style.width = 95+'px';
 	}
 	
 	// Dragon Training for Rune Knight
@@ -1046,7 +1046,7 @@ function BuildPassiveSkillTable()
 			skillBSelect.options[i] = new Option(w_name[i],i);
 		}
 		// adjust the width
-		skillBSelect.style.width = 85+'px';
+		skillBSelect.style.width = 100+'px';
 	}
 	
 	// Cavalier Mastery for Sader
@@ -1067,7 +1067,7 @@ function BuildPassiveSkillTable()
 			skillDSelect.options[i] = new Option(w_name[i],i);
 		}
 		// adjust the width
-		skillDSelect.style.width = 85+'px';
+		skillDSelect.style.width = 95+'px';
 	}
 	
 	if ( JobSkillPassOBJ[job][11] === skill_TKM_BLESSINGS )
@@ -1461,48 +1461,48 @@ with(document.calcForm)
 
 	var str;
 	str =  '<table class="shadow"><tr>';
-	str += '<td id="AS0_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="AS0_2" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="AS1_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="AS1_2" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="AS0_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="AS0_2" class="bgLtRow1 padded"></td>';
+	str += '<td id="AS1_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="AS1_2" class="bgLtRow1 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="AS2_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="AS2_2" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="AS3_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="AS3_2" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="AS2_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="AS2_2" class="bgLtRow2 padded"></td>';
+	str += '<td id="AS3_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="AS3_2" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="AS4_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="AS4_2" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="AS5_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="AS5_2" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="AS4_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="AS4_2" class="bgLtRow1 padded"></td>';
+	str += '<td id="AS5_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="AS5_2" class="bgLtRow1 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="AS6_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="AS6_2" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="AS7_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="AS7_2" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="AS6_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="AS6_2" class="bgLtRow2 padded"></td>';
+	str += '<td id="AS7_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="AS7_2" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="AS8_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="AS8_2" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="AS9_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="AS9_2" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="AS8_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="AS8_2" class="bgLtRow1 padded"></td>';
+	str += '<td id="AS9_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="AS9_2" class="bgLtRow1 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="AS10_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="AS10_2" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="AS11_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="AS11_2" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="AS10_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="AS10_2" class="bgLtRow2 padded"></td>';
+	str += '<td id="AS11_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="AS11_2" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="AS12_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="AS12_2" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="AS13_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="AS13_2" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="AS12_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="AS12_2" class="bgLtRow1 padded"></td>';
+	str += '<td id="AS13_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="AS13_2" class="bgLtRow1 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="AS14_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="AS14_2" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="AS15_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="AS15_2" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="AS14_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="AS14_2" class="bgLtRow2 padded"></td>';
+	str += '<td id="AS15_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="AS15_2" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="AS16_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="AS16_2" colspan="3" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="AS16_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="AS16_2" colspan="3" class="bgLtRow1 padded"></td>';
 	str += '</tr></table>';
 	myInnerHtml( "SIENSKILL", str , 0 );
 
@@ -1537,11 +1537,11 @@ with(document.calcForm)
 	html_CSSW_SKILL[13] = '<select id="ramus" style="width:50px;" onchange="ToggleAcolyteSkills(0)"></select>';
 	html_CSSW_SKILL[14] = '<select id="ppChange" style="width:50px;" onchange="ToggleAcolyteSkills(1)"></select>';
 	html_CSSW_SKILL[15] = '<select id="ppRevitalize" style="width:50px;" onchange="ToggleAcolyteSkills(2)"></select>';
-	html_CSSW_SKILL[16] = '<select id="suraStr" style="width:50px;" onchange="ToggleAcolyteSkills(0)"></select>&nbsp';
-	html_CSSW_SKILL[17] = '<select id="suraAgi" style="width:50px;" onchange="ToggleAcolyteSkills(0)"></select>&nbsp';
-	html_CSSW_SKILL[18] = '<select id="suraVit" style="width:50px;" onchange="ToggleAcolyteSkills(0)"></select>&nbsp';
-	html_CSSW_SKILL[19] = '<select id="suraInt" style="width:50px;" onchange="ToggleAcolyteSkills(0)"></select>&nbsp';
-	html_CSSW_SKILL[20] = '<select id="suraDex" style="width:50px;" onchange="ToggleAcolyteSkills(0)"></select>';
+	html_CSSW_SKILL[16] = '<select id="suraStr" style="width:55px;" onchange="ToggleAcolyteSkills(0)"></select>&nbsp';
+	html_CSSW_SKILL[17] = '<select id="suraAgi" style="width:55px;" onchange="ToggleAcolyteSkills(0)"></select>&nbsp';
+	html_CSSW_SKILL[18] = '<select id="suraVit" style="width:55px;" onchange="ToggleAcolyteSkills(0)"></select>&nbsp';
+	html_CSSW_SKILL[19] = '<select id="suraInt" style="width:55px;" onchange="ToggleAcolyteSkills(0)"></select>&nbsp';
+	html_CSSW_SKILL[20] = '<select id="suraDex" style="width:55px;" onchange="ToggleAcolyteSkills(0)"></select>';
 	for ( var i = 0; i < 16; i++ )
 	{ // insert Drop Down boxes
 		myInnerHtml( "AS"+i+"_2", html_CSSW_SKILL[i], 0 );
@@ -1661,50 +1661,50 @@ with(document.calcForm)
 	// Build Table
 	var str
 	str = '<table class="shadow"><tr>';
-	str += '<td id="EN60_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="EN60_2" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="EN61_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="EN61_2" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="EN60_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="EN60_2" class="bgLtRow1 padded"></td>';
+	str += '<td id="EN61_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="EN61_2" class="bgLtRow1 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="EN62_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="EN62_2" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="EN63_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="EN63_2" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="EN62_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="EN62_2" class="bgLtRow1 padded"></td>';
+	str += '<td id="EN63_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="EN63_2" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="EN64_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="EN64_2" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="EN65_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="EN65_2" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="EN64_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="EN64_2" class="bgLtRow2 padded"></td>';
+	str += '<td id="EN65_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="EN65_2" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="EN66_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="EN66_2" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="EN67_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="EN67_2" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="EN66_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="EN66_2" class="bgLtRow1 padded"></td>';
+	str += '<td id="EN67_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="EN67_2" class="bgLtRow1 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="EN68_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="EN68_2" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="EN69_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="EN69_2" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="EN68_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="EN68_2" class="bgLtRow1 padded"></td>';
+	str += '<td id="EN69_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="EN69_2" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="EN610_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="EN610_2" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="EN611_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="EN611_2" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="EN610_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="EN610_2" class="bgLtRow2 padded"></td>';
+	str += '<td id="EN611_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="EN611_2" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="EN612_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="EN612_2" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="EN613_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="EN613_2" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="EN612_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="EN612_2" class="bgLtRow1 padded"></td>';
+	str += '<td id="EN613_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="EN613_2" class="bgLtRow1 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="EN614_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="EN614_2" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="EN615_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="EN615_2" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="EN614_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="EN614_2" class="bgLtRow1 padded"></td>';
+	str += '<td id="EN615_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="EN615_2" class="bgLtRow1 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="EN616_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="EN616_2" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="EN617_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="EN617_2" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="EN616_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="EN616_2" class="bgLtRow1 padded"></td>';
+	str += '<td id="EN617_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="EN617_2" class="bgLtRow1 padded"></td>';
 	str += '</tr></table>';
 	myInnerHtml("OtherBuffs",str,0);
 
@@ -1851,40 +1851,40 @@ with(document.calcForm)
 {
 	var str;
 	str = '<table class="shadow"><tr>';
-	str += '<td id="petsLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="petsInput"  class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="numEnemiesLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="numEnemiesInput" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="petsLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="petsInput"  class="bgLtRow1 padded"></td>';
+	str += '<td id="numEnemiesLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="numEnemiesInput" class="bgLtRow1 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="tempOneLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="tempOneInput" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="quagLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="quagInput" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="tempOneLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="tempOneInput" class="bgLtRow2 padded"></td>';
+	str += '<td id="quagLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="quagInput" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="tempTwoLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="tempTwoInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="agiDownLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="agiDownInput" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="tempTwoLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="tempTwoInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="agiDownLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="agiDownInput" class="bgLtRow1 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="tempThreeLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="tempThreeInput" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="noCritLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="noCritInput" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="tempThreeLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="tempThreeInput" class="bgLtRow2 padded"></td>';
+	str += '<td id="noCritLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="noCritInput" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="tempFourLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="tempFourInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="poisonedLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="poisonedInput" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="tempFourLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="tempFourInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="poisonedLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="poisonedInput" class="bgLtRow1 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="firstSpiritLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="firstSpiritInput" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="cursedLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="cursedInput" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="firstSpiritLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="firstSpiritInput" class="bgLtRow2 padded"></td>';
+	str += '<td id="cursedLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="cursedInput" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="noviceLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="noviceInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td class="bgLtRow3 padded optCaption"></td>';
-	str += '<td class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="noviceLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="noviceInput" class="bgLtRow1 padded"></td>';
+	str += '<td class="bgLtRow3 padded"></td>';
+	str += '<td class="bgLtRow1 padded"></td>';
 	str += '</tr></table>';
 	myInnerHtml( "miscBuffs", str, 0 );
 	
@@ -1969,30 +1969,30 @@ with(document.calcForm)
 {
 	var str;
 	str = '<table class="shadow"><tr>';
-	str += '<td id="vipLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="vipInput" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="jobManualLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="jobManualInput" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="vipLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="vipInput" class="bgLtRow2 padded"></td>';
+	str += '<td id="jobManualLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="jobManualInput" class="bgLtRow1 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="baseManualLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="baseManualInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="serverExpLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="serverExpInput" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="baseManualLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="baseManualInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="serverExpLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="serverExpInput" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="partyCountLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="partyCountInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="tapBonusLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="tapBonusInput" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="partyCountLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="partyCountInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="tapBonusLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="tapBonusInput" class="bgLtRow1 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="specEnvLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="specEnvInput" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="investmentLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="investmentInput" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="specEnvLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="specEnvInput" class="bgLtRow2 padded"></td>';
+	str += '<td id="investmentLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="investmentInput" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="minDelayLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="minDelayInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td class="bgLtRow3 padded optCaption"></td>';
-	str += '<td class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="minDelayLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="minDelayInput" class="bgLtRow1 padded"></td>';
+	str += '<td class="bgLtRow3 padded"></td>';
+	str += '<td class="bgLtRow1 padded"></td>';
 	str += '</tr></table>';
 	myInnerHtml( "battleEffects", str, 0 );
 	
@@ -2073,89 +2073,94 @@ with(document.calcForm)
 	// Build the table
 	var str;
 	str = '<table class="shadow"><tr>';
-	str += '<td id="BI0_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="BI0_2" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="BI1_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="BI1_2" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="BI0_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="BI0_2" class="bgLtRow1 padded"></td>';
+	str += '<td id="BI1_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="BI1_2" class="bgLtRow1 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="BI2_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="BI2_2" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="BI3_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="BI3_2" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="BI2_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="BI2_2" class="bgLtRow1 padded"></td>';
+	str += '<td id="BI3_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="BI3_2" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="BI4_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="BI4_2" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="BI5_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="BI5_2" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="BI4_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="BI4_2" class="bgLtRow2 padded"></td>';
+	str += '<td id="BI5_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="BI5_2" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="BI6_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="BI6_2" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="BI7_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="BI7_2" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="BI6_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="BI6_2" class="bgLtRow1 padded"></td>';
+	str += '<td id="BI7_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="BI7_2" class="bgLtRow1 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="BI8_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="BI8_2" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="BI9_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="BI9_2" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="BI8_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="BI8_2" class="bgLtRow1 padded"></td>';
+	str += '<td id="BI9_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="BI9_2" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="BI10_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="BI10_2" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="BI11_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="BI11_2" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="BI10_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="BI10_2" class="bgLtRow2 padded"></td>';
+	str += '<td id="BI11_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="BI11_2" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="BI12_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="BI12_2" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="BI13_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="BI13_2" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="BI12_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="BI12_2" class="bgLtRow1 padded"></td>';
+	str += '<td id="BI13_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="BI13_2" class="bgLtRow1 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="BI14_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="BI14_2" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="BI15_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="BI15_2" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="BI14_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="BI14_2" class="bgLtRow1 padded"></td>';
+	str += '<td id="BI15_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="BI15_2" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="BI16_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="BI16_2" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="BI17_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="BI17_2" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="BI16_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="BI16_2" class="bgLtRow2 padded"></td>';
+	str += '<td id="BI17_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="BI17_2" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="BI18_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="BI18_2" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="BI19_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="BI19_2" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="BI18_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="BI18_2" class="bgLtRow1 padded"></td>';
+	str += '<td id="BI19_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="BI19_2" class="bgLtRow1 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="BI20_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="BI20_2" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="BI24_1" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="BI24_2" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="BI20_1" class="bgLtRow3 padded"></td>';
+	str += '<td id="BI20_2" class="bgLtRow1 padded"></td>';
+	str += '<td id="BI24_1" class="bgLtRow4 padded"></td>';
+	str += '<td id="BI24_2" class="bgLtRow2 padded"></td>';
 	if ( PlayerVersusPlayer === 0 )
 	{
 		str += '</tr><tr>';
-		str += '<td id="BI21_1" class="bgLtRow4 padded optCaption"></td>';
-		str += '<td id="BI21_2" class="bgLtRow2 padded optArea"></td>';
-		str += '<td id="BI22_1" class="bgLtRow4 padded optCaption"></td>';
-		str += '<td id="BI22_2" class="bgLtRow2 padded optArea"></td>';
+		str += '<td id="BI21_1" class="bgLtRow4 padded"></td>';
+		str += '<td id="BI21_2" class="bgLtRow2 padded"></td>';
+		str += '<td id="BI22_1" class="bgLtRow4 padded"></td>';
+		str += '<td id="BI22_2" class="bgLtRow2 padded"></td>';
 		str += '</tr><tr>';
-		str += '<td id="BI23_1" class="bgLtRow3 padded optCaption"></td>';
-		str += '<td id="BI23_2" class="bgLtRow1 padded optArea"></td>';
-		str += '<td id="deepSleepLabel" class="bgLtRow3 padded optCaption"></td>';
-		str += '<td id="deepSleepInput" class="bgLtRow1 padded optArea"></td>';
+		str += '<td id="BI23_1" class="bgLtRow3 padded"></td>';
+		str += '<td id="BI23_2" class="bgLtRow1 padded"></td>';
+		str += '<td id="deepSleepLabel" class="bgLtRow3 padded"></td>';
+		str += '<td id="deepSleepInput" class="bgLtRow1 padded"></td>';
 		str += '</tr><tr>';
-		str += '<td id="venomImpressLabel" class="bgLtRow3 padded optCaption"></td>';
-		str += '<td id="venomImpressInput" class="bgLtRow1 padded optArea"></td>';
-		str += '<td id="MarshOfAbyssLabel" class="bgLtRow4 padded optCaption"></td>';
-		str += '<td id="MarshOfAbyssInput" class="bgLtRow2 padded optArea"></td>';
+		str += '<td id="venomImpressLabel" class="bgLtRow3 padded"></td>';
+		str += '<td id="venomImpressInput" class="bgLtRow1 padded"></td>';
+		str += '<td id="MarshOfAbyssLabel" class="bgLtRow4 padded"></td>';
+		str += '<td id="MarshOfAbyssInput" class="bgLtRow2 padded"></td>';
 		str += '</tr><tr>';
-		str += '<td id="GloomyDayLabel" class="bgLtRow4 padded optCaption"></td>';
-		str += '<td id="GloomyDayInput" class="bgLtRow2 padded optArea"></td>';
-		str += '<td id="DarkClawLabel"class="bgLtRow4 padded optCaption"></td>';
-		str += '<td id="DarkClawInput" class="bgLtRow2 padded optArea"></td>';
+		str += '<td id="GloomyDayLabel" class="bgLtRow4 padded"></td>';
+		str += '<td id="GloomyDayInput" class="bgLtRow2 padded"></td>';
+		str += '<td id="DarkClawLabel"class="bgLtRow4 padded"></td>';
+		str += '<td id="DarkClawInput" class="bgLtRow2 padded"></td>';
+		str += '</tr><tr>';
+		str += '<td id="AnalyzeLabel" class="bgLtRow4 padded"></td>';
+		str += '<td id="AnalyzeInput" class="bgLtRow2 padded"></td>';
+		str += '<td class="bgLtRow4 padded"></td>';
+		str += '<td class="bgLtRow2 padded"></td>';
 	}
 	// else
 	// {
-		// str += '<td class="bgLtRow4 padded optCaption"></td>';
-		// str += '<td class="bgLtRow2 padded optArea"></td>';
-		// str += '<td class="bgLtRow4 padded optCaption"></td>';
-		// str += '<td class="bgLtRow2 padded optArea"></td>';
+		// str += '<td class="bgLtRow4 padded"></td>';
+		// str += '<td class="bgLtRow2 padded"></td>';
+		// str += '<td class="bgLtRow4 padded"></td>';
+		// str += '<td class="bgLtRow2 padded"></td>';
 	// }
 	str += '</tr></table>';
 	myInnerHtml( "MonsterDebuffs", str, 0 );
@@ -2192,6 +2197,7 @@ with(document.calcForm)
 	w_name[27] = AilmentsOBJ[14][Language]; // Marsh of Abyss
 	w_name[28] = AilmentsOBJ[17][Language]; // Gloomy Day
 	w_name[29] = AilmentsOBJ[18][Language]; // Dark Claw
+	w_name[30] = AilmentsOBJ[19][Language]; // Dark Claw
 	for ( var i = 0; i <= 20; i++ )
 	{
 		myInnerHtml( "BI" + i + "_1", w_name[i], 0 );
@@ -2209,6 +2215,7 @@ with(document.calcForm)
 	myInnerHtml( "MarshOfAbyssLabel", w_name[27], 0 );
 	myInnerHtml( "GloomyDayLabel", w_name[28], 0 );
 	myInnerHtml( "DarkClawLabel", w_name[29], 0 );
+	myInnerHtml( "AnalyzeLabel", w_name[30], 0 );
 	
 	// Build the selection options
 	var html_SKILL = new Array();
@@ -2238,7 +2245,8 @@ with(document.calcForm)
 	html_SKILL[26] = '<select name="VenomImpress" style="width:50px;" onchange="ToggleMonsterDebuff()"></select>';
 	html_SKILL[27] = '<select name="MarshOfAbyss" style="width:50px;" onchange="ToggleMonsterDebuff()"></select>';
 	html_SKILL[28] = '<select name="GloomyDay" style="width:50px;" onchange="ToggleMonsterDebuff()"></select>';
-	html_SKILL[29] = '<select name="DarkClaw" style="width:50px;" onchange="ToggleMonsterDebuff()"></select>'
+	html_SKILL[29] = '<select name="DarkClaw" style="width:50px;" onchange="ToggleMonsterDebuff()"></select>';
+	html_SKILL[30] = '<select name="Analyze" style="width:50px;" onchange="ToggleMonsterDebuff()"></select>';
 	for ( var i = 0; i <= 20; i++ )
 	{
 		myInnerHtml("BI"+i+"_2",html_SKILL[i],0);
@@ -2249,6 +2257,7 @@ with(document.calcForm)
 	myInnerHtml("MarshOfAbyssInput",html_SKILL[27],0);
 	myInnerHtml("GloomyDayInput",html_SKILL[28],0);
 	myInnerHtml("DarkClawInput", html_SKILL[29],0);
+	myInnerHtml("AnalyzeInput", html_SKILL[30],0);
 
 	// Build options for 10 level skills
 	for ( var i = 0; i <= 10; i++ )
@@ -2289,7 +2298,21 @@ with(document.calcForm)
 		GloomyDay.options[i] = new Option( off, i );
 		DarkClaw.options[i] = new Option( off, i );
 	}
-	
+	// Build options for 3 level skills
+	for ( var i = 0; i <= 3; i++ )
+	{
+		var off = '0';
+		if ( i === 0 )
+		{
+			off = 'Off';
+		}
+		else
+		{
+			off = i;
+		}
+		
+		Analyze.options[i] = new Option( off, i );
+	}
 	// PvM Debuffs
 	if ( PlayerVersusPlayer === 0 )
 	{
@@ -2314,58 +2337,58 @@ with( document.calcForm )
 	// Build Table
 	var str;
 	str = '<table class="shadow"><tr>';
-	str += '<td id="ID_K0" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="ID_Kb0" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="ID_K1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="ID_Kb1" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="ID_K0" class="bgLtRow3 padded"></td>';
+	str += '<td id="ID_Kb0" class="bgLtRow1 padded"></td>';
+	str += '<td id="ID_K1" class="bgLtRow3 padded"></td>';
+	str += '<td id="ID_Kb1" class="bgLtRow1 padded"></td>';
 	if ( PlayerVersusPlayer === 0 )
 	{ // not human
 		str += '</tr><tr>';
-		str += '<td id="ID_K2" class="bgLtRow3 padded optCaption"></td>';
-		str += '<td id="ID_Kb2" class="bgLtRow1 padded optArea"></td>';
-		str += '<td id="ID_K3" class="bgLtRow4 padded optCaption"></td>';
-		str += '<td id="ID_Kb3" class="bgLtRow2 padded optArea"></td>';
+		str += '<td id="ID_K2" class="bgLtRow3 padded"></td>';
+		str += '<td id="ID_Kb2" class="bgLtRow1 padded"></td>';
+		str += '<td id="ID_K3" class="bgLtRow4 padded"></td>';
+		str += '<td id="ID_Kb3" class="bgLtRow2 padded"></td>';
 		str += '</tr><tr>';
-		str += '<td id="ID_K4" class="bgLtRow4 padded optCaption"></td>';
-		str += '<td id="ID_Kb4" class="bgLtRow2 padded optArea"></td>';
-		str += '<td id="ID_K5" class="bgLtRow4 padded optCaption"></td>';
-		str += '<td id="ID_Kb5" class="bgLtRow2 padded optArea"></td>';
+		str += '<td id="ID_K4" class="bgLtRow4 padded"></td>';
+		str += '<td id="ID_Kb4" class="bgLtRow2 padded"></td>';
+		str += '<td id="ID_K5" class="bgLtRow4 padded"></td>';
+		str += '<td id="ID_Kb5" class="bgLtRow2 padded"></td>';
 		str += '</tr><tr>';
-		str += '<td id="ID_K6" class="bgLtRow3 padded optCaption"></td>';
-		str += '<td id="ID_Kb6" class="bgLtRow1 padded optArea"></td>';
-		str += '<td id="ID_K7" class="bgLtRow3 padded optCaption"></td>';
-		str += '<td id="ID_Kb7" class="bgLtRow1 padded optArea"></td>';
+		str += '<td id="ID_K6" class="bgLtRow3 padded"></td>';
+		str += '<td id="ID_Kb6" class="bgLtRow1 padded"></td>';
+		str += '<td id="ID_K7" class="bgLtRow3 padded"></td>';
+		str += '<td id="ID_Kb7" class="bgLtRow1 padded"></td>';
 		str += '</tr><tr>';
-		str += '<td id="ID_K8" class="bgLtRow3 padded optCaption"></td>';
-		str += '<td id="ID_Kb8" class="bgLtRow1 padded optArea"></td>';
-		str += '<td id="ID_K9" class="bgLtRow4 padded optCaption"></td>';
-		str += '<td id="ID_Kb9" class="bgLtRow2 padded optArea"></td>';
+		str += '<td id="ID_K8" class="bgLtRow3 padded"></td>';
+		str += '<td id="ID_Kb8" class="bgLtRow1 padded"></td>';
+		str += '<td id="ID_K9" class="bgLtRow4 padded"></td>';
+		str += '<td id="ID_Kb9" class="bgLtRow2 padded"></td>';
 		str += '</tr><tr>';
-		str += '<td id="ID_K10" class="bgLtRow4 padded optCaption"></td>';
-		str += '<td id="ID_Kb10" class="bgLtRow2 padded optArea"></td>';
-		str += '<td id="ID_K11" class="bgLtRow4 padded optCaption"></td>';
-		str += '<td id="ID_Kb11" class="bgLtRow2 padded optArea"></td>';
+		str += '<td id="ID_K10" class="bgLtRow4 padded"></td>';
+		str += '<td id="ID_Kb10" class="bgLtRow2 padded"></td>';
+		str += '<td id="ID_K11" class="bgLtRow4 padded"></td>';
+		str += '<td id="ID_Kb11" class="bgLtRow2 padded"></td>';
 		str += '</tr><tr>';
-		str += '<td id="ID_K12" class="bgLtRow3 padded optCaption"></td>';
-		str += '<td id="ID_Kb12" class="bgLtRow1 padded optArea"></td>';
-		str += '<td id="ID_K13" class="bgLtRow3 padded optCaption"></td>';
-		str += '<td id="ID_Kb13" class="bgLtRow1 padded optArea"></td>';
+		str += '<td id="ID_K12" class="bgLtRow3 padded"></td>';
+		str += '<td id="ID_Kb12" class="bgLtRow1 padded"></td>';
+		str += '<td id="ID_K13" class="bgLtRow3 padded"></td>';
+		str += '<td id="ID_Kb13" class="bgLtRow1 padded"></td>';
 		str += '</tr><tr>';
-		str += '<td id="ID_K14" class="bgLtRow3 padded optCaption"></td>';
-		str += '<td id="ID_Kb14" class="bgLtRow1 padded optArea"></td>';
-		str += '<td id="ID_K15" class="bgLtRow3 padded optCaption"></td>';
-		str += '<td id="ID_Kb15" class="bgLtRow1 padded optArea"></td>';
+		str += '<td id="ID_K14" class="bgLtRow3 padded"></td>';
+		str += '<td id="ID_Kb14" class="bgLtRow1 padded"></td>';
+		str += '<td id="ID_K15" class="bgLtRow3 padded"></td>';
+		str += '<td id="ID_Kb15" class="bgLtRow1 padded"></td>';
 		str += '</tr><tr>';
-		str += '<td id="ID_K16" class="bgLtRow3 padded optCaption"></td>';
-		str += '<td id="ID_Kb16" class="bgLtRow1 padded optArea"></td>';
-		str += '<td id="ID_K17" class="bgLtRow3 padded optCaption"></td>';
-		str += '<td id="ID_Kb17" class="bgLtRow1 padded optArea"></td>';
+		str += '<td id="ID_K16" class="bgLtRow3 padded"></td>';
+		str += '<td id="ID_Kb16" class="bgLtRow1 padded"></td>';
+		str += '<td id="ID_K17" class="bgLtRow3 padded"></td>';
+		str += '<td id="ID_Kb17" class="bgLtRow1 padded"></td>';
 	}
 	// else
 	// {
 		// str += '</tr><tr>';
-		// str += '<td class="bgLtRow3 padded optCaption"></td>';
-		// str += '<td class="bgLtRow1 padded optArea"></td>';
+		// str += '<td class="bgLtRow3 padded"></td>';
+		// str += '<td class="bgLtRow1 padded"></td>';
 	// }
 	str += '</tr></table>';
 	myInnerHtml( "MonsterBuffs", str, 0 );
@@ -2434,12 +2457,14 @@ with( document.calcForm )
 
 	if ( PlayerVersusPlayer === 0 )
 	{ // not human
-		for ( var i = 2; i <= 9; i++ )
+		// for ( var i = 2; i <= 9; i++ )
+		for ( var i = 2; i <= 10; i++ )
 		{
 			myInnerHtml( "ID_K" + i, w_name[i], 0 );
 		}
 
-		for ( var i = 2; i <= 9; i++ )
+		// for ( var i = 2; i <= 9; i++ )
+		for ( var i = 2; i <= 10; i++ )
 		{
 			myInnerHtml( "ID_Kb" + i, html_SKILL[i], 0 );
 		}
@@ -2485,102 +2510,102 @@ with( document.calcForm )
 	}
 }
 }
-function BuildSearchTable()
+/*function BuildSearchTable()
 {
 	var formElements = document.forms["calcForm"].elements;
 	
 	// Build Table
 	var str;
 	str = '';
-	str += '<div class="bgMdTitle mdTitle" onclick="ToggleVisibility(\'Level\')">Character</div>';
+	str += '<div class="padded">Character</div>';
 	str += '<div id="Level" style="display:block">';
 	str += '<table class="shadow"><tr>';
-	// str += '<td id="BaseLevelLabel" class="bgLtRow3 padded optCaption"></td>';
-	// str += '<td id="BaseLevelInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="RangeLevelLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="RangeLevelInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="PremiumLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="PremiumInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="BaseManualLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="BaseManualInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="JobManualLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="JobManualInput" class="bgLtRow1 padded optArea"></td>';
+	// str += '<td id="BaseLevelLabel" class="bgLtRow3 padded"></td>';
+	// str += '<td id="BaseLevelInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="RangeLevelLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="RangeLevelInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="PremiumLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="PremiumInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="BaseManualLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="BaseManualInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="JobManualLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="JobManualInput" class="bgLtRow1 padded"></td>';
 	str += '</tr></table></div>';
 	
-	str += '<div class="bgMdTitle mdTitle" onclick="ToggleVisibility(\'Race\')">Race & Element</div>';
+	str += '<div class="padded">Race & Element</div>';
 	str += '<div id="Race" style="display:block">';
 	str += '<table class="shadow"><tr>';
-	str += '<td id="RCFormlessLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="RCFormlessInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="RCUndeadLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="RCUndeadInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="RCBruteLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="RCBruteInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="RCPlantLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="RCPlantInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="RCInsectLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="RCInsectInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="RCFishLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="RCFishInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="RCDemonLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="RCDemonInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="RCDemi_HumanLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="RCDemi_HumanInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="RCAngelLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="RCAngelInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="RCDragonLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="RCDragonInput" class="bgLtRow1 padded optArea"></td>';
-	// str += '<td id="RCLabel" class="bgLtRow3 padded optCaption"></td>';
-	// str += '<td id="RCInput" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="RCFormlessLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="RCFormlessInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="RCUndeadLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="RCUndeadInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="RCBruteLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="RCBruteInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="RCPlantLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="RCPlantInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="RCInsectLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="RCInsectInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="RCFishLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="RCFishInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="RCDemonLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="RCDemonInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="RCDemi_HumanLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="RCDemi_HumanInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="RCAngelLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="RCAngelInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="RCDragonLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="RCDragonInput" class="bgLtRow1 padded"></td>';
+	// str += '<td id="RCLabel" class="bgLtRow3 padded"></td>';
+	// str += '<td id="RCInput" class="bgLtRow1 padded"></td>';
 	//str += '</tr></table></div>';
 	str += '</tr><tr>';
-	/*str += '<div class="bgMdTitle mdTitle" onclick="ToggleVisibility(\'Element\')">Element</div>';
-	str += '<div id="Element" style="display:block">';
-	str += '<table class="shadow"><tr>';*/
-	str += '<td id="ELENeutralLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="ELENeutralInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="ELEWaterLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="ELEWaterInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="ELEEarthLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="ELEEarthInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="ELEFireLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="ELEFireInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="ELEWindLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="ELEWindInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="ELEPoisonLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="ELEPoisonInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="ELEHolyLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="ELEHolyInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="ELEShadowLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="ELEShadowInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="ELEGhostLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="ELEGhostInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="ELEUndeadLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="ELEUndeadInput" class="bgLtRow1 padded optArea"></td>';
+	// str += '<div class="padded" onclick="ToggleVisibility(\'Element\')">Element</div>';
+	// str += '<div id="Element" style="display:block">';
+	// str += '<table class="shadow"><tr>';
+	str += '<td id="ELENeutralLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="ELENeutralInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="ELEWaterLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="ELEWaterInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="ELEEarthLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="ELEEarthInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="ELEFireLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="ELEFireInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="ELEWindLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="ELEWindInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="ELEPoisonLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="ELEPoisonInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="ELEHolyLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="ELEHolyInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="ELEShadowLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="ELEShadowInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="ELEGhostLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="ELEGhostInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="ELEUndeadLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="ELEUndeadInput" class="bgLtRow1 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="SizeSmallLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="SizeSmallInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="SizeMediumLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="SizeMediumInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="SizeLargeLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="SizeLargeInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td class="bgLtRow1 padded optCaption"></td>';
-	str += '<td class="bgLtRow1 padded optArea"></td>';
-	str += '<td class="bgLtRow1 padded optCaption"></td>';
-	str += '<td class="bgLtRow1 padded optArea"></td>';
-	str += '<td class="bgLtRow1 padded optCaption"></td>';
-	str += '<td class="bgLtRow1 padded optArea"></td>';
-	str += '<td class="bgLtRow1 padded optCaption"></td>';
-	str += '<td class="bgLtRow1 padded optArea"></td>';
-	str += '<td class="bgLtRow1 padded optCaption"></td>';
-	str += '<td class="bgLtRow1 padded optArea"></td>';
-	str += '<td class="bgLtRow1 padded optCaption"></td>';
-	str += '<td class="bgLtRow1 padded optArea"></td>';
-	str += '<td class="bgLtRow1 padded optCaption"></td>';
-	str += '<td class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="SizeSmallLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="SizeSmallInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="SizeMediumLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="SizeMediumInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="SizeLargeLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="SizeLargeInput" class="bgLtRow1 padded"></td>';
+	str += '<td class="bgLtRow1 padded"></td>';
+	str += '<td class="bgLtRow1 padded"></td>';
+	str += '<td class="bgLtRow1 padded"></td>';
+	str += '<td class="bgLtRow1 padded"></td>';
+	str += '<td class="bgLtRow1 padded"></td>';
+	str += '<td class="bgLtRow1 padded"></td>';
+	str += '<td class="bgLtRow1 padded"></td>';
+	str += '<td class="bgLtRow1 padded"></td>';
+	str += '<td class="bgLtRow1 padded"></td>';
+	str += '<td class="bgLtRow1 padded"></td>';
+	str += '<td class="bgLtRow1 padded"></td>';
+	str += '<td class="bgLtRow1 padded"></td>';
+	str += '<td class="bgLtRow1 padded"></td>';
+	str += '<td class="bgLtRow1 padded"></td>';
 	str += '</tr></table></div>';
-	//str += '<div id="SearchLabel" class="bgLtRow3 padded optCaption"></div>';
-	str += '<div id="SearchInput" class="bgLtRow1 padded optArea"></div>';
+	//str += '<div id="SearchLabel" class="bgLtRow3 padded"></div>';
+	str += '<div id="SearchInput" class="bgLtRow1 padded"></div>';
 	
 	myInnerHtml( "Search", str, 0 );
 	
@@ -2592,9 +2617,9 @@ function BuildSearchTable()
 	myInnerHtml( "PremiumLabel", "Premium", 0 );
 	myInnerHtml( "PremiumInput", '<input type="checkbox" id="Premium">', 0 );
 	myInnerHtml( "BaseManualLabel", "Battle Manual (Base Exp)", 0 );
-	myInnerHtml( "BaseManualInput", '<select id="BaseManual" style="width:70px;">', 0 );
+	myInnerHtml( "BaseManualInput", '<select id="BaseManual" style="width:80px;">', 0 );
 	myInnerHtml( "JobManualLabel", "Battle Manual (Job Exp)", 0 );
-	myInnerHtml( "JobManualInput", '<select id="JobManual" style="width:70px;">', 0 );
+	myInnerHtml( "JobManualInput", '<select id="JobManual" style="width:80px;">', 0 );
 	
 	myInnerHtml( "RCFormlessLabel", "Formless", 0 );
 	myInnerHtml( "RCFormlessInput", '<input type="checkbox" id="RC_Formless" checked >', 0 );
@@ -2683,7 +2708,7 @@ function BuildSearchTable()
 	formElements["JobManual"].options[2] = new Option( "+50%", 2 );
 	formElements["JobManual"].options[3] = new Option( "+75%", 3 );
 	formElements["JobManual"].options[4] = new Option( "+100%", 4 );
-}
+}*/
 
 function BuildMonsterTable()
 {
@@ -2700,29 +2725,29 @@ function BuildMonsterTable()
 	var SelectJBM = document.getElementById("JobManual");
 	
 	str = '';
-	str += '<div class="bgMdTitle mdTitle" onclick="ToggleVisibility(\'Mobs\')">Monsters</div>';
+	str += '<div class="padded" onclick="ToggleVisibility(\'Mobs\')">Monsters</div>';
 	str += '<div id="Mobs" style="display:block">';
-	str += '<table class="shadow"><tr>';
-	str += "<td id=\"NameLabel\" class=\"bgLtRow1 padded optCaption\"></td>";
-	str += '<td id="LevelLabel" class="bgLtRow1 padded optCaption"></td>';
-	str += '<td id="BaseExpLabel" class="bgLtRow1 padded optCaption"></td>';
-	str += '<td id="JobExpLabel" class="bgLtRow1 padded optCaption"></td>';
-	str += '<td id="HPLabel" class="bgLtRow1 padded optCaption"></td>';
-	str += '<td id="AtkLabel" class="bgLtRow1 padded optCaption"></td>';
-	str += '<td id="SizeLabel" class="bgLtRow1 padded optCaption"></td>';
-	str += '<td id="RaceLabel" class="bgLtRow1 padded optCaption"></td>';
-	str += '<td id="ElementLabel" class="bgLtRow1 padded optCaption"></td>';
-	str += '<td id="HitLabel" class="bgLtRow1 padded optCaption"></td>';
-	str += '<td id="FleeLabel" class="bgLtRow1 padded optCaption"></td>';
-	str += '<td id="DefLabel" class="bgLtRow1 padded optCaption"></td>';
-	str += '<td id="MDefLabel" class="bgLtRow1 padded optCaption"></td>';
-	str += '<td id="BaseExpHPLabel" class="bgLtRow1 padded optCaption"></td>';
-	str += '<td id="JobExpHPLabel" class="bgLtRow1 padded optCaption"></td>';
+	str += '<table id="Mobs_table"class="shadow"><tr>';
+	str += "<td id=\"NameLabel\" class=\"bg-gray-100 padded\"></td>";
+	str += '<td id="LevelLabel" class="bg-gray-100 padded"></td>';
+	str += '<td id="BaseExpLabel" class="bg-gray-100 padded"></td>';
+	str += '<td id="JobExpLabel" class="bg-gray-100 padded"></td>';
+	str += '<td id="HPLabel" class="bg-gray-100 padded"></td>';
+	str += '<td id="AtkLabel" class="bg-gray-100 padded"></td>';
+	str += '<td id="SizeLabel" class="bg-gray-100 padded"></td>';
+	str += '<td id="RaceLabel" class="bg-gray-100 padded"></td>';
+	str += '<td id="ElementLabel" class="bg-gray-100 padded"></td>';
+	str += '<td id="HitLabel" class="bg-gray-100 padded"></td>';
+	str += '<td id="FleeLabel" class="bg-gray-100 padded"></td>';
+	str += '<td id="DefLabel" class="bg-gray-100 padded"></td>';
+	str += '<td id="MDefLabel" class="bg-gray-100 padded"></td>';
+	str += '<td id="BaseExpHPLabel" class="bg-gray-100 padded"></td>';
+	str += '<td id="JobExpHPLabel" class="bg-gray-100 padded"></td>';
 	str += '</tr>';
 	
 	
 	// str += "<td id=\"NameLabel" + num.toString();
-	// str += "\" class=\"bgLtRow3 padded optCaption\"></td>";
+	// str += "\" class=\"bg-gray-300 padded\"></td>";
 	var MonstersID = new Array();
 	var MonstersCount = 0;
 	if(Rlv<16)
@@ -2766,90 +2791,90 @@ function BuildMonsterTable()
 	{
 		if(countline == 10)
 		{
-			str += "<td class=\"bgLtRow1 padded optCaption\">Monster</td>";
-			str += '<td class="bgLtRow1 padded optCaption">Level</td>';
-			str += '<td class="bgLtRow1 padded optCaption">Base EXP</td>';
-			str += '<td class="bgLtRow1 padded optCaption">Job EXP</td>';
-			str += '<td class="bgLtRow1 padded optCaption">HP</td>';
-			str += '<td class="bgLtRow1 padded optCaption">Attack</td>';
-			str += '<td class="bgLtRow1 padded optCaption">Size</td>';
-			str += '<td class="bgLtRow1 padded optCaption">Race</td>';
-			str += '<td class="bgLtRow1 padded optCaption">Element</td>';
-			str += '<td class="bgLtRow1 padded optCaption">100% Hit</td>';
-			str += '<td class="bgLtRow1 padded optCaption">95% Flee</td>';
-			str += '<td class="bgLtRow1 padded optCaption">DEF</td>';
-			str += '<td class="bgLtRow1 padded optCaption">MDEF</td>';
-			str += '<td class="bgLtRow1 padded optCaption">BEXP/HP</td>';
-			str += '<td class="bgLtRow1 padded optCaption">JEXP/HP</td>';
+			str += "<td class=\"bg-gray-100 padded\">Monster</td>";
+			str += '<td class="bg-gray-100 padded">Level</td>';
+			str += '<td class="bg-gray-100 padded">Base EXP</td>';
+			str += '<td class="bg-gray-100 padded">Job EXP</td>';
+			str += '<td class="bg-gray-100 padded">HP</td>';
+			str += '<td class="bg-gray-100 padded">Attack</td>';
+			str += '<td class="bg-gray-100 padded">Size</td>';
+			str += '<td class="bg-gray-100 padded">Race</td>';
+			str += '<td class="bg-gray-100 padded">Element</td>';
+			str += '<td class="bg-gray-100 padded">100% Hit</td>';
+			str += '<td class="bg-gray-100 padded">95% Flee</td>';
+			str += '<td class="bg-gray-100 padded">DEF</td>';
+			str += '<td class="bg-gray-100 padded">MDEF</td>';
+			str += '<td class="bg-gray-100 padded">BEXP/HP</td>';
+			str += '<td class="bg-gray-100 padded">JEXP/HP</td>';
 			str += '</tr>';
 			countline = 0;
 		}
 		if(i%2 == 0)
 		{
 			str += '<tr><td id="NameLabel'+i.toString();
-			str += '" class="bgLtRow3 padded optCaption"></td>';
+			str += '" class="bg-gray-200 padded"></td>';
 			str += '<td id="LevelLabel'+i.toString();
-			str +='" class="bgLtRow1 padded optCaption"></td>';
+			str +='" class="bg-gray-200 padded"></td>';
 			str += '<td id="BaseExpLabel'+i.toString();
-			str +='" class="bgLtRow3 padded optCaption"></td>';
+			str +='" class="bg-gray-200 padded"></td>';
 			str += '<td id="JobExpLabel'+i.toString();
-			str +='" class="bgLtRow1 padded optCaption"></td>';
+			str +='" class="bg-gray-200 padded"></td>';
 			str += '<td id="HPLabel'+i.toString();
-			str +='" class="bgLtRow3 padded optCaption"></td>';
+			str +='" class="bg-gray-200 padded"></td>';
 			str += '<td id="AtkLabel'+i.toString();
-			str +='" class="bgLtRow1 padded optCaption"></td>';
+			str +='" class="bg-gray-200 padded"></td>';
 			str += '<td id="SizeLabel'+i.toString();
-			str +='" class="bgLtRow3 padded optCaption"></td>';
+			str +='" class="bg-gray-200 padded"></td>';
 			str += '<td id="RaceLabel'+i.toString();
-			str +='" class="bgLtRow1 padded optCaption"></td>';
+			str +='" class="bg-gray-200 padded"></td>';
 			str += '<td id="ElementLabel'+i.toString();
-			str +='" class="bgLtRow3 padded optCaption"></td>';
+			str +='" class="bg-gray-200 padded"></td>';
 			str += '<td id="HitLabel'+i.toString();
-			str +='" class="bgLtRow1 padded optCaption"></td>';
+			str +='" class="bg-gray-200 padded"></td>';
 			str += '<td id="FleeLabel'+i.toString();
-			str +='" class="bgLtRow3 padded optCaption"></td>';
+			str +='" class="bg-gray-200 padded"></td>';
 			str += '<td id="DefLabel'+i.toString();
-			str +='" class="bgLtRow1 padded optCaption"></td>';
+			str +='" class="bg-gray-200 padded"></td>';
 			str += '<td id="MDefLabel'+i.toString();
-			str +='" class="bgLtRow3 padded optCaption"></td>';
+			str +='" class="bg-gray-200 padded"></td>';
 			str += '<td id="BaseExpHPLabel'+i.toString();
-			str +='" class="bgLtRow1 padded optCaption"></td>';
+			str +='" class="bg-gray-200 padded"></td>';
 			str += '<td id="JobExpHPLabel'+i.toString();
-			str +='" class="bgLtRow3 padded optCaption"></td>';
+			str +='" class="bg-gray-200 padded"></td>';
 			str += '</tr>';
 		}
 		else
 		{
 			str += '<tr><td id="NameLabel'+i.toString();
-			str += '" class="bgLtRow4 padded optCaption"></td>';
+			str += '" class="bg-gray-300 padded"></td>';
 			str += '<td id="LevelLabel'+i.toString();
-			str +='" class="bgLtRow2 padded optCaption"></td>';
+			str +='" class="bg-gray-300 padded"></td>';
 			str += '<td id="BaseExpLabel'+i.toString();
-			str +='" class="bgLtRow4 padded optCaption"></td>';
+			str +='" class="bg-gray-300 padded"></td>';
 			str += '<td id="JobExpLabel'+i.toString();
-			str +='" class="bgLtRow2 padded optCaption"></td>';
+			str +='" class="bg-gray-300 padded"></td>';
 			str += '<td id="HPLabel'+i.toString();
-			str +='" class="bgLtRow4 padded optCaption"></td>';
+			str +='" class="bg-gray-300 padded"></td>';
 			str += '<td id="AtkLabel'+i.toString();
-			str +='" class="bgLtRow2 padded optCaption"></td>';
+			str +='" class="bg-gray-300 padded"></td>';
 			str += '<td id="SizeLabel'+i.toString();
-			str +='" class="bgLtRow4 padded optCaption"></td>';
+			str +='" class="bg-gray-300 padded"></td>';
 			str += '<td id="RaceLabel'+i.toString();
-			str +='" class="bgLtRow2 padded optCaption"></td>';
+			str +='" class="bg-gray-300 padded"></td>';
 			str += '<td id="ElementLabel'+i.toString();
-			str +='" class="bgLtRow4 padded optCaption"></td>';
+			str +='" class="bg-gray-300 padded"></td>';
 			str += '<td id="HitLabel'+i.toString();
-			str +='" class="bgLtRow2 padded optCaption"></td>';
+			str +='" class="bg-gray-300 padded"></td>';
 			str += '<td id="FleeLabel'+i.toString();
-			str +='" class="bgLtRow4 padded optCaption"></td>';
+			str +='" class="bg-gray-300 padded"></td>';
 			str += '<td id="DefLabel'+i.toString();
-			str +='" class="bgLtRow2 padded optCaption"></td>';
+			str +='" class="bg-gray-300 padded"></td>';
 			str += '<td id="MDefLabel'+i.toString();
-			str +='" class="bgLtRow4 padded optCaption"></td>';
+			str +='" class="bg-gray-300 padded"></td>';
 			str += '<td id="BaseExpHPLabel'+i.toString();
-			str +='" class="bgLtRow2 padded optCaption"></td>';
+			str +='" class="bg-gray-300 padded"></td>';
 			str += '<td id="JobExpHPLabel'+i.toString();
-			str +='" class="bgLtRow4 padded optCaption"></td>';
+			str +='" class="bg-gray-300 padded"></td>';
 			str += '</tr>';
 		}
 		countline++;
@@ -3149,124 +3174,124 @@ function BuildItemsTable()
 	// Build Table
 	var str;
 	str = '<table class="shadow"><tr>';
-	str += '<td id="aspdLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="aspdInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="sesameLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="sesameInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="fireLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="fireInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="runeLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="runeInput" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="aspdLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="aspdInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="sesameLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="sesameInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="fireLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="fireInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="runeLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="runeInput" class="bgLtRow1 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="strFoodLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="strFoodInput" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="honeyLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="honeyInput" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="coldLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="coldInput" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="schwartzLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="schwartzInput" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="strFoodLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="strFoodInput" class="bgLtRow2 padded"></td>';
+	str += '<td id="honeyLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="honeyInput" class="bgLtRow2 padded"></td>';
+	str += '<td id="coldLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="coldInput" class="bgLtRow2 padded"></td>';
+	str += '<td id="schwartzLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="schwartzInput" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="agiFoodLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="agiFoodInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="rainbowLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="rainbowInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="thunderLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="thunderInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="arunafeltzLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="arunafeltzInput" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="agiFoodLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="agiFoodInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="rainbowLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="rainbowInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="thunderLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="thunderInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="arunafeltzLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="arunafeltzInput" class="bgLtRow1 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="vitFoodLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="vitFoodInput" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="militarybLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="militarybInput" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="earthLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="earthInput" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="boucheLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="boucheInput" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="vitFoodLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="vitFoodInput" class="bgLtRow2 padded"></td>';
+	str += '<td id="militarybLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="militarybInput" class="bgLtRow2 padded"></td>';
+	str += '<td id="earthLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="earthInput" class="bgLtRow2 padded"></td>';
+	str += '<td id="boucheLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="boucheInput" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="intFoodLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="intFoodInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="militarycLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="militarycInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="celermineLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="celermineInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="distilledLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="distilledInput" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="intFoodLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="intFoodInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="militarycLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="militarycInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="celermineLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="celermineInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="distilledLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="distilledInput" class="bgLtRow1 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="dexFoodLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="dexFoodInput" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="pinkLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="pinkInput" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="vitataLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="vitataInput" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="durianLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="durianInput" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="dexFoodLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="dexFoodInput" class="bgLtRow2 padded"></td>';
+	str += '<td id="pinkLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="pinkInput" class="bgLtRow2 padded"></td>';
+	str += '<td id="vitataLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="vitataInput" class="bgLtRow2 padded"></td>';
+	str += '<td id="durianLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="durianInput" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="lukFoodLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="lukFoodInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="whiteLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="whiteInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="increasehpLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="increasehpInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="guaranaLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="guaranaInput" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="lukFoodLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="lukFoodInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="whiteLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="whiteInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="increasehpLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="increasehpInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="guaranaLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="guaranaInput" class="bgLtRow1 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="luckyLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="luckyInput" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="scrollLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="scrollInput" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="increasespLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="increasespInput" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="tyrLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="tyrInput" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="luckyLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="luckyInput" class="bgLtRow2 padded"></td>';
+	str += '<td id="scrollLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="scrollInput" class="bgLtRow2 padded"></td>';
+	str += '<td id="increasespLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="increasespInput" class="bgLtRow2 padded"></td>';
+	str += '<td id="tyrLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="tyrInput" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="resentmentLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="resentmentInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="drowsinessLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="drowsinessInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="abrasiveLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="abrasiveInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="killerLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="killerInput" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="resentmentLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="resentmentInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="drowsinessLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="drowsinessInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="abrasiveLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="abrasiveInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="killerLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="killerInput" class="bgLtRow1 padded"></td>';
 	str += '</tr><tr>'
-	str += '<td id="manaPlusLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="manaPlusInput" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="raydricArcherTransScrollLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="raydricArcherTransScrollInput" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="mardukTransScrollLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="mardukTransScrollInput" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="archmagePotionLabel" class="bgLtRow4 padded optCaption"></td>';
-	str += '<td id="archmagePotionInput" class="bgLtRow2 padded optArea"></td>';
+	str += '<td id="manaPlusLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="manaPlusInput" class="bgLtRow2 padded"></td>';
+	str += '<td id="raydricArcherTransScrollLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="raydricArcherTransScrollInput" class="bgLtRow2 padded"></td>';
+	str += '<td id="mardukTransScrollLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="mardukTransScrollInput" class="bgLtRow2 padded"></td>';
+	str += '<td id="archmagePotionLabel" class="bgLtRow4 padded"></td>';
+	str += '<td id="archmagePotionInput" class="bgLtRow2 padded"></td>';
 	str += '</tr><tr>';
-	str += '<td id="superhumanSweetsLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="superhumanSweetsInput" class="bgLtRow1 padded optArea"></td>';	
-	str += '<td id="mindPotionLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="mindPotionInput" class="bgLtRow1 padded optArea"></td>';
-	// str += '<td id="strBiscuitLabel" class="bgLtRow3 padded optCaption"></td>';
-	// str += '<td id="strBiscuitInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td class="bgLtRow3 padded optCaption"></td>';
-	str += '<td class="bgLtRow1 padded optArea"></td>';
-	str += '<td class="bgLtRow3 padded optCaption"></td>';
-	str += '<td class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="superhumanSweetsLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="superhumanSweetsInput" class="bgLtRow1 padded"></td>';	
+	str += '<td id="mindPotionLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="mindPotionInput" class="bgLtRow1 padded"></td>';
+	// str += '<td id="strBiscuitLabel" class="bgLtRow3 padded"></td>';
+	// str += '<td id="strBiscuitInput" class="bgLtRow1 padded"></td>';
+	str += '<td class="bgLtRow3 padded"></td>';
+	str += '<td class="bgLtRow1 padded"></td>';
+	str += '<td class="bgLtRow3 padded"></td>';
+	str += '<td class="bgLtRow1 padded"></td>';
 	
 	//Invisible
 	str += '</tr><tr style="display: none;">';
-	//str += '<td id="vipBuffLabel" class="bgLtRow4 padded optCaption"></td>';
-	//str += '<td id="vipBuffInput" class="bgLtRow2 padded optArea"></td>';
-	str += '<td id="holyElLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="holyElInput" class="bgLtRow1 padded optArea"></td>';
-	str += '<td id="undeadElLabel" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="undeadElInput" class="bgLtRow1 padded optArea"></td>';	
-	str += '<td class="bgLtRow3 padded optCaption"></td>';
-	str += '<td class="bgLtRow1 padded optArea"></td>';
+	//str += '<td id="vipBuffLabel" class="bgLtRow4 padded"></td>';
+	//str += '<td id="vipBuffInput" class="bgLtRow2 padded"></td>';
+	str += '<td id="holyElLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="holyElInput" class="bgLtRow1 padded"></td>';
+	str += '<td id="undeadElLabel" class="bgLtRow3 padded"></td>';
+	str += '<td id="undeadElInput" class="bgLtRow1 padded"></td>';	
+	str += '<td class="bgLtRow3 padded"></td>';
+	str += '<td class="bgLtRow1 padded"></td>';
 	str += '</tr></table>';
 	myInnerHtml( "items", str, 0 );
 	
 
 
-//	 str += '<td id="xxxLabel" class="bgLtRow3 padded optCaption"></td>';
-//	 str += '<td id="xxxInput" class="bgLtRow1 padded optArea"></td>';
+//	 str += '<td id="xxxLabel" class="bgLtRow3 padded"></td>';
+//	 str += '<td id="xxxInput" class="bgLtRow1 padded"></td>';
 
 	// Build Input Fields
 	// Add Castscrolls etc. to Skill List

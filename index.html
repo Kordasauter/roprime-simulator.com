@@ -29,6 +29,10 @@
 		var PATCH = 0;
 	//]]></script>
 	
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  
+	
 	<!-- Cookie Consent by PrivacyPolicies.com https://www.PrivacyPolicies.com -->
 	<script type="text/javascript" src="https://www.privacypolicies.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
 	<script type="text/javascript" charset="UTF-8">
@@ -78,7 +82,7 @@
             <hr class="sidebar-divider">
 
             <!-- Nav Item - Dashboard -->
-			<div class="sidebar-heading">Last update : 12/02/2023</div>
+			<div class="sidebar-heading">Last update : 13/02/2023</div>
             <li class="nav-item active">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-calculator"></i>
@@ -165,11 +169,11 @@
 						<!-- Page Heading -->
 						<div class="row">
 							<!-- save area -->
-							<div class="padded_side" style="width: fit-content;max-width : 80%">
+							<div id="draggable" class="padded_side" style="width: fit-content;max-width : 80%">
 								<div class="card shadow mb-4">
 									<!-- Card Header -->
-									<div class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('savearea')">
-										<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Save</span></h6>
+									<div class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+										<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('savearea')"><span class="padded_large">Save</span></h6>
 									</div>
 									<!-- Card Body -->
 									<div class="card-body"  id="savearea">
@@ -210,21 +214,22 @@
 									</div>
 								</div>
 							</div>
+							  
 						</div>
 							
-						<div class="d-sm-flex align-items-center justify-content-between mb-4" onclick="ToggleVisibility('main_stat')|ToggleVisibility('sub_stat')|ToggleVisibility('ext_info')">
+						<div class="d-sm-flex align-items-center justify-content-between mb-4">
 							<h1 class="h3 mb-0 text-gray-800" >Character</h1>
 						</div>
 						<!-- base stats -->
 						<div class="row">
 						
 							<!-- STATS -->
-							<div class="padded_side" style="overflow-x:auto;">
+							<div class="padded_side">
 								<div class="shadow card mb-4">
 									<!-- Card Header -->
-									<div class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('main_stat')" >
+									<div class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
 										
-										<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Stats</span></h6>
+										<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('main_stat')"><span class="padded_large">Stats</span></h6>
 									</div>
 									<!-- Card Body -->
 									<div class="card-body" id="main_stat">
@@ -348,24 +353,24 @@
 														<td class="padded">Base Lv.
 														</td>
 														<td class="padded">
-															<select id="A_BaseLV" name="A_BaseLV" style="width:50px;" onchange="StCalc(1)|StAllCalc()"></select>
+															<select id="A_BaseLV" name="A_BaseLV" style="width:55px;" onchange="StCalc(1)|StAllCalc()"></select>
 														</td>
 														<td class="padded">Job Lv.
 														</td>
 														<td class="padded">
-															<select name="A_JobLV" style="width:50px;" onchange="StAllCalc()"></select>
+															<select name="A_JobLV" style="width:55px;" onchange="StAllCalc()"></select>
 														</td>
 													</tr>
 													<tr>
 														<td class="padded">STR</td>
 														<td class="padded">
-															<select name="A_STR" style="width:50px;" onchange="StCalc() | StAllCalc()">
+															<select name="A_STR" style="width:55px;" onchange="StCalc() | StAllCalc()">
 															</select>
 															<span id="A_STRp"></span>
 														</td>
 														<td class="padded">AGI</td>
 														<td class="padded">
-															<select name="A_AGI" style="width:50px;" onchange="StCalc() | StAllCalc()">
+															<select name="A_AGI" style="width:55px;" onchange="StCalc() | StAllCalc()">
 															</select>
 															<span id="A_AGIp"></span>
 														</td>
@@ -373,13 +378,13 @@
 													<tr>
 														<td class="padded">VIT</td>
 														<td class="padded">
-															<select name="A_VIT" style="width:50px;" onchange="StCalc() | StAllCalc()">
+															<select name="A_VIT" style="width:55px;" onchange="StCalc() | StAllCalc()">
 															</select>
 															<span id="A_VITp"></span>
 														</td>
 														<td class="padded">INT</td>
 														<td class="padded">
-															<select name="A_INT" style="width:50px;" onchange="StCalc() | StAllCalc()">
+															<select name="A_INT" style="width:55px;" onchange="StCalc() | StAllCalc()">
 															</select>
 															<span id="A_INTp"></span>
 														</td>
@@ -387,13 +392,13 @@
 													<tr>
 														<td class="padded">DEX</td>
 														<td class="padded">
-															<select name="A_DEX" style="width:50px;" onchange="StCalc() | StAllCalc()">
+															<select name="A_DEX" style="width:55px;" onchange="StCalc() | StAllCalc()">
 															</select>
 															<span id="A_DEXp"></span>
 														</td>
 														<td class="padded">LUK</td>
 														<td class="padded">
-															<select name="A_LUK" style="width:50px;" onchange="StCalc() | StAllCalc()">
+															<select name="A_LUK" style="width:55px;" onchange="StCalc() | StAllCalc()">
 															</select>
 															<span id="A_LUKp"></span>
 														</td>
@@ -412,12 +417,12 @@
 							</div>
 							
 							<!-- SUB STATS-->
-							<div class="padded_side" style="overflow-x:auto;">
+							<div class="padded_side">
 								<div class="card shadow mb-4">
 									<!-- Card Header -->
 									<div
-										class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('sub_stat')">
-										<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Sub Stats</span></h6>
+										class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+										<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large" onclick="ToggleVisibility('sub_stat')">Sub Stats</span></h6>
 									</div>
 									<!-- Card Body -->
 									<div class="card-body" id="sub_stat">
@@ -470,12 +475,12 @@
 							</div>
 							
 							<!--Extended Info Menu-->
-							<div class="padded_side" style="overflow-x:auto;">
+							<div class="padded_side">
 								<div class="shadow card mb-4">
 									<!-- Card Header -->
 									<div
-										class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('ext_info')">
-										<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Extended Info</span></h6>
+										class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+										<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('ext_info')"><span class="padded_large">Extended Info</span></h6>
 									</div>
 									<!-- Card Body -->
 									<div class="card-body" id="ext_info">
@@ -502,23 +507,19 @@
 						
 						
 						<!-- equipment -->
-						<div class="d-sm-flex align-items-center justify-content-between mb-4"
-							onclick="ToggleVisibility('WeaponI')|ToggleVisibility('Shadows')|ToggleVisibility('HeadgearU')|
-							ToggleVisibility('Armor')|ToggleVisibility('Garment')|ToggleVisibility('HeadgearsML')|
-							ToggleVisibility('Shield')|ToggleVisibility('Shoes')|ToggleVisibility('Accessory_1')|
-							ToggleVisibility('Accessory_2')|ToggleVisibility('Additional_Enchants')|ToggleVisibility('Item_Desc')">
+						<div class="d-sm-flex align-items-center justify-content-between mb-4">
 							<h1 class="h3 mb-0 text-gray-800">Equipment</h1>
 						</div>
 						
 						<div class="row">
 							<div>
 								<!--Main Weapon-->
-								<div class="padded_side" style=" overflow-x:auto;">
+								<div class="padded_side">
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('WeaponI')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Main Weapon (right hand)</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn onclick="ToggleVisibility('WeaponI')""><span class="padded_large">Main Weapon (right hand)</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="WeaponI">
@@ -617,8 +618,8 @@
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('WeaponII')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Off Weapon (left hand)</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn onclick="ToggleVisibility('WeaponII')""><span class="padded_large">Off Weapon (left hand)</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="WeaponII">
@@ -693,12 +694,12 @@
 								</div>
 							
 								<!--Shadow Armors-->
-								<div class="padded_side" style="overflow-x:auto;">
+								<div class="padded_side">
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Shadows')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Shadow Armor</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large onclick="ToggleVisibility('Shadows')"">Shadow Armor</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="Shadows">
@@ -772,12 +773,12 @@
 							</div>
 							<div>
 								<!--Headgear - Upper-->
-								<div  class="padded_side" style=" overflow-x:auto;">
+								<div  class="padded_side">
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('HeadgearU')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Headgear - Upper</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn onclick="ToggleVisibility('HeadgearU')""><span class="padded_large">Headgear - Upper</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="HeadgearU">
@@ -826,12 +827,12 @@
 								</div>
 								
 								<!--Armor-->
-								<div  class="padded_side" style="overflow-x:auto;">
+								<div  class="padded_side">
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Armor')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Armor</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('Armor')"><span class="padded_large">Armor</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="Armor">
@@ -884,12 +885,12 @@
 								</div>
 								
 								<!-- Garment -->
-								<div  class="padded_side" style="overflow-x:auto;">
+								<div  class="padded_side">
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Garment')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Garment</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn onclick="ToggleVisibility('Garment')""><span class="padded_large">Garment</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="Garment">
@@ -936,12 +937,12 @@
 								</div>
 								
 								<!--Accessory 1-->
-								<div  class="padded_side" style="overflow-x:auto;">
+								<div  class="padded_side">
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Accessory_1')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Accessory 1</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('Accessory_1')"><span class="padded_large">Accessory 1</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="Accessory_1">
@@ -989,12 +990,12 @@
 							
 							<div>
 								<!--Headgear - Middle & Lower-->
-								<div  class="padded_side" style="overflow-x:auto;">
+								<div  class="padded_side">
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('HeadgearsML')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Headgears - Middle & Lower</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('HeadgearsML')"><span class="padded_large">Headgears - Middle & Lower</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="HeadgearsML">
@@ -1028,12 +1029,12 @@
 								</div>
 								
 								<!--Shield-->
-								<div id="Shield_Pannel" class="padded_side" style="overflow-x:auto;">
+								<div id="Shield_Pannel" class="padded_side">
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Shield')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Shield</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('Shield')"><span class="padded_large">Shield</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="Shield">
@@ -1080,12 +1081,12 @@
 								</div>
 								
 								<!--Shoes-->
-								<div  class="padded_side" style="overflow-x:auto;">
+								<div  class="padded_side">
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Shoes')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Shoes</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('Shoes')"><span class="padded_large">Shoes</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="Shoes">
@@ -1133,12 +1134,12 @@
 								</div>
 								
 								<!--Accessory 2-->
-								<div  class="padded_side" style="overflow-x:auto;">
+								<div  class="padded_side">
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Accessory_2')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Accessory 2</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('Accessory_2')"><span class="padded_large">Accessory 2</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="Accessory_2">
@@ -1190,12 +1191,11 @@
 							<div  class="padded_side mobile" style="max-width:50%;overflow-x:auto;">
 								<div class="card shadow mb-4">
 									<!-- Card Header -->
-									<div style=""
-										class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Additional_Enchants')">
-										<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Additional Enchants</span></h6>
+									<div class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+										<h6 class="m-0 font-weight-bold text-primary head_btn onclick="ToggleVisibility('Additional_Enchants')""><span class="padded_large">Additional Enchants</span></h6>
 									</div>
 									<!-- Card Body -->
-									<div class="card-body" id="Additional_Enchants" style="overflow-x:auto;">
+									<div class="card-body" id="Additional_Enchants">
 										<table class="shadow">
 											<tbody>
 												<tr>
@@ -1280,8 +1280,8 @@
 								<div class="card shadow mb-4">
 									<!-- Card Header -->
 									<div
-										class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Item_Desc')">
-										<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Item Description - <span id="nm080">
+										class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+										<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('Item_Desc')"><span class="padded_large">Item Description - <span id="nm080">
 													</span></span></h6>
 									</div>
 									<!-- Card Body -->
@@ -1308,30 +1308,25 @@
 									</div>
 								</div>
 							</div>
-
-					
-							
+				
 						</div>
 							
 						<!-- </div> -->
 						
 						<!-- buffs -->
-						<div class="d-sm-flex align-items-center justify-content-between mb-4"
-							onclick="ToggleVisibility('Passive_Skills')|ToggleVisibility('Guild_Skills')|ToggleVisibility('Battle_Chant')|
-							ToggleVisibility('Other_Buffs')|ToggleVisibility('Misc_Effects')|ToggleVisibility('Acolyte_Skills')|
-							ToggleVisibility('Performer_Skills')|ToggleVisibility('Summoner_Skills')">
+						<div class="d-sm-flex align-items-center justify-content-between mb-4">
 							<h1 class="h3 mb-0 text-gray-800">Self &amp; Party Buffs</h1>
 						</div>
 						
 						<div class="row">	
 							<div>
 								<!--Passive Skills-->
-								<div  class="padded_side" style="overflow-x:auto;">
+								<div  class="padded_side">
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Passive_Skills')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Passive Skills</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('Passive_Skills')"><span class="padded_large">Passive Skills</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="Passive_Skills">
@@ -1341,12 +1336,12 @@
 								</div>
 								
 								<!--Guild Skills-->
-								<div  class="padded_side" style="overflow-x:auto;">
+								<div  class="padded_side">
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Guild_Skills')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Guild Skills</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('Guild_Skills')"><span class="padded_large">Guild Skills</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="Guild_Skills">
@@ -1359,7 +1354,7 @@
 														</td>
 														<td class="padded">Great Leadership</td>
 														<td class="padded">
-															<select id="guildSkill1" style="width:50px;" onchange="ToggleGuildSkills()">
+															<select id="guildSkill1" style="width:55px;" onchange="ToggleGuildSkills()">
 																<option selected="selected" value="0">Off</option>
 																<option value="1">1</option>
 																<option value="2">2</option>
@@ -1372,7 +1367,7 @@
 													<tr>
 														<td class="padded">Glorious Wounds</td>
 														<td class="padded">
-															<select id="guildSkill2" style="width:50px;" onchange="ToggleGuildSkills()">
+															<select id="guildSkill2" style="width:55px;" onchange="ToggleGuildSkills()">
 																<option selected="selected" value="0">Off</option>
 																<option value="1">1</option>
 																<option value="2">2</option>
@@ -1383,7 +1378,7 @@
 														</td>
 														<td class="padded">Cold Heart</td>
 														<td class="padded">
-															<select id="guildSkill3" style="width:50px;" onchange="ToggleGuildSkills()">
+															<select id="guildSkill3" style="width:55px;" onchange="ToggleGuildSkills()">
 																<option selected="selected" value="0">Off</option>
 																<option value="1">1</option>
 																<option value="2">2</option>
@@ -1396,7 +1391,7 @@
 													<tr>
 														<td class="padded">Sharp Gaze</td>
 														<td class="padded">
-															<select id="guildSkill4" style="width:50px;" onchange="ToggleGuildSkills()">
+															<select id="guildSkill4" style="width:55px;" onchange="ToggleGuildSkills()">
 																<option selected="selected" value="0">Off</option>
 																<option value="1">1</option>
 																<option value="2">2</option>
@@ -1407,7 +1402,7 @@
 														</td>
 														<td class="padded">Regeneration</td>
 														<td class="padded">
-															<select id="guildSkill5" style="width:50px;">
+															<select id="guildSkill5" style="width:55px;">
 																<option selected="selected" value="0">Off</option>
 																<option value="1">1</option>
 																<option value="2">2</option>
@@ -1422,12 +1417,12 @@
 								</div>
 								
 								<!--Battle Chant Effects-->
-								<div  class="padded_side" style="overflow-x:auto;">
+								<div  class="padded_side">
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Battle_Chant')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Battle Chant Effects</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('Battle_Chant')"><span class="padded_large">Battle Chant Effects</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="Battle_Chant">
@@ -1470,12 +1465,12 @@
 								</div>
 								
 								<!--Other Buffs-->
-								<div  class="padded_side" style="overflow-x:auto;">
+								<div  class="padded_side">
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Other_Buffs')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Other Buffs</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('Other_Buffs')"><span class="padded_large">Other Buffs</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="Other_Buffs">
@@ -1486,12 +1481,12 @@
 								</div>
 								
 								<!--Miscellaneous Effects-->
-								<div  class="padded_side" style="overflow-x:auto;">
+								<div  class="padded_side">
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Misc_Effects')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Miscellaneous Effects</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('Misc_Effects')"><span class="padded_large">Miscellaneous Effects</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="Misc_Effects">
@@ -1504,12 +1499,12 @@
 							</div>
 							<div>
 								<!--Acolyte Skills-->
-								<div  class="padded_side" style="overflow-x:auto;">
+								<div  class="padded_side">
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Acolyte_Skills')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Acolyte Skills</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('Acolyte_Skills')"><span class="padded_large">Acolyte Skills</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="Acolyte_Skills">
@@ -1519,31 +1514,31 @@
 																<tr>
 																	<td id="AS0_1" class="padded">Blessing</td>
 																	<td id="AS0_2" class="padded">
-																	<select id="blessing" style="width:50px;" onchange="ToggleAcolyteSkills(0)">
+																	<select id="blessing" style="width:55px;" onchange="ToggleAcolyteSkills(0)">
 																	</select>
 																	</td>
 																	<td id="AS1_1" class="padded">Increase AGI</td>
 																	<td id="AS1_2" class="padded">
-																		<select id="increaseAgi" style="width:50px;" onchange="ToggleAcolyteSkills(0)">
+																		<select id="increaseAgi" style="width:55px;" onchange="ToggleAcolyteSkills(0)">
 																		</select>
 																	</td>
 																</tr>
 																<tr>
 																	<td id="AS2_1" class="padded">Angelus</td>
 																	<td id="AS2_2" class="padded">
-																		<select id="angelus" style="width:50px;" onchange="ToggleAcolyteSkills(0)">
+																		<select id="angelus" style="width:55px;" onchange="ToggleAcolyteSkills(0)">
 																		</select>
 																	</td>
 																	<td id="AS3_1" class="padded">Impositio Manus</td>
 																	<td id="AS3_2" class="padded">
-																		<select id="imposito" style="width:50px;" onchange="ToggleAcolyteSkills(0)">
+																		<select id="imposito" style="width:55px;" onchange="ToggleAcolyteSkills(0)">
 																		</select>
 																	</td>
 																</tr>
 																<tr>
 																	<td id="AS4_1" class="padded">Suffragium</td>
 																	<td id="AS4_2" class="padded">
-																		<select id="suffragium" style="width:50px;" onchange="ToggleAcolyteSkills(0)">
+																		<select id="suffragium" style="width:55px;" onchange="ToggleAcolyteSkills(0)">
 																		</select>
 																	</td>
 																	<td id="AS5_1" class="padded">Gloria</td>
@@ -1552,75 +1547,75 @@
 																<tr>
 																	<td id="AS6_1" class="padded">Assumptio</td>
 																	<td id="AS6_2" class="padded">
-																		<select id="assumptio" style="width:50px;" onchange="ToggleAcolyteSkills(0)">
+																		<select id="assumptio" style="width:55px;" onchange="ToggleAcolyteSkills(0)">
 																		</select>
 																	</td>
 																	<td id="AS7_1" class="padded">Spirit Spheres</td>
 																	<td id="AS7_2" class="padded">
-																		<select id="spheres" style="width:50px;" onchange="ToggleAcolyteSkills(0)">
+																		<select id="spheres" style="width:55px;" onchange="ToggleAcolyteSkills(0)">
 																		</select>
 																	</td>
 																</tr>
 																<tr>
-																	<td id="AS8_1" class="padded">Clementia (bonus)</td>
+																	<td id="AS8_1" class="padded"><span title="bonus amount: Arch Bishop job level / 10">Clementia (bonus)*</span></td>
 																	<td id="AS8_2" class="padded">
-																		<select id="clementia" style="width:50px;" onchange="ToggleAcolyteSkills(0)">
+																		<select id="clementia" style="width:55px;" onchange="ToggleAcolyteSkills(0)">
 																		</select>
 																	</td>
-																	<td id="AS9_1" class="padded">Canto Candidus (bonus)</td>
+																	<td id="AS9_1" class="padded"><span title="bonus amount: Arch Bishop job level / 10">Canto Candidus (bonus)*</span></td>
 																	<td id="AS9_2" class="padded">
-																		<select id="candidus" style="width:50px;" onchange="ToggleAcolyteSkills(0)">
+																		<select id="candidus" style="width:55px;" onchange="ToggleAcolyteSkills(0)">
 																		</select>
 																	</td>
 																</tr>
 																<tr>
 																	<td id="AS10_1" class="padded">Expiatio</td>
 																	<td id="AS10_2" class="padded">
-																		<select id="expiatio" style="width:50px;" onchange="ToggleAcolyteSkills(0)">
+																		<select id="expiatio" style="width:55px;" onchange="ToggleAcolyteSkills(0)">
 																		</select>
 																	</td>
 																	<td id="AS11_1" class="padded">Sacrament</td>
 																	<td id="AS11_2" class="padded">
-																		<select id="sacrament" style="width:50px;" onchange="ToggleAcolyteSkills(0)">
+																		<select id="sacrament" style="width:55px;" onchange="ToggleAcolyteSkills(0)">
 																		</select>
 																	</td>
 																</tr>
 																<tr>
 																	<td id="AS12_1" class="padded">Lauda Agnus</td>
 																	<td id="AS12_2" class="padded">
-																		<select id="agnus" style="width:50px;" onchange="ToggleAcolyteSkills(0)">
+																		<select id="agnus" style="width:55px;" onchange="ToggleAcolyteSkills(0)">
 																		</select>
 																	</td>
 																	<td id="AS13_1" class="padded">Lauda Ramus</td>
 																	<td id="AS13_2" class="padded">
-																		<select id="ramus" style="width:50px;" onchange="ToggleAcolyteSkills(0)">
+																		<select id="ramus" style="width:55px;" onchange="ToggleAcolyteSkills(0)">
 																		</select>
 																	</td>
 																</tr>
 																<tr>
 																	<td id="AS14_1" class="padded">Gentle Touch Convert</td>
 																	<td id="AS14_2" class="padded">
-																		<select id="ppChange" style="width:50px;" onchange="ToggleAcolyteSkills(1)">
+																		<select id="ppChange" style="width:55px;" onchange="ToggleAcolyteSkills(1)">
 																		</select>
 																	</td>
 																	<td id="AS15_1" class="padded">Gentle Touch Revitalize</td>
 																	<td id="AS15_2" class="padded">
-																		<select id="ppRevitalize" style="width:50px;" onchange="ToggleAcolyteSkills(2)">
+																		<select id="ppRevitalize" style="width:55px;" onchange="ToggleAcolyteSkills(2)">
 																		</select>
 																	</td>
 																</tr>
 																<tr>
 																	<td id="AS16_1" class="padded">Sura stats</td>
 																	<td id="AS16_2" colspan="3" class="padded">
-																		<select id="suraStr" style="width:50px;" onchange="ToggleAcolyteSkills(0)">
+																		<select id="suraStr" style="width:55px;" onchange="ToggleAcolyteSkills(0)">
 																		</select>&nbsp;
-																		<select id="suraAgi" style="width:50px;" onchange="ToggleAcolyteSkills(0)">
+																		<select id="suraAgi" style="width:55px;" onchange="ToggleAcolyteSkills(0)">
 																		</select>&nbsp;
-																		<select id="suraVit" style="width:50px;" onchange="ToggleAcolyteSkills(0)">
+																		<select id="suraVit" style="width:55px;" onchange="ToggleAcolyteSkills(0)">
 																		</select>&nbsp;
-																		<select id="suraInt" style="width:50px;" onchange="ToggleAcolyteSkills(0)">
+																		<select id="suraInt" style="width:55px;" onchange="ToggleAcolyteSkills(0)">
 																		</select>&nbsp;
-																		<select id="suraDex" style="width:50px;" onchange="ToggleAcolyteSkills(0)">
+																		<select id="suraDex" style="width:55px;" onchange="ToggleAcolyteSkills(0)">
 																		</select>
 																	</td>
 																</tr>
@@ -1632,12 +1627,12 @@
 								</div>
 								
 								<!--Performer Skills-->
-								<div  class="padded_side" style="overflow-x:auto;">
+								<div  class="padded_side">
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Performer_Skills')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Performer Skills</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('Performer_Skills')"><span class="padded_large">Performer Skills</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="Performer_Skills">
@@ -1685,13 +1680,13 @@
 													</tr>
 													<tr>
 														<td class="padded" colspan="3">
-															<select id="bardAgi" style="width:50px;" onchange="TogglePerformerSkills()">
+															<select id="bardAgi" style="width:55px;" onchange="TogglePerformerSkills()">
 															</select>
-															<select id="bardInt" style="width:50px;" onchange="TogglePerformerSkills()">
+															<select id="bardInt" style="width:55px;" onchange="TogglePerformerSkills()">
 															</select>
-															<select id="bardDex" style="width:50px;" onchange="TogglePerformerSkills()">
+															<select id="bardDex" style="width:55px;" onchange="TogglePerformerSkills()">
 															</select>
-															<select id="bardVit" style="width:50px;" onchange="TogglePerformerSkills()">
+															<select id="bardVit" style="width:55px;" onchange="TogglePerformerSkills()">
 															</select>
 															<select id="bardJob" style="width:100px;" onchange="TogglePerformerSkills()">
 															</select>
@@ -1739,13 +1734,13 @@
 													</tr>
 													<tr>
 														<td class="padded" colspan="3">
-															<select id="dancerAgi" style="width:50px;" onchange="TogglePerformerSkills()">
+															<select id="dancerAgi" style="width:55px;" onchange="TogglePerformerSkills()">
 															</select>
-															<select id="dancerInt" style="width:50px;" onchange="TogglePerformerSkills()">
+															<select id="dancerInt" style="width:55px;" onchange="TogglePerformerSkills()">
 															</select>
-															<select id="dancerDex" style="width:50px;" onchange="TogglePerformerSkills()">
+															<select id="dancerDex" style="width:55px;" onchange="TogglePerformerSkills()">
 															</select>
-															<select id="dancerLuk" style="width:50px;" onchange="TogglePerformerSkills()">
+															<select id="dancerLuk" style="width:55px;" onchange="TogglePerformerSkills()">
 															</select>
 															<select id="dancerJob" style="width:100px;" onchange="TogglePerformerSkills()">
 															</select>
@@ -1799,17 +1794,17 @@
 															<input id="marionetteControl" onclick="TogglePerformerSkills()" type="checkbox">
 														</td>
 														<td class="padded" colspan="3">
-															<select id="marionetteStr" style="width:50px;" onchange="TogglePerformerSkills()">
+															<select id="marionetteStr" style="width:55px;" onchange="TogglePerformerSkills()">
 															</select>
-															<select id="marionetteAgi" style="width:50px;" onchange="TogglePerformerSkills()">
+															<select id="marionetteAgi" style="width:55px;" onchange="TogglePerformerSkills()">
 															</select>
-															<select id="marionetteVit" style="width:50px;" onchange="TogglePerformerSkills()">
+															<select id="marionetteVit" style="width:55px;" onchange="TogglePerformerSkills()">
 															</select>
-															<select id="marionetteInt" style="width:50px;" onchange="TogglePerformerSkills()">
+															<select id="marionetteInt" style="width:55px;" onchange="TogglePerformerSkills()">
 															</select>
-															<select id="marionetteDex" style="width:50px;" onchange="TogglePerformerSkills()">
+															<select id="marionetteDex" style="width:55px;" onchange="TogglePerformerSkills()">
 															</select>
-															<select id="marionetteLuk" style="width:50px;" onchange="TogglePerformerSkills()">
+															<select id="marionetteLuk" style="width:55px;" onchange="TogglePerformerSkills()">
 															</select>
 														</td>
 													</tr>
@@ -1820,12 +1815,12 @@
 								</div>
 								
 								<!--Summoner Skills-->
-								<div  class="padded_side" style="overflow-x:auto;">
+								<div  class="padded_side">
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Summoner_Skills')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Summoner Skills</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('Summoner_Skills')"><span class="padded_large">Summoner Skills</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="Summoner_Skills">
@@ -1834,14 +1829,14 @@
 													<tr>
 														<td id="SUM0_1" class="padded">Bunch of Shrimp</td>
 														<td id="SUM0_2" class="padded">
-															<select id="bunchOfShrimp" style="width:50px;" onchange="StAllCalc()">
+															<select id="bunchOfShrimp" style="width:55px;" onchange="StAllCalc()">
 																<option selected="selected" value="0">No</option>
 																<option value="1">Yes</option>
 															</select>
 														</td>
 														<td id="SUM1_1" class="padded">Purring</td>
 														<td id="SUM1_2" class="padded">
-															<select id="purring" style="width:50px;" onchange="StAllCalc()">
+															<select id="purring" style="width:55px;" onchange="StAllCalc()">
 																<option selected="selected" value="0">No</option>
 																<option value="1">Yes</option>
 															</select>
@@ -1850,14 +1845,14 @@
 													<tr>
 														<td id="SUM2_1" class="padded">Meow Meow</td>
 														<td id="SUM2_2" class="padded">
-															<select id="meowMeow" style="width:50px;" onchange="StAllCalc()">
+															<select id="meowMeow" style="width:55px;" onchange="StAllCalc()">
 																<option selected="selected" value="0">No</option>
 																<option value="1">Yes</option>
 															</select>
 														</td>
 														<td id="SUM3_1" class="padded">Hiss</td>
 														<td id="SUM3_2" class="padded">
-															<select id="hiss" style="width:50px;" onchange="StAllCalc()">
+															<select id="hiss" style="width:55px;" onchange="StAllCalc()">
 																<option selected="selected" value="0">No</option>
 																<option value="1">Yes</option>
 															</select>
@@ -1866,7 +1861,7 @@
 													<tr>
 														<td id="SUM4_1" class="padded">Arclouse Dash</td>
 														<td id="SUM4_2" class="padded">
-															<select id="arclouseDash" style="width:50px;" onchange="StAllCalc()">
+															<select id="arclouseDash" style="width:55px;" onchange="StAllCalc()">
 																<option selected="selected" value="0">0</option>
 																<option value="1">1</option>
 																<option value="2">2</option>
@@ -1889,7 +1884,7 @@
 						</div>
 						
 						<!-- Items -->
-						<div class="d-sm-flex align-items-center justify-content-between mb-4" onclick="ToggleVisibility('Items')">
+						<div class="d-sm-flex align-items-center justify-content-between mb-4">
 							<h1 class="h3 mb-0 text-gray-800">Items</h1>
 						</div>
 						
@@ -1900,8 +1895,8 @@
 								<div class="card shadow mb-4">
 									<!-- Card Header -->
 									<div
-										class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Items')">
-										<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Items</span></h6>
+										class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+										<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('Items')"><span class="padded_large">Items</span></h6>
 									</div>
 									<!-- Card Body -->
 									<div class="card-body" id="Items">
@@ -1914,9 +1909,7 @@
 						</div>
 						
 						<!-- Monster Combat Simulation -->
-						<div class="d-sm-flex align-items-center justify-content-between mb-4"
-							onclick="ToggleVisibility('Monster_Information')|ToggleVisibility('Monster_Debuffs')|ToggleVisibility('Misc_Effects_Battle')|
-							ToggleVisibility('Combat_Results')|ToggleVisibility('Monster_Buffs')">
+						<div class="d-sm-flex align-items-center justify-content-between mb-4">
 							<h1 class="h3 mb-0 text-gray-800">Monster Combat Simulation</h1>
 						</div>
 							
@@ -1925,12 +1918,12 @@
 							<div>
 							
 								<!--Monster Information-->
-								<div  class="padded_side" style="overflow-x:auto;">
+								<div  class="padded_side">
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Monster_Information')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Monster Information</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('Monster_Information')"><span class="padded_large">Monster Information</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="Monster_Information">
@@ -2011,12 +2004,12 @@
 								</div>
 								
 								<!--Monster Debuffs-->
-								<div  class="padded_side" style="overflow-x:auto;">
+								<div  class="padded_side">
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Monster_Debuffs')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Monster Debuffs</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('Monster_Debuffs')"><span class="padded_large">Monster Debuffs</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="Monster_Debuffs">
@@ -2029,12 +2022,12 @@
 								</div>
 								
 								<!--Miscellaneous Effects-->
-								<div  class="padded_side" style="overflow-x:auto;">
+								<div  class="padded_side">
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Misc_Effects_Battle')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Miscellaneous Effects</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('Misc_Effects_Battle')"><span class="padded_large">Miscellaneous Effects</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="Misc_Effects_Battle">
@@ -2049,12 +2042,12 @@
 							<div>
 							
 								<!--Combat Results-->
-								<div  class="padded_side" style="overflow-x:auto;">
+								<div  class="padded_side">
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Combat_Results')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Combat Results</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('Combat_Results')"><span class="padded_large">Combat Results</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="Combat_Results">
@@ -2165,12 +2158,12 @@
 								</div>
 								
 								<!--Monster Buffs-->
-								<div  class="padded_side" style="overflow-x:auto;">
+								<div  class="padded_side">
 									<div class="card shadow mb-4">
 										<!-- Card Header -->
 										<div
-											class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Monster_Buffs')">
-											<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Monster Buffs</span></h6>
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('Monster_Buffs')"><span class="padded_large">Monster Buffs</span></h6>
 										</div>
 										<!-- Card Body -->
 										<div class="card-body" id="Monster_Buffs">
@@ -2183,19 +2176,19 @@
 						</div>
 						
 						<!-- Exp Scaler -->
-						<div class="d-sm-flex align-items-center justify-content-between mb-4" onclick="ToggleVisibility('Scaler')">
+						<div class="d-sm-flex align-items-center justify-content-between mb-4">
 							<h1 class="h3 mb-0 text-gray-800">Exp Scaler</h1>
 						</div>
 
 						<div class="row">
 							
 							<!--Exp Scaler-->
-							<div  class="padded_side" style="overflow-x:auto;">
+							<div  class="padded_side">
 								<div class="card shadow mb-4">
 									<!-- Card Header -->
 									<div
-										class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Scaler')">
-										<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Search</span></h6>
+										class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+										<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('Scaler')"><span class="padded_large">Search</span></h6>
 									</div>
 									<!-- Card Body -->
 									<div class="card-body" id="Scaler">
@@ -2205,7 +2198,7 @@
 													<td class="bgDkRow1 padded">
 													<!-- <span id="Search"> -->
 														<span id="Search">
-															<div class="bgMdTitle mdTitle" onclick="ToggleVisibility('Level')">Character</div>
+															<div class="padded">Character</div>
 															<div id="Level" style="display:block">
 																<table class="shadow">
 																	<tbody>
@@ -2243,7 +2236,7 @@
 																			</td>
 																			<td id="BaseManualLabel" class="padded">Battle Manual (Base Exp)</td>
 																			<td id="BaseManualInput" class="padded">
-																				<select id="BaseManual" style="width:70px;">
+																				<select id="BaseManual" style="width:75px;">
 																					<option value="0">None</option>
 																					<option value="1">+30%</option>
 																					<option value="2">+50%</option>
@@ -2253,7 +2246,7 @@
 																			</td>
 																			<td id="JobManualLabel" class="padded">Battle Manual (Job Exp)</td>
 																			<td id="JobManualInput" class="padded">
-																				<select id="JobManual" style="width:70px;">
+																				<select id="JobManual" style="width:75px;">
 																					<option value="0">None</option>
 																					<option value="1">+30%</option>
 																					<option value="2">+50%</option>
@@ -2265,7 +2258,7 @@
 																	</tbody>
 																</table>
 															</div>
-															<div class="bgMdTitle mdTitle" onclick="ToggleVisibility('Race')">Race &amp; Element</div>
+															<div class="padded">Race &amp; Element</div>
 															<div id="Race" style="display:block">
 																<table class="shadow">
 																	<tbody>
@@ -2385,7 +2378,7 @@
 									</div>
 								</div>
 							</div>
-						
+
 						</div>
 						<!-- End of Main Content -->
 						
@@ -2435,7 +2428,7 @@
 
 
 	<script>
-		var version = '4'; 
+		var version = '5'; 
 		var jsassets = [
 		'js/variables.js',
 		//<!--verbage-->
@@ -2512,9 +2505,10 @@
 		
 		$(function() {
 			initAssets();
-		// 	$(".card" ).draggable();
+		 	<!-- $(".card" ).draggable(); -->
 		});
 	</script>
+  </script>
 </body>
 
 </html>

@@ -58,6 +58,7 @@ with( document.calcForm )
 		monsterDebuffs[status_en_MARSH_OF_ABYSS] = parseInt(formElements["MarshOfAbyss"].value);
 		monsterDebuffs[status_en_GLOOMY_DAY] = parseInt(formElements["GloomyDay"].value);
 		monsterDebuffs[status_en_DARK_CLAW] = parseInt(formElements["DarkClaw"].value);
+		monsterDebuffs[status_en_ANALYZE] = parseInt(formElements["Analyze"].value);
 	}
 	
 	{ // Monster Buffs
@@ -272,7 +273,9 @@ with( document.calcForm )
 		if(monsterDebuffs[status_en_PROVOKE]!=0 && n_B[en_ELEMENT]<90) // Provoke / EUndead
 			wDEF += 5 + monsterDebuffs[status_en_PROVOKE] * 5; // Provoke
 	}
-	
+	if(monsterDebuffs[status_en_ANALYZE]!=0 ) // Analyze
+			wDEF += monsterDebuffs[status_en_ANALYZE] * 14; // Analyze
+			
 	if(monsterDebuffs[22])
 	{
 		wDEF += 50;

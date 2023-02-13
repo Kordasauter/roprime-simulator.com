@@ -19,5 +19,6 @@ AilmentsOBJ = [
 ,["","Cristallization"]
 ,["","Gloomy Day"]
 ,["","Dark Claw"]
+,["","Analyze"]
 ];
 }
