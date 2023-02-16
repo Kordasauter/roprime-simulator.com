@@ -77,6 +77,7 @@ function SuperNoviceFullWeapon(nSNFW)
 // stat- & subStatCalc
 function StAllCalc()
 { 
+// console.log("StAllCalc()");
 with ( document.calcForm )
 {
 	var formElements = document.forms["calcForm"].elements;
@@ -551,7 +552,6 @@ with ( document.calcForm )
 		{// Ign_MDEF += 20;
 			n_tok[bon_MDEFIGN_RC_BRUTE] += 20;
 			n_tok[bon_MDEFIGN_RC_DEMON] += 20;
-			console.log("ici");
 		}
 			
 		if(n_A_SHOULDER_DEF_PLUS >= 11)
@@ -3196,6 +3196,8 @@ Init();
 
 function Init()
 {
+	
+	// console.log("init");
 	formElements = document.forms["calcForm"].elements;
 	
 	//enemies active skills
@@ -3315,7 +3317,7 @@ function Init()
  		w += '<input type="button" value="L" onClick="LoadShortCut()">';
  		myInnerHtml("ID_A_SHORTCUT_SAVE_BUTTON",w,0);
  	}*/
-
+	
 	for(i=0;i<=99;i++)
 	{
 		DataShortCut[i] = new Array();
@@ -3676,120 +3678,6 @@ function Init()
 	formElements["saveName"].value = GetWord(84);
 	
 	LoadDataINIT(); // loads cookies
-	// InitNews(1);
-}
-
-function InitNews(news)
-{
-	var str = "";
-	var str_new = "";
-	var str_old = "";
-	var news_min = 0;
-	if(news)
-		news_min = NewsMax-1;
-		
-	for (var i = NewsMax;i>=news_min;i--)
-	{
-		var hide=0;
-		var tmp = 0;
-		var date = NewsOBJ[i][0].replace('/', '');
-		date = date.replace('/', '');
-		// if(i > (NewsMax - 2))
-		if(news)
-		{
-			str_new += "<div>\n";
-			str_new += "	<u><b>"+ NewsOBJ[i][0] +":</b></u> \n";
-			str_new += "	<ul style=\"margin-left: 5px;\">\n";
-			
-		}
-		else
-		{
-			str_old += "<div>";
-			str_old += "	<u><b>"+ NewsOBJ[i][0] +":</b></u> <input class=\"button\" type=\"button\" value=\"Show/Hide\" onclick=\"javascript:$('#note"+ date +"').toggle()\">";
-			str_old += "	<span style=\"display: none;\" id=\"note"+ date +"\">";
-			str_old += "	<ul style=\"margin-left: 5px;\">";
-		}
-		str = "";
-		for (var j = 1;NewsOBJ[i][j]!=0;j++)
-		{
-			if(NewsOBJ[i][j] == News_Added)
-			{
-				if(tmp > 0)
-				{
-					str += "			</ul>\n";
-				}
-				tmp++;
-				str += "		<li><b>Has been added :</b></li>\n";
-				str += "			<ul>\n";
-			}
-			else if(NewsOBJ[i][j] == News_Fixed)
-			{
-				if(tmp > 0)
-				{
-					str += "			</ul>\n";
-				}
-				tmp++;
-				str += "		<li><b>Has been fixed :</b></li>\n";
-				str += "			<ul>\n";
-			}
-			else if(NewsOBJ[i][j] == List_Start)
-			{
-				tmp++;
-				str += "			<ul>\n";
-			}
-			else if(NewsOBJ[i][j] == List_End)
-			{
-				tmp--;
-				str += "			</ul>\n";
-			}
-			else if(NewsOBJ[i][j] == Hide_Start)
-			{
-				str += "<input class=\"button\" type=\"button\" value=\"Show details\" onclick=\"javascript:$('#note"+ date + hide.toString() +"').toggle()\">\n";
-				str += "<span style=\"display: none;\" id=\"note"+ date + hide.toString() +"\">\n";
-				str += "<ul>\n";
-				hide++;
-			}
-			else if(NewsOBJ[i][j] == Hide_End)
-			{
-				str += "</ul>\n";
-				str += "</span>\n";
-			}
-			else if(NewsOBJ[i][j] == Note)
-			{
-				if(tmp > 0)
-				{
-					str += "			</ul>\n";
-				}
-				tmp++;
-				str += "		<li><b>Note :</b></li>\n";
-				str += "			<ul>\n";
-			}
-			else
-				str += "				<li>" + NewsOBJ[i][j] +"</li>\n";
-		}
-		if(tmp > 0)
-		{
-			str += "			</ul>\n";
-		}
-		str += "	</ul>\n";
-		str += "-Kord\n";
-		if(news)
-		{		
-			str_new += str;
-			str_new += "</div>\n";
-		}
-		else
-		{
-			str_old += str;
-			str_old += "	</span>";
-			str_old += "</div>";
-		}
-	}
-	if(news)
-		myInnerHtml("news",str_new,0);
-	else
-		myInnerHtml("old",str_old,0);
-	
 }
 
 function sortSelect(selElem) 

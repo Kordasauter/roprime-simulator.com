@@ -66,7 +66,7 @@ function ClickTest(id,elem)
 		for(var i = 1; i <= 4 ; i++)
 		{
 			var element3 = document.getElementById( "card_" + i );
-			console.log("card_" + i);
+			// console.log("card_" + i);
 			//reset
 			element3.src="./sprite/card_none.png";
 			if(ItemOBJ[id][5] >= i)

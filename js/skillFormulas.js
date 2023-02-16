@@ -659,7 +659,7 @@ function CalcSkillDamage()
 			// console.log("+ " + n_A_BaseLV/100 + " = " + w_SkillMod);
 			myInnerHtml( "CRInum", ( Math.round( w998G * 100 ) / 100 ) + SubName[0][Language], 0 );
 			
-			fixedCastTime *= 1.0;
+			fixedCastTime *= 0.5;
 			if ( EquipNumSearch( 1306 ) && n_A_Weapon_ATKplus >= 10 )
 			{ // Little Feather Hat + Falken Blitz
 				variableCastTime *= 1.0;
@@ -728,7 +728,7 @@ function CalcSkillDamage()
 
 		w_DMG[1] = CalcRightHandDamage(w_DMG[1]);
 		setupPVPPlayerMods();
-		return;
+		// return;
 	}
 
 	// Physical normal single-hit-calc skills (?)
@@ -2185,7 +2185,7 @@ function CalcSkillDamage()
 		{
 			var weaponWeight = ItemOBJ[n_A_Equip[0]][itm_WEIGHT];//ItemOBJ[n_A_Equip[eq_SHIELD]][itm_WEIGHT];
 			var weaponLevel = ItemOBJ[n_A_Equip[0]][itm_WLVL];//ItemOBJ[n_A_Equip[eq_SHIELD]][itm_WLVL];
-			console.log(weaponLevel*weaponWeight*n_A_BaseLV/100.0);
+			// console.log(weaponLevel*weaponWeight*n_A_BaseLV/100.0);
 			// ATK [{(Skill Level x 100) + (Caster s Job Level x 10)} + (Weapon Weight x Weapon Level) x (Caster s Base Level / 100)] %
 			w_SkillMod = ( ( n_A_ActiveSkillLV + ( n_A_JobLV * 10 / 100.0 ) ) + ( ( weaponWeight * weaponLevel ) ) * (n_A_BaseLV / 100.0) / 100.0 );
 			
@@ -6651,6 +6651,7 @@ function CalcSkillDamage()
 	if(fixedCastTime < 0)
 		fixedCastTime = 0;
 }
+
 function setupPVPPlayerMods() {
 	var monster = MonsterOBJ[PVP_ENEMY];
 	if (n_B[en_ID]===PVP_ENEMY && monster.length >= 27) {

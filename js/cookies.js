@@ -180,7 +180,8 @@ function LoadCookie()
 	formElements["A_HSE_HEAD1"].value = SaveData[32];//Old Head enchant (not used now)
 
 	formElements["A_left"].value = SaveData[33];
-	ClickShield(SaveData[33],0);
+	// ClickShield(SaveData[33],0);
+	ClickEquip( SaveData[33], 0, 5 );
 	formElements["A_left_card"].value = SaveData[34];
 	formElements["A_body"].value = SaveData[35];
 	ClickArmor(SaveData[35],0);
@@ -256,7 +257,8 @@ function LoadCookie()
 		formElements["A_BODY_DEF_PLUS"].value = SaveData[85];
 		ClickArmor(SaveData[85],1);
 		formElements["A_LEFT_DEF_PLUS"].value = SaveData[86];
-		ClickShield(SaveData[86],1);
+		// ClickShield(SaveData[86],1);
+		ClickEquip( SaveData[86], 1, 5 );
 		formElements["A_SHOULDER_DEF_PLUS"].value = SaveData[87];
 		ClickGarment(SaveData[87],1);
 		formElements["A_SHOES_DEF_PLUS"].value = SaveData[88];
@@ -974,8 +976,8 @@ function URLOUT()
 		SaveData[index++] = NtoS2( 0, 3 );
 		SaveData[index++] = NtoS2(0,3);  // not used yet
 	}
-	console.log(NtoS2(parseInt(formElements["A_Patch_Num"].value)));
-	console.log(index);
+	// console.log(NtoS2(parseInt(formElements["A_Patch_Num"].value)));
+	// console.log(index);
 	SaveData[index++] = NtoS2(parseInt(formElements["A_Patch_Num"].value),1);  // Server Patch
 	SaveData[index] = NtoS2(1,1); //New enchant format, will be used for echant version.
 	
@@ -1245,8 +1247,10 @@ with( document.calcForm )
 			A_left.value = StoN2(w.substr(34,2));
 			A_LEFT_DEF_PLUS.value = StoN2(w.substr(36,1));
 			A_left_card.value = StoN2(w.substr(37,2));
-			ClickShield(A_left.value,0);
-			ClickShield(A_LEFT_DEF_PLUS.value,1);
+			// ClickShield(A_left.value,0);
+			// ClickShield(A_LEFT_DEF_PLUS.value,1);
+			ClickEquip( A_left.value, 0, 5 );
+			ClickEquip( A_LEFT_DEF_PLUS.value, 1, 5 );
 		}
 		A_head1.value = StoN2(w.substr(45,2));
 		A_head1_card.value = StoN2(w.substr(47,2));

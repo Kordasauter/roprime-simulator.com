@@ -109,7 +109,7 @@ PET_OBJ = [
 ,[106,"Steel Chonchon (FLEE+6,AGI-1)",0,bon_FLEE,6,bon_AGI,-1,0]
 ,[107,"Stone Shooter (Fire Resistance+3%)",0,bon_RED_ELE_FIRE,3,0]
 ,[108,"Succubus (Constant chance [2% to absorb 5% of Damage dealt?)","2% Chance to absorb 5% of Physical Damage dealt",0]
-,[109,"Teddy Bear (Max SP +150)",0,bon_SP_ADD,150,0]
+,[109,"Teddy Bear (Max SP +100)",0,bon_SP_ADD,100,0]
 ,[110,"Whisper (FLEE+7,DEF-3)",0,bon_FLEE,7,bon_DEF,-3,0]
 ,[111,"Willow [Cordial] (INT+2)",0,bon_INT,2,0]
 ,[112,"Willow [Loyal] (INT+3)",0,bon_INT,3,0]

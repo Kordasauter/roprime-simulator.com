@@ -1707,7 +1707,7 @@ function ClickGarment( data, isRefine )
 	{
 		CleanEnchant("A_GARMENT_ENCHANT");
 	}
-	StAllCalc();
+	// StAllCalc();
 }
 
 function ClickShoes( data, isRefine )
@@ -1845,7 +1845,7 @@ function ClickShoes( data, isRefine )
 	{
 		CleanEnchant("A_SHOES_ENCHANT");
 	}
-	StAllCalc();
+	// StAllCalc();
 }
 
 function ClickArmor( data, isRefine )
@@ -2035,9 +2035,10 @@ function ClickArmor( data, isRefine )
 	// }
 	else
 	{
-		CleanEnchant("A_ARMOR_ENCHANT");	
+		if(!isRefine)
+			CleanEnchant("A_ARMOR_ENCHANT");	
 	}
-	StAllCalc();
+	// StAllCalc();
 }
 
 function ClickAcces( data, numAccess )
@@ -2351,7 +2352,7 @@ function ClickAcces( data, numAccess )
 	{
 		CleanEnchant(formAcc);
 	}
-	StAllCalc();
+	// StAllCalc();
 }
 
 function ClickHeadUp( data, isRefine )
@@ -2766,6 +2767,7 @@ function EnchToName(numEnch)
 
 function CleanEnchant(formEq)
 {
+	// console.log("clean enchant" + formEq);
 	//clean enchant list
 	var len = formElements[formEq + "_2"].length;
 	for ( var i = 0; i < len ; i++ )
@@ -4537,8 +4539,9 @@ function DisplayEnchantDescription( EnchantIndex )
 	myInnerHtml( "ItemDescription", descriptionString, 0 );
 }
 
+// display item data
 function Click_Card( CardIndex )
-{ // display item data
+{ 
 	ItemCardNumberCheck = CardIndex;
 
 	ActiveSkillSetPlus();
@@ -5414,14 +5417,16 @@ function Click_Card( CardIndex )
 	myInnerHtml( "ItemDescription", CBIstr, 0 );
 }
 
+// EventWeaponCardShortcuts
 function ChangeShortCut_R()
-{ // EventWeaponCardShortcuts
+{ 
 	if(n_SaveMode == 1)
 		LoadShortCut();
 }
 
+// Apply WeaponCardShortcuts
 function LoadShortCut()
-{ // Apply WeaponCardShortcuts
+{ 
 	var num = eval(document.calcForm.A_SHORTCUT_R.value);
 	if(n_SaveMode == 0)
 	{
@@ -5478,8 +5483,9 @@ function LoadShortCut_L()
 	ActiveSkillSetPlus();
 }
 
+// EquipCardShortcuts
 function SetCardShort()
-{ // EquipCardShortcuts
+{ 
 with(document.calcForm)
 {
 	w = eval(A_cardshort.value); // dropdown
