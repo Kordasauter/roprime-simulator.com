@@ -2469,14 +2469,20 @@ with(document.calcForm)
 	for(i=0;i<wsj[7];i++){ // accessory - fill dropdown
 		z = workB[7][i];
 		if(z < ITEM_NAME.length){
-			if(ItemOBJ[z][5] != 0)
-				A_acces1.options[i] = new Option(ITEM_NAME[z][nx] + " [" + ItemOBJ[z][5] + "]",ItemOBJ[z][0]);
-			else
-				A_acces1.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
-			if(ItemOBJ[z][5] != 0)
-				A_acces2.options[i] = new Option(ITEM_NAME[z][nx] + " [" + ItemOBJ[z][5] + "]",ItemOBJ[z][0]);
-			else
-				A_acces2.options[i] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
+			if(ItemOBJ[z][0] != 2135 && ItemOBJ[z][0] != 2407) //Sarah's Left Earring && Sheriff's Left Badge
+			{
+				if(ItemOBJ[z][5] != 0)
+					A_acces1.options[A_acces1.options.length] = new Option(ITEM_NAME[z][nx] + " [" + ItemOBJ[z][5] + "]",ItemOBJ[z][0]);
+				else
+					A_acces1.options[A_acces1.options.length] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
+			}
+			if(ItemOBJ[z][0] != 2134 && ItemOBJ[z][0] != 2406) //Sarah's Right Earring && Sheriff's Right Badge
+			{
+				if(ItemOBJ[z][5] != 0)
+					A_acces2.options[A_acces2.options.length] = new Option(ITEM_NAME[z][nx] + " [" + ItemOBJ[z][5] + "]",ItemOBJ[z][0]);
+				else
+					A_acces2.options[A_acces2.options.length] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
+			}
 		}else{
 			A_acces1.options[i] = new Option("[missing name]",ItemOBJ[z][0]);
 			A_acces2.options[i] = new Option("[missing name]",ItemOBJ[z][0]);

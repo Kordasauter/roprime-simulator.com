@@ -6031,7 +6031,9 @@ function calcASPD()
 	}
 	if ( n_A_JobSearch2() === cls_CRU && SkillSearch( skill_KN_CAVALIER_MASTERY ) )
 	{ // Cavalier Mastery
+		console.log("before aspdMultiplier = " + aspdMultiplier);
 		aspdMultiplier -= ( 5 - SkillSearch( skill_KN_CAVALIER_MASTERY ) ) * 10;
+		console.log("after aspdMultiplier = " + aspdMultiplier);
 	}
 	if ( n_A_JobSearch2() === cls_KNI &&
 		 ( SkillSearch( skill_KN_CAVALIER_MASTERY ) || SkillSearch( skill_RUN_DRAGON_TRAINING ) ) )

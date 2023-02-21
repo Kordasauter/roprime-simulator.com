@@ -2419,7 +2419,11 @@ ITEM_NAME = [
 ,[2403,0,0,"Moon Knight Shield","<br>Has a chance of activate effect for 5 seconds when recieving damage: restore 25 SP every second.<br>Has a chance of activate effect for 5 seconds when dealing physical or magical damage: restore 150 HP every second.",0]
 ,[2404,0,0,"Bloody Knight Shield","<br>Has a chance of activate effect for 5 seconds when recieving damage: restore 25 SP every second.<br>Has a chance of activate effect for 5 seconds when dealing physical or magical damage: restore 150 HP every second.",0]
 ,[2405,0,0,"Sun Knight Shield","<br>Has a chance of activate effect for 5 seconds when recieving damage: restore 50 SP every second.<br>Has a chance of activate effect for 5 seconds when dealing physical or magical damage: restore 300 HP every second.",0]
-// ,[2406,0,0,"Place_Holder","",0]
+,[2406,0,0,"Sheriff's Left Badge","",0]
+,[2407,0,0,"Sheriff's Right Badge","",0]
+// ,[2408,0,0,"Place_Holder","",0]
+// ,[2409,0,0,"Place_Holder","",0]
+// ,[2410,0,0,"Place_Holder","",0]
 ]
 };
 

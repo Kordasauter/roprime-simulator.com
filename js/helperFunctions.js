@@ -1016,11 +1016,11 @@ function BuildPassiveSkillTable()
 		}
 		var w_name = new Array();
 		w_name[0] = GetWord(225);
-		for ( var i = 1; i <= 6; i++ )
+		for ( var i = 1; i < 6; i++ )
 		{
-			w_name[i] = GetWord(226) + (i-1);
+			w_name[i] = GetWord(226) + i;
 		}
-		for ( var i = 0; i <= 6; i++ )
+		for ( var i = 0; i < 6; i++ )
 		{
 			skillBSelect.options[i] = new Option(w_name[i],i);
 		}
@@ -1058,11 +1058,11 @@ function BuildPassiveSkillTable()
 		}
 		var w_name = new Array();
 		w_name[0] = GetWord(225);
-		for ( var i = 1; i <= 6; i++ )
+		for ( var i = 1; i < 6; i++ )
 		{
-			w_name[i] = GetWord(226) + (i-1);
+			w_name[i] = GetWord(226) + i;
 		}
-		for ( var i = 0; i <= 6; i++ )
+		for ( var i = 0; i < 6; i++ )
 		{
 			skillDSelect.options[i] = new Option(w_name[i],i);
 		}

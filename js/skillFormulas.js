@@ -728,7 +728,10 @@ function CalcSkillDamage()
 
 		w_DMG[1] = CalcRightHandDamage(w_DMG[1]);
 		setupPVPPlayerMods();
-		// return;
+		fixedCastTime += CalcFixedCastFlat();
+		if(fixedCastTime < 0)
+			fixedCastTime = 0;
+		return;
 	}
 
 	// Physical normal single-hit-calc skills (?)

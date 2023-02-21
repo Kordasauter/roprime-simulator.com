@@ -2479,7 +2479,11 @@
 ,[2404,itm_type_SHIELD,0,0,0,1,80,1,0,0,116,115,bon_ASPD_MUL,10,bon_PHY_ATK,3,bon_MATK_MUL,3,bon_RED_ELE_NEUTRAL,7,bon_RED_ELE_WATER,7,bon_RED_ELE_EARTH,7,bon_RED_ELE_FIRE,7,bon_RED_ELE_WIND,7,bon_RED_ELE_POISON,7,bon_RED_ELE_HOLY,7,bon_RED_ELE_SHADOW,7,bon_RED_ELE_DARK,7,bon_RED_ELE_GHOST,7,bon_RED_ELE_UNDEAD,7,"ref_lvl",7,bon_ATK,10,"ref_lvl",7,bon_MATK,10,"ref_lvl",9,bon_ASPD_ADD,1,"ref_lvl",12,bon_RED_CASTDELAY,3,bon_NONE] //Bloody Knight Shield
 ,[2405,itm_type_SHIELD,0,0,0,1,80,1,0,117,116,115,bon_ASPD_MUL,10,bon_PHY_ATK,5,bon_MATK_MUL,5,bon_RED_ELE_NEUTRAL,10,bon_RED_ELE_WATER,10,bon_RED_ELE_EARTH,10,bon_RED_ELE_FIRE,10,bon_RED_ELE_WIND,10,bon_RED_ELE_POISON,10,bon_RED_ELE_HOLY,10,bon_RED_ELE_SHADOW,10,bon_RED_ELE_DARK,10,bon_RED_ELE_GHOST,10,bon_RED_ELE_UNDEAD,10,"ref_lvl",7,bon_ATK,20,"ref_lvl",7,bon_MATK,20,"ref_lvl",9,bon_ASPD_ADD,2,"ref_lvl",12,bon_RED_CASTDELAY,5,bon_NONE] //Sun Knight Shield
 //,0,0,0,0,
-//,[2402,itm_type_,0,0,0,0,0,0,0,0,0,0,bon_NONE] 
+,[2406,itm_type_ACCESSORY,0,0,0,1,10,100,0,0,0,0,"bstr_hi",90,bon_PHY_ATK,3,"bdex_hi",90,bon_DMG_RANGE,3,"bvit_hi",90,bon_HP_ADD,1000,bon_NONE] //Sheriff's Left Badge
+,[2407,itm_type_ACCESSORY,0,0,0,1,10,100,0,0,0,0,"bint_hi",90,bon_MATK_MUL,3,"bdex_hi",90,bon_RED_CAST,5,"bvit_hi",90,bon_HP_ADD,1000,bon_NONE] //Sheriff's Right Badge
+//,[2408,itm_type_,0,0,0,0,0,0,0,0,0,0,bon_NONE] 
+//,[2409,itm_type_,0,0,0,0,0,0,0,0,0,0,bon_NONE] 
+//,[2410,itm_type_,0,0,0,0,0,0,0,0,0,0,bon_NONE] 
 
 //
 //"ev_ref" = for every x refine
