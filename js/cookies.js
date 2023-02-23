@@ -336,6 +336,7 @@ function LoadCookie()
 	StCalc(1);
 
 	calc();
+	$("select").trigger("chosen:updated");
 }
 
 function LoadCookieConf()
