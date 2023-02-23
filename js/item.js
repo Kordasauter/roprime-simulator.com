@@ -2481,7 +2481,7 @@
 //,0,0,0,0,
 ,[2406,itm_type_ACCESSORY,0,0,0,1,10,100,0,0,0,0,"bstr_hi",90,bon_PHY_ATK,3,"bdex_hi",90,bon_DMG_RANGE,3,"bvit_hi",90,bon_HP_ADD,1000,bon_NONE] //Sheriff's Left Badge
 ,[2407,itm_type_ACCESSORY,0,0,0,1,10,100,0,0,0,0,"bint_hi",90,bon_MATK_MUL,3,"bdex_hi",90,bon_RED_CAST,5,"bvit_hi",90,bon_HP_ADD,1000,bon_NONE] //Sheriff's Right Badge
-//,[2408,itm_type_,0,0,0,0,0,0,0,0,0,0,bon_NONE] 
+,[2408,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL + skill_MEC_ARM_CANNON,50,bon_NONE] //"Upgrade Part - Plate" + "Upgrade Part - Engine" not displayed in game ???
 //,[2409,itm_type_,0,0,0,0,0,0,0,0,0,0,bon_NONE] 
 //,[2410,itm_type_,0,0,0,0,0,0,0,0,0,0,bon_NONE] 
 
@@ -3108,6 +3108,7 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2400,2399,477,"NULL"] // Illusion Survivor's Manteau + Survivor's Rod (int)
 ,[2400,2399,475,"NULL"] // Illusion Survivor's Manteau + Survivor's Rod (dex)
 ,[2401,2399,2383,"NULL"] // Illusion Survivor's Manteau + Illusion Wizardry Staff
+,[2408,2023,2025,"NULL"] // Illusion Survivor's Manteau + Illusion Wizardry Staff
 // ,[,,,,"NULL"]
 
 // ,[itm_set,item1,item2,...,"NULL"] // 

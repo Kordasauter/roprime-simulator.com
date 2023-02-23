@@ -222,8 +222,8 @@ with ( document.calcForm )
 	n_A_Enchant[ench_HEAD_UP2] = parseInt(formElements["A_HEAD_UPPER_ENCHANT_2"].value);
 	n_A_Enchant[ench_HEAD_UP3] = parseInt(formElements["A_HEAD_UPPER_ENCHANT_3"].value);
 	n_A_Enchant[ench_HEAD_UP4] = parseInt(formElements["A_HEAD_UPPER_ENCHANT_4"].value);
-	n_A_Enchant[ench_HSE_Armor] = parseInt(formElements["A_HSE"].value);
-	n_A_Enchant[ench_HSE_Head] = parseInt(formElements["A_HSE_HEAD1"].value);
+	// n_A_Enchant[ench_HSE_Armor] = parseInt(formElements["A_HSE"].value);
+	// n_A_Enchant[ench_HSE_Head] = parseInt(formElements["A_HSE_HEAD1"].value);
 	
 	SetEquip();
 }
@@ -1420,59 +1420,59 @@ function StPlusCalc()
 		wSPC_LUK += 21;
 	}
 
-	var wHSE = document.forms["calcForm"].elements["A_HSE"].value; // Hidden SocketEnch
-	if(wHSE)
-	{
-		var w = wHSE % 10;
-		if(1 <= wHSE && wHSE <= 9)
-			wSPC_STR += w;
-		if(11 <= wHSE && wHSE <= 19)
-			wSPC_AGI += w;
-		if(21 <= wHSE && wHSE <= 29)
-			wSPC_VIT += w;
-		if(31 <= wHSE && wHSE <= 39)
-			wSPC_INT += w;
-		if(41 <= wHSE && wHSE <= 49)
-			wSPC_DEX += w;
-		if(51 <= wHSE && wHSE <= 59)
-			wSPC_LUK += w;
-	}
-	var wHSE2 = document.forms["calcForm"].elements["A_HSE_HEAD1"].value; // Hidden SocketEnch
-	if(wHSE2)
-	{
-		var w = wHSE2 % 10;
-		if(1 <= wHSE2 && wHSE2 <= 9)
-			wSPC_STR += w;
-		if(11 <= wHSE2 && wHSE2 <= 19)
-			wSPC_AGI += w;
-		if(21 <= wHSE2 && wHSE2 <= 29)
-			wSPC_VIT += w;
-		if(31 <= wHSE2 && wHSE2 <= 39)
-			wSPC_INT += w;
-		if(41 <= wHSE2 && wHSE2 <= 49)
-			wSPC_DEX += w;
-		if(51 <= wHSE2 && wHSE2 <= 59)
-			wSPC_LUK += w;
-	}
-	if(Math.floor(wHSE / 10) == Math.floor(wHSE2 / 10))
-	{ // no double Enchant
-		var w1 = wHSE % 10;
-		var w2 = wHSE2 % 10;
-		if(w1 > w2)
-			w1 = w2;
-		if(1 <= wHSE && wHSE <= 9)
-			wSPC_STR -= w1;
-		if(11 <= wHSE && wHSE <= 19)
-			wSPC_AGI -= w1;
-		if(21 <= wHSE && wHSE <= 29)
-			wSPC_VIT -= w1;
-		if(31 <= wHSE && wHSE <= 39)
-			wSPC_INT -= w1;
-		if(41 <= wHSE && wHSE <= 49)
-			wSPC_DEX -= w1;
-		if(51 <= wHSE && wHSE <= 59)
-			wSPC_LUK -= w1;
-	}
+	// var wHSE = document.forms["calcForm"].elements["A_HSE"].value; // Hidden SocketEnch
+	// if(wHSE)
+	// {
+		// var w = wHSE % 10;
+		// if(1 <= wHSE && wHSE <= 9)
+			// wSPC_STR += w;
+		// if(11 <= wHSE && wHSE <= 19)
+			// wSPC_AGI += w;
+		// if(21 <= wHSE && wHSE <= 29)
+			// wSPC_VIT += w;
+		// if(31 <= wHSE && wHSE <= 39)
+			// wSPC_INT += w;
+		// if(41 <= wHSE && wHSE <= 49)
+			// wSPC_DEX += w;
+		// if(51 <= wHSE && wHSE <= 59)
+			// wSPC_LUK += w;
+	// }
+	// var wHSE2 = document.forms["calcForm"].elements["A_HSE_HEAD1"].value; // Hidden SocketEnch
+	// if(wHSE2)
+	// {
+		// var w = wHSE2 % 10;
+		// if(1 <= wHSE2 && wHSE2 <= 9)
+			// wSPC_STR += w;
+		// if(11 <= wHSE2 && wHSE2 <= 19)
+			// wSPC_AGI += w;
+		// if(21 <= wHSE2 && wHSE2 <= 29)
+			// wSPC_VIT += w;
+		// if(31 <= wHSE2 && wHSE2 <= 39)
+			// wSPC_INT += w;
+		// if(41 <= wHSE2 && wHSE2 <= 49)
+			// wSPC_DEX += w;
+		// if(51 <= wHSE2 && wHSE2 <= 59)
+			// wSPC_LUK += w;
+	// }
+	// if(Math.floor(wHSE / 10) == Math.floor(wHSE2 / 10))
+	// { // no double Enchant
+		// var w1 = wHSE % 10;
+		// var w2 = wHSE2 % 10;
+		// if(w1 > w2)
+			// w1 = w2;
+		// if(1 <= wHSE && wHSE <= 9)
+			// wSPC_STR -= w1;
+		// if(11 <= wHSE && wHSE <= 19)
+			// wSPC_AGI -= w1;
+		// if(21 <= wHSE && wHSE <= 29)
+			// wSPC_VIT -= w1;
+		// if(31 <= wHSE && wHSE <= 39)
+			// wSPC_INT -= w1;
+		// if(41 <= wHSE && wHSE <= 49)
+			// wSPC_DEX -= w1;
+		// if(51 <= wHSE && wHSE <= 59)
+			// wSPC_LUK -= w1;
+	// }
 
 	if(battleEffects[13])
 	{ // not used ? - old socket enchant
@@ -2249,6 +2249,7 @@ function WeaponSetLeft()
 	work = sort(work);
 	for (i=0;i<j; i++)
 		document.forms["calcForm"].elements["A_weapon2"].options[i] = new Option(ITEM_NAME[work[i]][1+ Language *2],ItemOBJ[work[i]][0]);
+	
 }
 
 // generate EquipList
@@ -3083,6 +3084,7 @@ function EnemySort()
 				j++;
 			}
 		}
+		$("#B_Enemy").trigger("chosen:updated");
 		return;
 	}
 
@@ -3170,6 +3172,8 @@ function EnemySort()
 			j++;
 		}
 	}
+	
+	$("#B_Enemy").trigger("chosen:updated");
 }
 
 // MonsterMapFilter Event
@@ -3513,27 +3517,27 @@ function Init()
 		//document.calcForm.A_EQUIP_SET_SHORT.options[i] = new Option(EquipShortCutData[i][9 + Language],i);
 	
 	// Hidden Slot enchant
-	var HSEname = ["STR","AGI","VIT","INT","DEX","LUK"];
-	document.calcForm.A_HSE.options[0] = new Option( "(Armor Enchant)", 0 );
-	var iHSE=1;
-	for(i=0;i<=5;i++)
-	{
-		for( var j=1;j<=3;j++ )
-		{
-			document.calcForm.A_HSE.options[iHSE] = new Option( HSEname[i] + "+" + j, ( i * 10 ) + j );
-			iHSE++;
-		}
-	}
-	document.calcForm.A_HSE_HEAD1.options[0] = new Option( "(Headgear Enchant)", 0 );
-	var iHSE=1;
-	for(i=0;i<=5;i++)
-	{
-		for( var j=1;j<=3;j++ )
-		{
-			document.calcForm.A_HSE_HEAD1.options[iHSE] = new Option( HSEname[i] + "+" + j, ( i * 10 ) + j );
-			iHSE++;
-		}
-	}
+	// var HSEname = ["STR","AGI","VIT","INT","DEX","LUK"];
+	// document.calcForm.A_HSE.options[0] = new Option( "(Armor Enchant)", 0 );
+	// var iHSE=1;
+	// for(i=0;i<=5;i++)
+	// {
+		// for( var j=1;j<=3;j++ )
+		// {
+			// document.calcForm.A_HSE.options[iHSE] = new Option( HSEname[i] + "+" + j, ( i * 10 ) + j );
+			// iHSE++;
+		// }
+	// }
+	// document.calcForm.A_HSE_HEAD1.options[0] = new Option( "(Headgear Enchant)", 0 );
+	// var iHSE=1;
+	// for(i=0;i<=5;i++)
+	// {
+		// for( var j=1;j<=3;j++ )
+		// {
+			// document.calcForm.A_HSE_HEAD1.options[iHSE] = new Option( HSEname[i] + "+" + j, ( i * 10 ) + j );
+			// iHSE++;
+		// }
+	// }
 	
 	// insert temporary descriptions into item (card) descs ---------------
 	for (var i = 0; i < ITEM_SP_TIME_OBJ.length; i++ )
@@ -3598,7 +3602,7 @@ function Init()
 	formElements["A_WEAPON_ENCHANT_3"].disabled = true;
 	formElements["A_WEAPON_ENCHANT_4"].disabled = true;
 	
-	formElements["A_Mal_Ench3"].disabled = true;
+	// formElements["A_Mal_Ench3"].disabled = true;
 	formElements["A_Mal_Ench4"].disabled = true;
 	
 	formElements["A_SHIELD_ENCHANT_2"].disabled = true;
@@ -3675,6 +3679,8 @@ function Init()
 	ChangeJob( 0 );
 	FirstNovis();
 	
+	
+	
 	StCalc();
 	StAllCalc();
 	calc();
@@ -3684,6 +3690,8 @@ function Init()
 	formElements["saveName"].value = GetWord(84);
 	
 	LoadDataINIT(); // loads cookies
+	//trigger Chosen for init
+	$(window).trigger('selects-ready');
 }
 
 function sortSelect(selElem) 

@@ -123,7 +123,7 @@ function LoadCookie()
 	formElements["A_INT"].value = SaveData[7];
 	formElements["A_LUK"].value = SaveData[8];
 
-	formElements["A_HSE"].value = SaveData[9];
+	// formElements["A_HSE"].value = SaveData[9];
 	
 	formElements["A_WeaponType"].value = SaveData[10];
 	ClickWeaponType(SaveData[10]);
@@ -177,7 +177,7 @@ function LoadCookie()
 	formElements["A_head2"].value = SaveData[29];
 	formElements["A_head2_card"].value = SaveData[30];
 	formElements["A_head3"].value = SaveData[31];
-	formElements["A_HSE_HEAD1"].value = SaveData[32];//Old Head enchant (not used now)
+	// formElements["A_HSE_HEAD1"].value = SaveData[32];//Old Head enchant (not used now)
 
 	formElements["A_left"].value = SaveData[33];
 	// ClickShield(SaveData[33],0);
@@ -606,7 +606,7 @@ function SaveCookie()
 	SaveData[6] = parseInt(formElements["A_DEX"].value);
 	SaveData[7] = parseInt(formElements["A_INT"].value);
 	SaveData[8] = parseInt(formElements["A_LUK"].value);
-	SaveData[9] = parseInt(formElements["A_HSE"].value);
+	// SaveData[9] = parseInt(formElements["A_HSE"].value);
 
 	SaveData[10] = parseInt(formElements["A_WeaponType"].value);
 	if ( n_Nitou )
@@ -650,7 +650,7 @@ function SaveCookie()
 	SaveData[30] = parseInt(formElements["A_head2_card"].value);
 	SaveData[31] = parseInt(formElements["A_head3"].value);
 	
-	SaveData[32] = parseInt(formElements["A_HSE_HEAD1"].value);
+	// SaveData[32] = parseInt(formElements["A_HSE_HEAD1"].value);
 	SaveData[33] = parseInt(formElements["A_left"].value);
 	SaveData[34] = parseInt(formElements["A_left_card"].value);
 	SaveData[35] = parseInt(formElements["A_body"].value);

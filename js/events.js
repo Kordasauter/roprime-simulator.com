@@ -169,6 +169,9 @@ function ChangeJob( n )
 	
 	// disable adopted checkbox
 	CheckAdoptedAvailability();
+	
+	// refresh selects
+	$("select").trigger("chosen:updated");
 }
 
 function CheckAdoptedAvailability () {
@@ -1078,6 +1081,14 @@ function ClickEquip( data, isRefine, Type )
 		CleanEnchant("A_SHIELD_ENCHANT");
 		SetEnchant("A_SHIELD_ENCHANT",0,50,0);
 	}
+	if(form_list != "")
+	{
+		// refresh selects
+		$("#"+form_list+"_2").trigger("chosen:updated");
+		$("#"+form_list+"_3").trigger("chosen:updated");
+		$("#"+form_list+"_4").trigger("chosen:updated");
+	}
+
 }
 function ClickWeapon( data,isRefine )
 {
@@ -1436,7 +1447,10 @@ function ClickWeapon( data,isRefine )
 		formElements["A_WEAPON_ENCHANT_3"].disabled = true;
 		formElements["A_WEAPON_ENCHANT_4"].disabled = true;
 	}
-	
+	// refresh selects
+	$("#A_WEAPON_ENCHANT_2").trigger("chosen:updated");
+	$("#A_WEAPON_ENCHANT_3").trigger("chosen:updated");
+	$("#A_WEAPON_ENCHANT_4").trigger("chosen:updated");
 }
 
 function ClickWeapon2( weapon2 )
@@ -1488,6 +1502,11 @@ function ClickWeapon2( weapon2 )
 		formElements["A_Mal_Ench4"].disabled = true;
 		
 	}
+	// refresh selects
+	// $("#A_Mal_Ench3").chosen({no_results_text: "Oops, nothing found!"});
+	$("#A_Mal_Ench3").trigger("chosen:updated");
+	// $("#A_Mal_Ench4").chosen({no_results_text: "Oops, nothing found!"});
+	$("#A_Mal_Ench4").trigger("chosen:updated");
 }
 
 function ClickShield(data, isRefine)
@@ -1538,6 +1557,10 @@ function ClickShield(data, isRefine)
 			// formElements["A_SHIELD_ENCHANT_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ItemOBJ[shield_id][itm_ENCH_SLOT_2]][i]][1],EnchantOBJ[EnchantListOBJ[ItemOBJ[shield_id][itm_ENCH_SLOT_2]][i]][0]);
 		// }
 	// }
+	// refresh selects
+	$("#A_SHIELD_ENCHANT_2").trigger("chosen:updated");
+	$("#A_SHIELD_ENCHANT_3").trigger("chosen:updated");
+	$("#A_SHIELD_ENCHANT_4").trigger("chosen:updated");
 }
 
 function ClickGarment( data, isRefine )
@@ -1708,6 +1731,10 @@ function ClickGarment( data, isRefine )
 		CleanEnchant("A_GARMENT_ENCHANT");
 	}
 	// StAllCalc();
+	// refresh selects
+	$("#A_GARMENT_ENCHANT_2").trigger("chosen:updated");
+	$("#A_GARMENT_ENCHANT_3").trigger("chosen:updated");
+	$("#A_GARMENT_ENCHANT_4").trigger("chosen:updated");
 }
 
 function ClickShoes( data, isRefine )
@@ -1846,6 +1873,10 @@ function ClickShoes( data, isRefine )
 		CleanEnchant("A_SHOES_ENCHANT");
 	}
 	// StAllCalc();
+	// refresh selects
+	$("#A_SHOES_ENCHANT_2").trigger("chosen:updated");
+	$("#A_SHOES_ENCHANT_3").trigger("chosen:updated");
+	$("#A_SHOES_ENCHANT_4").trigger("chosen:updated");
 }
 
 function ClickArmor( data, isRefine )
@@ -2039,6 +2070,11 @@ function ClickArmor( data, isRefine )
 			CleanEnchant("A_ARMOR_ENCHANT");	
 	}
 	// StAllCalc();
+	// refresh selects
+	$("#A_ARMOR_ENCHANT_2").trigger("chosen:updated");
+	$("#A_ARMOR_ENCHANT_3").trigger("chosen:updated");
+	$("#A_ARMOR_ENCHANT_4").trigger("chosen:updated");
+	
 }
 
 function ClickAcces( data, numAccess )
@@ -2353,6 +2389,10 @@ function ClickAcces( data, numAccess )
 		CleanEnchant(formAcc);
 	}
 	// StAllCalc();
+	// refresh selects
+	$("#"+formAcc + "_2").trigger("chosen:updated");
+	$("#"+formAcc + "_3").trigger("chosen:updated");
+	$("#"+formAcc + "_4").trigger("chosen:updated");
 }
 
 function ClickHeadUp( data, isRefine )
@@ -2430,6 +2470,10 @@ function ClickHeadUp( data, isRefine )
 	{
 		CleanEnchant("A_HEAD_UPPER_ENCHANT");
 	}	
+	// refresh selects
+	$("#A_HEAD_UPPER_ENCHANT_2").trigger("chosen:updated");
+	$("#A_HEAD_UPPER_ENCHANT_3").trigger("chosen:updated");
+	$("#A_HEAD_UPPER_ENCHANT_4").trigger("chosen:updated");
 }
 
 //Mora Enchants
@@ -2892,7 +2936,9 @@ function ClickWeaponType( weaponType )
 			else
 				htmlStr += '<option value="0">Fist or Shield</option><option value="1">Dagger</option><option value="6">One-handed Axe</option><option value="2">One-handed Sword</option></select>';
 			myInnerHtml( "A_SobWeaponName", htmlStr, 0 );
-			
+			myInnerHtml("A_Mal_Ench3sp","<select id=\"A_Mal_Ench3\" style=\"width:200px\" disabled onchange=\"StAllCalc()|DisplayEnchantDescription(this[this.selectedIndex].value)\"><option value=\"0\">\"(No Enchant)\"</option>",0);
+			myInnerHtml("A_Mal_Ench4sp","<select id=\"A_Mal_Ench4\" style=\"width:200px\" disabled onchange=\"StAllCalc()|DisplayEnchantDescription(this[this.selectedIndex].value)\"><option value=\"0\">\"(No Enchant)\"</option>",0);
+		
 			// show the off hand table
 			var element = document.getElementById( "offweapon" );
 			var state = element.style.display;
@@ -2903,9 +2949,15 @@ function ClickWeaponType( weaponType )
 				A_LEFT_DEF_PLUS.disabled = false;
 				A_left.disabled = false;
 				A_left_card.disabled = false;
+				
 			}
-
-		//}
+			$("#A_Weapon2Type").chosen({no_results_text: "Oops, nothing found!"});
+			$("#A_Weapon2Type").trigger("chosen:updated");
+			$("#A_Mal_Ench3").chosen({no_results_text: "Oops, nothing found!"});
+			$("#A_Mal_Ench3").trigger("chosen:updated");
+			$("#A_Mal_Ench4").chosen({no_results_text: "Oops, nothing found!"});
+			$("#A_Mal_Ench4").trigger("chosen:updated");	
+		// }
 			
 	}
 	else
@@ -2925,12 +2977,12 @@ function ClickWeaponType( weaponType )
 		// formElements["A_left"].style.visibility = "visible";
 		// formElements["A_left_card"].style.visibility = "visible";
 		// formElements["Shield_Pannel"].style.visibility = "visible";
-		with(document.calcForm)
-		{		
-			A_LEFT_DEF_PLUS.disabled = false;
-			A_left.disabled = false;
-			A_left_card.disabled = false;
-		}
+		// with(document.calcForm)
+		// {		
+			document.calcForm.A_LEFT_DEF_PLUS.disabled = false;
+			document.calcForm.A_left.disabled = false;
+			document.calcForm.A_left_card.disabled = false;
+		// }
 		// myInnerHtml("ID_A_SHORTCUT_LOAD_BUTTON_L","",0); // soll
 		
 		// hide the off hand table
@@ -2943,6 +2995,12 @@ function ClickWeaponType( weaponType )
 	n_A_Equip[0] = parseInt(formElements["A_weapon1"].value);
 	ActiveSkillSetPlus();
 	DisplayItemDescription( n_A_Equip[0] );
+	
+	
+	// $("#A_weapon1").chosen({no_results_text: "Oops, nothing found!"});
+	$("#A_Arrow").trigger("chosen:updated");
+	$("#A_weapon1").trigger("chosen:updated");
+	
 }
 
 function ClickWeaponType2( n )
@@ -2954,17 +3012,17 @@ with(document.calcForm)
 	{
 		if ( n_Nitou === 0 )
 		{
-			myInnerHtml("spanA_weapon2",'<select name="A_weapon2" style="width:200px;" onChange="ClickWeapon2(this[this.selectedIndex].value)|StAllCalc()|DisplayItemDescription(this[this.selectedIndex].value)"></select>',0);
-			myInnerHtml("spanA_weapon2seiren", '<select name="A_Weapon2_ATKplus" style="width:50px;" onChange = "StAllCalc()"></select>',0);
+			myInnerHtml("spanA_weapon2",'<select id="A_weapon2" style="width:200px;" onChange="ClickWeapon2(this[this.selectedIndex].value)|StAllCalc()|DisplayItemDescription(this[this.selectedIndex].value)"></select>',0);
+			myInnerHtml("spanA_weapon2seiren", '<select id="A_Weapon2_ATKplus" style="width:65px;" onChange = "StAllCalc()"></select>',0);
 			for ( var i = 0; i <= 20;i++ )
 			{
 				A_Weapon2_ATKplus.options[i] = new Option("+"+i,i);
 			}
 
-			myInnerHtml("nA_weapon2_c1",'<select name="A_weapon2_card1" style="width:200px;" onChange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>',0);
-			myInnerHtml("nA_weapon2_c2",'<select name="A_weapon2_card2" style="width:200px;" onChange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>',0);
-			myInnerHtml("nA_weapon2_c3",'<select name="A_weapon2_card3" style="width:200px;" onChange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>',0);
-			myInnerHtml("nA_weapon2_c4",'<select name="A_weapon2_card4" style="width:200px;" onChange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>',0);
+			myInnerHtml("nA_weapon2_c1",'<select id="A_weapon2_card1" style="width:200px;" onChange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>',0);
+			myInnerHtml("nA_weapon2_c2",'<select id="A_weapon2_card2" style="width:200px;" onChange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>',0);
+			myInnerHtml("nA_weapon2_c3",'<select id="A_weapon2_card3" style="width:200px;" onChange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>',0);
+			myInnerHtml("nA_weapon2_c4",'<select id="A_weapon2_card4" style="width:200px;" onChange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>',0);
 
 			// for ( var i = 0; CardSortOBJ[0][i] != "NULL"; i++ )
 			// {
@@ -3034,7 +3092,7 @@ with(document.calcForm)
 			// var state = element.style.display;
 			// element.style.display = 'none';
 		}
-		myInnerHtml("spanA_weapon2_CardShort",'<select name="A_cardshortLeft" style="width:200px;" onChange="SetCardShortLeft()|StAllCalc()|ActiveSkillSetPlus()"></select>',0);
+		myInnerHtml("spanA_weapon2_CardShort",'<select id="A_cardshortLeft" style="width:200px;" onChange="SetCardShortLeft()|StAllCalc()|ActiveSkillSetPlus()"></select>',0);
 		A_cardshortLeft.options[0] = new Option("Card Shortcuts",0);
 		for ( var i = 1; i <= 38; i++ )
 		{
@@ -3069,6 +3127,26 @@ with(document.calcForm)
 		DisplayItemDescription(n_A_Equip[1]);
 	}
 }
+$("#A_weapon2").chosen({no_results_text: "Oops, nothing found!"});
+$("#A_weapon2").trigger("chosen:updated");
+$("#A_Weapon2_ATKplus").chosen({no_results_text: "Oops, nothing found!"});
+$("#A_Weapon2_ATKplus").trigger("chosen:updated");
+$("#A_weapon2_card1").chosen({no_results_text: "Oops, nothing found!"});
+$("#A_weapon2_card1").trigger("chosen:updated");
+$("#A_weapon2_card2").chosen({no_results_text: "Oops, nothing found!"});
+$("#A_weapon2_card2").trigger("chosen:updated");
+$("#A_weapon2_card3").chosen({no_results_text: "Oops, nothing found!"});
+$("#A_weapon2_card3").trigger("chosen:updated");
+$("#A_weapon2_card4").chosen({no_results_text: "Oops, nothing found!"});
+$("#A_weapon2_card4").trigger("chosen:updated");
+$("#A_cardshortLeft").chosen({no_results_text: "Oops, nothing found!"});
+$("#A_cardshortLeft").trigger("chosen:updated");
+$("#A_LEFT_DEF_PLUS").trigger("chosen:updated");
+$("#A_left").trigger("chosen:updated");
+$("#A_left_card").trigger("chosen:updated");
+$("select").chosen({no_results_text: "Oops, nothing found!"});
+$("#A_Mal_Ench3").trigger("chosen:updated");
+
 }
 
 function ClickAdopted()
@@ -3125,7 +3203,10 @@ with(document.calcForm)
 	}
 	ClickActiveSkill2();
 }
+// refresh selects
+	$("select").trigger("chosen:updated");
 }
+
 function ClickMonsterSkill(level)
 {
 with(document.calcForm)
@@ -3164,6 +3245,8 @@ with(document.calcForm)
 	}
 	calcIncomingDamage();
 }
+// refresh selects
+	$("select").trigger("chosen:updated");
 }
 function ClickActiveSkill2()
 { // display dropdowns from active skill
