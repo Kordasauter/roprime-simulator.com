@@ -2088,7 +2088,7 @@
 ,[2061,weapTyp_BOW,2088,180,4,2,100,100,0,0,0,0,bon_NONE] // "Empyrean"
 ,[2062,weapTyp_BOW,210,170,4,2,80,100,0,0,0,0,bon_NONE] // "Scarlet Dragon''s Bow"'
 ,[2063,weapTyp_STAFF,211,100,4,2,80,100,0,0,0,0,bon_MATK,200,bon_NONE] // "Rusty Dragon''s Wand"'
-,[2064,weapTyp_STAFF,211,100,4,2,80,100,0,0,0,0,bon_MATK,200,bon_NONE] // "Wand of the Purple Orb"
+,[2064,weapTyp_STAFF,211,100,4,2,80,100,0,0,0,0,bon_MATK,200,"ev_ref",3,bon_DMG_SKILL + skill_WAR_JACK_FROST,12,bon_NONE] // "Wand of the Purple Orb"
 ,[2065,weapTyp_ROD,218,40,4,2,50,100,0,0,0,0,bon_MATK,155,bon_NONE] // "Shadow Eater"
 ,[2066,weapTyp_ROD,218,40,4,2,50,100,0,0,0,0,bon_MATK,150,bon_NONE] // "Ice Guardian"
 ,[2067,weapTyp_AXEII,212,270,4,2,600,100,0,0,0,0,bon_NONE] // "Avenger"
@@ -2422,13 +2422,13 @@
 ,[2353,itm_type_ACCESSORY,2001,0,0,1,10,110,0,0,0,0,bon_HP_ADD,500,bon_NONE] // "Kind Heart"
 ,[2354,itm_type_HEAD_UPPER,1,0,0,1,20,0,0,0,0,0,bon_MATK,20,"ev_ref",1,bon_MATK,5,bon_NONE] // "Lush Rose"
 ,[2355,itm_type_ACCESSORY,2001,0,0,1,10,110,0,0,0,0,bon_SP_ADD,200,bon_HP_ADD,500,bon_SKILL_ENABLE,70,bon_SKILL_AUTOCAST,155,bon_SKILL_AUTOCAST,156,bon_SKILL_AUTOCAST,157,bon_SKILL_AUTOCAST,158,bon_NONE] // "Evil Spirit Gloves"
-,[2356,itm_type_HEAD_UPPER,0,0,0,1,20,0,0,0,0,0,bon_DEX,3,bon_MATK,40,"ev_ref",1,bon_MATK,1,bon_NONE] // "Celine''s Ribbon"'
+,[2356,itm_type_HEAD_UPPER,0,0,0,1,20,0,0,0,0,0,bon_DEX,3,bon_MATK,40,"ev_ref",1,bon_MATK,7,bon_NONE] // "Celine''s Ribbon"'
 ,[2357,weapTyp_MACE,2053,195,4,1,150,40,0,0,0,0,bon_ELEMENT,ele_HOLY,bon_MATK,150,bon_SKILL_AUTOCAST,159,bon_NONE] // "Noble Cross"
 ,[2358,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_SKILL_AUTOCAST,155,bon_SKILL_AUTOCAST,156,bon_SKILL_AUTOCAST,157,bon_SKILL_AUTOCAST,158,bon_NONE] // "Hurt Mind + Kind Heart"
 ,[2359,itm_type_ACCESSORY,2001,0,0,1,50,100,0,0,0,0,bon_MATK_MUL,5,bon_RED_CAST,-10,bon_NONE] // "Celine''s Brooch"'
 ,[2360,itm_type_GARMENT,0,20,0,1,10,1,0,0,0,0,"ev_ref",2,bon_PHY_ATK,1,"ev_ref",2,bon_MATK_MUL,1,"ref_lvl",9,bon_ATK,30,"ref_lvl",9,bon_MATK,30,bon_NONE] // "Christmas Wings"
 ,[2361,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ATK,50,bon_MATK,50,bon_ASPD_ADD,1,bon_NONE] // "Celine''s Brooch + Evilspirit Gloves"'
-,[2362,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RED_FIXEDCAST_FLAT,0.3,"ev_head_ref",2,bon_MATK,10,"head_ref_lvl",7,bon_MDMG_RC_DEMI_HUMAN,10,"head_ref_lvl",7,bon_MDMG_RC_DEMON,10,"head_ref_lvl",9,bon_INC_MAGIC_EARTH,10,"head_ref_lvl",9,bon_INC_MAGIC_FIRE,10,"head_ref_lvl",9,bon_INC_MAGIC_NEUTRAL,10,"head_ref_lvl",9,bon_INC_MAGIC_WIND,10,"head_ref_lvl",9,bon_INC_MAGIC_WATER,10,bon_NONE] // "Celine''s Brooch + Celine''s Ribbon"'
+,[2362,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RED_FIXEDCAST_FLAT,0.3,"ev_head_ref",1,bon_MATK,10,"head_ref_lvl",7,bon_MDMG_RC_DEMI_HUMAN,10,"head_ref_lvl",7,bon_MDMG_RC_DEMON,10,"head_ref_lvl",9,bon_INC_MAGIC_EARTH,10,"head_ref_lvl",9,bon_INC_MAGIC_FIRE,10,"head_ref_lvl",9,bon_INC_MAGIC_NEUTRAL,10,"head_ref_lvl",9,bon_INC_MAGIC_WIND,10,"head_ref_lvl",9,bon_INC_MAGIC_WATER,10,"head_ref_lvl",11,bon_MDMG_BOSS,20,bon_NONE] // "Celine''s Brooch + Celine''s Ribbon"'
 ,[2363,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK,30,bon_DMG_SKILL + skill_ABI_DUPLE_LIGHT,40,"weap_ref_lvl",10,bon_DMG_SKILL + skill_ABI_DUPLE_LIGHT,20,bon_NONE] // "Christmas Wings + Hurt Mind + Noble Cross"
 ,[2364,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ATK,30,bon_DMG_SKILL + skill_SUR_KNUCKLE_ARROW,40,"weap_ref_lvl",10,bon_DMG_SKILL + skill_SUR_KNUCKLE_ARROW,20,bon_NONE] // "Christmas Wings + Kind Heart + Noble Cross"
 ,[2365,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK,80,bon_SKILL_AUTOCAST,134,"weap_ref_lvl",10,bon_SKILL_AUTOCAST,160,bon_NONE] // "Christmas Wings + Evilspirit Gloves + Old Parasol"

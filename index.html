@@ -11,6 +11,7 @@
 	<meta name="keywords" content="Ragnarok,Online,Ragnarok Online,EuRO,PVP,PVM,WOE,MVP,Calc,Calculator,Sim,Simulator,New,Current,prime,Ragnarok Prime,RO Prime,Loki,4 Games,185/65,185">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<link rel=«canonical» href=«https://roprime-simulator.com/index.html»>
     <title>Ragnarok Prime Stat Simulator</title>
 
     <!-- Custom fonts for this template-->
@@ -88,7 +89,7 @@
             <hr class="sidebar-divider">
 
             <!-- Nav Item - Dashboard -->
-			<div class="sidebar-heading">Last update : 23/02/2023</div>
+			<div class="sidebar-heading">Last update : 26/02/2023</div>
             <li class="nav-item active">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-calculator"></i>
@@ -594,7 +595,7 @@
 													<tr>
 														<td class="padded">Projectile</td>
 														<td class="padded">
-															<select name="A_Arrow" style="width: 200px; visibility: hidden;" onchange="StAllCalc()">
+															<select id="A_Arrow" style="width: 200px; visibility: hidden;" onchange="StAllCalc()">
 															</select>
 														</td>
 													</tr>
@@ -2654,7 +2655,7 @@
 						Original simulator created by
 						<a href="http://roratorio.2-d.jp/ro/">ROratorio</a> and <a href="https://irowiki.org/">IROWiki.org</a><br>
 						Currently updated and maintained by Kord<br>
-						Current Version 2.0<br>
+						Current Version 2.1<br>
 						<a href="#" id="open_preferences_center">Update cookies preferences</a>
 					</div>
 				</div>
@@ -2697,7 +2698,7 @@
 		overflow: unset;	}
 </style>
 	<script>
-		var version = '8'; 
+		var version = '9'; 
 		var jsassets = [
 		'js/variables.js',
 		//<!--verbage-->
@@ -2771,11 +2772,6 @@
 		 	<!-- $(".card" ).draggable(); -->
 		});
 	</script>
-	
-	
-	<select>
-	<option>test</option>
-	</select>
 </body>
 
 </html>

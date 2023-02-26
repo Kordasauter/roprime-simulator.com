@@ -1038,7 +1038,7 @@ function ApplySkillModifiers( damage )
 	}	
 	if((n_A_ActiveSkill == skill_RAN_ARROW_STORM && EquipNumSearch(2061))  || //Empyrean
 	   (n_A_ActiveSkill == skill_WAR_EARTH_STRAIN && EquipNumSearch(2063)) || //Rusty Dragon's Wand
-	   (n_A_ActiveSkill == skill_WAR_JACK_FROST && EquipNumSearch(2064))   || //Wand of the Purple Orb
+	   // (n_A_ActiveSkill == skill_WAR_JACK_FROST && EquipNumSearch(2064))   || //Wand of the Purple Orb
 	   (n_A_ActiveSkill == skill_SOR_EARTH_GRAVE && EquipNumSearch(2065))   )  //Shadow Eater
 	{
 		dmgMultiplier += 12 * Math.floor(n_A_Weapon_ATKplus / 3);

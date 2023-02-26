@@ -3480,7 +3480,7 @@ function CalcSkillDamage()
 		{ // Gigantic Lance
 			n_Delay[ksDelayCooldown] = 20.0;
 		}
-		n_Delay[ksDelayGlobal] = 1.0 + 0.2 * n_A_ActiveSkillLV;
+		n_Delay[ksDelayGlobal] = 1.0;
 	}
 	else if(n_A_ActiveSkill==skill_AS_VENOM_SPLASHER)
 	{
