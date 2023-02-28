@@ -128,6 +128,14 @@ input[type=button] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+.activebutton{
+  background: -webkit-linear-gradient(bottom, #ffffff, #eeeeee)!important;
+  background: -moz-linear-gradient(bottom, #ffffff, #eeeeee)!important;
+  background: -o-linear-gradient(bottom, #ffffff, #eeeeee)!important;
+  background: linear-gradient(to top, #ffffff, #eeeeee)!important;
+}
+
 @media 
 only screen and (max-width: 620px) {
 

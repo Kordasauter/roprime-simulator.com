@@ -20,7 +20,7 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link href="css/sb-admin-2.css?v=2" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/68044697ab.js" crossorigin="anonymous"></script>
 	
 	<link href="vendor/chosen_v1.8.7/chosen.min.css" rel="stylesheet">
@@ -89,7 +89,7 @@
             <hr class="sidebar-divider">
 
             <!-- Nav Item - Dashboard -->
-			<div class="sidebar-heading">Last update : 26/02/2023</div>
+			<div class="sidebar-heading">Last update : 28/02/2023</div>
             <li class="nav-item active">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-calculator"></i>
@@ -2327,7 +2327,7 @@
 															<span id="AASkillName4"></span>&nbsp;<span id="AASkill4"></span>
 														</td>
 														<td class="padded">
-															<input name="ID_X2" value="Calculate" onclick="calc()" type="button">
+															<input id="ID_X2" value="Calculate" onclick="calc()" type="button">
 														</td>
 													</tr>
 													<tr>
@@ -2698,7 +2698,7 @@
 		overflow: unset;	}
 </style>
 	<script>
-		var version = '9'; 
+		var version = '10'; 
 		var jsassets = [
 		'js/variables.js',
 		//<!--verbage-->
@@ -2771,7 +2771,14 @@
 		
 		 	<!-- $(".card" ).draggable(); -->
 		});
-	</script>
+		$(":button").on('mousedown',function() {
+
+		  jQuery(this).addClass('activebutton');
+		  
+		  }).on('mouseup mouseleave', function() {
+			jQuery(this).removeClass('activebutton');
+		});
+	</script>	
 </body>
 
 </html>

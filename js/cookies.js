@@ -1644,6 +1644,7 @@ with( document.calcForm )
 		calc();
 	}
 }
+$("select").trigger("chosen:updated");
 }
 
 function SetShortCut()

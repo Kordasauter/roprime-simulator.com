@@ -410,27 +410,40 @@ function CalcFinalCriticalChance()
 // Calc Dmg from RAWDmg (rawDmg, (min,avg,max,crit:=10))
 function CalcFinalDamage( damage, type )
 { 
-	damage = ApplyDamageModifiers( damage );
-	damage = ApplySkillModifiers( damage );
+
 	var aura_blade = 0;
 	if ( n_A_WeaponType !== weapTyp_NONE && SkillSearch( skill_LK_AURA_BLADE ) )
 	{ // aura blade
 		aura_blade += n_A_BaseLV * (SkillSearch( skill_LK_AURA_BLADE ) + 3);
 	}
+	
+	
+	damage = ApplyDamageModifiers( damage );
+	damage = ApplySkillModifiers( damage );
+	
 	var critmod;
 	critmod = CalcCriticalMod();
 	
 	if ( type == 10 )
 	{
-		damage += aura_blade;
 		damage = ApplyEnemyDefense( damage * 1.4, type, 0 );
+		if ( SkillSearch( skill_RUN_GIANT_GROWTH )  && damageType != kDmgTypeRanged)
+		{
+			let basedmg = GetBaseDmg( n_A_Weapon_element, false, 0 );
+			damage += (basedmg[2] * 2.5);
+		}
 		// damage = ApplyEnemyDefense( damage * critmod, type, 0 );
 	}
 	else
 	{
-		damage += aura_blade;
 		damage = ApplyEnemyDefense( damage, type, 0 );
+		if ( SkillSearch( skill_RUN_GIANT_GROWTH ) && damageType != kDmgTypeRanged)
+		{
+			let basedmg = GetBaseDmg( n_A_Weapon_element, false, 0 );
+			damage += (basedmg[type] * 2.5);
+		}
 	}
+	damage += aura_blade;
 	damage = Math.floor(tPlusDamCut(damage));	
 	damage = Max( 0, damage );
 	return Math.floor( damage );

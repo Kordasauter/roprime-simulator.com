@@ -159,25 +159,40 @@ var MAGICAL_SKILLS = [
 function clashingATKFormula(weight)
 {
 	CalcAtk();
+	CalcSizeMod();
 	
 	// for damage calculation
 	var tempAttack = new Array();
 	var tempWeaponAttack = n_A_Weapon_ATK + strengthBonusAttack + weaponUpgradeAttack;
 	var masteryATK = CalcMasteryAtk();
-
-	tempAttack[0] = ( tempWeaponAttack - varianceAttack + minOverrefineAttack )/* * (( sizeMod + 100 ) / 100)*/;
-	tempAttack[2] = ( tempWeaponAttack + varianceAttack + overrefineAttack )/* * (( sizeMod + 100 ) / 100)*/;
+	var tempsizemod = 0;
+	switch(n_B[en_SIZE])
+	{
+		case siz_SMALL:
+			tempsizemod = 25;
+			break;
+		case siz_LARGE:
+			tempsizemod = -25;
+			break;
+		default:
+			break;
+	}
+	tempAttack[0] = (( tempWeaponAttack - varianceAttack + minOverrefineAttack ) * (( tempsizemod + 100 ) / 100)) * (1 + (5 + (SkillSearch( skill_LK_SPEAR_DYNAMO ) * 2))/100);
+	tempAttack[2] = ( tempWeaponAttack + varianceAttack + overrefineAttack ) * (( tempsizemod + 100 ) / 100) * (1 + (5 + (SkillSearch( skill_LK_SPEAR_DYNAMO ) * 2))/100);
 	tempAttack[1] = Math.floor( ( tempAttack[0] + tempAttack[2] ) / 2 );
-	
 	for(var i = 0; i < 3;i++)
 	{
+		
+		// tempAttack[i] += (weight * 0.7 + equipmentAttack + strengthBonusAttack) * element[n_B[en_ELEMENT]][n_A_Weapon_element] / 100 ;
 		tempAttack[i] += (weight + equipmentAttack + strengthBonusAttack) * element[n_B[en_ELEMENT]][n_A_Weapon_element] / 100 * 0.7;
 		// multiply race mod
 		tempAttack[i] *= ( racialMod + 100 ) / 100;
 		// multiply special race mod
 		tempAttack[i] *= ( specialRacialMod + 100 ) / 100;
 		// multiply size mod
-		//tempAttack *= ( sizeMod + 100 ) / 100;
+		// tempAttack[i] *= ( tempsizemod + 100) / 100;
+		console.log(sizeMod);
+		tempAttack[i] *= ( sizeMod + 100 ) / 100;
 		// multiply boss mod
 		tempAttack[i] *= ( bossMod + 100 ) / 100;
 		// multiply attack mod
@@ -544,6 +559,7 @@ function CalcSkillDamage()
 			for ( var i = 0; i < 3; i++ )
 			{
 				w_DMG[i] = CalcFinalDamage( n_A_DMG[i], i );
+				
 			}
 
 			var w_KATARU = [0,0,0];
@@ -2778,7 +2794,7 @@ function CalcSkillDamage()
 	}
 
 		CalcAtkMods02( w_SkillMod, 0 );
-		
+		let basedmg = GetBaseDmg( n_A_Weapon_element, false, 0 );
 		for ( var i = 0; i < 3; i++ )
 		{
 			w_MagiclBulet = i;
@@ -3153,6 +3169,7 @@ function CalcSkillDamage()
 		}
 		CalcAtkMods02(w_SkillMod,0);
 		
+		
 		for ( var i = 0; i < 3; i++ )
 		{
 			w_DMG[i] = CalcFinalDamage(n_A_DMG[i],i);
@@ -3428,27 +3445,28 @@ function CalcSkillDamage()
 		
 		var baseATK =new Array();
 		baseATK = clashingATKFormula(ItemOBJ[n_A_Equip[0]][itm_WEIGHT]); //ATK + Weight
-		//baseATK *= ((100+rangedMod)/100);
 		w_SkillMod = 1.5 + (n_A_ActiveSkillLV * 0.5);
-		//w_SkillMod *= bonusDMG * (n_A_BaseLV / 100);
+		w_SkillMod *= (n_A_BaseLV / 100);
+		// w_SkillMod += CalcSkillModAdditions( w_SkillMod );
+		
 		w_TotalHits = 5;
-		//CalcAtkMods02(w_SkillMod,0);
+		CalcAtkMods02(w_SkillMod,0);
+		
 
 		for ( var i = 0; i < 3; i++ )
 		{
 			w_DMG[i] = baseATK[i] * w_SkillMod;
-			switch(n_B[en_SIZE])
-			{
-				case siz_SMALL:
-					w_DMG[i] = w_DMG[i] * 1.25;
-					break;
-				case siz_LARGE:
-					w_DMG[i] = w_DMG[i] * 0.75;
-					break;
-				default:
-					break;
-			}
+			
 			w_DMG[i] = CalcFinalDamage(w_DMG[i],i);
+
+			if ( SkillSearch( skill_RUN_ENCHANT_BLADE ) )
+			{
+					w_DMG[i] += Math.floor( (SkillSearch( skill_RUN_ENCHANT_BLADE ) * 20 + 100 ) * ( n_A_BaseLV / 150.0 ) + n_A_INT);
+			}
+			// if ( SkillSearch( skill_RUN_ENCHANT_BLADE ) )
+			// {
+					// w_DMG[i] += Math.floor( (SkillSearch( skill_RUN_ENCHANT_BLADE ) * 20 + 100 ) * ( n_A_BaseLV / 150.0 ) + n_A_INT);
+			// }
 
 			Last_DMG_B[i] = w_DMG[i];
 			

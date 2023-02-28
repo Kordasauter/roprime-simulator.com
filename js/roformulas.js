@@ -58,6 +58,7 @@ function GetBaseDmg( weaponElement, forced, addMasteries )
 		// multiply attack mod
 		finalWeaponAttack[i] *= attackMod;
 	}
+	
 	// Build Damage Range
 	for ( var i = 0; i < 3; i++ )
 	{
@@ -1245,10 +1246,11 @@ function CalcEquipAtk()
 	{ // Cart boost
 		equipmentAttack += 10 * SkillSearch( skill_GEN_CART_BOOST );
 	}
-	// if ( SkillSearch( skill_RUN_FIGHTING_SPIRIT ) )
-	// { // Asir Rune
-		// equipmentAttack += SkillSearch( skill_RUN_FIGHTING_SPIRIT ) * 7;
-	// }
+	if ( SkillSearch( skill_RUN_FIGHTING_SPIRIT ) )
+	{ // Asir Rune
+		equipmentAttack += 70;
+		equipmentAttack += SkillSearch( skill_RUN_FIGHTING_SPIRIT ) * 7;
+	}
 	if ( SkillSearch ( skill_REB_PLATINUM_ALTAR ))
 	{
 		equipmentAttack += (10 * SkillSearch ( skill_REB_PLATINUM_ALTAR )) + (SkillSearch( skill_GS_COIN_FLIP ) * 10);
@@ -1332,8 +1334,6 @@ function CalcEquipAtk()
 			
 		}
 	}
-	
-	
 
 	return equipmentAttack;
 }
@@ -2430,8 +2430,9 @@ function CalcCriticalMod()
 	criticalMod = n_tok[bon_DMG_CRIT];
 }
 
+ // Calc Dmg from RAWDmg (rawDmg, (min,avg,max,crit:=10))
 function CalcFinalDamage2( damage, type )
-{ // Calc Dmg from RAWDmg (rawDmg, (min,avg,max,crit:=10))
+{
 	damage = ApplyDamageModifiers( damage );
 	damage = ApplySkillModifiers( damage );
 	var aura_blade = 0;

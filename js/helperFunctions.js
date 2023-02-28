@@ -306,6 +306,7 @@ function StCalc(nSC)
 	// fill out form
 	formElements["A_BaseLV"].value = i;
 	myInnerHtml( "A_STPOINT", wStPoint - StPoint, 0 );
+	$("#A_BaseLV").trigger("chosen:updated");
 }
 
 function StCalc2(nSC2)
