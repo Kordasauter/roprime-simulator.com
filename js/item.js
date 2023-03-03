@@ -1924,7 +1924,7 @@
 ,[1901,itm_type_ACCESSORY,224,1,0,1,10,175,0,0,0,0,bon_DEX,3,bon_NONE] // "Advanced Bunny Charm"
 ,[1902,itm_type_ACCESSORY,224,1,0,1,10,100,0,0,0,0,bon_NONE] // "Shining Branch Charm"
 ,[1903,itm_type_ACCESSORY,224,1,0,1,10,100,0,0,0,0,bon_NONE] // "Fresh Tuna Charm"
-,[1904,itm_type_ACCESSORY,224,1,0,1,10,100,0,0,0,0,bon_NONE] // "Plump Earthworm Charm"
+,[1904,itm_type_ACCESSORY,224,1,0,1,10,100,0,0,0,0,bon_CAST_SKILL + skill_SUM_PICKY_PECK,50,"ev_bdex",6,bon_DMG_SKILL + skill_SUM_PICKY_PECK,5,bon_NONE] // "Plump Earthworm Charm"
 ,[1905,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_HP_ADD,2000,bon_RED_FIXEDCAST,15,bon_NONE] // "Doram Gear Set"
 ,[1906,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_HP_MUL,10,bon_SP_MUL,10,bon_DMG_SKILL+skill_SUM_CATNIP_METEOR,100,bon_NONE] // "Doram Charm Grass Lesser Leaf Set"
 ,[1907,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_HP_MUL,20,bon_SP_MUL,3,bon_DMG_SKILL+skill_SUM_LUNATIC_CARROT_BEAT,100,bon_NONE] // "Doram Fresh Grass Lesser Bunny Set"

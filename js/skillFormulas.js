@@ -876,7 +876,7 @@ function CalcSkillDamage()
 			skill_SUM_SOUL_ATTACK,
 			skill_SUM_BITE,
 			skill_SUM_SCRATCH,
-			// skill_SUM_PICKY_PECK,
+			skill_SUM_PICKY_PECK,
 			skill_SUM_SCAR_OF_TAROU,
 			skill_SUM_LUNATIC_CARROT_BEAT,
 			skill_SUM_SPIRIT_OF_SAVAGE,
@@ -1107,6 +1107,25 @@ function CalcSkillDamage()
 			n_Delay[ksDelayA] = 1.0;
 			n_Delay[ksDelayASPD] = 0.1;
 			n_Delay[ksDelayAnimation] = 1.3 - ( 0.004 * n_A_AGI ) - ( 0.002 * n_A_DEX );
+		}
+		else if(n_A_ActiveSkill==skill_SUM_PICKY_PECK)
+		{
+			damageType = kDmgTypeRanged;
+			wActiveHitNum = 5;
+			w_SkillMod = (2 + n_A_ActiveSkillLV);
+			// w_SkillMod = (2 + n_A_ActiveSkillLV)/w_TotalHits;
+			
+			
+			fixedCastTime *= 0.0;
+			// if(EquipNumSearch(1904))
+			// { //"Plump Earthworm Charm"
+				// variableCastTime *=  1.0 / (1 + EquipNumSearch(1904)) ;
+			// }
+			// else
+			// {
+				variableCastTime *=  1.0;
+			// }
+			n_Delay[ksDelayGlobal] = 1.0;
 		}
 		else if(n_A_ActiveSkill==skill_MO_RAGING_THRUST)
 		{
@@ -2849,7 +2868,7 @@ function CalcSkillDamage()
 			  n_A_ActiveSkill === skill_SHA_TRIANGLE_SHOT ||
 			  n_A_ActiveSkill === skill_GLT_CROSS_IMPACT ||
 			  n_A_ActiveSkill === skill_REB_QUICK_DRAW_SHOT ||	
-			  n_A_ActiveSkill === skill_SUM_PICKY_PECK ||
+			  // n_A_ActiveSkill === skill_SUM_PICKY_PECK ||
 			  n_A_ActiveSkill === skill_SHA_FATAL_MENACE )
 	{
 		if ( n_A_ActiveSkill === skill_AR_DOUBLE_STRAFE )
@@ -3122,25 +3141,6 @@ function CalcSkillDamage()
 			
 			fixedCastTime *= 0.0;
 			variableCastTime *= 0.0;
-		}
-		else if(n_A_ActiveSkill==skill_SUM_PICKY_PECK)
-		{
-			damageType = kDmgTypeRanged;
-			w_TotalHits = 5;
-			// w_SkillMod = (2 + n_A_ActiveSkillLV);
-			w_SkillMod = (2 + n_A_ActiveSkillLV)/w_TotalHits;
-			
-			
-			fixedCastTime *= 0.0;
-			if(EquipNumSearch(1904))
-			{ //"Plump Earthworm Charm"
-				variableCastTime *=  1.0 / (1 + EquipNumSearch(1904)) ;
-			}
-			else
-			{
-				variableCastTime *=  1.0;
-			}
-			n_Delay[ksDelayGlobal] = 1.0;
 		}
 		else if(n_A_ActiveSkill==skill_SHA_FATAL_MENACE)
 		{

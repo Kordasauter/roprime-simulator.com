@@ -1904,7 +1904,7 @@ ITEM_NAME = [
 ,[1901,0,0,"Advanced Bunny Charm","",0]
 ,[1902,0,0,"Shining Branch Charm","Reduces variable cast time of Silvervine Stem Spear by 50%.<br>Increases Silvervine Stem Spear damage based on INT and skill level. ((Base INT/6)*Skill_Lv)",0]
 ,[1903,0,0,"Fresh Tuna Charm","Reduces cooldown time of Tuna Party by 5 seconds.<br>Randomly autocasts Level 1 Tuna Party (or learned level) when wearer receiving melee physical attacks.",0]
-,[1904,0,0,"Plump Earthworm Charm","Reduces variable cast time of Picky Peck by 50%.<br>Increases Picky Peck damage according DEX and skill level. ((Base DEX/6)*Skill_Lv)",0]
+,[1904,0,0,"Plump Earthworm Charm","<br>*Picky Peck level 5 is used in the item bonus",0]
 ,[1905,0,0,"Doram Gear Set","The users casting cannot be interrupted outside of WoE.",0]
 ,[1906,0,0,"Doram Charm Grass Lesser Leaf Set","",0]
 ,[1907,0,0,"Doram Fresh Grass Lesser Bunny Set","",0]
