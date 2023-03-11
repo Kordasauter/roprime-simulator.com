@@ -6274,7 +6274,7 @@ function calcASPD()
 	}
 	if(EquipNumSearch(2035))
 	{ //Pile Bunker S
-		equipASPD += Math.floor(n_A_Weapon2_ATKplus / 2);
+		equipASPD += Math.floor(n_A_Weapon_ATKplus / 2);
 	}
 	if (EquipNumSearch(2038))
 	{//Armor of Sixtus the Agile
