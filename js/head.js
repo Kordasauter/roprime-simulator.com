@@ -1341,6 +1341,7 @@ function ApplySkillModifiers( damage )
 	
 	if(n_A_ActiveSkill == skill_WAR_CRIMSON_ROCK)
 	{
+		console.log("here");
 		if(ItemOBJ[n_A_Equip[eq_WEAPON]][itm_WLVL] == 4)
 			dmgMultiplier += 20 * CardNumSearch( 734 ); //True Kathryne Keyron
 		if(n_A_Weapon_ATKplus >= 10)

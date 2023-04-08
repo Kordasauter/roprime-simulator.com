@@ -9,8 +9,8 @@
     <meta name="description" content="The Ragnarok Prime Calculator, able to simulate stats, equipment, status resistance, skills and damage from Characters in PVM, MVP and PVP environments">
     <meta name="author" content="Kord">
 	<meta name="keywords" content="Ragnarok,Online,Ragnarok Online,EuRO,PVP,PVM,WOE,MVP,Calc,Calculator,Sim,Simulator,New,Current,prime,Ragnarok Prime,RO Prime,Loki,4 Games,185/65,185">
-	<link rel=«canonical» href=«https://roprime-simulator.com/about.html»>
-    <title>Ragnarok Prime Simulator - About</title>
+	<link rel=«canonical» href=«https://roprime-simulator.com/empty.html»>
+    <title>Ragnarok Prime Simulator - </title>
 
     <!-- Custom fonts for this template-->
     <link
@@ -82,7 +82,7 @@
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>EXP Scaler</span></a>
             </li>
-			<li class="nav-item">
+			<li class="nav-item active">
                 <a class="nav-link" href="refine.html">
                     <i class="fas fa-fw fa-hammer"></i>
                     <span>Refine<br></span></a>
@@ -119,7 +119,7 @@
                     <span>Donate</span></a>
             </li>
 			
-			<li class="nav-item active">
+			<li class="nav-item">
                 <a class="nav-link" href="about.html">
                     <i class="fas fa-fw fa-question"></i>
                     <span>About</span></a>
@@ -153,48 +153,136 @@
 
                 </nav>
 				<!-- End of Topbar -->
-						
-				<!-- Begin Page Content -->
-				<div class="container-fluid">
-					
-					<div class="padded_side" style="overflow-x:auto;width: 50%;align : center;">
-						<div class="shadow card mb-4">
-							<!-- Card Header -->
-							<div class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('main_stat')" >
-								
-								<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">About me </span></h6>
-							</div>
-							<!-- Card Body -->
-							<div class="card-body" id="main_stat"  >
-								<div>
-									<p class="padded" style="font-size: 16px;">
-										Hi ! I'm Kord, I hope you like the simulator! I started Ragnarok Online around 2004, and I haven't really put the game down since (with a few breaks from time to time of course).
-										I've mainly been playing Sura (Kord in-game) for a few years now.<br>
-										I took over the development of the simulator that was available on irowiki by adapting it to the European server (prime) to help as many players as possible.
-										This simulator is my first big web project so it's very likely some bugs remain.
-										If you find bugs, missing object or anything else, do not hesitate to contact me via the contact page. Even if you are not on the European server.<br>
-										Have fun !
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-				</div>
 				<div>
 					<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6824539470557939"
      crossorigin="anonymous"></script>
-<!-- lower_ads -->
+<!-- upper_ads -->
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-6824539470557939"
-     data-ad-slot="8250308300"
+     data-ad-slot="7463561006"
      data-ad-format="auto"
      data-full-width-responsive="true"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 				</div>
+				<!-- Begin Page Content -->
+				<div class="container-fluid">
+					<div class="row">
+						<div class="padded_side">
+							<div class="card shadow mb-4">
+								<!-- Card Header -->
+								<div
+									class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+									<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Refine settings</span></h6>
+								</div>
+								<!-- Card Body -->
+								<div class="card-body">
+									<table class="shadow table-responsive">
+										<tbody>
+											<tr>
+												<td class="padded">Event Refine</td>
+												<td class="padded"><input id="ref_event" type="checkbox" onchange="SetRefine()"></td>
+											</tr>
+											<tr>
+												<td class="padded">WeaponLv/Armor</td>
+												<td class="padded"><select id="Wlv" onchange="SetRefine()">
+														<option value="0">Weapon Lv.1</option>
+														<option value="1">Weapon Lv.2</option>
+														<option value="2">Weapon Lv.3</option>
+														<option value="3">Weapon Lv.4</option>
+														<option value="4">Armor</option>
+													</select></td>
+											</tr>
+											<tr>
+												<td class="padded">Ore Type</td>
+												<td class="padded"><select id="Ore" onchange="SetRefine()">
+														<option value="0">Normal</option>
+														<option value="5">HE/Enriched</option>
+													</select></td>
+											</tr>
+										<!-- </tbody> -->
+									<!-- </table> -->
+									
+									<!-- <table class="shadow table-responsive"> -->
+										<!-- <tbody> -->
+											<tr>
+												<td class="padded">Refine Level</td>
+												<td class="padded">
+													<select id="RefLv" onchange="SetButton()">
+														<option value="0">+0</option>
+														<option value="1">+1</option>
+														<option value="2">+2</option>
+														<option value="3">+3</option>
+														<option value="4">+4</option>
+														<option value="5">+5</option>
+														<option value="6">+6</option>
+														<option value="7">+7</option>
+														<option value="8">+8</option>
+														<option value="9">+9</option>
+														<option value="10">+10</option>
+														<option value="11">+11</option>
+														<option value="12">+12</option>
+														<option value="13">+13</option>
+														<option value="14">+14</option>
+														<option value="15">+15</option>
+														<option value="16">+16</option>
+														<option value="17">+17</option>
+														<option value="18">+18</option>
+														<option value="19">+19</option>
+														<option value="20">+20</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td class="padded"><span id="ref_text">Try your luck !</span></td>
+												<td class="padded">
+													<input id="ref_button" value="Refine !" onclick="SimRefine()" type="button">
+												</td>
+											</tr>
+											<tr>
+												<td class="padded">Refine status</td>
+												<td class="padded"><span id="ref_status">No refine yet</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="padded_side"> -->
+							<!-- <div class="card shadow mb-4"> -->
+								<!-- Card Header -->
+								<!-- <div -->
+									<!-- class="card-header d-flex flex-row align-items-center justify-content-between head_bg"> -->
+									<!-- <h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Refine</span></h6> -->
+								<!-- </div> -->
+								<!-- Card Body -->
+								<!-- <div class="card-body"> -->
+									
+								<!-- </div> -->
+							<!-- </div> -->
+						<!-- </div> -->
+						<div class="padded_side">
+							<div class="card shadow mb-4">
+								<!-- Card Header -->
+								<div
+									class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+									<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Refine rate</span></h6>
+								</div>
+								<!-- Card Body -->
+								<div class="card-body">
+									<span id="reftable"></span>
+								</div>
+							</div>
+						</div>
+					<!-- </div> -->
+					<!-- <div class="row"> -->
+						
+						
+					</div>
+				</div>
+				
 			</div>
 			<!-- Footer -->
 			<footer class="sticky-footer bg-white">
@@ -231,6 +319,42 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+	<script>
+		var version = '12'; 
+		var jsassets = [
+		'js/refine.js',
+		];
+		
+		function loadAssets() {
+			jsassets.forEach(function(src) {
+                var script = document.createElement('script');
+                script.src = src;
+                script.async = false;
+                document.head.appendChild(script);
+            }); 
+		}
+		
+		$(function() {
+			loadAssets();
+			//activate Chosen for selects
+			$(window).on('selects-ready', function() {
+				$("select").chosen({no_results_text: "Oops, nothing found!"}); 
+			});
+			
+			//hide policy window on dev
+			if(window.location.href.match('C:')) 
+				$('.privacypolicies-com---reset').hide();
+		
+		 	<!-- $(".card" ).draggable(); -->
+		});
+		$(":button").on('mousedown',function() {
+
+		  jQuery(this).addClass('activebutton');
+		  
+		  }).on('mouseup mouseleave', function() {
+			jQuery(this).removeClass('activebutton');
+		});
+	</script>	
 </body>
 
 </html>

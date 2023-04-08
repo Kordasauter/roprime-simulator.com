@@ -1540,6 +1540,9 @@ function CalcMagicDamage( rawDamage )
 	
 	// Apply multiplier, floor, and return value
 	wBMC2 = wBMC2 * ( 100 + matkMultiplier ) / 100;
+	
+	//test
+	wBMC2 = ApplySkillModifiers( wBMC2 );
 	wBMC2 = Math.floor( wBMC2 );
 	return wBMC2;
 }

@@ -2245,10 +2245,10 @@
 ,[2204,itm_type_ACCESSORY,0,0,0,1,15,100,0,0,0,0,bon_NONE] // Shining Holy Water (Accessory)
 ,[2205,itm_type_SHIELD,0,30,0,1,300,100,0,0,0,0,bon_SKILL_ENABLE,62,bon_SKILL_AUTOCAST,145,bon_NONE] // Royal Guard Shield
 ,[2206,itm_type_ACCESSORY,0,0,0,0,10,40,0,0,0,0,bon_NONE] // Prontera Badge (Accessory)
-,[2207,itm_type_ARMOR,0,0,0,1,10,100,0,0,0,0,bon_SKILL_ENABLE,63,bon_MATK,50,bon_NONE] // Flattery Robe
+,[2207,itm_type_ARMOR,0,0,0,1,10,100,0,0,0,101,bon_SKILL_ENABLE,63,bon_MATK,50,bon_NONE] // Flattery Robe
 ,[2208,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_SP_MUL,10,bon_FLEE,10,bon_NONE] // Flattery Robe + Ancient Cape[0]\[1]
 ,[2209,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_HP_MUL,10,bon_MATK_MUL,2,bon_NONE] // Flattery Robe + Survivor''s Manteau'
-,[2210,itm_type_ARMOR,0,0,0,1,10,100,0,0,0,0,bon_SKILL_ENABLE,64,bon_NONE] // Abusive Robe
+,[2210,itm_type_ARMOR,0,0,0,1,10,100,0,0,0,101,bon_SKILL_ENABLE,64,bon_NONE] // Abusive Robe
 ,[2211,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_IGN_DEF_RC_DEMI_HUMAN,15,bon_IGN_DEF_RC_DEMON,15,bon_IGN_DEF_RC_UNDEAD,15,bon_LUK,3,bon_CRIT,10,bon_NONE] // Abusive Robe + Morrigane''s Manteau'
 ,[2212,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_IGN_DEF_RC_DEMI_HUMAN,15,bon_IGN_DEF_RC_DEMON,15,bon_IGN_DEF_RC_UNDEAD,15,bon_HP_MUL,10,bon_PHY_ATK,2,bon_NONE] // Abusive Robe + Valkyrie Manteau
 ,[2213,weapTyp_MACE,0,80,3,1,100,40,0,0,0,0,bon_ASPD_ADD,10,bon_NONE] // Spoon
@@ -2273,8 +2273,8 @@
 ,[2229,itm_type_GARMENT,0,30,0,1,60,170,0,0,0,0,bon_NONE] // Fallen Warrior Manteau [1]
 
 //Terra Gloria,0,0,0,0,
-,[2230,itm_type_ARMOR,0,0,0,1,10,100,0,0,0,0,bon_MATK_MUL,5,bon_SKILL_ENABLE,65,bon_NONE] // Agenda Robe [1]
-,[2231,itm_type_ARMOR,0,0,0,1,10,100,0,0,0,0,bon_VIT,5,bon_SKILL_ENABLE,66,bon_NONE] // Consultation Robe [1]
+,[2230,itm_type_ARMOR,0,0,0,1,10,100,0,0,101,101,bon_MATK_MUL,5,bon_SKILL_ENABLE,65,bon_NONE] // Agenda Robe [1]
+,[2231,itm_type_ARMOR,0,0,0,1,10,100,0,0,101,101,bon_VIT,5,bon_SKILL_ENABLE,66,bon_NONE] // Consultation Robe [1]
 ,[2232,itm_type_HEAD_UPPER,0,3,0,1,40,100,0,0,0,0,bon_DMG_RANGE,6,bon_NONE] // Republic Hat [1]
 ,[2233,itm_type_ACCESSORY,0,3,0,0,20,99,0,0,0,0,bon_VIT,3,bon_NONE] // Mercenary Ring Type A
 ,[2234,itm_type_ACCESSORY,0,3,0,0,20,99,0,0,0,0,bon_INT,3,bon_NONE] // Mercenary Ring Type B
@@ -2923,7 +2923,7 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[1680,1678,1679,"NULL"] //"Shadow Tamer Set"
 ,[1684,1681,863,"NULL"] // "Amistr Hat + Holy Stick"
 ,[1685,1681,932,"NULL"] // "Amistr Hat + Twin Edge of Naght Sieger(blue)"
-,[1686,1681,933,"NULL"] // "Amistr Hat + Twin Edge of Naght Sieger(red)"
+// ,[1686,1681,933,"NULL"] // "Amistr Hat + Twin Edge of Naght Sieger(red)"
 ,[1711,1708,1709,1710,"NULL"] // "Shadow Warlock Set"
 ,[1715,1712,1713,1714,"NULL"] // "Shadow Swordman Set"
 ,[1719,1716,1717,1718,"NULL"] // "Shadow Diviner Set"

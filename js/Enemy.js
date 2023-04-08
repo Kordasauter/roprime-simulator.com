@@ -395,6 +395,11 @@ with( document.calcForm )
 	var w = 0; // MDef
 	w += n_tok[bon_MDEFIGN_RC_ALL];
 	w += n_tok[310+n_B[en_RACE]]; // Race
+	if(n_B[en_BOSS] == 1)
+	{
+		w += n_tok[bon_MDEFIGN_RC_BOSS];
+		
+	}
 	if ( w )
 	{
 		if(w < 0)

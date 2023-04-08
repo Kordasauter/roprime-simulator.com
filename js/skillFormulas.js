@@ -1846,7 +1846,8 @@ function CalcSkillDamage()
 			}
 			if(EquipNumSearch(1681))
 			{ //"Amistr Hat"
-				if(EquipNumSearch(932)||EquipNumSearch(933))//Twin Edge of Naght Sieger
+				// if(EquipNumSearch(932)||EquipNumSearch(933))//Twin Edge of Naght Sieger
+				if(EquipNumSearch(932))//Twin Edge of Naght Sieger blue only
 				{
 					w_SkillMod += 0.1 * Math.floor(n_A_Weapon_ATKplus / 2);
 				}
