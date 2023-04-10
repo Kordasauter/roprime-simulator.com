@@ -35,102 +35,51 @@ function init()
 
 function SetRefine()
 {
-	var str= "";
-	var weaplv = Number(document.getElementById("Wlv").value);
-	var ore = Number(document.getElementById("Ore").value);
-	var RefRate = RefRate_Normal;
+	let str= "";
+	let weaplv = Number(document.getElementById("Wlv").value);
+	let ore = Number(document.getElementById("Ore").value);
+	let RefRate = RefRate_Normal;
 	if(document.getElementById("ref_event").checked)
 		RefRate = RefRate_Event;
+	
+	let TotalRate = new Array();
+	let AverageItem = new Array();
+	TotalRate[0] = 100;
+	AverageItem[0] = 1;
+	for(let i = 1;i < 20;i++)
+	{
+		TotalRate[i] = RefRate[weaplv + ore][i]*TotalRate[i-1]/100;
+		AverageItem[i] = (1/TotalRate[i])*100;
+	}
+	
 	
 	str += "<table class=\"shadow table-responsive\">";
 	str += "<tbody>";
 	str += "<tr>";
 	str += "<td class=\"padded\">Refine Level</td>";
-	str += "<td class=\"padded\">Refine Rate (%)</td>";
+	str += "<td class=\"padded\">Refine Rate* (%)</td>";
+	str += "<td class=\"padded\">Total Rate (%)</td>";
+	str += "<td class=\"padded\">Average used item</td>";
 	str += "</tr>";
-	str += "<tr>";
-	str += "<td class=\"padded\">+0 -> +1</td>";
-	str += "<td class=\"padded\">" + RefRate[weaplv + ore][0] + "</td>";
-	str += "</tr>";
-	str += "<tr>";
-	str += "<td class=\"padded\">+1 -> +2</td>";
-	str += "<td class=\"padded\">" + RefRate[weaplv + ore][1] + "</td>";
-	str += "</tr>";
-	str += "<tr>";
-	str += "<td class=\"padded\">+2 -> +3</td>";
-	str += "<td class=\"padded\">" + RefRate[weaplv + ore][2] + "</td>";
-	str += "</tr>";
-	str += "<tr>";
-	str += "<td class=\"padded\">+3 -> +4</td>";
-	str += "<td class=\"padded\">" + RefRate[weaplv + ore][3] + "</td>";
-	str += "</tr>";
-	str += "<tr>";
-	str += "<td class=\"padded\">+4 -> +5</td>";
-	str += "<td class=\"padded\">" + RefRate[weaplv + ore][4] + "</td>";
-	str += "</tr>";
-	str += "<tr>";
-	str += "<td class=\"padded\">+5 -> +6</td>";
-	str += "<td class=\"padded\">" + RefRate[weaplv + ore][5] + "</td>";
-	str += "</tr>";
-	str += "<tr>";
-	str += "<td class=\"padded\">+6 -> +7</td>";
-	str += "<td class=\"padded\">" + RefRate[weaplv + ore][6] + "</td>";
-	str += "</tr>";
-	str += "<tr>";
-	str += "<td class=\"padded\">+7 -> +8</td>";
-	str += "<td class=\"padded\">" + RefRate[weaplv + ore][7] + "</td>";
-	str += "</tr>";
-	str += "<tr>";
-	str += "<td class=\"padded\">+8 -> +9</td>";
-	str += "<td class=\"padded\">" + RefRate[weaplv + ore][8] + "</td>";
-	str += "</tr>";
-	str += "<tr>";
-	str += "<td class=\"padded\">+9 -> +10</td>";
-	str += "<td class=\"padded\">" + RefRate[weaplv + ore][9] + "</td>";
-	str += "</tr>";
-	str += "<tr>";
-	str += "<td class=\"padded\">+10 -> +11</td>";
-	str += "<td class=\"padded\">" + RefRate[weaplv + ore][10] + "</td>";
-	str += "</tr>";
-	str += "<tr>";
-	str += "<td class=\"padded\">+11 -> +12</td>";
-	str += "<td class=\"padded\">" + RefRate[weaplv + ore][11] + "</td>";
-	str += "</tr>";
-	str += "<tr>";
-	str += "<td class=\"padded\">+12 -> +13</td>";
-	str += "<td class=\"padded\">" + RefRate[weaplv + ore][12] + "</td>";
-	str += "</tr>";
-	str += "<tr>";
-	str += "<td class=\"padded\">+13 -> +14</td>";
-	str += "<td class=\"padded\">" + RefRate[weaplv + ore][13] + "</td>";
-	str += "</tr>";
-	str += "<tr>";
-	str += "<td class=\"padded\">+14 -> +15</td>";
-	str += "<td class=\"padded\">" + RefRate[weaplv + ore][14] + "</td>";
-	str += "</tr>";
-	str += "<tr>";
-	str += "<td class=\"padded\">+15 -> +16</td>";
-	str += "<td class=\"padded\">" + RefRate[weaplv + ore][15] + "</td>";
-	str += "</tr>";
-	str += "<tr>";
-	str += "<td class=\"padded\">+16 -> +17</td>";
-	str += "<td class=\"padded\">" + RefRate[weaplv + ore][16] + "</td>";
-	str += "</tr>";
-	str += "<tr>";
-	str += "<td class=\"padded\">+17 -> +18</td>";
-	str += "<td class=\"padded\">" + RefRate[weaplv + ore][17] + "</td>";
-	str += "</tr>";
-	str += "<tr>";
-	str += "<td class=\"padded\">+18 -> +19</td>";
-	str += "<td class=\"padded\">" + RefRate[weaplv + ore][18] + "</td>";
-	str += "</tr>";
-	str += "<tr>";
-	str += "<td class=\"padded\">+19 -> +20</td>";
-	str += "<td class=\"padded\">" + RefRate[weaplv + ore][19] + "</td>";
-	str += "</tr>";
+	
+	for(let i = 0;i < 20;i++)
+	{
+		str += "<tr>";
+		str += "<td class=\"padded\">+" + i + " -> +" + (i+1) + "</td>";
+		str += "<td class=\"padded\">" + RefRate[weaplv + ore][i] + "</td>";
+		if(TotalRate[i].toFixed(2) == "0.00")
+			str += "<td class=\"padded\">>0.01</td>";
+		else
+			str += "<td class=\"padded\">" + TotalRate[i].toFixed(2) + "</td>";
+		str += "<td class=\"padded\">" + AverageItem[i].toFixed(2) + "</td>";
+		str += "</tr>";
+		str += "<tr>";
+	}
 	
 	str += "</tbody>";
 	str += "</table>";
+	str += "<p>*The refining rate is defined for EuRo prime and RuRo prime</p>";
+	
 	
 	myInnerHtml("reftable",str,0);
 	
