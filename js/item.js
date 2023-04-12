@@ -2482,8 +2482,12 @@
 ,[2406,itm_type_ACCESSORY,0,0,0,1,10,100,0,0,0,0,"bstr_hi",90,bon_PHY_ATK,3,"bdex_hi",90,bon_DMG_RANGE,3,"bvit_hi",90,bon_HP_ADD,1000,bon_NONE] //Sheriff's Left Badge
 ,[2407,itm_type_ACCESSORY,0,0,0,1,10,100,0,0,0,0,"bint_hi",90,bon_MATK_MUL,3,"bdex_hi",90,bon_RED_CAST,5,"bvit_hi",90,bon_HP_ADD,1000,bon_NONE] //Sheriff's Right Badge
 ,[2408,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL + skill_MEC_ARM_CANNON,50,bon_NONE] //"Upgrade Part - Plate" + "Upgrade Part - Engine" not displayed in game ???
-//,[2409,itm_type_,0,0,0,0,0,0,0,0,0,0,bon_NONE] 
-//,[2410,itm_type_,0,0,0,0,0,0,0,0,0,0,bon_NONE] 
+
+,[2409,itm_type_ACCESSORY,0,0,0,1,50,80,0,0,0,0,bon_ASPD_MUL,10,bon_DMG_ELE_NEUTRAL,5,bon_DMG_ELE_WATER,5,bon_DMG_ELE_EARTH,5,bon_DMG_ELE_FIRE,5,bon_DMG_ELE_WIND,5,bon_DMG_ELE_POISON,5,bon_DMG_ELE_HOLY,5,bon_DMG_ELE_SHADOW,5,bon_DMG_ELE_GHOST,5,bon_DMG_ELE_UNDEAD,5,bon_NONE] // Verus Core
+,[2410,itm_type_HEAD_UPPER,0,2,0,1,30,1,0,0,0,0,bon_MDEF,2,bon_RED_CAST,6,bon_ASPD_MUL,6,bon_NONE] // Korean Judge Hat
+,[2411,itm_type_HEAD_UPPER,0,0,0,0,30,1,0,0,0,0,bon_RED_RC_DEMI_HUMAN,10,"ref_lvl",7,bon_RED_RC_DEMI_HUMAN,2,bon_NONE] // Processor on Head
+,[2412,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"set_ref" + 1,7,bon_ASPD_MUL,10,"set_ref" + 1,7,bon_DMG_SKILL + skill_MEC_BOOST_KNUCKLE,30,"set_ref" + 1,7,bon_DMG_SKILL + skill_MEC_VULCAN_ARM,50,"set_ref" + 1,9,bon_ASPD_MUL,10,"set_ref" + 1,9,bon_DMG_SKILL + skill_MEC_BOOST_KNUCKLE,30,"set_ref" + 1,9,bon_DMG_SKILL + skill_MEC_VULCAN_ARM,50,bon_NONE] // Processor on Head + Pile Bunker
+//,[2413,itm_type_,0,0,0,0,0,0,0,0,0,0,bon_NONE] 
 
 //
 //"ev_ref" = for every x refine
@@ -3109,6 +3113,7 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2400,2399,475,"NULL"] // Illusion Survivor's Manteau + Survivor's Rod (dex)
 ,[2401,2399,2383,"NULL"] // Illusion Survivor's Manteau + Illusion Wizardry Staff
 ,[2408,2023,2025,"NULL"] // Illusion Survivor's Manteau + Illusion Wizardry Staff
+,[2412,2411,1288,"NULL"] // Processor on Head + Pile Bunker
 // ,[,,,,"NULL"]
 
 // ,[itm_set,item1,item2,...,"NULL"] // 

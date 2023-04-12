@@ -257,6 +257,11 @@ function calcMAtk( includeMultipliers )
 				matk_mul += 5;
 			}
 		}
+		if(EquipNumSearch(2410))
+		{//Korean Judge Hat
+			if(n_A_JobSearch() == cls_MAG || n_A_JobSearch() == cls_ACO || n_A_JobSearch2() == cls_NIN || n_A_JOB == cls_SL )
+				matk_mul += Math.floor(n_A_HEAD_DEF_PLUS / 2);
+		}
 		
 //Shadows
 		if ( EquipNumSearch( 1656 ) )

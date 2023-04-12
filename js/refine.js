@@ -78,7 +78,7 @@ function SetRefine()
 	
 	str += "</tbody>";
 	str += "</table>";
-	str += "<p>*The refining rate is defined for EuRo prime and RuRo prime </p>";
+	str += "<p>*The refining rate is defined for EuRo prime and RuRo prime</p>";
 	
 	
 	myInnerHtml("reftable",str,0);

@@ -2059,6 +2059,11 @@ function CalcAttackMod()
 			n_tok[bon_PHY_ATK] += n_A_BODY_DEF_PLUS;
 			
 	}
+	if(EquipNumSearch(2410))
+	{//Korean Judge Hat
+		if(n_A_JobSearch() == cls_SWO || n_A_JobSearch() == cls_MER || n_A_JobSearch() == cls_THI || n_A_JobSearch2() == cls_MON || n_A_JOB == cls_TKK || n_A_JOB == cls_TKM )
+			n_tok[bon_PHY_ATK] += Math.floor(n_A_HEAD_DEF_PLUS / 2);
+	}
 	
 //shadows
 	if ( EquipNumSearch( 1660 ) )
@@ -2706,6 +2711,11 @@ function CalcRangedMod()
 	else if ( EquipNumSearch( 2243 ) && n_A_Arrow == bulTyp_ArmorPiercing )
 	{ // Dustfire [2]
 		n_tok[bon_DMG_RANGE] += 30;
+	}
+	if(EquipNumSearch(2410))
+	{//Korean Judge Hat
+		if(n_A_JobSearch() == cls_ARC || n_A_JobSearch() == cls_GUN )
+			n_tok[bon_DMG_RANGE] += n_A_HEAD_DEF_PLUS;
 	}
 	// if(EquipNumSearch())
 	// {

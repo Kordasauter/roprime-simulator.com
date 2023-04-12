@@ -2422,8 +2422,11 @@ ITEM_NAME = [
 ,[2406,0,0,"Sheriff's Left Badge","",0]
 ,[2407,0,0,"Sheriff's Right Badge","",0]
 ,[2408,0,0,"Upgrade Part - Plate + Upgrade Part - Engine","",0]
-// ,[2409,0,0,"Place_Holder","",0]
-// ,[2410,0,0,"Place_Holder","",0]
+,[2409,0,0,"Verus Core","Perfect Hit + 20% (not used in simulator)",0]
+,[2410,0,0,"Korean Judge Hat","<br>[If refined to +7 or higher]<br>-Resistance: 2%.(need more information)<br><br>[When used by Swordsman, Merchant,Thief, Taekwon, Star Gladiator and Monk Jobs]<br>-Physical weapon damage +1% per 2 refine rate.<br><br>[When used by Mage, Acolyte, Ninja Jobs and Soul Linker]<br>-MATK +1% per 2 refine rate.<br><br>[When used by Archer, Gunslinger and Rebellion]<br>-Long-range physical weapon damage +1% per refine rate.",0]
+,[2411,0,0,"Processor on Head","",0]
+,[2412,0,0,"Processor on Head + Pile Bunker","<br>[if Weapon refine level is 9 or higher]<br>-Reduces the cooldown of Pile Bunker by 1 second.",0]
+// ,[2413,0,0,"Place_Holder","",0]
 ]
 };
 

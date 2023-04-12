@@ -2379,6 +2379,10 @@ function CalcSkillDamage()
 			variableCastTime *= 0.0;
 			n_Delay[ksDelayGlobal] = 2.0;
 			n_Delay[ksDelayCooldown] = 5.0;
+			if(EquipNumSearch(2412))
+			{
+				n_Delay[ksDelayCooldown] = 5.0 - 1.0;
+			}
 		}
 		else if ( n_A_ActiveSkill === skill_MEC_VULCAN_ARM )
 		{

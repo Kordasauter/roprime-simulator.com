@@ -365,8 +365,11 @@ function n_A_JobSearch()
 		return cls_MAG;
 	if(w == cls_BLA || w == cls_ALC || n_A_JOB == cls_HMER)
 		return cls_MER;
+	if(w == cls_GUN)
+		return cls_GUN;
 	if(n_A_JOB == cls_TKK || n_A_JOB == cls_TKM || n_A_JOB == cls_SL)
 		return cls_TKK;
+	
 		
 	return cls_NOV;
 }
@@ -403,6 +406,8 @@ function n_A_JobSearch2()
 		return n_A_JOB;
 	if(n_A_JOB == cls_NIN || n_A_JOB == cls_KAGOB) // testing ...
 		return cls_NIN;
+	if(n_A_JOB == cls_GUN || n_A_JOB == cls_REB) // testing ...
+		return cls_GUN;
 		
 	return cls_NOV;
 }
