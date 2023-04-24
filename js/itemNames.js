@@ -2426,7 +2426,14 @@ ITEM_NAME = [
 ,[2410,0,0,"Korean Judge Hat","<br>[If refined to +7 or higher]<br>-Resistance: 2%.(need more information)<br><br>[When used by Swordsman, Merchant,Thief, Taekwon, Star Gladiator and Monk Jobs]<br>-Physical weapon damage +1% per 2 refine rate.<br><br>[When used by Mage, Acolyte, Ninja Jobs and Soul Linker]<br>-MATK +1% per 2 refine rate.<br><br>[When used by Archer, Gunslinger and Rebellion]<br>-Long-range physical weapon damage +1% per refine rate.",0]
 ,[2411,0,0,"Processor on Head","",0]
 ,[2412,0,0,"Processor on Head + Pile Bunker","<br>[if Weapon refine level is 9 or higher]<br>-Reduces the cooldown of Pile Bunker by 1 second.",0]
-// ,[2413,0,0,"Place_Holder","",0]
+,[2413,0,0,"Imperial Glove","The users casting cannot be interrupted outside of WoE.",0]
+,[2414,0,0,"Rebellion's Scarf","Aspd + 2% per level of Mass Spiral known.<br>Reduces the variable casting time of skills by 10%.<br>Reduces the cast delay of skills by 1% per level of Fire Rain known.<br>Reduces the cooldown of Hit Barrel by 4 seconds per level of Shattering Storm known.<br>Reduces the cooldown of Shattering Storm by 0.1 seconds per level of Shattering Storm known.<br>Increases critical damage on targets by 3% per level of Dragon Tail known.<br>Increases the damage of Fire Rain by 5% per level of Fire Rain known.<br>Increases the damage of Mass Spiral by 5% per level of Mass Spiral known.<br>Increases the damage of Quick Draw Shot by 5% per level of Eternal Chain known.<br>Increases the damage of Shattering Storm by 10% per level of Shattering Storm known.<br>Reduces the SP cost of Fire Dance by 5.<br>Reduces the SP cost of Fire Rain by 4 per level of Fire Rain known.<br>Reduces the SP cost of Mass Spiral by 2 per level of Mass Spiral known.<br>Adds a 100% chance of buffing the user for 50 seconds when using Crimson Marker; Adds a 1% chance of casting Level 1 Dragon Tail on the target when performing a physical attack per level of Dragon Tail known, if a higher level of this skill is known, it will be cast instead, if the user has a Grenade Launcher equipped.",0]
+,[2415,0,0,"Imperial Ring","",0]
+,[2416,0,0,"Imperial Ring + Imperial Guard","[For each weapon refine level over +5]<br>-[Shield Press] damage +8%",0]
+,[2417,0,0,"Imperial Ring + Imperial Spear","",0]
+,[2418,0,0,"Jejecap","Increase the healing effect of Mastela Fruit by 70%",0]
+,[2419,0,0,"Arquien's Necklace","<br>Reduces the SP cost of Power Swing by 2.<br>Adds a chance of gaining Candy, Candy Cane or Chocolate Drink when a monster is killed.<br>Increases the recovery rate of Candy and Candy Cane consumables by 100%.",0]
+,[2420,0,0,"Sea Captain Hat","",0]
 ]
 };
 

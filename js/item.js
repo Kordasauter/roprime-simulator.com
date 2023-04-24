@@ -2414,8 +2414,8 @@
 ,[2347,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL + skill_KAG_THROW_EXPLOSIVE_KUNAI,20,bon_DMG_SKILL + skill_KAG_KUNAI_SPLASH,50,bon_NONE] // "Golden Ninja Set (Kunai)"
 ,[2348,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_PHY_ATK,5,bon_ASPD_MUL,10,bon_DMG_CRIT,10,bon_NONE] // "Mine Worker''s Set"'
 ,[2349,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ATK,30,bon_ASPD_ADD,1,bon_DMG_CRIT,20,bon_NONE] // "Hippie Set"
-//Triple Trouble,0,0,0,0,
-//Horror Toy Factory,0,0,0,0,
+//Triple Trouble
+//Horror Toy Factory
 ,[2350,weapTyp_SWORD,1,120,3,3,50,80,0,0,0,108,bon_MATK,80,"ev_ref",1,bon_MATK,1,bon_SKILL_ENABLE,68,bon_NONE] // "Old Parasol"
 ,[2351,itm_type_ACCESSORY,2001,0,0,1,20,100,0,0,0,0,bon_SP_ADD,-300,bon_SKILL_ENABLE,16,bon_NONE] // "Red Lantern"
 ,[2352,itm_type_ACCESSORY,2001,0,0,1,10,110,0,0,0,0,bon_SP_ADD,200,bon_SKILL_ENABLE,69,bon_NONE] // "Hurt Mind"
@@ -2435,8 +2435,8 @@
 ,[2366,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ASPD_MUL,10,bon_HIT,10,bon_MATK_MUL,10,"garm_ref_lvl",10,bon_SKILL_AUTOCAST,151,bon_NONE] // "Christmas Wings + Evilspirit Gloves + Red Lantern"
 ,[2367,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ASPD_MUL,10,bon_DMG_RANGE,10,bon_PHY_ATK,10,"garm_ref_lvl",10,bon_HIT,15,"garm_ref_lvl",10,bon_DMG_CRIT,15,bon_NONE] // "Christmas Wings + Kind Heart + Hurt Mind"
 // ID, WeapType, ReqJob, Atk, wLVL, slots, Weight, reqBLVL, bonus[type],0,0,0,0, bonusamount, bonus2[type], .., bon_NONE,
-//Illusion Dungeon 1,0,0,0,0,
-//Illusion of Moonlight,0,0,0,0,
+//Illusion Dungeon 1
+//Illusion of Moonlight
 ,[2368,itm_type_ARMOR,0,52,0,1,40,99,0,0,0,0,bon_RED_FIXEDCAST,3,bon_HEAL_MUL,5,"ev_ref",1,bon_HEAL_MUL,1,bon_NONE] //Illusion Puente Robe [1]
 ,[2369,weapTyp_MACE,53,185,4,2,80,99,0,0,0,0,bon_RED_RANGE,10,"ev_ref",2,bon_RED_RANGE,3,bon_NONE] //Illusion Long Mace [2]
 ,[2370,itm_type_HEAD_UPPER,53,4,0,1,10,99,0,0,0,0,bon_INT,1,"ev_ref",2,bon_INT,1,"ev_ref",2,bon_HEAL_MUL,3,bon_NONE] //Illusion Nurse Cap [1]
@@ -2450,7 +2450,7 @@
 ,[2378,weapTyp_ROD,1055,60,4,2,50,99,0,0,0,0,bon_MATK,180,bon_INT,3,bon_DEX,2,bon_NONE] //Illusion Staff of Bordeaux [2]
 ,[2379,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL + skill_SOR_PSYCHIC_WAVE,10,"set_ref" + (fl_WEAPON+fl_GARMENT),7,bon_DMG_SKILL + skill_SOR_EARTH_GRAVE,40,"set_sum" + (fl_WEAPON+fl_GARMENT),18,bon_INC_MAGIC_NEUTRAL,10,"set_sum" + (fl_WEAPON+fl_GARMENT),18,bon_INC_MAGIC_EARTH,10,"set_sum" + (fl_WEAPON+fl_GARMENT),22,bon_INC_MAGIC_WATER,10,bon_NONE] //Illusion Staff of Bordeaux + Illusion Muffler
 ,[2380,weapTyp_DAGGER,1,150,4,1,70,99,0,0,0,0,bon_SP_MUL,10,bon_NONE] //Illusion Moonlight Dagger [1]
-//Illusion of Vampire,0,0,0,0,
+//Illusion of Vampire
 ,[2381,weapTyp_KATAR,208,200,4,2,150,100,0,0,0,0,bon_DEF,3,bon_FLEE,5,bon_PDODGE,2,bon_DMG_RC_DEMI_HUMAN,60,"ref_lvl",9,bon_FLEE,5,"ref_lvl",9,bon_PDODGE,2,"ref_lvl",10,bon_PHY_ATK,5,bon_NONE] // Illusion Infiltrator [2]
 ,[2382,weapTyp_KATAR,208,220,3,2,170,100,0,0,0,0,bon_NONE] // Illusion Sharpened Legbone of Ghoul [2]
 ,[2383,weapTyp_STAFF,2055,150,4,2,240,100,0,0,0,0,bon_MATK,250,bon_INT,6,bon_DEX,2,"ev_ref",2,bon_INT,1,"ev_ref",2,bon_DEX,1,bon_NONE] // Illusion Wizardry Staff [2]
@@ -2461,10 +2461,10 @@
 ,[2388,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // Illusion Ancient Cape + Illusion Moonlight Dagger
 ,[2389,itm_type_ACCESSORY,0,0,0,1,100,100,0,0,0,0,bon_CH_STATUS_CURSE,50,bon_NONE] // Illusion Skull Ring [1]
 ,[2390,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ASPD_MUL,8,"set_ref" + (fl_WEAPON),9,bon_CRIT,15,"set_ref" + (fl_WEAPON),9,bon_RES_STATUS_CURSE,100,"set_ref" + (fl_WEAPON),11,bon_ATK,100,bon_NONE] // Illusion Skull Ring + Illusion Book of the Apocalypse
-,[2391,itm_type_ACCESSORY,2001,0,0,1,20,100,0,0,0,0,bon_STR,3,"blvl_hi",100,bon_ATK,100,bon_NONE] // Illusion Ring [1]
+,[2391,itm_type_ACCESSORY,2001,0,0,1,20,100,0,0,0,0,bon_STR,3,"blvl_hi",100,bon_ATK,30,bon_NONE] // Illusion Ring [1]
 ,[2392,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ASPD_MUL,10,"set_ref" + (fl_WEAPON),9,bon_DMG_CRIT,10,"set_ref" + (fl_WEAPON),11,bon_DMG_RC_BRUTE,25,bon_NONE] // Illusion Ring + Illusion Infiltrator
 ,[2393,itm_type_ACCESSORY,0,1,0,1,10,100,0,0,0,0,bon_NONE] //Vampire''s Familiar [1]'
-//Illusion of Frozen,0,0,0,0,
+//Illusion of Frozen
 ,[2394,weapTyp_KNUCKLE,215,250,4,2,50,120,0,0,0,0,bon_DMG_SKILL + skill_SUR_SKY_NET_BLOW,10,bon_DMG_SKILL + skill_SUR_DRAGON_COMBO,10,"ev_ref",2,bon_DMG_SKILL + skill_SUR_SKY_NET_BLOW,5,"ev_ref",2,bon_DMG_SKILL + skill_SUR_DRAGON_COMBO,5,"ev_ref",3,bon_DMG_SKILL + skill_SUR_TIGER_CANNON,5,bon_NONE] // Illusion Combo Battle Glove [2]
 ,[2395,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ATK,40,"set_ref"+(fl_WEAPON+fl_GARMENT),7,bon_DMG_SKILL + skill_SUR_TIGER_CANNON,20,"set_sum"+(fl_WEAPON+fl_GARMENT),18,bon_DELAY_SKILL_FLAT + skill_SUR_FLASH_COMBO,1,"set_sum"+(fl_WEAPON+fl_GARMENT),22,bon_DMG_SKILL + skill_SUR_TIGER_CANNON,15,bon_NONE] // Illusion Combo Battle Glove + Illusion Muffler
 ,[2396,weapTyp_HUUMA_SHURIKEN,221,250,4,2,150,120,0,0,0,0,bon_MATK,50,"ev_ref",1,bon_DMG_RANGE,3,"ev_ref",3,bon_ATK,30,bon_NONE] // Illusion Huuma Fluttering Snow [2]
@@ -2474,20 +2474,29 @@
 ,[2400,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_HP_ADD,1000,bon_MATK,-50,bon_NONE] // Illusion Survivor''s Manteau + Survivor''s Rod'
 ,[2401,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL + skill_WAR_CRIMSON_ROCK,10,"set_ref" + (fl_WEAPON+fl_GARMENT),7,bon_DMG_SKILL + skill_WAR_HELL_INFERNO,40,"set_sum" + (fl_WEAPON+fl_GARMENT),18,bon_INC_MAGIC_WIND,10,"set_sum" + (fl_WEAPON+fl_GARMENT),18,bon_INC_MAGIC_DARK,10,"set_sum" + (fl_WEAPON+fl_GARMENT),22,bon_INC_MAGIC_FIRE,10,bon_NONE] // Illusion Survivor''s Manteau + Illusion Wizardry Staff'
 ,[2402,itm_type_SHIELD,213,190,0,1,160,120,0,0,110,110,bon_INT,2,bon_VIT,3,bon_MDEF,3,"ev_ref",1,bon_DMG_SKILL + skill_ROY_EARTH_DRIVE,7,bon_UNBREAKABLE,1,bon_NONE] // Illusion Sacred Mission [1]
-//Moon Knight Shields,0,0,0,0,
+//Moon Knight Shields
 ,[2403,itm_type_SHIELD,0,0,0,1,80,1,0,0,116,115,bon_ASPD_MUL,10,bon_PHY_ATK,3,bon_MATK_MUL,3,bon_RED_ELE_NEUTRAL,7,bon_RED_ELE_WATER,7,bon_RED_ELE_EARTH,7,bon_RED_ELE_FIRE,7,bon_RED_ELE_WIND,7,bon_RED_ELE_POISON,7,bon_RED_ELE_HOLY,7,bon_RED_ELE_SHADOW,7,bon_RED_ELE_DARK,7,bon_RED_ELE_GHOST,7,bon_RED_ELE_UNDEAD,7,"ref_lvl",7,bon_ATK,10,"ref_lvl",7,bon_MATK,10,"ref_lvl",9,bon_ASPD_ADD,1,"ref_lvl",12,bon_RED_CASTDELAY,3,bon_NONE] //Moon Knight Shield
 ,[2404,itm_type_SHIELD,0,0,0,1,80,1,0,0,116,115,bon_ASPD_MUL,10,bon_PHY_ATK,3,bon_MATK_MUL,3,bon_RED_ELE_NEUTRAL,7,bon_RED_ELE_WATER,7,bon_RED_ELE_EARTH,7,bon_RED_ELE_FIRE,7,bon_RED_ELE_WIND,7,bon_RED_ELE_POISON,7,bon_RED_ELE_HOLY,7,bon_RED_ELE_SHADOW,7,bon_RED_ELE_DARK,7,bon_RED_ELE_GHOST,7,bon_RED_ELE_UNDEAD,7,"ref_lvl",7,bon_ATK,10,"ref_lvl",7,bon_MATK,10,"ref_lvl",9,bon_ASPD_ADD,1,"ref_lvl",12,bon_RED_CASTDELAY,3,bon_NONE] //Bloody Knight Shield
 ,[2405,itm_type_SHIELD,0,0,0,1,80,1,0,117,116,115,bon_ASPD_MUL,10,bon_PHY_ATK,5,bon_MATK_MUL,5,bon_RED_ELE_NEUTRAL,10,bon_RED_ELE_WATER,10,bon_RED_ELE_EARTH,10,bon_RED_ELE_FIRE,10,bon_RED_ELE_WIND,10,bon_RED_ELE_POISON,10,bon_RED_ELE_HOLY,10,bon_RED_ELE_SHADOW,10,bon_RED_ELE_DARK,10,bon_RED_ELE_GHOST,10,bon_RED_ELE_UNDEAD,10,"ref_lvl",7,bon_ATK,20,"ref_lvl",7,bon_MATK,20,"ref_lvl",9,bon_ASPD_ADD,2,"ref_lvl",12,bon_RED_CASTDELAY,5,bon_NONE] //Sun Knight Shield
-//,0,0,0,0,
+//
 ,[2406,itm_type_ACCESSORY,0,0,0,1,10,100,0,0,0,0,"bstr_hi",90,bon_PHY_ATK,3,"bdex_hi",90,bon_DMG_RANGE,3,"bvit_hi",90,bon_HP_ADD,1000,bon_NONE] //Sheriff's Left Badge
 ,[2407,itm_type_ACCESSORY,0,0,0,1,10,100,0,0,0,0,"bint_hi",90,bon_MATK_MUL,3,"bdex_hi",90,bon_RED_CAST,5,"bvit_hi",90,bon_HP_ADD,1000,bon_NONE] //Sheriff's Right Badge
 ,[2408,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL + skill_MEC_ARM_CANNON,50,bon_NONE] //"Upgrade Part - Plate" + "Upgrade Part - Engine" not displayed in game ???
-
+//
 ,[2409,itm_type_ACCESSORY,0,0,0,1,50,80,0,0,0,0,bon_ASPD_MUL,10,bon_DMG_ELE_NEUTRAL,5,bon_DMG_ELE_WATER,5,bon_DMG_ELE_EARTH,5,bon_DMG_ELE_FIRE,5,bon_DMG_ELE_WIND,5,bon_DMG_ELE_POISON,5,bon_DMG_ELE_HOLY,5,bon_DMG_ELE_SHADOW,5,bon_DMG_ELE_GHOST,5,bon_DMG_ELE_UNDEAD,5,bon_NONE] // Verus Core
 ,[2410,itm_type_HEAD_UPPER,0,2,0,1,30,1,0,0,0,0,bon_MDEF,2,bon_RED_CAST,6,bon_ASPD_MUL,6,bon_NONE] // Korean Judge Hat
 ,[2411,itm_type_HEAD_UPPER,0,0,0,0,30,1,0,0,0,0,bon_RED_RC_DEMI_HUMAN,10,"ref_lvl",7,bon_RED_RC_DEMI_HUMAN,2,bon_NONE] // Processor on Head
 ,[2412,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"set_ref" + 1,7,bon_ASPD_MUL,10,"set_ref" + 1,7,bon_DMG_SKILL + skill_MEC_BOOST_KNUCKLE,30,"set_ref" + 1,7,bon_DMG_SKILL + skill_MEC_VULCAN_ARM,50,"set_ref" + 1,9,bon_ASPD_MUL,10,"set_ref" + 1,9,bon_DMG_SKILL + skill_MEC_BOOST_KNUCKLE,30,"set_ref" + 1,9,bon_DMG_SKILL + skill_MEC_VULCAN_ARM,50,bon_NONE] // Processor on Head + Pile Bunker
-//,[2413,itm_type_,0,0,0,0,0,0,0,0,0,0,bon_NONE] 
+//
+,[2413,itm_type_ACCESSORY,0,0,0,1,40,100,0,0,0,0,bon_PHY_ATK,5,bon_RED_CAST,-10,bon_NONE] //Imperial Glove
+,[2414,itm_type_ACCESSORY,0,0,0,1,40,100,0,0,0,0,bon_PHY_ATK,5,bon_RED_CAST,-10,bon_NONE] //Rebellion's Scarf
+,[2415,itm_type_ACCESSORY,0,0,0,1,50,50,0,0,0,0,bon_STR,1,bon_INT,1,bon_HP_MUL,3,bon_SP_MUL,3,bon_NONE] //Imperial Ring
+,[2416,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //Imperial Ring + Imperial Guard
+,[2417,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"ev_weap_ref",2,bon_DMG_SKILL + skill_ROY_SPEAR_CANNON,7,"ev_weap_ref",2,bon_DMG_SKILL + skill_ROY_VANISHING_POINT,7,bon_NONE] //Imperial Ring + Imperial Spear
+,[2418,itm_type_HEAD_UPPER,0,8,0,0,10,70,0,0,0,0,bon_RED_RC_DEMI_HUMAN,11,bon_NONE] //Jejecap
+
+,[2419,itm_type_ACCESSORY,0,0,0,1,10,20,0,0,0,0,"ev_blvl",3,bon_DMG_SKILL + skill_MEC_AXE_TORNADO,1,"ev_blvl",5,bon_DMG_SKILL + skill_MEC_POWER_SWING,1,bon_NONE] //Arquien's Necklace
+,[2420,itm_type_HEAD_UPPER,212,20,0,1,20,100,0,0,0,0,bon_DELAY_SKILL_FLAT + skill_MEC_AXE_BOOMERANG,1,"ref_lvl",9,bon_DMG_SKILL + skill_MEC_AXE_BOOMERANG,40,"ref_lvl",9,bon_DMG_SKILL + skill_MEC_AXE_TORNADO,40,bon_NONE] //Sea Captain Hat
 
 //
 //"ev_ref" = for every x refine
@@ -3114,6 +3123,9 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2401,2399,2383,"NULL"] // Illusion Survivor's Manteau + Illusion Wizardry Staff
 ,[2408,2023,2025,"NULL"] // Illusion Survivor's Manteau + Illusion Wizardry Staff
 ,[2412,2411,1288,"NULL"] // Processor on Head + Pile Bunker
+,[2416,2415,1277,"NULL"] //Imperial Ring + Imperial Guard
+,[2417,2415,1269,"NULL"] //Imperial Ring + Imperial Spear
+// ,[,,,,"NULL"]
 // ,[,,,,"NULL"]
 
 // ,[itm_set,item1,item2,...,"NULL"] // 

@@ -2359,6 +2359,10 @@ function CalcCriticalMod()
 	{// Illusion Skull Ring + Illusion Book of the Apocalypse
 		n_tok[bon_DMG_CRIT] += 5 * Math.floor(n_A_Weapon_ATKplus / 2);
 	}
+	if(EquipNumSearch(2414))
+	{//Rebellion's Scarf
+		n_Delay[bon_DMG_CRIT] += 3 * SkillSearch(skill_REB_DRAGON_TAIL);
+	}
 	
 //Enchants
 	if(EnchNumSearch( 1406 ))
@@ -6359,10 +6363,15 @@ function calcASPD()
 	}
 	if(EquipNumSearch(2253))
 	{//YSF01 Plate + Greave
-			equipASPD += n_A_SHOES_DEF_PLUS;
+		equipASPD += n_A_SHOES_DEF_PLUS;
+	}
+	if(EquipNumSearch(2414))
+	{//Rebellion's Scarf
+		equipASPD += 2 * SkillSearch(skill_REB_MASS_SPIRAL);
 	}
 	// if(EquipNumSearch())
 	// {
+		// equipASPD += ;
 	// }
 	
 //Cards
@@ -7194,6 +7203,10 @@ function CalcDelay()
 	if(EquipNumSearch(2400))
 	{//Illusion Survivor's Manteau + Survivor's Rod
 		n_tok[bon_RED_CASTDELAY] += 3 * Math.floor(n_A_Weapon_ATKplus / 3);
+	}
+	if(EquipNumSearch(2414))
+	{//Rebellion's Scarf
+		n_tok[bon_RED_CASTDELAY] += SkillSearch(skill_REB_FIRE_RAIN);
 	}
 	
 	// Skills

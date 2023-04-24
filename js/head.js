@@ -1519,6 +1519,34 @@ function ApplySkillModifiers( damage )
 		}
 	}
 	
+	if(EquipNumSearch(2414))
+	{//Rebellion's Scarf
+		if(n_A_ActiveSkill == skill_REB_FIRE_RAIN)
+		{
+			dmgMultiplier += 5 * SkillSearch(skill_REB_FIRE_RAIN);
+		}
+		if(n_A_ActiveSkill == skill_REB_MASS_SPIRAL)
+		{
+			dmgMultiplier += 5 * SkillSearch(skill_REB_MASS_SPIRAL);
+		}
+		if(n_A_ActiveSkill == skill_REB_QUICK_DRAW_SHOT)
+		{
+			dmgMultiplier += 5 * SkillSearch(skill_REB_ETERNAL_CHAIN);
+		}
+		if(n_A_ActiveSkill == skill_REB_SHATTERING_STORM)
+		{
+			dmgMultiplier += 10 * SkillSearch(skill_REB_SHATTERING_STORM);
+		}
+	}
+	
+	if(n_A_ActiveSkill == skill_ROY_SHIELD_PRESS)
+	{
+		if(EquipNumSearch(2416) )
+		{//Imperial Ring + Imperial Guard
+			if(n_A_LEFT_DEF_PLUS >= 5)
+				dmgMultiplier += 8 * (n_A_LEFT_DEF_PLUS - 5);
+		}
+	}
 	damage = damage * (100+StPlusCalc2(bon_DMG_SKILL+n_A_ActiveSkill)+StPlusCard(bon_DMG_SKILL+n_A_ActiveSkill) + dmgMultiplier) /100;
 	
 	/* 

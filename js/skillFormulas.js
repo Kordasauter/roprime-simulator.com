@@ -2540,6 +2540,10 @@ function CalcSkillDamage()
 			fixedCastTime *= 1.0;
 			variableCastTime *= 3.5 - (n_A_ActiveSkillLV * 0.5);
 			n_Delay[ksDelayCooldown] = 2.0;
+			if(EquipNumSearch(2414))
+			{//Rebellion's Scarf
+				n_Delay[ksDelayCooldown] -= 0.1 * SkillSearch(skill_REB_SHATTERING_STORM);
+			}
 		}
 		else if(n_A_ActiveSkill==skill_REB_VANISHING_BUSTER)
 		{
