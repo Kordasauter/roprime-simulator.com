@@ -2498,6 +2498,44 @@
 ,[2419,itm_type_ACCESSORY,0,0,0,1,10,20,0,0,0,0,"ev_blvl",3,bon_DMG_SKILL + skill_MEC_AXE_TORNADO,1,"ev_blvl",5,bon_DMG_SKILL + skill_MEC_POWER_SWING,1,bon_NONE] //Arquien's Necklace
 ,[2420,itm_type_HEAD_UPPER,212,20,0,1,20,100,0,0,0,0,bon_DELAY_SKILL_FLAT + skill_MEC_AXE_BOOMERANG,1,"ref_lvl",9,bon_DMG_SKILL + skill_MEC_AXE_BOOMERANG,40,"ref_lvl",9,bon_DMG_SKILL + skill_MEC_AXE_TORNADO,40,bon_NONE] //Sea Captain Hat
 
+//03/05/2023 update (ruro)
+,[2421,itm_type_GARMENT,0,0,0,1,10,1,0,0,0,0,bon_MATK,20,bon_DMG_RANGE,3,bon_DMG_CRIT,3,"ref_lvl",11,bon_RED_CASTDELAY,4,"ev_ref",3,bon_MATK,20,"ev_ref",3,bon_DMG_RANGE,3,"ev_ref",3,bon_DMG_CRIT,3,bon_NONE] //Violet Halo
+,[2422,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RED_CASTDELAY,6,bon_NONE] // Violet Halo + Dark Blinder
+
+,[2423,itm_type_SHADOW_EARRING,0,0,0,0,1,1,0,0,0,0,bon_NONE] //Swordman Shadow Earring
+,[2424,itm_type_SHADOW_PENDANT,0,0,0,0,1,1,0,0,0,0,bon_DMG_SKILL + skill_SW_MAGNUM_BREAK,20,"ev_ref",1,bon_DMG_SKILL + skill_SW_MAGNUM_BREAK,5,bon_NONE] // Swordman Shadow Pendant
+,[2425,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_PHY_ATK,1,bon_HP_MUL,1,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_PHY_ATK,2,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_HP_MUL,2,bon_NONE] // Swordman Shadow Earring + Pendant
+,[2426,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,10,bon_HP_MUL,5,bon_SP_MUL,5,bon_DEFIGN_RC_NON_BOSS,50,bon_MDEFIGN_RC_NON_BOSS,50,bon_NONE] // Full Swordman Shadow Set
+
+,[2427,itm_type_SHADOW_EARRING,0,0,0,0,1,1,0,0,0,0,bon_DMG_SKILL + skill_ME_MAMMONITE,20,"ev_ref",1,bon_DMG_SKILL + skill_ME_MAMMONITE,5,bon_NONE] // Merchant Shadow Earring
+,[2428,itm_type_SHADOW_PENDANT,0,0,0,0,1,1,0,0,0,0,bon_DMG_SKILL + skill_ME_CART_REVOLUTION,20,"ev_ref",1,bon_DMG_SKILL + skill_ME_CART_REVOLUTION,5,bon_NONE] // Merchant Shadow Pendant
+,[2429,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_PHY_ATK,1,bon_HP_MUL,1,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_PHY_ATK,2,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_HP_MUL,2,bon_NONE] // Merchant Shadow Earring + Pendant
+,[2430,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,10,bon_HP_MUL,5,bon_SP_MUL,5,bon_DEFIGN_RC_NON_BOSS,50,bon_MDEFIGN_RC_NON_BOSS,50,bon_NONE] // Full Merchant Shadow Set
+
+,[2431,itm_type_SHADOW_EARRING,0,0,0,0,1,1,0,0,0,0,bon_NONE] // Acolyte Shadow Earring
+,[2432,itm_type_SHADOW_PENDANT,0,0,0,0,1,1,0,0,0,0,bon_DMG_SKILL + skill_AC_HOLY_LIGHT,50,"ev_ref",1,bon_DMG_SKILL + skill_AC_HOLY_LIGHT,10,bon_NONE] // Acolyte Shadow Pendant
+,[2433,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK_MUL,1,bon_SP_MUL,1,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_MATK_MUL,2,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_HP_MUL,2,bon_NONE] // Acolyte Shadow Earring + Pendant
+,[2434,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,10,bon_HP_MUL,5,bon_SP_MUL,5,bon_DEFIGN_RC_NON_BOSS,50,bon_MDEFIGN_RC_NON_BOSS,50,bon_NONE] // Full Acolyte Shadow Set
+
+,[2435,itm_type_SHADOW_EARRING,0,0,0,0,1,1,0,0,0,0,bon_CAST_SKILL + skill_MA_FIRE_BOLT,20,bon_CAST_SKILL + skill_MA_COLD_BOLT,20,bon_CAST_SKILL + skill_MA_LIGHTNING_BOLT,20,"ev_ref",1,bon_CAST_SKILL + skill_MA_FIRE_BOLT,3,"ev_ref",1,bon_CAST_SKILL + skill_MA_COLD_BOLT,3,"ev_ref",1,bon_CAST_SKILL + skill_MA_LIGHTNING_BOLT,3,bon_NONE] // Mage Shadow Earring
+,[2436,itm_type_SHADOW_PENDANT,0,0,0,0,1,1,0,0,0,0,bon_DMG_SKILL + skill_MA_FIRE_WALL,20,"ev_ref",1,bon_DMG_SKILL + skill_MA_FIRE_WALL,5,bon_NONE] // Mage Shadow Pendant
+,[2437,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK_MUL,1,bon_SP_MUL,1,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_MATK_MUL,2,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_HP_MUL,2,bon_NONE] // Mage Shadow Earring + Pendant
+,[2438,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,10,bon_HP_MUL,5,bon_SP_MUL,5,bon_DEFIGN_RC_NON_BOSS,50,bon_MDEFIGN_RC_NON_BOSS,50,bon_NONE] // Full Mage Shadow Set
+
+,[2439,itm_type_SHADOW_EARRING,0,0,0,0,1,1,0,0,0,0,bon_NONE] // Thief Shadow Earring
+,[2440,itm_type_SHADOW_PENDANT,0,0,0,0,1,1,0,0,0,0,bon_DMG_SKILL + skill_TH_ENVENOM,20,"ev_ref",1,bon_DMG_SKILL + skill_TH_ENVENOM,5,bon_NONE] // Thief Shadow Pendant
+,[2441,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_PHY_ATK,1,bon_HP_MUL,1,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_PHY_ATK,2,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_HP_MUL,2,bon_NONE] // Thief Shadow Earring + Pendant
+,[2442,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,10,bon_HP_MUL,5,bon_SP_MUL,5,bon_DEFIGN_RC_NON_BOSS,50,bon_MDEFIGN_RC_NON_BOSS,50,bon_NONE] // Full Thief Shadow Set
+
+,[2443,itm_type_SHADOW_EARRING,0,0,0,0,1,1,0,0,0,0,bon_NONE] // Archer Shadow Earring
+,[2444,itm_type_SHADOW_PENDANT,0,0,0,0,1,1,0,0,0,0,bon_DMG_SKILL + skill_AR_ARROW_SHOWER,20,"ev_ref",1,bon_DMG_SKILL + skill_AR_ARROW_SHOWER,5,bon_NONE] // Archer Shadow Pendant
+,[2445,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_PHY_ATK,1,bon_HP_MUL,1,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_PHY_ATK,2,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_HP_MUL,2,bon_NONE] // Archer Shadow Earring + Pendant
+,[2446,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,10,bon_HP_MUL,5,bon_SP_MUL,5,bon_DEFIGN_RC_NON_BOSS,50,bon_MDEFIGN_RC_NON_BOSS,50,bon_NONE] // Full Archer Shadow Set
+
+// ,[2447,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
+// ,[2448,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
+// ,[2449,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
+// ,[2450,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
 //
 //"ev_ref" = for every x refine
 //"ev_ref",x,bonus,amount,
@@ -2775,6 +2813,14 @@ function BuildItemDescription( bonusType, bonusValue )
 	if(bonusType  == bon_MDEFIGN_RC_BOSS)
 	{
 		CBIstr += "On [Boss] monsters<br>Ignores " + bonusValue + "% of target's DEF.<br>";
+	}
+	if(bonusType  == bon_DEFIGN_RC_NON_BOSS)
+	{
+		CBIstr += "On [Normal] monsters<br>Ignores " + bonusValue + "% of target's DEF.<br>";
+	}
+	if(bonusType  == bon_MDEFIGN_RC_NON_BOSS)
+	{
+		CBIstr += "On [Normal] monsters<br>Ignores " + bonusValue + "% of target's DEF.<br>";
 	}
 	if(bonusType  == bon_MDMG_ELE_ALL)
 	{
@@ -3091,7 +3137,7 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2311,2263,1816,"NULL"] // Shadow Chaser Shadow Set
 ,[2312,2264,1817,"NULL"] // Warlock Shadow Set
 ,[2313,2265,1821,"NULL"] // Wanderer Shadow Set
-// ,[2313,2265,1820,"NULL"] // Minstrel Shadow Set - Not in item description ??
+,[2313,2265,1820,"NULL"] // Minstrel Shadow Set - Not in item description ??
 ,[2314,2266,1812,"NULL"] // Genetic Shadow Set
 ,[2344,2317,2330,2342,"NULL"] // "Vigilante Set"
 ,[2345,2320,2331,2339,"NULL"] // "Elemental Set"
@@ -3125,6 +3171,27 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2412,2411,1288,"NULL"] // Processor on Head + Pile Bunker
 ,[2416,2415,1277,"NULL"] //Imperial Ring + Imperial Guard
 ,[2417,2415,1269,"NULL"] //Imperial Ring + Imperial Spear
+,[2422,2421,643,"NULL"] // Violet Halo + Dark Blinker
+,[2425,2424,2423,"NULL"] // Swordman Shadow Earring + Pendant
+,[2426,2424,2423,1720,1721,1809,1826,"NULL"] // Full Class Shadow Set(RK)
+,[2426,2424,2423,1723,1724,1810,1827,"NULL"] // Full Class Shadow Set(RG)
+,[2429,2428,2427,"NULL"] // Merchant Shadow Earring + Pendant
+,[2430,2428,2427,1729,1730,1812,1829,"NULL"] // Full Class Shadow Set(GEN)
+,[2430,2428,2427,1726,1727,1811,1828,"NULL"] // Full Class Shadow Set(MEC)
+,[2433,2432,2431,"NULL"] // Acolyte Shadow Earring + Pendant
+,[2434,2432,2431,1732,1733,1813,1830,"NULL"] // Full Class Shadow Set(AB)
+,[2434,2432,2431,1735,1736,1814,1831,"NULL"] // Full Class Shadow Set(SUR)
+,[2437,2436,2435,"NULL"] // Mage Shadow Earring + Pendant
+,[2438,2436,2435,1744,1745,1817,1834,"NULL"] // Full Class Shadow Set(WAR)
+,[2438,2436,2435,1747,1748,1818,1835,"NULL"] // Full Class Shadow Set(SOR)
+,[2441,2440,2439,"NULL"] // Thief Shadow Earring + Pendant
+,[2442,2440,2439,1738,1739,1815,1832,"NULL"] // Full Class Shadow Set(GX)
+,[2442,2440,2439,1741,1742,1816,1833,"NULL"] // Full Class Shadow Set(SC)
+,[2445,2444,2443,"NULL"] // Archer Shadow Earring + Pendant
+,[2446,2444,2443,1750,1751,1819,1836,"NULL"] // Full Class Shadow Set(RAN)
+,[2446,2444,2443,1756,1757,1821,1838,"NULL"] // Full Class Shadow Set(WAN)
+,[2446,2444,2443,1753,1754,1820,1837,"NULL"] // Full Class Shadow Set(MIN)
+// ,[,,,,"NULL"]
 // ,[,,,,"NULL"]
 // ,[,,,,"NULL"]
 

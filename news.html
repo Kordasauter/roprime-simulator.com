@@ -9,7 +9,7 @@
     <meta name="description" content="The Ragnarok Prime Calculator, able to simulate stats, equipment, status resistance, skills and damage from Characters in PVM, MVP and PVP environments">
     <meta name="author" content="Kord">
 	<meta name="keywords" content="Ragnarok,Online,Ragnarok Online,EuRO,PVP,PVM,WOE,MVP,Calc,Calculator,Sim,Simulator,New,Current,prime,Ragnarok Prime,RO Prime,Loki,4 Games,185/65,185">
-	<link rel=«canonical» href=«https://roprime-simulator.com/news.html»>
+	<link rel="canonical" href="https://roprime-simulator.com/news.html">
     <title>Ragnarok Prime Simulator - News</title>
 
     <!-- Custom fonts for this template-->
@@ -72,7 +72,7 @@
             <hr class="sidebar-divider">
 
             <!-- Nav Item - Dashboard -->
-			<div class="sidebar-heading">Last update : 25/04/2023 </div>
+			<div class="sidebar-heading">Last update : 03/05/2023 </div>
             <li class="nav-item">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-calculator"></i>
@@ -100,29 +100,29 @@
                     <span>Central Lab Code: <span id="code"></span><br>
 						<table style="border:solid;">
 							<tr>
-								<td style="text-align:center;color:red;">
-									•
+								<td style="text-align:center;background-color: red;">
+									S8
 								</td>
-								<td style="text-align:center;color:orange;">
-									•
+								<td style="text-align:center;background-color: orange;">
+									S7
 								</td>
-								<td style="text-align:center;color:yellow;">
-									•
+								<td style="text-align:center;background-color: yellow;">
+									S6
 								</td>
-								<td style="text-align:center;color:cyan;">
-									•
+								<td style="text-align:center;background-color: cyan;">
+									S5
 								</td>
-								<td style="text-align:center;color:blue;">
-									•
+								<td style="text-align:center;color: white;background-color: blue;">
+									S4
 								</td>
-								<td style="text-align:center;color:green;">
-									•
+								<td style="text-align:center;background-color: green;">
+									S3
 								</td>
-								<td style="text-align:center;color:yellow;">
-									•
+								<td style="text-align:center;background-color: yellow;">
+									S2
 								</td>
-								<td style="text-align:center;color:cyan;">
-									•
+								<td style="text-align:center;background-color: cyan;">
+									S1
 								</td>
 							</tr>
 							<tr>
@@ -167,9 +167,9 @@
 				// using supplied offset
 				var nd = new Date(utc + (3600000*offset));
 				<!-- d = d.getTime() + (d.getTimezoneOffset()); -->
-				let code = ((nd.getUTCMonth() + 1) + (nd.getUTCDate())) * 5
+				let code = ((nd.getMonth() + 1) + (nd.getDate())) * 5
 				document.getElementById("code").innerHTML = code;
-				for(let i = 7; code > 0; i--)
+				for(let i = 7; i >= 0; i--)
 				{
 					let num = Math.pow(2,i);
 					if(code >= num)
@@ -255,8 +255,37 @@
 								</div>
 								<!-- Card Body -->
 								<div class="card-body">
-					
 									<div id="news" class="shadow">
+										<div class="padded">
+											<u><b>03/05/2023:</b></u> 
+											<ul style="margin-left: 5px;">
+												<li><b>Has been added :</b></li>
+												<ul>
+													<li>Violet Halo [1] (Garment)</li>
+													<li>1st Class Shadow gears</li>
+													<ul>
+														<li>Swordman Shadow Earring</li>
+														<li>Swordman Shadow Pendant</li>
+														<li>Merchant Shadow Earring</li>
+														<li>Merchant Shadow Pendant</li>
+														<li>Acolyte Shadow Earring</li>
+														<li>Acolyte Shadow Pendant</li>
+														<li>Mage Shadow Earring</li>
+														<li>Mage Shadow Pendant</li>
+														<li>Thief Shadow Earring</li>
+														<li>Thief Shadow Pendant</li>
+														<li>Archer Shadow Earring</li>
+														<li>Archer Shadow Pendant</li>
+													</ul>
+												</ul>
+												<li><b>Has been fixed :</b></li>
+												<ul>
+													<li>Fixed an issue with Grand Cross and Stave Crasher</li>
+													<li>Improved visibility of Central Lab daily code</li>
+												</ul>
+											</ul>
+											-Kord
+										</div>
 										<div class="padded">
 											<u><b>25/04/2023:</b></u> 
 											<ul style="margin-left: 5px;">
@@ -286,29 +315,6 @@
 											</ul>
 											-Kord
 										</div>
-										<div class="padded">
-											<u><b>12/04/2023:</b></u> 
-											<ul style="margin-left: 5px;">
-												<li><b>Has been added :</b></li>
-												<ul>
-													<li>Verus Core (Accessory)</li>
-													<li>Korean Judge Hat (Upper Headgear)</li>
-													<li>Processor on Head (Upper Headgear)</li>
-												</ul>
-											</ul>
-											-Kord
-										</div>
-										<div class="padded">
-											<u><b>10/04/2023:</b></u> 
-											<ul style="margin-left: 5px;">
-												<li><b>Has been improved :</b></li>
-												<ul>
-													<li>Refinement simulator</li>
-													<li>Removed some ads</li>
-												</ul>
-											</ul>
-											-Kord
-										</div>
 									</div>
 								</div>
 							</div>
@@ -325,6 +331,29 @@
 								<!-- Card Body -->
 								<div class="card-body">
 									<div id="old">
+										<u><b>12/04/2023:</b></u> <input class="button" type="button" value="Show/Hide" onclick="javascript:$('#note12042023').toggle()">	
+										<span style="display: none;" id="note12042023">
+										<ul style="margin-left: 5px;">
+											<li><b>Has been added :</b></li>
+											<ul>
+												<li>Verus Core (Accessory)</li>
+												<li>Korean Judge Hat (Upper Headgear)</li>
+												<li>Processor on Head (Upper Headgear)</li>
+											</ul>
+										</ul>
+										-Kord
+										</span><br>
+										<u><b>10/04/2023:</b></u> <input class="button" type="button" value="Show/Hide" onclick="javascript:$('#note10042023').toggle()">	
+										<span style="display: none;" id="note10042023">
+										<ul style="margin-left: 5px;">
+											<li><b>Has been improved :</b></li>
+											<ul>
+												<li>Refinement simulator</li>
+												<li>Removed some ads</li>
+											</ul>
+										</ul>
+										-Kord
+										</span><br>
 										<u><b>08/04/2023:</b></u>  <input class="button" type="button" value="Show/Hide" onclick="javascript:$('#note08042023').toggle()">	
 										<span style="display: none;" id="note08042023">
 										<ul style="margin-left: 5px;">

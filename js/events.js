@@ -4431,6 +4431,58 @@ function DisplayItemDescription( ItemIndex )
 						let first = true;
 						let tmp_str = "";
 						flag = parseInt(ItemOBJ[setIndex][j].substr(7));
+						if((flag - 4096)>=0)
+						{
+							tmp_str += "Shadow Pendant";
+							first = false;
+							flag = flag - 4096;
+						}
+						if((flag - 2048)>=0)
+						{
+							if(first)
+								tmp_str += "Shadow Earring";
+							else
+								tmp_str += " and Shadow Earring";
+							first = false;
+							flag = flag - 2048;
+						}
+						if((flag - 1024)>=0)
+						{
+							if(first)
+								tmp_str += "Shadow Shoes";
+							else
+								tmp_str += " and Shadow Shoes";
+							first = false;
+							flag = flag - 1024;
+						}
+						if((flag - 512)>=0)
+						{
+							if(first)
+								tmp_str += "Shadow Shield";
+							else
+								tmp_str += " and Shadow Shield";
+							first = false;
+							flag = flag - 512;
+						}
+						if((flag - 256)>=0)
+						{
+							if(first)
+								tmp_str += "Shadow Glove";
+							else
+								tmp_str += " and Shadow Glove";
+							first = false;
+							flag = flag - 256;
+						}
+						if((flag - 128)>=0)
+						{
+							if(first)
+								tmp_str += "Shadow Armor";
+							else
+								tmp_str += " and Shadow Armor";
+							first = false;
+							flag = flag - 128;
+						}
+						//---------------------------------------------
 						if((flag - 64)>=0)
 						{
 							tmp_str += "Shoes";
@@ -4503,9 +4555,64 @@ function DisplayItemDescription( ItemIndex )
 						let first = true;
 						let tmp_str = "";
 						flag = parseInt(ItemOBJ[setIndex][j].substr(7));
+						if((flag - 4096)>=0)
+						{
+							tmp_str += "Shadow Pendant";
+							first = false;
+							flag = flag - 4096;
+						}
+						if((flag - 2048)>=0)
+						{
+							if(first)
+								tmp_str += "Shadow Earring";
+							else
+								tmp_str += " and Shadow Earring";
+							first = false;
+							flag = flag - 2048;
+						}
+						if((flag - 1024)>=0)
+						{
+							if(first)
+								tmp_str += "Shadow Shoes";
+							else
+								tmp_str += " and Shadow Shoes";
+							first = false;
+							flag = flag - 1024;
+						}
+						if((flag - 512)>=0)
+						{
+							if(first)
+								tmp_str += "Shadow Shield";
+							else
+								tmp_str += " and Shadow Shield";
+							first = false;
+							flag = flag - 512;
+						}
+						if((flag - 256)>=0)
+						{
+							if(first)
+								tmp_str += "Shadow Glove";
+							else
+								tmp_str += " and Shadow Glove";
+							first = false;
+							flag = flag - 256;
+						}
+						if((flag - 128)>=0)
+						{
+							if(first)
+								tmp_str += "Shadow Armor";
+							else
+								tmp_str += " and Shadow Armor";
+							first = false;
+							flag = flag - 128;
+						}
+						//---------------------------------------------
 						if((flag - 64)>=0)
 						{
-							tmp_str += "Shoes";
+							if(first)
+								tmp_str += "Shoes";
+							else
+								tmp_str += " and Shoes";
 							first = false;
 							flag = flag - 64;
 						}

@@ -400,6 +400,11 @@ with( document.calcForm )
 		w += n_tok[bon_MDEFIGN_RC_BOSS];
 		
 	}
+	if(n_B[en_BOSS] == 0)
+	{
+		w += n_tok[bon_MDEFIGN_RC_NON_BOSS];
+		
+	}
 	if ( w )
 	{
 		if(w < 0)

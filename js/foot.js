@@ -624,11 +624,15 @@ with ( document.calcForm )
 	if ( n_B[en_BOSS] == 1 && EquipNumSearch(1228) )
 	{ // Southern Cross headgear?
 		if(n_A_HEAD_DEF_PLUS >= 6)
-			n_tok[297] += (n_A_HEAD_DEF_PLUS - 5);
+			n_tok[bon_DEFIGN_RC_BOSS] += (n_A_HEAD_DEF_PLUS - 5);
 	}
 	if ( n_B[en_BOSS] == 1 )
 	{
-		n_tok[bon_DEFIGN_RC_ALL] += n_tok[297];
+		n_tok[bon_DEFIGN_RC_ALL] += n_tok[bon_DEFIGN_RC_BOSS];
+	}
+	if ( n_B[en_BOSS] == 0 )
+	{
+		n_tok[bon_DEFIGN_RC_ALL] += n_tok[bon_DEFIGN_RC_NON_BOSS];
 	}
 
 	if ( EquipNumSearch(1083) && n_A_Weapon_ATKplus >= 6 )
@@ -1943,6 +1947,37 @@ function BonusCalc(bonus_condition,refine,ref_opt,bonus_eq)
 		
 		if(bonus_condition == "set_sum")
 		{
+			if((flag - 4096)>=0)
+			{
+				flag = flag - 4096;
+				ref2 += n_A_SHADOW_PENDANT_DEF_PLUS;
+			}
+			if((flag - 2048)>=0)
+			{
+				flag = flag - 2048;
+				ref2 += n_A_SHADOW_EARRING_DEF_PLUS;
+			}
+			if((flag - 1024)>=0)
+			{
+				flag = flag - 1024;
+				ref2 += n_A_SHADOW_SHOES_DEF_PLUS;
+			}
+			if((flag - 512)>=0)
+			{
+				flag = flag - 512;
+				ref2 += n_A_SHADOW_SHIELD_DEF_PLUS;
+			}
+			if((flag - 256)>=0)
+			{
+				flag = flag - 256;
+				ref2 += n_A_SHADOW_WEAPON_DEF_PLUS;
+			}
+			if((flag - 128)>=0)
+			{
+				flag = flag - 128;
+				ref2 += n_A_SHADOW_BODY_DEF_PLUS;
+			}
+			//------------------------------------------------------
 			if((flag - 64)>=0)
 			{
 				flag = flag - 64;
@@ -1982,6 +2017,43 @@ function BonusCalc(bonus_condition,refine,ref_opt,bonus_eq)
 		else if (bonus_condition == "set_ref")
 		{
 			ref2 = 1;
+			if((flag - 4096)>=0)
+			{
+				flag = flag - 4096;
+				if(n_A_SHADOW_PENDANT_DEF_PLUS < ref_opt)
+					ref2 = 0;
+			}
+			if((flag - 2048)>=0)
+			{
+				flag = flag - 2048;
+				if(n_A_SHADOW_EARRING_DEF_PLUS < ref_opt)
+					ref2 = 0;
+			}
+			if((flag - 1024)>=0)
+			{
+				flag = flag - 1024;
+				if(n_A_SHADOW_SHOES_DEF_PLUS < ref_opt)
+					ref2 = 0;
+			}
+			if((flag - 512)>=0)
+			{
+				flag = flag - 512;
+				if(n_A_SHADOW_SHIELD_DEF_PLUS < ref_opt)
+					ref2 = 0;
+			}
+			if((flag - 256)>=0)
+			{
+				flag = flag - 256;
+				if(n_A_SHADOW_WEAPON_DEF_PLUS < ref_opt)
+					ref2 = 0;
+			}
+			if((flag - 128)>=0)
+			{
+				flag = flag - 128;
+				if(n_A_SHADOW_BODY_DEF_PLUS < ref_opt)
+					ref2 = 0;
+			}
+			//------------------------------------------------------
 			if((flag - 64)>=0)
 			{
 				flag = flag - 64;

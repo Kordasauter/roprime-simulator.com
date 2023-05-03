@@ -2854,7 +2854,7 @@ function CalcSkillDamage()
 			Last_DMG_A[i] = Last_DMG_B[i] = w_DMG[i];
 			InnStr[i] += Last_DMG_A[i];
 		}
-		n_PerHIT_DMG = ApplyDamageModifiers(0)+n_A_WeaponLV_seirenATK;
+		n_PerHIT_DMG = ApplyDamageModifiers(0)+n_A_Weapon_ATK;
 		w_DMG[1] = (w_DMG[1] * w_HIT + n_PerHIT_DMG *(100-w_HIT))/100;
 		
 		fixedCastTime *= 0.0;
@@ -3672,7 +3672,7 @@ function CalcSkillDamage()
 
 		for ( var i = 0; i < 3; i++ )
 		{
-			w_DMG[i] = baseDamage[i] * (100 - n_A_DEF) /100 - work_A_VITDEF[i] + n_A_WeaponLV_seirenATK;
+			w_DMG[i] = baseDamage[i] * (100 - n_A_DEF) /100 - work_A_VITDEF[i] + n_A_Weapon_ATK;
 			w_DMG[i] = Math.floor(w_DMG[i] * (w_SkillMod + n_A_ActiveSkillLV * 0.4));
 
 			w = BK_n_A_MATK[i] *(100 - n_A_MDEF)/100 - n_A_INTMDEF;
@@ -3699,7 +3699,7 @@ function CalcSkillDamage()
 
 		for(var i=0;i<=2;i++)
 		{
-			w_DMG[i] = baseDamage[i] * defReduction(n_B[en_HARDDEF]) - n_B_DEF2[i] + n_A_WeaponLV_seirenATK;
+			w_DMG[i] = baseDamage[i] * defReduction(n_B[en_HARDDEF]) - n_B_DEF2[i] + n_A_Weapon_ATK;
 			w_DMG[i] *= w_SkillMod + n_A_ActiveSkillLV * 0.4;
 			w_DMG[i] = Math.floor(w_DMG[i] * element[n_B[en_ELEMENT]][ele_DARK]/100);
 			w = BK_n_A_MATK[i] *(100 - n_B[en_HARDMDEF])/100 -n_B_MDEF2;

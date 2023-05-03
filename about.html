@@ -9,7 +9,7 @@
     <meta name="description" content="The Ragnarok Prime Calculator, able to simulate stats, equipment, status resistance, skills and damage from Characters in PVM, MVP and PVP environments">
     <meta name="author" content="Kord">
 	<meta name="keywords" content="Ragnarok,Online,Ragnarok Online,EuRO,PVP,PVM,WOE,MVP,Calc,Calculator,Sim,Simulator,New,Current,prime,Ragnarok Prime,RO Prime,Loki,4 Games,185/65,185">
-	<link rel=«canonical» href=«https://roprime-simulator.com/about.html»>
+	<link rel="canonical" href="https://roprime-simulator.com/about.html">
     <title>Ragnarok Prime Simulator - About</title>
 
     <!-- Custom fonts for this template-->
@@ -70,7 +70,7 @@
             <hr class="sidebar-divider">
 
             <!-- Nav Item - Dashboard -->
-			<div class="sidebar-heading">Last update : 25/04/2023</div>
+			<div class="sidebar-heading">Last update : 03/05/2023</div>
             <li class="nav-item">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-calculator"></i>
@@ -98,29 +98,29 @@
                     <span>Central Lab Code: <span id="code"></span><br>
 						<table style="border:solid;">
 							<tr>
-								<td style="text-align:center;color:red;">
-									•
+								<td style="text-align:center;background-color: red;">
+									S8
 								</td>
-								<td style="text-align:center;color:orange;">
-									•
+								<td style="text-align:center;background-color: orange;">
+									S7
 								</td>
-								<td style="text-align:center;color:yellow;">
-									•
+								<td style="text-align:center;background-color: yellow;">
+									S6
 								</td>
-								<td style="text-align:center;color:cyan;">
-									•
+								<td style="text-align:center;background-color: cyan;">
+									S5
 								</td>
-								<td style="text-align:center;color:blue;">
-									•
+								<td style="text-align:center;color: white;background-color: blue;">
+									S4
 								</td>
-								<td style="text-align:center;color:green;">
-									•
+								<td style="text-align:center;background-color: green;">
+									S3
 								</td>
-								<td style="text-align:center;color:yellow;">
-									•
+								<td style="text-align:center;background-color: yellow;">
+									S2
 								</td>
-								<td style="text-align:center;color:cyan;">
-									•
+								<td style="text-align:center;background-color: cyan;">
+									S1
 								</td>
 							</tr>
 							<tr>
@@ -165,9 +165,9 @@
 				// using supplied offset
 				var nd = new Date(utc + (3600000*offset));
 				<!-- d = d.getTime() + (d.getTimezoneOffset()); -->
-				let code = ((nd.getUTCMonth() + 1) + (nd.getUTCDate())) * 5
+				let code = ((nd.getMonth() + 1) + (nd.getDate())) * 5
 				document.getElementById("code").innerHTML = code;
-				for(let i = 7; code > 0; i--)
+				for(let i = 7; i >= 0; i--)
 				{
 					let num = Math.pow(2,i);
 					if(code >= num)
