@@ -1694,7 +1694,7 @@ function StPlusCalc()
 	{
 		for(var j = 0; j < 3; j++)
 		{
-			if(EnchNumSearch( 1391 + (i*3) + j))//Rune of Strength 1 = 1391 ~ Rune of Luck 3 = 1408
+			if(EnchNumSearch( 5151 + (i*3) + j))//Rune of Strength 1 = 1391 ~ Rune of Luck 3 = 1408
 			{
 				var tmp_bonus = 0;
 				if(n_A_BODY_DEF_PLUS >= 7)
@@ -1767,6 +1767,7 @@ function StPlusCalc()
 function StPlusCalc2( nSTP2 )
 { 
 	var w = bon_NONE;
+
 	for ( var i = 0; i <= 32; i++ )
 	{	 // for each equip/ card
 		for ( var j = 0; ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START] != bon_NONE; j += 2 )

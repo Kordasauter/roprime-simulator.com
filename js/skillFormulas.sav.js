@@ -2043,7 +2043,6 @@ function CalcSkillDamage()
 		{
 			var weaponWeight = ItemOBJ[n_A_Equip[0]][itm_WEIGHT];//ItemOBJ[n_A_Equip[eq_SHIELD]][itm_WEIGHT];
 			var weaponLevel = ItemOBJ[n_A_Equip[0]][itm_WLVL];//ItemOBJ[n_A_Equip[eq_SHIELD]][itm_WLVL];
-			console.log(weaponLevel*weaponWeight*n_A_BaseLV/100.0);
 			// ATK [{(Skill Level x 100) + (Caster s Job Level x 10)} + (Weapon Weight x Weapon Level) x (Caster s Base Level / 100)] %
 			w_SkillMod = ( ( n_A_ActiveSkillLV + ( n_A_JobLV * 10 / 100.0 ) ) + ( ( weaponWeight * weaponLevel ) ) * (n_A_BaseLV / 100.0) / 100.0 );
 			

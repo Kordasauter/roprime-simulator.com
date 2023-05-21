@@ -2009,19 +2009,8 @@ function ClickArmor( data, isRefine )
 		formElements["A_ARMOR_ENCHANT" + "_4"].disabled = false;
 		formElements["A_ARMOR_ENCHANT" + "_3"].disabled = false;
 	}
-	else if(armor_id == 2207 || armor_id == 2210)
-	{// Flattery Robe || Abusive Robe
-		if(!isRefine)
-			CleanEnchant("A_ARMOR_ENCHANT");
-		var ench1 = 101;
-		for ( var i = 0; EnchantListOBJ[ench1][i] != "NULL"; i++ )
-		{
-			formElements["A_ARMOR_ENCHANT" + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench1][i]][1],EnchantOBJ[EnchantListOBJ[ench1][i]][0]);
-		}
-		formElements["A_ARMOR_ENCHANT" + "_4"].disabled = false;
-	}
-	else if(armor_id == 2230 || armor_id == 2231)
-	{// Agenda Robe || Consultation Robe
+	else if(armor_id == 2207 || armor_id == 2210 || armor_id == 2230 || armor_id == 2231)
+	{// Flattery Robe || Abusive Robe || Agenda Robe || Consultation Robe
 		if(!isRefine)
 			CleanEnchant("A_ARMOR_ENCHANT");
 		var ench1 = 101;

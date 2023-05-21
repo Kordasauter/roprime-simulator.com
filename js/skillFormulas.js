@@ -191,7 +191,6 @@ function clashingATKFormula(weight)
 		tempAttack[i] *= ( specialRacialMod + 100 ) / 100;
 		// multiply size mod
 		// tempAttack[i] *= ( tempsizemod + 100) / 100;
-		console.log(sizeMod);
 		tempAttack[i] *= ( sizeMod + 100 ) / 100;
 		// multiply boss mod
 		tempAttack[i] *= ( bossMod + 100 ) / 100;

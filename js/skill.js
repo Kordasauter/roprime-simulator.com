@@ -1519,6 +1519,9 @@ JobSkillActiveOBJ = [
 ,[159,1,102, 6, 0, 1] // Turn Undead 6
 ,[160,1,277, 5, 0, 1] // Napalm Vulcan 5
 ,[161,1, 40, 5, 3, 1] // Double Strafe 5
+,[162,1,125, 3,10, 1] // Meteor Storm 3 (10%)
+,[163,1,125, 4,15, 1] // Meteor Storm 4 (15%)
+,[164,1,125, 5,20, 1] // Meteor Storm 5 (20%)
 
  //IDAutocast, Type(0=when hit, 1=when attack), SkillID, SkillLVL, Chance, AutoCastTrigger
 ];

@@ -304,7 +304,7 @@ function SetCard()
 ,[252,1,"Orc Lady",0,bon_DMG_ORC,30,0]
 ,[253,1,"Fur Seal","When equipped by an Acolyte type class:<BR> [Crit] against Undead element and Demon type monsters + 9",bon_HIT,10,bon_FLEE,3,0]
 ,[254,1,"Shellfish","Increase damage on [Crab] by 30%",bon_DMG_SPE_CRAB,30,0]
-,[255,1,"Samrai Specter","Disables your natural HP regen and drains 666 HP every 10 seconds<BR>You lose 999 HP when unequipping",bon_IGN_DEF_NONBOSS,1,0]
+,[255,1,"Samurai Specter","Disables your natural HP regen and drains 666 HP every 10 seconds<BR>You lose 999 HP when unequipping",bon_IGN_DEF_NONBOSS,1,0]
 ,[256,7,"Gargoyle","1% chance to obtain [Box of Thunder] as a drop when killing an Insect race monster",0]
 ,[257,6,"Gajomart",0,bon_EXP_RC_PLANT,10,bon_RED_RC_PLANT,-20,0]
 ,[258,5,"Kappa","If refined to +5 or less gain MDEF+8",0]

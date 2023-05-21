@@ -2065,6 +2065,21 @@ function CalcAttackMod()
 			n_tok[bon_PHY_ATK] += Math.floor(n_A_HEAD_DEF_PLUS / 2);
 	}
 	
+	if(n_A_Equip[eq_ACCI] == 2449)
+	{//Demon God's Ring
+		if(n_A_card[card_loc_ACCI] == 638 || n_A_card[card_loc_ACCI] == 639 || n_A_card[card_loc_ACCI] == 640)
+		{
+			n_tok[bon_PHY_ATK] += 5;
+		}
+	}
+	if(n_A_Equip[eq_ACCII] == 2449)
+	{//Demon God's Ring
+		if(n_A_card[card_loc_ACCII] == 638 || n_A_card[card_loc_ACCII] == 639 || n_A_card[card_loc_ACCII] == 640)
+		{
+			n_tok[bon_PHY_ATK] += 5;
+		}
+	}
+	
 //shadows
 	if ( EquipNumSearch( 1660 ) )
 	{ // "Shadow Strongman Gloves"
@@ -2113,17 +2128,17 @@ function CalcAttackMod()
 	}
 	
 //enchants
-	if(EnchNumSearch( 1391 ))
+	if(EnchNumSearch( 5151 ))
 	{//Rune of Strength 1
 		if(n_A_BODY_DEF_PLUS >= 10)
 			n_tok[bon_PHY_ATK] += 5;
 	}
-	if(EnchNumSearch( 1392 ))
+	if(EnchNumSearch( 5152 ))
 	{//Rune of Strength 2
 		if(n_A_BODY_DEF_PLUS >= 11)
 			n_tok[bon_PHY_ATK] += 7;
 	}
-	if(EnchNumSearch( 1393 ))
+	if(EnchNumSearch( 5153 ))
 	{//Rune of Strength 3
 		if(n_A_BODY_DEF_PLUS >= 12)
 			n_tok[bon_PHY_ATK] += 8;
@@ -2235,10 +2250,10 @@ function CalcAttackMod()
 	{
 		multiplier = ( n_A_BaseLV + n_A_LUK + n_A_DEX ) / ( 12 - SkillSearch( skill_TKM_LUNAR_WRATH ) * 3 );
 	}
-	else if ( SkillSearch( skill_REB_HIT_BARREL ) )
-	{
-		multiplier = (6 + (SkillSearch( skill_REB_HIT_BARREL ) * 2)) * SkillSearch( skill_GS_COIN_FLIP); 
-	}
+	// else if ( SkillSearch( skill_REB_HIT_BARREL ) )
+	// {
+		// multiplier = (6 + (SkillSearch( skill_REB_HIT_BARREL ) * 2)) * SkillSearch( skill_GS_COIN_FLIP); 
+	// }
 	// }
 	if( SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL) && SkillSearch(skill_KAG_GET_ELEMENTAL_SEAL) == ele_EARTH )
 	{
@@ -2361,21 +2376,35 @@ function CalcCriticalMod()
 	}
 	if(EquipNumSearch(2414))
 	{//Rebellion's Scarf
-		n_Delay[bon_DMG_CRIT] += 3 * SkillSearch(skill_REB_DRAGON_TAIL);
+		n_tok[bon_DMG_CRIT] += 3 * SkillSearch(skill_REB_DRAGON_TAIL);
+	}
+	if(n_A_Equip[eq_ACCI] == 2449)
+	{//Demon God's Ring
+		if(n_A_card[card_loc_ACCI] == 653 || n_A_card[card_loc_ACCI] == 654 || n_A_card[card_loc_ACCI] == 655)
+		{
+			n_tok[bon_DMG_CRIT] += 5;
+		}
+	}
+	if(n_A_Equip[eq_ACCII] == 2449)
+	{//Demon God's Ring
+		if(n_A_card[card_loc_ACCII] == 653 || n_A_card[card_loc_ACCII] == 654 || n_A_card[card_loc_ACCII] == 655)
+		{
+			n_tok[bon_DMG_CRIT] += 5;
+		}
 	}
 	
 //Enchants
-	if(EnchNumSearch( 1406 ))
+	if(EnchNumSearch( 5166 ))
 	{//Rune of Luck 1
 		if(n_A_BODY_DEF_PLUS >= 10)
 			n_tok[bon_DMG_CRIT] += 5;
 	}
-	if(EnchNumSearch( 1407 ))
+	if(EnchNumSearch( 5167 ))
 	{//Rune of Luck 2
 		if(n_A_BODY_DEF_PLUS >= 11)
 			n_tok[bon_DMG_CRIT] += 7;
 	}
-	if(EnchNumSearch( 1408 ))
+	if(EnchNumSearch( 5168 ))
 	{//Rune of Luck 3
 		if(n_A_BODY_DEF_PLUS >= 12)
 			n_tok[bon_DMG_CRIT] += 8;
@@ -2801,17 +2830,17 @@ function CalcRangedMod()
 	}
 	
 //Enchants
-	if(EnchNumSearch( 1403 ))
+	if(EnchNumSearch( 5163 ))
 	{//Rune of Dexterity 1
 		if(n_A_BODY_DEF_PLUS >= 10)
 			n_tok[bon_DMG_RANGE] += 5;
 	}
-	if(EnchNumSearch( 1404 ))
+	if(EnchNumSearch( 5164 ))
 	{//Rune of Dexterity 2
 		if(n_A_BODY_DEF_PLUS >= 11)
 			n_tok[bon_DMG_RANGE] += 7;
 	}
-	if(EnchNumSearch( 1405 ))
+	if(EnchNumSearch( 5165 ))
 	{//Rune of Dexterity 3
 		if(n_A_BODY_DEF_PLUS >= 12)
 			n_tok[bon_DMG_RANGE] += 8;
@@ -3879,6 +3908,20 @@ function calcHP()
 	{// Wyrmeater's Shadow Set || Tiger Spirit Shadow Set
 		hpMultiplier += Math.floor((n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_PENDANT_DEF_PLUS)/2);
 	}
+	if(n_A_Equip[eq_ACCI] == 2449)
+	{//Demon God's Ring
+		if(n_A_card[card_loc_ACCI] == 644 || n_A_card[card_loc_ACCI] == 645 || n_A_card[card_loc_ACCI] == 646)
+		{
+			hpMultiplier += 5;
+		}
+	}
+	if(n_A_Equip[eq_ACCII] == 2449)
+	{//Demon God's Ring
+		if(n_A_card[card_loc_ACCII] == 644 || n_A_card[card_loc_ACCII] == 645 || n_A_card[card_loc_ACCII] == 646)
+		{
+			hpMultiplier += 5;
+		}
+	}
 	
 //Enchant
 	if(EnchNumSearch( 286 ))//Special LUK = 286
@@ -3888,17 +3931,17 @@ function calcHP()
 			hpMultiplier += 1;
 		}
 	}
-	if(EnchNumSearch( 1397 ))
+	if(EnchNumSearch( 5157 ))
 	{//Rune of Vitality 1
 		if(n_A_BODY_DEF_PLUS >= 10)
 			hpMultiplier += 5;
 	}
-	if(EnchNumSearch( 1398 ))
+	if(EnchNumSearch( 5158 ))
 	{//Rune of Vitality 2
 		if(n_A_BODY_DEF_PLUS >= 11)
 			hpMultiplier += 7;
 	}
-	if(EnchNumSearch( 1399 ))
+	if(EnchNumSearch( 5159 ))
 	{//Rune of Vitality 3
 		if(n_A_BODY_DEF_PLUS >= 12)
 			hpMultiplier += 8;
@@ -5582,17 +5625,17 @@ function calcPDodge( n_A_LUCKY )
 	}
 
 //Enchants
-	if(EnchNumSearch( 1394 ))
+	if(EnchNumSearch( 5154 ))
 	{//Rune of Agility 1
 		if(n_A_BODY_DEF_PLUS >= 10)
 			n_A_LUCKY += 5;
 	}
-	if(EnchNumSearch( 1395 ))
+	if(EnchNumSearch( 5155 ))
 	{//Rune of Agility 2
 		if(n_A_BODY_DEF_PLUS >= 11)
 			n_A_LUCKY += 7;
 	}
-	if(EnchNumSearch( 1396 ))
+	if(EnchNumSearch( 5156 ))
 	{//Rune of Agility 3
 		if(n_A_BODY_DEF_PLUS >= 12)
 			n_A_LUCKY += 5;
@@ -6046,9 +6089,7 @@ function calcASPD()
 	}
 	if ( n_A_JobSearch2() === cls_CRU && SkillSearch( skill_KN_CAVALIER_MASTERY ) )
 	{ // Cavalier Mastery
-		console.log("before aspdMultiplier = " + aspdMultiplier);
 		aspdMultiplier -= ( 5 - SkillSearch( skill_KN_CAVALIER_MASTERY ) ) * 10;
-		console.log("after aspdMultiplier = " + aspdMultiplier);
 	}
 	if ( n_A_JobSearch2() === cls_KNI &&
 		 ( SkillSearch( skill_KN_CAVALIER_MASTERY ) || SkillSearch( skill_RUN_DRAGON_TRAINING ) ) )
@@ -6369,6 +6410,21 @@ function calcASPD()
 	{//Rebellion's Scarf
 		equipASPD += 2 * SkillSearch(skill_REB_MASS_SPIRAL);
 	}
+	if(n_A_Equip[eq_ACCI] == 2449)
+	{//Demon God's Ring
+		if(n_A_card[card_loc_ACCI] == 641 || n_A_card[card_loc_ACCI] == 642 || n_A_card[card_loc_ACCI] == 643)
+		{
+			equipASPD += 5;
+		}
+	}
+	if(n_A_Equip[eq_ACCII] == 2449)
+	{//Demon God's Ring
+		if(n_A_card[card_loc_ACCII] == 641 || n_A_card[card_loc_ACCII] == 642 || n_A_card[card_loc_ACCII] == 643)
+		{
+			equipASPD += 5;
+		}
+	}
+	
 	// if(EquipNumSearch())
 	// {
 		// equipASPD += ;
@@ -6862,6 +6918,20 @@ function CalcVariableCast()
 	if ( EquipNumSearch(1996) )
 	{ // Shadow Doram Mage Gloves
 		VCT -= n_A_SHADOW_WEAPON_DEF_PLUS;
+	}
+	if(n_A_Equip[eq_ACCI] == 2449)
+	{//Demon God's Ring
+		if(n_A_card[card_loc_ACCI] == 647 || n_A_card[card_loc_ACCI] == 648 || n_A_card[card_loc_ACCI] == 649)
+		{
+			VCT -= 5;
+		}
+	}
+	if(n_A_Equip[eq_ACCII] == 2449)
+	{//Demon God's Ring
+		if(n_A_card[card_loc_ACCII] == 647 || n_A_card[card_loc_ACCII] == 648 || n_A_card[card_loc_ACCII] == 649)
+		{
+			VCT -= 5;
+		}
 	}
 	
 // Skills
@@ -7621,6 +7691,10 @@ function calcRaceElementalReduction()
 		}
 		else
 			n_tok[bon_RED_ELE_NEUTRAL] += 5;
+	}
+	if(EquipNumSearch(2453))
+	{//Seraphim Robe
+		n_tok[bon_RED_ELE_HOLY] -= SkillSearch(skill_CR_FAITH) * 3;
 	}
 
 //Shadows

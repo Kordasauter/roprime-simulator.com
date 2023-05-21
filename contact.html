@@ -70,146 +70,7 @@
             <hr class="sidebar-divider">
 
             <!-- Nav Item - Dashboard -->
-			<div class="sidebar-heading">Last update : 03/05/2023</div>
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-calculator"></i>
-                    <span>Simulator<br></span></a>
-			</li>
-			
-            <li class="nav-item">
-                <a class="nav-link" href="expscaler.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>EXP Scaler</span></a>
-            </li>
-			<li class="nav-item">
-                <a class="nav-link" href="refine.html">
-                    <i class="fas fa-fw fa-hammer"></i>
-                    <span>Refine<br></span></a>
-			</li>
-			<li class="nav-item">
-                <a class="nav-link" href="news.html">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Patch Notes<br></span></a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link">
-                    <i class="fas fa-fw fa-calendar-days"></i>
-                    <span>Central Lab Code: <span id="code"></span><br>
-						<table style="border:solid;">
-							<tr>
-								<td style="text-align:center;background-color: red;">
-									S1
-								</td>
-								<td style="text-align:center;background-color: orange;">
-									S2
-								</td>
-								<td style="text-align:center;background-color: yellow;">
-									S3
-								</td>
-								<td style="text-align:center;background-color: cyan;">
-									S4
-								</td>
-								<td style="text-align:center;color: white;background-color: blue;">
-									S5
-								</td>
-								<td style="text-align:center;background-color: green;">
-									S6
-								</td>
-								<td style="text-align:center;background-color: yellow;">
-									S7
-								</td>
-								<td style="text-align:center;background-color: cyan;">
-									S8
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<span id="code128"></span>
-								</td>
-								<td>
-									<span id="code64"></span>
-								</td>
-								<td>
-									<span id="code32"></span>
-								</td>
-								<td>
-									<span id="code16"></span>
-								</td>
-								<td>
-									<span id="code8"></span>
-								</td>
-								<td>
-									<span id="code4"></span>
-								</td>
-								<td>
-									<span id="code2"></span>
-								</td>
-								<td>
-									<span id="code1"></span>
-								</td>
-							</tr>
-						</table>
-					</span>
-				</a>
-			</li>
-			<script>
-				let offset = 2; //gtm + 2
-				// create Date object for current location
-				let d = new Date();
-				// convert to msec
-				// subtract local time zone offset
-				// get UTC time in msec
-				let utc = d.getTime() + (d.getTimezoneOffset() * 60000);
-				// create new Date object for different city
-				// using supplied offset
-				var nd = new Date(utc + (3600000*offset));
-				<!-- d = d.getTime() + (d.getTimezoneOffset()); -->
-				let code = ((nd.getMonth() + 1) + (nd.getDate())) * 5
-				document.getElementById("code").innerHTML = code;
-				for(let i = 7; i >= 0; i--)
-				{
-					let num = Math.pow(2,i);
-					if(code >= num)
-					{
-						document.getElementById("code" + num).innerHTML = "ON";
-						code -= num;
-					}
-					else
-						document.getElementById("code" + num).innerHTML = "-";
-				}
-			</script>
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Others
-            </div> 
-			
-			<li class="nav-item active">
-                <a class="nav-link" href="contact.html">
-                    <i class="fas fa-fw fa-envelope"></i>
-                    <span>Contact</span></a>
-            </li>
-			
-			<li class="nav-item">
-                <a class="nav-link" href="https://github.com/Kordasauter/roprime-simulator.com">
-                    <i class="fa-brands fa-github"></i>
-                    <span>GitHub</span></a>
-            </li>
-			
-			<li class="nav-item">
-                <a class="nav-link" href="https://streamlabs.com/kord_en_live/tip">
-                    <i class="fa-brands fa-paypal"></i>
-                    <span>Donate</span></a>
-            </li>
-			
-			<li class="nav-item">
-                <a class="nav-link" href="about.html">
-                    <i class="fas fa-fw fa-question"></i>
-                    <span>About</span></a>
-            </li>
+			<span id="menu"></span>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -309,6 +170,43 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+	<script>
+		var version = '17'; 
+		var jsassets = [
+		'js/menu.js',
+		];
+		
+		function loadAssets() {
+			jsassets.forEach(function(src) {
+                var script = document.createElement('script');
+                script.src = src;
+                script.async = false;
+                document.head.appendChild(script);
+            }); 
+		}
+		
+		$(function() {
+			loadAssets();
+			//activate Chosen for selects
+			$(window).on('selects-ready', function() {
+				$("select").chosen({no_results_text: "Oops, nothing found!"}); 
+			});
+			
+			//hide policy window on dev
+			if(window.location.href.match('C:')) 
+				$('.privacypolicies-com---reset').hide();
+		
+		 	<!-- $(".card" ).draggable(); -->
+		});
+		$(":button").on('mousedown',function() {
+
+		  jQuery(this).addClass('activebutton');
+		  
+		  }).on('mouseup mouseleave', function() {
+			jQuery(this).removeClass('activebutton');
+		});
+		
+	</script>
 </body>
 
 </html>

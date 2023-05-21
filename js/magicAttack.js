@@ -263,6 +263,21 @@ function calcMAtk( includeMultipliers )
 				matk_mul += Math.floor(n_A_HEAD_DEF_PLUS / 2);
 		}
 		
+		if(n_A_Equip[eq_ACCI] == 2449)
+	{//Demon God's Ring
+		if(n_A_card[card_loc_ACCI] == 647 || n_A_card[card_loc_ACCI] == 648 || n_A_card[card_loc_ACCI] == 649)
+		{
+			matk_mul += 5;
+		}
+	}
+	if(n_A_Equip[eq_ACCII] == 2449)
+	{//Demon God's Ring
+		if(n_A_card[card_loc_ACCII] == 647 || n_A_card[card_loc_ACCII] == 648 || n_A_card[card_loc_ACCII] == 649)
+		{
+			matk_mul += 5;
+		}
+	}
+		
 //Shadows
 		if ( EquipNumSearch( 1656 ) )
 		{ // "Shadow Mystic Gloves"
@@ -321,17 +336,17 @@ function calcMAtk( includeMultipliers )
 				matk_mul += 1;
 			}
 		}
-		if(EnchNumSearch( 1400 ))
+		if(EnchNumSearch( 5160 ))
 		{//Rune of Intellect 1
 			if(n_A_BODY_DEF_PLUS >= 10)
 				matk_mul += 5;
 		}
-		if(EnchNumSearch( 1401 ))
+		if(EnchNumSearch( 5161 ))
 		{//Rune of Intellect 2
 			if(n_A_BODY_DEF_PLUS >= 11)
 				matk_mul += 7;
 		}
-		if(EnchNumSearch( 1402 ))
+		if(EnchNumSearch( 5162 ))
 		{//Rune of Intellect 3
 			if(n_A_BODY_DEF_PLUS >= 12)
 				matk_mul += 8;
@@ -1446,7 +1461,7 @@ function CalcMagicDamage( rawDamage )
 	// Skill Multipliers from equipment
 	var matkMultiplier = 0;
 	// matkMultiplier = StPlusCalc2( 5000 + n_A_ActiveSkill ) + StPlusCard( 5000 + n_A_ActiveSkill /*+ StPlusEnchant( 5000 + n_A_ActiveSkill /*);
-	matkMultiplier = StPlusCalc2( 5000 + n_A_ActiveSkill ) + StPlusCard( 5000 + n_A_ActiveSkill );
+	// matkMultiplier = StPlusCalc2( 5000 + n_A_ActiveSkill ) + StPlusCard( 5000 + n_A_ActiveSkill );
 	
 	if ( n_A_ActiveSkill === skill_MA_NAPALM_BEAT ||
 		 n_A_ActiveSkill === skill_MA_SOUL_STRIKE ||

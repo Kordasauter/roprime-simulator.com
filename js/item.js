@@ -2245,10 +2245,10 @@
 ,[2204,itm_type_ACCESSORY,0,0,0,1,15,100,0,0,0,0,bon_NONE] // Shining Holy Water (Accessory)
 ,[2205,itm_type_SHIELD,0,30,0,1,300,100,0,0,0,0,bon_SKILL_ENABLE,62,bon_SKILL_AUTOCAST,145,bon_NONE] // Royal Guard Shield
 ,[2206,itm_type_ACCESSORY,0,0,0,0,10,40,0,0,0,0,bon_NONE] // Prontera Badge (Accessory)
-,[2207,itm_type_ARMOR,0,0,0,1,10,100,0,0,0,101,bon_SKILL_ENABLE,63,bon_MATK,50,bon_NONE] // Flattery Robe
+,[2207,itm_type_ARMOR,0,0,0,1,10,100,0,0,101,101,bon_SKILL_ENABLE,63,bon_MATK,50,bon_NONE] // Flattery Robe
 ,[2208,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_SP_MUL,10,bon_FLEE,10,bon_NONE] // Flattery Robe + Ancient Cape[0]\[1]
 ,[2209,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_HP_MUL,10,bon_MATK_MUL,2,bon_NONE] // Flattery Robe + Survivor''s Manteau'
-,[2210,itm_type_ARMOR,0,0,0,1,10,100,0,0,0,101,bon_SKILL_ENABLE,64,bon_NONE] // Abusive Robe
+,[2210,itm_type_ARMOR,0,0,0,1,10,100,0,0,101,101,bon_SKILL_ENABLE,64,bon_NONE] // Abusive Robe
 ,[2211,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_IGN_DEF_RC_DEMI_HUMAN,15,bon_IGN_DEF_RC_DEMON,15,bon_IGN_DEF_RC_UNDEAD,15,bon_LUK,3,bon_CRIT,10,bon_NONE] // Abusive Robe + Morrigane''s Manteau'
 ,[2212,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_IGN_DEF_RC_DEMI_HUMAN,15,bon_IGN_DEF_RC_DEMON,15,bon_IGN_DEF_RC_UNDEAD,15,bon_HP_MUL,10,bon_PHY_ATK,2,bon_NONE] // Abusive Robe + Valkyrie Manteau
 ,[2213,weapTyp_MACE,0,80,3,1,100,40,0,0,0,0,bon_ASPD_ADD,10,bon_NONE] // Spoon
@@ -2532,11 +2532,25 @@
 ,[2445,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_PHY_ATK,1,bon_HP_MUL,1,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_PHY_ATK,2,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_HP_MUL,2,bon_NONE] // Archer Shadow Earring + Pendant
 ,[2446,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,10,bon_HP_MUL,5,bon_SP_MUL,5,bon_DEFIGN_RC_NON_BOSS,50,bon_MDEFIGN_RC_NON_BOSS,50,bon_NONE] // Full Archer Shadow Set
 
-// ,[2447,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
-// ,[2448,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
-// ,[2449,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
-// ,[2450,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
-//
+,[2447,itm_type_HEAD_UPPER,0,5,0,1,20,10,0,0,0,0,bon_INT,1,bon_DEX,1,bon_MDEF,5,bon_MATK_MUL,2,"ref_lvl",7,bon_HEAL_MUL,5,"ref_lvl",9,bon_HEAL_MUL,5,"ref_lvl",9,bon_MATK_MUL,5,bon_NONE] // Holy Marching Hat
+,[2448,itm_type_ARMOR,0,50,0,1,100,100,0,0,0,0,bon_MDEF,10,bon_RED_CASTDELAY,10,bon_HEAL_MUL,2,bon_HEAL_REC,1,"ref_lvl",7,bon_DEF,50,"ref_lvl",7,bon_HEAL_MUL,4,"ref_lvl",7,bon_HEAL_REC,2,"ref_lvl",7,bon_UNBREAKABLE,1,"ref_lvl",8,bon_DEF,100,"ref_lvl",8,bon_DMG_RC_DEMI_HUMAN,7,"ref_lvl",8,bon_HEAL_MUL,6,"ref_lvl",8,bon_HEAL_REC,3,"ref_lvl",9,bon_DEF,150,"ref_lvl",9,bon_RES_STATUS_STONE,50,"ref_lvl",9,bon_HEAL_REC,3,bon_NONE] // Medical Scrubs
+,[2449,itm_type_ACCESSORY,0,0,0,1,50,100,0,0,0,0,bon_PHY_ATK,5,bon_MATK_MUL,5,bon_NONE] // Demon God's Ring
+
+,[2450,itm_type_GARMENT,0,30,0,1,50,80,0,0,0,0,bon_STR,2,bon_HP_MUL,10,bon_RED_ELE_NEUTRAL,-20,bon_RED_ELE_WATER,-20,bon_RED_ELE_FIRE,-20,bon_RED_ELE_WIND,-20,bon_RED_ELE_POISON,-20,bon_RED_ELE_HOLY,-20,bon_RED_ELE_SHADOW,-20,bon_RED_ELE_GHOST,-20,bon_NONE] // Loyalists Hood
+,[2451,itm_type_GARMENT,0,15,0,1,50,100,0,0,0,0,bon_HP_MUL,5,bon_SP_MUL,5,bon_MDEF,15,bon_RED_RC_DEMI_HUMAN,5,"ev_ref",3,bon_HP_MUL,3,"ev_ref",3,bon_SP_MUL,3,bon_NONE] // Manteau Of Guardsman
+,[2452,weapTyp_BOOK,0,180,3,4,50,100,0,0,0,0,bon_MATK,170,"ev_ref",1,bon_HP_ADD,200,"ev_ref",1,bon_SP_ADD,50,"ev_ref",1,bon_ASPD_MUL,1,bon_SKILL_AUTOCAST,162,"ref_lvl",8,bon_SKILL_AUTOCAST,163,"ref_lvl",10,bon_SKILL_AUTOCAST,164,bon_NONE] // Book of the Sun God
+,[2453,itm_type_GARMENT,0,18,0,1,30,90,0,0,0,0,bon_MDEF,10,bon_DEX,5,bon_INT,5,bon_INC_MAGIC_NEUTRAL,5,"ref_lvl",7,bon_INC_MAGIC_NEUTRAL,10,"ref_lvl",7,bon_RED_ELE_SHADOW,20,"ref_lvl",7,bon_RED_ELE_HOLY,20,"ref_lvl",9,bon_INC_MAGIC_NEUTRAL,10,"ref_lvl",9,bon_RED_ELE_SHADOW,20,"ref_lvl",9,bon_RED_ELE_HOLY,20,bon_NONE] // Seraphim Robe
+,[2454,itm_type_ARMOR,0,30,0,1,120,70,0,0,0,0,bon_MDEF,5,bon_RED_RC_BRUTE,5,"ev_ref",1,bon_MDEF,1,"ev_ref",1,bon_RED_RC_BRUTE,1,bon_NONE] // Shepherd Clothes
+
+// ,[2455,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
+// ,[2456,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
+// ,[2457,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
+// ,[2458,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
+// ,[2459,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
+// ,[2460,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
+// ,[2461,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
+
+
 //"ev_ref" = for every x refine
 //"ev_ref",x,bonus,amount,
 //"ref_lvl" = refine level over
