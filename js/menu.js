@@ -184,18 +184,14 @@ function CentralLabCode()
 	<!-- d = d.getTime() + (d.getTimezoneOffset()); -->
 	let code = ((nd.getMonth() + 1) + (nd.getDate())) * 5
 	bincode[8] = code;
-	// document.getElementById("code").innerHTML = code;
 	for(let i = 7; i >= 0; i--)
 	{
 		let num = Math.pow(2,i);
 		if(code >= num)
 		{
-			// document.getElementById("code" + num).innerHTML = "ON";
-			bincode[i] = true;
+			bincode[7-i] = true;
 			code -= num;
 		}
-		//else
-			// document.getElementById("code" + num).innerHTML = "-";
 	}
 	return bincode;
 }
