@@ -1546,6 +1546,16 @@ function ApplySkillModifiers( damage )
 				dmgMultiplier += 8 * (n_A_LEFT_DEF_PLUS - 5);
 		}
 	}
+	if(EquipNumSearch(2460) && n_A_HEAD_DEF_PLUS >= 9)
+	{//Magician's Night Cap
+		if(n_A_ActiveSkill == skill_MA_FIRE_BOLT || n_A_ActiveSkill == skill_MA_COLD_BOLT || n_A_ActiveSkill == skill_MA_LIGHTNING_BOLT )
+		{
+			dmgMultiplier += Math.floor(n_A_BaseLV / 5) * 3;
+		}
+	}
+	
+	
+	
 	damage = damage * (100+StPlusCalc2(bon_DMG_SKILL+n_A_ActiveSkill)+StPlusCard(bon_DMG_SKILL+n_A_ActiveSkill) + dmgMultiplier) /100;
 	
 	/* 

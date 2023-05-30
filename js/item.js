@@ -2542,13 +2542,23 @@
 ,[2453,itm_type_GARMENT,0,18,0,1,30,90,0,0,0,0,bon_MDEF,10,bon_DEX,5,bon_INT,5,bon_INC_MAGIC_NEUTRAL,5,"ref_lvl",7,bon_INC_MAGIC_NEUTRAL,10,"ref_lvl",7,bon_RED_ELE_SHADOW,20,"ref_lvl",7,bon_RED_ELE_HOLY,20,"ref_lvl",9,bon_INC_MAGIC_NEUTRAL,10,"ref_lvl",9,bon_RED_ELE_SHADOW,20,"ref_lvl",9,bon_RED_ELE_HOLY,20,bon_NONE] // Seraphim Robe
 ,[2454,itm_type_ARMOR,0,30,0,1,120,70,0,0,0,0,bon_MDEF,5,bon_RED_RC_BRUTE,5,"ev_ref",1,bon_MDEF,1,"ev_ref",1,bon_RED_RC_BRUTE,1,bon_NONE] // Shepherd Clothes
 
-// ,[2455,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
-// ,[2456,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
-// ,[2457,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
-// ,[2458,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
-// ,[2459,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
-// ,[2460,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
-// ,[2461,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
+,[2455,itm_type_HEAD_UPPER,217,15,0,1,20,100,0,0,0,0,bon_SP_ADD,200,"ref_lvl",9,bon_DMG_SKILL + skill_MIWA_SEVERE_RAINSTORM,25,bon_NONE] // Night Sparrow Hat
+,[2456,itm_type_HEAD_UPPER,216,10,0,1,20,100,0,0,0,0,bon_SP_ADD,200,"ref_lvl",9,bon_DMG_SKILL + skill_MIWA_SEVERE_RAINSTORM,25,bon_NONE] // Lyrica Hat
+,[2457,itm_type_HEAD_UPPER,0,6,0,1,10,10,0,0,0,0,bon_NONE] // Pirate's Folly
+,[2458,itm_type_HEAD_MIDDLE,0,6,0,0,20,100,0,0,0,0,bon_ALL_STATS,1,bon_MDEF,6,bon_RED_RC_DEMI_HUMAN,5,bon_RED_ELE_WATER,5,bon_RED_ELE_EARTH,5,bon_RED_ELE_FIRE,5,bon_RED_ELE_WIND,5,bon_NONE] // Maero Mask
+,[2459,itm_type_ACCESSORY,0,0,0,1,20,50,0,0,0,0,bon_MDEF,3,bon_CRIT,5,bon_NONE] // Critical Anklet
+,[2460,itm_type_HEAD_UPPER,218,25,20,1,0,100,0,0,0,0,"ev_bint",5,bon_MATK,2,bon_ASPD_ADD,5,bon_SKILL_ENABLE,50,bon_NONE] // Magician's Night Cap
+,[2461,itm_type_ACCESSORY,0,0,0,1,10,20,0,0,0,0,bon_MDMG_ELE_WATER,5,bon_MDMG_ELE_EARTH,5,bon_MDMG_ELE_FIRE,5,bon_MDMG_ELE_WIND,5,"ev_blvl",5,bon_DMG_SKILL + skill_MA_COLD_BOLT,1,"ev_blvl",5,bon_DMG_SKILL + skill_WI_EARTH_SPIKE,1,"ev_blvl",5,bon_DMG_SKILL + skill_MA_FIRE_BOLT,1,"ev_blvl",5,bon_DMG_SKILL + skill_MA_LIGHTNING_BOLT,1,bon_NONE] // Magical Ring
+,[2462,itm_type_ARMOR,0,5,0,1,150,50,0,0,0,0,"ev_ref",1,bon_HIT,1,"ev_ref",1,bon_FLEE,1,bon_NONE] // Prisoner's Uniform
+,[2463,itm_type_ACCESSORY,0,0,0,1,240,10,0,0,0,0,bon_ATK,5,bon_NONE] // Thief's Handcuff
+,[2464,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"ev_body_ref",1,bon_ATK,2,bon_NONE] // Thief's Handcuff + Prisoner's Uniform
+,[2465,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ATK,10,bon_NONE] // Thief's Handcuff + Blinker
+,[2466,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ATK,10,bon_NONE] // Thief's Handcuff + Bloodied Shackle Ball
+,[2467,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"ev_shoes_ref",1,bon_ATK,1,bon_NONE] // Thief's Handcuff + Shackles
+,[2468,itm_type_HEAD_UPPER,219,10,0,1,20,100,0,0,0,0,"ref_lvl",9,bon_DMG_SKILL + skill_GEN_CART_CANNON,15,bon_NONE] // Harvester Hat
+,[2469,itm_type_HEAD_UPPER,0,12,0,1,30,90,0,0,0,0,bon_STR,5,bon_INT,5,bon_DMG_SKILL + skill_GEN_CART_CANNON,10,bon_DMG_SKILL + skill_GEN_CART_TORNADO,5,"ref_lvl",5,bon_DMG_SKILL + skill_GEN_CART_CANNON,20,"ref_lvl",5,bon_DMG_SKILL + skill_GEN_CART_TORNADO,10,"ref_lvl",8,bon_DMG_SKILL + skill_GEN_CART_CANNON,30,"ref_lvl",8,bon_DMG_SKILL + skill_GEN_CART_TORNADO,20,bon_NONE] // Cylinder Hairband
+
+// ,[2470,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
 
 
 //"ev_ref" = for every x refine
@@ -3205,7 +3215,10 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2446,2444,2443,1750,1751,1819,1836,"NULL"] // Full Class Shadow Set(RAN)
 ,[2446,2444,2443,1756,1757,1821,1838,"NULL"] // Full Class Shadow Set(WAN)
 ,[2446,2444,2443,1753,1754,1820,1837,"NULL"] // Full Class Shadow Set(MIN)
-// ,[,,,,"NULL"]
+,[2464,2463,2462,"NULL"] // Thief's Handcuff + Prisoner's Uniform
+,[2465,2463,252,"NULL"] // Thief's Handcuff + Blinker
+,[2466,2463,725,"NULL"] // Thief's Handcuff + Bloodied Shackle Ball
+,[2467,2463,323,"NULL"] // Thief's Handcuff + Shackles
 // ,[,,,,"NULL"]
 // ,[,,,,"NULL"]
 

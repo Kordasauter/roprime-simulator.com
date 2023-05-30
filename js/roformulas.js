@@ -7053,6 +7053,11 @@ function CalcFixedCast()
 	{
 		reductionPercentage += n_A_SHOULDER_DEF_PLUS + n_A_BODY_DEF_PLUS + n_A_SHOES_DEF_PLUS;
 	}
+	
+	if ( EquipNumSearch(2455) || EquipNumSearch(2456) )
+	{ // Night Sparrow Hat || Lyrica Hat
+		reductionPercentage += SkillSearch(skill_MIWA_VOICE_LESSONS);
+	}
 	//Enchant
 	for(var i = 0; i < 6; i++)
 	{

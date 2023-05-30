@@ -1854,6 +1854,14 @@ function CalcSkillDamage()
 			
 			fixedCastTime *= 0.0;
 			variableCastTime *= 0.5 + 0.5 * n_A_ActiveSkillLV;
+			if(EquipNumSearch(2468))
+			{// Harvester Hat
+				variableCastTime *= 0.0;
+			}
+			if(EquipNumSearch(2469))
+			{// Cylinder Hairband
+				variableCastTime *= 0.0;
+			}
 			n_Delay[ksDelayGlobal] = 0.5;
 		}
 		else if ( n_A_ActiveSkill === skill_SUR_SKY_NET_BLOW )
