@@ -6476,7 +6476,7 @@ function CalcSkillDamage()
 					w_TotalHits = 4;
 				}	
 			}
-			else if (PATCH == 1)
+			else
 			{
 				w_TotalHits = 2;
 			}
