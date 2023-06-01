@@ -4493,6 +4493,7 @@ function CalcSkillDamage()
 	}
 	else if ( n_A_ActiveSkill === skill_MIWA_SEVERE_RAINSTORM )
 	{
+		damageType = kDmgTypeRanged;
 		// Local variables
 		var numHits = 12;
 		var physicalDamage = new Array();
@@ -6460,20 +6461,26 @@ function CalcSkillDamage()
 		{
 			n_A_Weapon_element = ele_NEUTRAL;
 			w_SkillMod = (( n_A_ActiveSkillLV * 1.2 ) +  SkillSearch( skill_MIWA_VOICE_LESSONS ) * 0.6 ) * n_A_BaseLV / 100.0; // skill mod
-			if ( n_A_ActiveSkillLV == 1 || n_A_ActiveSkillLV == 2 )
+			if (PATCH == 0)
+			{
+				if ( n_A_ActiveSkillLV == 1 || n_A_ActiveSkillLV == 2 )
+				{
+					w_TotalHits = 2;
+				}
+				else if ( n_A_ActiveSkillLV == 3 || n_A_ActiveSkillLV == 4 )
+				{
+					w_TotalHits = 3;
+				}
+				else
+				{
+					w_TotalHits = 4;
+				}	
+			}
+			else if (PATCH == 1)
 			{
 				w_TotalHits = 2;
 			}
-			else if ( n_A_ActiveSkillLV == 3 || n_A_ActiveSkillLV == 4 )
-			{
-				w_TotalHits = 3;
-			}
-			else
-			{
-				w_TotalHits = 4;
-			}
-			n_subHits = 1;
-			
+
 			fixedCastTime *= 0.0;
 			variableCastTime *= 0.5 + 0.5 * n_A_ActiveSkillLV;
 			n_Delay[ksDelayGlobal] = 1.0;
