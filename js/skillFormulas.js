@@ -26,7 +26,8 @@ var RANGED_SKILLS = [
     skill_GS_SPREAD_SHOT,
     skill_GS_GUNSLINGER_MINE,
     skill_MIWA_GREAT_ECHO,
-    skill_RUN_HUNDRED_SPEAR,
+	skill_MIWA_SEVERE_RAINSTORM,
+	skill_RUN_HUNDRED_SPEAR,
     skill_GEN_CART_CANNON,
     skill_SUR_RAMPAGE_BLASTER,
     skill_SUR_KNUCKLE_ARROW,
@@ -4497,16 +4498,19 @@ function CalcSkillDamage()
 		// Local variables
 		var numHits = 12;
 		var physicalDamage = new Array();
-		if(PATCH == 0)
+		if (PATCH == 2)
 		{
-			w_SkillMod = ( ( n_A_DEX + n_A_AGI ) * n_A_ActiveSkillLV / 5 ) / 100.0;
-		}
-		else if(PATCH == 1 || PATCH == 2)
-		{
-			if(n_A_WeaponType == weapTyp_INSTRUMENT || n_A_WeaponType == weapTyp_WHIP)
-				w_SkillMod = (n_A_ActiveSkillLV * 1.2) + ((n_A_DEX + n_A_AGI)/200);
+			if (n_A_WeaponType == weapTyp_INSTRUMENT || n_A_WeaponType == weapTyp_WHIP)
+				w_SkillMod = (n_A_ActiveSkillLV * 1.2) + ((n_A_DEX + n_A_AGI) / 200);
 			else
 				w_SkillMod = n_A_ActiveSkillLV + ((n_A_DEX + n_A_AGI)/200);
+		}
+		else
+		{
+			if (PATCH == 1)
+				w_SkillMod = ( ( n_A_DEX + n_A_AGI ) * (n_A_ActiveSkillLV / 5) * 1.5) / 100.0;
+			else
+				w_SkillMod = ( ( n_A_DEX + n_A_AGI ) * n_A_ActiveSkillLV / 5 ) / 100.0;
 		}
 		w_SkillMod *= n_A_BaseLV / 100.0;
 		CalcAtkMods02( w_SkillMod, 0 );
@@ -6461,26 +6465,18 @@ function CalcSkillDamage()
 		{
 			n_A_Weapon_element = ele_NEUTRAL;
 			w_SkillMod = (( n_A_ActiveSkillLV * 1.2 ) +  SkillSearch( skill_MIWA_VOICE_LESSONS ) * 0.6 ) * n_A_BaseLV / 100.0; // skill mod
-			if (PATCH == 0)
-			{
-				if ( n_A_ActiveSkillLV == 1 || n_A_ActiveSkillLV == 2 )
-				{
-					w_TotalHits = 2;
-				}
-				else if ( n_A_ActiveSkillLV == 3 || n_A_ActiveSkillLV == 4 )
-				{
-					w_TotalHits = 3;
-				}
-				else
-				{
-					w_TotalHits = 4;
-				}	
-			}
+
+			if (PATCH == 1 || PATCH == 2)
+				w_TotalHits = 2;
 			else
 			{
-				w_TotalHits = 2;
+				if ( n_A_ActiveSkillLV == 1 || n_A_ActiveSkillLV == 2 )
+					w_TotalHits = 2;
+				else if ( n_A_ActiveSkillLV == 3 || n_A_ActiveSkillLV == 4 )
+					w_TotalHits = 3;
+				else
+					w_TotalHits = 4;
 			}
-
 			fixedCastTime *= 0.0;
 			variableCastTime *= 0.5 + 0.5 * n_A_ActiveSkillLV;
 			n_Delay[ksDelayGlobal] = 1.0;
