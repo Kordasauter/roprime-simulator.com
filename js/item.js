@@ -2558,7 +2558,18 @@
 ,[2468,itm_type_HEAD_UPPER,219,10,0,1,20,100,0,0,0,0,"ref_lvl",9,bon_DMG_SKILL + skill_GEN_CART_CANNON,15,bon_NONE] // Harvester Hat
 ,[2469,itm_type_HEAD_UPPER,0,12,0,1,30,90,0,0,0,0,bon_STR,5,bon_INT,5,bon_DMG_SKILL + skill_GEN_CART_CANNON,10,bon_DMG_SKILL + skill_GEN_CART_TORNADO,5,"ref_lvl",5,bon_DMG_SKILL + skill_GEN_CART_CANNON,20,"ref_lvl",5,bon_DMG_SKILL + skill_GEN_CART_TORNADO,10,"ref_lvl",8,bon_DMG_SKILL + skill_GEN_CART_CANNON,30,"ref_lvl",8,bon_DMG_SKILL + skill_GEN_CART_TORNADO,20,bon_NONE] // Cylinder Hairband
 
-// ,[2470,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
+,[2470,itm_type_ACCESSORY,0,5,0,1,10,0,0,0,0,0,bon_VIT,1,bon_HP_ADD,250,bon_HP_MUL,10,bon_NONE] //Recovery Ring
+,[2471,itm_type_ARMOR,0,50,0,1,100,30,0,0,0,0,bon_ALL_STATS,1,bon_RED_ELE_HOLY,-10,bon_RED_RC_ANGEL,-15,bon_RED_RC_DEMON,5,bon_RED_RC_DEMI_HUMAN,5,"ref_lvl",7,bon_HP_MUL,5,"ref_lvl",9,bon_RED_RC_DEMON,5,"ref_lvl",9,bon_RED_RC_DEMI_HUMAN,5,"ref_lvl",11,bon_RED_CAST,-8,bon_NONE] //Fallen Angel Armor
+,[2472,itm_type_HEAD_UPPER,0,5,0,1,10,30,0,0,0,0,bon_ALL_STATS,1,bon_RED_ELE_HOLY,-10,bon_RED_RC_ANGEL,-15,bon_RED_RC_DEMON,6,bon_RED_RC_DEMI_HUMAN,6,bon_NONE] //Fallen Angel Hairband
+,[2473,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_VIT,2,bon_HP_MUL,10,bon_NONE] //Fallen Angel Armor + Fallen Angel Hairband
+,[2474,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"set_sum" + (fl_GARMENT),9,bon_RED_RC_BRUTE,3,"set_sum" + (fl_GARMENT),9,bon_RED_RC_DEMI_HUMAN,3,"set_sum" + (fl_GARMENT),9,bon_RED_RC_DEMON,3,"set_sum" + (fl_GARMENT),9,bon_RED_RC_DRAGON,3,"set_sum" + (fl_GARMENT),9,bon_RED_RC_FISH,3,"set_sum" + (fl_GARMENT),9,bon_RED_RC_FORMLESS,3,"set_sum" + (fl_GARMENT),9,bon_RED_RC_INSECT,3,"set_sum" + (fl_GARMENT),9,bon_RED_RC_PLANT,3,bon_NONE] //Fallen Angel Armor + Fallen Angel Wing
+,[2475,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"set_sum" + (fl_GARMENT),10,bon_RED_RC_BRUTE,3,"set_sum" + (fl_GARMENT),10,bon_RED_RC_DEMI_HUMAN,3,"set_sum" + (fl_GARMENT),10,bon_RED_RC_DEMON,3,"set_sum" + (fl_GARMENT),10,bon_RED_RC_DRAGON,3,"set_sum" + (fl_GARMENT),10,bon_RED_RC_FISH,3,"set_sum" + (fl_GARMENT),10,bon_RED_RC_FORMLESS,3,"set_sum" + (fl_GARMENT),10,bon_RED_RC_INSECT,3,"set_sum" + (fl_GARMENT),10,bon_RED_RC_PLANT,3,"set_sum" + (fl_GARMENT),10,bon_RED_CAST,-5,bon_NONE] //Fallen Angel Hairband + Fallen Angel Wing
+
+// ,[2476,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
+// ,[2477,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
+// ,[2478,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
+// ,[2479,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
+// ,[2480,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
 
 
 //"ev_ref" = for every x refine
@@ -3219,6 +3230,9 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2465,2463,252,"NULL"] // Thief's Handcuff + Blinker
 ,[2466,2463,725,"NULL"] // Thief's Handcuff + Bloodied Shackle Ball
 ,[2467,2463,323,"NULL"] // Thief's Handcuff + Shackles
+,[2473,2471,2472,"NULL"] //Fallen Angel Armor + Fallen Angel Hairband
+,[2474,2471,1545,"NULL"] //Fallen Angel Armor + Fallen Angel Wing
+,[2475,2472,1545,"NULL"] //Fallen Angel Hairband + Fallen Angel Wing
 // ,[,,,,"NULL"]
 // ,[,,,,"NULL"]
 

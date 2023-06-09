@@ -6179,8 +6179,15 @@ function CalcSkillDamage()
 			n_A_Weapon_element = parseInt(formElements["SkillSubNum"].value);
 			if(PATCH < 2)
 			{
-				// MATK (500 + 500 * Skill Level) % * 4 hits
-				w_SkillMod = ( n_A_ActiveSkillLV * 5.0 + 5.0 );
+				if(n_A_ActiveSkillLV <= 5)
+				{
+					// MATK (500 + 500 * Skill Level) % * 4 hits
+					w_SkillMod = ( n_A_ActiveSkillLV * 5.0 + 5.0 );
+				}
+				else
+				{
+					w_SkillMod = 30.0 + ( (n_A_ActiveSkillLV - 5) * 2.0 );
+				}
 			}
 			else if(PATCH == 2)
 			{

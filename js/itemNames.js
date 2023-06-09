@@ -2483,7 +2483,17 @@ ITEM_NAME = [
 ,[2467,0,0,"Thief's Handcuff + Shackles","",0]
 ,[2468,0,0,"Harvester Hat","<br>Reduces the variable casting time of Cart Cannon by 100%<br>Adds a chance to drop Blood Sucker Seed and Explosive Mushroom Spore when killing monsters. (1%)<br>Adds a small chance to drop Thorn Seed when killing monsters. (0.5%)",0]
 ,[2469,0,0,"Cylinder Hairband","",0]
-// ,[2470,0,0,"Place_Holder","",0]
+,[2470,0,0,"Recovery Ring","Increases the recovery rate of recovery items by 5%.",0]
+,[2471,0,0,"Fallen Angel Armor","",0]
+,[2472,0,0,"Fallen Angel Hairband","",0]
+,[2473,0,0,"Fallen Angel Armor + Fallen Angel Hairband","",0]
+,[2474,0,0,"Fallen Angel Armor + Fallen Angel Wing","",0]
+,[2475,0,0,"Fallen Angel Hairband + Fallen Angel Wing","-has a chance to apply Stone Curse to all enemies in 5x5 cells around to wearer upon receiving physical damage<br>-Has a chance to apply [Curse] to enemies upon inflicting physical or magic damage",0]
+// ,[2476,0,0,"Place_Holder","",0]
+// ,[2477,0,0,"Place_Holder","",0]
+// ,[2478,0,0,"Place_Holder","",0]
+// ,[2479,0,0,"Place_Holder","",0]
+// ,[2480,0,0,"Place_Holder","",0]
 ]
 };
 
