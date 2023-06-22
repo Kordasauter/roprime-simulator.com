@@ -194,6 +194,7 @@ function BuildGeneratorTable()
 
 function GenerateMonster()
 {
+	var formElements = document.forms["calcForm"].elements;
 	var str;
 	// var word='';
 	str = ',[ ';

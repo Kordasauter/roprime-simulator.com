@@ -1214,6 +1214,8 @@ function ApplySkillModifiers( damage )
 	{//Dog Cap + Dark Rose
 		dmgMultiplier += 6 * Math.floor(n_A_Weapon_ATKplus / 2);
 	}
+	
+	
 	// if(n_A_ActiveSkill == )
 	// {
 		// if(EquipNumSearch() && n_A_Weapon_ATKplus >= )
@@ -1553,7 +1555,22 @@ function ApplySkillModifiers( damage )
 			dmgMultiplier += Math.floor(n_A_BaseLV / 5) * 3;
 		}
 	}
-	
+	if(CardNumSearch(842))
+	{//Heart Hunter Bellare Card
+		if(n_A_WeaponType == weapTyp_HANDGUN)
+		{
+			if(n_A_Weapon_ATKplus >= 10 && n_A_ActiveSkill == skill_REB_FIRE_RAIN)
+				dmgMultiplier += 15;
+		}
+	}
+	if(CardNumSearch(843))
+	{//Mutant Heart Hunter Bellare Card
+		if(n_A_WeaponType == weapTyp_GATLING_GUN)
+		{
+			if(n_A_Weapon_ATKplus >= 10 && n_A_ActiveSkill == skill_REB_ROUND_TRIP)
+				dmgMultiplier += 10;
+		}
+	}
 	
 	
 	damage = damage * (100+StPlusCalc2(bon_DMG_SKILL+n_A_ActiveSkill)+StPlusCard(bon_DMG_SKILL+n_A_ActiveSkill) + dmgMultiplier) /100;

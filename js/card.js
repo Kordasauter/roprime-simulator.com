@@ -657,8 +657,8 @@ function SetCard()
 ,[593,	 card_com_SHIELD,"Scout Basilisk",0,bon_RED_SIZ_MEDIUM,5,bon_RED_SIZ_LARGE,5,0]
 ,[594,	 card_comp_HEAD,"Trans Spore",0,bon_VIT,1,bon_INT,1,0]
 ,[595,	 card_com_SHIELD,"Charge Basilisk",0,bon_RED_SIZ_MEDIUM,20,bon_RED_SIZ_LARGE,20,bon_RED_SIZ_SMALL,-15,0]
-,[596,	 card_comp_WEAPON,"Jungle Mandragora","Not implanted yet !<br>Increase magic attack against Wind property monsters by 3%.<br><br>If refine level of compounded weapon is:<br>[+7 or higher]<br>Magic attack against Wind property monsters is increased to 5%.<br>[+9 or higher]<br>Magic attack against Wind property monsters is increased to 7%.",0]
-,[597,	 card_comp_WEAPON,"Fruit Pom Spider","Not implanted yet !<br>Increase magic attack against Fire property monsters by 3%.<br><br>If refine level of compounded weapon is:<br>[+7 or higher]<br>Magic attack against Fire property monsters is increased to 5%.<br>[+9 or higher]<br>Magic attack against Fire property monsters is increased to 7%.",0]
+,[596,	 card_comp_WEAPON,"Jungle Mandragora","",bon_MDMG_ELE_WIND,3,"ref_lvl",7,bon_MDMG_ELE_WIND,5,"ref_lvl",9,bon_MDMG_ELE_WIND,7,0]
+,[597,	 card_comp_WEAPON,"Fruit Pom Spider","",bon_MDMG_ELE_FIRE,3,"ref_lvl",7,bon_MDMG_ELE_FIRE,5,"ref_lvl",9,bon_MDMG_ELE_FIRE,7,0]
 //Island of Bios
 ,[598,	 card_comp_HEAD,"Birth and Death",0,bon_HP_ADD,500,bon_SP_ADD,50,bon_RED_RC_ANGEL,-50,0]
 ,[599,	 itm_type_SET,"Birth and Death + Orc Baby",0,bon_RED_ELE_NEUTRAL,5,bon_FLEE,5,0]
@@ -931,9 +931,64 @@ function SetCard()
 ,[835,   card_com_ARMOR,"Awakened Ktullanux","<br><br><b>When equipping [Awakened Ktullanux Card]+[Saphien's Armor of Ocean [1]] at the same time:<br>-When recieving physical damage, there is a 5% chance to cast the skill [Waterball] Lv 5",bon_INC_MAGIC_WATER,20,"ev_body_ref",1,bon_INC_MAGIC_WATER,3,0]
 ,[836,   itm_type_SET,"Angry Gazeti + Angry Snowier","",bon_RED_SIZ_SMALL,20,0]
 ,[837,   itm_type_SET,"Angry Ice Titan + Angry Snowier","",bon_RED_SIZ_MEDIUM,20,0]
-//,[838,   ,"","",0]
-//,[839,   ,"","",0]
-//,[840,   ,"","",0]
+//Episode 17.1
+//
+,[838,   card_comp_WEAPON,"E-EA1L","",bon_INC_MAGIC_FIRE,3,"ref_lvl",9,bon_INC_MAGIC_FIRE,2,"ref_lvl",11,bon_INC_MAGIC_FIRE,5,0]
+,[839,   card_com_ACC,"E-EA2S","",bon_HP_REG,50,0]
+,[840,   card_com_ACC,"EL-A17T","",bon_SKILL_AUTOCAST,165,0]
+,[841,   card_com_SHOES,"Miguel","",bon_DMG_CRIT,20,bon_RED_BOSS,-10,bon_RED_NON_BOSS,-10,0]
+,[842,   card_comp_WEAPON,"Heart Hunter Bellare","When compounded on Revolver class weapons:<br>HIT +20. Increases long ranged physical damage by 5%.<br><br>For each refine level:<br>Increases long ranged physical damage by additional 1%.<br><br>Refine Level +10:<br>Increases damage of Fire Dance by 15%.",0]
+,[843,   card_comp_WEAPON,"Mutant Heart Hunter Bellare","When compounded on Gatling Gun class weapons:<br>HIT +20. Increases long ranged physical damage by 5%.<br><br>For each refine level:<br>Increases long ranged physical damage by additional 1%.<br><br>Refine Level +10:<br>Increases damage of Round Trip by 15%.",0]
+,[844,   card_comp_WEAPON,"Heart Hunter Sanare","",bon_HEAL_REC,2,"ref_lvl",9,bon_HEAL_REC,3,"ref_lvl",11,bon_HEAL_REC,5,0]
+,[845,   card_comp_HEAD,"Mutant Heart Hunter Sanare","",bon_MATK,10,bon_INC_MAGIC_HOLY,5,"ref_lvl",9,bon_INC_MAGIC_HOLY,5,0]
+,[846,   card_comp_HEAD,"Plaga","",bon_MATK,10,bon_INC_MAGIC_NEUTRAL,5,"ref_lvl",9,bon_INC_MAGIC_NEUTRAL,5,0]
+,[847,   card_comp_WEAPON,"Mutant Plaga","Hit +20 and Atk +15 if the user has [Knuckles] equipped.<br>Increases Physical damage on Large monsters by an additional +1% per upgrade level.<br><br>If upgrade level is +10 or higher,<br>Increases Physical damage on Large monsters by an additional +15%",0]
+,[848,   card_com_ACC,"Dolor","",bon_DMG_RC_DEMON,5,0]
+,[849,   card_comp_WEAPON,"Mutant Dolor","Cri +7 and Atk +15 if the user has [Katars] equipped.<br>Critical Damage +2% per upgrade level of the item.<br>If upgrade level is +10 or higher,<br>Increases damage on Large monster by an additional 15%.",0]
+,[850,   card_com_GARMENT,"Venenum","",bon_DMG_RC_BRUTE,15,0]
+,[851,   card_com_GARMENT,"Mutant Venenum","",bon_MDMG_RC_BRUTE,15,0]
+,[852,   card_com_ARMOR,"Twin Caput","",bon_DEF,50,bon_RED_ELE_POISON,10,0]
+,[853,   card_com_ACC,"Mutant Twin Caput","",bon_DMG_RC_FORMLESS,5,0]
+,[854,   card_com_ARMOR,"R48-85-Bestia","",bon_DMG_ELE_POISON,40,0]
+//Magma dungeon 3
+,[855,   card_com_SHIELD,"Firm Blazzer","",bon_RED_ELE2_NEUTRAL,15,bon_RED_RC_DEMON,15,0]
+,[856,   card_com_SHOES,"Firm Nightmare Terror","",bon_SP_MUL,5,0]
+,[857,   itm_type_SET,"Firm Nightmare Terror + Nightmare Terror","",bon_PHY_ATK,10,0]
+,[858,   itm_type_SET,"Firm Nightmare Terror + Nightmare","",bon_SP_MUL,10,0]
+,[859,   card_comp_HEAD,"Firm Flying Deleter","",bon_HP_MUL,5,0]
+,[860,   itm_type_SET,"Firm Flying Deleter + Bungisngis","",bon_HP_MUL,5,0]
+,[861,   card_comp_HEAD,"Firm Ground Deleter","",bon_SP_MUL,2,"ev_ref",2,bon_SP_MUL,1,0]
+,[862,   card_com_SHIELD,"Firm Explosion","",bon_RED_ELE2_FIRE,15,bon_RED_RC_DRAGON,15,0]
+,[863,   card_comp_WEAPON,"Firm Kaho","",bon_MDMG_ELE_EARTH,10,0]
+,[864,   itm_type_SET,"Firm Kaho + Fire Frilldora","",bon_MDMG_ELE_EARTH,8,0]
+,[865,   card_comp_WEAPON,"Firm Lava Golem","",bon_MDMG_ELE_NEUTRAL,3,"ref_lvl",7,bon_MDMG_ELE_NEUTRAL,5,"ref_lvl",9,bon_MDMG_ELE_NEUTRAL,7,0]
+,[866,   card_com_SHIELD,"Firm Muspell","",bon_RED_RC_DRAGON,30,bon_RED_RC_DEMON,30,bon_RED_RC_BRUTE,30,0]
+//Glast Heim Abyss
+,[867,   card_comp_WEAPON,"Polluted Wander Man","",bon_DMG_SIZ_MEDIUM,30,bon_DMG_SIZ_LARGE,30,0]
+,[868,   card_com_ARMOR,"Polluted Raydric","",bon_PHY_ATK,5,0]
+,[869,   itm_type_SET,"Polluted Raydric + Raydric","",bon_RED_ELE_NEUTRAL,10,bon_PHY_ATK,5,0]
+,[870,   card_comp_WEAPON,"Polluted Raydrick Archer","",bon_DMG_RANGE,10,0]
+,[871,   itm_type_SET,"Polluted Raydrick Archer + Powerful Archer Skeleton","",bon_DMG_RANGE,10,0]
+,[872,   card_com_SHIELD,"Frozen Gargoyle","",bon_DEF,20,bon_RED_SIZ_MEDIUM,25,bon_RED_SIZ_LARGE,25,bon_RED_SIZ_SMALL,-5,0]
+,[873,   card_com_ARMOR,"Polluted Sting","",bon_DEF,100,"ev_ref",3,bon_DEF,25,0]
+,[874,   itm_type_SET,"Polluted Sting + Sting","",bon_DEF,150,bon_MDEF,20,0]
+,[875,   card_com_GARMENT,"Prison Breaker","",bon_RED_ELE_EARTH,30,bon_RED_ELE_WIND,30,bon_RED_ELE_SHADOW,30,bon_RED_ELE_UNDEAD,30,bon_RED_ELE_HOLY,100,bon_RED_ELE_GHOST,100,bon_RED_ELE_FIRE,100,0]
+,[876,   card_comp_WEAPON,"Ice Ghost","",bon_MDMG_ELE_WATER,15,0]
+,[877,   itm_type_SET,"Ice Ghost + Curupira","",bon_MDMG_ELE_WATER,8,0]
+,[878,   card_comp_WEAPON,"Flame Ghost","",bon_MDMG_ELE_FIRE,15,0]
+,[879,   itm_type_SET,"Flame Ghost + Fruits Pom Spider","",bon_MDMG_ELE_FIRE,8,0]
+,[880,   card_com_GARMENT,"Polluted Queen Spider","",bon_MDMG_ELE_WATER,100,bon_MDMG_ELE_EARTH,100,bon_RED_ELE_NEUTRAL,30,bon_RED_ELE_WATER,30,bon_RED_ELE_EARTH,30,bon_RED_ELE_FIRE,30,bon_RED_ELE_WIND,30,bon_RED_ELE_POISON,30,bon_RED_ELE_HOLY,30,bon_RED_ELE_SHADOW,30,bon_RED_ELE_GHOST,30,bon_RED_ELE_UNDEAD,30,0]
+,[881,   card_com_ACC_R,"Polluted Dark Lord","",bon_ASPD_ADD,1,0]
+,[882,   itm_type_SET,"Polluted Dark Lord + Dark Lord","",bon_INC_MAGIC_FIRE,15,bon_DMG_SKILL + skill_WI_METEOR_STORM,15,0]
+//
+//,[883,   ,"","",0]
+//,[884,   ,"","",0]
+//,[885,   ,"","",0]
+//,[886,   ,"","",0]
+//,[887,   ,"","",0]
+//,[888,   ,"","",0]
+//,[889,   ,"","",0]
+//,[890,   ,"","",0]
 
 ];
 
@@ -1047,6 +1102,16 @@ w_SC = [
 ,[831,829,830,"NULL"] //Bomi + Angry Dracula
 ,[836,832,833,"NULL"] //Angry Gazeti + Angry Snowier
 ,[837,834,833,"NULL"] //Angry Ice Titan + Angry Snowier
+,[857,856,344,"NULL"] //Firm Nightmare Terror + Nightmare Terror
+,[858,856,50,"NULL"] //Firm Nightmare Terror + Nightmare 
+,[860,859,563,"NULL"] //Firm Flying Deleter + Bungisngis
+,[864,863,620,"NULL"] //Firm Kaho + Fire Frilldora
+,[869,868,77,"NULL"] //Polluted Raydric + Raydric
+,[871,870,722,"NULL"] //Polluted Raydrick Archer + Powerful Archer Skeleton
+,[874,873,310,"NULL"] //Polluted Sting + Sting
+,[877,876,708,"NULL"] //Ice Ghost + Curupira
+,[879,878,597,"NULL"] //Flame Ghost + Fruits Pom Spider
+,[882,881,322,"NULL"] //Polluted Dark Lord + Dark Lord
 // ,[,,,"NULL"] //
 // ,[,,,"NULL"] //
 // ,[,,,"NULL"] //

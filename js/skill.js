@@ -1473,7 +1473,7 @@ JobSkillActiveOBJ = [
 ,[113,1,124, 1, 0, 4]
 ,[114,1,382, 1, 0, 1]
 ,[115,1,130, 5, 0, 6]
-,[116,1,541, 1, 0, 1]
+,[116,1,541, 1, 0, 1] // Hell Inferno Lv. 1
 ,[117,1,722, 1, 0, 1] // Fiber Lock 1
 ,[118,1, 51, 5, 1, 4]
 ,[119,1, 52, 5, 1, 1]
@@ -1522,6 +1522,7 @@ JobSkillActiveOBJ = [
 ,[162,1,125, 3,10, 1] // Meteor Storm 3 (10%)
 ,[163,1,125, 4,15, 1] // Meteor Storm 4 (15%)
 ,[164,1,125, 5,20, 1] // Meteor Storm 5 (20%)
+,[165,1,541, 3, 2, 1] // Hell Inferno Lv. 1
 
  //IDAutocast, Type(0=when hit, 1=when attack), SkillID, SkillLVL, Chance, AutoCastTrigger
 ];

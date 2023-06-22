@@ -1100,8 +1100,20 @@ function CalcEquipAtk()
 	{//Resentful Munak Card + Girl's Diary
 		equipmentAttack += 100;
 	}
-	
-	
+	if(CardNumSearch(847))
+	{//Mutant Plaga Card
+		if(n_A_WeaponType == weapTyp_KNUCKLE)
+		{
+			equipmentAttack += 15;
+		}
+	}
+	if(CardNumSearch(849))
+	{//Mutant Dolor Card
+		if(n_A_WeaponType == weapTyp_KATAR)
+		{
+			equipmentAttack += 15;
+		}
+	}	
 	
 //shadows
 	if ( EquipNumSearch( 1661 ) )
@@ -1820,6 +1832,26 @@ function CalcSizeMod()
 {
 	sizeMod = 0;
 	
+//Cards
+	if(CardNumSearch(847))
+	{//Mutant Plaga Card
+		if(n_A_WeaponType == weapTyp_KNUCKLE)
+		{
+			n_tok[bon_DMG_SIZ_LARGE] += n_A_Weapon_ATKplus;
+			if(n_A_Weapon_ATKplus >= 10)
+				n_tok[bon_DMG_SIZ_LARGE] += 15;
+		}
+	}
+	if(CardNumSearch(849))
+	{//Mutant Dolor Card
+		if(n_A_WeaponType == weapTyp_KATAR)
+		{
+			if(n_A_Weapon_ATKplus >= 10)
+				n_tok[bon_DMG_SIZ_LARGE] += 15;
+		}
+	}
+	
+//Equips
 	if ( EquipNumSearch( 1487 ) || EquipNumSearch( 1488 ) )
 	{ // "RWC Memory Knife or RWC Memory Mace"
 		if (n_A_Weapon_ATKplus >= 6) { n_tok[bon_DMG_SIZ_SMALL] += 5; n_tok[bon_DMG_SIZ_MEDIUM] += 5; n_tok[bon_DMG_SIZ_LARGE] += 5; }
@@ -2448,6 +2480,13 @@ function CalcCriticalMod()
 		if(n_A_BaseLV >= 100)
 			n_tok[bon_DMG_CRIT] += 5;
 	}
+	if(CardNumSearch(849))
+	{//Mutant Dolor Card
+		if(n_A_WeaponType == weapTyp_KATAR)
+		{
+			n_tok[bon_DMG_CRIT] += n_A_Weapon_ATK * 2;
+		}
+	}
 	
 // Pets
 	if ( miscEffects[ksPetEffects] == 22 )
@@ -2827,6 +2866,20 @@ function CalcRangedMod()
 	{//Resentful Soldier Card
 		if(n_A_WeaponType == weapTyp_BOW && n_A_Weapon_ATKplus >= 10)
 			n_tok[bon_DMG_RANGE] += 20 * CardNumSearch(818);
+	}
+	if(CardNumSearch(842))
+	{//Heart Hunter Bellare Card
+		if(n_A_WeaponType == weapTyp_HANDGUN)
+		{
+			n_tok[bon_DMG_RANGE] += 5 + n_A_Weapon_ATKplus;
+		}
+	}
+	if(CardNumSearch(843))
+	{//Mutant Heart Hunter Bellare Card
+		if(n_A_WeaponType == weapTyp_GATLING_GUN)
+		{
+			n_tok[bon_DMG_RANGE] += 5 + n_A_Weapon_ATKplus;
+		}
 	}
 	
 //Enchants
@@ -5176,7 +5229,28 @@ function calcHit(n_A_HIT)
 		if(n_A_BaseLV >= 90)
 			n_A_HIT += 10 * CardNumSearch(766);
 	}
-	
+	if(CardNumSearch(842))
+	{//Heart Hunter Bellare Card
+		if(n_A_WeaponType == weapTyp_HANDGUN)
+		{
+			n_A_HIT += 20;
+		}
+	}
+	if(CardNumSearch(843))
+	{//Mutant Heart Hunter Bellare Card
+		if(n_A_WeaponType == weapTyp_GATLING_GUN)
+		{
+			n_A_HIT += 20;
+		}
+	}
+	if(CardNumSearch(847))
+	{//Mutant Plaga Card
+		if(n_A_WeaponType == weapTyp_KNUCKLE)
+		{
+			n_A_HIT += 20;
+		}
+	}
+
 	// Equipment
 	if ( EquipNumSearch( 442 ) && SU_STR >= 90 )
 	{ // Rogue's Treasure
@@ -5698,6 +5772,13 @@ function calcCrit( n_A_CRI )
 	if(CardNumSearch(751) && (n_A_JOB == cls_RAN || n_A_JOB == cls_RANt))
 	{//Ranger Cecil Card
 		n_A_CRI += 20;
+	}
+	if(CardNumSearch(849))
+	{//Mutant Dolor Card
+		if(n_A_WeaponType == weapTyp_KATAR)
+		{
+			n_A_CRI += 7;
+		}
 	}
 	
 // Equipment modifiers

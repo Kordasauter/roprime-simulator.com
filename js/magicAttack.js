@@ -1225,8 +1225,11 @@ function CalcMagicDamage( rawDamage )
 	wBMC2 = wBMC2 * ( 100 + wX ) / 100;
 	
 //Multiplier (element)
-	wX = n_tok[bon_MDMG_ELE_NEUTRAL + n_B[en_ELEMENT]];
-	if(CardNumSearch(620) && n_B[en_ELEMENT] == ele_EARTH )
+	wX = n_tok[bon_MDMG_ELE_NEUTRAL + Math.floor(n_B[en_ELEMENT]/10)];
+	console.log("n_B[en_ELEMENT] = " + n_B[en_ELEMENT]);
+	console.log("n_tok[bon_MDMG_ELE_NEUTRAL + n_B[en_ELEMENT]] = " + n_tok[bon_MDMG_ELE_NEUTRAL + n_B[en_ELEMENT]]);
+	console.log("n_tok[bon_MDMG_ELE_WIND] = " + n_tok[bon_MDMG_ELE_WIND]);
+	if(CardNumSearch(620) && Math.floor(n_B[en_ELEMENT]/10) == ele_EARTH )
 	{
 		if(n_A_SHOULDER_DEF_PLUS >= 7)
 		{
@@ -1237,7 +1240,7 @@ function CalcMagicDamage( rawDamage )
 			wX += 7;
 		}
 	}
-	if(EquipNumSearch(2064) && n_B[en_ELEMENT] == ele_FIRE && n_A_Weapon_ATKplus >= 11)
+	if(EquipNumSearch(2064) && Math.floor(n_B[en_ELEMENT]/10) == ele_FIRE && n_A_Weapon_ATKplus >= 11)
 	{//Wand of the Purple Orb
 		wX += 7;
 	}
@@ -1343,7 +1346,7 @@ function CalcMagicDamage( rawDamage )
 	}
 	
 //Cards
-	if ( n_B[en_ELEMENT] == ele_WATER  && CardNumSearch(708))
+	if ( Math.floor(n_B[en_ELEMENT]/10) == ele_WATER  && CardNumSearch(708))
 	{//Curupira Card
 		if(n_A_Weapon_ATKplus >= 7)
 			wX += 5 * CardNumSearch(708);

@@ -6472,7 +6472,7 @@ function CalcSkillDamage()
 		{
 			n_A_Weapon_element = ele_NEUTRAL;
 			w_SkillMod = (( n_A_ActiveSkillLV * 1.2 ) +  SkillSearch( skill_MIWA_VOICE_LESSONS ) * 0.6 ) * n_A_BaseLV / 100.0; // skill mod
-
+			n_subHits = true;
 			if (PATCH == 1 || PATCH == 2)
 				w_TotalHits = 2;
 			else
@@ -6483,6 +6483,7 @@ function CalcSkillDamage()
 					w_TotalHits = 3;
 				else
 					w_TotalHits = 4;
+					
 			}
 			fixedCastTime *= 0.0;
 			variableCastTime *= 0.5 + 0.5 * n_A_ActiveSkillLV;

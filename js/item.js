@@ -2565,11 +2565,54 @@
 ,[2474,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"set_sum" + (fl_GARMENT),9,bon_RED_RC_BRUTE,3,"set_sum" + (fl_GARMENT),9,bon_RED_RC_DEMI_HUMAN,3,"set_sum" + (fl_GARMENT),9,bon_RED_RC_DEMON,3,"set_sum" + (fl_GARMENT),9,bon_RED_RC_DRAGON,3,"set_sum" + (fl_GARMENT),9,bon_RED_RC_FISH,3,"set_sum" + (fl_GARMENT),9,bon_RED_RC_FORMLESS,3,"set_sum" + (fl_GARMENT),9,bon_RED_RC_INSECT,3,"set_sum" + (fl_GARMENT),9,bon_RED_RC_PLANT,3,bon_NONE] //Fallen Angel Armor + Fallen Angel Wing
 ,[2475,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"set_sum" + (fl_GARMENT),10,bon_RED_RC_BRUTE,3,"set_sum" + (fl_GARMENT),10,bon_RED_RC_DEMI_HUMAN,3,"set_sum" + (fl_GARMENT),10,bon_RED_RC_DEMON,3,"set_sum" + (fl_GARMENT),10,bon_RED_RC_DRAGON,3,"set_sum" + (fl_GARMENT),10,bon_RED_RC_FISH,3,"set_sum" + (fl_GARMENT),10,bon_RED_RC_FORMLESS,3,"set_sum" + (fl_GARMENT),10,bon_RED_RC_INSECT,3,"set_sum" + (fl_GARMENT),10,bon_RED_RC_PLANT,3,"set_sum" + (fl_GARMENT),10,bon_RED_CAST,-5,bon_NONE] //Fallen Angel Hairband + Fallen Angel Wing
 
-// ,[2476,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
-// ,[2477,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
-// ,[2478,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
-// ,[2479,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
-// ,[2480,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]
+,[2476,itm_type_HEAD_UPPER,0,10,0,1,50,1,0,0,0,0,bon_STR,2,bon_MDEF,1,bon_PHY_ATK,1,"ref_lvl",7,bon_DMG_CRIT,10,"ref_lvl",9,bon_PHY_ATK,5,"ref_lvl",9,bon_DMG_RANGE,5,bon_NONE]//Deadman's Concert Hat
+,[2477,itm_type_HEAD_UPPER,0,20,0,1,10,1,0,0,0,0,bon_ALL_STATS,1,bon_ASPD_MUL,5,"ref_lvl",9,bon_RED_CAST,-10,bon_NONE]//Aristocrat's Headband
+,[2478,itm_type_HEAD_UPPER,0,10,0,1,20,1,0,0,0,0,"ev_ref",2,bon_ATK,10,"ev_ref",2,bon_MATK,10,"ref_lvl",7,bon_RED_RC_FORMLESS,5,"ref_lvl",9,bon_DMG_RC_FORMLESS,10,"ref_lvl",9,bon_MDMG_RC_FORMLESS,10,"ref_lvl",11,bon_PHY_ATK,5,"ref_lvl",11,bon_MATK_MUL,5,"ref_lvl",11,bon_DMG_RC_FORMLESS,22,"ref_lvl",11,bon_MDMG_RC_FORMLESS,22,"ref_lvl",12,bon_DMG_RC_FORMLESS,2,"ref_lvl",12,bon_MDMG_RC_FORMLESS,2,bon_NONE]//Highlander's Hat
+,[2479,itm_type_GARMENT,0,0,0,1,15,1,0,0,0,0,bon_HP_MUL,2,bon_MDEF,10,"ref_lvl",7,bon_HP_MUL,4,"ref_lvl",8,bon_HP_MUL,6,"ref_lvl",9,bon_HP_MUL,8,bon_NONE]//Etran's Undershirt
+,[2480,itm_type_ACCESSORY,0,0,0,1,60,80,0,0,0,0,"ev_bstr",18,bon_INT,3,"ev_bstr",18,bon_MDEFIGN_RC_ALL,15,"ev_bagi",18,bon_LUK,3,"ev_bagi",18,bon_PDODGE,1,"ev_bvit",18,bon_DEX,3,"ev_bvit",18,bon_RED_CAST,-1,"ev_bint",18,bon_STR,3,"ev_bint",18,bon_RED_CASTDELAY,1,"ev_bdex",18,bon_VIT,3,"ev_bdex",18,bon_HP_MUL,1,"ev_bluk",18,bon_AGI,3,"ev_bluk",18,bon_DEFIGN_RC_ALL,15,bon_NONE]//Perverse Demon Mask
+,[2481,itm_type_HEAD_MIDDLE,0,0,0,0,30,70,0,0,0,0,bon_STR,2,"ev_bint",8,bon_ATK,5,"ev_bint",8,bon_HEAL_REC,1,"ev_bint",8,bon_RED_CAST,-1,"bint_hi",108,bon_ATK,50,"bint_hi",108,bon_HEAL_REC,5,"bint_hi",108,bon_RED_CAST,-4,"bint_hi",120,bon_ATK,125,"bint_hi",120,bon_HEAL_REC,10,"bint_hi",120,bon_RED_CAST,-6,bon_NONE]//Seraphim Coronet
+,[2482,itm_type_HEAD_LOWER,0,0,0,0,30,80,0,0,0,0,bon_HEAL_REC,5,bon_NONE]//Seraphim Feather
+,[2483,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_CAST_SKILL + skill_ABI_COLUCEO_HEAL,100,bon_RED_RC_DEMI_HUMAN,2,bon_HEAL_REC,5,bon_CH_STATUS_BLEEDING,100,bon_CH_STATUS_CHAOS,100,"ev_bint",8,bon_RED_CAST,-1,"bint_hi",108,bon_RED_CAST,-4,"bint_hi",108,bon_RED_RC_DEMI_HUMAN,2,"bint_hi",108,bon_HEAL_REC,10,"bint_hi",120,bon_RED_CAST,-6,"bint_hi",120,bon_RED_RC_DEMI_HUMAN,4,"bint_hi",120,bon_HEAL_REC,15,bon_NONE]//Seraphim Coronet + Seraphim Feather
+,[2484,itm_type_ACCESSORY,0,0,0,0,0,0,0,0,0,0,bon_EXP_RC_FORMLESS,5,bon_EXP_RC_UNDEAD,5,bon_EXP_RC_BRUTE,5,bon_EXP_RC_PLANT,5,bon_EXP_RC_INSECT,5,bon_EXP_RC_FISH,5,bon_EXP_RC_DEMON,5,bon_EXP_RC_DEMI_HUMAN,5,bon_EXP_RC_ANGEL,5,bon_EXP_RC_DRAGON,5,bon_RED_NONBOSS,-5,bon_NONE]//Saehrimnir Gloves
+,[2485,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,0,bon_VIT,1,"ref_lvl",7,bon_VIT,1,"ref_lvl",9,bon_VIT,1,bon_NONE]//Vital Shadow Shoes
+,[2486,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,0,bon_VIT,1,"ev_ref",1,bon_DEF,1,bon_NONE]//Vital Shadow Shield
+/*TODO*/,[2487,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_VIT,1,bon_NONE]//Vital Shadow Shoes + Vital Shadow Shield
+,[2488,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,0,bon_AGI,1,"ev_ref",1,bon_FLEE,1,bon_NONE]//Athletic Shadow Shoes
+,[2489,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,0,bon_AGI,1,"ref_lvl",7,bon_AGI,1,"ref_lvl",9,bon_AGI,1,bon_NONE]//Athletic Shadow Shield
+/*TODO*/,[2490,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_AGI,1,bon_NONE]//Athletic Shadow Shoes + Athletic Shadow Shield
+,[2491,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,0,bon_DMG_RC_DEMI_HUMAN,2,"ref_lvl",7,bon_DMG_RC_DEMI_HUMAN,1,"ref_lvl",9,bon_DMG_RC_DEMI_HUMAN,2,bon_NONE]//Bloody Shadow Shoes
+,[2492,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,0,bon_RED_RC_DEMI_HUMAN,1,"ref_lvl",7,bon_RED_RC_DEMI_HUMAN,1,"ref_lvl",9,bon_RED_RC_DEMI_HUMAN,1,bon_NONE]//Cranial Shadow Shield
+/*TODO*/,[2493,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_EXP_RC_DEMI_HUMAN,3,bon_NONE]//Bloody Shadow Shoes + Cranial Shadow Shield
+,[2494,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,0,bon_DMG_BOSS,2,"ref_lvl",7,bon_DMG_BOSS,1,"ref_lvl",9,bon_DMG_BOSS,2,bon_NONE]//Liberation Shadow Shoes
+,[2495,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,0,bon_RED_BOSS,1,"ref_lvl",7,bon_RED_BOSS,1,"ref_lvl",9,bon_RED_BOSS,1,bon_NONE]//Safeguard Shadow Shield
+/*TODO*/,[2496,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RED_BOSS,-5,bon_NONE]//Liberation Shadow Shoes + Safeguard Shadow Shield
+,[2497,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,0,bon_DMG_RC_PLANT,2,"ref_lvl",7,bon_DMG_RC_PLANT,1,"ref_lvl",9,bon_DMG_RC_PLANT,2,bon_NONE]//Chemical Shadow Shoes
+,[2498,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,0,bon_RED_RC_PLANT,1,"ref_lvl",7,bon_RED_RC_PLANT,1,"ref_lvl",9,bon_RED_RC_PLANT,1,bon_NONE]//Cadi Shadow Shield
+/*TODO*/,[2499,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_EXP_RC_PLANT,3,bon_NONE]//Chemical Shadow Shoes + Cadi Shadow Shield
+,[2500,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,0,bon_RED_RC_BRUTE,1,"ev_ref",1,bon_HP_ADD,10,"ref_lvl",7,bon_RED_RC_BRUTE,1,"ref_lvl",9,bon_RED_RC_BRUTE,1,bon_NONE]//Tamer Shadow Boots
+,[2501,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,0,bon_RED_RC_BRUTE,1,"ev_ref",1,bon_HP_ADD,10,"ref_lvl",7,bon_RED_RC_BRUTE,1,"ref_lvl",9,bon_RED_RC_BRUTE,1,bon_NONE]//Tamer Shadow Shield
+/*TODO*/,[2502,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_EXP_RC_BRUTE,3,bon_NONE]//Tamer Shadow Boots + Tamer Shadow Shield
+,[2503,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,0,bon_DMG_RC_INSECT,1,"ref_lvl",7,bon_DMG_RC_INSECT,1,"ref_lvl",9,bon_DMG_RC_INSECT,1,bon_NONE]//Insecticide Shadow Shoes
+,[2504,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,0,bon_RED_RC_INSECT,1,"ref_lvl",7,bon_RED_RC_INSECT,1,"ref_lvl",9,bon_RED_RC_INSECT,1,bon_NONE]//Gargantua Shadow Shield
+/*TODO*/,[2505,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_EXP_RC_INSECT,3,bon_NONE]//Insecticide Shadow Shoes + Gargantua Shadow Shield
+,[2506,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,0,bon_DMG_RC_FISH,1,"ref_lvl",7,bon_DMG_RC_FISH,1,"ref_lvl",9,bon_DMG_RC_FISH,1,bon_NONE]//Fisher Shadow Shoes
+,[2507,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,0,bon_RED_RC_FISH,1,"ref_lvl",7,bon_RED_RC_FISH,1,"ref_lvl",9,bon_RED_RC_FISH,1,bon_NONE]//Homer's Shadow Shield
+/*TODO*/,[2508,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_EXP_RC_FISH,3,bon_NONE]//Fisher Shadow Shoes + Homer's Shadow Shield
+,[2509,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,0,bon_DMG_RC_ANGEL,1,"ref_lvl",7,bon_DMG_RC_ANGEL,1,"ref_lvl",9,bon_DMG_RC_ANGEL,1,bon_NONE]//Seraphim Shadow Shoes
+,[2510,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,0,bon_RED_RC_ANGEL,1,"ref_lvl",7,bon_RED_RC_ANGEL,1,"ref_lvl",9,bon_RED_RC_ANGEL,1,bon_NONE]//Satanic Shadow Shield
+/*TODO*/,[2511,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_EXP_RC_ANGEL,3,bon_NONE]//Seraphim Shadow Shoes + Satanic Shadow Shield
+,[2512,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,0,bon_DMG_RC_FORMLESS,1,"ref_lvl",7,bon_DMG_RC_FORMLESS,1,"ref_lvl",9,bon_DMG_RC_FORMLESS,1,bon_NONE]//Beholder Shadow Shoes
+,[2513,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,0,bon_RED_RC_FORMLESS,1,"ref_lvl",7,bon_RED_RC_FORMLESS,1,"ref_lvl",9,bon_RED_RC_FORMLESS,1,bon_NONE]//Flameguard Shadow Shield
+/*TODO*/,[2514,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_EXP_RC_FORMLESS,3,bon_NONE]//Beholder Shadow Shoes + Flameguard Shadow Shield
+,[2515,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,0,bon_DMG_RC_UNDEAD,1,"ev_ref",1,bon_HP_ADD,10,"ref_lvl",7,bon_DMG_RC_UNDEAD,1,"ref_lvl",9,bon_DMG_RC_UNDEAD,1,bon_NONE]//Undertaker Shadow Boots
+,[2516,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,0,bon_RED_RC_UNDEAD,1,"ev_ref",1,bon_HP_ADD,10,"ref_lvl",7,bon_RED_RC_UNDEAD,1,"ref_lvl",9,bon_RED_RC_UNDEAD,1,bon_NONE]//Undertaker Shadow Shield
+/*TODO*/,[2517,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_EXP_RC_UNDEAD,3,bon_NONE]//Undertaker Shadow Boots + Undertaker Shadow Shield
+,[2518,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,0,bon_DMG_RC_DRAGON,1,"ev_ref",1,bon_HP_ADD,10,"ref_lvl",7,bon_DMG_RC_DRAGON,1,"ref_lvl",9,bon_DMG_RC_DRAGON,1,bon_NONE]//Dragonslayer Shadow Boots
+,[2519,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,0,bon_RED_RC_DRAGON,1,"ev_ref",1,bon_HP_ADD,10,"ref_lvl",7,bon_RED_RC_DRAGON,1,"ref_lvl",9,bon_RED_RC_DRAGON,1,bon_NONE]//Dragonslayer Shadow Shield
+/*TODO*/,[2520,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_EXP_RC_DRAGON,3,bon_NONE]//Dragonslayer Shadow Boots + Dragonslayer Shadow Shield
+,[2521,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,0,bon_DEF,10,"ref_lvl",7,bon_DEF,10,bon_NONE]//Athena Shadow Shield
+/*TODO*/,[2522,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_HEAL_REC,5,bon_NONE]//Aristocrat's Headband + Blush
+/*TODO*/,[2523,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_INT,15,bon_HP_MUL,5,bon_SP_MUL,5,bon_NONE]//Etran's Undershirt + Pantie[1]
 
 
 //"ev_ref" = for every x refine
@@ -3233,8 +3276,24 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2473,2471,2472,"NULL"] //Fallen Angel Armor + Fallen Angel Hairband
 ,[2474,2471,1545,"NULL"] //Fallen Angel Armor + Fallen Angel Wing
 ,[2475,2472,1545,"NULL"] //Fallen Angel Hairband + Fallen Angel Wing
-// ,[,,,,"NULL"]
-// ,[,,,,"NULL"]
+,[2483,2481,2482,"NULL"] //Seraphim Coronet + Seraphim Feather
+,[2487,2486,2485,"NULL"] //Vital Shadow Shoes + Vital Shadow Shield
+,[2490,2489,2488,"NULL"] //Athletic Shadow Shoes + Athletic Shadow Shield
+,[2493,2492,2491,"NULL"] //Bloody Shadow Shoes + Cranial Shadow Shield
+,[2496,2495,2494,"NULL"] //Liberation Shadow Shoes + Safeguard Shadow Shield
+,[2499,2498,2497,"NULL"] //Chemical Shadow Shoes + Cadi Shadow Shield
+,[2502,2501,2500,"NULL"] //Tamer Shadow Boots + Tamer Shadow Shield
+,[2505,2504,2503,"NULL"] //Insecticide Shadow Shoes + Gargantua Shadow Shield
+,[2508,2507,2506,"NULL"] //Fisher Shadow Shoes + Homer's Shadow Shield
+,[2511,2510,2509,"NULL"] //Seraphim Shadow Shoes + Satanic Shadow Shield
+,[2514,2513,2512,"NULL"] //Beholder Shadow Shoes + Flameguard Shadow Shield
+,[2517,2516,2515,"NULL"] //Undertaker Shadow Boots + Undertaker Shadow Shield
+,[2520,2519,2518,"NULL"] //Dragonslayer Shadow Boots + Dragonslayer Shadow Shield
+,[2522,2477,247,"NULL"] //Aristocrat's Headband + Blush
+,[2523,2479,288,"NULL"] //Etran's Undershirt + Pantie[1]
+// ,[,,,"NULL"] //
+// ,[,,,"NULL"] //
+// ,[,,,"NULL"] //
 
 // ,[itm_set,item1,item2,...,"NULL"] // 
 //,[itm_set,item1,item2,...,"NULL"] // 
