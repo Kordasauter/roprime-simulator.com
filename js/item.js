@@ -2625,32 +2625,32 @@
 ,[2532,itm_type_ACCESSORY,0,0,0,1,10,130,0,0,0,0,bon_MATK_MUL,5,bon_NONE]//Illusion Battle Chip L
 ,[2533,itm_type_ACCESSORY,0,0,0,1,10,130,0,0,0,0,bon_MATK_MUL,5,bon_NONE]//Illusion Battle Chip R
 
-,[2534,weapTyp_BOW,214,190,4,2,130,60,0,0,0,0,bon_MATK,135,bon_DMG_RANGE,5,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SKILL + skill_SHA_TRIANGLE_SHOT,15,"ref_lvl",11,bon_DMG_RANGE,10,bon_NONE]//AC-B44-OS
-,[2535,weapTyp_2HSWORD,2051,250,4,2,130,180,0,0,0,0,bon_CRIT,5,bon_UNBREAKABLE,1,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_CRIT,15,"ref_lvl",11,bon_DMG_SIZ_SMALL,20,"ref_lvl",11,bon_DMG_SIZ_MEDIUM,20,bon_NONE]//Beam Claymore-OS
-,[2536,weapTyp_AXEII,212,400,4,2,130,450,0,0,0,0,bon_RED_SIZ_MEDIUM,10,bon_RED_SIZ_LARGE,10,"ref_lvl",7,bon_RED_SIZ_MEDIUM,15,"ref_lvl",7,bon_RED_SIZ_LARGE,15,"ref_lvl",9,bon_DMG_RANGE,15,"ref_lvl",11,bon_RED_CASTDELAY,10,bon_NONE]//Blasti-OS
-,[2537,weapTyp_SPEAR,213,190,4,2,130,100,0,0,0,0,bon_ASPD_MUL,3,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SKILL + skill_ROY_VANISHING_POINT,20,"ref_lvl",11,bon_DMG_SKILL + skill_ROY_VANISHING_POINT,15,bon_NONE]//Boost Lance-OS
-,[2538,weapTyp_KNUCKLE,215,175,4,2,130,90,0,0,0,0,bon_PHY_ATK,3,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SKILL + skill_SUR_RAMPAGE_BLASTER,15,"ref_lvl",11,bon_DMG_SIZ_MEDIUM,20,"ref_lvl",11,bon_DMG_SIZ_LARGE,20,bon_NONE]//Burning Knuckle-OS
-,[2539,weapTyp_SWORD,2072,160,4,2,130,80,0,0,0,0,bon_MATK,150,bon_SKILL_AUTOCAST,119,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SKILL + skill_MA_FIRE_BALL,30,"ref_lvl",11,bon_SKILL_AUTOCAST,166,bon_NONE]//Cannon Rapier-OS
-,[2540,weapTyp_BOOK,2095,180,4,2,130,120,0,0,0,0,bon_PHY_ATK,3,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SIZ_SMALL,20,"ref_lvl",9,bon_DMG_SIZ_MEDIUM,20,"ref_lvl",11,bon_DMG_CRIT,20,bon_NONE]//Circuit Board-OS
-,[2541,weapTyp_ROD,224,250,4,2,130,120,0,0,0,0,bon_MATK,350,bon_MATK_MUL,5,bon_UNBREAKABLE,1,"ref_lvl",7,bon_DMG_SKILL + skill_SUM_SILVERVINE_STEM_SPEAR,20,"ref_lvl",9,bon_RED_CAST,-10,"ref_lvl",9,bon_INC_MAGIC_EARTH,15,"ref_lvl",9,bon_INC_MAGIC_FIRE,15,"ref_lvl",9,bon_INC_MAGIC_WATER,15,"ref_lvl",9,bon_INC_MAGIC_GHOST,15,"ref_lvl",9,bon_INC_MAGIC_NEUTRAL,15,"ref_lvl",11,bon_DMG_SKILL + skill_SUM_CATNIP_METEOR,30,bon_NONE]//Electric Fox-OS
-,[2542,weapTyp_RIFLE,222,250,4,2,130,100,0,0,0,0,bon_PHY_ATK,3,"ref_lvl",7,bon_DMG_RANGE,7,"ref_lvl",9,bon_DMG_SKILL + skill_REB_GODS_HAMMER,20,bon_NONE]//HR-S55-OS
-,[2543,weapTyp_DAGGER,221,150,4,2,130,90,0,0,0,0,bon_MATK,150,bon_DMG_ELE_SHADOW,5,bon_MDMG_ELE_SHADOW,5,bon_DMG_ELE_UNDEAD,5,bon_MDMG_ELE_UNDEAD,5,"ref_lvl",7,bon_DMG_ELE_UNDEAD,10,"ref_lvl",7,bon_MDMG_ELE_UNDEAD,10,"ref_lvl",7,bon_DMG_ELE_UNDEAD,10,"ref_lvl",7,bon_MDMG_ELE_UNDEAD,10,"ref_lvl",9,bon_DMG_SKILL + skill_KAG_KUNAI_SPLASH,20,"ref_lvl",11,bon_DMG_ELE_UNDEAD,10,"ref_lvl",11,bon_MDMG_ELE_UNDEAD,10,"ref_lvl",11,bon_DMG_ELE_UNDEAD,10,"ref_lvl",11,bon_MDMG_ELE_UNDEAD,10,bon_NONE]//Kuroiro-OS
+,[2534,weapTyp_BOW,214,190,4,2,60,130,0,0,0,0,bon_MATK,135,bon_DMG_RANGE,5,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SKILL + skill_SHA_TRIANGLE_SHOT,15,"ref_lvl",11,bon_DMG_RANGE,10,bon_NONE]//AC-B44-OS
+,[2535,weapTyp_2HSWORD,2051,250,4,2,180,130,0,0,0,0,bon_CRIT,5,bon_UNBREAKABLE,1,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_CRIT,15,"ref_lvl",11,bon_DMG_SIZ_SMALL,20,"ref_lvl",11,bon_DMG_SIZ_MEDIUM,20,bon_NONE]//Beam Claymore-OS
+,[2536,weapTyp_AXEII,212,400,4,2,450,130,0,0,0,0,bon_RED_SIZ_MEDIUM,10,bon_RED_SIZ_LARGE,10,"ref_lvl",7,bon_RED_SIZ_MEDIUM,15,"ref_lvl",7,bon_RED_SIZ_LARGE,15,"ref_lvl",9,bon_DMG_RANGE,15,"ref_lvl",11,bon_RED_CASTDELAY,10,bon_NONE]//Blasti-OS
+,[2537,weapTyp_SPEAR,213,190,4,2,100,130,0,0,0,0,bon_ASPD_MUL,3,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SKILL + skill_ROY_VANISHING_POINT,20,"ref_lvl",11,bon_DMG_SKILL + skill_ROY_VANISHING_POINT,15,bon_NONE]//Boost Lance-OS
+,[2538,weapTyp_KNUCKLE,215,175,4,2,90,130,0,0,0,0,bon_PHY_ATK,3,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SKILL + skill_SUR_RAMPAGE_BLASTER,15,"ref_lvl",11,bon_DMG_SIZ_MEDIUM,20,"ref_lvl",11,bon_DMG_SIZ_LARGE,20,bon_NONE]//Burning Knuckle-OS
+,[2539,weapTyp_SWORD,2072,160,4,2,80,130,0,0,0,0,bon_MATK,150,bon_SKILL_AUTOCAST,119,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SKILL + skill_MA_FIRE_BALL,30,"ref_lvl",11,bon_SKILL_AUTOCAST,166,bon_NONE]//Cannon Rapier-OS
+,[2540,weapTyp_BOOK,2095,180,4,2,120,130,0,0,0,0,bon_PHY_ATK,3,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SIZ_SMALL,20,"ref_lvl",9,bon_DMG_SIZ_MEDIUM,20,"ref_lvl",11,bon_DMG_CRIT,20,bon_NONE]//Circuit Board-OS
+,[2541,weapTyp_ROD,224,250,4,2,120,130,0,0,0,0,bon_MATK,350,bon_MATK_MUL,5,bon_UNBREAKABLE,1,"ref_lvl",7,bon_DMG_SKILL + skill_SUM_SILVERVINE_STEM_SPEAR,20,"ref_lvl",9,bon_RED_CAST,-10,"ref_lvl",9,bon_INC_MAGIC_EARTH,15,"ref_lvl",9,bon_INC_MAGIC_FIRE,15,"ref_lvl",9,bon_INC_MAGIC_WATER,15,"ref_lvl",9,bon_INC_MAGIC_GHOST,15,"ref_lvl",9,bon_INC_MAGIC_NEUTRAL,15,"ref_lvl",11,bon_DMG_SKILL + skill_SUM_CATNIP_METEOR,30,bon_NONE]//Electric Fox-OS
+,[2542,weapTyp_RIFLE,222,250,4,2,100,130,0,0,0,0,bon_PHY_ATK,3,"ref_lvl",7,bon_DMG_RANGE,7,"ref_lvl",9,bon_DMG_SKILL + skill_REB_GODS_HAMMER,20,bon_NONE]//HR-S55-OS
+,[2543,weapTyp_DAGGER,221,150,4,2,90,130,0,0,0,0,bon_MATK,150,bon_DMG_ELE_SHADOW,5,bon_MDMG_ELE_SHADOW,5,bon_DMG_ELE_UNDEAD,5,bon_MDMG_ELE_UNDEAD,5,"ref_lvl",7,bon_DMG_ELE_UNDEAD,10,"ref_lvl",7,bon_MDMG_ELE_UNDEAD,10,"ref_lvl",7,bon_DMG_ELE_UNDEAD,10,"ref_lvl",7,bon_MDMG_ELE_UNDEAD,10,"ref_lvl",9,bon_DMG_SKILL + skill_KAG_KUNAI_SPLASH,20,"ref_lvl",11,bon_DMG_ELE_UNDEAD,10,"ref_lvl",11,bon_MDMG_ELE_UNDEAD,10,"ref_lvl",11,bon_DMG_ELE_UNDEAD,10,"ref_lvl",11,bon_MDMG_ELE_UNDEAD,10,bon_NONE]//Kuroiro-OS
 ,[2544,weapTyp_KATAR,208,190,4,2,130,130,0,0,0,0,bon_PHY_ATK,3,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SKILL + skill_GLT_CROSS_RIPPER_SLASHER,15,"ref_lvl",11,bon_DMG_SIZ_SMALL,20,"ref_lvl",11,bon_DMG_SIZ_MEDIUM,20,bon_NONE]//Meuchler-OS
-,[2545,weapTyp_BOW,227,170,4,2,130,120,0,0,0,0,bon_PHY_ATK,3,"ref_lvl",7,bon_DMG_RANGE,7,"ref_lvl",9,bon_DELAY_SKILL_FLAT + skill_MIWA_SEVERE_RAINSTORM,2,"ref_lvl",11,bon_DMG_SKILL + skill_MIWA_SEVERE_RAINSTORM,15,bon_NONE]//MH-P89-OS
-,[2546,weapTyp_ROD,228,80,4,2,130,90,0,0,0,0,bon_MATK,175,bon_UNBREAKABLE,1,bon_MDMG_ELE_EARTH,5,bon_MDMG_ELE_NEUTRAL,5,"ref_lvl",7,bon_RED_CAST,-7,"ref_lvl",9,bon_INC_MAGIC_FIRE,30,"ref_lvl",11,bon_RED_CASTDELAY,10,bon_NONE]//Rutilus Stick-OS
-,[2547,weapTyp_MACE,219,185,4,2,130,80,0,0,0,0,bon_PHY_ATK,3,"ref_lvl",7,bon_RED_CAST,-7,"ref_lvl",9,bon_DMG_SKILL + skill_GEN_CART_CANNON,20,"ref_lvl",11,bon_DMG_RANGE,15,bon_NONE]//Saphir Hall-OS
-,[2548,weapTyp_MACE,209,150,4,2,130,120,0,0,0,0,bon_MATK,170,bon_MATK_MUL,3,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SKILL + skill_ABI_ADORAMUS,20,"ref_lvl",11,bon_INC_MAGIC_HOLY,15,bon_NONE]//Ultio-OS
-,[2549,weapTyp_BOW,210,200,4,2,130,120,0,0,0,0,bon_PHY_ATK,3,"ref_lvl",7,bon_DMG_RANGE,7,"ref_lvl",9,bon_DMG_SKILL + skill_RAN_ARROW_STORM,30,"ref_lvl",11,bon_DMG_SKILL + skill_RAN_ARROW_STORM,20,bon_NONE]//Virtual Bow-OS
+,[2545,weapTyp_BOW,227,170,4,2,120,130,0,0,0,0,bon_PHY_ATK,3,"ref_lvl",7,bon_DMG_RANGE,7,"ref_lvl",9,bon_DELAY_SKILL_FLAT + skill_MIWA_SEVERE_RAINSTORM,2,"ref_lvl",11,bon_DMG_SKILL + skill_MIWA_SEVERE_RAINSTORM,15,bon_NONE]//MH-P89-OS
+,[2546,weapTyp_ROD,228,80,4,2,90,130,0,0,0,0,bon_MATK,175,bon_UNBREAKABLE,1,bon_MDMG_ELE_EARTH,5,bon_MDMG_ELE_NEUTRAL,5,"ref_lvl",7,bon_RED_CAST,-7,"ref_lvl",9,bon_INC_MAGIC_FIRE,30,"ref_lvl",11,bon_RED_CASTDELAY,10,bon_NONE]//Rutilus Stick-OS
+,[2547,weapTyp_MACE,219,185,4,2,80,130,0,0,0,0,bon_PHY_ATK,3,"ref_lvl",7,bon_RED_CAST,-7,"ref_lvl",9,bon_DMG_SKILL + skill_GEN_CART_CANNON,20,"ref_lvl",11,bon_DMG_RANGE,15,bon_NONE]//Saphir Hall-OS
+,[2548,weapTyp_MACE,209,150,4,2,120,130,0,0,0,0,bon_MATK,170,bon_MATK_MUL,3,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SKILL + skill_ABI_ADORAMUS,20,"ref_lvl",11,bon_INC_MAGIC_HOLY,15,bon_NONE]//Ultio-OS
+,[2549,weapTyp_BOW,210,200,4,2,120,130,0,0,0,0,bon_PHY_ATK,3,"ref_lvl",7,bon_DMG_RANGE,7,"ref_lvl",9,bon_DMG_SKILL + skill_RAN_ARROW_STORM,30,"ref_lvl",11,bon_DMG_SKILL + skill_RAN_ARROW_STORM,20,bon_NONE]//Virtual Bow-OS
 
-,[2550,itm_type_ARMOR,0,85,0,1,175,150,0,0,0,0,bon_ATK,100,"ref_lvl",7,bon_DEF,100,"ref_lvl",9,bon_DEF,50,bon_NONE]//Lava Leather Armor
-,[2551,itm_type_GARMENT,0,50,0,1,175,40,0,0,0,0,bon_HIT,10,"ref_lvl",7,bon_HIT,5,"ref_lvl",9,bon_HIT,5,"ref_lvl",11,bon_RED_CASTDELAY,3,bon_NONE]//Lava Leather Manteau
-,[2552,itm_type_SHOES,0,50,0,1,175,60,0,0,0,0,bon_PHY_ATK,2,"ref_lvl",7,bon_ATK,25,"ref_lvl",9,bon_ATK,15,bon_NONE]//Lava Leather Boots
-,[2553,itm_type_ARMOR,0,70,0,1,175,100,0,0,0,0,bon_ATK,100,"ref_lvl",7,bon_ATK,50,"ref_lvl",9,bon_DMG_CRIT,10,bon_NONE]//Lava Leather Suits
-,[2554,itm_type_GARMENT,0,35,0,1,175,35,0,0,0,0,bon_CRIT,5,"ref_lvl",7,bon_CRIT,5,"ref_lvl",9,bon_DMG_CRIT,5,"ref_lvl",11,bon_PHY_ATK,3,bon_NONE]//Lava Leather Muffler
-,[2555,itm_type_SHOES,0,40,0,1,175,50,0,0,0,0,bon_CRIT,5,"ref_lvl",7,bon_DMG_SIZ_SMALL,5,"ref_lvl",7,bon_DMG_SIZ_MEDIUM,5,"ref_lvl",7,bon_DMG_SIZ_LARGE,5,"ref_lvl",9,bon_DMG_CRIT,5,bon_NONE]//Lava Leather Shoes
-,[2556,itm_type_ARMOR,0,55,0,1,175,75,0,0,0,0,bon_MATK,100,"ref_lvl",7,bon_MATK,50,"ref_lvl",9,bon_MATK,25,bon_NONE]//Lava Leather Robe
-,[2557,itm_type_GARMENT,0,25,0,1,175,30,0,0,0,0,bon_RED_CAST,-10,"ref_lvl",7,bon_RED_CAST,-10,"ref_lvl",9,bon_RED_CAST,-10,"ref_lvl",11,bon_INC_MAGIC_FIRE,5,bon_NONE]//Lava Leather Hood
-,[2558,itm_type_SHOES,0,25,0,1,175,50,0,0,0,0,bon_INC_MAGIC_FIRE,3,"ref_lvl",7,bon_MATK,25,"ref_lvl",9,bon_MATK,15,bon_NONE]//Lava Leather Sandles
+,[2550,itm_type_ARMOR,0,85,0,1,150,175,0,0,0,0,bon_ATK,100,"ref_lvl",7,bon_DEF,100,"ref_lvl",9,bon_DEF,50,bon_NONE]//Lava Leather Armor
+,[2551,itm_type_GARMENT,0,50,0,1,40,175,0,0,0,0,bon_HIT,10,"ref_lvl",7,bon_HIT,5,"ref_lvl",9,bon_HIT,5,"ref_lvl",11,bon_RED_CASTDELAY,3,bon_NONE]//Lava Leather Manteau
+,[2552,itm_type_SHOES,0,50,0,1,60,175,0,0,0,0,bon_PHY_ATK,2,"ref_lvl",7,bon_ATK,25,"ref_lvl",9,bon_ATK,15,bon_NONE]//Lava Leather Boots
+,[2553,itm_type_ARMOR,0,70,0,1,100,175,0,0,0,0,bon_ATK,100,"ref_lvl",7,bon_ATK,50,"ref_lvl",9,bon_DMG_CRIT,10,bon_NONE]//Lava Leather Suits
+,[2554,itm_type_GARMENT,0,35,0,1,35,175,0,0,0,0,bon_CRIT,5,"ref_lvl",7,bon_CRIT,5,"ref_lvl",9,bon_DMG_CRIT,5,"ref_lvl",11,bon_PHY_ATK,3,bon_NONE]//Lava Leather Muffler
+,[2555,itm_type_SHOES,0,40,0,1,50,175,0,0,0,0,bon_CRIT,5,"ref_lvl",7,bon_DMG_SIZ_SMALL,5,"ref_lvl",7,bon_DMG_SIZ_MEDIUM,5,"ref_lvl",7,bon_DMG_SIZ_LARGE,5,"ref_lvl",9,bon_DMG_CRIT,5,bon_NONE]//Lava Leather Shoes
+,[2556,itm_type_ARMOR,0,55,0,1,75,175,0,0,0,0,bon_MATK,100,"ref_lvl",7,bon_MATK,50,"ref_lvl",9,bon_MATK,25,bon_NONE]//Lava Leather Robe
+,[2557,itm_type_GARMENT,0,25,0,1,30,175,0,0,0,0,bon_RED_CAST,-10,"ref_lvl",7,bon_RED_CAST,-10,"ref_lvl",9,bon_RED_CAST,-10,"ref_lvl",11,bon_INC_MAGIC_FIRE,5,bon_NONE]//Lava Leather Hood
+,[2558,itm_type_SHOES,0,25,0,1,50,175,0,0,0,0,bon_INC_MAGIC_FIRE,3,"ref_lvl",7,bon_MATK,25,"ref_lvl",9,bon_MATK,15,bon_NONE]//Lava Leather Sandles
 
 ,[2559,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ATK,50,bon_NONE]//Illusion Armor Type A + Illusion Engine Wing Type A
 ,[2560,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RED_CASTDELAY,10,bon_NONE]//Illusion Armor Type A + Illusion Engine Wing Type B
