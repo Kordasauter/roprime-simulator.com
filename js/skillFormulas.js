@@ -2412,13 +2412,46 @@ function CalcSkillDamage()
 				// Large Monster:  ATK [ { ( Skill Level x 300 ) + 300 } x Caster s Base Level / 120 ] %
 				var sizeModifier = 4.0 - n_B[en_SIZE] * 0.5;
 				w_SkillMod = ( ( n_A_ActiveSkillLV * sizeModifier ) + 3.0 ) * n_A_BaseLV / 120.0;
-				n_Delay[ksDelayGlobal] = 0.5 * Math.pow(2, (n_A_ActiveSkillLV -1));
-				n_Delay[ksDelayCooldown] = 0.05 + ((n_A_ActiveSkillLV*0.1));
-				
 			}
 			if(PATCH == 2)
 			{
 				w_SkillMod = ( ( n_A_ActiveSkillLV * 3 ) + 4.0 ) * n_A_BaseLV / 110.0;
+			}
+			
+			if(PATCH == 0)
+			{
+				n_Delay[ksDelayGlobal] = 0.5 * Math.pow(2, (n_A_ActiveSkillLV -1));
+				n_Delay[ksDelayCooldown] = 0.05 + ((n_A_ActiveSkillLV*0.1));
+			}
+			else if(PATCH == 1)
+			{
+				n_Delay[ksDelayGlobal] = 1.0;
+				// n_Delay[ksDelayCooldown] = 0.05 + ((n_A_ActiveSkillLV*0.1));
+				switch(n_A_ActiveSkillLV)
+				{
+					case 1:
+						n_Delay[ksDelayCooldown] = 0.15;
+						break;
+					case 2:
+						n_Delay[ksDelayCooldown] = 0.20;
+						break;
+					case 3:
+						n_Delay[ksDelayCooldown] = 0.30;
+						break;
+					case 4:
+						n_Delay[ksDelayCooldown] = 0.45;
+						break;
+					case 5:
+						n_Delay[ksDelayCooldown] = 0.65;
+						break;
+					default :
+						n_Delay[ksDelayCooldown] = 0;
+						break;
+				}
+
+			}
+			else
+			{
 				n_Delay[ksDelayGlobal] = 1.0;
 				n_Delay[ksDelayCooldown] = 0.3;
 			}
