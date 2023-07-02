@@ -1949,6 +1949,10 @@ function CalcBossMod()
 	{
 		bossMod = n_tok[bon_DMG_BOSS];
 	}
+	else
+	{
+		bossMod = n_tok[bon_DMG_NON_BOSS];
+	}
 }
 
 function CalcAttackMod()

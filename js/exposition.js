@@ -335,7 +335,8 @@ WordData = [
 ,["","Str Biscuit Stick"]
 ,["","Increases magic damage to "]
 ,["","Increases "]
-//,["","xxx"]
+,["","Normal"]//275
+// ,["","xxx"]
 ];
 }
 

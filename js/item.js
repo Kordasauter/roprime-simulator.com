@@ -2842,6 +2842,10 @@ function BuildItemDescription( bonusType, bonusValue )
 		CBIstr += "Sanctuary damage effectiveness against Demon increased by"+ wIS + bonusValue +"%<br/>";
 	if(97 == bonusType)
 		CBIstr += "[" + GetWord(254) + "]" + " -" + bonusValue +"s<br/>";
+	if(98 == bonusType) // Non Boss Dmg
+		CBIstr += GetWord(183) + "[" + GetWord(275) + "]" + GetWord(181) + wIS + bonusValue +"%<br/>";
+	if(99 == bonusType) // Non Boss Mdmg
+		CBIstr += "Magical damage on " + "[" + GetWord(275) + "]" + GetWord(181) + wIS + bonusValue +"%<br/>";
 	if(110 <= bonusType && bonusType <=119)
 		CBIstr += GetWord(202) + "[" + SyuzokuOBJ[bonusType-110][Language] + "]" + GetWord(203) + wIS + bonusValue +"<br/>";
 	if(120 <= bonusType && bonusType <=129)
@@ -2851,7 +2855,7 @@ function BuildItemDescription( bonusType, bonusValue )
 	if(150 <= bonusType && bonusType <=169)
 		CBIstr += GetWord(209) +"["+ AilmentsOBJ[bonusType-150][Language] +"]"+ GetWord(210) + bonusValue +"%<br/>";
 	if(170 <= bonusType && bonusType <=179) // Race MagDmg
-		CBIstr += "Magical " + GetWord(183) + "["+ SyuzokuOBJ[bonusType-170][Language] + "]" + GetWord(181) + wIS + bonusValue +"%<br/>";
+		CBIstr += "Magical damage  on " + "["+ SyuzokuOBJ[bonusType-170][Language] + "]" + GetWord(181) + wIS + bonusValue +"%<br/>";
 	if(180 <= bonusType && bonusType <=189)
 		CBIstr += "Ignore " + bonusValue +"% of the " + "[" + SyuzokuOBJ[bonusType-180][Language] + "] monster's defence<br/>";
 		// CBIstr += "Ignore " + "["+ SyuzokuOBJ[bonusType-180][Language] + "]" +"% of the monster's defence<br/>";

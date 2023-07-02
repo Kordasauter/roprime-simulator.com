@@ -235,9 +235,9 @@ bon_SANC_MUL = 94; // radwisdom, gloCureWand, diaRing - don't get it
 //94: +% [Sanctuary] Effectiveness 
 //95: +% [Sanctuary] Effectiveness on Self
 bon_HEAL_UNDEADII = 96; // see 93 ?
-bon_RED_FIXEDCAST_FLAT = 97; // free
-// bon_MDMG_BOSS = 98; // TODO
-// = 99; // free
+bon_RED_FIXEDCAST_FLAT = 97; 
+bon_DMG_NON_BOSS = 98;
+bon_MDMG_NON_BOSS = 99;
 bon_DMG_SCARABA = 100;
 bon_RED_DMG_MALAYA = 101;
 // ...
@@ -604,8 +604,9 @@ ench_RUNE_OF_VIT = ench_RUNE_OF_AGI + 3;
 ench_RUNE_OF_INT = ench_RUNE_OF_VIT + 3;
 ench_RUNE_OF_DEX = ench_RUNE_OF_INT + 3;
 ench_RUNE_OF_LUK = ench_RUNE_OF_DEX + 3;
-ench_SPELL2 = ench_RUNE_OF_LUK + 3; //Conjure
-// ench_ = ench_SPELL2 + 10;
+ench_SPELL2 = ench_RUNE_OF_LUK + 5; //Conjure
+ench_DMG_NON_BOSS = ench_SPELL2 + 10;
+ench_MDMG_NON_BOSS = ench_DMG_NON_BOSS + 30;
 
 }
 

@@ -1204,6 +1204,15 @@ function CalcMagicDamage( rawDamage )
 			
 		}
 	}
+	if(n_B[en_BOSS] == 1 )
+	{
+		wX += n_tok[bon_DMG_BOSS];
+	}
+	else
+	{
+		wX += n_tok[bon_MDMG_NON_BOSS];
+	}
+	
 //Cards
 	if ( n_B[en_RACE] == race_BRUTE  && CardNumSearch(706) && n_A_HEAD_DEF_PLUS >= 9)
 	{//Jaguar Card
