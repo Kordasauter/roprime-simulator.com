@@ -2620,6 +2620,11 @@ function CalcSkillDamage()
 			fixedCastTime *= 0.0;
 			variableCastTime *= 0.0;
 			n_Delay[ksDelayCooldown] = 30.0;
+			if(EquipNumSearch(2542))
+			{//HR-S55-OS
+				if(n_A_Weapon_ATKplus >= 11)
+					n_Delay[ksDelayCooldown] -= 5.0;
+			}
 		}
 		else if(n_A_ActiveSkill==skill_REB_DRAGON_TAIL)
 		{
