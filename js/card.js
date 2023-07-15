@@ -727,7 +727,7 @@ function SetCard()
 ,[655,   card_com_SPE,"Darklord Essence Luck 3",0,bon_LUK,4,bon_CRIT,4,bon_DEX,-4,0]
 //Charleston
 ,[656,	 card_comp_WEAPON,"Step","[If refine level is +10 or higher]<br>[Axe Boomerang] damage +30%.",bon_DMG_SKILL + skill_MEC_AXE_BOOMERANG,30,0]
-,[657,	 card_comp_WEAPON,"Rock Step","[If refine level is +10 or higher]<br>[Arm Cannon] damage +20%.",bon_DMG_SKILL + skill_MEC_ARM_CANNON,20,0]
+,[657,	 card_comp_WEAPON,"Rock Step","",bon_DMG_SKILL + skill_MEC_ARM_CANNON,20,"ref_lvl",10,bon_DMG_SKILL + skill_MEC_ARM_CANNON,20,0]
 ,[658,	 card_com_ARMOR,"Kick Step","[When using by Mechanic class]<br>Resistance to long-range physical damage +30%.",bon_HP_MUL,8,0]
 ,[659,	 card_comp_WEAPON,"Kick and Kick","[If refine level is +10 or higher]<br>[Vulcan Arm] damage +20%.",bon_DMG_SKILL + skill_MEC_VULCAN_ARM,10,0]
 ,[660,	 card_comp_WEAPON,"Charleston","Has a chance to destroy an enemy's armor. ",bon_SP_ADD,-300,0]

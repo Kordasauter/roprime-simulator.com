@@ -1008,10 +1008,10 @@ function ApplySkillModifiers( damage )
 	}
 	if(n_A_ActiveSkill == skill_MEC_ARM_CANNON)
 	{
-		if(CardNumSearch(657) && n_A_BODY_DEF_PLUS >= 10)
-		{ //Rock Step Card
-			dmgMultiplier += 20;
-		}
+		// if(CardNumSearch(657) && n_A_BODY_DEF_PLUS >= 10)
+		// { //Rock Step Card
+			// dmgMultiplier += 20;
+		// }
 		if(EquipNumSearch(2218))
 		{// Old Driver Band (Yellow) [1]
 			dmgMultiplier += 5 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
