@@ -2965,7 +2965,7 @@ function BuildItemDescription( bonusType, bonusValue )
 	}
 	if(bonusType  == bon_MDEFIGN_RC_NON_BOSS)
 	{
-		CBIstr += "On [Normal] monsters<br>Ignores " + bonusValue + "% of target's DEF.<br>";
+		CBIstr += "On [Normal] monsters<br>Ignores " + bonusValue + "% of target's MDEF.<br>";
 	}
 	if(bonusType  == bon_MDMG_ELE_ALL)
 	{

@@ -1798,6 +1798,16 @@ function CalcRacialMod()
 	{ // Race Reduction
 		racialMod -= monsterBuffs[status_en_buff_Race];
 	}
+	for(var i = 0; i<10;i++)
+	{
+		if(n_tok[bon_DEFIGN_RC_FORMLESS + i] > 100)
+			n_tok[bon_DEFIGN_RC_FORMLESS + i] = 100;
+	}
+	for(var i = 0; i<10;i++)
+	{
+		if(n_tok[bon_MDEFIGN_RC_FORMLESS + i] > 100)
+			n_tok[bon_MDEFIGN_RC_FORMLESS + i] = 100;
+	}
 }
 
 function CalcSpecialRacialMod()
