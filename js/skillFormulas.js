@@ -1838,7 +1838,7 @@ function CalcSkillDamage()
 				// formula:[(n_A_ActiveSkillLV * 0.6 ) + {(Cart_Remodeling_Lv × 50) × (INT ÷ 40)}]
 				w_SkillMod = (((SkillSearch( skill_GEN_CART_REMODELING ) * 50) * ( n_A_INT / 40)) + (n_A_ActiveSkillLV * 60))/100
 			}
-			else if(PATCH >= 1)
+			else if(PATCH >= 2)
 			{
 				// formula:[(n_A_ActiveSkillLV * 0.6 ) + {((Skill Level x 20) x Cart_Remodeling_Lv) + (INT x 2)}] x (BaseLv ÷ 100)
 				w_SkillMod = (n_A_ActiveSkillLV * 2.5) + ((n_A_ActiveSkillLV * 0.2) * SkillSearch( skill_GEN_CART_REMODELING )) + ( n_A_INT * 0.02);
