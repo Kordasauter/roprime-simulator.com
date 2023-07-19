@@ -4546,7 +4546,12 @@ function CalcSkillDamage()
 		else
 		{
 			if (PATCH == 1)
-				w_SkillMod = ( ( n_A_DEX + n_A_AGI ) * (n_A_ActiveSkillLV / 5) * 1.5) / 100.0;
+			{
+				if (n_A_WeaponType == weapTyp_INSTRUMENT || n_A_WeaponType == weapTyp_WHIP)
+					w_SkillMod = ( ( n_A_DEX + n_A_AGI ) * (n_A_ActiveSkillLV / 5) * 1.5) / 100.0;
+				else
+					( ( n_A_DEX + n_A_AGI ) * n_A_ActiveSkillLV / 5 ) / 100.0;
+			}
 			else
 				w_SkillMod = ( ( n_A_DEX + n_A_AGI ) * n_A_ActiveSkillLV / 5 ) / 100.0;
 		}
