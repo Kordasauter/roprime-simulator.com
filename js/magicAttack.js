@@ -855,7 +855,15 @@ function calcMAtk( includeMultipliers )
 	{//Bomi Card + Vampire's Familiar [1]
 		n_A_EquipMATK += 30;
 	}
-	
+
+//Enchants
+	if(EnchNumSearch( 5244 ))
+		{//Modification Orb (MATK)
+			if(n_A_BODY_DEF_PLUS >= 7)
+				n_A_EquipMATK += 25 * EnchNumSearch( 5244 );
+			if(n_A_BODY_DEF_PLUS >= 9)
+				n_A_EquipMATK += 25 * EnchNumSearch( 5244 );
+		}
 // Skills
 	if ( performerBuffs[ksWandererSolo] === ksMoonlightSerenade &&
 		 performerBuffs[ksWandererSoloLevel] > 0 )

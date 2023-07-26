@@ -963,6 +963,10 @@ function ApplySkillModifiers( damage )
 		{//"Shadow Oboro Armor"
 			dmgMultiplier += n_A_SHADOW_BODY_DEF_PLUS * 5;
 		}
+		if(EquipNumSearch(2589))
+		{//Wind Spear Petal Shadow Earring + Wind Spear Wind Spear Petal Shadow Pendant + Wind Spear Petal Shadow Shoes
+			dmgMultiplier += (n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_PENDANT_DEF_PLUS + n_A_SHADOW_SHOES_DEF_PLUS)/2;
+		}
 	}
 	if(n_A_ActiveSkill == skill_NIN_FREEZING_SPEAR)
 	{
@@ -970,12 +974,20 @@ function ApplySkillModifiers( damage )
 		{//"Shadow Oboro Armor"
 			dmgMultiplier += n_A_SHADOW_BODY_DEF_PLUS * 5;
 		}
+		if(EquipNumSearch(2589))
+		{//Wind Spear Petal Shadow Earring + Wind Spear Wind Spear Petal Shadow Pendant + Wind Spear Petal Shadow Shoes
+			dmgMultiplier += (n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_PENDANT_DEF_PLUS + n_A_SHADOW_SHOES_DEF_PLUS)/2;
+		}
 	}
 	if(n_A_ActiveSkill == skill_NIN_WIND_BLADE)
 	{
 		if(EquipNumSearch(2007))
 		{//"Shadow Oboro Armor"
 			dmgMultiplier += n_A_SHADOW_BODY_DEF_PLUS * 5;
+		}
+		if(EquipNumSearch(2589))
+		{//Wind Spear Petal Shadow Earring + Wind Spear Wind Spear Petal Shadow Pendant + Wind Spear Petal Shadow Shoes
+			dmgMultiplier += (n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_PENDANT_DEF_PLUS + n_A_SHADOW_SHOES_DEF_PLUS)/2;
 		}
 	}
 	if(n_A_ActiveSkill == skill_KAG_SWIRLING_PETAL)
@@ -1215,6 +1227,11 @@ function ApplySkillModifiers( damage )
 		dmgMultiplier += 6 * Math.floor(n_A_Weapon_ATKplus / 2);
 	}
 	
+	if( EquipNumSearch(2587) && n_A_ActiveSkill == skill_REB_FIRE_DANCE)  //Rune Knight Set
+	{//Fire Dance Shadow Earring + Fire Dance Shadow Pendant + Fire Fire Dance Shadow Shoes
+		dmgMultiplier += (n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_PENDANT_DEF_PLUS + n_A_SHADOW_SHOES_DEF_PLUS)/2;
+	}
+	
 	
 	// if(n_A_ActiveSkill == )
 	// {
@@ -1367,6 +1384,8 @@ function ApplySkillModifiers( damage )
 	
 	if(n_A_ActiveSkill == skill_RUN_IGNITION_BREAK)
 	{
+		console.log("avant");
+		console.log(dmgMultiplier);
 		if(ItemOBJ[n_A_Equip[eq_WEAPON]][itm_WLVL] == 4)
 			dmgMultiplier += 20 * CardNumSearch( 737 ); //True Seyren Windsor
 		if(n_A_Weapon_ATKplus >= 10)
@@ -1375,6 +1394,8 @@ function ApplySkillModifiers( damage )
 		{// Old Rune Circlet [1]
 			dmgMultiplier += 20 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
 		}
+		console.log("après");
+		console.log(dmgMultiplier);
 	}
 	
 	if(n_A_ActiveSkill == skill_RAN_CLUSTER_BOMB)

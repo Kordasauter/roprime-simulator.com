@@ -1431,6 +1431,62 @@ function ClickWeapon( data,isRefine )
 		}
 		
 	}
+	else if(weapon >= 2534 && weapon <= 2549)//spe
+	{//OS Weapons 
+		formElements["A_WEAPON_ENCHANT_2"].disabled = true;
+		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
+		formElements["A_WEAPON_ENCHANT_4"].disabled = false;
+		//Slot 4
+		for ( var i = 0; EnchantListOBJ[124][i] != "NULL" && !isRefine; i++ )
+		{
+			if(i < 1)
+			{
+				formElements["A_WEAPON_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[124][i]][1],EnchantOBJ[EnchantListOBJ[124][i]][0]);
+			}
+				
+			if(i == 1)
+			{
+				formElements["A_WEAPON_ENCHANT_4"].options[i] = new Option("Physical");
+				formElements["A_WEAPON_ENCHANT_4"].options[i].disabled = true;
+			}
+			if(i >= 1)
+			{
+				formElements["A_WEAPON_ENCHANT_4"].options[i+1] = new Option(EnchantOBJ[EnchantListOBJ[124][i]][1],EnchantOBJ[EnchantListOBJ[124][i]][0]);
+			}
+		}
+		var formsize = formElements["A_WEAPON_ENCHANT_4"].length;
+		formElements["A_WEAPON_ENCHANT_4"].options[formsize] = new Option("Magical");
+		formElements["A_WEAPON_ENCHANT_4"].options[formsize].disabled = true;
+		for ( var i = 1; EnchantListOBJ[126][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_WEAPON_ENCHANT_4"].options[i + formsize] = new Option(EnchantOBJ[EnchantListOBJ[126][i]][1],EnchantOBJ[EnchantListOBJ[126][i]][0]);
+		}
+		//Slot 3
+		for ( var i = 0; EnchantListOBJ[125][i] != "NULL" && !isRefine; i++ )
+		{
+			if(i < 1)
+			{
+				formElements["A_WEAPON_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[125][i]][1],EnchantOBJ[EnchantListOBJ[125][i]][0]);
+			}
+				
+			if(i == 1)
+			{
+				formElements["A_WEAPON_ENCHANT_3"].options[i] = new Option("Physical");
+				formElements["A_WEAPON_ENCHANT_3"].options[i].disabled = true;
+			}
+			if(i >= 1)
+			{
+				formElements["A_WEAPON_ENCHANT_3"].options[i+1] = new Option(EnchantOBJ[EnchantListOBJ[125][i]][1],EnchantOBJ[EnchantListOBJ[125][i]][0]);
+			}
+		}
+		formsize = formElements["A_WEAPON_ENCHANT_3"].length;
+		formElements["A_WEAPON_ENCHANT_3"].options[formsize] = new Option("Magical");
+		formElements["A_WEAPON_ENCHANT_3"].options[formsize].disabled = true;
+		for ( var i = 1; EnchantListOBJ[127][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_WEAPON_ENCHANT_3"].options[i + formsize] = new Option(EnchantOBJ[EnchantListOBJ[127][i]][1],EnchantOBJ[EnchantListOBJ[127][i]][0]);
+		}
+	}
 	// else if(weapon == 9999)
 	// {
 		
@@ -1721,6 +1777,20 @@ function ClickGarment( data, isRefine )
 		}
 		
 	}
+	else if(garm_id == 2526 || garm_id == 2527)
+	{// Illusion Engine Wing Type A || Illusion Engine Wing Type B
+		CleanEnchant("A_GARMENT_ENCHANT");
+		formElements["A_GARMENT_ENCHANT_4"].disabled = false;
+		formElements["A_GARMENT_ENCHANT_3"].disabled = false;
+		formElements["A_GARMENT_ENCHANT_2"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[119][i] != "NULL"; i++ )
+		{
+			formElements["A_GARMENT_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[119][i]][1],EnchantOBJ[EnchantListOBJ[119][i]][0]);
+			formElements["A_GARMENT_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[119][i]][1],EnchantOBJ[EnchantListOBJ[119][i]][0]);
+			formElements["A_GARMENT_ENCHANT_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[119][i]][1],EnchantOBJ[EnchantListOBJ[119][i]][0]);
+		}
+		
+	}
 	// else if(garm_id == 9999)
 	// {
 		// CleanEnchant("A_GARMENT_ENCHANT");
@@ -1863,6 +1933,21 @@ function ClickShoes( data, isRefine )
 			formElements["A_SHOES_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[110][i]][1],EnchantOBJ[EnchantListOBJ[110][i]][0]);
 			formElements["A_SHOES_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[110][i]][1],EnchantOBJ[EnchantListOBJ[110][i]][0]);
 		}
+	}
+	else if(shoes_id == 2528 ||  shoes_id == 2529)
+	{// Illusion Leg Type A || Illusion Leg Type B
+		CleanEnchant("A_SHOES_ENCHANT");
+		formElements["A_SHOES_ENCHANT_4"].disabled = false;
+		formElements["A_SHOES_ENCHANT_3"].disabled = false;
+		formElements["A_SHOES_ENCHANT_2"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[120][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_SHOES_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[120][i]][1],EnchantOBJ[EnchantListOBJ[120][i]][0]);
+			formElements["A_SHOES_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[120][i]][1],EnchantOBJ[EnchantListOBJ[120][i]][0]);
+		}
+		for ( var i = 0; EnchantListOBJ[121][i] != "NULL" && !isRefine; i++ )
+			formElements["A_SHOES_ENCHANT_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[121][i]][1],EnchantOBJ[EnchantListOBJ[121][i]][0]);
+			
 	}
 	// else if(shoes_id == 9999)
 	// {
@@ -2056,7 +2141,21 @@ function ClickArmor( data, isRefine )
 		for ( var i = 0; EnchantListOBJ[110][i] != "NULL"; i++ )
 		{
 			formElements["A_ARMOR_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[110][i]][1],EnchantOBJ[EnchantListOBJ[110][i]][0]);
-			formElements["A_ARMOR_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[110][i]][1],EnchantOBJ[EnchantListOBJ[110][i]][0]);
+			formElements["A_ARMOR_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[110][i]][1],EnchantOBJ[EnchantListOBJ[110][i]][0]);
+		}
+	}
+	else if(armor_id == 2524 || armor_id == 2525)
+	{// Illusion Armor Type A || Illusion Armor Type B
+		if(!isRefine)
+			CleanEnchant("A_ARMOR_ENCHANT");
+		formElements["A_ARMOR_ENCHANT_4"].disabled = false;
+		formElements["A_ARMOR_ENCHANT_3"].disabled = false;
+		formElements["A_ARMOR_ENCHANT_2"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[118][i] != "NULL"; i++ )
+		{
+			formElements["A_ARMOR_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[118][i]][1],EnchantOBJ[EnchantListOBJ[118][i]][0]);
+			formElements["A_ARMOR_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[118][i]][1],EnchantOBJ[EnchantListOBJ[118][i]][0]);
+			formElements["A_ARMOR_ENCHANT_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[118][i]][1],EnchantOBJ[EnchantListOBJ[118][i]][0]);
 		}
 	}
 	// else if(armor_id == 9999)
@@ -2357,6 +2456,34 @@ function ClickAcces( data, numAccess )
 		}
 		formElements[formAcc + "_4"].disabled = false;
 		formElements[formAcc + "_3"].disabled = false;
+	}
+	else if(access_id == 2530 || access_id == 2532)
+	{// Illusion Booster L || Illusion Battle Chip L
+		CleanEnchant(formAcc);
+		var ench1 = 122;
+		for ( var i = 0; EnchantListOBJ[ench1][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench1][i]][1],EnchantOBJ[EnchantListOBJ[ench1][i]][0]);
+			formElements[formAcc + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench1][i]][1],EnchantOBJ[EnchantListOBJ[ench1][i]][0]);
+			formElements[formAcc + "_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench1][i]][1],EnchantOBJ[EnchantListOBJ[ench1][i]][0]);
+		}
+		formElements[formAcc + "_4"].disabled = false;
+		formElements[formAcc + "_3"].disabled = false;
+		formElements[formAcc + "_2"].disabled = false;
+	}
+	else if(access_id == 2531 || access_id == 2533)
+	{// Illusion Booster R || Illusion Battle Chip R
+		CleanEnchant(formAcc);
+		var ench1 = 123;
+		for ( var i = 0; EnchantListOBJ[ench1][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench1][i]][1],EnchantOBJ[EnchantListOBJ[ench1][i]][0]);
+			formElements[formAcc + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench1][i]][1],EnchantOBJ[EnchantListOBJ[ench1][i]][0]);
+			formElements[formAcc + "_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench1][i]][1],EnchantOBJ[EnchantListOBJ[ench1][i]][0]);
+		}
+		formElements[formAcc + "_4"].disabled = false;
+		formElements[formAcc + "_3"].disabled = false;
+		formElements[formAcc + "_2"].disabled = false;
 	}
 	// else if(access_id == 9999)
 	// {

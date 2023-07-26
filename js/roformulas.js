@@ -1199,6 +1199,14 @@ function CalcEquipAtk()
 			equipmentAttack += 1;
 		}
 	}
+	if(EnchNumSearch( 5243 ))
+	{//Modification Orb (ATK)
+		if(n_A_BODY_DEF_PLUS >= 7)
+			equipmentAttack += 25 * EnchNumSearch( 5243 );
+		if(n_A_BODY_DEF_PLUS >= 9)
+			equipmentAttack += 25 * EnchNumSearch( 5243 );
+	}
+	
 // Skills
 	if( SkillSearch( skill_GS_LAST_STAND ) )
 	{ // LastStand
@@ -1783,6 +1791,14 @@ function CalcRacialMod()
 	{ // "Shadow Tamer Boots"
 		if (n_A_SHADOW_SHIELD_DEF_PLUS >= 7) { n_tok[bon_DMG_RC_BRUTE] += 1; }
 		if (n_A_SHADOW_SHIELD_DEF_PLUS >= 9) { n_tok[bon_DMG_RC_BRUTE] += 3; }
+	}
+	if(EquipNumSearch(2588))
+	{//Fire Dance Shadow Earring + Shadow Rebellion Armor
+		n_tok[bon_DEFIGN_RC_ALL] += (n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_SHOES_DEF_PLUS);
+	}
+	if(EquipNumSearch(2590))
+	{//Fire Dance Shadow Earring + Shadow Rebellion Armor
+		n_tok[bon_DEFIGN_RC_ALL] += (n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_SHOES_DEF_PLUS);
 	}
 //Cards
 	if ( CardNumSearch( 711 ) )
@@ -2457,6 +2473,13 @@ function CalcCriticalMod()
 		if(n_A_BODY_DEF_PLUS >= 13)
 			n_tok[bon_DMG_CRIT] += 6;
 	}
+	if(EnchNumSearch( 5248 ))
+	{//Modification Orb (Critical)
+		if(n_A_SHOULDER_DEF_PLUS >= 7)
+			n_tok[bon_DMG_CRIT] += 5 * EnchNumSearch( 5248 );
+		if(n_A_SHOULDER_DEF_PLUS >= 9)
+			n_tok[bon_DMG_CRIT] += 5 * EnchNumSearch( 5248 );
+	}
 
 //Shadow
 	if( EquipNumSearch(1825))
@@ -2913,6 +2936,13 @@ function CalcRangedMod()
 			n_tok[bon_DMG_RANGE] += 8;
 		if(n_A_BODY_DEF_PLUS >= 13)
 			n_tok[bon_DMG_RANGE] += 2;
+	}
+	if(EnchNumSearch( 5245 ))
+	{//Modification Orb (Sharpshooter)
+		if(n_A_BODY_DEF_PLUS >= 7)
+			n_tok[bon_DMG_RANGE] += 2 * EnchNumSearch( 5245 );
+		if(n_A_BODY_DEF_PLUS >= 9)
+			n_tok[bon_DMG_RANGE] += 2 * EnchNumSearch( 5245 );
 	}
 	
 //Skills
@@ -3716,6 +3746,15 @@ function calcHP()
 		additiveHP += Math.floor( 10 / 3 * n_A_BaseLV ) + modifier;
 	}
 
+//Enchants
+	if(EnchNumSearch( 5249 ))
+	{//Modification Orb (Health)
+		if(n_A_SHOES_DEF_PLUS >= 7)
+			additiveHP += 500 * EnchNumSearch( 5249 );
+		if(n_A_SHOES_DEF_PLUS >= 9)
+			additiveHP += 750 * EnchNumSearch( 5249 );
+	}
+	
 // Skills
 	if ( SkillSearch( skill_CR_FAITH ) )
 	{ // Faith
@@ -4309,7 +4348,7 @@ function calcSP( n_A_MaxSP )
 	w += StPlusCalc2(bon_INT);
 	w += StPlusCalc2(bon_ALL_STATS);
 
-	// Cards
+// Cards
 	if(n_A_JobSearch()==cls_MAG)
 	{ // MageCls
 		w += 100 * CardNumSearch(card_HEAD_BANSHEE); // Banshee
@@ -4322,7 +4361,7 @@ function calcSP( n_A_MaxSP )
 	if(n_A_HEAD_DEF_PLUS >= 9 && n_A_card[card_loc_HEAD_UPPER] == 298) // Carat
 		w += 150;
 
-	// Equipment
+// Equipment
 	if ( EquipNumSearch( 536 ) )
 	{ // ValkShoes
 		jobClass = n_A_JobSearch();
@@ -4477,6 +4516,15 @@ function calcSP( n_A_MaxSP )
 	if ( EquipNumSearch(1840) )
 	{ // Shadow Taekwon Gloves
 		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 7){w += 200;}
+	}
+	
+//Enchants
+	if(EnchNumSearch( 5250 ))
+	{//Modification Orb (Spirit)
+		if(n_A_SHOES_DEF_PLUS >= 7)
+			w += 100 * EnchNumSearch( 5250 );
+		if(n_A_SHOES_DEF_PLUS >= 9)
+			w += 150 * EnchNumSearch( 5250 );
 	}
 	
 // Skills	
@@ -4861,6 +4909,35 @@ function calcHardDef( n_A_totalDEF )
 	{ // Shadow Wanderer Shield
 		n_A_DEF += n_A_SHADOW_SHIELD_DEF_PLUS * (SkillSearch(skill_WAN_MOONLIGHT) + SkillSearch(skill_WAN_SYMPHONY) + SkillSearch(skill_WAN_SWING_DANCE));
 	}
+
+//Enchants
+	if(EnchNumSearch( 5241 ))
+	{//Modification Orb (DEF)
+		for(var i = 0; i < 3 ; i++)
+		{
+			if(n_A_Enchant[ench_ARMOR2 + i] == 5241)
+			{
+				if(n_A_BODY_DEF_PLUS >= 7)
+					n_A_DEF += 10;
+				if(n_A_BODY_DEF_PLUS >= 9)
+					n_A_DEF += 10;
+			}
+			if(n_A_Enchant[ench_GARMENT2 + i] == 5241)
+			{
+				if(n_A_SHOULDER_DEF_PLUS >= 7)
+					n_A_DEF += 10;
+				if(n_A_SHOULDER_DEF_PLUS >= 9)
+					n_A_DEF += 10;
+			}
+			if(n_A_Enchant[ench_SHOES2 + i] == 5241)
+			{
+				if(n_A_SHOES_DEF_PLUS >= 7)
+					n_A_DEF += 10;
+				if(n_A_SHOES_DEF_PLUS >= 9)
+					n_A_DEF += 10;
+			}
+		}
+	}
 	
 // Skills
 	if ( performerBuffs[ksEnsemble] === ksBattleTheme && performerBuffs[ksEnsembleLevel] > 0 )
@@ -5157,6 +5234,34 @@ function calcHardMDef(n_A_MDEF)
 		else
 		{
 			n_A_MDEF -= Math.floor( ( 200 / acolyteBuffs[ksSuraIntelligence] ) * acolyteBuffs[ksPPChange] );
+		}
+	}
+//Enchants
+	if(EnchNumSearch( 5242 ))
+	{//Modification Orb (MDEF)
+		for(var i = 0; i < 3 ; i++)
+		{
+			if(n_A_Enchant[ench_ARMOR2 + i] == 5242)
+			{
+				if(n_A_BODY_DEF_PLUS >= 7)
+					n_A_MDEF += 3;
+				if(n_A_BODY_DEF_PLUS >= 9)
+					n_A_MDEF += 3;
+			}
+			if(n_A_Enchant[ench_GARMENT2 + i] == 5242)
+			{
+				if(n_A_SHOULDER_DEF_PLUS >= 7)
+					n_A_MDEF += 3;
+				if(n_A_SHOULDER_DEF_PLUS >= 9)
+					n_A_MDEF += 3;
+			}
+			if(n_A_Enchant[ench_SHOES2 + i] == 5242)
+			{
+				if(n_A_SHOES_DEF_PLUS >= 7)
+					n_A_MDEF += 3;
+				if(n_A_SHOES_DEF_PLUS >= 9)
+					n_A_MDEF += 3;
+			}
 		}
 	}
 	
@@ -6232,7 +6337,7 @@ function calcASPD()
 		// aspdMultiplier += SkillSearch( skill_RUN_RUNE_MASTERY ) / 10.0 * 4;
 	// }
 		
-	// Items
+// Items
 	if ( usableItems[ksAttackSpeed] || usableItems[ksGuaranaCandy] )
 	{ // non-stackable speed pots
 		var _mul = 0;
@@ -6594,7 +6699,17 @@ function calcASPD()
 	// { // Asir Rune
 		// equipASPD += SkillSearch( skill_RUN_RUNE_MASTERY ) / 10.0 * 4;
 	// }
-	//Skill
+	
+//Enchants
+	if(EnchNumSearch( 5246 ))
+	{//Modification Orb (Speed)
+		if(n_A_SHOULDER_DEF_PLUS >= 7)
+			equipASPD += 3 * EnchNumSearch( 5246 );
+		if(n_A_SHOULDER_DEF_PLUS >= 9)
+			equipASPD += 3 * EnchNumSearch( 5246 );
+	}
+	
+//Skill
 	if ( ( SkillSearch( skill_AC_INCREASE_AGI ) || acolyteBuffs[ksIncreaseAgi] ) )
 	{ // INCREASE AGI
 		if ( SkillSearch( skill_AC_INCREASE_AGI ))
@@ -7028,6 +7143,14 @@ function CalcVariableCast()
 			VCT -= 5;
 		}
 	}
+//Enchants
+	if(EnchNumSearch( 5247 ))
+	{//Modification Orb (Caster)
+		if(n_A_SHOULDER_DEF_PLUS >= 7)
+			VCT -= 3 * EnchNumSearch( 5247 );
+		if(n_A_SHOULDER_DEF_PLUS >= 9)
+			VCT -= 3 * EnchNumSearch( 5247 );
+	}
 	
 // Skills
 	if ( performerBuffs[ksBardSolo] === ksMagicStrings && performerBuffs[ksBardSoloLevel] > 0 )
@@ -7271,6 +7394,14 @@ function CalcFixedCastFlat()
 		if(n_A_SHOES_DEF_PLUS >= 12)
 			reductionFlat += -0.5;
 	}
+//Enchants
+	if(EnchNumSearch( 5256 ))
+	{//Modification Orb (Fixed Casting)
+			if(n_A_SHOES_DEF_PLUS >= 7 )			
+				reductionFlat += 5;
+			if(n_A_SHOES_DEF_PLUS >= 9)
+				reductionFlat += 5;
+	}
 	return reductionFlat;
 }
 
@@ -7377,6 +7508,15 @@ function CalcDelay()
 	if(EquipNumSearch(2414))
 	{//Rebellion's Scarf
 		n_tok[bon_RED_CASTDELAY] += SkillSearch(skill_REB_FIRE_RAIN);
+	}
+	
+//Enchants
+	if(EnchNumSearch( 5254 ))
+	{//Modification Orb (Global Delay)
+		if(n_A_BODY_DEF_PLUS >= 7)
+			n_tok[bon_RED_CASTDELAY] += 5;
+		if(n_A_BODY_DEF_PLUS >= 9)
+			n_tok[bon_RED_CASTDELAY] += 5;
 	}
 	
 	// Skills
@@ -7812,6 +7952,18 @@ function calcRaceElementalReduction()
 	{ // "Shadow Tamer Shield"
 		if (n_A_SHADOW_SHIELD_DEF_PLUS >= 7) { n_tok[bon_RED_RC_BRUTE] += 1; }
 		if (n_A_SHADOW_SHIELD_DEF_PLUS >= 9) { n_tok[bon_RED_RC_BRUTE] += 1; }
+	}
+	
+//Enchants
+	if(EnchNumSearch( 5255 ))
+	{//Modification Orb (Above All)
+		for(var i = 0; i < 10 ; i++)
+		{
+			if(n_A_SHOULDER_DEF_PLUS >= 7 && i < 3)				
+				n_tok[bon_RED_SIZ_SMALL + i] += 5;
+			if(n_A_SHOULDER_DEF_PLUS >= 9)
+				n_tok[bon_RED_RC_FORMLESS + i] += 5;
+		}
 	}
 	
 // Skill modifiers

@@ -170,6 +170,15 @@ function CalcBaseHeal( HealLv, maxHeal )
 		healMultiplier += n_A_HEAD_DEF_PLUS * 2;
 	}
 	
+//Enchants
+	if(EnchNumSearch( 5251 ))
+	{//Modification Orb (Heal)
+		if(n_A_SHOES_DEF_PLUS >= 7)
+			healMultiplier += 5 * EnchNumSearch( 5251 );
+		if(n_A_SHOES_DEF_PLUS >= 9)
+			healMultiplier += 5 * EnchNumSearch( 5251 );
+	}
+	
 	// Apply Multiplier
 	wHeal = Math.floor( wHeal * healMultiplier / 100 );
 	

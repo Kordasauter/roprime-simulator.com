@@ -2672,10 +2672,22 @@
 ,[2575,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_CRIT,5,bon_NONE]//Lava Leather Muffler + Shoes
 ,[2576,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RED_CAST,-5,bon_NONE]//Lava Leather Hood + Sandles
 
-// ,[2577,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2578,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2579,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2580,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+,[2577,itm_type_HEAD_MIDDLE,0,3,0,0,50,50,0,0,0,0,bon_HIT,10,bon_CH_GUIDE_ATK,5,bon_RED_CASTDELAY,5,bon_NONE]//Bio Protector
+,[2578,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RED_CASTDELAY,10,bon_NONE]//Bio Protector + Pipe
+//Need more work
+,[2579,itm_type_UNOBTAINABLE,0,0,0,0,0,0,0,0,0,0,bon_NONE]//Arch Bishop Ring
+,[2580,itm_type_UNOBTAINABLE,0,0,0,0,0,0,0,0,0,0,bon_NONE]//Hibram's Gloves
+//
+,[2581,itm_type_SHADOW_EARRING,59,0,0,0,0,0,0,0,0,0,"ev_ref",1,bon_HP_ADD,10,bon_HP_MUL,5,"ref_lvl",7,bon_HP_MUL,5,"ref_lvl",9,bon_HP_ADD,2000,"ref_lvl",9,bon_SP_ADD,200,"ref_lvl",9,bon_DMG_RANGE,7,bon_NONE]//Fire Dance Shadow Earring
+,[2582,itm_type_SHADOW_PENDANT,59,0,0,0,0,0,0,0,0,0,"ev_ref",1,bon_HP_ADD,10,bon_DMG_SKILL + skill_REB_FIRE_DANCE,5,"ev_ref",2,bon_DMG_SKILL + skill_REB_FIRE_DANCE,2,bon_NONE]//Fire Dance Shadow Pendant
+,[2583,itm_type_SHADOW_SHOES,59,0,0,0,0,0,0,0,0,0,"ev_ref",1,bon_HP_ADD,10,bon_DMG_SIZ_SMALL,5,bon_DMG_SIZ_MEDIUM,5,bon_DMG_SIZ_LARGE,5,"ev_ref",2,bon_DMG_SIZ_SMALL,1,"ev_ref",2,bon_DMG_SIZ_MEDIUM,1,"ev_ref",2,bon_DMG_SIZ_LARGE,1,bon_NONE]//Fire Fire Dance Shadow Shoes
+,[2584,itm_type_SHADOW_EARRING,58,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL + skill_NIN_FLAMING_PETALS,3,bon_DMG_SKILL + skill_NIN_FREEZING_SPEAR,3,bon_DMG_SKILL + skill_NIN_WIND_BLADE,3,"ref_lvl",7,bon_DMG_SKILL + skill_NIN_FLAMING_PETALS,3,"ref_lvl",7,bon_DMG_SKILL + skill_NIN_FREEZING_SPEAR,3,"ref_lvl",7,bon_DMG_SKILL + skill_NIN_WIND_BLADE,3,"ref_lvl",9,bon_DMG_SKILL + skill_NIN_FLAMING_PETALS,4,"ref_lvl",9,bon_DMG_SKILL + skill_NIN_FREEZING_SPEAR,4,"ref_lvl",9,bon_DMG_SKILL + skill_NIN_WIND_BLADE,4,bon_NONE]//Wind Spear Petal Shadow Earring
+,[2585,itm_type_SHADOW_PENDANT,58,0,0,0,0,0,0,0,0,0,bon_NONE]//Wind Spear Petal Shadow Pendant
+,[2586,itm_type_SHADOW_SHOES,58,0,0,0,0,0,0,0,0,0,bon_NONE]//Wind Spear Petal Shadow Shoes
+,[2587,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE]//Fire Dance Shadow Earring + Fire Dance Shadow Pendant + Fire Fire Dance Shadow Shoes
+,[2588,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DEFIGN_RC_ALL,40,bon_NONE]//Fire Dance Shadow Earring + Shadow Rebellion Armor
+,[2589,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE]//Wind Spear Petal Shadow Earring + Wind Spear Wind Spear Petal Shadow Pendant + Wind Spear Petal Shadow Shoes
+,[2590,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MDEFIGN_RC_ALL,40,bon_NONE]//Wind Spear Petal Shadow Earring + Shadow Oboro Armor
 
 
 //"ev_ref" = for every x refine
@@ -3376,7 +3388,9 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2574,2551,2552,"NULL"]//Lava Leather Manteau + Boots
 ,[2575,2554,2555,"NULL"]//Lava Leather Muffler + Shoes
 ,[2576,2557,2558,"NULL"]//Lava Leather Hood + Sandles
-// ,[,,,"NULL"] //
+,[2578,2577,271,"NULL"] //Bio Protector + Pipe
+,[2587,2581,2582,2583,"NULL"] //Fire Dance Shadow Earring + Fire Dance Shadow Pendant + Fire Fire Dance Shadow Shoes
+,[2588,2581,2009,"NULL"] //Fire Dance Shadow Earring + Shadow Rebellion Armor
 // ,[,,,"NULL"] //
 // ,[,,,"NULL"] //
 
