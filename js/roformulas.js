@@ -7398,9 +7398,9 @@ function CalcFixedCastFlat()
 	if(EnchNumSearch( 5256 ))
 	{//Modification Orb (Fixed Casting)
 			if(n_A_SHOES_DEF_PLUS >= 7 )			
-				reductionFlat += 5;
+				reductionFlat += -0.2;
 			if(n_A_SHOES_DEF_PLUS >= 9)
-				reductionFlat += 5;
+				reductionFlat += -0.2;
 	}
 	return reductionFlat;
 }

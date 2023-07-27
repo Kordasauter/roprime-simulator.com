@@ -2619,7 +2619,7 @@
 ,[2526,itm_type_GARMENT,0,50,0,1,90,130,0,0,0,0,bon_HP_ADD,1000,"ev_ref",2,bon_HP_ADD,100,"ref_lvl",7,bon_ASPD_MUL,5,bon_NONE]//Illusion Engine Wing Type A
 ,[2527,itm_type_GARMENT,0,50,0,1,90,130,0,0,0,0,bon_HP_ADD,1000,"ev_ref",2,bon_HP_ADD,100,"ref_lvl",7,bon_RED_CAST,-5,bon_NONE]//Illusion Engine Wing Type B
 ,[2528,itm_type_SHOES,0,20,0,1,50,130,0,0,0,0,bon_SP_ADD,200,"ev_ref",2,bon_SP_ADD,20,"ref_lvl",7,bon_DMG_RANGE,5,bon_NONE]//Illusion Leg Type A
-,[2529,itm_type_SHOES,0,20,0,1,50,130,0,0,0,0,bon_SP_ADD,200,"ev_ref",2,bon_SP_ADD,20,"ref_lvl",7,bon_ASPD_MUL,5,bon_NONE]//Illusion Leg Type B
+,[2529,itm_type_SHOES,0,20,0,1,50,130,0,0,0,0,bon_SP_ADD,200,"ev_ref",2,bon_SP_ADD,20,"ref_lvl",7,bon_INC_MAGIC_ALL,5,bon_NONE]//Illusion Leg Type B
 ,[2530,itm_type_ACCESSORY,0,0,0,1,10,130,0,0,0,0,bon_PHY_ATK,5,bon_NONE]//Illusion Booster L
 ,[2531,itm_type_ACCESSORY,0,0,0,1,10,130,0,0,0,0,bon_PHY_ATK,5,bon_NONE]//Illusion Booster R
 ,[2532,itm_type_ACCESSORY,0,0,0,1,10,130,0,0,0,0,bon_MATK_MUL,5,bon_NONE]//Illusion Battle Chip L
