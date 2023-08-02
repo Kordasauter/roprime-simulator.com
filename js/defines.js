@@ -426,6 +426,10 @@ bon_IGN_MDEF_SIZ_LARGE = 365;
 bon_MDMG_ELE_ALL = 366;
 bon_INC_MAGIC_ALL = 367;
 
+bon_MDMG_SIZ_SMALL = 368;
+bon_MDMG_SIZ_MEDIUM = 369;
+bon_MDMG_SIZ_LARGE = 370;
+
 // [ +% Damage on Single MonsterID: (BonusID - 1000) 1000 - 2999 ] 
 bon_DMG_MONSTER = 1000;
 bon_DMG_SPE_CRAB = 1072;

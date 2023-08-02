@@ -116,6 +116,42 @@ function calcSpecialTok()
 		n_tok[bon_ASPD_MUL] += parseInt(document.calcForm.E_BOOST_ASPD_PERC.value);
 	}
 	if (!isNaN(parseInt(document.calcForm.E_BOOST_CASTING.value))) n_tok[bon_RED_CAST] -= parseInt(document.calcForm.E_BOOST_CASTING.value);
+	
+	if (!isNaN(parseInt(document.calcForm.E_BOOST_PHY_ALL_RACES.value)))
+	{
+		for(var i = 0; i<10;i++)
+			n_tok[bon_DMG_RC_FORMLESS+i] += parseInt(document.calcForm.E_BOOST_PHY_ALL_RACES.value);
+	}
+	if (!isNaN(parseInt(document.calcForm.E_BOOST_PHY_ALL_SIZES.value)))
+	{
+		n_tok[bon_DMG_SIZ_SMALL] += parseInt(document.calcForm.E_BOOST_PHY_ALL_SIZES.value);
+		n_tok[bon_DMG_SIZ_MEDIUM] += parseInt(document.calcForm.E_BOOST_PHY_ALL_SIZES.value);
+		n_tok[bon_DMG_SIZ_LARGE] += parseInt(document.calcForm.E_BOOST_PHY_ALL_SIZES.value);
+	}
+	if (!isNaN(parseInt(document.calcForm.E_BOOST_PHY_ALL_ELEMENTS.value)))
+	{
+		for(var i = 0; i<10;i++)
+			n_tok[bon_DMG_ELE_NEUTRAL + i] += parseInt(document.calcForm.E_BOOST_PHY_ALL_ELEMENTS.value);
+	}
+	
+	if (!isNaN(parseInt(document.calcForm.E_BOOST_MAG_ALL_RACES.value)))
+	{
+		for(var i = 0; i<10;i++)
+			n_tok[bon_MDMG_RC_FORMLESS+i] += parseInt(document.calcForm.E_BOOST_MAG_ALL_RACES.value);
+		
+	}
+	if (!isNaN(parseInt(document.calcForm.E_BOOST_MAG_ALL_SIZES.value)))
+	{
+		n_tok[bon_MDMG_SIZ_SMALL] += parseInt(document.calcForm.E_BOOST_MAG_ALL_SIZES.value);
+		n_tok[bon_MDMG_SIZ_MEDIUM] += parseInt(document.calcForm.E_BOOST_MAG_ALL_SIZES.value);
+		n_tok[bon_MDMG_SIZ_LARGE] += parseInt(document.calcForm.E_BOOST_MAG_ALL_SIZES.value);
+	}
+	if (!isNaN(parseInt(document.calcForm.E_BOOST_MAG_ALL_ELEMENTS.value)))
+		n_tok[bon_MDMG_ELE_ALL] += parseInt(document.calcForm.E_BOOST_MAG_ALL_ELEMENTS.value);
+	if (!isNaN(parseInt(document.calcForm.E_BOOST_ALL_MAG_ELEMENTS.value)))
+		n_tok[bon_INC_MAGIC_ALL] += parseInt(document.calcForm.E_BOOST_ALL_MAG_ELEMENTS.value);
+	
+	
 }
 
 function ClearBonuses()
@@ -127,7 +163,7 @@ function ClearBonuses()
 		n_tok[i] += StPlusCard(i);
 		n_tok[i] += StPlusEnchant(i);
 	}
-	for ( var i = 290; i <= 365; i++ )
+	for ( var i = 290; i <= 370; i++ )
 	{
 		n_tok[i] = 0;
 		n_tok[i] += StPlusCalc2(i);

@@ -1241,11 +1241,17 @@ function CalcMagicDamage( rawDamage )
 	
 	wBMC2 = wBMC2 * ( 100 + wX ) / 100;
 	
+//Multiplier (size)
+	wX = n_tok[bon_MDMG_SIZ_SMALL + Math.floor(n_B[en_SIZE])];
+	wX += 
+	wBMC2 = wBMC2 * ( 100 + wX ) / 100;
+	
 //Multiplier (element)
 	wX = n_tok[bon_MDMG_ELE_NEUTRAL + Math.floor(n_B[en_ELEMENT]/10)];
-	console.log("n_B[en_ELEMENT] = " + n_B[en_ELEMENT]);
-	console.log("n_tok[bon_MDMG_ELE_NEUTRAL + n_B[en_ELEMENT]] = " + n_tok[bon_MDMG_ELE_NEUTRAL + n_B[en_ELEMENT]]);
-	console.log("n_tok[bon_MDMG_ELE_WIND] = " + n_tok[bon_MDMG_ELE_WIND]);
+	wX += n_tok[bon_MDMG_ELE_ALL];
+	// console.log("n_B[en_ELEMENT] = " + n_B[en_ELEMENT]);
+	// console.log("n_tok[bon_MDMG_ELE_NEUTRAL + n_B[en_ELEMENT]] = " + n_tok[bon_MDMG_ELE_NEUTRAL + n_B[en_ELEMENT]]);
+	// console.log("n_tok[bon_MDMG_ELE_WIND] = " + n_tok[bon_MDMG_ELE_WIND]);
 	if(CardNumSearch(620) && Math.floor(n_B[en_ELEMENT]/10) == ele_EARTH )
 	{
 		if(n_A_SHOULDER_DEF_PLUS >= 7)
@@ -1469,9 +1475,14 @@ function CalcMagicDamage( rawDamage )
 	{// Dordaleon's Shadow Ring
 		wX += 2 * Math.floor(n_A_SHADOW_EARRING_DEF_PLUS/3); 
 	}
-
+	wBMC2 = wBMC2 * ( 100 + wX ) / 100;
 //skill (element)
-	if(SkillSearch( skill_SA_ENDOW_BLAZE ) && n_A_Weapon_element == ele_FIRE)
+	wX = n_tok[bon_MDMG_ELE_NEUTRAL + n_A_Weapon_element];
+	wX += n_tok[bon_INC_MAGIC_ALL];
+	if((SkillSearch( skill_SA_ENDOW_BLAZE ) && n_A_Weapon_element == ele_FIRE) || 
+	(SkillSearch( skill_SA_ENDOW_TSUNAMI ) && n_A_Weapon_element == ele_WATER) ||
+	(SkillSearch( skill_SA_ENDOW_TORNADO ) && n_A_Weapon_element == ele_WIND) ||
+	(SkillSearch( skill_SA_ENDOW_QUAKE ) && n_A_Weapon_element == ele_EARTH) )
 		wX += 5;
 	
 	wBMC2 = wBMC2 * ( 100 + wX ) / 100;

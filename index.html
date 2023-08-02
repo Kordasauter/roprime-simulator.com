@@ -1224,16 +1224,28 @@
 												<tr>
 													<td class="padded" >Cast Time %</td>
 													<td class="padded" ><input value="0" id="E_BOOST_CASTING" max="100" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-													<td class="padded" ></td>
-													<td class="padded" ></td>
-													<td class="padded" ></td>
-													<td class="padded" ></td>
-													<td class="padded" ></td>
-													<td class="padded" ></td>
-													
+													<td class="padded" >*All Races %</td>
+													<td class="padded" ><input value="0" id="E_BOOST_PHY_ALL_RACES" max="100" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+													<td class="padded" >*All Sizes %</td>
+													<td class="padded" ><input value="0" id="E_BOOST_PHY_ALL_SIZES" max="100" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+													<td class="padded" >*All Elements %</td>
+													<td class="padded" ><input value="0" id="E_BOOST_PHY_ALL_ELEMENTS" max="100" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+												</tr>
+												<tr>
+													<td class="padded" >*All Races % (Magic)</td>
+													<td class="padded" ><input value="0" id="E_BOOST_MAG_ALL_RACES" max="100" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+													<td class="padded" >*All Sizes % (Magic)</td>
+													<td class="padded" ><input value="0" id="E_BOOST_MAG_ALL_SIZES" max="100" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+													<td class="padded" >*All Elements % (Magic)</td>
+													<td class="padded" ><input value="0" id="E_BOOST_MAG_ALL_ELEMENTS" max="100" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+													<td class="padded" >**All Elements % (Magic)</td>
+													<td class="padded" ><input value="0" id="E_BOOST_ALL_MAG_ELEMENTS" max="100" min="0" onchange="StAllCalc()" size="4" type="number"></td>
 												</tr>
 											</tbody>
 										</table>
+										*Damage vs race/size/element monsters
+										</br>
+										**Increase magic element damages
 									</div>
 								</div>
 							</div>
@@ -2662,7 +2674,7 @@
 		overflow: unset;	}
 </style>
 	<script>
-		var version = '31';
+		var version = '32';
 		var jsassets = [
 		'js/menu.js',
 		'js/variables.js',

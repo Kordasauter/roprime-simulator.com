@@ -2689,6 +2689,18 @@
 ,[2589,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE]//Wind Spear Petal Shadow Earring + Wind Spear Wind Spear Petal Shadow Pendant + Wind Spear Petal Shadow Shoes
 ,[2590,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MDEFIGN_RC_ALL,40,bon_NONE]//Wind Spear Petal Shadow Earring + Shadow Oboro Armor
 
+,[2591,weapTyp_2HSWORD,2051,280,4,2,400,175,0,0,0,0,"ev_ref",2,bon_ATK,20,"ref_lvl",7,bon_DMG_CRIT,10,"ref_lvl",9,bon_UNBREAKABLE,1,bon_NONE]//Two handed Sword of Kingdom
+,[2592,weapTyp_2HSPEAR,2051,205,3,2,100,175,0,0,0,0,"ev_ref",2,bon_DMG_RANGE,3,"ref_lvl",7,bon_PHY_ATK,5,"ref_lvl",9,bon_DMG_RC_FORMLESS,15,"ref_lvl",9,bon_DMG_RC_UNDEAD,15,"ref_lvl",9,bon_DMG_RC_BRUTE,15,"ref_lvl",9,bon_DMG_RC_PLANT,15,"ref_lvl",9,bon_DMG_RC_INSECT,15,"ref_lvl",9,bon_DMG_RC_FISH,15,"ref_lvl",9,bon_DMG_RC_DEMON,15,"ref_lvl",9,bon_DMG_RC_DEMI_HUMAN,15,"ref_lvl",9,bon_DMG_RC_ANGEL,15,"ref_lvl",9,bon_DMG_RC_DRAGON,15,bon_NONE]//Two handed Lnace of Kingdom
+,[2593,weapTyp_STAFF,0,110,4,2,80,175,0,0,0,0,bon_INT,7,bon_MATK,300,bon_UNBREAKABLE,1,"ev_ref",2,bon_MATK_MUL,1,"ref_lvl",7,bon_INC_MAGIC_FIRE,5,"ref_lvl",7,bon_INC_MAGIC_EARTH,5,"ref_lvl",7,bon_INC_MAGIC_WATER,5,"ref_lvl",7,bon_INC_MAGIC_WIND,5,"ref_lvl",9,bon_INC_MAGIC_FIRE,10,"ref_lvl",9,bon_INC_MAGIC_EARTH,10,"ref_lvl",9,bon_INC_MAGIC_WATER,10,"ref_lvl",9,bon_INC_MAGIC_WIND,10,"ref_lvl",11,bon_RED_SIZ_SMALL,20,"ref_lvl",11,bon_RED_SIZ_MEDIUM,20,"ref_lvl",11,bon_RED_SIZ_LARGE,20,"ref_lvl",13,bon_RED_CASTDELAY,15,bon_NONE]//Staff of Blue Flame
+,[2594,weapTyp_BOOK,0,210,3,2,80,175,0,0,0,0,bon_HP_MUL,5,bon_SP_MUL,5,"ev_ref",2,bon_ATK,20,"ref_lvl",7,bon_DMG_RC_UNDEAD,10,"ref_lvl",7,bon_DMG_RC_DEMON,10,"ref_lvl",7,bon_MDMG_RC_UNDEAD,10,"ref_lvl",7,bon_MDMG_RC_DEMON,10,"ref_lvl",9,bon_DMG_RC_UNDEAD,15,"ref_lvl",9,bon_DMG_RC_DEMON,15,"ref_lvl",9,bon_MDMG_RC_UNDEAD,15,"ref_lvl",9,bon_MDMG_RC_DEMON,15,"ref_lvl",11,bon_DMG_ELE_UNDEAD,15,"ref_lvl",11,bon_DMG_ELE_SHADOW,15,"ref_lvl",11,bon_MDMG_ELE_UNDEAD,15,"ref_lvl",11,bon_MDMG_ELE_SHADOW,15,bon_NONE]//Prisoner Diary
+,[2595,weapTyp_ROD,0,110,4,2,80,175,0,0,0,0,bon_INT,5,bon_MATK,180,bon_UNBREAKABLE,1,"ev_ref",2,bon_MATK,15,"ref_lvl",7,bon_INC_MAGIC_WATER,5,"ref_lvl",7,bon_INC_MAGIC_HOLY,5,"ref_lvl",9,bon_INC_MAGIC_WATER,10,"ref_lvl",9,bon_INC_MAGIC_HOLY,10,bon_NONE]//Wand of Ice
+,[2596,weapTyp_ROD,0,110,4,2,80,175,0,0,0,0,bon_INT,5,bon_MATK,180,bon_UNBREAKABLE,1,"ev_ref",2,bon_MATK,15,"ref_lvl",7,bon_INC_MAGIC_FIRE,5,"ref_lvl",7,bon_INC_MAGIC_EARTH,5,"ref_lvl",9,bon_INC_MAGIC_FIRE,10,"ref_lvl",9,bon_INC_MAGIC_EARTH,10,bon_NONE]//Wand of Flame
+
+// ,[2597,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2598,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2599,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2600,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+
 
 //"ev_ref" = for every x refine
 //"ev_ref",x,bonus,amount,

@@ -2604,6 +2604,16 @@ ITEM_NAME = [
 ,[2588,0,0,"Fire Dance Shadow Earring + Shadow Rebellion Armor","additionally ignores physical defense equal to the sum of the refine rate of Fire Dance Shadow Earring/Rebellion Shadow Armor.",0]
 ,[2589,0,0,"Wind Spear Petal Shadow Earring + Wind Spear Wind Spear Petal Shadow Pendant + Wind Spear Petal Shadow Shoes","increases Flaming Petals, Freezing Spear and Wind Blade damage as percentage equal to the half of the sum of refine rate of set.",0]
 ,[2590,0,0,"Wind Spear Petal Shadow Earring + Shadow Oboro Armor","additional magical defense rate ignoring equal to the sum of refine rate of Wind Spear Petal Shadow Earring and Oboro Shadow Armor.",0]
+,[2591,0,0,"Two handed Sword of Kingdom",0]
+,[2592,0,0,"Two handed Lnace of Kingdom",0]
+,[2593,0,0,"Staff of Blue Flame",0]
+,[2594,0,0,"Prisoner Diary",0]
+,[2595,0,0,"Wand of Ice",0]
+,[2596,0,0,"Wand of Flame",0]
+// ,[2597,0,0,"",0]
+// ,[2598,0,0,"",0]
+// ,[2599,0,0,"",0]
+// ,[2600,0,0,"",0]
 ]
 };
 

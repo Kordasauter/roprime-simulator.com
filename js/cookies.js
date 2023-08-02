@@ -104,6 +104,12 @@ function LoadCookie()
 	}
 
 	// begin read
+	if(SaveData[1] > 175 && formElements["A_Patch_Num"].value == 0)
+	{
+		formElements["A_Patch_Num"].value = 1;
+		ChangePatch();
+	}
+	
 	if(eval(SaveData[0]) == 20 && eval(SaveData[54]) == 1)
 	{
 		SuperNoviceFullWeaponCHECK = 1;
@@ -112,6 +118,7 @@ function LoadCookie()
 	{
 		SuperNoviceFullWeaponCHECK = 0;
 	}
+	
 	formElements["A_JOB"].value = SaveData[0];
 	ChangeJob(SaveData[0]);
 	formElements["A_BaseLV"].value = SaveData[1];
@@ -1232,8 +1239,14 @@ with( document.calcForm )
 		A_weapon1_card4.value = StoN2(w.substr(32,2));
 		
 		ClickWeapon(A_weapon1.value,0);
+		if(ItemOBJ[StoN2(w.substr(34,2))][itm_TYPE] != itm_type_SHIELD)
+		{
+			A_Weapon2Type.value = ItemOBJ[StoN2(w.substr(34,2))][itm_TYPE];			
+			ClickWeaponType2(A_Weapon2Type.value);
+		}
 		if(n_Nitou)
 		{
+
 			A_weapon2.value = StoN2(w.substr(34,2));
 			A_Weapon2_ATKplus.value = StoN2(w.substr(36,1));
 			A_weapon2_card1.value = StoN2(w.substr(37,2));
