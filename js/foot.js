@@ -3759,7 +3759,7 @@ function Init()
 	FirstNovis();
 	
 	
-	
+	ChangePatch();
 	StCalc();
 	StAllCalc();
 	calc();

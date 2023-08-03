@@ -664,7 +664,7 @@ function AdjustBaseLevelList( job )
 	
 	if ( thirdClass === 1 || job == cls_REB) // 3rdCls
 	{
-		maxBaseLvl=CONST_MAXLVL_THIRD-CONST_MAXLVL; // amount of BLvl [99, 175]
+			maxBaseLvl=CONST_MAXLVL_THIRD-CONST_MAXLVL; // amount of BLvl [99, 175]
 	}
 	else
 	{
