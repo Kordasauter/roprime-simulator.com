@@ -640,7 +640,10 @@ ench_MOD_ORB_LUCKY_STRIKE = ench_MOD_ORB_FATAL_FLASH + 1;
 ench_DMG_SIZ_SMALL = ench_MOD_ORB_LUCKY_STRIKE + 4;
 ench_DMG_SIZ_MEDIUM = ench_DMG_SIZ_SMALL + 30;
 ench_DMG_SIZ_LARGE = ench_DMG_SIZ_MEDIUM + 30;
-//ench_ = ench_DMG_SIZ_LARGE + 30;
+ench_MDMG_SIZ_SMALL = ench_DMG_SIZ_LARGE + 30;
+ench_MDMG_SIZ_MEDIUM = ench_MDMG_SIZ_SMALL + 30;
+ench_MDMG_SIZ_LARGE = ench_MDMG_SIZ_MEDIUM + 30;
+// ench_ = ench_MDMG_SIZ_LARGE + 30;
 
 }
 

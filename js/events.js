@@ -1547,6 +1547,61 @@ function ClickWeapon2( weapon2 )
 			formElements["A_Mal_Ench4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[0][i]][1],EnchantOBJ[EnchantListOBJ[0][i]][0]);
 		}
 	}
+	else if(weapon2 >= 2534 && weapon2 <= 2549)//spe
+	{//OS Weapons 
+		formElements["A_Mal_Ench3"].disabled = false;
+		formElements["A_Mal_Ench4"].disabled = false;
+		//Slot 4
+		for ( var i = 0; EnchantListOBJ[124][i] != "NULL"; i++ )
+		{
+			if(i < 1)
+			{
+				formElements["A_Mal_Ench4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[124][i]][1],EnchantOBJ[EnchantListOBJ[124][i]][0]);
+			}
+				
+			if(i == 1)
+			{
+				formElements["A_Mal_Ench4"].options[i] = new Option("Physical");
+				formElements["A_Mal_Ench4"].options[i].disabled = true;
+			}
+			if(i >= 1)
+			{
+				formElements["A_Mal_Ench4"].options[i+1] = new Option(EnchantOBJ[EnchantListOBJ[124][i]][1],EnchantOBJ[EnchantListOBJ[124][i]][0]);
+			}
+		}
+		var formsize = formElements["A_Mal_Ench4"].length;
+		formElements["A_Mal_Ench4"].options[formsize] = new Option("Magical");
+		formElements["A_Mal_Ench4"].options[formsize].disabled = true;
+		for ( var i = 1; EnchantListOBJ[126][i] != "NULL"; i++ )
+		{
+			formElements["A_Mal_Ench4"].options[i + formsize] = new Option(EnchantOBJ[EnchantListOBJ[126][i]][1],EnchantOBJ[EnchantListOBJ[126][i]][0]);
+		}
+		//Slot 3
+		for ( var i = 0; EnchantListOBJ[125][i] != "NULL"; i++ )
+		{
+			if(i < 1)
+			{
+				formElements["A_Mal_Ench3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[125][i]][1],EnchantOBJ[EnchantListOBJ[125][i]][0]);
+			}
+				
+			if(i == 1)
+			{
+				formElements["A_Mal_Ench3"].options[i] = new Option("Physical");
+				formElements["A_Mal_Ench3"].options[i].disabled = true;
+			}
+			if(i >= 1)
+			{
+				formElements["A_Mal_Ench3"].options[i+1] = new Option(EnchantOBJ[EnchantListOBJ[125][i]][1],EnchantOBJ[EnchantListOBJ[125][i]][0]);
+			}
+		}
+		formsize = formElements["A_Mal_Ench3"].length;
+		formElements["A_Mal_Ench3"].options[formsize] = new Option("Magical");
+		formElements["A_Mal_Ench3"].options[formsize].disabled = true;
+		for ( var i = 1; EnchantListOBJ[127][i] != "NULL"; i++ )
+		{
+			formElements["A_Mal_Ench3"].options[i + formsize] = new Option(EnchantOBJ[EnchantListOBJ[127][i]][1],EnchantOBJ[EnchantListOBJ[127][i]][0]);
+		}
+	}
 	else
 	{
 		for ( var i = 0; EnchantListOBJ[0][i] != "NULL"; i++ )

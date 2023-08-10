@@ -2696,10 +2696,20 @@
 ,[2595,weapTyp_ROD,0,110,4,2,80,175,0,0,0,0,bon_INT,5,bon_MATK,180,bon_UNBREAKABLE,1,"ev_ref",2,bon_MATK,15,"ref_lvl",7,bon_INC_MAGIC_WATER,5,"ref_lvl",7,bon_INC_MAGIC_HOLY,5,"ref_lvl",9,bon_INC_MAGIC_WATER,10,"ref_lvl",9,bon_INC_MAGIC_HOLY,10,bon_NONE]//Wand of Ice
 ,[2596,weapTyp_ROD,0,110,4,2,80,175,0,0,0,0,bon_INT,5,bon_MATK,180,bon_UNBREAKABLE,1,"ev_ref",2,bon_MATK,15,"ref_lvl",7,bon_INC_MAGIC_FIRE,5,"ref_lvl",7,bon_INC_MAGIC_EARTH,5,"ref_lvl",9,bon_INC_MAGIC_FIRE,10,"ref_lvl",9,bon_INC_MAGIC_EARTH,10,bon_NONE]//Wand of Flame
 
-// ,[2597,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2598,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2599,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2600,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+,[2597,itm_type_HEAD_MIDDLE,0,0,0,0,50,70,0,0,0,0,bon_CRIT,3,bon_DMG_CRIT,3,"ev_bdex",10,bon_DMG_CRIT,-2,"ev_bluk",10,bon_CRIT,1,"ev_bluk",10,bon_MATK,2,"bluk_hi",108,bon_CRIT,5,"bluk_hi",108,bon_DMG_CRIT,10,"bluk_hi",120,bon_CRIT,10,"bluk_hi",120,bon_DMG_CRIT,17,bon_NONE]//Gambler's Seal
+,[2598,itm_type_HEAD_LOWER,0,0,0,0,30,80,0,0,0,0,bon_DMG_CRIT,5,bon_NONE]//Heart Card in Mouth
+,[2599,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ASPD_ADD,1,bon_DMG_CRIT,2,bon_RED_RC_DEMI_HUMAN,2,"bluk_hi",108,bon_ASPD_ADD,1,"bluk_hi",108,bon_DMG_CRIT,2,"bluk_hi",108,bon_RED_RC_DEMI_HUMAN,2,"bluk_hi",120,bon_ASPD_ADD,1,"bluk_hi",120,bon_DMG_CRIT,4,"bluk_hi",120,bon_RED_RC_DEMI_HUMAN,4,"ev_bdex",10,bon_DMG_CRIT,2,bon_NONE]//Gambler's Seal + Heart Card in Mouth
+,[2600,itm_type_HEAD_MIDDLE,0,0,0,0,50,70,0,0,0,0,bon_ASPD_MUL,1,bon_RED_ELE_WIND,5,"bagi_hi",108,bon_ASPD_ADD,1,"bagi_hi",108,bon_ASPD_MUL,1,bon_NONE]//Imperial Feather
+,[2601,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL + skill_ROY_SPEAR_CANNON,20,bon_DMG_SKILL + skill_ROY_SHIELD_PRESS,20,bon_DMG_SKILL + skill_ROY_VANISHING_POINT,20,bon_NONE]//Imperial Feather + Imperial Spear + Imperial Guard
+// ,[2602,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2603,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2604,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2605,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2606,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2607,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2608,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2609,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2610,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
 
 
 //"ev_ref" = for every x refine
@@ -3403,6 +3413,8 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2578,2577,271,"NULL"] //Bio Protector + Pipe
 ,[2587,2581,2582,2583,"NULL"] //Fire Dance Shadow Earring + Fire Dance Shadow Pendant + Fire Fire Dance Shadow Shoes
 ,[2588,2581,2009,"NULL"] //Fire Dance Shadow Earring + Shadow Rebellion Armor
+,[2599,2598,2597,"NULL"] //Gambler's Seal + Heart Card in Mouth
+,[2601,2600,1269,1277,"NULL"] //Imperial Feather + Imperial Spear + Imperial Guard
 // ,[,,,"NULL"] //
 // ,[,,,"NULL"] //
 

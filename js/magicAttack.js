@@ -1282,7 +1282,7 @@ function CalcMagicDamage( rawDamage )
 	{ // Diabolic Halo
 		if(n_A_HEAD_DEF_PLUS >= 9) 
 		{ 
-			if(n_A_Weapon_element == ele_NEUTRAL || n_A_Weapon_element == ele_HOLY)
+			if(n_A_Weapon_element == ele_NEUTRAL || n_A_Weapon_element == ele_DARK)
 			{
 				wX += 10;
 			}

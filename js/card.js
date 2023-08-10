@@ -693,7 +693,7 @@ function SetCard()
 ,[624,	 card_comp_HEAD,"Jitterbug",0,bon_RED_ELE_NEUTRAL,10,bon_HP_ADD,500,0]
 ,[625,	 card_com_ACC_R,"Playing Pere",0,bon_DMG_ELE_NEUTRAL,20,0]
 ,[626,	 card_com_ACC_L,"Singing Pere",0,bon_MDMG_ELE_NEUTRAL,20,0]
-,[627,	 itm_type_SET,"Playing Pere + Singing Pere",0,bon_DMG_SKILL + skill_MIWA_METALLIC_SOUND,50,0]
+,[627,	 itm_type_SET,"Playing Pere + Singing Pere",0,bon_DMG_SKILL + skill_MIWA_METALLIC_SOUND,50,bon_DMG_SKILL + skill_MIWA_REVERBERATION,50,0]
 ,[628,	 itm_type_SET,"Playing Pere + Singing Pere + Jitterbug","Has a chance to transform into [Jitterbug] for 6 sec. when attacks.(always active in the simulator)",bon_DMG_ELE_NEUTRAL,200,bon_MDMG_ELE_NEUTRAL,200,0]
 //Faceworm Nest
 ,[629,	 card_com_ACC,"Faceworm",0,bon_AGI,-1,bon_DEX,-1,bon_ASPD_MUL,3,0]
