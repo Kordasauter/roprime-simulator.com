@@ -2028,8 +2028,8 @@
 ,[2002,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,3,bon_HP_MUL,2,bon_SP_MUL,2,bon_NONE] // "Shadow Doram Mage Gloves + Shadow Doram Mage Shield"
 ,[2003,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Doram Battler Armor + Shadow Doram Battler Boots"
 ,[2004,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Doram Mage Armor + Shadow Doram Mage Boots"
-,[2005,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,7,bon_HP_MUL,3,bon_SP_MUL,3,bon_IGN_DEF_SIZ_MEDIUM,50,bon_IGN_MDEF_SIZ_MEDIUM,50,bon_NONE] // "Shadow Doram Battler Set"
-,[2006,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,7,bon_HP_MUL,3,bon_SP_MUL,3,bon_IGN_DEF_SIZ_MEDIUM,50,bon_IGN_MDEF_SIZ_MEDIUM,50,bon_NONE] // "Shadow Doram Mage Set"
+,[2005,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,7,bon_HP_MUL,3,bon_SP_MUL,3,bon_DEFIGN_RC_NON_BOSS,50,bon_MDEFIGN_RC_NON_BOSS,50,bon_NONE] // "Shadow Doram Battler Set"
+,[2006,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,7,bon_HP_MUL,3,bon_SP_MUL,3,bon_DEFIGN_RC_NON_BOSS,50,bon_MDEFIGN_RC_NON_BOSS,50,bon_NONE] // "Shadow Doram Mage Set"
 ,[2007,itm_type_SHADOW_ARMOR,221,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL + skill_NIN_FLAMING_PETALS,20,bon_DMG_SKILL + skill_NIN_FREEZING_SPEAR,20,bon_DMG_SKILL + skill_NIN_WIND_BLADE,20,bon_NONE] // "Shadow Oboro Armor"
 ,[2008,itm_type_SHADOW_ARMOR,221,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL + skill_KAG_SWIRLING_PETAL,20,bon_NONE] // "Shadow Kagerou Armor"
 ,[2009,itm_type_SHADOW_ARMOR,222,0,0,0,0,0,0,0,0,0,bon_DELAY_SKILL_FLAT + skill_REB_HIT_BARREL,1,bon_NONE] // "Shadow Rebellion Armor"
@@ -2423,7 +2423,7 @@
 ,[2354,itm_type_HEAD_UPPER,1,0,0,1,20,0,0,0,0,0,bon_MATK,20,"ev_ref",1,bon_MATK,5,bon_NONE] // "Lush Rose"
 ,[2355,itm_type_ACCESSORY,2001,0,0,1,10,110,0,0,0,0,bon_SP_ADD,200,bon_HP_ADD,500,bon_SKILL_ENABLE,70,bon_SKILL_AUTOCAST,155,bon_SKILL_AUTOCAST,156,bon_SKILL_AUTOCAST,157,bon_SKILL_AUTOCAST,158,bon_NONE] // "Evil Spirit Gloves"
 ,[2356,itm_type_HEAD_UPPER,0,0,0,1,20,0,0,0,0,0,bon_DEX,3,bon_MATK,40,"ev_ref",1,bon_MATK,7,bon_NONE] // "Celine''s Ribbon"'
-,[2357,weapTyp_MACE,2053,195,4,1,150,40,0,0,0,0,bon_ELEMENT,ele_HOLY,bon_MATK,150,bon_SKILL_AUTOCAST,159,bon_NONE] // "Noble Cross"
+,[2357,weapTyp_MACE,2053,195,4,0,150,40,0,0,0,0,bon_ELEMENT,ele_HOLY,bon_MATK,150,bon_SKILL_AUTOCAST,159,bon_NONE] // "Noble Cross"
 ,[2358,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_SKILL_AUTOCAST,155,bon_SKILL_AUTOCAST,156,bon_SKILL_AUTOCAST,157,bon_SKILL_AUTOCAST,158,bon_NONE] // "Hurt Mind + Kind Heart"
 ,[2359,itm_type_ACCESSORY,2001,0,0,1,50,100,0,0,0,0,bon_MATK_MUL,5,bon_RED_CAST,-10,bon_NONE] // "Celine''s Brooch"'
 ,[2360,itm_type_GARMENT,0,20,0,1,10,1,0,0,0,0,"ev_ref",2,bon_PHY_ATK,1,"ev_ref",2,bon_MATK_MUL,1,"ref_lvl",9,bon_ATK,30,"ref_lvl",9,bon_MATK,30,bon_NONE] // "Christmas Wings"

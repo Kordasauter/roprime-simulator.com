@@ -1592,8 +1592,8 @@ function ApplySkillModifiers( damage )
 				dmgMultiplier += 10;
 		}
 	}
-	
-	
+	if(n_A_ActiveSkill == skill_SUM_PICKY_PECK)
+		console.log(StPlusCalc2(bon_DMG_SKILL+n_A_ActiveSkill) + dmgMultiplier);
 	damage = damage * (100+StPlusCalc2(bon_DMG_SKILL+n_A_ActiveSkill)+StPlusCard(bon_DMG_SKILL+n_A_ActiveSkill) + dmgMultiplier) /100;
 	
 	/* 

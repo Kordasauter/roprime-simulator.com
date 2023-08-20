@@ -118,6 +118,23 @@
 								<div class="card-body">
 									<div id="news" class="shadow">
 										<div class="padded">
+											<u><b>20/08/2023:</b></u> 
+											<ul style="margin-left: 5px;">
+												<li><b>Has been added :</b></li>
+												<ul>
+													<li>Added enchantments for Lava Leather equipment</li>
+													<li>Added Malangdo enchantments for the Noble Cross</li>
+												</ul>
+												<li><b>Has been fixed :</b></li>
+												<ul>
+													<li>Fixed a bug that put the enemy's defense to a negative value</li>
+													<li>Fixed a bug blocking the loading of saves by URL</li>
+													<li>Noble Cross no longer has a slot</li>
+													<li>Fixed Shadows Doram set, defense reduction is now applied to all normal monsters</li>
+												</ul>
+											</ul>
+										</div>
+										<div class="padded">
 											<u><b>10/08/2023:</b></u> 
 											<ul style="margin-left: 5px;">
 												<li><b>Has been added :</b></li>
@@ -131,6 +148,7 @@
 													<li>Diabolic Halo bonus now increase Shadow magic damages</li>
 													<li>Singing Pere Card and Dancing Pere Card bonus now also increases the damage of the skill Reverberation</li>
 												</ul>
+											</ul>
 											-Kord
 										</div>		
 										<div class="padded">
@@ -151,48 +169,7 @@
 													<li>Fixed issue with saves; Characters with a level higher than 175 were not loading correctly</li>
 													<li>Fixed issue with URL saves; For classes with two weapons (Assassin classes and Ninja classes) second weapon was causing character loading error</li>
 												</ul>
-											-Kord
-										</div>
-										<div class="padded">
-											<u><b>27/07/2023:</b></u> 
-											<ul style="margin-left: 5px;">
-												<li><b>Has been fixed :</b></li>
-												<ul>
-													<li>Fixed Modification Orb (Fixed Casting)</li>
-													<li>Fixed Illusion Leg Type B</li>
-												</ul>
-											-Kord
-										</div>
-										<div class="padded">
-											<u><b>27/07/2023:</b></u> 
-											<ul style="margin-left: 5px;">
-												<li><b>Has been fixed :</b></li>
-												<ul>
-													<li>Fixed an issue with Illusion Puente Robe's enchants</li>
-													<li>Fixed an issue with Cart Cannon on Patch 1 (lv. 185/65 update)</li>
-												</ul>
-												<li><b>Has been added :</b></li>
-												<ul>
-													<li>Enchant for 17.1 update (OS weapons and Illusion gears)</li>
-													<li>Bio Protector</li>
-													<li>Fire Dance Shadow Earring</li>
-													<li>Fire Dance Shadow Pendant</li>
-													<li>Fire Dance Shadow Shoes</li>
-													<li>Wind Spear Petal Shadow Earring</li>
-													<li>Wind Spear Petal Shadow Pendant</li>
-													<li>Wind Spear Petal Shadow Shoes</li>
-												</ul>
-											-Kord
-										</div>
-										<div class="padded">
-											<u><b>17/07/2023:</b></u> 
-											<ul style="margin-left: 5px;">
-												<li><b>Has been fixed :</b></li>
-												<ul>
-													<li>Rock step card fixed</li>
-													<li>Fixed a typo on "Ignores [x]% of target's MDEF."</li>
-													<li>Def reduction cannot go over 100% anymore.</li>
-												</ul>
+											</ul>
 											-Kord
 										</div>
 									</div>
@@ -211,6 +188,42 @@
 								<!-- Card Body -->
 								<div class="card-body">
 									<div id="old">
+										<u><b>27/07/2023:</b></u> <input class="button" type="button" value="Show/Hide" onclick="javascript:$('#note27072023').toggle()">	
+										<span style="display: none;" id="note27072023">
+											<ul style="margin-left: 5px;">
+												<li><b>Has been fixed :</b></li>
+												<ul>
+													<li>Fixed an issue with Illusion Puente Robe's enchants</li>
+													<li>Fixed an issue with Cart Cannon on Patch 1 (lv. 185/65 update)</li>
+													<li>Fixed Modification Orb (Fixed Casting)</li>
+													<li>Fixed Illusion Leg Type B</li>
+												</ul>
+												<li><b>Has been added :</b></li>
+												<ul>
+													<li>Enchant for 17.1 update (OS weapons and Illusion gears)</li>
+													<li>Bio Protector</li>
+													<li>Fire Dance Shadow Earring</li>
+													<li>Fire Dance Shadow Pendant</li>
+													<li>Fire Dance Shadow Shoes</li>
+													<li>Wind Spear Petal Shadow Earring</li>
+													<li>Wind Spear Petal Shadow Pendant</li>
+													<li>Wind Spear Petal Shadow Shoes</li>
+												</ul>
+											</ul>
+											-Kord
+										</span><br>
+										<u><b>17/07/2023:</b></u> <input class="button" type="button" value="Show/Hide" onclick="javascript:$('#note17072023').toggle()">	
+										<span style="display: none;" id="note17072023">
+											<ul style="margin-left: 5px;">
+												<li><b>Has been fixed :</b></li>
+												<ul>
+													<li>Rock step card fixed</li>
+													<li>Fixed a typo on "Ignores [x]% of target's MDEF."</li>
+													<li>Def reduction cannot go over 100% anymore.</li>
+												</ul>
+											</ul>
+											-Kord
+										</span><br>
 										<u><b>02/07/2023:</b></u> <input class="button" type="button" value="Show/Hide" onclick="javascript:$('#note02072023').toggle()">	
 										<span style="display: none;" id="note02072023">
 										<ul style="margin-left: 5px;">
@@ -271,6 +284,7 @@
 												<li>Damage and magic damage against Normal monsters are added to Ancient Weapon enchants</li>
 												<li>Fixed Arm Cannon ACD for patch 185/65</li>
 											</ul>
+										</ul>
 										-Kord
 										</span><br>
 										<u><b>22/06/2023:</b></u> <input class="button" type="button" value="Show/Hide" onclick="javascript:$('#note22062023').toggle()">	
@@ -3674,7 +3688,7 @@
     <script src="js/sb-admin-2.min.js"></script>
 	
 	<script>
-		var version = '34';
+		var version = '35';
 		var jsassets = [
 		'js/menu.js',
 		];

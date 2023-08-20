@@ -1267,6 +1267,7 @@ with( document.calcForm )
 			ClickEquip( A_LEFT_DEF_PLUS.value, 1, 5 );
 		}
 		A_head1.value = StoN2(w.substr(45,2));
+		ClickHeadUp(A_head1.value,0);
 		A_head1_card.value = StoN2(w.substr(47,2));
 		A_head2.value = StoN2(w.substr(49,2));
 		A_head2_card.value = StoN2(w.substr(51,2));

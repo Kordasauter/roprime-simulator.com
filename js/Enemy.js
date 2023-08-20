@@ -389,6 +389,8 @@ with( document.calcForm )
 		n_B[en_SOFTDEF] = 0; // SoftDef (Min)
 		n_B[en_MAXSOFTDEF] = 0; // SoftDef (Max)
 	}
+	if(n_B[en_HARDDEF] < 0)
+		n_B[en_HARDDEF] = 0; // Def
 	
 	
 	// MDEF-------------------------------------------------
@@ -447,6 +449,8 @@ with( document.calcForm )
 		n_B[en_HARDMDEF] *= 2; // Def
 		n_B[en_SOFTMDEF] *=2
 	}
+	if(n_B[en_HARDMDEF] < 0)
+		n_B[en_HARDMDEF] = 0; // Mdef
 	
 	// HIT & FLEE--------------------------------------------------
 	if ( n_B[en_BOSS] === 0 )
