@@ -674,7 +674,16 @@
 															</select>
 														</td>
 														<td class="padded" >
-															<select id="A_SHADOW_body" class="select-eq" onchange="StAllCalc()|DisplayItemDescription(this[this.selectedIndex].value)">
+															<select id="A_SHADOW_body" class="select-eq" onchange="ClickEquip(this[this.selectedIndex].value,0,11)|StAllCalc()|DisplayItemDescription(this[this.selectedIndex].value)">
+															</select>
+														</td>
+													</tr>
+													<tr>
+														<td class="padded" >
+														</td>
+														<td class="padded" >
+															<select id="A_SHADOW_BODY_ENCHANT" class="select-eq" disabled onchange="StAllCalc()|DisplayEnchantDescription(this[this.selectedIndex].value)">
+																<option value="0">(No Enchant)</option>
 															</select>
 														</td>
 													</tr>
@@ -684,7 +693,16 @@
 															</select>
 														</td>
 														<td class="padded" >
-															<select id="A_SHADOW_weapon" class="select-eq" onchange="StAllCalc()|DisplayItemDescription(this[this.selectedIndex].value)">
+															<select id="A_SHADOW_weapon" class="select-eq" onchange="ClickEquip(this[this.selectedIndex].value,0,12)|StAllCalc()|DisplayItemDescription(this[this.selectedIndex].value)">
+															</select>
+														</td>
+													</tr>
+													<tr>
+														<td class="padded">
+														</td>
+														<td class="padded" >
+															<select id="A_SHADOW_WEAPON_ENCHANT" class="select-eq" disabled onchange="StAllCalc()|DisplayEnchantDescription(this[this.selectedIndex].value)">
+																<option value="0">(No Enchant)</option>
 															</select>
 														</td>
 													</tr>
@@ -694,7 +712,16 @@
 															</select>
 														</td>
 														<td class="padded" >
-															<select id="A_SHADOW_shield" class="select-eq" onchange="StAllCalc()|DisplayItemDescription(this[this.selectedIndex].value)">
+															<select id="A_SHADOW_shield" class="select-eq" onchange="ClickEquip(this[this.selectedIndex].value,0,13)|StAllCalc()|DisplayItemDescription(this[this.selectedIndex].value)">
+															</select>
+														</td>
+													</tr>
+													<tr>
+														<td class="padded">
+														</td>
+														<td class="padded" >
+															<select id="A_SHADOW_SHIELD_ENCHANT" class="select-eq" disabled onchange="StAllCalc()|DisplayEnchantDescription(this[this.selectedIndex].value)">
+																<option value="0">(No Enchant)</option>
 															</select>
 														</td>
 													</tr>
@@ -704,7 +731,16 @@
 															</select>
 														</td>
 														<td class="padded" >
-															<select id="A_SHADOW_shoes" class="select-eq" onchange="StAllCalc()|DisplayItemDescription(this[this.selectedIndex].value)">
+															<select id="A_SHADOW_shoes" class="select-eq" onchange="ClickEquip(this[this.selectedIndex].value,0,14)|StAllCalc()|DisplayItemDescription(this[this.selectedIndex].value)">
+															</select>
+														</td>
+													</tr>
+													<tr>
+														<td class="padded">
+														</td>
+														<td class="padded" >
+															<select id="A_SHADOW_SHOES_ENCHANT" class="select-eq" disabled onchange="StAllCalc()|DisplayEnchantDescription(this[this.selectedIndex].value)">
+																<option value="0">(No Enchant)</option>
 															</select>
 														</td>
 													</tr>
@@ -714,7 +750,16 @@
 															</select>
 														</td>
 														<td class="padded" >
-															<select id="A_SHADOW_earring" class="select-eq" onchange="StAllCalc()|DisplayItemDescription(this[this.selectedIndex].value)">
+															<select id="A_SHADOW_earring" class="select-eq" onchange="ClickEquip(this[this.selectedIndex].value,0,15)|StAllCalc()|DisplayItemDescription(this[this.selectedIndex].value)">
+															</select>
+														</td>
+													</tr>
+													<tr>
+														<td class="padded">
+														</td>
+														<td class="padded" >
+															<select id="A_SHADOW_EARRING_ENCHANT" class="select-eq" disabled onchange="StAllCalc()|DisplayEnchantDescription(this[this.selectedIndex].value)">
+																<option value="0">(No Enchant)</option>
 															</select>
 														</td>
 													</tr>
@@ -724,7 +769,16 @@
 															</select>
 														</td>
 														<td class="padded" >
-															<select id="A_SHADOW_pendant" class="select-eq" onchange="StAllCalc()|DisplayItemDescription(this[this.selectedIndex].value)">
+															<select id="A_SHADOW_pendant" class="select-eq" onchange="ClickEquip(this[this.selectedIndex].value,0,16)|StAllCalc()|DisplayItemDescription(this[this.selectedIndex].value)">
+															</select>
+														</td>
+													</tr>
+													<tr>
+														<td class="padded">
+														</td>
+														<td class="padded" >
+															<select id="A_SHADOW_PENDANT_ENCHANT" class="select-eq" disabled onchange="StAllCalc()|DisplayEnchantDescription(this[this.selectedIndex].value)">
+																<option value="0">(No Enchant)</option>
 															</select>
 														</td>
 													</tr>
@@ -2674,7 +2728,7 @@
 		overflow: unset;	}
 </style>
 	<script>
-		var version = '35';
+		var version = '36';
 		var jsassets = [
 		'js/menu.js',
 		'js/variables.js',

@@ -1660,16 +1660,16 @@
 ,[1650,itm_type_SHADOW_EARRING,0,0,0,0,0,1,0,0,0,0,bon_INT,1,bon_NONE] // "Dragan''s Shadow Earring"'
 ,[1651,itm_type_SHADOW_PENDANT,0,0,0,0,0,1,0,0,0,0,bon_STR,1,bon_NONE] // "Dragan''s Shadow Signet-Ring"'
 ,[1652,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,3,bon_NONE] // "Dragan''s Shadow Set"'
-,[1653,itm_type_SHADOW_ARMOR,0,0,0,0,0,1,0,0,0,0,bon_HP_ADD,50,bon_NONE] // "Shadow Champion Armor"
-,[1654,itm_type_SHADOW_SHOES,0,0,0,0,0,1,0,0,0,0,bon_HP_ADD,20,bon_SP_ADD,10,bon_NONE] // "Shadow Champion Boots"
+,[1653,itm_type_SHADOW_ARMOR,0,0,0,0,0,1,0,0,0,131,bon_HP_ADD,50,bon_NONE] // "Shadow Champion Armor"
+,[1654,itm_type_SHADOW_SHOES,0,0,0,0,0,1,0,0,0,131,bon_HP_ADD,20,bon_SP_ADD,10,bon_NONE] // "Shadow Champion Boots"
 ,[1655,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Champion Set"
-,[1656,itm_type_SHADOW_WEAPON,0,0,0,0,0,1,0,0,0,0,bon_MATK_MUL,1,bon_NONE] // "Shadow Mystic Gloves"
-,[1657,itm_type_SHADOW_EARRING,0,0,0,0,0,1,0,0,0,0,bon_MATK,5,bon_NONE] // "Shadow Mystic Ring"
-,[1658,itm_type_SHADOW_PENDANT,0,0,0,0,0,1,0,0,0,0,bon_MATK,5,bon_NONE] // "Shadow Mystic Pendant"
+,[1656,itm_type_SHADOW_WEAPON,0,0,0,0,0,1,0,0,0,131,bon_MATK_MUL,1,bon_NONE] // "Shadow Mystic Gloves"
+,[1657,itm_type_SHADOW_EARRING,0,0,0,0,0,1,0,0,0,131,bon_MATK,5,bon_NONE] // "Shadow Mystic Ring"
+,[1658,itm_type_SHADOW_PENDANT,0,0,0,0,0,1,0,0,0,131,bon_MATK,5,bon_NONE] // "Shadow Mystic Pendant"
 ,[1659,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK,10,bon_NONE] // "Shadow Mystic Set"
-,[1660,itm_type_SHADOW_WEAPON,0,0,0,0,0,1,0,0,0,0,bon_ATK,10,bon_NONE] // "Shadow Strongman Gloves"
-,[1661,itm_type_SHADOW_EARRING,0,0,0,0,0,1,0,0,0,0,bon_ATK,5,bon_NONE] // "Shadow Strongman Ring"
-,[1662,itm_type_SHADOW_PENDANT,0,0,0,0,0,1,0,0,0,0,bon_ATK,5,bon_NONE] // "Shadow Strongman Pendant"
+,[1660,itm_type_SHADOW_WEAPON,0,0,0,0,0,1,0,0,0,131,bon_ATK,10,bon_NONE] // "Shadow Strongman Gloves"
+,[1661,itm_type_SHADOW_EARRING,0,0,0,0,0,1,0,0,0,131,bon_ATK,5,bon_NONE] // "Shadow Strongman Ring"
+,[1662,itm_type_SHADOW_PENDANT,0,0,0,0,0,1,0,0,0,131,bon_ATK,5,bon_NONE] // "Shadow Strongman Pendant"
 ,[1663,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_PHY_ATK,1,bon_NONE] // "Shadow Strongman Set"
 ,[1664,itm_type_HEAD_UPPER,0,0,0,0,0,1,0,0,0,0,bon_AGI,2,bon_ASPD_MUL,10,bon_NONE] // "Red Fox Ears"
 ,[1665,itm_type_HEAD_UPPER,0,0,0,0,0,1,0,0,0,0,bon_AGI,2,bon_ASPD_MUL,10,bon_CRIT,100,bon_DMG_RANGE,5,bon_NONE] // "Red Fox Ears(transformation mode)"
@@ -1679,14 +1679,14 @@
 ,[1669,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RED_CAST,-10,bon_NONE] // "Bandeau of Lovers + Silk Heart"
 ,[1670,itm_type_HEAD_LOWER,0,0,0,0,10,1,0,0,0,0,bon_ATK,30,bon_HP_MUL,-2,bon_NONE] // "Spiked Mask"
 ,[1671,itm_type_HEAD_UPPER,0,4,0,0,10,1,0,0,0,0,bon_VIT,5,bon_NONE] // "Amistr Cap"
-,[1672,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,0,bon_RED_RC_DRAGON,1,bon_NONE] // "Shadow Dragonslayer Shield"
-,[1673,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,0,bon_DMG_RC_DRAGON,2,bon_NONE] // "Shadow Dragonslayer Boots"
+,[1672,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,131,bon_RED_RC_DRAGON,1,bon_NONE] // "Shadow Dragonslayer Shield"
+,[1673,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,131,bon_DMG_RC_DRAGON,2,bon_NONE] // "Shadow Dragonslayer Boots"
 ,[1674,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_EXP_RC_DRAGON,3,bon_NONE] // "Shadow Dragonslayer Shield + Shadow Dragonslayer Boots"
-,[1675,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,0,bon_RED_RC_UNDEAD,1,bon_NONE] // "Shadow Undertaker Shield"
-,[1676,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,0,bon_DMG_RC_UNDEAD,2,bon_NONE] // "Shadow Undertaker Boots"
+,[1675,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,131,bon_RED_RC_UNDEAD,1,bon_NONE] // "Shadow Undertaker Shield"
+,[1676,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,131,bon_DMG_RC_UNDEAD,2,bon_NONE] // "Shadow Undertaker Boots"
 ,[1677,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_EXP_RC_UNDEAD,3,bon_NONE] // "Shadow Undertaker Shield + Shadow Undertaker Boots"
-,[1678,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,0,bon_RED_RC_BRUTE,1,bon_NONE] // "Shadow Tamer Shield"
-,[1679,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,0,bon_DMG_RC_BRUTE,2,bon_NONE] // "Shadow Tamer Boots"
+,[1678,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,131,bon_RED_RC_BRUTE,1,bon_NONE] // "Shadow Tamer Shield"
+,[1679,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,131,bon_DMG_RC_BRUTE,2,bon_NONE] // "Shadow Tamer Boots"
 ,[1680,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_EXP_RC_BRUTE,3,bon_NONE] // "Shadow Tamer Shield + Shadow Tamer Boots"
 ,[1681,itm_type_HEAD_UPPER,0,15,0,1,20,1,0,0,0,0,bon_NONE] // "Amistr Hat"
 ,[1682,itm_type_HEAD_UPPER,0,35,0,0,40,1,0,0,0,0,bon_NONE] // "Officer''s Cap"'
@@ -1715,56 +1715,56 @@
 ,[1705,weapTyp_HANDGUN,0,120,3,1,0,100,0,0,0,0,bon_DMG_SKILL+748,20,bon_NONE] // "Probation Revolver"
 ,[1706,weapTyp_RIFLE,0,200,3,1,0,100,0,0,0,0,bon_HIT,10,bon_CRIT,20,bon_DMG_SKILL+755,20,bon_NONE] // "Probation Rifle"
 ,[1707,weapTyp_SHOTGUN,0,180,3,1,0,100,0,0,0,0,bon_HIT,-10,bon_DMG_SKILL+750,20,bon_NONE] // "Probation Shotgun"
-,[1708,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Warlock Boots"
-,[1709,itm_type_SHADOW_ARMOR,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Warlock Armor"
-,[1710,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Warlock Shield"
+,[1708,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,131,bon_NONE] // "Shadow Warlock Boots" // "Spellflow Shadow Boots"
+,[1709,itm_type_SHADOW_ARMOR,0,0,0,0,0,0,0,0,0,131,bon_NONE] // "Shadow Warlock Armor" // "Spellflow Shadow Armor"
+,[1710,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,131,bon_NONE] // "Shadow Warlock Shield" // "Spellflow Shadow Shield"
 ,[1711,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Warlock Set"
-,[1712,itm_type_SHADOW_WEAPON,0,0,0,0,0,0,0,0,0,0,bon_ATK,10,bon_NONE] // "Shadow Swordsman Gloves"
-,[1713,itm_type_SHADOW_EARRING,0,0,0,0,0,0,0,0,0,0,bon_ASPD_MUL,1,bon_NONE] // "Shadow Swordsman Ring"
-,[1714,itm_type_SHADOW_PENDANT,0,0,0,0,0,0,0,0,0,0,bon_HP_ADD,100,bon_NONE] // "Shadow Swordsman Pendant"
+,[1712,itm_type_SHADOW_WEAPON,0,0,0,0,0,0,0,0,0,131,bon_ATK,10,bon_NONE] // "Shadow Swordsman Gloves"
+,[1713,itm_type_SHADOW_EARRING,0,0,0,0,0,0,0,0,0,131,bon_ASPD_MUL,1,bon_NONE] // "Shadow Swordsman Ring"
+,[1714,itm_type_SHADOW_PENDANT,0,0,0,0,0,0,0,0,0,131,bon_HP_ADD,100,bon_NONE] // "Shadow Swordsman Pendant"
 ,[1715,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Swordsman Set"
-,[1716,itm_type_SHADOW_WEAPON,0,0,0,0,0,0,0,0,0,0,bon_MATK,10,bon_NONE] // "Shadow Diviner Gloves"
-,[1717,itm_type_SHADOW_PENDANT,0,0,0,0,0,0,0,0,0,0,bon_SP_ADD,50,bon_NONE] // "Shadow Diviner Pendant"
-,[1718,itm_type_SHADOW_EARRING,0,0,0,0,0,0,0,0,0,0,bon_RED_CAST,-1,bon_NONE] // "Shadow Diviner Ring"
+,[1716,itm_type_SHADOW_WEAPON,0,0,0,0,0,0,0,0,0,131,bon_MATK,10,bon_NONE] // "Shadow Diviner Gloves"
+,[1717,itm_type_SHADOW_PENDANT,0,0,0,0,0,0,0,0,0,131,bon_SP_ADD,50,bon_NONE] // "Shadow Diviner Pendant"
+,[1718,itm_type_SHADOW_EARRING,0,0,0,0,0,0,0,0,0,131,bon_RED_CAST,-1,bon_NONE] // "Shadow Diviner Ring"
 ,[1719,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Diviner Set"
-,[1720,itm_type_SHADOW_ARMOR,51,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Knight Armor"
-,[1721,itm_type_SHADOW_SHOES,51,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL+skill_KN_PIERCE,20,bon_NONE] // "Shadow Knight Boots"
+,[1720,itm_type_SHADOW_ARMOR,51,0,0,0,0,0,0,0,0,130,bon_NONE] // "Shadow Knight Armor"
+,[1721,itm_type_SHADOW_SHOES,51,0,0,0,0,0,0,0,0,130,bon_DMG_SKILL+skill_KN_PIERCE,20,bon_NONE] // "Shadow Knight Boots"
 ,[1722,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL+skill_KN_BOWLING_BASH,20,bon_NONE] // "Shadow Knight Set"
-,[1723,itm_type_SHADOW_ARMOR,51,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL+skill_CR_GRAND_CROSS,20,bon_NONE] // "Shadow Crusader Armor"
-,[1724,itm_type_SHADOW_SHOES,51,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Crusader Boots"
+,[1723,itm_type_SHADOW_ARMOR,51,0,0,0,0,0,0,0,0,130,bon_DMG_SKILL+skill_CR_GRAND_CROSS,20,bon_NONE] // "Shadow Crusader Armor"
+,[1724,itm_type_SHADOW_SHOES,51,0,0,0,0,0,0,0,0,130,bon_NONE] // "Shadow Crusader Boots"
 ,[1725,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL+skill_CR_HOLY_CROSS,20,bon_NONE] // "Shadow Crusader Set"
-,[1726,itm_type_SHADOW_ARMOR,56,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Blacksmith Armor"
-,[1727,itm_type_SHADOW_SHOES,56,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Blacksmith Boots"
+,[1726,itm_type_SHADOW_ARMOR,56,0,0,0,0,0,0,0,0,130,bon_NONE] // "Shadow Blacksmith Armor"
+,[1727,itm_type_SHADOW_SHOES,56,0,0,0,0,0,0,0,0,130,bon_NONE] // "Shadow Blacksmith Boots"
 ,[1728,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Blacksmith Set"
-,[1729,itm_type_SHADOW_ARMOR,56,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Alchemist Armor"
-,[1730,itm_type_SHADOW_SHOES,56,0,0,0,0,0,0,0,0,0,bon_HEAL_MUL,30,bon_NONE] // "Shadow Alchemist Boots"
+,[1729,itm_type_SHADOW_ARMOR,56,0,0,0,0,0,0,0,0,130,bon_NONE] // "Shadow Alchemist Armor"
+,[1730,itm_type_SHADOW_SHOES,56,0,0,0,0,0,0,0,0,130,bon_HEAL_MUL,30,bon_NONE] // "Shadow Alchemist Boots"
 ,[1731,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_SKILL_ENABLE,51,bon_NONE] // "Shadow Alchemist Set"
-,[1732,itm_type_SHADOW_ARMOR,53,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL+skill_PR_MAGNUS_EXORCISMUS,20,bon_NONE] // "Shadow Priest Armor"
-,[1733,itm_type_SHADOW_SHOES,53,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Priest Boots"
+,[1732,itm_type_SHADOW_ARMOR,53,0,0,0,0,0,0,0,0,130,bon_DMG_SKILL+skill_PR_MAGNUS_EXORCISMUS,20,bon_NONE] // "Shadow Priest Armor"
+,[1733,itm_type_SHADOW_SHOES,53,0,0,0,0,0,0,0,0,130,bon_NONE] // "Shadow Priest Boots"
 ,[1734,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK_MUL,3,bon_CAST_SKILL+skill_PR_MAGNUS_EXORCISMUS,40,bon_NONE] // "Shadow Priest Set"
-,[1735,itm_type_SHADOW_ARMOR,53,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL+skill_MO_THROW_SPIRIT_SPHERES,20,bon_DMG_SKILL+skill_MO_OCCULT_IMPACTION,20,bon_NONE] // "Shadow Monk Armor"
-,[1736,itm_type_SHADOW_SHOES,53,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL+skill_MO_RAGING_QUADRUPLE_BLOW,20,bon_NONE] // "Shadow Monk Boots"
+,[1735,itm_type_SHADOW_ARMOR,53,0,0,0,0,0,0,0,0,130,bon_DMG_SKILL+skill_MO_THROW_SPIRIT_SPHERES,20,bon_DMG_SKILL+skill_MO_OCCULT_IMPACTION,20,bon_NONE] // "Shadow Monk Armor"
+,[1736,itm_type_SHADOW_SHOES,53,0,0,0,0,0,0,0,0,130,bon_DMG_SKILL+skill_MO_RAGING_QUADRUPLE_BLOW,20,bon_NONE] // "Shadow Monk Boots"
 ,[1737,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Monk Set"
-,[1738,itm_type_SHADOW_ARMOR,52,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Assassin Armor"
-,[1739,itm_type_SHADOW_SHOES,52,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL+skill_AS_GRIMTOOTH,20,bon_NONE] // "Shadow Assassin Boots"
+,[1738,itm_type_SHADOW_ARMOR,52,0,0,0,0,0,0,0,0,130,bon_NONE] // "Shadow Assassin Armor"
+,[1739,itm_type_SHADOW_SHOES,52,0,0,0,0,0,0,0,0,130,bon_DMG_SKILL+skill_AS_GRIMTOOTH,20,bon_NONE] // "Shadow Assassin Boots"
 ,[1740,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL+skill_AS_SONIC_BLOW,20,bon_NONE] // "Shadow Assassin Set"
-,[1741,itm_type_SHADOW_ARMOR,52,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL+skill_RG_SIGHTLESS_MIND,20,bon_NONE] // "Shadow Rogue Armor"
-,[1742,itm_type_SHADOW_SHOES,52,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Rogue Boots"
+,[1741,itm_type_SHADOW_ARMOR,52,0,0,0,0,0,0,0,0,130,bon_DMG_SKILL+skill_RG_SIGHTLESS_MIND,20,bon_NONE] // "Shadow Rogue Armor"
+,[1742,itm_type_SHADOW_SHOES,52,0,0,0,0,0,0,0,0,130,bon_NONE] // "Shadow Rogue Boots"
 ,[1743,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_SIZ_LARGE,3,bon_DMG_SIZ_MEDIUM,3,bon_DMG_SIZ_SMALL,3,bon_NONE] // "Shadow Rogue Set"
-,[1744,itm_type_SHADOW_ARMOR,55,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL+skill_WI_JUPITEL_THUNDER,20,bon_NONE] // "Shadow Wizard Armor"
-,[1745,itm_type_SHADOW_SHOES,55,0,0,0,0,0,0,0,0,0,bon_CAST_SKILL+skill_WI_METEOR_STORM,20,bon_CAST_SKILL+skill_WI_LORD_OF_VERMILLION,20,bon_CAST_SKILL+skill_WI_STORM_GUST,20,bon_NONE] // "Shadow Wizard Boots"
+,[1744,itm_type_SHADOW_ARMOR,55,0,0,0,0,0,0,0,0,130,bon_DMG_SKILL+skill_WI_JUPITEL_THUNDER,20,bon_NONE] // "Shadow Wizard Armor"
+,[1745,itm_type_SHADOW_SHOES,55,0,0,0,0,0,0,0,0,130,bon_CAST_SKILL+skill_WI_METEOR_STORM,20,bon_CAST_SKILL+skill_WI_LORD_OF_VERMILLION,20,bon_CAST_SKILL+skill_WI_STORM_GUST,20,bon_NONE] // "Shadow Wizard Boots"
 ,[1746,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL+skill_WI_METEOR_STORM,20,bon_DMG_SKILL+skill_WI_LORD_OF_VERMILLION,20,bon_DMG_SKILL+skill_WI_STORM_GUST,20,bon_NONE] // "Shadow Wizard Set"
-,[1747,itm_type_SHADOW_ARMOR,55,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Sage Armor"
-,[1748,itm_type_SHADOW_SHOES,55,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL+skill_SA_HEAVENS_DRIVE,20,bon_NONE] // "Shadow Sage Boots"
+,[1747,itm_type_SHADOW_ARMOR,55,0,0,0,0,0,0,0,0,130,bon_NONE] // "Shadow Sage Armor"
+,[1748,itm_type_SHADOW_SHOES,55,0,0,0,0,0,0,0,0,130,bon_DMG_SKILL+skill_SA_HEAVENS_DRIVE,20,bon_NONE] // "Shadow Sage Boots"
 ,[1749,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK_MUL,3,bon_NONE] // "Shadow Sage Set"
-,[1750,itm_type_SHADOW_ARMOR,54,0,0,0,0,0,0,0,0,0,bon_CAST_SKILL+skill_HU_BLAST_MINE,20,bon_CAST_SKILL+skill_HU_LAND_MINE,20,bon_NONE] // "Shadow Hunter Armor"
-,[1751,itm_type_SHADOW_SHOES,54,0,0,0,0,0,0,0,0,0,bon_CAST_SKILL+skill_HU_BLITZ_BEAT,20,bon_CAST_SKILL+skill_SN_FALCON_ASSAULT,20,bon_NONE] // "Shadow Hunter Boots"
+,[1750,itm_type_SHADOW_ARMOR,54,0,0,0,0,0,0,0,0,130,bon_CAST_SKILL+skill_HU_BLAST_MINE,20,bon_CAST_SKILL+skill_HU_LAND_MINE,20,bon_NONE] // "Shadow Hunter Armor"
+,[1751,itm_type_SHADOW_SHOES,54,0,0,0,0,0,0,0,0,130,bon_CAST_SKILL+skill_HU_BLITZ_BEAT,20,bon_CAST_SKILL+skill_SN_FALCON_ASSAULT,20,bon_NONE] // "Shadow Hunter Boots"
 ,[1752,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_SIZ_LARGE,3,bon_DMG_SIZ_MEDIUM,3,bon_DMG_SIZ_SMALL,3,bon_NONE] // "Shadow Hunter Set"
-,[1753,itm_type_SHADOW_ARMOR,54,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Bard Armor"
-,[1754,itm_type_SHADOW_SHOES,54,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Bard Boots"
+,[1753,itm_type_SHADOW_ARMOR,54,0,0,0,0,0,0,0,0,130,bon_NONE] // "Shadow Bard Armor"
+,[1754,itm_type_SHADOW_SHOES,54,0,0,0,0,0,0,0,0,130,bon_NONE] // "Shadow Bard Boots"
 ,[1755,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Bard Set"
-,[1756,itm_type_SHADOW_ARMOR,54,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Dancer Armor"
-,[1757,itm_type_SHADOW_SHOES,54,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Dancer Boots"
+,[1756,itm_type_SHADOW_ARMOR,54,0,0,0,0,0,0,0,0,130,bon_NONE] // "Shadow Dancer Armor"
+,[1757,itm_type_SHADOW_SHOES,54,0,0,0,0,0,0,0,0,130,bon_NONE] // "Shadow Dancer Boots"
 ,[1758,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Dancer Set"
 //,0,0,0,0,
 ,[1759,itm_type_HEAD_UPPER,0,0,0,1,10,0,0,0,0,0,bon_NONE] //Diabolic Halo
@@ -1772,11 +1772,11 @@
 ,[1761,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //Diabolic Halo + Kronos
 ,[1762,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //Diabolic Halo + Mikatsuki + Raksasa Dagger
 //,0,0,0,0,
-,[1763,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,0,bon_DEF,1,bon_NONE] // "Shadow Boots of Hypnos"
-,[1764,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,0,bon_DEF,1,bon_NONE] // "Shadow Boots of Harpos"
-,[1765,itm_type_SHADOW_ARMOR,0,0,0,0,0,0,0,0,0,0,bon_DEF,1,bon_NONE] // "Shadow Armor of Hypnos"
-,[1766,itm_type_SHADOW_ARMOR,0,0,0,0,0,0,0,0,0,0,bon_DEF,1,bon_NONE] // "Shadow Armor of Harpos"
-,[1767,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,0,bon_DEF,3,bon_NONE] // "Shadow Shield of the Steadfast"
+,[1763,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,131,bon_DEF,1,bon_NONE] // "Shadow Boots of Hypnos"
+,[1764,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,131,bon_DEF,1,bon_NONE] // "Shadow Boots of Harpos"
+,[1765,itm_type_SHADOW_ARMOR,0,0,0,0,0,0,0,0,0,131,bon_DEF,1,bon_NONE] // "Shadow Armor of Hypnos"
+,[1766,itm_type_SHADOW_ARMOR,0,0,0,0,0,0,0,0,0,131,bon_DEF,1,bon_NONE] // "Shadow Armor of Harpos"
+,[1767,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,131,bon_DEF,3,bon_NONE] // "Shadow Shield of the Steadfast"
 ,[1768,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DEF,5,bon_NONE] //Shadow Shield of the Steadfast + Shadow Armor of Hypnos + Shadow Boots of Hypnos
 ,[1769,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DEF,5,bon_NONE] //Shadow Shield of the Steadfast + Shadow Armor of Harpos + Shadow Boots of Harpos
 //,0,0,0,0,
@@ -1828,40 +1828,40 @@
 ,[1807,itm_type_GARMENT,0,8,0,1,20,1,0,0,0,0,bon_RED_ELE_EARTH,10,bon_RED_ELE_WATER,10,bon_RED_ELE_FIRE,10,bon_RED_ELE_WIND,10,bon_NONE] // "Buwaya Sack Cloth(Bayani)"
 ,[1808,itm_type_ARMOR,0,55,0,1,50,1,0,0,0,0,bon_ALL_STATS,1,bon_NONE] // "Bakonawa Scale Armor(Bayani)"
 
-,[1809,itm_type_SHADOW_SHIELD,207,0,0,0,0,99,0,0,0,0,bon_NONE] // "Shadow Runeknight Shield"
-,[1810,itm_type_SHADOW_SHIELD,213,0,0,0,0,99,0,0,0,0,bon_DMG_SKILL+skill_ROY_EARTH_DRIVE,20,bon_NONE] // "Shadow Royalguard Shield"
-,[1811,itm_type_SHADOW_SHIELD,212,0,0,0,0,99,0,0,0,0,bon_DMG_SKILL+skill_MEC_FLAME_LAUNCHER,20,bon_NONE] // "Shadow Mechanic Shield"
-,[1812,itm_type_SHADOW_SHIELD,219,0,0,0,0,99,0,0,0,0,bon_HP_MUL,3,bon_NONE] // "Shadow Genetic Shield"
-,[1813,itm_type_SHADOW_SHIELD,209,0,0,0,0,99,0,0,0,0,bon_DMG_SKILL+skill_ABI_ADORAMUS,20,"ev_ref",1,bon_DMG_SKILL+skill_ABI_ADORAMUS,5,bon_NONE] // "Shadow Archbishop Shield"
-,[1814,itm_type_SHADOW_SHIELD,215,0,0,0,0,99,0,0,0,0,bon_DMG_SKILL+skill_SUR_SKY_NET_BLOW,20,bon_NONE] // "Shadow Sura Shield"
-,[1815,itm_type_SHADOW_SHIELD,208,0,0,0,0,99,0,0,0,0,bon_DELAY_SKILL_FLAT+skill_GLT_DARK_CLAW,10,bon_NONE] // "Shadow Guillotine Cross Shield"
-,[1816,itm_type_SHADOW_SHIELD,214,0,0,0,0,99,0,0,0,0,bon_NONE] // "Shadow Shadowchaser Shield"
-,[1817,itm_type_SHADOW_SHIELD,211,0,0,0,0,99,0,0,0,0,bon_DMG_SKILL+skill_WAR_EARTH_STRAIN,20,bon_DMG_SKILL+skill_WAR_EARTH_STRAIN,5,bon_NONE] // "Shadow Warlock Shield"
-,[1818,itm_type_SHADOW_SHIELD,218,0,0,0,0,99,0,0,0,0,bon_DELAY_SKILL_FLAT+skill_SOR_EARTH_GRAVE,1,"ev_ref",1,bon_NONE] // "Shadow Sorcerer Shield"
-,[1819,itm_type_SHADOW_SHIELD,210,0,0,0,0,99,0,0,0,0,bon_NONE] // "Shadow Ranger Shield"
-,[1820,itm_type_SHADOW_SHIELD,216,0,0,0,0,99,0,0,0,0,bon_SP_MUL,3,bon_NONE] // "Shadow Minstrel Shield"
-,[1821,itm_type_SHADOW_SHIELD,217,0,0,0,0,99,0,0,0,0,bon_SP_MUL,3,bon_NONE] // "Shadow Wanderer Shield"
-,[1822,itm_type_SHADOW_SHIELD,144,0,0,0,0,1,0,0,0,0,bon_ASPD_ADD,1,bon_NONE] // "Shadow Ninja Shield"
-,[1823,itm_type_SHADOW_SHIELD,223,0,0,0,0,1,0,0,0,0,bon_PHY_ATK,3,bon_MATK_MUL,3,bon_NONE] // "Shadow Taekwon Shield"
-,[1824,itm_type_SHADOW_SHIELD,50,0,0,0,0,1,0,0,0,0,bon_HP_ADD,1000,bon_SP_ADD,200,bon_NONE] // "Shadow Super Novice Shield"
-,[1825,itm_type_SHADOW_SHIELD,145,0,0,0,0,1,0,0,0,0,bon_DMG_CRIT,5,bon_NONE] // "Shadow Gunslinger Shield"
-,[1826,itm_type_SHADOW_WEAPON,207,0,0,0,0,99,0,0,0,0,bon_DMG_SKILL+skill_RUN_SONIC_WAVE,20,bon_NONE] // "Shadow Runeknight Gloves"
-,[1827,itm_type_SHADOW_WEAPON,213,0,0,0,0,99,0,0,0,0,bon_DMG_SKILL+skill_ROY_SPEAR_CANNON,20,bon_NONE] // "Shadow Royalguard Gloves"
-,[1828,itm_type_SHADOW_WEAPON,212,0,0,0,0,99,0,0,0,0,bon_DMG_SKILL+skill_MEC_VULCAN_ARM,20,bon_NONE] // "Shadow Mechanic Gloves"
-,[1829,itm_type_SHADOW_WEAPON,219,0,0,0,0,99,0,0,0,0,bon_DMG_SKILL+skill_GEN_CART_TORNADO,20,bon_NONE] // "Shadow Genetic Gloves"
-,[1830,itm_type_SHADOW_WEAPON,209,0,0,0,0,99,0,0,0,0,bon_DMG_SKILL+skill_ABI_DUPLE_LIGHT,20,"ev_ref",1,bon_DMG_SKILL+skill_ABI_DUPLE_LIGHT,5,bon_NONE] // "Shadow Archbishop Gloves"
-,[1831,itm_type_SHADOW_WEAPON,215,0,0,0,0,99,0,0,0,0,bon_DELAY_SKILL_FLAT+skill_SUR_RAMPAGE_BLASTER,2,bon_NONE] // "Shadow Sura Gloves"
-,[1832,itm_type_SHADOW_WEAPON,208,0,0,0,0,99,0,0,0,0,bon_NONE] // "Shadow Guillotine Cross Gloves"
-,[1833,itm_type_SHADOW_WEAPON,214,0,0,0,0,99,0,0,0,0,bon_DMG_SKILL+skill_SHA_TRIANGLE_SHOT,20,bon_NONE] // "Shadow Shadowchaser Gloves"
-,[1834,itm_type_SHADOW_WEAPON,211,0,0,0,0,99,0,0,0,0,bon_DMG_SKILL+skill_WAR_DRAIN_LIFE,20,"ev_ref",1,bon_DMG_SKILL+skill_WAR_DRAIN_LIFE,5,bon_NONE] // "Shadow Warlock Gloves"
-,[1835,itm_type_SHADOW_WEAPON,218,0,0,0,0,99,0,0,0,0,bon_DELAY_SKILL_FLAT+skill_SOR_DIAMOND_DUST,1,bon_NONE] // "Shadow Sorcerer Gloves"
-,[1836,itm_type_SHADOW_WEAPON,210,0,0,0,0,99,0,0,0,0,bon_DMG_SKILL+skill_RAN_CLUSTER_BOMB,20,bon_NONE] // "Shadow Ranger Gloves"
-,[1837,itm_type_SHADOW_WEAPON,216,0,0,0,0,99,0,0,0,0,bon_HP_MUL,3,bon_NONE] // "Shadow Minstrel Gloves"
-,[1838,itm_type_SHADOW_WEAPON,217,0,0,0,0,99,0,0,0,0,bon_HP_MUL,3,bon_NONE] // "Shadow Wanderer Gloves"
-,[1839,itm_type_SHADOW_WEAPON,144,0,0,0,0,1,0,0,0,0,bon_PHY_ATK,3,bon_MATK_MUL,3,bon_DMG_SKILL+skill_KAG_THROW_EXPLOSIVE_KUNAI,2,bon_NONE] // "Shadow Ninja Gloves"
-,[1840,itm_type_SHADOW_WEAPON,223,0,0,0,0,1,0,0,0,0,bon_ASPD_ADD,1,bon_NONE] // "Shadow Taekwon Gloves"
-,[1841,itm_type_SHADOW_WEAPON,50,0,0,0,0,1,0,0,0,0,bon_HP_ADD,1000,bon_SP_ADD,200,bon_NONE] // "Shadow Super Novice Gloves"
-,[1842,itm_type_SHADOW_WEAPON,145,0,0,0,0,1,0,0,0,0,bon_ASPD_ADD,1,bon_NONE] // "Shadow Gunslinger Gloves"
+,[1809,itm_type_SHADOW_SHIELD,207,0,0,0,0,99,0,0,0,130,bon_NONE] // "Shadow Runeknight Shield"
+,[1810,itm_type_SHADOW_SHIELD,213,0,0,0,0,99,0,0,0,130,bon_DMG_SKILL+skill_ROY_EARTH_DRIVE,20,bon_NONE] // "Shadow Royalguard Shield"
+,[1811,itm_type_SHADOW_SHIELD,212,0,0,0,0,99,0,0,0,130,bon_DMG_SKILL+skill_MEC_FLAME_LAUNCHER,20,bon_NONE] // "Shadow Mechanic Shield"
+,[1812,itm_type_SHADOW_SHIELD,219,0,0,0,0,99,0,0,0,130,bon_HP_MUL,3,bon_NONE] // "Shadow Genetic Shield"
+,[1813,itm_type_SHADOW_SHIELD,209,0,0,0,0,99,0,0,0,130,bon_DMG_SKILL+skill_ABI_ADORAMUS,20,"ev_ref",1,bon_DMG_SKILL+skill_ABI_ADORAMUS,5,bon_NONE] // "Shadow Archbishop Shield"
+,[1814,itm_type_SHADOW_SHIELD,215,0,0,0,0,99,0,0,0,130,bon_DMG_SKILL+skill_SUR_SKY_NET_BLOW,20,bon_NONE] // "Shadow Sura Shield"
+,[1815,itm_type_SHADOW_SHIELD,208,0,0,0,0,99,0,0,0,130,bon_DELAY_SKILL_FLAT+skill_GLT_DARK_CLAW,10,bon_NONE] // "Shadow Guillotine Cross Shield"
+,[1816,itm_type_SHADOW_SHIELD,214,0,0,0,0,99,0,0,0,130,bon_NONE] // "Shadow Shadowchaser Shield"
+,[1817,itm_type_SHADOW_SHIELD,211,0,0,0,0,99,0,0,0,130,bon_DMG_SKILL+skill_WAR_EARTH_STRAIN,20,bon_DMG_SKILL+skill_WAR_EARTH_STRAIN,5,bon_NONE] // "Shadow Warlock Shield"
+,[1818,itm_type_SHADOW_SHIELD,218,0,0,0,0,99,0,0,0,130,bon_DELAY_SKILL_FLAT+skill_SOR_EARTH_GRAVE,1,"ev_ref",1,bon_NONE] // "Shadow Sorcerer Shield"
+,[1819,itm_type_SHADOW_SHIELD,210,0,0,0,0,99,0,0,0,130,bon_NONE] // "Shadow Ranger Shield"
+,[1820,itm_type_SHADOW_SHIELD,216,0,0,0,0,99,0,0,0,130,bon_SP_MUL,3,bon_NONE] // "Shadow Minstrel Shield"
+,[1821,itm_type_SHADOW_SHIELD,217,0,0,0,0,99,0,0,0,130,bon_SP_MUL,3,bon_NONE] // "Shadow Wanderer Shield"
+,[1822,itm_type_SHADOW_SHIELD,144,0,0,0,0,1,0,0,0,130,bon_ASPD_ADD,1,bon_NONE] // "Shadow Ninja Shield"
+,[1823,itm_type_SHADOW_SHIELD,223,0,0,0,0,1,0,0,0,130,bon_PHY_ATK,3,bon_MATK_MUL,3,bon_NONE] // "Shadow Taekwon Shield"
+,[1824,itm_type_SHADOW_SHIELD,50,0,0,0,0,1,0,0,0,130,bon_HP_ADD,1000,bon_SP_ADD,200,bon_NONE] // "Shadow Super Novice Shield"
+,[1825,itm_type_SHADOW_SHIELD,145,0,0,0,0,1,0,0,0,130,bon_DMG_CRIT,5,bon_NONE] // "Shadow Gunslinger Shield"
+,[1826,itm_type_SHADOW_WEAPON,207,0,0,0,0,99,0,0,0,130,bon_DMG_SKILL+skill_RUN_SONIC_WAVE,20,bon_NONE] // "Shadow Runeknight Gloves"
+,[1827,itm_type_SHADOW_WEAPON,213,0,0,0,0,99,0,0,0,130,bon_DMG_SKILL+skill_ROY_SPEAR_CANNON,20,bon_NONE] // "Shadow Royalguard Gloves"
+,[1828,itm_type_SHADOW_WEAPON,212,0,0,0,0,99,0,0,0,130,bon_DMG_SKILL+skill_MEC_VULCAN_ARM,20,bon_NONE] // "Shadow Mechanic Gloves"
+,[1829,itm_type_SHADOW_WEAPON,219,0,0,0,0,99,0,0,0,130,bon_DMG_SKILL+skill_GEN_CART_TORNADO,20,bon_NONE] // "Shadow Genetic Gloves"
+,[1830,itm_type_SHADOW_WEAPON,209,0,0,0,0,99,0,0,0,130,bon_DMG_SKILL+skill_ABI_DUPLE_LIGHT,20,"ev_ref",1,bon_DMG_SKILL+skill_ABI_DUPLE_LIGHT,5,bon_NONE] // "Shadow Archbishop Gloves"
+,[1831,itm_type_SHADOW_WEAPON,215,0,0,0,0,99,0,0,0,130,bon_DELAY_SKILL_FLAT+skill_SUR_RAMPAGE_BLASTER,2,bon_NONE] // "Shadow Sura Gloves"
+,[1832,itm_type_SHADOW_WEAPON,208,0,0,0,0,99,0,0,0,130,bon_NONE] // "Shadow Guillotine Cross Gloves"
+,[1833,itm_type_SHADOW_WEAPON,214,0,0,0,0,99,0,0,0,130,bon_DMG_SKILL+skill_SHA_TRIANGLE_SHOT,20,bon_NONE] // "Shadow Shadowchaser Gloves"
+,[1834,itm_type_SHADOW_WEAPON,211,0,0,0,0,99,0,0,0,130,bon_DMG_SKILL+skill_WAR_DRAIN_LIFE,20,"ev_ref",1,bon_DMG_SKILL+skill_WAR_DRAIN_LIFE,5,bon_NONE] // "Shadow Warlock Gloves"
+,[1835,itm_type_SHADOW_WEAPON,218,0,0,0,0,99,0,0,0,130,bon_DELAY_SKILL_FLAT+skill_SOR_DIAMOND_DUST,1,bon_NONE] // "Shadow Sorcerer Gloves"
+,[1836,itm_type_SHADOW_WEAPON,210,0,0,0,0,99,0,0,0,130,bon_DMG_SKILL+skill_RAN_CLUSTER_BOMB,20,bon_NONE] // "Shadow Ranger Gloves"
+,[1837,itm_type_SHADOW_WEAPON,216,0,0,0,0,99,0,0,0,130,bon_HP_MUL,3,bon_NONE] // "Shadow Minstrel Gloves"
+,[1838,itm_type_SHADOW_WEAPON,217,0,0,0,0,99,0,0,0,130,bon_HP_MUL,3,bon_NONE] // "Shadow Wanderer Gloves"
+,[1839,itm_type_SHADOW_WEAPON,144,0,0,0,0,1,0,0,0,130,bon_PHY_ATK,3,bon_MATK_MUL,3,bon_DMG_SKILL+skill_KAG_THROW_EXPLOSIVE_KUNAI,2,bon_NONE] // "Shadow Ninja Gloves"
+,[1840,itm_type_SHADOW_WEAPON,223,0,0,0,0,1,0,0,0,130,bon_ASPD_ADD,1,bon_NONE] // "Shadow Taekwon Gloves"
+,[1841,itm_type_SHADOW_WEAPON,50,0,0,0,0,1,0,0,0,130,bon_HP_ADD,1000,bon_SP_ADD,200,bon_NONE] // "Shadow Super Novice Gloves"
+,[1842,itm_type_SHADOW_WEAPON,145,0,0,0,0,1,0,0,0,130,bon_ASPD_ADD,1,bon_NONE] // "Shadow Gunslinger Gloves"
 ,[1843,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_SKILL_AUTOCAST,128,bon_NONE] // "Shadow Runeknight Set"
 ,[1844,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_SKILL_ENABLE,53,bon_NONE] // "Shadow Royalguard Set"
 ,[1845,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL+skill_MEC_VULCAN_ARM,20,bon_NONE] // "Shadow Mechanic Set"
@@ -2502,33 +2502,33 @@
 ,[2421,itm_type_GARMENT,0,0,0,1,10,1,0,0,0,0,bon_MATK,20,bon_DMG_RANGE,3,bon_DMG_CRIT,3,"ref_lvl",11,bon_RED_CASTDELAY,4,"ev_ref",3,bon_MATK,20,"ev_ref",3,bon_DMG_RANGE,3,"ev_ref",3,bon_DMG_CRIT,3,bon_NONE] //Violet Halo
 ,[2422,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RED_CASTDELAY,6,bon_NONE] // Violet Halo + Dark Blinder
 
-,[2423,itm_type_SHADOW_EARRING,0,0,0,0,1,1,0,0,0,0,bon_NONE] //Swordman Shadow Earring
-,[2424,itm_type_SHADOW_PENDANT,0,0,0,0,1,1,0,0,0,0,bon_DMG_SKILL + skill_SW_MAGNUM_BREAK,20,"ev_ref",1,bon_DMG_SKILL + skill_SW_MAGNUM_BREAK,5,bon_NONE] // Swordman Shadow Pendant
+,[2423,itm_type_SHADOW_EARRING,0,0,0,0,1,1,0,0,0,0,"ev_ref",1,bon_HP_ADD,10,bon_NONE] //Swordman Shadow Earring
+,[2424,itm_type_SHADOW_PENDANT,0,0,0,0,1,1,0,0,0,0,"ev_ref",1,bon_HP_ADD,10,bon_DMG_SKILL + skill_SW_MAGNUM_BREAK,20,"ev_ref",1,bon_DMG_SKILL + skill_SW_MAGNUM_BREAK,5,bon_NONE] // Swordman Shadow Pendant
 ,[2425,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_PHY_ATK,1,bon_HP_MUL,1,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_PHY_ATK,2,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_HP_MUL,2,bon_NONE] // Swordman Shadow Earring + Pendant
 ,[2426,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,10,bon_HP_MUL,5,bon_SP_MUL,5,bon_DEFIGN_RC_NON_BOSS,50,bon_MDEFIGN_RC_NON_BOSS,50,bon_NONE] // Full Swordman Shadow Set
 
-,[2427,itm_type_SHADOW_EARRING,0,0,0,0,1,1,0,0,0,0,bon_DMG_SKILL + skill_ME_MAMMONITE,20,"ev_ref",1,bon_DMG_SKILL + skill_ME_MAMMONITE,5,bon_NONE] // Merchant Shadow Earring
-,[2428,itm_type_SHADOW_PENDANT,0,0,0,0,1,1,0,0,0,0,bon_DMG_SKILL + skill_ME_CART_REVOLUTION,20,"ev_ref",1,bon_DMG_SKILL + skill_ME_CART_REVOLUTION,5,bon_NONE] // Merchant Shadow Pendant
+,[2427,itm_type_SHADOW_EARRING,0,0,0,0,1,1,0,0,0,0,"ev_ref",1,bon_HP_ADD,10,bon_DMG_SKILL + skill_ME_MAMMONITE,20,"ev_ref",1,bon_DMG_SKILL + skill_ME_MAMMONITE,5,bon_NONE] // Merchant Shadow Earring
+,[2428,itm_type_SHADOW_PENDANT,0,0,0,0,1,1,0,0,0,0,"ev_ref",1,bon_HP_ADD,10,bon_DMG_SKILL + skill_ME_CART_REVOLUTION,20,"ev_ref",1,bon_DMG_SKILL + skill_ME_CART_REVOLUTION,5,bon_NONE] // Merchant Shadow Pendant
 ,[2429,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_PHY_ATK,1,bon_HP_MUL,1,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_PHY_ATK,2,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_HP_MUL,2,bon_NONE] // Merchant Shadow Earring + Pendant
 ,[2430,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,10,bon_HP_MUL,5,bon_SP_MUL,5,bon_DEFIGN_RC_NON_BOSS,50,bon_MDEFIGN_RC_NON_BOSS,50,bon_NONE] // Full Merchant Shadow Set
 
-,[2431,itm_type_SHADOW_EARRING,0,0,0,0,1,1,0,0,0,0,bon_NONE] // Acolyte Shadow Earring
-,[2432,itm_type_SHADOW_PENDANT,0,0,0,0,1,1,0,0,0,0,bon_DMG_SKILL + skill_AC_HOLY_LIGHT,50,"ev_ref",1,bon_DMG_SKILL + skill_AC_HOLY_LIGHT,10,bon_NONE] // Acolyte Shadow Pendant
-,[2433,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK_MUL,1,bon_SP_MUL,1,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_MATK_MUL,2,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_HP_MUL,2,bon_NONE] // Acolyte Shadow Earring + Pendant
+,[2431,itm_type_SHADOW_EARRING,0,0,0,0,1,1,0,0,0,0,"ev_ref",1,bon_HP_ADD,10,bon_NONE] // Acolyte Shadow Earring
+,[2432,itm_type_SHADOW_PENDANT,0,0,0,0,1,1,0,0,0,131,"ev_ref",1,bon_HP_ADD,10,bon_DMG_SKILL + skill_AC_HOLY_LIGHT,50,"ev_ref",1,bon_DMG_SKILL + skill_AC_HOLY_LIGHT,10,bon_NONE] // Acolyte Shadow Pendant
+,[2433,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK_MUL,1,bon_SP_MUL,1,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_MATK_MUL,2,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_SP_MUL,2,bon_NONE] // Acolyte Shadow Earring + Pendant
 ,[2434,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,10,bon_HP_MUL,5,bon_SP_MUL,5,bon_DEFIGN_RC_NON_BOSS,50,bon_MDEFIGN_RC_NON_BOSS,50,bon_NONE] // Full Acolyte Shadow Set
 
-,[2435,itm_type_SHADOW_EARRING,0,0,0,0,1,1,0,0,0,0,bon_CAST_SKILL + skill_MA_FIRE_BOLT,20,bon_CAST_SKILL + skill_MA_COLD_BOLT,20,bon_CAST_SKILL + skill_MA_LIGHTNING_BOLT,20,"ev_ref",1,bon_CAST_SKILL + skill_MA_FIRE_BOLT,3,"ev_ref",1,bon_CAST_SKILL + skill_MA_COLD_BOLT,3,"ev_ref",1,bon_CAST_SKILL + skill_MA_LIGHTNING_BOLT,3,bon_NONE] // Mage Shadow Earring
-,[2436,itm_type_SHADOW_PENDANT,0,0,0,0,1,1,0,0,0,0,bon_DMG_SKILL + skill_MA_FIRE_WALL,20,"ev_ref",1,bon_DMG_SKILL + skill_MA_FIRE_WALL,5,bon_NONE] // Mage Shadow Pendant
-,[2437,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK_MUL,1,bon_SP_MUL,1,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_MATK_MUL,2,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_HP_MUL,2,bon_NONE] // Mage Shadow Earring + Pendant
+,[2435,itm_type_SHADOW_EARRING,0,0,0,0,1,1,0,0,0,0,"ev_ref",1,bon_HP_ADD,10,bon_CAST_SKILL + skill_MA_FIRE_BOLT,20,bon_CAST_SKILL + skill_MA_COLD_BOLT,20,bon_CAST_SKILL + skill_MA_LIGHTNING_BOLT,20,"ev_ref",1,bon_CAST_SKILL + skill_MA_FIRE_BOLT,3,"ev_ref",1,bon_CAST_SKILL + skill_MA_COLD_BOLT,3,"ev_ref",1,bon_CAST_SKILL + skill_MA_LIGHTNING_BOLT,3,bon_NONE] // Mage Shadow Earring
+,[2436,itm_type_SHADOW_PENDANT,0,0,0,0,1,1,0,0,0,0,"ev_ref",1,bon_HP_ADD,10,bon_DMG_SKILL + skill_MA_FIRE_WALL,20,"ev_ref",1,bon_DMG_SKILL + skill_MA_FIRE_WALL,5,bon_NONE] // Mage Shadow Pendant
+,[2437,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK_MUL,1,bon_SP_MUL,1,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_MATK_MUL,2,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_SP_MUL,2,bon_NONE] // Mage Shadow Earring + Pendant
 ,[2438,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,10,bon_HP_MUL,5,bon_SP_MUL,5,bon_DEFIGN_RC_NON_BOSS,50,bon_MDEFIGN_RC_NON_BOSS,50,bon_NONE] // Full Mage Shadow Set
 
-,[2439,itm_type_SHADOW_EARRING,0,0,0,0,1,1,0,0,0,0,bon_NONE] // Thief Shadow Earring
-,[2440,itm_type_SHADOW_PENDANT,0,0,0,0,1,1,0,0,0,0,bon_DMG_SKILL + skill_TH_ENVENOM,20,"ev_ref",1,bon_DMG_SKILL + skill_TH_ENVENOM,5,bon_NONE] // Thief Shadow Pendant
+,[2439,itm_type_SHADOW_EARRING,0,0,0,0,1,1,0,0,0,0,"ev_ref",1,bon_HP_ADD,10,bon_NONE] // Thief Shadow Earring
+,[2440,itm_type_SHADOW_PENDANT,0,0,0,0,1,1,0,0,0,0,"ev_ref",1,bon_HP_ADD,10,bon_DMG_SKILL + skill_TH_ENVENOM,20,"ev_ref",1,bon_DMG_SKILL + skill_TH_ENVENOM,5,bon_NONE] // Thief Shadow Pendant
 ,[2441,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_PHY_ATK,1,bon_HP_MUL,1,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_PHY_ATK,2,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_HP_MUL,2,bon_NONE] // Thief Shadow Earring + Pendant
 ,[2442,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,10,bon_HP_MUL,5,bon_SP_MUL,5,bon_DEFIGN_RC_NON_BOSS,50,bon_MDEFIGN_RC_NON_BOSS,50,bon_NONE] // Full Thief Shadow Set
 
-,[2443,itm_type_SHADOW_EARRING,0,0,0,0,1,1,0,0,0,0,bon_NONE] // Archer Shadow Earring
-,[2444,itm_type_SHADOW_PENDANT,0,0,0,0,1,1,0,0,0,0,bon_DMG_SKILL + skill_AR_ARROW_SHOWER,20,"ev_ref",1,bon_DMG_SKILL + skill_AR_ARROW_SHOWER,5,bon_NONE] // Archer Shadow Pendant
+,[2443,itm_type_SHADOW_EARRING,0,0,0,0,1,1,0,0,0,0,"ev_ref",1,bon_HP_ADD,10,bon_NONE] // Archer Shadow Earring
+,[2444,itm_type_SHADOW_PENDANT,0,0,0,0,1,1,0,0,0,0,"ev_ref",1,bon_HP_ADD,10,bon_DMG_SKILL + skill_AR_ARROW_SHOWER,20,"ev_ref",1,bon_DMG_SKILL + skill_AR_ARROW_SHOWER,5,bon_NONE] // Archer Shadow Pendant
 ,[2445,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_PHY_ATK,1,bon_HP_MUL,1,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_PHY_ATK,2,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_HP_MUL,2,bon_NONE] // Archer Shadow Earring + Pendant
 ,[2446,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,10,bon_HP_MUL,5,bon_SP_MUL,5,bon_DEFIGN_RC_NON_BOSS,50,bon_MDEFIGN_RC_NON_BOSS,50,bon_NONE] // Full Archer Shadow Set
 

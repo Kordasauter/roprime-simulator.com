@@ -3418,8 +3418,9 @@ function calcHP()
 	// Additions ---
 	var additiveHP = 0;
 	additiveHP += n_tok[bon_HP_ADD];
-	additiveHP += StPlusCalc2(bon_VIT);
-	additiveHP += StPlusCalc2(bon_ALL_STATS);
+	//doesn't seems to work in prime
+	// additiveHP += StPlusCalc2(bon_VIT);
+	// additiveHP += StPlusCalc2(bon_ALL_STATS);
 
 	if(CardNumSearch(186)) // Remover
 		additiveHP -= 40 * n_A_BODY_DEF_PLUS;
@@ -4369,8 +4370,9 @@ function calcSP( n_A_MaxSP )
 	w=0;
 	
 	w += n_tok[bon_SP_ADD];
-	w += StPlusCalc2(bon_INT);
-	w += StPlusCalc2(bon_ALL_STATS);
+	//doesn't seems to work in prime
+	// w += StPlusCalc2(bon_INT);
+	// w += StPlusCalc2(bon_ALL_STATS);
 
 // Cards
 	if(n_A_JobSearch()==cls_MAG)

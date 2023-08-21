@@ -643,7 +643,9 @@ ench_DMG_SIZ_LARGE = ench_DMG_SIZ_MEDIUM + 30;
 ench_MDMG_SIZ_SMALL = ench_DMG_SIZ_LARGE + 30;
 ench_MDMG_SIZ_MEDIUM = ench_MDMG_SIZ_SMALL + 30;
 ench_MDMG_SIZ_LARGE = ench_MDMG_SIZ_MEDIUM + 30;
-// ench_ = ench_MDMG_SIZ_LARGE + 30;
+ench_DEFIGN_RC_NON_BOSS = ench_MDMG_SIZ_LARGE + 30;
+ench_MDEFIGN_RC_NON_BOSS = ench_DEFIGN_RC_NON_BOSS + 30;
+// ench_ = ench_MDEFIGN_RC_NON_BOSS + 30;
 
 }
 
@@ -761,9 +763,15 @@ ench_SHIELD4=21;
 ench_HEAD_UP2=22;
 ench_HEAD_UP3=23;
 ench_HEAD_UP4=24;
-ench_HSE_Armor=25;
-ench_HSE_Head=26;
-ench_MAX=24;
+ench_S_ARMOR=25;
+ench_S_WEAPON=26;
+ench_S_SHIELD=27;
+ench_S_BOOT=28;
+ench_S_EARRING=29;
+ench_S_PENDANT=30;
+ench_HSE_Armor=31;
+ench_HSE_Head=32;
+ench_MAX=30;
 
 }
 

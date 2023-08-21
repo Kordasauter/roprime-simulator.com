@@ -222,6 +222,13 @@ with ( document.calcForm )
 	n_A_Enchant[ench_HEAD_UP2] = parseInt(formElements["A_HEAD_UPPER_ENCHANT_2"].value);
 	n_A_Enchant[ench_HEAD_UP3] = parseInt(formElements["A_HEAD_UPPER_ENCHANT_3"].value);
 	n_A_Enchant[ench_HEAD_UP4] = parseInt(formElements["A_HEAD_UPPER_ENCHANT_4"].value);
+	n_A_Enchant[ench_S_ARMOR] = parseInt(formElements["A_SHADOW_BODY_ENCHANT"].value);
+	n_A_Enchant[ench_S_WEAPON] = parseInt(formElements["A_SHADOW_WEAPON_ENCHANT"].value);
+	n_A_Enchant[ench_S_SHIELD] = parseInt(formElements["A_SHADOW_SHIELD_ENCHANT"].value);
+	n_A_Enchant[ench_S_BOOT] = parseInt(formElements["A_SHADOW_SHOES_ENCHANT"].value);
+	n_A_Enchant[ench_S_EARRING] = parseInt(formElements["A_SHADOW_EARRING_ENCHANT"].value);
+	n_A_Enchant[ench_S_PENDANT] = parseInt(formElements["A_SHADOW_PENDANT_ENCHANT"].value);
+	
 	// n_A_Enchant[ench_HSE_Armor] = parseInt(formElements["A_HSE"].value);
 	// n_A_Enchant[ench_HSE_Head] = parseInt(formElements["A_HSE_HEAD1"].value);
 	
@@ -3711,6 +3718,13 @@ function Init()
 	formElements["A_HEAD_UPPER_ENCHANT_4"].disabled = true;
 	formElements["A_HEAD_UPPER_ENCHANT_3"].disabled = true;
 	formElements["A_HEAD_UPPER_ENCHANT_2"].disabled = true;
+	
+	formElements["A_SHADOW_BODY_ENCHANT"].disabled = true;
+	formElements["A_SHADOW_WEAPON_ENCHANT"].disabled = true;
+	formElements["A_SHADOW_SHIELD_ENCHANT"].disabled = true;
+	formElements["A_SHADOW_SHOES_ENCHANT"].disabled = true;
+	formElements["A_SHADOW_EARRING_ENCHANT"].disabled = true;
+	formElements["A_SHADOW_PENDANT_ENCHANT"].disabled = true;
 	
 	// -------------------------------------------------
 	

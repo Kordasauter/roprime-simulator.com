@@ -159,6 +159,13 @@ function ChangeJob( n )
 	ClickArmor( 0,0 );
 	ClickAcces( 0,0 );
 	ClickHeadUp( 0,0 );
+	// ClickShadowArmor( 0, 0 );
+	ClickEquip( 0,0,11);
+	ClickEquip( 0,0,12);
+	ClickEquip( 0,0,13);
+	ClickEquip( 0,0,14);
+	ClickEquip( 0,0,15);
+	ClickEquip( 0,0,16);
 
 //	if(n_SaveMode == 0) // new
 //		SetShortCut();
@@ -1015,27 +1022,27 @@ function ClickEquip( data, isRefine, Type )
 			break;
 		case eq_SHADOW_ARMOR ://= 11;
 			eq_ref = n_A_SHADOW_BODY_DEF_PLUS;
-			form_list += "";//TODO
+			form_list += "A_SHADOW_BODY_ENCHANT";//TODO
 			break;
 		case eq_SHADOW_WEAPON ://= 12;
 			eq_ref = n_A_SHADOW_WEAPON_DEF_PLUS;
-			form_list += "";//TODO
+			form_list += "A_SHADOW_WEAPON_ENCHANT";//TODO
 			break;
 		case eq_SHADOW_SHIELD ://= 13;
 			eq_ref = n_A_SHADOW_SHIELD_DEF_PLUS;
-			form_list += "";//TODO
+			form_list += "A_SHADOW_SHIELD_ENCHANT";//TODO
 			break;
 		case eq_SHADOW_SHOES ://= 14;
 			eq_ref = n_A_SHADOW_SHOES_DEF_PLUS;
-			form_list += "";//TODO
+			form_list += "A_SHADOW_SHOES_ENCHANT";//TODO
 			break;
 		case eq_SHADOW_EARRING ://= 15;
 			eq_ref = n_A_SHADOW_EARRING_DEF_PLUS;
-			form_list += "";//TODO
+			form_list += "A_SHADOW_EARRING_ENCHANT";//TODO
 			break;
 		case eq_SHADOW_PENDANT ://= 16;
 			eq_ref = n_A_SHADOW_PENDANT_DEF_PLUS;
-			form_list += "";//TODO
+			form_list += "A_SHADOW_PENDANT_ENCHANT";//TODO
 			break;
 		default : 
 			eq_ref = 0;
@@ -1050,43 +1057,60 @@ function ClickEquip( data, isRefine, Type )
 	{
 		eq_id = data;
 	}
-	
-	if(ItemOBJ[eq_id][itm_ENCH_SLOT_4] != 0 && !isRefine)
+	if(Type < eq_SHADOW_ARMOR)
 	{
-		CleanEnchant("A_SHIELD_ENCHANT");
-		formElements[form_list + "_4"].disabled = false;
-		for ( var i = 0; EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_4]][i] != "NULL" && !isRefine; i++ )
+		if(ItemOBJ[eq_id][itm_ENCH_SLOT_4] != 0 && !isRefine)
 		{
-			formElements[form_list + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_4]][i]][1],EnchantOBJ[EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_4]][i]][0]);
+			CleanEnchant(form_list);
+			formElements[form_list + "_4"].disabled = false;
+			for ( var i = 0; EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_4]][i] != "NULL" && !isRefine; i++ )
+			{
+				formElements[form_list + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_4]][i]][1],EnchantOBJ[EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_4]][i]][0]);
+			}
+		}
+		if(ItemOBJ[eq_id][itm_ENCH_SLOT_3] != 0 && !isRefine)
+		{
+			formElements[form_list + "_3"].disabled = false;
+			for ( var i = 0; EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_3]][i] != "NULL" && !isRefine; i++ )
+			{
+				formElements[form_list + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_3]][i]][1],EnchantOBJ[EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_3]][i]][0]);
+			}
+		}
+		if(ItemOBJ[eq_id][itm_ENCH_SLOT_2] != 0 && !isRefine)
+		{
+			formElements[form_list + "_2"].disabled = false;
+			for ( var i = 0; EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_2]][i] != "NULL" && !isRefine; i++ )
+			{
+				formElements[form_list + "_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_2]][i]][1],EnchantOBJ[EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_2]][i]][0]);
+			}
+		}
+		if(eq_id == 1523  && !isRefine)
+		{// Bible of Promise (1st Vol.)
+			CleanEnchant("A_SHIELD_ENCHANT");
+			SetEnchant("A_SHIELD_ENCHANT",0,50,0);
+		}
+		if(form_list != "")
+		{
+			// refresh selects
+			$("#"+form_list+"_2").trigger("chosen:updated");
+			$("#"+form_list+"_3").trigger("chosen:updated");
+			$("#"+form_list+"_4").trigger("chosen:updated");
 		}
 	}
-	if(ItemOBJ[eq_id][itm_ENCH_SLOT_3] != 0 && !isRefine)
+	else
 	{
-		formElements[form_list + "_3"].disabled = false;
-		for ( var i = 0; EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_3]][i] != "NULL" && !isRefine; i++ )
+		// if(ItemOBJ[eq_id][itm_ENCH_SLOT_4] != 0 && !isRefine)
+		if(!isRefine)
 		{
-			formElements[form_list + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_3]][i]][1],EnchantOBJ[EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_3]][i]][0]);
+			CleanShadowEnchant(form_list);
+			if(ItemOBJ[eq_id][itm_ENCH_SLOT_4] != 0)
+				formElements[form_list].disabled = false;
+			for ( var i = 0; EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_4]][i] != "NULL" && !isRefine; i++ )
+			{
+				formElements[form_list].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_4]][i]][1],EnchantOBJ[EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_4]][i]][0]);
+			}
 		}
-	}
-	if(ItemOBJ[eq_id][itm_ENCH_SLOT_2] != 0 && !isRefine)
-	{
-		formElements[form_list + "_2"].disabled = false;
-		for ( var i = 0; EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_2]][i] != "NULL" && !isRefine; i++ )
-		{
-			formElements[form_list + "_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_2]][i]][1],EnchantOBJ[EnchantListOBJ[ItemOBJ[eq_id][itm_ENCH_SLOT_2]][i]][0]);
-		}
-	}
-	if(eq_id == 1523  && !isRefine)
-	{// Bible of Promise (1st Vol.)
-		CleanEnchant("A_SHIELD_ENCHANT");
-		SetEnchant("A_SHIELD_ENCHANT",0,50,0);
-	}
-	if(form_list != "")
-	{
-		// refresh selects
-		$("#"+form_list+"_2").trigger("chosen:updated");
-		$("#"+form_list+"_3").trigger("chosen:updated");
-		$("#"+form_list+"_4").trigger("chosen:updated");
+		$("#"+form_list).trigger("chosen:updated");
 	}
 
 }
@@ -2871,6 +2895,58 @@ function ClickHeadUp( data, isRefine )
 	$("#A_HEAD_UPPER_ENCHANT_4").trigger("chosen:updated");
 }
 
+function ClickShadowArmor( data, isRefine )
+{
+	//Shadow Armor ID
+	var s_armor_id = ItemOBJ[n_A_Equip[eq_SHADOW_ARMOR]][itm_ID];
+	//Shadow Armor refine level
+	var s_armor_ref = n_A_SHADOW_BODY_DEF_PLUS;
+	if(isRefine)
+	{
+		s_armor_ref = data;
+	}
+	else
+	{
+		s_armor_id = data;
+	}
+
+	if(s_armor_id == 1735)
+	{//Shadow Monk Armor
+		if(!isRefine)
+		{
+				console.log("ClickShadowArmor : " + s_armor_id);
+			CleanShadowEnchant("A_SHADOW_BODY_ENCHANT");
+			let ench_num = 130;
+			for ( var i = 0; EnchantListOBJ[ench_num][i] != "NULL"; i++ )
+			{
+				formElements["A_SHADOW_BODY_ENCHANT"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench_num][i]][1],EnchantOBJ[EnchantListOBJ[ench_num][i]][0]);
+			}
+		}
+		formElements["A_SHADOW_BODY_ENCHANT"].disabled = false;
+	}
+	// else if(s_armor_id == 9999)
+	// {
+		// if(!isRefine)
+		// {
+			// CleanShadowEnchant("A_SHADOW_BODY_ENCHANT");
+			// let ench_num = XXX;
+			// for ( var i = 0; EnchantListOBJ[ench_num][i] != "NULL"; i++ )
+			// {
+				// formElements["A_SHADOW_BODY_ENCHANT"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench_num][i]][1],EnchantOBJ[EnchantListOBJ[ench_num][i]][0]);
+			// }
+		// }
+		// formElements["A_SHADOW_BODY_ENCHANT"].disabled = false;
+	// }
+	else
+	{
+		CleanShadowEnchant("A_SHADOW_BODY_ENCHANT");
+		// CleanEnchant("A_HEAD_UPPER_ENCHANT");
+	}	
+	
+	// refresh selects
+	$("#A_SHADOW_BODY_ENCHANT").trigger("chosen:updated");
+}
+
 //Mora Enchants
 function SetEnchant(formEq,EqRefine,Ench1,Ench2)
 {
@@ -3229,6 +3305,21 @@ function CleanEnchant(formEq)
 	formElements[formEq + "_2"].disabled = true;
 	formElements[formEq + "_3"].disabled = true;
 	formElements[formEq + "_4"].disabled = true;
+	StAllCalc();
+	
+}
+function CleanShadowEnchant(formEq)
+{
+	// console.log("clean enchant" + formEq);
+	//clean enchant list
+	var len = formElements[formEq].length;
+	for ( var i = 0; i < len ; i++ )
+	{
+		formElements[formEq].options[0] = null;
+	}
+	
+	formElements[formEq].options[0] = new Option(EnchantOBJ[EnchantListOBJ[0][0]][1],EnchantOBJ[EnchantListOBJ[0][0]][0]);
+	formElements[formEq].disabled = true;
 	StAllCalc();
 	
 }

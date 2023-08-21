@@ -118,6 +118,26 @@
 								<div class="card-body">
 									<div id="news" class="shadow">
 										<div class="padded">
+											<u><b>21/08/2023:</b></u> 
+											<ul style="margin-left: 5px;">
+												<li><b>Has been added :</b></li>
+												<ul>
+													<li>Enchantments for Shadow Gears</li>
+												</ul>
+												<li><b>Has been fixed :</b></li>
+												<ul>
+													<li>VIT and INT bonuses from gear/Shadow Gears were giving extra HP/SP, not anymore</li>
+													<li>1st Class Shadows now give +10HP per refinement level</li>
+													<li>Acolyte Shadow Set & Magician Shadow Set give +2% SP when set is +10 or higher</li>
+													<li>Shadow Warlock Boots/Armor/Shield renamed to Spellflow Shadow Boots/Armor/Shield</li>
+												</ul>
+												<li><b>Known bug :</b></li>
+												<ul>
+													<li>HP and SP for characters level 175 and above are higher in game than on the simulator<br>I'm working on a HP/SP base closer to what we have in game</li>
+												</ul>
+											</ul>
+										</div>
+										<div class="padded">
 											<u><b>20/08/2023:</b></u> 
 											<ul style="margin-left: 5px;">
 												<li><b>Has been added :</b></li>
@@ -150,9 +170,25 @@
 												</ul>
 											</ul>
 											-Kord
-										</div>		
-										<div class="padded">
-											<u><b>02/08/2023:</b></u> 
+										</div>	
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Older Updates -->
+						<div class="padded_side" style="overflow-x:auto;width: fit-content;max-width:50%;">
+							<div class="card shadow mb-4">
+								<!-- Card Header -->
+								<div
+									class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+									<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Ragnarok Prime Older Updates</span></h6>
+								</div>
+								<!-- Card Body -->
+								<div class="card-body">
+									<div id="old">
+										<u><b>02/08/2023:</b></u> <input class="button" type="button" value="Show/Hide" onclick="javascript:$('#note02082023').toggle()">	
+										<span style="display: none;" id="note02082023">
 											<ul style="margin-left: 5px;">
 												<li><b>Has been added :</b></li>
 												<ul>
@@ -171,23 +207,7 @@
 												</ul>
 											</ul>
 											-Kord
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						<!-- Older Updates -->
-						<div class="padded_side" style="overflow-x:auto;width: fit-content;max-width:50%;">
-							<div class="card shadow mb-4">
-								<!-- Card Header -->
-								<div
-									class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
-									<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Ragnarok Prime Older Updates</span></h6>
-								</div>
-								<!-- Card Body -->
-								<div class="card-body">
-									<div id="old">
+										</span><br>
 										<u><b>27/07/2023:</b></u> <input class="button" type="button" value="Show/Hide" onclick="javascript:$('#note27072023').toggle()">	
 										<span style="display: none;" id="note27072023">
 											<ul style="margin-left: 5px;">
@@ -3688,7 +3708,7 @@
     <script src="js/sb-admin-2.min.js"></script>
 	
 	<script>
-		var version = '35';
+		var version = '36';
 		var jsassets = [
 		'js/menu.js',
 		];

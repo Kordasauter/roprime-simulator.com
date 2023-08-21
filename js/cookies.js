@@ -10,8 +10,9 @@ SaveStr1 = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, //0-9
 			3, 1, 3, 1, 3, 1, 3, 1, 3, 1, //90-99
 			3, 3, 3, 3, 3, 3, 3, 3, 3, 3, //100-109
 			3, 3, 3, 3, 3, 3, 3, 3, 3, 3, //110-119
-			3, 3, 3, 3, 3, 3, 3, 3, 1, 2];//120-129
-maxcookie = 129;
+			3, 3, 3, 3, 3, 3, 3, 3, 1, 2, //120-129
+			3, 3, 3, 3, 3, 3];//130-136
+maxcookie = 136;
 
 // Load from Cookies
 function LoadCookie()
@@ -284,16 +285,22 @@ function LoadCookie()
 	{
 		formElements["A_SHADOW_BODY_DEF_PLUS"].value = SaveData[89];
 		formElements["A_SHADOW_body"].value = SaveData[90];
+		ClickEquip( SaveData[90],0,11);
 		formElements["A_SHADOW_WEAPON_DEF_PLUS"].value = SaveData[91];
 		formElements["A_SHADOW_weapon"].value = SaveData[92];
+		ClickEquip( SaveData[92],0,12);
 		formElements["A_SHADOW_SHIELD_DEF_PLUS"].value = SaveData[93];
 		formElements["A_SHADOW_shield"].value = SaveData[94];
+		ClickEquip( SaveData[94],0,13);
 		formElements["A_SHADOW_SHOES_DEF_PLUS"].value = SaveData[95];
 		formElements["A_SHADOW_shoes"].value = SaveData[96];
+		ClickEquip( SaveData[96],0,14);
 		formElements["A_SHADOW_EARRING_DEF_PLUS"].value = SaveData[97];
 		formElements["A_SHADOW_earring"].value = SaveData[98];
+		ClickEquip( SaveData[98],0,15);
 		formElements["A_SHADOW_PENDANT_DEF_PLUS"].value = SaveData[99];
 		formElements["A_SHADOW_pendant"].value = SaveData[100];
+		ClickEquip( SaveData[100],0,16);
 		
 		if(!isNaN(SaveData[129]))
 		{
@@ -337,6 +344,16 @@ function LoadCookie()
 				formElements["A_Mal_Ench3"].value = 0;
 				formElements["A_Mal_Ench4"].value = 0;
 				//formElements[""].value = 0; // not used yet
+			}
+				//shadow enchant
+			if(!isNaN(SaveData[135]))
+			{
+				formElements["A_SHADOW_BODY_ENCHANT"].value = SaveData[130];
+				formElements["A_SHADOW_WEAPON_ENCHANT"].value = SaveData[131];
+				formElements["A_SHADOW_SHIELD_ENCHANT"].value = SaveData[132];
+				formElements["A_SHADOW_SHOES_ENCHANT"].value = SaveData[133];
+				formElements["A_SHADOW_EARRING_ENCHANT"].value = SaveData[134];
+				formElements["A_SHADOW_PENDANT_ENCHANT"].value = SaveData[135];
 			}
 		}
 	}
@@ -765,7 +782,15 @@ function SaveCookie()
 	}
 	SaveData[128] = PATCH; //Server Patch
 	SaveData[129] = 1; //New enchant format, will be used for echant version.
-	// SaveData[130] = parseInt(formElements[""].value); //free
+	//shadow enchant
+	SaveData[130] = parseInt(formElements["A_SHADOW_BODY_ENCHANT"].value);
+	SaveData[131] = parseInt(formElements["A_SHADOW_WEAPON_ENCHANT"].value);
+	SaveData[132] = parseInt(formElements["A_SHADOW_SHIELD_ENCHANT"].value);
+	SaveData[133] = parseInt(formElements["A_SHADOW_SHOES_ENCHANT"].value);
+	SaveData[134] = parseInt(formElements["A_SHADOW_EARRING_ENCHANT"].value);
+	SaveData[135] = parseInt(formElements["A_SHADOW_PENDANT_ENCHANT"].value);
+	
+	// SaveData[136] = parseInt(formElements[""].value); //free
 	
 	
 	for ( var i = 0; i <= maxcookie; i++ )
@@ -987,7 +1012,15 @@ function URLOUT()
 	// console.log(NtoS2(parseInt(formElements["A_Patch_Num"].value)));
 	// console.log(index);
 	SaveData[index++] = NtoS2(parseInt(formElements["A_Patch_Num"].value),1);  // Server Patch
-	SaveData[index] = NtoS2(1,1); //New enchant format, will be used for echant version.
+	SaveData[index++] = NtoS2(1,1); //New enchant format, will be used for echant version.
+	//Shadow enchants
+	SaveData[index++] = NtoS2( parseInt(formElements["A_SHADOW_BODY_ENCHANT"].value), 3 );
+	SaveData[index++] = NtoS2( parseInt(formElements["A_SHADOW_WEAPON_ENCHANT"].value), 3 );
+	SaveData[index++] = NtoS2( parseInt(formElements["A_SHADOW_SHIELD_ENCHANT"].value), 3 );
+	SaveData[index++] = NtoS2( parseInt(formElements["A_SHADOW_SHOES_ENCHANT"].value), 3 );
+	SaveData[index++] = NtoS2( parseInt(formElements["A_SHADOW_EARRING_ENCHANT"].value), 3 );
+	SaveData[index] = NtoS2( parseInt(formElements["A_SHADOW_PENDANT_ENCHANT"].value), 3 );
+	
 	
 	// Acolyte Buffs
 	
@@ -1335,22 +1368,46 @@ with( document.calcForm )
 		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.E_BOOST_CASTING.value = StoN2(w.substr(index++,1));
 			
 		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_BODY_DEF_PLUS.value = StoN2(w.substr(index++,1));
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_body.value = StoN2(w.substr(index,3));
+		if (!(StoN2(w.substr(index,1))===undefined)) 
+		{
+			document.calcForm.A_SHADOW_body.value = StoN2(w.substr(index,3));
+			ClickEquip( StoN2(w.substr(index,3)),0,11);
+		}
 		index=index + 3;
 		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_WEAPON_DEF_PLUS.value = StoN2(w.substr(index++,1));
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_weapon.value = StoN2(w.substr(index,3));
+		if (!(StoN2(w.substr(index,1))===undefined)) 
+		{
+			document.calcForm.A_SHADOW_weapon.value = StoN2(w.substr(index,3));
+			ClickEquip( StoN2(w.substr(index,3)),0,12);
+		}
 		index=index + 3;
 		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_SHIELD_DEF_PLUS.value = StoN2(w.substr(index++,1));
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_shield.value = StoN2(w.substr(index,3));
+		if (!(StoN2(w.substr(index,1))===undefined)) 
+		{
+			document.calcForm.A_SHADOW_shield.value = StoN2(w.substr(index,3));
+			ClickEquip( StoN2(w.substr(index,3)),0,13);
+		}
 		index=index + 3;
 		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_SHOES_DEF_PLUS.value = StoN2(w.substr(index++,1));
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_shoes.value = StoN2(w.substr(index,3));
+		if (!(StoN2(w.substr(index,1))===undefined)) 
+		{
+			document.calcForm.A_SHADOW_shoes.value = StoN2(w.substr(index,3));
+			ClickEquip( StoN2(w.substr(index,3)),0,14);
+		}
 		index=index + 3;
 		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_EARRING_DEF_PLUS.value = StoN2(w.substr(index++,1));
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_earring.value = StoN2(w.substr(index,3));
+		if (!(StoN2(w.substr(index,1))===undefined)) 
+		{
+			document.calcForm.A_SHADOW_earring.value = StoN2(w.substr(index,3));
+			ClickEquip( StoN2(w.substr(index,3)),0,15);
+		}
 		index=index + 3;
 		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_PENDANT_DEF_PLUS.value = StoN2(w.substr(index++,1));
-		if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_pendant.value = StoN2(w.substr(index,3));
+		if (!(StoN2(w.substr(index,1))===undefined)) 
+		{
+			document.calcForm.A_SHADOW_pendant.value = StoN2(w.substr(index,3));
+			ClickEquip( StoN2(w.substr(index,3)),0,16);
+		}
 		index=index + 3;
 		
 		if (!(StoN2(w.substr(213+max,1,1))===undefined)) 
@@ -1422,7 +1479,25 @@ with( document.calcForm )
 				index=index + 3;
 			}
 		}
-		
+		// Server Patch
+		index++;
+		//New enchant format, will be used for echant version.
+		index++;
+		if (!(StoN2(w.substr(231+max,1,1))===undefined)) 
+		{//Shadow Enchants
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_BODY_ENCHANT.value = StoN2(w.substr(index,3));
+				index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_WEAPON_ENCHANT.value = StoN2(w.substr(index,3));
+				index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_SHIELD_ENCHANT.value = StoN2(w.substr(index,3));
+				index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_SHOES_ENCHANT.value = StoN2(w.substr(index,3));
+				index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_EARRING_ENCHANT.value = StoN2(w.substr(index,3));
+				index=index + 3;
+			if (!(StoN2(w.substr(index,1))===undefined)) document.calcForm.A_SHADOW_PENDANT_ENCHANT.value = StoN2(w.substr(index,3));
+				index=index + 3;
+		}
 		
 		
 		
