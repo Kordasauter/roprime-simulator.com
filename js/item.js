@@ -2513,7 +2513,7 @@
 ,[2430,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,10,bon_HP_MUL,5,bon_SP_MUL,5,bon_DEFIGN_RC_NON_BOSS,50,bon_MDEFIGN_RC_NON_BOSS,50,bon_NONE] // Full Merchant Shadow Set
 
 ,[2431,itm_type_SHADOW_EARRING,0,0,0,0,1,1,0,0,0,0,"ev_ref",1,bon_HP_ADD,10,bon_NONE] // Acolyte Shadow Earring
-,[2432,itm_type_SHADOW_PENDANT,0,0,0,0,1,1,0,0,0,131,"ev_ref",1,bon_HP_ADD,10,bon_DMG_SKILL + skill_AC_HOLY_LIGHT,50,"ev_ref",1,bon_DMG_SKILL + skill_AC_HOLY_LIGHT,10,bon_NONE] // Acolyte Shadow Pendant
+,[2432,itm_type_SHADOW_PENDANT,0,0,0,0,1,1,0,0,0,0,"ev_ref",1,bon_HP_ADD,10,bon_DMG_SKILL + skill_AC_HOLY_LIGHT,50,"ev_ref",1,bon_DMG_SKILL + skill_AC_HOLY_LIGHT,10,bon_NONE] // Acolyte Shadow Pendant
 ,[2433,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK_MUL,1,bon_SP_MUL,1,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_MATK_MUL,2,"set_sum" + (fl_SHADOW_EARRING+fl_SHADOW_PENDANT),10,bon_SP_MUL,2,bon_NONE] // Acolyte Shadow Earring + Pendant
 ,[2434,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,10,bon_HP_MUL,5,bon_SP_MUL,5,bon_DEFIGN_RC_NON_BOSS,50,bon_MDEFIGN_RC_NON_BOSS,50,bon_NONE] // Full Acolyte Shadow Set
 
