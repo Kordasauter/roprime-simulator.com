@@ -1059,6 +1059,8 @@ var status_en_buff_Ranged = 12;
 var status_en_buff_Size = 13;
 var status_en_buff_Normal = 14;
 var status_en_buff_Other = 15;
+var status_en_buff_Green_Aura = 16;
+
 }
 
 { // Skills - SkillSearch(%) - n_A_ActiveSkill = %

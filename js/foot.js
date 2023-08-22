@@ -3738,7 +3738,8 @@ function Init()
 		{
 			myInnerHtml( "nm0" + i, GetWord(i), 0 );
 		}
-		
+		myInnerHtml( "nm067", GetWord(276), 0 );
+		myInnerHtml( "nm068", GetWord(277), 0 );
 		for ( var i = 0; i < EXTENDED_INFO_NAME.length; i++ )
 		{ // ExtendedInfoList
 			formElements["ExtendedInfo"].options[i] = new Option( EXTENDED_INFO_NAME[i][1 + Language], EXTENDED_INFO_NAME[i][0] );

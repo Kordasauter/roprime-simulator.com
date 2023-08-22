@@ -336,6 +336,8 @@ WordData = [
 ,["","Increases magic damage to "]
 ,["","Increases "]
 ,["","Normal"]//275
+,["","Green Aura"]
+,["","Monster Type"]
 // ,["","xxx"]
 ];
 }

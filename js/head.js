@@ -1886,6 +1886,12 @@ function tPlusDamCut( damage )
 	if ( monsterBuffs[status_en_buff_Other] ) {
 		damage -= Math.floor( damage * monsterBuffs[status_en_buff_Other] / 100 );
 	}
+	
+	//Green Aura MVP
+	if ( monsterBuffs[status_en_buff_Green_Aura] ) {
+		damage -= Math.floor( damage * 90 / 100 );
+	}
+	
 	if ( n_B[en_BOSS] === 5 )
 	{
 		damage = 1;

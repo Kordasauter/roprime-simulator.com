@@ -1,5 +1,6 @@
 function BuildEnemyData()
 { // calc enemy (stats + substats) + display
+
 with( document.calcForm )
 {
 	var formElements = document.forms["calcForm"].elements;
@@ -78,6 +79,7 @@ with( document.calcForm )
 		monsterBuffs[status_en_buff_Size] = eval(B_KYOUKA13.value);
 		monsterBuffs[status_en_buff_Normal] = eval(B_KYOUKA14.value);
 		monsterBuffs[status_en_buff_Other] = eval(B_KYOUKA15.value);
+		monsterBuffs[status_en_buff_Green_Aura] = B_GRENEAURA.checked;
 	}
 	
 	if (monsterBuffs[status_en_buff_ElementalChange] )
@@ -614,6 +616,10 @@ with( document.calcForm )
 			myInnerHtml( "B_3", (ZokuseiOBJ[w][Language] + " " + n_B[en_ELEMENT] % 10 ), 0 ); // Ele
 		}
 		myInnerHtml("B_4",SizeOBJ[n_B[en_SIZE]][Language],0); // DispSize
+		if(n_B[en_BOSS] == 1)
+			myInnerHtml("MonsterType","MVP",0); // DispType
+		else
+			myInnerHtml("MonsterType","Normal",0); // DispType
 	}
 
 	n_B_DEF2 = [0,0,0];
