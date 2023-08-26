@@ -1154,9 +1154,9 @@ function CalcMagicDamage( rawDamage )
 	{
 		for(var i = 0 ; i < 3 ; i++)
 		{
-			if ( n_tok[bon_IGN_MDEF_SIZ_SMALL + i] > 0 &&  n_B[en_SIZE]==(siz_SMALL + i))
+			if ( n_tok[bon_MDEFIGN_SIZ_SMALL + i] > 0 &&  n_B[en_SIZE]==(siz_SMALL + i))
 			{
-				wBMC_MDEF = wBMC_MDEF - (wBMC_MDEF * (n_tok[bon_IGN_MDEF_SIZ_SMALL + i] / 100) );
+				wBMC_MDEF = wBMC_MDEF - (wBMC_MDEF * (n_tok[bon_MDEFIGN_SIZ_SMALL + i] / 100) );
 			}
 		}
 		wBMC2 = Math.floor( rawDamage * mdefReduction( wBMC_MDEF ) - n_B_MDEF2 );

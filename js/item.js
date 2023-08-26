@@ -2285,7 +2285,7 @@
 ,[2239,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_VIT,5,bon_RED_ELE_NEUTRAL,10,bon_RED_ELE_FIRE,10,bon_RED_ELE_SHADOW,10,bon_NONE] // Consultation Robe [1] + Valkyrie Manteau
 
 //Werner Laboratory Central Room,0,0,0,0,
-,[2240,itm_type_SHIELD,0,50,0,1,10,100,0,0,0,0,bon_ASPD_MUL,5,bon_RED_ELE_NEUTRAL,5,bon_IGN_DEF_SIZ_MEDIUM,10,bon_NONE] // Ultralight Magic Shield [1]
+,[2240,itm_type_SHIELD,0,50,0,1,10,100,0,0,0,0,bon_ASPD_MUL,5,bon_RED_ELE_NEUTRAL,5,bon_DEFIGN_RC_NON_BOSS,10,bon_NONE] // Ultralight Magic Shield [1]
 
 //Heart Hunter War Base 1,0,0,0,0,
 ,[2241,weapTyp_HANDGUN,222,150,3,2,180,120,0,0,0,0,bon_ASPD_MUL,10,bon_NONE] // Dark Rose [2]
@@ -2673,7 +2673,7 @@
 ,[2576,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RED_CAST,-5,bon_NONE]//Lava Leather Hood + Sandles
 
 ,[2577,itm_type_HEAD_MIDDLE,0,3,0,0,50,50,0,0,0,0,bon_HIT,10,bon_CH_GUIDE_ATK,5,bon_RED_CASTDELAY,5,bon_NONE]//Bio Protector
-,[2578,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RED_CASTDELAY,10,bon_NONE]//Bio Protector + Pipe
+,[2578,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RED_CASTDELAY,5,bon_NONE]//Bio Protector + Pipe
 //Need more work
 ,[2579,itm_type_UNOBTAINABLE,0,0,0,0,0,0,0,0,0,0,bon_NONE]//Arch Bishop Ring
 ,[2580,itm_type_UNOBTAINABLE,0,0,0,0,0,0,0,0,0,0,bon_NONE]//Hibram's Gloves
@@ -2953,27 +2953,27 @@ function BuildItemDescription( bonusType, bonusValue )
 		else*/
 			CBIstr += "["+ SKILL_NAME[bonusType -bon_DELAY_SKILL_FLAT][Language] +"] Cooldown "+ (-1 * bonusValue) +"sec<br/>";
 	}
-	if(bonusType  == bon_IGN_DEF_SIZ_SMALL)
+	if(bonusType  == bon_DEFIGN_SIZ_SMALL)
 	{
 		CBIstr += "Ignores " + bonusValue + "% of physical defense rate of small size enemies<br>";
 	}
-	if(bonusType  == bon_IGN_DEF_SIZ_MEDIUM)
+	if(bonusType  == bon_DEFIGN_SIZ_MEDIUM)
 	{
 		CBIstr += "Ignores " + bonusValue + "% of physical defense rate of medium size enemies<br>";
 	}
-	if(bonusType  == bon_IGN_DEF_SIZ_LARGE)
+	if(bonusType  == bon_DEFIGN_SIZ_LARGE)
 	{
 		CBIstr += "Ignores " + bonusValue + "% of physical defense rate of large size enemies<br>";
 	}
-	if(bonusType  == bon_IGN_MDEF_SIZ_SMALL)
+	if(bonusType  == bon_MDEFIGN_SIZ_SMALL)
 	{
 		CBIstr += "Ignores " + bonusValue + "% of magical defense rate of small size enemies<br>";
 	}
-	if(bonusType  == bon_IGN_MDEF_SIZ_MEDIUM)
+	if(bonusType  == bon_MDEFIGN_SIZ_MEDIUM)
 	{
 		CBIstr += "Ignores " + bonusValue + "% of magical defense rate of medium size enemies<br>";
 	}
-	if(bonusType  == bon_IGN_MDEF_SIZ_LARGE)
+	if(bonusType  == bon_MDEFIGN_SIZ_LARGE)
 	{
 		CBIstr += "Ignores " + bonusValue + "% of magical defense rate of large size enemies<br>";
 	}
@@ -2991,7 +2991,7 @@ function BuildItemDescription( bonusType, bonusValue )
 	}
 	if(bonusType  == bon_MDEFIGN_RC_BOSS)
 	{
-		CBIstr += "On [Boss] monsters<br>Ignores " + bonusValue + "% of target's DEF.<br>";
+		CBIstr += "On [Boss] monsters<br>Ignores " + bonusValue + "% of target's MDEF.<br>";
 	}
 	if(bonusType  == bon_DEFIGN_RC_NON_BOSS)
 	{

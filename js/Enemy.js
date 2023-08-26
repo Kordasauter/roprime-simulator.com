@@ -1,5 +1,8 @@
 function BuildEnemyData()
-{ // calc enemy (stats + substats) + display
+{ 
+// calc enemy (stats + substats) + display
+ClearBonuses();
+CalcIgnDef();
 
 with( document.calcForm )
 {
@@ -304,7 +307,15 @@ with( document.calcForm )
 	// DEF--------------------------------
 	var w = 0; // Def
 	w += n_tok[bon_DEFIGN_RC_ALL];
-	w += n_tok[300+n_B[en_RACE]]; // Race
+	w += n_tok[300+n_B[en_RACE]]; // Race		
+	if ( n_B[en_BOSS] == 1 )
+	{
+		w += n_tok[bon_DEFIGN_RC_BOSS];
+	}
+	if ( n_B[en_BOSS] == 0 )
+	{
+		w += n_tok[bon_DEFIGN_RC_NON_BOSS];
+	}	
 	// RSmiting / ShieldBoom / ShieldBoom(SL) / GCross / OImpact / FinalStrike / FinalStrike(MHP)
 	// DefIgnore ?
 	if ( n_A_ActiveSkill==324 || n_A_ActiveSkill==159 || n_A_ActiveSkill==384 || n_A_ActiveSkill==162 || n_A_ActiveSkill==193 || n_A_ActiveSkill==405 || n_A_ActiveSkill==438)
@@ -394,7 +405,33 @@ with( document.calcForm )
 	if(n_B[en_HARDDEF] < 0)
 		n_B[en_HARDDEF] = 0; // Def
 	
-	
+	let DefReduc = w;
+	// let DefReduc = 0;
+	// Gears
+	/*DefReduc += StPlusCalc2(bon_DEFIGN_RC_ALL);
+	DefReduc += StPlusCalc2(bon_DEFIGN_SIZ_SMALL + n_B[en_SIZE]);
+	DefReduc += StPlusCalc2(bon_DEFIGN_RC_FORMLESS + n_B[en_RACE]);
+	if(n_B[en_BOSS] === 0)
+		DefReduc += StPlusCalc2(bon_DEFIGN_RC_NON_BOSS);
+	else
+		DefReduc += StPlusCalc2(bon_DEFIGN_RC_BOSS);
+	// Cards
+	DefReduc += StPlusCard(bon_DEFIGN_RC_ALL);
+	DefReduc += StPlusCard(bon_DEFIGN_SIZ_SMALL + n_B[en_SIZE]);
+	DefReduc += StPlusCard(bon_DEFIGN_RC_FORMLESS + n_B[en_RACE]);
+	if(n_B[en_BOSS] === 0)
+		DefReduc += StPlusCard(bon_DEFIGN_RC_NON_BOSS);
+	else
+		DefReduc += StPlusCard(bon_DEFIGN_RC_BOSS);
+	// Enchants
+	DefReduc += StPlusEnchant(bon_DEFIGN_RC_ALL);
+	DefReduc += StPlusEnchant(bon_DEFIGN_SIZ_SMALL + n_B[en_SIZE]);
+	DefReduc += StPlusEnchant(bon_DEFIGN_RC_FORMLESS + n_B[en_RACE]);
+	if(n_B[en_BOSS] === 0)
+		DefReduc += StPlusEnchant(bon_DEFIGN_RC_NON_BOSS);
+	else
+		DefReduc += StPlusEnchant(bon_DEFIGN_RC_BOSS);	*/
+		
 	// MDEF-------------------------------------------------
 	var w = 0; // MDef
 	w += n_tok[bon_MDEFIGN_RC_ALL];
@@ -453,6 +490,33 @@ with( document.calcForm )
 	}
 	if(n_B[en_HARDMDEF] < 0)
 		n_B[en_HARDMDEF] = 0; // Mdef
+	
+	let MdefReduc = w;
+	// let MdefReduc = 0;
+	//Gears
+	/*MdefReduc += StPlusCalc2(bon_MDEFIGN_RC_ALL);
+	MdefReduc += StPlusCalc2(bon_MDEFIGN_SIZ_SMALL + n_B[en_SIZE]);
+	MdefReduc += StPlusCalc2(bon_MDEFIGN_RC_FORMLESS + n_B[en_RACE]);
+	if(n_B[en_BOSS] === 0)
+		MdefReduc += StPlusCalc2(bon_MDEFIGN_RC_NON_BOSS);
+	else
+		MdefReduc += StPlusCalc2(bon_MDEFIGN_RC_BOSS);
+	//Cards
+	MdefReduc += StPlusCard(bon_MDEFIGN_RC_ALL);
+	MdefReduc += StPlusCard(bon_MDEFIGN_SIZ_SMALL + n_B[en_SIZE]);
+	MdefReduc += StPlusCard(bon_MDEFIGN_RC_FORMLESS + n_B[en_RACE]);
+	if(n_B[en_BOSS] === 0)
+		MdefReduc += StPlusCard(bon_MDEFIGN_RC_NON_BOSS);
+	else
+		MdefReduc += StPlusCard(bon_MDEFIGN_RC_BOSS);
+	//Enchants
+	MdefReduc += StPlusEnchant(bon_MDEFIGN_RC_ALL);
+	MdefReduc += StPlusEnchant(bon_MDEFIGN_SIZ_SMALL + n_B[en_SIZE]);
+	MdefReduc += StPlusEnchant(bon_MDEFIGN_RC_FORMLESS + n_B[en_RACE]);
+	if(n_B[en_BOSS] === 0)
+		MdefReduc += StPlusEnchant(bon_MDEFIGN_RC_NON_BOSS);
+	else
+		MdefReduc += StPlusEnchant(bon_MDEFIGN_RC_BOSS);	*/
 	
 	// HIT & FLEE--------------------------------------------------
 	if ( n_B[en_BOSS] === 0 )
@@ -580,6 +644,12 @@ with( document.calcForm )
 		var wFront = "<Font color='BLUE'><B>";
 		var wFront2 = "<Font color='RED'><B>";
 		var wBack = "</B></Font>";
+		
+		Math.min(DefReduc,100);
+		Math.max(DefReduc,0);
+		
+		Math.min(MdefReduc,100);
+		Math.max(MdefReduc,0);
 
 		for ( var i = 0; i <= 9; i++ )
 		{ // DispStats
@@ -588,7 +658,12 @@ with( document.calcForm )
 				wIJstr =  wFront + n_B[wIJ[i]] + wBack;
 			if(n_B[wIJ[i]] > n_B2[wIJ[i]]) // if worse - red
 				wIJstr =  wFront2 + n_B[wIJ[i]] + wBack;
-			myInnerHtml("B_"+wIJ[i],wIJstr,0);
+			if(i != 5 && i != 6)
+				myInnerHtml("B_"+wIJ[i],wIJstr,0);
+			else if( i == 5)
+				myInnerHtml("B_"+wIJ[i],wIJstr + " (" + DefReduc + "% DEF Ignored)",0);
+			else if( i == 6)
+				myInnerHtml("B_"+wIJ[i],wIJstr + " (" + MdefReduc + "% MDEF Ignored)",0);
 		}
 		if (1)
 		{ // SoftDef (Min) / SoftDef (Max)
@@ -630,4 +705,194 @@ with( document.calcForm )
 	n_B_HIT = n_B[en_HIT]; // Hit
 	n_B_FLEE = n_B[en_FLEE]; // Flee
 }
+}
+
+
+function CalcIgnDef()
+{	
+//Physic
+	for(var i = 0 ; i < 6 ; i++)
+	{
+		if ( EquipNumSearch( 2037 + i ) && i != 3)
+		{//Armor of Sixtus (all)
+			if(n_A_BODY_DEF_PLUS >= 7)
+			{
+				n_tok[bon_DEFIGN_RC_BRUTE] += 30;
+				n_tok[bon_DEFIGN_RC_DEMON] += 30;
+			}
+			if(n_A_BODY_DEF_PLUS >= 9)
+			{
+				n_tok[bon_DMG_RC_BRUTE] += 30;
+				n_tok[bon_DMG_RC_DEMON] += 30;
+			}
+		}
+		if ( EquipNumSearch( 2043 + i ) && i != 3)
+		{//Armor of Sixtus Set (all)
+			if((n_A_BODY_DEF_PLUS + n_A_SHOES_DEF_PLUS) >= 21)
+			{
+				n_tok[bon_DEFIGN_RC_BRUTE] += 20;
+				n_tok[bon_DEFIGN_RC_DEMON] += 20;
+			}
+		}
+	}
+	if ( EquipNumSearch( 1080 ) && n_A_Weapon_ATKplus >= 6 )
+	{ // Glorious Claymore
+		n_tok[bon_DEFIGN_RC_DEMI_HUMAN] += 5;
+	}
+	if( n_A_Equip[1] == 1076 && n_A_Weapon2_ATKplus >= 6 )
+	{ // glorious gladius
+		n_tok[bon_DEFIGN_RC_DEMI_HUMAN] += 5;
+	}
+	if( n_A_Equip[1] == 1077 && n_A_Weapon2_ATKplus >= 6 )
+	{ // glorious flamberge
+		n_tok[bon_DEFIGN_RC_DEMI_HUMAN] += 5;
+	}
+	if( 1076 <= n_A_Equip[0] && n_A_Equip[0] <= 1103 )
+	{
+		// Glorious Weapon Def Ignore
+		if ( n_A_Weapon_ATKplus >= 6 )
+		{
+			if( n_A_Equip[0] !== 1078 &&
+				n_A_Equip[0] !== 1079 &&
+				n_A_Equip[0] !== 1080 &&
+				n_A_Equip[0] !== 1083 &&
+				n_A_Equip[0] !== 1084 &&
+				n_A_Equip[0] !== 1085 &&
+				n_A_Equip[0] !== 1091 &&
+				n_A_Equip[0] !== 1095 )
+			{
+				n_tok[bon_DEFIGN_RC_DEMI_HUMAN] += 5;
+			}
+		}
+	}
+		if ( acolyteBuffs[ksExpiatio] )
+	{ // expiatio
+		n_tok[bon_DEFIGN_RC_FORMLESS] += acolyteBuffs[ksExpiatio] * 5;
+		n_tok[bon_DEFIGN_RC_UNDEAD] += acolyteBuffs[ksExpiatio] * 5;
+		n_tok[bon_DEFIGN_RC_BRUTE] += acolyteBuffs[ksExpiatio] * 5;
+		n_tok[bon_DEFIGN_RC_PLANT] += acolyteBuffs[ksExpiatio] * 5;
+		n_tok[bon_DEFIGN_RC_INSECT] += acolyteBuffs[ksExpiatio] * 5;
+		n_tok[bon_DEFIGN_RC_FISH] += acolyteBuffs[ksExpiatio] * 5;
+		n_tok[bon_DEFIGN_RC_DEMON] += acolyteBuffs[ksExpiatio] * 5;
+		n_tok[bon_DEFIGN_RC_DEMI_HUMAN] += acolyteBuffs[ksExpiatio] * 5;
+		n_tok[bon_DEFIGN_RC_ANGEL] += acolyteBuffs[ksExpiatio] * 5;
+		n_tok[bon_DEFIGN_RC_DRAGON] += acolyteBuffs[ksExpiatio] * 5;
+		if(PATCH >= 1)
+		{
+			n_tok[bon_MDEFIGN_RC_ALL] += acolyteBuffs[ksExpiatio] * 5;
+		}
+	}
+	if ( EquipNumSearch(1822) )
+	{ // Shadow Ninja Shield
+		n_tok[bon_DEFIGN_RC_ALL] += n_A_SHADOW_SHIELD_DEF_PLUS * 4;
+		if (n_A_SHADOW_SHIELD_DEF_PLUS >= 7) { n_tok[bon_DEFIGN_RC_ALL] += 10;}
+		if (n_A_SHADOW_SHIELD_DEF_PLUS >= 9) { n_tok[bon_DEFIGN_RC_ALL] += 10;}
+	}
+		if ( EquipNumSearch(1823) )
+	{ // Shadow Taekwon  Shield
+		n_tok[bon_DEFIGN_RC_ALL] += SkillSearch(skill_TK_PEACEFUL_BREAK) * 3;
+		n_tok[bon_DEFIGN_RC_ALL] += n_A_SHADOW_SHIELD_DEF_PLUS * 3;
+	}
+	if ( EquipNumSearch(1841) )
+	{ // Shadow Super Novice Gloves
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9){n_tok[bon_DEFIGN_RC_ALL] += SkillSearch(skill_SW_SWORD_MASTERY) * 3;}
+		n_tok[bon_DEFIGN_RC_ALL] += n_A_SHADOW_WEAPON_DEF_PLUS * 3;
+	}
+	if ( EquipNumSearch(1842) )
+	{ // Shadow Gunslinger Gloves
+
+		if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9){n_tok[bon_DEFIGN_RC_ALL] += SkillSearch(skill_GS_SNAKE_EYES) * 3;}
+		n_tok[bon_DEFIGN_RC_ALL] += n_A_SHADOW_WEAPON_DEF_PLUS * 3;
+	}
+	if ( n_B[en_BOSS] == 1 && EquipNumSearch(1228) )
+	{ // Southern Cross headgear?
+		if(n_A_HEAD_DEF_PLUS >= 6)
+			n_tok[bon_DEFIGN_RC_BOSS] += (n_A_HEAD_DEF_PLUS - 5);
+	}
+//Magic
+	if ( acolyteBuffs[ksExpiatio] )
+	{ // expiatio
+		if(PATCH >= 1)
+		{
+			n_tok[bon_MDEFIGN_RC_ALL] += acolyteBuffs[ksExpiatio] * 5;
+		}
+	}
+	if ( EquipNumSearch(645) )
+	{ // Piercing Staff
+		n_tok[bon_MDEFIGN_RC_ALL] += 10 + n_A_Weapon_ATKplus;
+	}
+	if ( EquipNumSearch( 2046 ) )
+	{//Armor of Sixtus Wise Set (INT)
+		if((n_A_BODY_DEF_PLUS + n_A_SHOES_DEF_PLUS) >= 21)
+		{//Ign_MDEF += 20;
+			n_tok[bon_MDEFIGN_RC_BRUTE] += 20;
+			n_tok[bon_MDEFIGN_RC_DEMON] += 20;
+		}
+	}
+	if(EquipNumSearch(2142) || 
+	   EquipNumSearch(2143) || 
+	   EquipNumSearch(2144) || 
+	   // EquipNumSearch(2145) || //
+	   EquipNumSearch(2146) || 
+	   EquipNumSearch(2147) ) 
+	{//Chronocloak (all)
+		if(n_A_SHOULDER_DEF_PLUS >= 9)
+		{// Ign_MDEF += 20;
+			n_tok[bon_MDEFIGN_RC_BRUTE] += 20;
+			n_tok[bon_MDEFIGN_RC_DEMON] += 20;
+		}
+		if(n_A_SHOULDER_DEF_PLUS >= 11)
+		{//Ign_MDEF += 10;
+			n_tok[bon_MDEFIGN_RC_BRUTE] += 10;
+			n_tok[bon_MDEFIGN_RC_DEMON] += 10;
+		}
+	}
+	if(EquipNumSearch(2148) || 
+	   EquipNumSearch(2149) || 
+	   EquipNumSearch(2150) || 
+	   EquipNumSearch(2151) || 
+	   EquipNumSearch(2152) || 
+	   EquipNumSearch(2153) ) 
+	{//Chronocloak (all)
+		if(n_A_SHOES_DEF_PLUS >= 10)
+		{//Ign_MDEF += 30;
+			n_tok[bon_MDEFIGN_RC_BRUTE] += 30;
+			n_tok[bon_MDEFIGN_RC_DEMON] += 30;
+		}
+	}
+	if ( n_A_WeaponType === weapTyp_STAFF )
+	{ // necromancer card
+		n_tok[bon_MDEFIGN_RC_ALL] += 2 * CardNumSearch(card_WEPN_NECROMANCER);
+	}
+	if ( EquipNumSearch(936) )
+	{ // Thorn Staff of Darkness
+		n_tok[bon_MDEFIGN_RC_ALL] += n_A_Weapon_ATKplus * 1;
+	}
+	if ( EquipNumSearch(1822) )
+	{ // Shadow Ninja Shield
+		n_tok[bon_MDEFIGN_RC_ALL] += n_A_SHADOW_SHIELD_DEF_PLUS * 4;
+		if (n_A_SHADOW_SHIELD_DEF_PLUS >= 7) { n_tok[bon_MDEFIGN_RC_ALL] += 10;}
+		if (n_A_SHADOW_SHIELD_DEF_PLUS >= 9) { n_tok[bon_MDEFIGN_RC_ALL] += 10;}
+	}
+	if ( EquipNumSearch(1823) )
+	{ // Shadow Taekwon  Shield
+		n_tok[bon_MDEFIGN_RC_ALL] += SkillSearch(skill_TK_HAPPY_BREAK) * 3;
+		n_tok[bon_MDEFIGN_RC_ALL] += n_A_SHADOW_SHIELD_DEF_PLUS * 3;
+	}
+		if ( EquipNumSearch(1841) )
+	{ // Shadow Super Novice Gloves
+		for(var i = 310 ; i<=319 ; i++)
+		{
+			if(n_A_SHADOW_WEAPON_DEF_PLUS >= 9){n_tok[i] += SkillSearch(skill_MA_INCREASED_SP_RECOVERY) * 3;}
+			n_tok[i] += n_A_SHADOW_WEAPON_DEF_PLUS * 3;
+		}
+	}
+	if ( EquipNumSearch(1083) && n_A_Weapon_ATKplus >= 6 )
+	{ // glorious destruction staff
+		n_tok[bon_MDEFIGN_RC_DEMI_HUMAN] += Math.min(20, 2*(n_A_Weapon_ATKplus-5));
+	}
+	if ( (EquipNumSearch(1084) || EquipNumSearch(1085) || EquipNumSearch(1095)) && n_A_Weapon_ATKplus >= 6 )
+	{ // glorious staffs
+		n_tok[bon_MDEFIGN_RC_DEMI_HUMAN] += 5;
+	}
 }

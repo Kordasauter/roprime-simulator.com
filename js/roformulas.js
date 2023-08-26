@@ -1641,30 +1641,7 @@ function CalcRacialMod()
 			n_tok[bon_DMG_RC_BRUTE] += 20;
 		}
 	}
-	for(var i = 0 ; i < 6 ; i++)
-	{
-		if ( EquipNumSearch( 2037 + i ) && i != 3)
-		{//Armor of Sixtus (all)
-			if(n_A_BODY_DEF_PLUS >= 7)
-			{
-				n_tok[bon_DEFIGN_RC_BRUTE] += 30;
-				n_tok[bon_DEFIGN_RC_DEMON] += 30;
-			}
-			if(n_A_BODY_DEF_PLUS >= 9)
-			{
-				n_tok[bon_DMG_RC_BRUTE] += 30;
-				n_tok[bon_DMG_RC_DEMON] += 30;
-			}
-		}
-		if ( EquipNumSearch( 2043 + i ) && i != 3)
-		{//Armor of Sixtus Set (all)
-			if((n_A_BODY_DEF_PLUS + n_A_SHOES_DEF_PLUS) >= 21)
-			{
-				n_tok[bon_DEFIGN_RC_BRUTE] += 20;
-				n_tok[bon_DEFIGN_RC_DEMON] += 20;
-			}
-		}
-	}
+
 	if( EquipNumSearch(2305) || //Guillotine Cross set
 		EquipNumSearch(2307) || //Ranger set
 		EquipNumSearch(2313) )  //Wanderer Set

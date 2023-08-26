@@ -535,9 +535,9 @@ function ApplyEnemyDefense( damage, index, wBC4_3 )
 	
 	for(var i = 0 ; i < 3 ; i++)
 	{
-		if ( n_tok[bon_IGN_DEF_SIZ_SMALL + i] > 0 &&  n_B[en_SIZE]==(siz_SMALL + i))
+		if ( n_tok[bon_DEFIGN_SIZ_SMALL + i] > 0 &&  n_B[en_SIZE]==(siz_SMALL + i))
 		{
-			return Math.floor( damage * defReduction( n_B[en_HARDDEF] - (n_B[en_HARDDEF] * (n_tok[bon_IGN_DEF_SIZ_SMALL + i] / 100) ) ) ) - n_B_DEF2[0] + wBC4_3;
+			return Math.floor( damage * defReduction( n_B[en_HARDDEF] - (n_B[en_HARDDEF] * (n_tok[bon_DEFIGN_SIZ_SMALL + i] / 100) ) ) ) - n_B_DEF2[0] + wBC4_3;
 		}
 	}
 	if ( n_tok[bon_ICE_PICK] === 0 || n_A_ActiveSkill == skill_KAG_THROW_EXPLOSIVE_KUNAI)
@@ -1384,8 +1384,6 @@ function ApplySkillModifiers( damage )
 	
 	if(n_A_ActiveSkill == skill_RUN_IGNITION_BREAK)
 	{
-		console.log("avant");
-		console.log(dmgMultiplier);
 		if(ItemOBJ[n_A_Equip[eq_WEAPON]][itm_WLVL] == 4)
 			dmgMultiplier += 20 * CardNumSearch( 737 ); //True Seyren Windsor
 		if(n_A_Weapon_ATKplus >= 10)
@@ -1394,8 +1392,6 @@ function ApplySkillModifiers( damage )
 		{// Old Rune Circlet [1]
 			dmgMultiplier += 20 * Math.floor(n_A_HEAD_DEF_PLUS / 2);
 		}
-		console.log("après");
-		console.log(dmgMultiplier);
 	}
 	
 	if(n_A_ActiveSkill == skill_RAN_CLUSTER_BOMB)
@@ -1592,8 +1588,6 @@ function ApplySkillModifiers( damage )
 				dmgMultiplier += 10;
 		}
 	}
-	if(n_A_ActiveSkill == skill_SUM_PICKY_PECK)
-		console.log(StPlusCalc2(bon_DMG_SKILL+n_A_ActiveSkill) + dmgMultiplier);
 	damage = damage * (100+StPlusCalc2(bon_DMG_SKILL+n_A_ActiveSkill)+StPlusCard(bon_DMG_SKILL+n_A_ActiveSkill) + dmgMultiplier) /100;
 	
 	/* 
