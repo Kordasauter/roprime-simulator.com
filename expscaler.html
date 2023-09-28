@@ -40,14 +40,6 @@
 	<script type="text/javascript" src="js/events.js"></script>
 	<script type="text/javascript" src="js/cookies.js"></script>
 	
-	<!-- Cookie Consent by PrivacyPolicies.com https://www.PrivacyPolicies.com -->
-	<script type="text/javascript" src="https://www.privacypolicies.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
-	<script type="text/javascript" charset="UTF-8">
-	document.addEventListener('DOMContentLoaded', function () {
-	cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palette":"light","language":"en","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"Ragnarok Prime Simulator"});
-	});
-	</script>
-
 	<!-- AdSense -->
 	<script type="text/plain" data-cookie-consent="targeting" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6824539470557939" 
 		  crossorigin="anonymous"></script>
@@ -64,8 +56,7 @@
 			</script>
 	<!-- end of Analytics-->
 
-	<noscript>Cookie Consent by <a href="https://www.privacypolicies.com/" rel="noopener">Privacy Policies website</a></noscript>
-	<!-- End Cookie Consent by PrivacyPolicies.com https://www.PrivacyPolicies.com -->
+	
 	
 </head>
 
@@ -374,7 +365,7 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 	<script>
-		var version = '39';;
+		var version = '40';
 		var jsassets = [
 		'js/menu.js',
 		];
@@ -395,10 +386,6 @@
 				$("select").chosen({no_results_text: "Oops, nothing found!"}); 
 			});
 			
-			//hide policy window on dev
-			if(window.location.href.match('C:')) 
-				$('.privacypolicies-com---reset').hide();
-		
 		 	<!-- $(".card" ).draggable(); -->
 		});
 		$(":button").on('mousedown',function() {

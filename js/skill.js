@@ -1353,6 +1353,7 @@ JobSkillActiveOBJ = [
 ,[71,0,283,4] // Gloria Domini 4
 ,[72,0,277,4] // Napalm Vulcan 4
 ,[73,0,295,1] // Indulge 4
+,[74,1, 13,4] // Double Attack 4
 ];
 }
 
@@ -1524,6 +1525,7 @@ JobSkillActiveOBJ = [
 ,[164,1,125, 5,20, 1] // Meteor Storm 5 (20%)
 ,[165,1,541, 3, 2, 1] // Hell Inferno Lv. 3
 ,[166,1,541, 5, 0, 1] // Hell Inferno Lv. 5
+,[167,1,436, 6, 0, 1] // Spread Shot Lv. 6
 
  //IDAutocast, Type(0=when hit, 1=when attack), SkillID, SkillLVL, Chance, AutoCastTrigger
 ];

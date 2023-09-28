@@ -2006,7 +2006,7 @@ function ClickShoes( data, isRefine )
 		shoes_id = data;
 	}
 	
-	if(shoes_id >= 2197 && shoes_id <= 2202 )
+	if((shoes_id >= 2197 && shoes_id <= 2202) ||  (shoes_id >= 1946 && shoes_id <= 1957))
 	{// "Temporal Shoes"
 		if(!isRefine)
 		{

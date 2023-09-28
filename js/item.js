@@ -2701,16 +2701,34 @@
 ,[2599,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ASPD_ADD,1,bon_DMG_CRIT,2,bon_RED_RC_DEMI_HUMAN,2,"bluk_hi",108,bon_ASPD_ADD,1,"bluk_hi",108,bon_DMG_CRIT,2,"bluk_hi",108,bon_RED_RC_DEMI_HUMAN,2,"bluk_hi",120,bon_ASPD_ADD,1,"bluk_hi",120,bon_DMG_CRIT,4,"bluk_hi",120,bon_RED_RC_DEMI_HUMAN,4,"ev_bdex",10,bon_DMG_CRIT,2,bon_NONE]//Gambler's Seal + Heart Card in Mouth
 ,[2600,itm_type_HEAD_MIDDLE,0,0,0,0,50,70,0,0,0,0,bon_ASPD_MUL,1,bon_RED_ELE_WIND,5,"bagi_hi",108,bon_ASPD_ADD,1,"bagi_hi",108,bon_ASPD_MUL,1,bon_NONE]//Imperial Feather
 ,[2601,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL + skill_ROY_SPEAR_CANNON,20,bon_DMG_SKILL + skill_ROY_SHIELD_PRESS,20,bon_DMG_SKILL + skill_ROY_VANISHING_POINT,20,bon_NONE]//Imperial Feather + Imperial Spear + Imperial Guard
-// ,[2602,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2603,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2604,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2605,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2606,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2607,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2608,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2609,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2610,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+//17.1.1
+//Illusion Teddy Bear
+,[2602,weapTyp_DAGGER,55,170,4,2,90,120,0,0,0,0,bon_CRIT,90,"ev_ref",2,bon_DMG_CRIT,3,"ref_lvl",7,bon_PHY_ATK,5,"ref_lvl",9,bon_DMG_SIZ_SMALL,20,"ref_lvl",9,bon_DMG_SIZ_MEDIUM,20,"ref_lvl",9,bon_DMG_SIZ_LARGE,20,"ref_lvl",11,bon_DMG_ELE_EARTH,20,"ref_lvl",11,bon_DMG_ELE_FIRE,20,"ref_lvl",11,bon_DMG_ELE_GHOST,20,"ref_lvl",11,bon_DMG_ELE_HOLY,20,"ref_lvl",11,bon_DMG_ELE_NEUTRAL,20,"ref_lvl",11,bon_DMG_ELE_POISON,20,"ref_lvl",11,bon_DMG_ELE_SHADOW,20,"ref_lvl",11,bon_DMG_ELE_UNDEAD,20,"ref_lvl",11,bon_DMG_ELE_WATER,20,"ref_lvl",11,bon_DMG_ELE_WIND,20,bon_NONE]//Illusion Counter Dagger
+,[2603,weapTyp_SHOTGUN,222,240,4,2,130,120,0,0,0,0,bon_DEX,1,"ev_ref",2,bon_DMG_RANGE,5,"ref_lvl",7,bon_ASPD_MUL,15,"ref_lvl",9,bon_DMG_RANGE,9,"ref_lvl",11,bon_SKILL_AUTOCAST,167,bon_NONE]//Illusion Gate Keeper-DD
+,[2604,weapTyp_STAFF,1,100,4,2,120,120,0,0,0,0,bon_DEX,2,bon_INT,2,bon_MATK,240,bon_HP_ADD,600,"ev_ref",2,bon_MATK_MUL,1,"ref_lvl",7,bon_MDMG_SIZ_SMALL,15,"ref_lvl",7,bon_MDMG_SIZ_MEDIUM,15,"ref_lvl",9,bon_RED_SIZ_SMALL,15,"ref_lvl",9,bon_RED_SIZ_MEDIUM,15,"ref_lvl",11,bon_RED_ELE2_FIRE,15,"ref_lvl",11,bon_RED_ELE2_WIND,15,"ref_lvl",11,bon_RED_ELE2_WATER,15,"ref_lvl",11,bon_RED_ELE2_EARTH,15,bon_NONE]//Illusion Survivor's Staff
+,[2605,itm_type_SHOES,0,16,0,1,60,100,0,0,0,0,"ev_ref",1,bon_ASPD_MUL,1,"ev_ref",3,bon_CRIT,5,bon_NONE]//Illusion Boots
+,[2606,itm_type_HEAD_UPPER,1,3,0,1,10,120,0,0,0,0,bon_STR,2,"ev_ref",2,bon_ATK,10,"ref_lvl",7,bon_DMG_ELE_WATER,10,"ref_lvl",7,bon_DMG_ELE_WIND,10,"ref_lvl",7,bon_DMG_ELE_EARTH,10,"ref_lvl",7,bon_DMG_ELE_NEUTRAL,10,"ref_lvl",9,bon_DMG_SIZ_SMALL,15,"ref_lvl",9,bon_DMG_SIZ_LARGE,15,bon_NONE]//Illusion Hot-blooded Headband
+//Illusion Turtle
+,[2607,weapTyp_SWORD,0,180,4,2,90,120,0,0,0,0,bon_NONE]//Illusion Immaterial Sword
+,[2608,weapTyp_AXE,2056,180,4,2,420,120,0,0,0,0,bon_STR,2,bon_DEX,2,bon_LUK,2,bon_DMG_SKILL + skill_MEC_AXE_TORNADO,100,bon_DMG_SKILL + skill_MEC_AXE_BOOMERANG,100,bon_DMG_SKILL + skill_GEN_CART_CANNON,75,"ref_lvl",7,bon_DMG_SKILL + skill_MEC_AXE_TORNADO,20,"ref_lvl",7,bon_DMG_SKILL + skill_MEC_AXE_BOOMERANG,20,"ref_lvl",7,bon_DMG_SKILL + skill_GEN_CART_CANNON,20,"ref_lvl",9,bon_DMG_SKILL + skill_MEC_AXE_TORNADO,20,"ref_lvl",9,bon_DMG_SKILL + skill_MEC_AXE_BOOMERANG,20,"ref_lvl",9,bon_DMG_SKILL + skill_GEN_CART_CANNON,20,bon_NONE]//Illusion War Axe
+,[2609,weapTyp_SPEAR,2001,190,4,2,150,12,0,0,0,0,bon_STR,3,bon_INT,2,bon_DEX,2,"ref_lvl",9,bon_DELAY_SKILL_FLAT + skill_RUN_HUNDRED_SPEAR,1,"ref_lvl",13,bon_DELAY_SKILL_FLAT + skill_RUN_HUNDRED_SPEAR,1,bon_NONE]//Illusion Pole Axe
+,[2610,weapTyp_HUUMA_SHURIKEN,0,300,4,2,150,120,0,0,0,0,bon_DEX,2,"ev_ref",1,bon_DMG_SKILL + skill_KAG_KUNAI_SPLASH,9,bon_NONE]//Illusion Huuma Wing Shuriken
+,[2611,weapTyp_MACE,209,210,4,2,200,120,0,0,0,0,"ev_ref",1,bon_DMG_SKILL + skill_ABI_DUPLE_LIGHT,3,"ev_ref",2,bon_ASPD_ADD,1,bon_NONE]//Illusion Iron Driver
+,[2612,itm_type_HEAD_UPPER,0,0,0,1,10,120,0,0,0,0,bon_MATK_MUL,1,"ev_ref",1,bon_MATK,2,bon_NONE]//Illusion Fancy Flower
 
+,[2613,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ASPD_MUL,10,"set_ref"+(fl_WEAPON+fl_GARMENT),7,bon_DMG_CRIT,15,"set_sum"+(fl_WEAPON+fl_GARMENT),18,bon_ASPD_MUL,15,"set_sum"+(fl_WEAPON+fl_GARMENT),22,bon_SKILL_ENABLE,74,bon_NONE]//Illusion Counter Dagger + Illusion Survivor Manteau
+,[2614,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_PHY_ATK,10,"set_ref"+(fl_WEAPON+fl_HEAD),7,bon_ASPD_ADD,2,"set_sum"+(fl_WEAPON+fl_HEAD),18,bon_DMG_RANGE,10,"set_sum"+(fl_WEAPON+fl_HEAD),22,bon_DMG_SKILL + skill_GS_SPREAD_SHOT,30,bon_NONE]//Illusion Gate Keeper-DD + Illusion Hot-blooded Headband
+,[2615,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ATK,50,"set_ref"+(fl_WEAPON+fl_GARMENT),7,bon_INC_MAGIC_FIRE,10,"set_ref"+(fl_WEAPON+fl_GARMENT),7,bon_INC_MAGIC_WIND,10,"set_ref"+(fl_WEAPON+fl_GARMENT),7,bon_INC_MAGIC_WATER,10,"set_ref"+(fl_WEAPON+fl_GARMENT),7,bon_INC_MAGIC_EARTH,10,"set_sum"+(fl_WEAPON+fl_GARMENT),18,bon_MDMG_ELE_FIRE,15,"set_sum"+(fl_WEAPON+fl_GARMENT),18,bon_MDMG_ELE_WIND,15,"set_sum"+(fl_WEAPON+fl_GARMENT),18,bon_MDMG_ELE_WATER,15,"set_sum"+(fl_WEAPON+fl_GARMENT),18,bon_MDMG_ELE_EARTH,15,"set_sum"+(fl_WEAPON+fl_GARMENT),22,bon_RED_CASTDELAY,15,bon_NONE]//Illusion Survivor's Staff + Illusion Survivor Manteau
+,[2616,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK,100,"set_ref"+(fl_WEAPON+fl_GARMENT),7,bon_MATK,50,"set_sum"+(fl_WEAPON+fl_GARMENT),18,bon_SKILL_AUTOCAST,109,"set_sum"+(fl_WEAPON+fl_GARMENT),18,bon_SKILL_AUTOCAST,110,"set_sum"+(fl_WEAPON+fl_GARMENT),18,bon_SKILL_AUTOCAST,111,"set_sum"+(fl_WEAPON+fl_GARMENT),22,bon_DMG_SKILL + skill_WI_STORM_GUST,30,"set_sum"+(fl_WEAPON+fl_GARMENT),22,bon_DMG_SKILL + skill_WI_METEOR_STORM,30,"set_sum"+(fl_WEAPON+fl_GARMENT),22,bon_DMG_SKILL + skill_WI_LORD_OF_VERMILLION,30,"set_sum"+(fl_WEAPON+fl_GARMENT),22,bon_DMG_SKILL + skill_WI_HEAVENS_DRIVE,30,bon_NONE]//Illusion Immaterial Sword + Illusion Ancient Cape
+,[2617,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ATK,40,"set_ref"+(fl_WEAPON+fl_SHOES),7,bon_DMG_SKILL + skill_MEC_AXE_BOOMERANG,15,"set_sum"+(fl_WEAPON+fl_SHOES),18,bon_PHY_ATK,10,"set_sum"+(fl_WEAPON+fl_SHOES),22,bon_DMG_RANGE,10,bon_NONE]//Illusion War Axe + Illusion Shoes
+,[2618,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ATK,40,"set_ref"+(fl_WEAPON+fl_SHOES),7,bon_DMG_SKILL + skill_RUN_HUNDRED_SPEAR,20,"set_sum"+(fl_WEAPON+fl_SHOES),18,bon_PHY_ATK,10,"set_sum"+(fl_WEAPON+fl_SHOES),22,bon_DMG_SKILL + skill_RUN_HUNDRED_SPEAR,20,bon_NONE]//Illusion Pole Axe + Illusion Shoes
+,[2619,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ATK,50,"set_ref"+(fl_WEAPON+fl_HEAD),7,bon_DMG_SKILL + skill_KAG_KUNAI_SPLASH,30,"set_sum"+(fl_WEAPON+fl_HEAD),18,bon_DMG_RANGE,10,"set_sum"+(fl_WEAPON+fl_HEAD),22,bon_DMG_SKILL + skill_KAG_KUNAI_SPLASH,20,bon_NONE]//Illusion Huuma Wing Shuriken + Illusion Apple of Archer
+,[2620,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ASPD_MUL,10,"set_ref"+(fl_WEAPON+fl_GARMENT),7,bon_DMG_SKILL + skill_ABI_DUPLE_LIGHT,25,"set_sum"+(fl_WEAPON+fl_GARMENT),18,bon_CRIT,15,"set_sum"+(fl_WEAPON+fl_GARMENT),22,bon_DMG_CRIT,20,bon_NONE]//Illusion Iron Driver + Illusion Muffler
+// ,[2621,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2622,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+
+
+// ,[,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK,50,"set_ref"+(fl_WEAPON+fl_HEAD),7,bon_RED_CAST,-10,"set_sum"+(fl_WEAPON+fl_HEAD),18,bon_MDMG_SIZ_SMALL,15,"set_sum"+(fl_WEAPON+fl_HEAD),18,bon_MDMG_SIZ_MEDIUM,15,"set_sum"+(fl_WEAPON+fl_HEAD),22,bon_MATK,50,"set_sum"+(fl_WEAPON+fl_HEAD),22,bon_INC_MAGIC_FIRE,20,bon_NONE]//Illusion Fancy Flower + Illusion Bazerald
 
 //"ev_ref" = for every x refine
 //"ev_ref",x,bonus,amount,
@@ -3413,10 +3431,22 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2578,2577,271,"NULL"] //Bio Protector + Pipe
 ,[2587,2581,2582,2583,"NULL"] //Fire Dance Shadow Earring + Fire Dance Shadow Pendant + Fire Fire Dance Shadow Shoes
 ,[2588,2581,2009,"NULL"] //Fire Dance Shadow Earring + Shadow Rebellion Armor
+,[2589,2584,2585,2586,"NULL"]//Wind Spear Petal Shadow Earring + Wind Spear Wind Spear Petal Shadow Pendant + Wind Spear Petal Shadow Shoes
+,[2590,2584,2007,"NULL"]//Wind Spear Petal Shadow Earring + Shadow Oboro Armor
 ,[2599,2598,2597,"NULL"] //Gambler's Seal + Heart Card in Mouth
 ,[2601,2600,1269,1277,"NULL"] //Imperial Feather + Imperial Spear + Imperial Guard
+,[2613,2602,2399,"NULL"] //Illusion Counter Dagger + Illusion Survivor Manteau
+,[2614,2603,2606,"NULL"] //Illusion Gate Keeper-DD + Illusion Hot-blooded Headband
+,[2615,2604,2399,"NULL"] //Illusion Survivor's Staff + Illusion Survivor Manteau
+,[2616,2607,2387,"NULL"] //Illusion Immaterial Sword + Illusion Ancient Cape
+,[2617,2608,2375,"NULL"] //Illusion War Axe + Illusion Shoes
+,[2618,2609,2375,"NULL"] //Illusion Pole Axe + Illusion Shoes
+,[2619,2610,2373,"NULL"] //Illusion Huuma Wing Shuriken + Illusion Apple of Archer
+,[2620,2611,2374,"NULL"] //Illusion Iron Driver + Illusion Muffler
 // ,[,,,"NULL"] //
 // ,[,,,"NULL"] //
+
+// ,[,2612,,"NULL"] //Illusion Fancy Flower + Illusion Bazerald
 
 // ,[itm_set,item1,item2,...,"NULL"] // 
 //,[itm_set,item1,item2,...,"NULL"] // 

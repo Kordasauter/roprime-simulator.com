@@ -1114,6 +1114,13 @@ function CalcEquipAtk()
 			equipmentAttack += 15;
 		}
 	}	
+	if(CardNumSearch(893))
+	{//Ominous Assaulter Card
+		if(n_A_WeaponType == weapTyp_WHIP || n_A_WeaponType == weapTyp_INSTRUMENT || n_A_WeaponType == weapTyp_BOOK || n_A_WeaponType == weapTyp_SWORDII || n_A_WeaponType == weapTyp_SPEARII)
+		{
+			equipmentAttack += (3 * n_A_Weapon_ATKplus) * CardNumSearch(893);
+		}
+	}
 	
 //shadows
 	if ( EquipNumSearch( 1661 ) )
@@ -2498,7 +2505,14 @@ function CalcCriticalMod()
 	{//Mutant Dolor Card
 		if(n_A_WeaponType == weapTyp_KATAR)
 		{
-			n_tok[bon_DMG_CRIT] += n_A_Weapon_ATK * 2;
+			n_tok[bon_DMG_CRIT] += n_A_Weapon_ATKplus * 2;
+		}
+	}
+	if(CardNumSearch(893))
+	{//Ominous Assaulter Card
+		if(n_A_WeaponType == weapTyp_WHIP || n_A_WeaponType == weapTyp_INSTRUMENT || n_A_WeaponType == weapTyp_BOOK || n_A_WeaponType == weapTyp_SWORDII || n_A_WeaponType == weapTyp_SPEARII)
+		{
+			n_tok[bon_DMG_CRIT] +=  n_A_Weapon_ATKplus * CardNumSearch(893);
 		}
 	}
 	
@@ -5900,6 +5914,13 @@ function calcCrit( n_A_CRI )
 		if(n_A_WeaponType == weapTyp_KATAR)
 		{
 			n_A_CRI += 7;
+		}
+	}
+	if(CardNumSearch(893))
+	{//Ominous Assaulter Card
+		if(n_A_WeaponType == weapTyp_WHIP || n_A_WeaponType == weapTyp_INSTRUMENT || n_A_WeaponType == weapTyp_BOOK || n_A_WeaponType == weapTyp_SWORDII || n_A_WeaponType == weapTyp_SPEARII)
+		{
+			n_A_CRI += 5 * CardNumSearch(893);
 		}
 	}
 	

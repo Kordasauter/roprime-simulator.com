@@ -980,16 +980,29 @@ function SetCard()
 ,[880,   card_com_GARMENT,"Polluted Queen Spider","",bon_MDMG_ELE_WATER,100,bon_MDMG_ELE_EARTH,100,bon_RED_ELE_NEUTRAL,30,bon_RED_ELE_WATER,30,bon_RED_ELE_EARTH,30,bon_RED_ELE_FIRE,30,bon_RED_ELE_WIND,30,bon_RED_ELE_POISON,30,bon_RED_ELE_HOLY,30,bon_RED_ELE_SHADOW,30,bon_RED_ELE_GHOST,30,bon_RED_ELE_UNDEAD,30,0]
 ,[881,   card_com_ACC_R,"Polluted Dark Lord","",bon_ASPD_ADD,1,0]
 ,[882,   itm_type_SET,"Polluted Dark Lord + Dark Lord","",bon_INC_MAGIC_FIRE,15,bon_DMG_SKILL + skill_WI_METEOR_STORM,15,0]
-//
-//,[883,   ,"","",0]
-//,[884,   ,"","",0]
-//,[885,   ,"","",0]
-//,[886,   ,"","",0]
-//,[887,   ,"","",0]
-//,[888,   ,"","",0]
-//,[889,   ,"","",0]
-//,[890,   ,"","",0]
-
+//Episode 17.1.1
+//Advanced Old Glastheim
+,[883,   card_com_ARMOR,"Corruption Root H","Melee Physical attacks create a high chance of casting Petrification, Sleep, and Curse on all monsters within a 11x11 cell area around you.",0]
+,[884,   card_com_ARMOR,"Amdarais H","-666 HP and -66 SP every 6 seconds.<br>-6,666 HP and -666 HP when unequipped.",bon_PHY_ATK,20,bon_MATK_MUL,20,0]
+,[885,   card_com_SHIELD,"Khalitzburg Knight","",bon_DEF,20,bon_RED_SIZ_MEDIUM,25,bon_RED_SIZ_LARGE,25,0]
+,[886,   card_comp_WEAPON,"White Knight","",bon_ATK,15,bon_DMG_SIZ_MEDIUM,20,bon_DMG_SIZ_LARGE,20,0]
+,[887,   itm_type_SET,"White Knight + Khalitzburg Knight","",bon_RED_SIZ_MEDIUM,5,bon_RED_SIZ_LARGE,5,bon_DMG_SIZ_MEDIUM,15,bon_DMG_SIZ_LARGE,15,0]
+//Illusion Teddy Bear
+,[888,   card_comp_WEAPON,"Soul Fragment","",bon_MATK,5,bon_MDMG_SIZ_MEDIUM,15,0]
+,[889,   card_com_ARMOR,"Hardworking Pitman","",bon_HIT,10,bon_PHY_ATK,5,"ref_lvl",10,bon_HIT,5,0]
+,[890,   card_com_GARMENT,"Sinister Dwelling Obsidian","","ev_bagi",10,bon_FLEE,3,"ev_bagi",10,bon_ASPD_MUL,1,"bagi_hi",120,bon_ASPD_ADD,1,0]
+,[891,   card_comp_WEAPON,"Colorful Teddy Bear","",bon_MATK,5,bon_MDMG_SIZ_LARGE,15,0]
+,[892,   card_com_SHOES,"Shiny Teddy Bear","Increases SP consumption of skills by 10%.","ev_ref",1,bon_INC_MAGIC_HOLY,3,0]
+//Illusion Turtle
+,[893,   card_comp_WEAPON,"Ominous Assaulter","When equipped with Whip, Musical Instrument, Book, Two-Handed Sword or Two-Handed Spear class weapons:<br>CRIT +5<br>Every refine level:<br>ATK +3<br>Increases critical attack damage by 1%.",bon_DMG_CRIT,10,0]
+,[894,   card_com_ACC,"Ominous Heater","",bon_CRIT,3,bon_DMG_CRIT,5,0]
+,[895,   itm_type_SET,"Ominous Assaulter + Ominous Heater","",bon_CRIT,2,bon_DMG_CRIT,2,0]
+,[896,   card_comp_HEAD,"Ominous Permeter","",bon_INT,1,bon_SP_ADD,80,"ev_ref",2,bon_SP_ADD,10,"ref_lvl",7,bon_SP_REG,30,0]
+,[897,   card_com_ARMOR,"Ominous Solider","",bon_HP_MUL,10,bon_DEF,50,"ev_ref",3,bon_HP_MUL,1,"blvl_hi",160,bon_DEF,50,"blvl_hi",160,bon_VIT,3,0]
+,[898,   itm_type_SET,"Ominous Permeter + Ominous Solider","","ev_body_ref",3,bon_HP_MUL,1,"ev_head_ref",2,bon_SP_ADD,5,0]
+,[899,   card_com_SHOES,"Ominous Freezer","",bon_HP_MUL,10,bon_STR,2,"blvl_hi",160,bon_DMG_SKILL + skill_RUN_HUNDRED_SPEAR,10,"blvl_hi",160,bon_DMG_SKILL + skill_ROY_OVERBRAND,10,"ref_lvl",9,bon_DMG_SKILL + skill_RUN_HUNDRED_SPEAR,10,"ref_lvl",9,bon_DMG_SKILL + skill_ROY_OVERBRAND,10,0]
+,[900,   card_com_SHIELD,"Ominous Turtle General","",bon_DEF,50,bon_MDEF,5,bon_RED_SIZ_SMALL,25,bon_RED_SIZ_MEDIUM,25,bon_RED_SIZ_LARGE,25,0]
+,[901,   itm_type_SET,"Turtle General + Ominous Turtle General","",bon_HIT,25,bon_RED_SIZ_SMALL,5,bon_RED_SIZ_MEDIUM,5,bon_RED_SIZ_LARGE,5,bon_DMG_SIZ_SMALL,20,bon_DMG_SIZ_MEDIUM,20,bon_DMG_SIZ_LARGE,20,0]
 ];
 
 CardNum = cardOBJ.length -1;
@@ -1112,6 +1125,10 @@ w_SC = [
 ,[877,876,708,"NULL"] //Ice Ghost + Curupira
 ,[879,878,597,"NULL"] //Flame Ghost + Fruits Pom Spider
 ,[882,881,322,"NULL"] //Polluted Dark Lord + Dark Lord
+,[887,885,886,"NULL"] //White Knight + Khalitzburg Knight
+,[895,893,894,"NULL"] //Ominous Assaulter + Ominous Heater
+,[898,896,897,"NULL"] //Ominous Permeter + Ominous Solider
+,[901,323,900,"NULL"] //Turtle General + Ominous Turtle General
 // ,[,,,"NULL"] //
 // ,[,,,"NULL"] //
 // ,[,,,"NULL"] //
