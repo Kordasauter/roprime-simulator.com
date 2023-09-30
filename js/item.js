@@ -2696,7 +2696,7 @@
 ,[2595,weapTyp_ROD,0,110,4,2,80,175,0,0,0,0,bon_INT,5,bon_MATK,180,bon_UNBREAKABLE,1,"ev_ref",2,bon_MATK,15,"ref_lvl",7,bon_INC_MAGIC_WATER,5,"ref_lvl",7,bon_INC_MAGIC_HOLY,5,"ref_lvl",9,bon_INC_MAGIC_WATER,10,"ref_lvl",9,bon_INC_MAGIC_HOLY,10,bon_NONE]//Wand of Ice
 ,[2596,weapTyp_ROD,0,110,4,2,80,175,0,0,0,0,bon_INT,5,bon_MATK,180,bon_UNBREAKABLE,1,"ev_ref",2,bon_MATK,15,"ref_lvl",7,bon_INC_MAGIC_FIRE,5,"ref_lvl",7,bon_INC_MAGIC_EARTH,5,"ref_lvl",9,bon_INC_MAGIC_FIRE,10,"ref_lvl",9,bon_INC_MAGIC_EARTH,10,bon_NONE]//Wand of Flame
 
-,[2597,itm_type_HEAD_MIDDLE,0,0,0,0,50,70,0,0,0,0,bon_CRIT,3,bon_DMG_CRIT,3,"ev_bdex",10,bon_DMG_CRIT,-2,"ev_bluk",10,bon_CRIT,1,"ev_bluk",10,bon_MATK,2,"bluk_hi",108,bon_CRIT,5,"bluk_hi",108,bon_DMG_CRIT,10,"bluk_hi",120,bon_CRIT,10,"bluk_hi",120,bon_DMG_CRIT,17,bon_NONE]//Gambler's Seal
+,[2597,itm_type_HEAD_MIDDLE,0,0,0,0,50,70,0,0,0,0,bon_CRIT,3,bon_DMG_CRIT,3,"ev_bdex",10,bon_DMG_CRIT,-2,"ev_bluk",10,bon_CRIT,1,"ev_bluk",10,bon_MATK,2,"ev_bluk",10,bon_ATK,2,"bluk_hi",108,bon_CRIT,5,"bluk_hi",108,bon_DMG_CRIT,10,"bluk_hi",120,bon_CRIT,10,"bluk_hi",120,bon_DMG_CRIT,17,bon_NONE]//Gambler's Seal
 ,[2598,itm_type_HEAD_LOWER,0,0,0,0,30,80,0,0,0,0,bon_DMG_CRIT,5,bon_NONE]//Heart Card in Mouth
 ,[2599,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ASPD_ADD,1,bon_DMG_CRIT,2,bon_RED_RC_DEMI_HUMAN,2,"bluk_hi",108,bon_ASPD_ADD,1,"bluk_hi",108,bon_DMG_CRIT,2,"bluk_hi",108,bon_RED_RC_DEMI_HUMAN,2,"bluk_hi",120,bon_ASPD_ADD,1,"bluk_hi",120,bon_DMG_CRIT,4,"bluk_hi",120,bon_RED_RC_DEMI_HUMAN,4,"ev_bdex",10,bon_DMG_CRIT,2,bon_NONE]//Gambler's Seal + Heart Card in Mouth
 ,[2600,itm_type_HEAD_MIDDLE,0,0,0,0,50,70,0,0,0,0,bon_ASPD_MUL,1,bon_RED_ELE_WIND,5,"bagi_hi",108,bon_ASPD_ADD,1,"bagi_hi",108,bon_ASPD_MUL,1,bon_NONE]//Imperial Feather
@@ -2724,8 +2724,17 @@
 ,[2618,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ATK,40,"set_ref"+(fl_WEAPON+fl_SHOES),7,bon_DMG_SKILL + skill_RUN_HUNDRED_SPEAR,20,"set_sum"+(fl_WEAPON+fl_SHOES),18,bon_PHY_ATK,10,"set_sum"+(fl_WEAPON+fl_SHOES),22,bon_DMG_SKILL + skill_RUN_HUNDRED_SPEAR,20,bon_NONE]//Illusion Pole Axe + Illusion Shoes
 ,[2619,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ATK,50,"set_ref"+(fl_WEAPON+fl_HEAD),7,bon_DMG_SKILL + skill_KAG_KUNAI_SPLASH,30,"set_sum"+(fl_WEAPON+fl_HEAD),18,bon_DMG_RANGE,10,"set_sum"+(fl_WEAPON+fl_HEAD),22,bon_DMG_SKILL + skill_KAG_KUNAI_SPLASH,20,bon_NONE]//Illusion Huuma Wing Shuriken + Illusion Apple of Archer
 ,[2620,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ASPD_MUL,10,"set_ref"+(fl_WEAPON+fl_GARMENT),7,bon_DMG_SKILL + skill_ABI_DUPLE_LIGHT,25,"set_sum"+(fl_WEAPON+fl_GARMENT),18,bon_CRIT,15,"set_sum"+(fl_WEAPON+fl_GARMENT),22,bon_DMG_CRIT,20,bon_NONE]//Illusion Iron Driver + Illusion Muffler
-// ,[2621,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2622,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+
+,[2621,itm_type_HEAD_UPPER,213,10,0,1,20,100,0,0,0,0,bon_RED_SIZ_SMALL,5,bon_RED_SIZ_MEDIUM,5,bon_RED_SIZ_LARGE,5,"ref_lvl",7,bon_SKILL_AUTOCAST,168,"ref_lvl",9,bon_DMG_SKILL + skill_ROY_RAY_OF_GENESIS,20,bon_NONE]//Divine Guard Hat
+,[2622,itm_type_HEAD_LOWER,0,0,0,0,10,100,0,0,0,0,bon_FLEE,5,"ev_bstr",40,bon_DMG_ELE_EARTH,1,"ev_bstr",40,bon_DMG_ELE_FIRE,1,"ev_bstr",40,bon_DMG_ELE_GHOST,1,"ev_bstr",40,bon_DMG_ELE_HOLY,1,"ev_bstr",40,bon_DMG_ELE_NEUTRAL,1,"ev_bstr",40,bon_DMG_ELE_POISON,1,"ev_bstr",40,bon_DMG_ELE_SHADOW,1,"ev_bstr",40,bon_DMG_ELE_UNDEAD,1,"ev_bstr",40,bon_DMG_ELE_WATER,1,"ev_bstr",40,bon_DMG_ELE_WIND,1,"ev_bagi",40,bon_DMG_ELE_NEUTRAL,1,"ev_bvit",40,bon_DMG_ELE_WATER,1,"ev_bint",40,bon_DMG_ELE_EARTH,1,"ev_bdex",40,bon_DMG_ELE_FIRE,1,"ev_bluk",40,bon_DMG_ELE_WIND,1,bon_NONE]//Rescue Whistle
+,[2623,itm_type_HEAD_MIDDLE,0,10,0,1,30,1,0,0,0,0,bon_NONE]//Magic Neuromodulator
+,[2624,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RED_CAST,-30,bon_NONE]//Magic Neuromodulator + Violet Halo
+,[2625,itm_type_ACCESSORY,0,0,0,1,10,100,0,0,0,0,bon_HP_MUL,5,bon_PHY_ATK,5,bon_ASPD_MUL,5,"ev_blvl",15,bon_CAST_SKILL + skill_SUR_LIGHTNING_RIDE,5,bon_CAST_SKILL_FLAT + skill_SUR_POWER_ABSORB,3,bon_DMG_SKILL + skill_SUR_LIGHTNING_RIDE,5,bon_NONE]//Keraunos
+,[2626,itm_type_HEAD_LOWER,0,0,0,0,30,1,0,0,0,0,bon_NONE]//Blood Sucker
+,[2627,itm_type_ACCESSORY,0,0,0,1,10,50,0,0,0,0,bon_INT,3,bon_MATK,30,bon_SKILL_ENABLE,22,bon_NONE]//Gyges Ring
+,[2628,itm_type_HEAD_UPPER,0,3,0,1,0,1,0,0,0,0,bon_INT,2,bon_DEX,2,bon_DMG_RC_DEMI_HUMAN,10,bon_MDMG_RC_DEMI_HUMAN,10,bon_NONE]//Piamette Hood
+// ,[2629,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2630,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
 
 
 // ,[,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK,50,"set_ref"+(fl_WEAPON+fl_HEAD),7,bon_RED_CAST,-10,"set_sum"+(fl_WEAPON+fl_HEAD),18,bon_MDMG_SIZ_SMALL,15,"set_sum"+(fl_WEAPON+fl_HEAD),18,bon_MDMG_SIZ_MEDIUM,15,"set_sum"+(fl_WEAPON+fl_HEAD),22,bon_MATK,50,"set_sum"+(fl_WEAPON+fl_HEAD),22,bon_INC_MAGIC_FIRE,20,bon_NONE]//Illusion Fancy Flower + Illusion Bazerald
@@ -3443,6 +3452,7 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2618,2609,2375,"NULL"] //Illusion Pole Axe + Illusion Shoes
 ,[2619,2610,2373,"NULL"] //Illusion Huuma Wing Shuriken + Illusion Apple of Archer
 ,[2620,2611,2374,"NULL"] //Illusion Iron Driver + Illusion Muffler
+,[2624,2623,2421,"NULL"] //Magic Neuromodulator + Violet Halo
 // ,[,,,"NULL"] //
 // ,[,,,"NULL"] //
 

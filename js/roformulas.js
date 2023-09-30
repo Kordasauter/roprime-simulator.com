@@ -1673,37 +1673,6 @@ function CalcRacialMod()
 		n_tok[bon_DMG_RC_UNDEAD] += 15;
 		n_tok[bon_DMG_RC_DEMON] += 15;
 	}
-	if(EquipNumSearch(2142) || 
-	   EquipNumSearch(2143) || 
-	   EquipNumSearch(2144) || 
-	   EquipNumSearch(2145) || 
-	   EquipNumSearch(2146) || 
-	   EquipNumSearch(2147) ) 
-	{//Chronocloak (all)
-		if(n_A_SHOULDER_DEF_PLUS >= 9)
-		{
-			n_tok[bon_DEFIGN_RC_BRUTE] += 20;
-			n_tok[bon_DEFIGN_RC_DEMON] += 20;
-		}
-		if(n_A_SHOULDER_DEF_PLUS >= 11)
-		{
-			n_tok[bon_DEFIGN_RC_BRUTE] += 10;
-			n_tok[bon_DEFIGN_RC_DEMON] += 10;
-		}
-	}
-	if(EquipNumSearch(2148) || 
-	   EquipNumSearch(2149) || 
-	   EquipNumSearch(2150) || 
-	   EquipNumSearch(2151) || 
-	   EquipNumSearch(2152) || 
-	   EquipNumSearch(2153) ) 
-	{//Chronocloak + Temporal Boots Sets (all)
-		if(n_A_SHOES_DEF_PLUS >= 10)
-		{
-			n_tok[bon_DEFIGN_RC_BRUTE] += 30;
-			n_tok[bon_DEFIGN_RC_DEMON] += 30;
-		}
-	}
 	if( EquipNumSearch(2210) )   
 	{// Abusive Robe
 		n_tok[bon_DEFIGN_RC_DEMI_HUMAN] += 4 * n_A_BODY_DEF_PLUS;
@@ -3003,6 +2972,11 @@ function CalcWeaponSizeMod()
 	// Equipment
 	if ( EquipNumSearch( 1177 ) )
 	{ // Large Orc Hero Helm
+		weaponSizeMod = 1;
+		weapon2SizeMod = 1;
+	}
+	if ( EquipNumSearch( 2628 ) && n_A_HEAD_DEF_PLUS >= 12)
+	{ // Piamette Hood
 		weaponSizeMod = 1;
 		weapon2SizeMod = 1;
 	}

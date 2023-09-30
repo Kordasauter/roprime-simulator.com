@@ -644,12 +644,11 @@ with( document.calcForm )
 		var wFront = "<Font color='BLUE'><B>";
 		var wFront2 = "<Font color='RED'><B>";
 		var wBack = "</B></Font>";
+		DefReduc = Math.min(DefReduc,100);
+		DefReduc = Math.max(DefReduc,0);
 		
-		Math.min(DefReduc,100);
-		Math.max(DefReduc,0);
-		
-		Math.min(MdefReduc,100);
-		Math.max(MdefReduc,0);
+		MdefReduc = Math.min(MdefReduc,100);
+		MdefReduc = Math.max(MdefReduc,0);
 
 		for ( var i = 0; i <= 9; i++ )
 		{ // DispStats
@@ -734,6 +733,37 @@ function CalcIgnDef()
 				n_tok[bon_DEFIGN_RC_DEMON] += 20;
 			}
 		}
+	}	
+	if(EquipNumSearch(2142) || 
+	   EquipNumSearch(2143) || 
+	   EquipNumSearch(2144) || 
+	   EquipNumSearch(2145) || 
+	   EquipNumSearch(2146) || 
+	   EquipNumSearch(2147) ) 
+	{//Chronocloak (all)
+		if(n_A_SHOULDER_DEF_PLUS >= 9)
+		{
+			n_tok[bon_DEFIGN_RC_BRUTE] += 20;
+			n_tok[bon_DEFIGN_RC_DEMON] += 20;
+		}
+		if(n_A_SHOULDER_DEF_PLUS >= 11)
+		{
+			n_tok[bon_DEFIGN_RC_BRUTE] += 10;
+			n_tok[bon_DEFIGN_RC_DEMON] += 10;
+		}
+	}
+	if(EquipNumSearch(2148) || 
+	   EquipNumSearch(2149) || 
+	   EquipNumSearch(2150) || 
+	   EquipNumSearch(2151) || 
+	   EquipNumSearch(2152) || 
+	   EquipNumSearch(2153) ) 
+	{//Chronocloak + Temporal Boots Sets (all)
+		if(n_A_SHOES_DEF_PLUS >= 10)
+		{
+			n_tok[bon_DEFIGN_RC_BRUTE] += 30;
+			n_tok[bon_DEFIGN_RC_DEMON] += 30;
+		}
 	}
 	if ( EquipNumSearch( 1080 ) && n_A_Weapon_ATKplus >= 6 )
 	{ // Glorious Claymore
@@ -808,6 +838,10 @@ function CalcIgnDef()
 	{ // Southern Cross headgear?
 		if(n_A_HEAD_DEF_PLUS >= 6)
 			n_tok[bon_DEFIGN_RC_BOSS] += (n_A_HEAD_DEF_PLUS - 5);
+	}
+	if(EquipNumSearch(2305) || EquipNumSearch(2307) || EquipNumSearch(2313))
+	{//Guillotine Cross Set || Ranger Set || Wanderer Set
+		n_tok[bon_DEFIGN_RC_ALL] += n_A_SHADOW_SHIELD_DEF_PLUS + n_A_SHADOW_WEAPON_DEF_PLUS;
 	}
 //Magic
 	if ( acolyteBuffs[ksExpiatio] )
@@ -894,5 +928,9 @@ function CalcIgnDef()
 	if ( (EquipNumSearch(1084) || EquipNumSearch(1085) || EquipNumSearch(1095)) && n_A_Weapon_ATKplus >= 6 )
 	{ // glorious staffs
 		n_tok[bon_MDEFIGN_RC_DEMI_HUMAN] += 5;
+	}
+	if(EquipNumSearch(2312) || EquipNumSearch(2306) || EquipNumSearch(2308) || EquipNumSearch(2310) || EquipNumSearch(2311))
+	{//Warlock Set || Archbishop Set || Royal Guard Set || Sorcerer Set || Shadow Chaser Set
+		n_tok[bon_MDEFIGN_RC_ALL] += n_A_SHADOW_SHIELD_DEF_PLUS + n_A_SHADOW_WEAPON_DEF_PLUS;
 	}
 }

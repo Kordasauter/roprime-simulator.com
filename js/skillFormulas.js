@@ -28,6 +28,7 @@ var RANGED_SKILLS = [
     skill_MIWA_GREAT_ECHO,
 	skill_MIWA_SEVERE_RAINSTORM,
 	skill_RUN_HUNDRED_SPEAR,
+	skill_RUN_SONIC_WAVE,
     skill_GEN_CART_CANNON,
     skill_SUR_RAMPAGE_BLASTER,
     skill_SUR_KNUCKLE_ARROW,
@@ -1589,6 +1590,7 @@ function CalcSkillDamage()
 		}
 		else if ( n_A_ActiveSkill === skill_RUN_SONIC_WAVE )
 		{
+			damageType = kDmgTypeRanged;
 			if(PATCH == 0)
 			{
 				// 600%-1000% damage
@@ -4802,7 +4804,13 @@ function CalcSkillDamage()
 		{ // Imperial Set gives 10% more damage
 			impearialSetBonus = 1.1;
 		}
-		
+		let HolyMagicMul = 0;
+		//Headless Mule Card
+		HolyMagicMul += (CardNumSearch(705) * 20);
+		//Mutant Heart Hunter Sanare Card
+		HolyMagicMul += (CardNumSearch(845) * 5);
+		if(n_A_HEAD_DEF_PLUS >= 9)
+			HolyMagicMul += (CardNumSearch(845) * 5);
 		if(PATCH == 0)
 		{
 			// Calculate Physical portion
@@ -4827,6 +4835,7 @@ function CalcSkillDamage()
 			{
 				magicDamage[i] = n_A_MATK[i] * w_SkillMod;
 				magicDamage[i] *= n_A_JobLV / 25.0;
+				magicDamage[i] *= 1+(HolyMagicMul/100);
 				magicDamage[i] = CalcMagicDamage( magicDamage[i] );
 			}
 			myInnerHtml( "CRInum", magicDamage[0] + "-" + magicDamage[2], 0 );
@@ -4852,6 +4861,7 @@ function CalcSkillDamage()
 			for ( var i = 0; i < 3; i++ )
 			{
 				magicDamage[i] = n_A_MATK[i] * w_SkillMod;
+				magicDamage[i] *= 1+(HolyMagicMul/100);
 				magicDamage[i] = CalcMagicDamage( magicDamage[i] );
 			}
 			myInnerHtml( "CRInum", magicDamage[0] + "-" + magicDamage[2], 0 );
@@ -4875,6 +4885,7 @@ function CalcSkillDamage()
 			for ( var i = 0; i < 3; i++ )
 			{
 				magicDamage[i] = n_A_MATK[i] * w_SkillMod;
+				magicDamage[i] *= 1+(HolyMagicMul/100);
 				magicDamage[i] = CalcMagicDamage( magicDamage[i] );
 			}
 			myInnerHtml( "CRInum", magicDamage[0] + "-" + magicDamage[2], 0 );

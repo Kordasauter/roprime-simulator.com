@@ -610,15 +610,19 @@ function AdjustJobLevelList( job )
 	{
 		maxJobLvl = 10;
 	}
-	else if ( job <= cls_ALC || job == cls_KAGOB || ( cls_HSWO <= job && job <= cls_SL ) || job == cls_ENOVI || job == cls_SUM) // 1st~3rd
+	else if ( job <= cls_ALC || ( cls_HSWO <= job && job <= cls_SL ) || job == cls_ENOVI || job == cls_SUM) // 1st~3rd
 	{
 		maxJobLvl = 50;
+	}
+	else if ( job == cls_KAGOB || job == cls_REB ) // KAG/OBO/REBEL
+	{
+		maxJobLvl = 60;
 	}
 	else if ( job === cls_SNOVI ) // SNovi
 	{
 		maxJobLvl = 99;
 	}
-        else if ( (cls_RUN <= job && job <= cls_GENt) || job == cls_REB )
+        else if ( (cls_RUN <= job && job <= cls_GENt) )
         {
 			if(PATCH == 0)
 				maxJobLvl = 60;

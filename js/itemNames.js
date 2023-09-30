@@ -1,4 +1,5 @@
 ﻿{ // ItemNames
+//[ID,"Alt_Name","Alt_description","Name","Description",0]
 ITEM_NAME = [
 [0,0,0,"(Unarmed)",0]
 ,[1,0,0,"Knife",0]
@@ -142,7 +143,7 @@ ITEM_NAME = [
 ,[139,0,0,"Whip",0]
 ,[140,0,0,"Rante Whip",0]
 ,[141,0,0,"Chemeti Whip",0]
-,[142,0,0,"(No Upper Headgear)",0]
+,[142,"(Без верхнего головного убора)",0,"(No Upper Headgear)",0]
 ,[143,0,0,"Poo Poo Hat",0]
 ,[144,0,0,"Wedding Veil",0]
 ,[145,0,0,"Bao Bao",0]
@@ -2434,8 +2435,8 @@ ITEM_NAME = [
 ,[2418,0,0,"Jejecap","Increase the healing effect of Mastela Fruit by 70%",0]
 ,[2419,0,0,"Arquien's Necklace","<br>Reduces the SP cost of Power Swing by 2.<br>Adds a chance of gaining Candy, Candy Cane or Chocolate Drink when a monster is killed.<br>Increases the recovery rate of Candy and Candy Cane consumables by 100%.",0]
 ,[2420,0,0,"Sea Captain Hat","",0]
-,[2421,0,0,"Violet Halo","",0]
-,[2422,0,0,"Violet Halo + Dark Blinder","",0]
+,[2421,"Фиолетовые крылья",0,"Violet Halo","",0]
+,[2422,"Фиолетовые крылья + ???",0,"Violet Halo + Dark Blinder","",0]
 ,[2423,0,0,"Swordman Shadow Earring","Reduces SP cost of Bash by 20%.<br>For every refine level reduces SP cost of Bash by 3%.",0]
 ,[2424,0,0,"Swordman Shadow Pendant","",0]
 ,[2425,0,0,"Swordman Shadow Earring + Pendant","",0]
@@ -2634,11 +2635,17 @@ ITEM_NAME = [
 ,[2618,0,0,"Illusion Pole Axe + Illusion Shoes",0]
 ,[2619,0,0,"Illusion Huuma Wing Shuriken + Illusion Apple of Archer",0]
 ,[2620,0,0,"Illusion Iron Driver + Illusion Muffler",0]
-// ,[2621,0,0,"PlaceHolder",0]
-// ,[2622,0,0,"PlaceHolder",0]
+,[2621,"Шлем жреца-стража",0,"Divine Guard Hat",0]
+,[2622,"Спасательный свисток","<br>Если сумма этих 6 характеристик больше 600:<br>физ. урон по врагам любых элементов дополнительно +2%, Уворот +5.","Rescue Whistle","<br>If the sum of 6 stats is above 600:<br>physical damage inflicted on any property enemies increases by 2%, Flee +5.",0]
+,[2623,"Магический нейромодулятор",0,"Magic Neuromodulator",0]
+,[2624,"Магический нейромодулятор + Фиолетовые крылья",0,"Magic Neuromodulator + Violet Halo",0]
+,[2625,"Молния богов",0,"Keraunos",0]
+,[2626,"Маска кровопийцы","Дает шанс восстановить HP в размере 5% от нанесенного врагу урона<br>Отменяет автовосстановление HP и SP<br>Нельзя заточить или сломать","Blood Sucker","Has a chance to drain 5% HP out of the damage given to the enemy.<br>Disables autorecovery for HP and SP.<br>Cannot be refined or destroyed.",0]
+,[2627,"Кольцо Гигеса",0,"Gyges Ring",0]
+,[2628,"Капюшон Пиаметты","При заточке на +12 и выше игнорирует штраф на размер монстров.","Piamette Hood","When refined to +12 or higher:<br>ignores the size penalty.",0]
+// ,[2629,0,0,"PlaceHolder",0]
+// ,[2630,0,0,"PlaceHolder",0]
 ]
 };
-
-//[If weapon and garment refine are lv +7 and higher]<br>-<br><br>[If the combined weapon and garment refine is lv +18 and higher]<br>-<br><br>[If the combined weapon and garment refine is lv +22 and higher]<br>-
 // ,[,0,0,"",0]
 // ,[,0,0,"","",0]

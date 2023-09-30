@@ -1432,7 +1432,7 @@ JobSkillActiveOBJ = [
 ,[ 71,1,131, 1, 0, 1]
 ,[ 72,1,125, 5, 0, 6]
 ,[ 73,1,  7,10, 0, 1]
-,[ 74,1, 25, 5, 0, 1]
+,[ 74,1, 25, 5, 0, 1]// Heal 5 when Attacking
 ,[ 75,0,134, 1, 0, 6]
 ,[ 76,1,125, 1, 0, 1]
 ,[ 77,0,239, 1,10, 1]
@@ -1503,29 +1503,30 @@ JobSkillActiveOBJ = [
 ,[142,0, 94, 3, 0, 6] // Sanctuary 3  When recieving physical damage
 ,[143,0,620, 1, 0, 9] // Maelstrom 1  When recieving magical damage
 ,[144,0,534, 3, 0, 6] // Drain Life 3  When recieving physical damage
-,[145,0,267, 3, 0, 6] // Assumptio 3
-,[146,1,450, 5, 0, 1] // Ignition Break 5
-,[147,1,679, 5, 0, 4] // Killing Cloud 5
-,[148,1, 51, 5, 0, 1] // Fire Bolt 5
-,[149,1, 54, 5, 0, 1] // Cold Bolt 5
-,[150,1,130, 5, 0, 1] // Frost Nova 5
-,[151,1,678, 3, 0, 1] // Psychic Wave 3
-,[152,1, 57, 5, 0, 1] // Thunder Storm 5
-,[153,1, 40, 3, 1, 1] // Double Strafe 3
-,[154,1, 52, 5, 0, 4] // Fire Ball 5
-,[155,1,130,10, 0, 1] // Frost Nova 10
-,[156,1,678, 1, 0, 1] // Psychic Wave 1
-,[157,1,276, 1, 0, 4] // Mystical Amplification 1
-,[158,0,209, 1, 0, 1] // Dazzler 1
-,[159,1,102, 6, 0, 1] // Turn Undead 6
-,[160,1,277, 5, 0, 1] // Napalm Vulcan 5
-,[161,1, 40, 5, 3, 1] // Double Strafe 5
-,[162,1,125, 3,10, 1] // Meteor Storm 3 (10%)
-,[163,1,125, 4,15, 1] // Meteor Storm 4 (15%)
-,[164,1,125, 5,20, 1] // Meteor Storm 5 (20%)
-,[165,1,541, 3, 2, 1] // Hell Inferno Lv. 3
-,[166,1,541, 5, 0, 1] // Hell Inferno Lv. 5
-,[167,1,436, 6, 0, 1] // Spread Shot Lv. 6
+,[145,0,267, 3, 0, 6] // Assumptio 3 when recieving physical damage
+,[146,1,450, 5, 0, 1] // Ignition Break 5 When Attacking
+,[147,1,679, 5, 0, 4] // Killing Cloud 5 When Attacking
+,[148,1, 51, 5, 0, 1] // Fire Bolt 5 When Attacking
+,[149,1, 54, 5, 0, 1] // Cold Bolt 5 When Attacking
+,[150,1,130, 5, 0, 1] // Frost Nova 5 When Attacking
+,[151,1,678, 3, 0, 1] // Psychic Wave 3 When Attacking
+,[152,1, 57, 5, 0, 1] // Thunder Storm 5 When Attacking
+,[153,1, 40, 3, 1, 1] // Double Strafe 3 When Attacking (1%)
+,[154,1, 52, 5, 0, 4] // Fire Ball 5 When Attacking
+,[155,1,130,10, 0, 1] // Frost Nova 10 When Attacking
+,[156,1,678, 1, 0, 1] // Psychic Wave 1 When Attacking
+,[157,1,276, 1, 0, 4] // Mystical Amplification 1 When Attacking
+,[158,0,209, 1, 0, 1] // Dazzler 1 when recieving physical damage
+,[159,1,102, 6, 0, 1] // Turn Undead 6 When Attacking
+,[160,1,277, 5, 0, 1] // Napalm Vulcan 5 When Attacking
+,[161,1, 40, 5, 3, 1] // Double Strafe 5 When Attacking
+,[162,1,125, 3,10, 1] // Meteor Storm 3 (10%) When Attacking
+,[163,1,125, 4,15, 1] // Meteor Storm 4 (15%) When Attacking
+,[164,1,125, 5,20, 1] // Meteor Storm 5 (20%) When Attacking
+,[165,1,541, 3, 2, 1] // Hell Inferno Lv. 3 When Attacking (2%)
+,[166,1,541, 5, 0, 1] // Hell Inferno Lv. 5 When Attacking
+,[167,1,436, 6, 0, 1] // Spread Shot Lv. 6 When Attacking
+,[168,0, 25, 5, 1, 1] // Heal 5 when recieving physical damage (1%)
 
  //IDAutocast, Type(0=when hit, 1=when attack), SkillID, SkillLVL, Chance, AutoCastTrigger
 ];
