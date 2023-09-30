@@ -141,6 +141,12 @@ function setMenu()
 	str +="<i class=\"fas fa-fw fa-envelope\"></i>";
 	str +="<span>Contact</span></a>";
 	str +="</li>";
+	
+	str +="<li class=\"nav-item\">";
+	str +="<a class=\"nav-link\" href=\"https://discord.gg/Q3U5zEMQg3\">";
+	str +="<i class=\"fa-brands fa-discord\"></i>";
+	str +="<span>Discord</span></a>";
+	str +="</li>";
 
 	str +="<li class=\"nav-item\">";
 	str +="<a class=\"nav-link\" href=\"https://github.com/Kordasauter/roprime-simulator.com\">";
