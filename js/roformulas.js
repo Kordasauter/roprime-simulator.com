@@ -270,6 +270,7 @@ function CalcStatAtk()
 	statusAttack = 0;
 	
 	// LUK and Base Level
+	// statusAttack = ( n_A_LUK / 3 ) + ( n_A_BaseLV / 4 );
 	statusAttack = ( n_A_LUK / 3 ) + ( n_A_BaseLV / 4 );
 	
 	if ( n_A_WeaponType != weapTyp_BOW &&

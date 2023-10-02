@@ -445,7 +445,9 @@ function CalcFinalDamage( damage, type )
 	}
 	damage += aura_blade;
 	damage = Math.floor(tPlusDamCut(damage));	
+	// damage = ApplySkillModifiers( damage );
 	damage = Max( 0, damage );
+		
 	return Math.floor( damage );
 	
 /* Old BattleCalc order
@@ -857,7 +859,9 @@ function ApplySkillModifiers( damage )
 	 n_A_ActiveSkill == skill_SUM_LUNATIC_CARROT_BEAT || n_A_ActiveSkill == skill_SUM_SPIRIT_OF_SAVAGE))
 	{
 		var remainingHP = formElements["SkillSubNum"].value;
-		dmgMultiplier += 30 * remainingHP;
+		// dmgMultiplier += 30 * remainingHP;
+		damage = damage * (100 + (30 * remainingHP)) /100;
+
 	}
 
 	if( (EquipNumSearch( 1723 ) && n_A_ActiveSkill==skill_CR_GRAND_CROSS) || // Shadow Crusader Armor
@@ -1588,6 +1592,7 @@ function ApplySkillModifiers( damage )
 				dmgMultiplier += 10;
 		}
 	}
+
 	damage = damage * (100+StPlusCalc2(bon_DMG_SKILL+n_A_ActiveSkill)+StPlusCard(bon_DMG_SKILL+n_A_ActiveSkill) + dmgMultiplier) /100;
 	
 	/* 

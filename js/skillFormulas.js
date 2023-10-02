@@ -2847,7 +2847,7 @@ function CalcSkillDamage()
 			n_Delay[ksDelayCooldown] = 5.0;
 		}
 		else if(n_A_ActiveSkill == skill_SHA_FEINT_BOMB)
-	{
+		{
 		damageType = kDmgTypeMelee;
 		// w_SkillMod = (n_A_DEX) * (0.5 + (n_A_ActiveSkillLV * 0.5));//prime
 		w_SkillMod = ((n_A_ActiveSkillLV + 1) * (n_A_DEX / 2 )/100);
@@ -2868,14 +2868,24 @@ function CalcSkillDamage()
 		fixedCastTime *= 0.0;
 		variableCastTime *= 1.0;
 		n_Delay[ksDelayCooldown] = 5.0;
-	}
+		}
 
 		CalcAtkMods02( w_SkillMod, 0 );
 		let basedmg = GetBaseDmg( n_A_Weapon_element, false, 0 );
 		for ( var i = 0; i < 3; i++ )
 		{
 			w_MagiclBulet = i;
-			w_DMG[i] = CalcFinalDamage(n_A_DMG[i],i);
+			// if(n_A_ActiveSkill == skill_SUM_PICKY_PECK)
+			// {
+				// console.log("n_A_DMG[i],i : " + n_A_DMG[i]+" , "+i);
+				// console.log("CalcFinalDamage");
+			// }
+			// if(n_A_ActiveSkill != skill_SUM_PICKY_PECK)
+				w_DMG[i] = CalcFinalDamage(n_A_DMG[i],i);
+			// else
+				
+			// if(n_A_ActiveSkill == skill_SUM_PICKY_PECK)
+				// console.log("w_DMG[i],i : " + w_DMG[i]+" , "+i);
 			if ( n_A_ActiveSkill==skill_CR_SHIELD_BOOMERANG_SL )
 			{
 				w_DMG[i] *= 2; 
@@ -2884,6 +2894,7 @@ function CalcSkillDamage()
 			{
 				w_DMG[i] = Math.floor(w_DMG[i] / wActiveHitNum) * wActiveHitNum;
 			}
+			
 			Last_DMG_A[i] = Last_DMG_B[i] = w_DMG[i];
 			InnStr[i] += Last_DMG_A[i];
 			if(wActiveHitNum > 1)
@@ -5536,7 +5547,7 @@ function CalcSkillDamage()
 		n_Delay[ksDelayGlobal] = 1.0;
 		n_Delay[ksDelayCooldown] = 14.0 - (n_A_ActiveSkillLV - 2);
 	}
-	// else if(n_A_ActiveSkill == skill_SHA_FEINT_BOMB)
+	/* else if(n_A_ActiveSkill == skill_SHA_FEINT_BOMB)
 	// {
 		// w_SkillMod = (n_A_DEX / 100) * (0.5 + (n_A_ActiveSkillLV * 0.5));//prime
 		// w_SkillMod = ((n_A_ActiveSkillLV + 1) * (n_A_DEX / 2 ) * (n_A_JobLV / 10) )/100;
@@ -5556,7 +5567,7 @@ function CalcSkillDamage()
 		// fixedCastTime *= 0.0;
 		// variableCastTime *= 1.0;
 		// n_Delay[ksDelayCooldown] = 5.0;
-	// }
+	// }*/
 	// Magic Skills ----------------------------------
 	else
 	{
