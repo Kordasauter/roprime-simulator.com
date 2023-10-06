@@ -2733,8 +2733,18 @@
 ,[2626,itm_type_HEAD_LOWER,0,0,0,0,30,1,0,0,0,0,bon_NONE]//Blood Sucker
 ,[2627,itm_type_ACCESSORY,0,0,0,1,10,50,0,0,0,0,bon_INT,3,bon_MATK,30,bon_SKILL_ENABLE,22,bon_NONE]//Gyges Ring
 ,[2628,itm_type_HEAD_UPPER,0,3,0,1,0,1,0,0,0,0,bon_INT,2,bon_DEX,2,bon_DMG_RC_DEMI_HUMAN,10,bon_MDMG_RC_DEMI_HUMAN,10,bon_NONE]//Piamette Hood
-// ,[2629,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2630,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+,[2629,itm_type_HEAD_MIDDLE,0,0,0,0,10,1,0,0,0,0,bon_RED_CASTDELAY,10,bon_NONE]//New Wave Sunshades
+,[2630,itm_type_HEAD_UPPER,0,0,0,1,1,1,0,0,0,0,"ev_ref",4,bon_HP_MUL,2,"ev_ref",4,bon_SP_MUL,2,"ref_lvl",9,bon_HP_REG,40,"ref_lvl",9,bon_SP_REGEN,40,"ref_lvl",12,bon_HP_MUL,3,"ref_lvl",9,bon_SP_MUL,3,bon_NONE]//Green Maiden
+,[2631,itm_type_HEAD_UPPER,0,0,0,1,1,1,0,0,0,0,bon_MATK_MUL,30,bon_DMG_CRIT,30,"ev_ref",4,bon_HP_MUL,2,"ev_ref",4,bon_SP_MUL,2,"ref_lvl",9,bon_HP_REG,40,"ref_lvl",9,bon_SP_REGEN,40,"ref_lvl",12,bon_HP_MUL,3,"ref_lvl",9,bon_SP_MUL,3,bon_NONE]//Green Maiden (transformed)
+,[2632,itm_type_HEAD_UPPER,0,8,0,1,20,1,0,0,0,0,bon_RED_RC_DEMI_HUMAN,5,bon_DMG_RC_DEMI_HUMAN,10,bon_NONE]//Drooping Panda
+,[2633,itm_type_HEAD_LOWER,0,0,0,0,20,1,0,0,0,0,bon_ASPD_ADD,1,bon_NONE]//Panda Balloon
+// ,[2634,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2635,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2636,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2637,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2638,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2639,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2640,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
 
 
 // ,[,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK,50,"set_ref"+(fl_WEAPON+fl_HEAD),7,bon_RED_CAST,-10,"set_sum"+(fl_WEAPON+fl_HEAD),18,bon_MDMG_SIZ_SMALL,15,"set_sum"+(fl_WEAPON+fl_HEAD),18,bon_MDMG_SIZ_MEDIUM,15,"set_sum"+(fl_WEAPON+fl_HEAD),22,bon_MATK,50,"set_sum"+(fl_WEAPON+fl_HEAD),22,bon_INC_MAGIC_FIRE,20,bon_NONE]//Illusion Fancy Flower + Illusion Bazerald
