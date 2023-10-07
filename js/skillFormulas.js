@@ -499,7 +499,7 @@ function CalcSkillDamage()
 				}
 			}
 			
-			if ( n_A_WeaponType == weapTyp_BOW && SkillSearch( skill_RAN_FEAR_BREEZE ) )
+			if ( n_A_WeaponType == weapTyp_BOW && SkillSearch( skill_RAN_FEAR_BREEZE ) && n_A_ActiveSkill == skill_ALL_BASIC_ATTACK)
 			{
 				var breezeLevel = SkillSearch( skill_RAN_FEAR_BREEZE );
 				var minBreezeAttacks = 2.0;
