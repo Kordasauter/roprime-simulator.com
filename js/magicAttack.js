@@ -1243,8 +1243,8 @@ function CalcMagicDamage( rawDamage )
 	
 //Multiplier (size)
 	wX = n_tok[bon_MDMG_SIZ_SMALL + Math.floor(n_B[en_SIZE])];
-	wX += 
-	wBMC2 = wBMC2 * ( 100 + wX ) / 100;
+	 // StPlusEnchant(i)
+	wX += wBMC2 = wBMC2 * ( 100 + wX ) / 100;
 	
 //Multiplier (element)
 	wX = n_tok[bon_MDMG_ELE_NEUTRAL + Math.floor(n_B[en_ELEMENT]/10)];

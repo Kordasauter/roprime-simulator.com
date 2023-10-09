@@ -4779,7 +4779,7 @@ function CalcSkillDamage()
 		}
 		else if(PATCH == 1 || PATCH == 2)
 		{
-			// ATK [{(Skill Level x 150) + Caster s STR + Shield Weight} x Caster s Base Level / 100] % + (Caster s VIT x Shield upgrade level)
+			// ATK [{(Skill Level x 200) + Caster s STR + Shield Weight} x Caster s Base Level / 100] % + (Caster s VIT x Shield upgrade level)
 			w_SkillMod = ( ( n_A_ActiveSkillLV * 2.0 ) + ( ( n_A_STR + shieldWeight ) / 100.0 ) ) * n_A_BaseLV / 100.0;
 		}
 		w_SkillMod *= imperialShieldBonus;
@@ -4793,7 +4793,7 @@ function CalcSkillDamage()
 		// post damage to form
 		for ( var i = 0; i < 3; i++ )
 		{
-			w_DMG[i] = physicalDamage[i];
+			w_DMG[i] = CalcFinalDamage2(physicalDamage[i],0);
 			Last_DMG_A[i] = w_DMG[i];
 			InnStr[i] += Math.floor( Last_DMG_A[i] );
 		}

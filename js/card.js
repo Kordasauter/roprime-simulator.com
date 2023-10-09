@@ -894,7 +894,7 @@ function SetCard()
 ,[803,   itm_type_SET,"Nightmare Mummy Set","Increase the probability of causing Sleep to all targets on 11x11 cells.",bon_RED_ELE_NEUTRAL,5,0]
 ,[804,   itm_type_SET,"Nightmare Arclouse + Nightmare Minotaur","",bon_RED_RC_BRUTE,5,bon_RED_RC_UNDEAD,5,bon_DEFIGN_RC_BRUTE,50,bon_DEFIGN_RC_UNDEAD,50,0]
 ,[805,   itm_type_SET,"Nightmare Arclouse + Nightmare Mimic","",bon_RED_RC_BRUTE,5,bon_RED_RC_UNDEAD,5,bon_MDEFIGN_RC_BRUTE,50,bon_MDEFIGN_RC_UNDEAD,50,0]
-,[806,   card_comp_WEAPON,"Nightmare Amon Ra","",bon_MDMG_ELE_DARK,50,bon_MDMG_ELE_UNDEAD,50,bon_MDMG_RC_DEMON,50,bon_MDMG_RC_UNDEAD,50,0]
+,[806,   card_com_ARMOR,"Nightmare Amon Ra","",bon_MDMG_ELE_DARK,50,bon_MDMG_ELE_UNDEAD,50,bon_MDMG_RC_DEMON,50,bon_MDMG_RC_UNDEAD,50,0]
 //Undersea Tunnel (6 floor)
 ,[807,   card_comp_HEAD,"King Dramoh","[Swordman jobs]<br>[For each 3 refine Lv or item]<br>STR +1.",bon_STR,2,0]
 ,[808,   card_comp_WEAPON,"Sropho","When dealing melee physical attack, has a small chance to cause Crystalisation status to the target.",0]

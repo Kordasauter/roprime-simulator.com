@@ -1643,6 +1643,8 @@ function ApplySkillModifiers( damage )
 		var randomNumber = Math.floor( Math.random() * ( maxPercentage - 14 ) ) + 15;
 		gloomyMultiplier = randomNumber / 100.0;
 		gloomyMultiplier += 1.0;
+		if( n_A_ActiveSkill == skill_ROY_SHIELD_PRESS)
+			console.log("shield press");
 		
 		if ( n_A_ActiveSkill == skill_KN_BRANDISH_SPEAR   ||
 		   	 n_A_ActiveSkill == skill_CR_SHIELD_BOOMERANG ||

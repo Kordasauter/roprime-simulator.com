@@ -6142,7 +6142,8 @@ function calcASPD()
 	
 	// Stat ASPD --------------------------------------------------
 	// statASPD = Math.sqrt( ( n_A_AGI * 9.9987 ) + ( n_A_DEX * 0.1922 ) );
-	statASPD = Math.sqrt( ( n_A_AGI * 9.999 ) + ( n_A_DEX * 0.1921 ) );
+	// statASPD = Math.sqrt( ( n_A_AGI * 9.999 ) + ( n_A_DEX * 0.1921 ) );
+	statASPD = Math.sqrt( ( n_A_AGI * 9.999 ) + ( n_A_DEX * 0.19212 ) );
 
 	// flat ASPD bonuses --------------------------------------
 	var shieldPenalty = 0;
