@@ -2738,9 +2738,9 @@
 ,[2631,itm_type_HEAD_UPPER,0,0,0,1,1,1,0,0,0,0,bon_MATK_MUL,30,bon_DMG_CRIT,30,"ev_ref",4,bon_HP_MUL,2,"ev_ref",4,bon_SP_MUL,2,"ref_lvl",9,bon_HP_REG,40,"ref_lvl",9,bon_SP_REGEN,40,"ref_lvl",12,bon_HP_MUL,3,"ref_lvl",9,bon_SP_MUL,3,bon_NONE]//Green Maiden (transformed)
 ,[2632,itm_type_HEAD_UPPER,0,8,0,1,20,1,0,0,0,0,bon_RED_RC_DEMI_HUMAN,5,bon_DMG_RC_DEMI_HUMAN,10,bon_NONE]//Drooping Panda
 ,[2633,itm_type_HEAD_LOWER,0,0,0,0,20,1,0,0,0,0,bon_ASPD_ADD,1,bon_NONE]//Panda Balloon
-// ,[2634,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2635,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2636,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+,[2634,itm_type_GARMENT,0,10,0,1,50,50,0,0,0,0,bon_DMG_CRIT,3,bon_NONE]//Bloody Muffler
+,[2635,itm_type_HEAD_MIDDLE,0,2,0,1,10,100,0,0,0,0,bon_MDMG_SIZ_SMALL,10,bon_MDMG_SIZ_MEDIUM,10,bon_MDMG_SIZ_LARGE,10,bon_RED_RC_DEMI_HUMAN,5,bon_NONE]//Vermillion Ribbon
+,[2636,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_CRIT,5,bon_CRIT,10,"garm_ref_lvl",5,bon_DMG_CRIT,3,"garm_ref_lvl",7,bon_DMG_CRIT,4,bon_NONE]//Bloody Muffler + Critical Ring
 // ,[2637,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
 // ,[2638,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
 // ,[2639,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
@@ -3046,7 +3046,19 @@ function BuildItemDescription( bonusType, bonusValue )
 	{
 		CBIstr += GetWord(257) + "[All]" + GetWord(258) + wIS + bonusValue +"%<br/>";
 	}
-	
+	if(bonusType  == bon_MDMG_SIZ_SMALL)
+	{
+		CBIstr += GetWord(273) + "[" + SizeOBJ[0][Language] + "]" + GetWord(180) + wIS + bonusValue +"%<br/>";
+	}
+	if(bonusType  == bon_MDMG_SIZ_MEDIUM)
+	{
+		CBIstr += GetWord(273) + "[" + SizeOBJ[1][Language] + "]" + GetWord(180) + wIS + bonusValue +"%<br/>";
+	}
+	if(bonusType  == bon_MDMG_SIZ_LARGE)
+	{
+		CBIstr += GetWord(273) + "[" + SizeOBJ[2][Language] + "]" + GetWord(180) + wIS + bonusValue +"%<br/>";
+	}
+
 	return CBIstr;
 }
 
@@ -3463,6 +3475,7 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2619,2610,2373,"NULL"] //Illusion Huuma Wing Shuriken + Illusion Apple of Archer
 ,[2620,2611,2374,"NULL"] //Illusion Iron Driver + Illusion Muffler
 ,[2624,2623,2421,"NULL"] //Magic Neuromodulator + Violet Halo
+,[2636,2634,330,"NULL"] //Bloody Muffler + Critical Ring
 // ,[,,,"NULL"] //
 // ,[,,,"NULL"] //
 
