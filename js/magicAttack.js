@@ -273,25 +273,7 @@ function CalcMagicDamage( rawDamage )
 	var matkMultiplier = 0;
 	// matkMultiplier = StPlusCalc2( 5000 + n_A_ActiveSkill ) + StPlusCard( 5000 + n_A_ActiveSkill /*+ StPlusEnchant( 5000 + n_A_ActiveSkill /*);
 	// matkMultiplier = StPlusCalc2( 5000 + n_A_ActiveSkill ) + StPlusCard( 5000 + n_A_ActiveSkill );
-	
-	if ( n_A_ActiveSkill === skill_MA_NAPALM_BEAT ||
-		 n_A_ActiveSkill === skill_MA_SOUL_STRIKE ||
-		 n_A_ActiveSkill === skill_HW_NAPALM_VULCAN )
-	{
-		if ( n_A_JobSearch() === cls_MAG )
-		{ // Banshee card gives a bonus to mages who use these skills
-			matkMultiplier += 20 * CardNumSearch(card_HEAD_BANSHEE);
-		}
-	}
-	
-	// if ( n_A_ActiveSkill==skill_WI_EARTH_SPIKE ||
-		 // n_A_ActiveSkill == skill_WI_HEAVENS_DRIVE )
-	// {
-		// if ( EquipNumSearch( 1146 ) )
-		// { // Katyusha Flowers?
-			// matkMultiplier += n_A_HEAD_DEF_PLUS;
-		// }
-	// }
+
 	
 //skills
 	if ( n_A_ActiveSkill == skill_MIWA_METALLIC_SOUND )

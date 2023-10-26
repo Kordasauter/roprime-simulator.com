@@ -1591,6 +1591,24 @@ function ApplySkillModifiers( damage )
 			dmgMultiplier += 3 * SkillSearch( skill_HP_BASILICA );
 		}
 	}
+		if ( n_A_ActiveSkill === skill_MA_NAPALM_BEAT ||
+		 n_A_ActiveSkill === skill_MA_SOUL_STRIKE ||
+		 n_A_ActiveSkill === skill_HW_NAPALM_VULCAN )
+	{
+		if ( n_A_JobSearch() === cls_MAG )
+		{ // Banshee card gives a bonus to mages who use these skills
+			dmgMultiplier += 20 * CardNumSearch(card_HEAD_BANSHEE);
+		}
+	}
+	
+	// if ( n_A_ActiveSkill==skill_WI_EARTH_SPIKE ||
+		 // n_A_ActiveSkill == skill_WI_HEAVENS_DRIVE )
+	// {
+		// if ( EquipNumSearch( 1146 ) )
+		// { // Katyusha Flowers?
+			// dmgMultiplier += n_A_HEAD_DEF_PLUS;
+		// }
+	// }
 
 	damage = damage * (100+StPlusCalc2(bon_DMG_SKILL+n_A_ActiveSkill)+StPlusCard(bon_DMG_SKILL+n_A_ActiveSkill) + dmgMultiplier) /100;
 	
