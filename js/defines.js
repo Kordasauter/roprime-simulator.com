@@ -150,7 +150,7 @@ bon_USR_DEF_DIV = 24; // 2 => userHDef/2 & userSDef/2
 
 bon_DMG_RANGE = 25;
 bon_DMG_BOSS = 26;
-bon_MDMG_BOSS = 26;
+// bon_MDMG_BOSS = 26;
 bon_DMG_SIZ_SMALL = 27;
 bon_DMG_SIZ_MEDIUM = 28;
 bon_DMG_SIZ_LARGE = 29;
@@ -429,6 +429,11 @@ bon_INC_MAGIC_ALL = 367;
 bon_MDMG_SIZ_SMALL = 368;
 bon_MDMG_SIZ_MEDIUM = 369;
 bon_MDMG_SIZ_LARGE = 370;
+
+bon_MDMG_BOSS = 371;
+bon_WEAPON_MATK = 372;
+
+
 
 // [ +% Damage on Single MonsterID: (BonusID - 1000) 1000 - 2999 ] 
 bon_DMG_MONSTER = 1000;

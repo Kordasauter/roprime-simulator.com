@@ -680,10 +680,6 @@ function CalcEquipAtk()
 	{ //Fallen Angel Wing
 		equipmentAttack += Math.floor(SU_STR/20);
 	}
-	if(EquipNumSearch(1681))
-	{ //"Amistr Hat"
-		equipmentAttack += Math.floor( n_A_HEAD_DEF_PLUS/2 ) * 10;
-	}
 	if(EquipNumSearch(1682))
 	{ //"Officer's Cap"
 		equipmentAttack += Math.floor( n_A_HEAD_DEF_PLUS/2 );
@@ -895,7 +891,6 @@ function CalcEquipAtk()
 		EquipNumSearch(2054) || //Bow of Narcissus
 		EquipNumSearch(2057) || //Hand of Death
 		EquipNumSearch(2058) || //Steel Flower
-		EquipNumSearch(2060) || //Fatalist
 		EquipNumSearch(2061) || //Empyrean
 		EquipNumSearch(2062) || //Scarlet Dragon's Bow
 		EquipNumSearch(2067) || //Avenger
@@ -906,8 +901,7 @@ function CalcEquipAtk()
 		EquipNumSearch(2074) || //Claws of the Bifrost
 		EquipNumSearch(2075) || //Four Mirrors
 		EquipNumSearch(2079) || //Crimson Rose
-		EquipNumSearch(2082) || //Guttling Gun
-		EquipNumSearch(2083) ) //Meowmeow Foxtail
+		EquipNumSearch(2082) ) //Guttling Gun
 	{
 		equipmentAttack += 10 * Math.floor(n_A_Weapon_ATKplus / 2);
 	}
@@ -1175,13 +1169,9 @@ function CalcEquipAtk()
 	if( EquipNumSearch(2255) || // Wyrmeater's Shadow Gloves
 		EquipNumSearch(2256) || // Tiger Spirit Shadow Gloves
 		EquipNumSearch(2257) || // Katra's Shadow Gloves
-		EquipNumSearch(2258) || // Exorcist Shadow Gloves
 		EquipNumSearch(2259) || // Rondius' Shadow Gloves
-		EquipNumSearch(2260) || // Gunther's Shadow Gloves
 		EquipNumSearch(2261) || // Talos' Shadow Gloves
-		EquipNumSearch(2262) || // Sylphir's Shadow Gloves
 		EquipNumSearch(2263) || // Dordaleon's Shadow Gloves
-		EquipNumSearch(2264) || // Osma's Shadow Gloves
 		EquipNumSearch(2265) || // Garmia's Shadow Gloves
 		EquipNumSearch(2266) )  // Boscard's Shadow Gloves
 	{
@@ -1594,14 +1584,6 @@ function CalcElementalMod( weaponElement )
 			}
 		}
 	}
-	if ( EquipNumSearch( 2040 ) )
-	{//Armor of Sixtus the Wise
-		if(n_A_BODY_DEF_PLUS >= 11)
-		{
-			n_tok[bon_MDMG_ELE_WIND] += 30;
-			n_tok[bon_MDMG_ELE_EARTH] += 30;
-		}
-	}
 	if(EquipNumSearch(2075) && n_A_Weapon_ATKplus >= 11)
 	{//Four Mirrors
 		n_tok[bon_DMG_ELE_FIRE] += 15;
@@ -1689,14 +1671,6 @@ function CalcRacialMod()
 	if ( EquipNumSearch( 1666 ) &&  n_A_HEAD_DEF_PLUS >= 6 )
 	{// "Headband Beret"
 		n_tok[bon_MDMG_RC_DEMI_HUMAN] += n_A_HEAD_DEF_PLUS - 5;
-	}
-	if ( EquipNumSearch( 2040 ) )
-	{//Armor of Sixtus the Wise
-		if(n_A_BODY_DEF_PLUS >= 9)
-		{
-			n_tok[bon_MDMG_RC_BRUTE] += 30;
-			n_tok[bon_MDMG_RC_DEMON] += 30;
-		}
 	}
 	//GLORIOUS WEAPONS
 	if ( (EquipNumSearch( 1076 ) || EquipNumSearch( 1077 ) || EquipNumSearch( 1081 ) ||
@@ -1996,10 +1970,6 @@ function CalcAttackMod()
 			n_tok[bon_PHY_ATK] += 5;
 		}
 	}
-	if(EquipNumSearch(1681))
-	{ //"Amistr Hat"
-		if(n_A_HEAD_DEF_PLUS >= 11) { n_tok[bon_PHY_ATK] += 5;}	
-	}
 	if(EquipNumSearch(1702) || EquipNumSearch(1860) || EquipNumSearch(1942))
 	{ //"Dog Cap"        or    "Feathered Tricorn"   or   General's Helmet
 		if(n_A_HEAD_DEF_PLUS >= 9)
@@ -2025,10 +1995,6 @@ function CalcAttackMod()
 	if(EquipNumSearch(2079) && n_A_Weapon_ATKplus >= 7)
 	{//Crimson Rose
 		n_tok[bon_PHY_ATK] += 5;
-	}
-	if(EquipNumSearch(2083))
-	{//Meowmeow Foxtail
-		n_tok[bon_PHY_ATK] += 2 * Math.floor(n_A_Weapon_ATKplus / 3);
 	}
 	if(EquipNumSearch(2120) || // "Evil Slayer Stabber Dagger"
 	   EquipNumSearch(2121) || // "Evil Slayer Destroyer Hammer"
@@ -3686,7 +3652,6 @@ function calcHP()
 		EquipNumSearch(2272) || // Gunther's Shadow Ring
 		EquipNumSearch(2273) || // Talos' Shadow Ring
 		EquipNumSearch(2274) || // Sylphir's Shadow Ring
-		EquipNumSearch(2275) || // Dordaleon's Shadow Ring
 		EquipNumSearch(2276) || // Osma's Shadow Ring
 		EquipNumSearch(2277) || // Garmia's Shadow Ring
 		EquipNumSearch(2278) )  // Boscard's Shadow Ring
@@ -5155,10 +5120,6 @@ function calcHardMDef(n_A_MDEF)
 	{ // Chameleon Armor
 		n_A_MDEF += 5;
 	}
-	if ( EquipNumSearch(1169))
-	{ // LacrimaStick
-		n_A_MDEF += n_A_Weapon_ATKplus;
-	}
 	if ( EquipNumSearch(1800)  ||  EquipNumSearch( 1806 ))
 	{//Bangungot Boots of Nightmare
 		n_A_MDEF += n_A_SHOES_DEF_PLUS;
@@ -6539,12 +6500,12 @@ function calcASPD()
 	{//Trident of Undine || Hand of Death || Empyrean || All-Holy Book
 		equipASPD += 10;
 	}
-	if(EquipNumSearch(2058) || EquipNumSearch(2059) || EquipNumSearch(2060))
-	{//Steel Flower || Magic Sword || Fatalist
+	if(EquipNumSearch(2058))
+	{//Steel Flower
 		equipASPD += 2 *  Math.floor(n_A_Weapon_ATKplus / 3);
 	}
-	if(EquipNumSearch(2079) || EquipNumSearch(2080))
-	{//Crimson Rose || Master of Souls
+	if(EquipNumSearch(2079))
+	{//Crimson Rose
 		equipASPD += 3 *  Math.floor(n_A_Weapon_ATKplus / 3);
 	}
 	if(EquipNumSearch(1942))
@@ -6799,8 +6760,8 @@ function calcASPD()
 	{
 		flatASPD += 1;
 	}
-	if((EquipNumSearch(2079) || EquipNumSearch(2080)) && n_A_Weapon_ATK >= 7)
-	{//Crimson Rose || Master of Souls
+	if(EquipNumSearch(2079) && n_A_Weapon_ATK >= 7)
+	{//Crimson Rose
 		flatASPD += 1;
 	}
 	if(EquipNumSearch(2131))
@@ -7035,24 +6996,6 @@ function CalcVariableCast()
 			VCT -= 5;
 		}
 	}
-	if(EquipNumSearch(1681))
-	{ //"Amistr Hat"
-		if ( n_A_HEAD_DEF_PLUS >= 7 )
-		{
-			VCT -= 10;
-		}
-	}
-	if( EquipNumSearch( 1759 ) )
-	{ // Diabolic Halo
-		if(n_A_HEAD_DEF_PLUS >= 7)
-		{
-			VCT -= 10;
-		}
-		if(EquipNumSearch( 1452 ) && EquipNumSearch( 1453 ))
-		{// Mikatsuki + Raksasa Dagger
-			VCT -= n_A_Weapon_ATKplus + n_A_Weapon2_ATKplus;
-		}
-	}	
 	if( EquipNumSearch( 1964 ) )
 	{//Hero Magic Coat
 		if(n_A_BODY_DEF_PLUS % 2 == 1) // If an odd refine level
@@ -7077,8 +7020,9 @@ function CalcVariableCast()
 		if(n_A_SHOES_DEF_PLUS >=13)
 			VCT -= 9;
 	}
-	if( (EquipNumSearch(2053) || EquipNumSearch(2063) || EquipNumSearch(2065) || EquipNumSearch(2072))&& n_A_Weapon_ATKplus >= 9)
-	{//Blade of Light || Rusty Dragon's Wand || Shadow Eater || Mace of the Righteous
+
+	if( ( EquipNumSearch(2063) || EquipNumSearch(2065) ) && n_A_Weapon_ATKplus >= 9)
+	{// Rusty Dragon's Wand || Shadow Eater
 		VCT -= 10;
 	}
 	if(EquipNumSearch(2068) && n_A_Weapon_ATKplus >= 11) 
@@ -7197,13 +7141,6 @@ function CalcVariableCast()
 		if ( n_A_Weapon_ATKplus >= 9 && EquipNumSearch( 1100 ) )
 		{ // Glorious Rifle
 			VCT += 25;
-		}
-	}
-	if ( n_A_ActiveSkill === 131 )
-	{
-		if ( n_A_Weapon_ATKplus >= 10 && EquipNumSearch( 1169 ) )
-		{ // Lacrima Stick
-			VCT -= 8;
 		}
 	}
 	if ( (EquipNumSearch( 1637 ) ) )
@@ -7464,9 +7401,8 @@ function CalcDelay()
 			n_tok[bon_RED_CASTDELAY] += 10;
 		
 	}
-	if((EquipNumSearch(2058) && n_A_Weapon_ATKplus >= 11) ||
-	   (EquipNumSearch(2060) && n_A_Weapon_ATKplus >= 11) )
-	{//Steel Flower || Fatalist
+	if((EquipNumSearch(2058) && n_A_Weapon_ATKplus >= 11))
+	{//Steel Flower
 		n_tok[bon_RED_CASTDELAY] += 7;
 	}
 	if((EquipNumSearch(2051) && n_A_Weapon_ATKplus >= 9) ||//Dragon Slayer (Ancient Weapon)

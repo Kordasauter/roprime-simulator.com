@@ -110,6 +110,22 @@
 								<div class="card-body">
 									<div id="news" class="shadow">
 										<div class="padded">
+											<u><b>26/10/2023:</b></u> 
+											<ul style="margin-left: 5px;">
+												<li><b>Has been fixed :</b></li>
+												<ul>
+													<li>Vermillion Ribbon [1] renamed Red Pope Ribbon [1]</li>
+													<li>Freezing Spear and Wind Blade  skill multiplier has been set to the correct value</li>
+													<li>Fixed an issue with Celine's Brooch [1] and Celine's Ribbon [1] combo, bonus damage against boss-type monsters was counted twice.</li>
+													<li>Magic Sword [2] renamed Winged Sword [2] and changed to Dagger, the sword version will be removed on 09/11/2023</li>
+													<li>Fatalist [2] renamed Fatebringer [2] and changed to Dagger, the sword version will be removed on 09/11/2023</li>
+													<li>Gremlin pet now gives +2 DEX when loyal</li>
+													<li>Magic damages were reworked, I hope it would be more accurate now.<br>Big thanks to SaschaRose for all the tests!</li>
+												</ul>
+											</ul>
+											-Kord
+										</div>
+										<div class="padded">
 											<u><b>17/10/2023:</b></u> 
 											<ul style="margin-left: 5px;">
 												<li><b>Has been added :</b></li>
@@ -120,7 +136,6 @@
 											</ul>
 											-Kord
 										</div>
-										<div class="padded">
 										<div class="padded">
 											<u><b>09/10/2023:</b></u> 
 											<ul style="margin-left: 5px;">
@@ -135,8 +150,25 @@
 											</ul>
 											-Kord
 										</div>
-										<div class="padded">
-											<u><b>07/10/2023:</b></u> 
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Older Updates -->
+						<div class="padded_side" style="overflow-x:auto;width: fit-content;max-width:50%;">
+							<div class="card shadow mb-4">
+								<!-- Card Header -->
+								<div
+									class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+									<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Ragnarok Prime Older Updates</span></h6>
+								</div>
+								<!-- Card Body -->
+								<div class="card-body">
+									<div id="old">
+										<u><b>07/10/2023:</b></u> <input class="button" type="button" value="Show/Hide" onclick="javascript:$('#note07102023').toggle()">	
+										<span style="display: none;" id="note07102023">
+										
 											<ul style="margin-left: 5px;">
 												<li><b>Has been fixed :</b></li>
 												<ul>
@@ -144,9 +176,9 @@
 												</ul>
 											</ul>
 											-Kord
-										</div>
-										<div class="padded">
-											<u><b>06/10/2023:</b></u> 
+										</span><br>
+										<u><b>06/10/2023:</b></u> <input class="button" type="button" value="Show/Hide" onclick="javascript:$('#note06102023').toggle()">	
+										<span style="display: none;" id="note06102023">
 											<ul style="margin-left: 5px;">
 												<li><b>Has been added :</b></li>
 												<ul>
@@ -158,9 +190,9 @@
 												</ul>
 											</ul>
 											-Kord
-										</div>
-										<div class="padded">
-											<u><b>02/10/2023:</b></u> 
+										</span><br>
+										<u><b>02/10/2023:</b></u> <input class="button" type="button" value="Show/Hide" onclick="javascript:$('#note02102023').toggle()">	
+										<span style="display: none;" id="note02102023">
 											<ul style="margin-left: 5px;">
 												<li><b>Has been fixed :</b></li>
 												<ul>
@@ -168,9 +200,9 @@
 												</ul>
 											</ul>
 											-Kord
-										</div>
-										<div class="padded">
-											<u><b>30/09/2023:</b></u> 
+										</span><br>
+										<u><b>30/09/2023:</b></u> <input class="button" type="button" value="Show/Hide" onclick="javascript:$('#note30092023').toggle()">	
+										<span style="display: none;" id="note30092023">
 											<ul style="margin-left: 5px;">
 												<li><b>Has been fixed :</b></li>
 												<ul>
@@ -191,9 +223,9 @@
 												</ul>
 											</ul>
 											-Kord
-										</div>
-										<div class="padded">
-											<u><b>29/09/2023:</b></u> 
+										</span><br>
+										<u><b>29/09/2023:</b></u> <input class="button" type="button" value="Show/Hide" onclick="javascript:$('#note29092023').toggle()">	
+										<span style="display: none;" id="note29092023">
 											<ul style="margin-left: 5px;">
 												<li><b>Has been fixed :</b></li>
 													<ul>
@@ -276,23 +308,7 @@
 												</ul>
 											</ul>
 											-Kord
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						<!-- Older Updates -->
-						<div class="padded_side" style="overflow-x:auto;width: fit-content;max-width:50%;">
-							<div class="card shadow mb-4">
-								<!-- Card Header -->
-								<div
-									class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
-									<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Ragnarok Prime Older Updates</span></h6>
-								</div>
-								<!-- Card Body -->
-								<div class="card-body">
-									<div id="old">
+										</span><br>
 										<u><b>26/08/2023:</b></u> <input class="button" type="button" value="Show/Hide" onclick="javascript:$('#note26082023').toggle()">	
 										<span style="display: none;" id="note26082023">
 											<ul style="margin-left: 5px;">
@@ -3896,7 +3912,7 @@
     <script src="js/sb-admin-2.min.js"></script>
 	
 	<script>
-		var version = '45';
+		var version = '46';
 		var jsassets = [
 		'js/menu.js',
 		];

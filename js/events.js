@@ -2914,7 +2914,6 @@ function ClickShadowArmor( data, isRefine )
 	{//Shadow Monk Armor
 		if(!isRefine)
 		{
-				console.log("ClickShadowArmor : " + s_armor_id);
 			CleanShadowEnchant("A_SHADOW_BODY_ENCHANT");
 			let ench_num = 130;
 			for ( var i = 0; EnchantListOBJ[ench_num][i] != "NULL"; i++ )
@@ -4535,6 +4534,14 @@ function DisplayItemDescription( ItemIndex )
 					descriptionString += "<br>[For each "+ ItemOBJ[ItemIndex][i + 1] + " weapon refine level]<br>";
 				}
 			}
+			if(ItemOBJ[ItemIndex][i] == "ev_weapII_ref")
+			{
+				if(tempDesc != "[For each "+ ItemOBJ[ItemIndex][i + 1] + " off hand weapon refine level]<br>")
+				{
+					tempDesc = "[For each "+ ItemOBJ[ItemIndex][i + 1] + " off hand weapon refine level]<br>";
+					descriptionString += "<br>[For each "+ ItemOBJ[ItemIndex][i + 1] + " off hand weapon refine level]<br>";
+				}
+			}
 			if(ItemOBJ[ItemIndex][i] == "ev_shield_ref")
 			{
 				if(tempDesc != "[For each "+ ItemOBJ[ItemIndex][i + 1] + " shield refine level]<br>")
@@ -4825,6 +4832,14 @@ function DisplayItemDescription( ItemIndex )
 						{
 							tempDesc = "[For each "+ ItemOBJ[setIndex][j + 1] + " weapon refine level]<br>";
 							descriptionString += "<br>[For each "+ ItemOBJ[setIndex][j + 1] + " weapon refine level]<br>";
+						}
+					}
+					if(ItemOBJ[setIndex][j] == "ev_weapII_ref")
+					{
+						if(tempDesc != "[For each "+ ItemOBJ[setIndex][j + 1] + " off hand weapon refine level]<br>")
+						{
+							tempDesc = "[For each "+ ItemOBJ[setIndex][j + 1] + " off hand weapon refine level]<br>";
+							descriptionString += "<br>[For each "+ ItemOBJ[setIndex][j + 1] + " off hand weapon refine level]<br>";
 						}
 					}
 					if(ItemOBJ[setIndex][j] == "ev_shield_ref")

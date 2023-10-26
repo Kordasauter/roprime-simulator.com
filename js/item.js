@@ -86,15 +86,15 @@
 ,[82,weapTyp_MACE,53,135,4,0,80,40,0,0,1,1,bon_RED_RANGE,10,bon_NONE] // "Long Mace"
 ,[83,weapTyp_MACE,53,140,4,"0/1",150,40,0,0,1,1,bon_ELEMENT,6,bon_SKILL_AUTOCAST,5,bon_NONE] // "Grand Cross"
 ,[84,weapTyp_MACE,70,350,4,0,600,95,0,0,0,0,bon_ELEMENT,4,bon_STR,20,bon_DEX,50,bon_ASPD_MUL,10,bon_NONE] // "Mjolnir"
-,[85,weapTyp_ROD,2,15,1,"3/4",40,0,0,0,0,0,bon_MATK,30,bon_NONE] // "Rod"
-,[86,weapTyp_ROD,2,25,2,"2/3",40,12,0,0,0,0,bon_INT,1,bon_MATK,45,bon_NONE] // "Wand"
-,[87,weapTyp_ROD,3,40,2,"2/3",40,12,0,0,0,0,bon_INT,2,bon_MATK,70,bon_NONE] // "Staff"
-,[88,weapTyp_ROD,55,25,3,0,140,73,0,0,0,0,bon_INT,5,bon_AGI,2,bon_MATK,200,bon_TWO_HANDED_STAFF,1,bon_NONE] // "Soul Staff"
-,[89,weapTyp_ROD,3,40,3,0,70,24,0,0,0,0,bon_INT,4,bon_ELEMENT,9,bon_MATK,110,bon_NONE] // "Evil Bone Wand"
-,[90,weapTyp_ROD,3,60,3,"1/2",40,24,0,0,0,0,bon_INT,3,bon_MATK,95,bon_NONE] // "Arc Wand"
-,[91,weapTyp_ROD,3,75,3,0,70,24,0,0,0,0,bon_INT,3,bon_MATK,105,bon_NONE] // "Wand of Occult"
-,[92,weapTyp_ROD,55,120,4,0,240,90,0,0,1,1,bon_INT,6,bon_DEX,2,bon_MATK,200,bon_TWO_HANDED_STAFF,1,bon_NONE] // "Wizardry Staff"
-,[93,weapTyp_ROD,3,130,3,0,70,24,0,0,0,0,bon_STR,10,bon_MATK,100,bon_NONE] // "Mighty Staff"
+,[85,weapTyp_ROD,2,15,1,"3/4",40,0,0,0,0,0,bon_WEAPON_MATK,30,bon_NONE] // "Rod"
+,[86,weapTyp_ROD,2,25,2,"2/3",40,12,0,0,0,0,bon_INT,1,bon_WEAPON_MATK,45,bon_NONE] // "Wand"
+,[87,weapTyp_ROD,3,40,2,"2/3",40,12,0,0,0,0,bon_INT,2,bon_WEAPON_MATK,70,bon_NONE] // "Staff"
+,[88,weapTyp_ROD,55,25,3,0,140,73,0,0,0,0,bon_INT,5,bon_AGI,2,bon_WEAPON_MATK,200,bon_TWO_HANDED_STAFF,1,bon_NONE] // "Soul Staff"
+,[89,weapTyp_ROD,3,40,3,0,70,24,0,0,0,0,bon_INT,4,bon_ELEMENT,9,bon_WEAPON_MATK,110,bon_NONE] // "Evil Bone Wand"
+,[90,weapTyp_ROD,3,60,3,"1/2",40,24,0,0,0,0,bon_INT,3,bon_WEAPON_MATK,95,bon_NONE] // "Arc Wand"
+,[91,weapTyp_ROD,3,75,3,0,70,24,0,0,0,0,bon_INT,3,bon_WEAPON_MATK,105,bon_NONE] // "Wand of Occult"
+,[92,weapTyp_ROD,55,120,4,0,240,90,0,0,1,1,bon_INT,6,bon_DEX,2,bon_WEAPON_MATK,200,bon_TWO_HANDED_STAFF,1,bon_NONE] // "Wizardry Staff"
+,[93,weapTyp_ROD,3,130,3,0,70,24,0,0,0,0,bon_STR,10,bon_WEAPON_MATK,100,bon_NONE] // "Mighty Staff"
 ,[94,weapTyp_BOW,0,15,1,"3/4",50,4,0,0,0,0,bon_NONE] // "Bow"
 ,[95,weapTyp_BOW,0,29,1,"3/4",60,4,0,0,0,0,bon_NONE] // "Composite Bow"
 ,[96,weapTyp_BOW,0,50,2,"2/3",100,18,0,0,0,0,bon_NONE] // "Great Bow"
@@ -396,7 +396,7 @@
 ,[392,weapTyp_DAGGER,1,80,4,0,40,36,0,0,1,1,bon_IGN_DEF_RC_PLANT,1,bon_DMG_RC_PLANT,15,bon_RED_RC_PLANT,15,bon_NONE] // "Weeder Knife"
 ,[393,weapTyp_DAGGER,1,80,4,0,40,36,0,0,1,1,bon_RED_RC_DEMI_HUMAN,10,bon_RED_RC_DEMON,-10,bon_IGN_DEF_RC_DEMI_HUMAN,1,bon_NONE] // "Combat Knife"
 ,[394,weapTyp_DAGGER,1,90,4,0,70,36,0,0,1,1,bon_RED_RC_DEMON,5,bon_RED_RC_DEMI_HUMAN,-10,bon_IGN_DEF_RC_DEMON,1,bon_NONE] // "Exorciser"
-,[395,weapTyp_DAGGER,1,70,4,0,50,36,0,0,1,1,bon_ELEMENT,3,bon_INT,5,bon_MATK,105,bon_NONE] // "Bazerald"
+,[395,weapTyp_DAGGER,1,70,4,0,50,36,0,0,1,1,bon_ELEMENT,3,bon_INT,5,bon_WEAPON_MATK,105,bon_NONE] // "Bazerald"
 ,[396,weapTyp_DAGGER,119,110,4,0,70,36,0,0,1,1,bon_NONE] // "Azoth"
 ,[397,weapTyp_DAGGER,55,55,4,0,40,85,0,0,1,1,bon_CH_STATUS_CURSE,50,bon_NONE] // "Cursed Dagger"
 ,[398,weapTyp_DAGGER,55,140,4,0,50,55,0,0,1,1,bon_CRIT,90,bon_NONE] // "Counter Dagger"
@@ -474,19 +474,19 @@
 ,[470,weapTyp_SWORD,50,140,4,1,100,45,0,0,1,1,bon_CH_STATUS_STUN,5,bon_UNBREAKABLE,1,bon_NONE] // "Stardust Blade"
 ,[471,weapTyp_SPEARII,0,160,4,"0/2",200,60,0,0,1,1,bon_IGN_DEF_RC_DRAGON,1,bon_DMG_BOSS,10,bon_NONE] // "Gae Bolg"
 ,[472,weapTyp_AXE,72,115,2,0,150,14,0,0,0,0,bon_ELEMENT,4,bon_ASPD_MUL,5,bon_NONE] // "Windhawk"
-,[473,weapTyp_ROD,50,70,3,"1/2",50,30,0,0,0,0,bon_MATK,120,bon_MATK_MUL,10,bon_INT,1,bon_NONE] // "Hypnotist''s Staff"'
-,[474,weapTyp_ROD,3,50,3,0,100,24,0,0,0,0,bon_MATK,120,bon_DEX,2,bon_HP_ADD,300,bon_NONE] // "Survivor''s Rod [0] (dex)"'
-,[475,weapTyp_ROD,3,50,3,1,100,24,0,0,0,0,bon_MATK,120,bon_DEX,3,bon_HP_ADD,400,bon_NONE] // "Survivor''s Rod [1] (dex)"'
-,[476,weapTyp_ROD,3,50,3,0,100,24,0,0,0,0,bon_MATK,120,bon_INT,2,bon_HP_ADD,300,bon_NONE] // "Survivor''s Rod [0] (int)"'
-,[477,weapTyp_ROD,3,50,3,1,100,24,0,0,0,0,bon_MATK,120,bon_INT,3,bon_HP_ADD,400,bon_NONE] // "Survivor''s Rod [1] (int)"'
-,[478,weapTyp_ROD,55,60,4,0,50,40,0,0,1,1,bon_ELEMENT,4,bon_MATK,115,bon_RED_CAST,-5,bon_NONE] // "Staff of Wing""Wing Staff"
+,[473,weapTyp_ROD,50,70,3,"1/2",50,30,0,0,0,0,bon_WEAPON_MATK,120,bon_MATK_MUL,10,bon_INT,1,bon_NONE] // "Hypnotist''s Staff"'
+,[474,weapTyp_ROD,3,50,3,0,100,24,0,0,0,0,bon_WEAPON_MATK,120,bon_DEX,2,bon_HP_ADD,300,bon_NONE] // "Survivor''s Rod [0] (dex)"'
+,[475,weapTyp_ROD,3,50,3,1,100,24,0,0,0,0,bon_WEAPON_MATK,120,bon_DEX,3,bon_HP_ADD,400,bon_NONE] // "Survivor''s Rod [1] (dex)"'
+,[476,weapTyp_ROD,3,50,3,0,100,24,0,0,0,0,bon_WEAPON_MATK,120,bon_INT,2,bon_HP_ADD,300,bon_NONE] // "Survivor''s Rod [0] (int)"'
+,[477,weapTyp_ROD,3,50,3,1,100,24,0,0,0,0,bon_WEAPON_MATK,120,bon_INT,3,bon_HP_ADD,400,bon_NONE] // "Survivor''s Rod [1] (int)"'
+,[478,weapTyp_ROD,55,60,4,0,50,40,0,0,1,1,bon_ELEMENT,4,bon_WEAPON_MATK,115,bon_RED_CAST,-5,bon_NONE] // "Staff of Wing""Wing Staff"
 ,[479,weapTyp_BOW,0,100,4,0,120,60,0,0,1,1,bon_IGN_DEF_RC_DRAGON,1,bon_NONE] // "Dragon Wing"
 ,[480,weapTyp_KATAR,0,90,1,4,80,0,0,0,0,0,bon_NONE] // "Specialty Jur"
 ,[481,weapTyp_KATAR,0,115,3,0,120,55,0,0,0,0,bon_CH_STATUS_BLEEDING,3,bon_NONE] // "Loki''s Nail"'
 ,[482,weapTyp_KATAR,0,151,4,0,125,70,0,0,1,1,bon_ELEMENT,7,bon_CRIT,-1,bon_CH_STATUS_CURSE,2,bon_NONE] // "Unholy Touch"
 ,[483,weapTyp_KATAR,0,120,4,0,100,75,0,0,1,1,bon_IGN_DEF_RC_DEMI_HUMAN,1,bon_FLEE,-160,bon_PDODGE,-160,bon_HP_REG,-100,bon_SP_REG,-100,bon_NONE] // "Bloody Roar"
-,[484,weapTyp_BOOK,0,100,3,2,110,60,0,0,0,0,bon_MATK,120,bon_NONE] // "Sage''s Diary"'
-,[485,weapTyp_BOOK,0,140,4,1,150,55,0,0,1,1,bon_MATK,25,bon_STR,3,bon_DEX,2,bon_NONE] // "Hardcover Book"
+,[484,weapTyp_BOOK,0,100,3,2,110,60,0,0,0,0,bon_WEAPON_MATK,120,bon_NONE] // "Sage''s Diary"'
+,[485,weapTyp_BOOK,0,140,4,1,150,55,0,0,1,1,bon_WEAPON_MATK,25,bon_STR,3,bon_DEX,2,bon_NONE] // "Hardcover Book"
 ,[486,weapTyp_BOOK,0,130,4,0,70,70,0,0,1,1,bon_IGN_DEF_RC_DRAGON,1,bon_INT,3,bon_NONE] // "Legacy of Dragon"
 ,[487,weapTyp_KNUCKLE,0,152,4,1,55,70,0,0,1,1,bon_ELEMENT,7,bon_HP_MUL,-2,bon_CH_STATUS_BLEEDING,2,bon_NONE] // "Hatii Claw"
 ,[488,weapTyp_INSTRUMENT,0,110,3,0,90,27,0,0,0,0,bon_ELEMENT,3,bon_NONE] // "Burning Passion Guitar"
@@ -540,7 +540,7 @@
 ,[536,itm_type_SHOES,1001,13,0,1,50,0,0,0,0,0,bon_UNBREAKABLE,1,bon_NONE] // "Valkyrian Shoes"
 ,[537,itm_type_SHIELD,58,50,0,"0/1",15,20,0,0,0,0,bon_NONE] // "Arm Guard"
 ,[538,itm_type_SHIELD,58,45,0,"0/1",15,50,0,0,0,0,bon_MDEF,5,bon_NONE] // "Advanced Arm Guard"
-,[539,weapTyp_DAGGER,58,50,1,"2/3",60,12,0,0,0,0,bon_MATK,50,bon_NONE] // "Ashura"
+,[539,weapTyp_DAGGER,58,50,1,"2/3",60,12,0,0,0,0,bon_WEAPON_MATK,50,bon_NONE] // "Ashura"
 ,[540,weapTyp_DAGGER,58,70,2,"0/1",40,35,0,0,0,0,bon_NONE] // "Jitte"
 ,[541,weapTyp_DAGGER,58,95,2,"1/2",70,24,0,0,0,0,bon_ELEMENT,1,bon_CRIT_RC_DEMI_HUMAN,10,bon_NONE] // "Murasame"
 ,[542,weapTyp_DAGGER,58,120,3,"0/1",80,42,0,0,0,0,bon_INT,2,bon_SKILL_AUTOCAST,13,bon_NONE] // "Hakujin"
@@ -576,12 +576,12 @@
 ,[572,itm_type_HEAD_UPPER,0,6,0,0,1,1,0,0,0,0,bon_ASPD_MUL,10,bon_RED_CAST,-25,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Pecopeco Hairband (rental 7d.)"
 ,[573,itm_type_HEAD_UPPER,/*0*/999,4,0,1,30,30,0,0,0,0,bon_AGI,2,bon_NO_UPGRADES,1,bon_NONE] // "Windmill Hairpin"
 ,[574,itm_type_HEAD_UPPER,/*0*/999,8,0,0,60,30,0,0,0,0,bon_SKILL_AUTOCAST,16,bon_SKILL_AUTOCAST,17,bon_NONE] // "Magic Kettle"
-,[575,weapTyp_DAGGER,/*58*/999,70,1,0,60,0,0,0,0,0,bon_MATK,98,bon_NO_UPGRADES,1,bon_NONE] // "Ashura R"
+,[575,weapTyp_DAGGER,/*58*/999,70,1,0,60,0,0,0,0,0,bon_WEAPON_MATK,98,bon_NO_UPGRADES,1,bon_NONE] // "Ashura R"
 ,[576,weapTyp_SWORDII,/*0*/999,190,4,0,220,0,0,0,0,0,bon_ELEMENT,7,bon_IGN_DEF_RC_DEMI_HUMAN,1,bon_DMG_RC_DEMI_HUMAN,20,bon_RED_RC_DEMI_HUMAN,-10,bon_NO_UPGRADES,1,bon_NONE] // "Executioner R"
 ,[577,weapTyp_DAGGER,/*55*/999,175,4,0,55,0,0,0,0,0,bon_CRIT,90,bon_NO_UPGRADES,1,bon_NONE] // "Dagger of Counter R"
 ,[578,weapTyp_SWORD,/*1*/999,185,4,0,90,0,0,0,0,0,bon_STR,2,bon_DEF,1,bon_NO_UPGRADES,1,bon_SKILL_ENABLE,3,bon_NONE] // "Cutlass R"
 ,[579,weapTyp_DAGGER,/*1*/999,85,4,0,70,0,0,0,0,0,bon_SP_MUL,10,bon_NO_UPGRADES,1,bon_NONE] // "Moonlight Dagger R"
-,[580,weapTyp_BOOK,/*0*/999,135,3,0,110,0,0,0,0,0,bon_MATK,90,bon_ASPD_MUL,5,bon_NO_UPGRADES,1,bon_NONE] // "Sage''s Diary R"'
+,[580,weapTyp_BOOK,/*0*/999,135,3,0,110,0,0,0,0,0,bon_WEAPON_MATK,90,bon_ASPD_MUL,5,bon_NO_UPGRADES,1,bon_NONE] // "Sage''s Diary R"'
 ,[581,weapTyp_MACE,/*53*/999,150,3,0,250,0,0,0,0,0,bon_CH_STATUS_STUN,1,bon_CH_STATUS_BLIND,1,bon_CH_STATUS_POISON,1,bon_CH_STATUS_FREEZE,1,bon_NO_UPGRADES,1,bon_NONE] // "Wrench R"
 ,[582,weapTyp_SWORD,/*1*/999,120,4,0,120,0,0,0,0,0,bon_ELEMENT,3,bon_NO_UPGRADES,1,bon_NONE] // "Solar Sword R"
 ,[583,weapTyp_AXEII,/*1*/999,200,4,0,250,0,0,0,0,0,bon_ELEMENT,4,bon_NO_UPGRADES,1,bon_SKILL_ENABLE,8,bon_NONE] // "Tomahawk R"
@@ -641,14 +641,14 @@
 ,[637,weapTyp_KNUCKLE,0,80,3,3,65,75,0,0,0,0,bon_SKILL_AUTOCAST,26,bon_NONE] // "Electric Fist"
 ,[638,weapTyp_KNUCKLE,0,80,3,3,65,75,0,0,0,0,bon_SKILL_AUTOCAST,27,bon_NONE] // "Seismic Fist"
 ,[639,weapTyp_KNUCKLE,0,30,3,4,50,60,0,0,0,0,5187,15,5188,15/*,5189,20*/,bon_NONE] // "Barrage Fist"
-,[640,weapTyp_BOOK,0,110,3,2,200,70,0,0,0,0,bon_MATK,100,bon_INT,3,bon_DEX,2,bon_CRIT,20,bon_NONE] // "Giant Encyclopedia"
-,[641,weapTyp_BOOK,0,137,4,2,100,85,0,0,1,1,bon_MATK,100,bon_STR,3,bon_INT,3,bon_LUK,-20,bon_NONE] // "Book of the Dead""Death Note""Ledger of Death"
-,[642,weapTyp_ROD,1001,60,3,2,80,70,0,0,0,0,bon_MATK,170,bon_INT,1,bon_DEX,1,bon_ELEMENT,9,bon_NONE] // "Lich''s Bone Wand"'
+,[640,weapTyp_BOOK,0,110,3,2,200,70,0,0,0,0,bon_WEAPON_MATK,100,bon_INT,3,bon_DEX,2,bon_CRIT,20,bon_NONE] // "Giant Encyclopedia"
+,[641,weapTyp_BOOK,0,137,4,2,100,85,0,0,1,1,bon_WEAPON_MATK,100,bon_STR,3,bon_INT,3,bon_LUK,-20,bon_NONE] // "Book of the Dead""Death Note""Ledger of Death"
+,[642,weapTyp_ROD,1001,60,3,2,80,70,0,0,0,0,bon_WEAPON_MATK,170,bon_INT,1,bon_DEX,1,bon_ELEMENT,9,bon_NONE] // "Lich''s Bone Wand"'
 ,[643,itm_type_HEAD_MIDDLE,1,0,0,0,10,0,0,0,0,0,bon_RES_STATUS_BLIND,100,bon_RES_STATUS_STUN,2,bon_NONE] // "Dark Blinder"
-,[644,weapTyp_ROD,53,10,3,0,40,55,0,0,0,0,bon_MATK,105,bon_ELEMENT,6,bon_NONE] // "Healing Staff"
-,[645,weapTyp_ROD,1001,80,3,0,50,70,0,0,0,0,bon_MATK,145,bon_INT,4,bon_NONE] // "Piercing Staff"
-,[646,weapTyp_ROD,125,130,4,1,250,80,0,0,1,1,bon_MATK,280,bon_TWO_HANDED_STAFF,1,bon_INT,3,bon_AGI,10,bon_NONE] // "Staff of Destruction"
-,[647,weapTyp_ROD,63,120,4,0,150,70,0,0,1,1,bon_MATK,210,bon_TWO_HANDED_STAFF,1,bon_ELEMENT,6,bon_DEX,4,bon_RED_RC_UNDEAD,15,bon_RED_RC_DEMON,15,bon_NONE] // "Divine Cross"
+,[644,weapTyp_ROD,53,10,3,0,40,55,0,0,0,0,bon_WEAPON_MATK,105,bon_ELEMENT,6,bon_NONE] // "Healing Staff"
+,[645,weapTyp_ROD,1001,80,3,0,50,70,0,0,0,0,bon_WEAPON_MATK,145,bon_INT,4,bon_NONE] // "Piercing Staff"
+,[646,weapTyp_ROD,125,130,4,1,250,80,0,0,1,1,bon_WEAPON_MATK,280,bon_TWO_HANDED_STAFF,1,bon_INT,3,bon_AGI,10,bon_NONE] // "Staff of Destruction"
+,[647,weapTyp_ROD,63,120,4,0,150,70,0,0,1,1,bon_WEAPON_MATK,210,bon_TWO_HANDED_STAFF,1,bon_ELEMENT,6,bon_DEX,4,bon_RED_RC_UNDEAD,15,bon_RED_RC_DEMON,15,bon_NONE] // "Divine Cross"
 ,[648,weapTyp_INSTRUMENT,130,130,3,1,150,70,0,0,0,0,bon_NONE] // "Bass Guitar"
 ,[649,weapTyp_INSTRUMENT,130,10,4,0,180,70,0,0,1,1,bon_ASPD_MUL,100,bon_HP_REG,-100,bon_NONE] // "Spirited Guitar""Berserk Guitar"
 ,[650,weapTyp_WHIP,0,110,3,0,70,30,0,0,1,1,bon_ELEMENT,4,bon_NONE] // "Electric Wire"
@@ -824,10 +824,10 @@
 ,[819,weapTyp_SWORDII,0,200,4,2,120,50,0,0,1,1,bon_ELEMENT,8,bon_NONE] // "Bloody Eater"
 ,[820,weapTyp_MACE,53,120,4,0,90,60,0,0,1,1,bon_ELEMENT,6,bon_DMG_RC_DEMON,10,bon_DMG_ELE_SHADOW,10,bon_SKILL_AUTOCAST,49,bon_NONE] // "Nemesis"
 ,[821,weapTyp_BOW,124,135,4,1,30,70,0,0,1,1,bon_NONE] // "Ixion Wings"
-,[822,weapTyp_BOOK,0,60,3,2,30,60,0,0,0,0,bon_MATK,160,bon_INT,3,bon_SP_REG,5,bon_NONE] // "Principles of Magic"
-,[823,weapTyp_BOOK,0,30,3,2,70,70,0,0,0,0,bon_MATK,140,bon_NONE] // "Ancient Magic"
+,[822,weapTyp_BOOK,0,60,3,2,30,60,0,0,0,0,bon_WEAPON_MATK,160,bon_INT,3,bon_SP_REG,5,bon_NONE] // "Principles of Magic"
+,[823,weapTyp_BOOK,0,30,3,2,70,70,0,0,0,0,bon_WEAPON_MATK,140,bon_NONE] // "Ancient Magic"
 ,[824,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_SET_INT,4,bon_MDEF,8,bon_SP_MUL,10,bon_NONE] // 0
-,[825,weapTyp_ROD,55,30,3,0,50,50,0,0,0,0,bon_MATK,125,bon_INT,3,bon_HEAL_MUL,5,bon_SANC_MUL,5,bon_NONE] // "Radiant Wisdom"
+,[825,weapTyp_ROD,55,30,3,0,50,50,0,0,0,0,bon_WEAPON_MATK,125,bon_INT,3,bon_HEAL_MUL,5,bon_SANC_MUL,5,bon_NONE] // "Radiant Wisdom"
 ,[826,itm_type_HEAD_UPPER,/*0*/999,0,0,0,50,0,0,0,0,0,bon_INT,2,bon_NONE] // "Knit Hat Earmuffs"
 ,[827,itm_type_HEAD_UPPER,0,3,0,1,30,1,0,0,0,0,bon_NONE] // "Rideword Hat"
 ,[828,itm_type_HEAD_UPPER,82,5,0,1,25,0,0,0,0,0,bon_RES_STATUS_STONE,20,bon_RES_STATUS_FREEZE,20,bon_RES_STATUS_STUN,20,bon_NONE] // "Dark Bacilium"
@@ -865,7 +865,7 @@
 ,[860,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK_MUL,7,bon_HP_REG,15,bon_SP_REG,15,bon_NONE] // monocle,memory book, pocket watch
 ,[861,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_SET_DEX,1,bon_SP_ADD,50,bon_SP_REG,10,bon_NONE] // 0
 ,[862,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // 0
-,[863,weapTyp_ROD,63,50,4,1,50,70,0,0,1,1,bon_MATK,140,7037,25,7102,25,7104,25,bon_NONE] // "Holy Stick"
+,[863,weapTyp_ROD,63,50,4,1,50,70,0,0,1,1,bon_WEAPON_MATK,140,7037,25,7102,25,7104,25,bon_NONE] // "Holy Stick"
 ,[864,itm_type_HEAD_UPPER,/*0*/999,0,0,0,10,0,0,0,0,0,bon_HP_ADD,40,bon_SP_ADD,40,bon_NONE] // "Leaves"
 ,[865,itm_type_HEAD_UPPER,/*0*/999,6,0,0,60,20,0,0,0,0,bon_LUK,3,bon_NO_UPGRADES,1,bon_NONE] // "Triple Poring Hat"
 ,[866,itm_type_HEAD_UPPER,/*0*/999,5,0,0,10,0,0,0,0,0,bon_INT,2,bon_NONE] // "Gold Tiara"
@@ -902,7 +902,7 @@
 ,[897,weapTyp_DAGGER,0,120,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_STR,1,bon_AGI,1,bon_DMG_RC_DEMI_HUMAN,75,bon_DEFIGN_RC_DEMI_HUMAN,20,bon_NONE] // "Assassin Damascus [Bravery]"
 ,[898,weapTyp_DAGGER,0,120,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_STR,1,bon_AGI,1,bon_DMG_RC_DEMI_HUMAN,75,bon_NONE] // "Assassin Damascus [Valor]"
 ,[899,weapTyp_SWORD,0,115,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_STR,1,bon_DEX,1,bon_DMG_RC_DEMI_HUMAN,75,bon_DEFIGN_RC_DEMI_HUMAN,20,bon_NONE] // "Gladiator Blade [Valor]"
-,[900,weapTyp_SWORD,0,115,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_STR,1,bon_DEX,1,bon_DMG_RC_DEMI_HUMAN,75,bon_MATK,74,bon_NONE] // "Gladiator Blade [Bravery]"
+,[900,weapTyp_SWORD,0,115,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_STR,1,bon_DEX,1,bon_DMG_RC_DEMI_HUMAN,75,bon_WEAPON_MATK,74,bon_NONE] // "Gladiator Blade [Bravery]"
 ,[901,weapTyp_SWORDII,0,200,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_STR,2,bon_DMG_RC_DEMI_HUMAN,55,bon_DEFIGN_RC_DEMI_HUMAN,20,bon_NONE] // "Assault Katzbalger [Valor]"
 ,[902,weapTyp_SWORDII,0,200,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_CRIT,20,bon_DMG_RC_DEMI_HUMAN,55,bon_DMG_CRIT,20,bon_NONE] // "Assault Katzbalger [Bravery]"
 ,[903,weapTyp_SPEAR,0,60,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_STR,2,bon_DMG_RC_DEMI_HUMAN,95,bon_DEFIGN_RC_DEMI_HUMAN,20,bon_NONE] // "Assaulter Spear"
@@ -913,16 +913,16 @@
 ,[908,weapTyp_MACE,0,105,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_STR,1,bon_DEX,1,bon_DMG_RC_DEMI_HUMAN,75,bon_NONE] // "Battlefield Morning Star [Bravery]"
 ,[909,weapTyp_KATAR,0,130,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_STR,1,bon_DEX,1,bon_LUK,1,bon_DMG_RC_DEMI_HUMAN,70,bon_DEFIGN_RC_DEMI_HUMAN,20,bon_NONE] // "Carnage Katar [Bravery]"
 ,[910,weapTyp_KATAR,0,130,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_STR,1,bon_DEX,1,bon_LUK,1,bon_DMG_RC_DEMI_HUMAN,70,bon_DMG_CRIT,20,bon_ASPD_MUL,5,bon_NONE] // "Carnage Katar [Valor]"
-,[911,weapTyp_BOOK,0,90,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_STR,1,bon_INT,2,bon_MATK,90,bon_DMG_RC_DEMI_HUMAN,75,bon_DEFIGN_RC_DEMI_HUMAN,20,bon_NONE] // "Battle Strategy Book [Bravery]"
-,[912,weapTyp_BOOK,0,90,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_STR,1,bon_INT,2,bon_MATK,90,bon_DMG_RC_DEMI_HUMAN,75,bon_MDEFIGN_RC_DEMI_HUMAN,25,bon_NONE] // "Battle Strategy Book [Valor]"
+,[911,weapTyp_BOOK,0,90,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_STR,1,bon_INT,2,bon_WEAPON_MATK,90,bon_DMG_RC_DEMI_HUMAN,75,bon_DEFIGN_RC_DEMI_HUMAN,20,bon_NONE] // "Battle Strategy Book [Bravery]"
+,[912,weapTyp_BOOK,0,90,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_STR,1,bon_INT,2,bon_WEAPON_MATK,90,bon_DMG_RC_DEMI_HUMAN,75,bon_MDEFIGN_RC_DEMI_HUMAN,25,bon_NONE] // "Battle Strategy Book [Valor]"
 ,[913,weapTyp_BOW,0,100,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_DEX,2,bon_DMG_RC_DEMI_HUMAN,55,bon_DEFIGN_RC_DEMI_HUMAN,20,bon_NONE] // "Battle Crossbow [Valor]"
 ,[914,weapTyp_BOW,0,100,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_DEX,2,bon_INT,10,bon_DMG_RC_DEMI_HUMAN,55,bon_NONE] // "Battle Crossbow [Bravery]"
 ,[915,weapTyp_KNUCKLE,0,30,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_STR,2,bon_INT,1,bon_DMG_RC_DEMI_HUMAN,95,bon_DEFIGN_RC_DEMI_HUMAN,20,bon_NONE] // "Battle Fist [Valor]"
 ,[916,weapTyp_KNUCKLE,0,30,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_STR,2,bon_INT,1,bon_DMG_RC_DEMI_HUMAN,95,7197,25,7321,25,bon_NONE] // "Battle Fist [Bravery]"
-,[917,weapTyp_ROD,3,70,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_MATK,125,bon_INT,4,bon_DEX,3,bon_MDEFIGN_RC_DEMI_HUMAN,25,bon_NONE] // "Warlock''s Magic Wand"'
-,[918,weapTyp_ROD,3,70,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_MATK,125,bon_INT,3,bon_DEX,3,bon_MDMG_RC_DEMI_HUMAN,15,bon_NONE] // "Warlock''s Battle Wand"'
-,[919,weapTyp_ROD,3,70,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_MATK,125,bon_HEAL_MUL,14,bon_SANC_MUL,14,bon_NONE] // "Strong Recovery Wand"
-,[920,weapTyp_ROD,3,70,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_MATK,125,bon_INT,3,bon_DEX,2,bon_RED_CASTDELAY,15,bon_NONE] // "Speedy Recovery Wand"
+,[917,weapTyp_ROD,3,70,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_WEAPON_MATK,125,bon_INT,4,bon_DEX,3,bon_MDEFIGN_RC_DEMI_HUMAN,25,bon_NONE] // "Warlock''s Magic Wand"'
+,[918,weapTyp_ROD,3,70,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_WEAPON_MATK,125,bon_INT,3,bon_DEX,3,bon_MDMG_RC_DEMI_HUMAN,15,bon_NONE] // "Warlock''s Battle Wand"'
+,[919,weapTyp_ROD,3,70,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_WEAPON_MATK,125,bon_HEAL_MUL,14,bon_SANC_MUL,14,bon_NONE] // "Strong Recovery Wand"
+,[920,weapTyp_ROD,3,70,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_WEAPON_MATK,125,bon_INT,3,bon_DEX,2,bon_RED_CASTDELAY,15,bon_NONE] // "Speedy Recovery Wand"
 ,[921,weapTyp_INSTRUMENT,0,50,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_DEX,2,bon_DMG_RC_DEMI_HUMAN,95,bon_DEFIGN_RC_DEMI_HUMAN,20,bon_NONE] // "Battlefield Guitar [Valor]"
 ,[922,weapTyp_INSTRUMENT,0,50,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_DEX,2,bon_DMG_RC_DEMI_HUMAN,95,5292,20,bon_NONE] // "Battlefield Guitar [Bravery]"
 ,[923,weapTyp_WHIP,0,50,3,0,0,80,0,0,0,0,bon_UNBREAKABLE,1,bon_DEX,2,bon_DMG_RC_DEMI_HUMAN,95,bon_DEFIGN_RC_DEMI_HUMAN,20,bon_NONE] // "Battle Lariat [Valor]"
@@ -938,10 +938,10 @@
 ,[933,weapTyp_SWORD,1001,160,4,3,150,75,0,0,0,1,bon_ELEMENT,3,bon_SKILL_ENABLE,14,bon_NONE] // "Naght Sieger Twin Blade [Red]"
 ,[934,weapTyp_SWORDII,1000,250,4,2,200,90,0,0,1,1,bon_PDODGE,10,bon_NONE] // "Tae Goo Lyeon"
 ,[935,weapTyp_SWORDII,1000,275,4,2,220,80,0,0,1,1,bon_SKILL_AUTOCAST,51,bon_SKILL_AUTOCAST,52,bon_NONE] // "Violet Fear"
-,[936,weapTyp_ROD,1001,60,4,0,70,75,0,0,1,1,bon_ELEMENT,7,bon_MATK,160,bon_INT,3,bon_DEX,3,bon_NONE] // "Thorn Staff of Darkness"
+,[936,weapTyp_ROD,1001,60,4,0,70,75,0,0,1,1,bon_ELEMENT,7,bon_WEAPON_MATK,160,bon_INT,3,bon_DEX,3,bon_NONE] // "Thorn Staff of Darkness"
 ,[937,weapTyp_DAGGER,128,120,3,3,70,70,0,0,0,0,bon_STR,1,bon_AGI,2,bon_DEX,1,5169,20,bon_NONE] // "Dagger of Hunter"
 ,[938,weapTyp_DAGGER,1001,130,3,2,70,50,0,0,0,0,bon_AGI,2,bon_ASPD_MUL,3,bon_NONE] // "Ivory Knife"
-,[939,weapTyp_SWORD,1001,105,3,3,120,70,0,0,0,0,bon_STR,2,bon_INT,4,bon_DEX,1,bon_MATK,95,bon_DMG_ELE_NEUTRAL,10,bon_NONE] // "Elemental Sword"
+,[939,weapTyp_SWORD,1001,105,3,3,120,70,0,0,0,0,bon_STR,2,bon_INT,4,bon_DEX,1,bon_WEAPON_MATK,95,bon_DMG_ELE_NEUTRAL,10,bon_NONE] // "Elemental Sword"
 ,[940,weapTyp_SWORDII,1001,200,4,2,200,70,0,0,1,1,bon_STR,5,bon_AGI,2,bon_PDODGE,20,bon_NONE] // "Death Guidance"
 ,[941,weapTyp_SPEARII,1001,160,3,1,100,50,0,0,0,0,bon_AGI,2,bon_ASPD_MUL,3,bon_SKILL_ENABLE,15,bon_NONE] // "Ivory Lance"
 ,[942,weapTyp_SPEARII,121,150,4,1,560,70,0,0,1,1,bon_ASPD_MUL,-10,bon_NONE] // "Cardo"
@@ -950,7 +950,7 @@
 ,[945,weapTyp_BOW,124,105,4,2,100,60,0,0,1,1,bon_NONE] // "Nepenthes Bow"
 ,[946,weapTyp_BOW,1054,125,4,1,125,80,0,0,1,1,bon_LUK,-2,bon_NONE] // "Cursed Lyre"
 ,[947,weapTyp_KNUCKLE,129,95,3,3,60,60,0,0,0,0,bon_NONE] // "Horn of Hilthrion"
-,[948,weapTyp_ROD,1001,80,4,0,50,70,0,0,1,1,bon_MATK,170,bon_INT,3,bon_DEX,2,bon_SP_REG,8,bon_NONE] // "Eraser"
+,[948,weapTyp_ROD,1001,80,4,0,50,70,0,0,1,1,bon_WEAPON_MATK,170,bon_INT,3,bon_DEX,2,bon_SP_REG,8,bon_NONE] // "Eraser"
 ,[949,weapTyp_INSTRUMENT,130,110,3,3,70,70,0,0,0,0,bon_AGI,2,bon_DEX,3,bon_NONE] // "Chello"
 ,[950,weapTyp_INSTRUMENT,130,120,4,2,100,60,0,0,1,1,bon_INT,2,bon_NONE] // "Harp of Nepenthes"
 ,[951,weapTyp_WHIP,131,120,4,2,100,60,0,0,1,1,bon_INT,2,bon_NONE] // "Stem of Nepenthes"
@@ -1043,7 +1043,7 @@
 ,[1038,itm_type_HEAD_MIDDLE,/*0*/999,1,0,0,80,50,0,0,0,0,bon_RED_ELE_WATER,3,bon_RED_ELE_FIRE,3,bon_RED_ELE_SHADOW,3,bon_RED_ELE_UNDEAD,3,bon_NONE] // "Wings of Reginleif"
 ,[1039,itm_type_HEAD_UPPER,/*0*/999,5,0,1,10,10,0,0,0,0,bon_MDEF,3,bon_RED_RC_DEMON,10,bon_NO_UPGRADES,1,bon_NONE] // "Hyegun Hat"
 ,[1040,itm_type_HEAD_UPPER,/*0*/999,0,0,0,30,0,0,0,0,0,bon_AGI,3,bon_SKILL_AUTOCAST,99,bon_NONE] // "Rabbit Ear Hat"
-,[1041,weapTyp_ROD,3,40,4,1,50,50,0,0,1,1,bon_MATK,125,bon_DEX,1,bon_NONE] // "Gentleman Staff"
+,[1041,weapTyp_ROD,3,40,4,1,50,50,0,0,1,1,bon_WEAPON_MATK,125,bon_DEX,1,bon_NONE] // "Gentleman Staff"
 ,[1042,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DEX,2,bon_INT,2,bon_SP_REG,5,bon_NONE] // "Gentleman Set"
 ,[1043,itm_type_HEAD_UPPER,/*0*/999,4,0,1,80,30,0,0,0,0,bon_RES_STATUS_BLIND,100,bon_RES_STATUS_CURSE,7,bon_NONE] // "Executioner Hood"
 ,[1044,itm_type_HEAD_UPPER,/*0*/999,2,0,0,10,24,0,0,0,0,bon_MDEF,2,bon_FLEE,5,bon_NONE] // "Scarves"
@@ -1081,14 +1081,14 @@
 ,[1075,itm_type_HEAD_UPPER,/*0*/999,2,0,1,10,0,0,0,0,0,bon_HP_ADD,80,bon_SP_ADD,20,bon_NONE] // "Flower Hat"
 ,[1076,weapTyp_DAGGER,0,120,4,0,0,80,0,0,0,0,bon_DMG_RC_DEMI_HUMAN,75,bon_DEFIGN_RC_DEMI_HUMAN,20,bon_SKILL_AUTOCAST,106,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Gladius"
 ,[1077,weapTyp_SWORD,0,130,4,0,0,80,0,0,0,0,bon_DMG_RC_DEMI_HUMAN,75,bon_DEFIGN_RC_DEMI_HUMAN,20,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Flamberge"
-,[1078,weapTyp_SWORD,0,130,4,0,0,80,0,0,0,0,bon_INT,6,bon_MATK,80,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Rapier"
-,[1079,weapTyp_SWORD,0,130,4,0,0,80,0,0,0,0,bon_INT,6,bon_MATK,80,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Holy Avenger"
+,[1078,weapTyp_SWORD,0,130,4,0,0,80,0,0,0,0,bon_INT,6,bon_WEAPON_MATK,80,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Rapier"
+,[1079,weapTyp_SWORD,0,130,4,0,0,80,0,0,0,0,bon_INT,6,bon_WEAPON_MATK,80,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Holy Avenger"
 ,[1080,weapTyp_SWORDII,0,220,4,0,0,80,0,0,0,0,bon_DMG_RC_DEMI_HUMAN,70,bon_DEFIGN_RC_DEMI_HUMAN,25,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Claymore"
 ,[1081,weapTyp_SPEAR,0,130,4,0,0,80,0,0,0,0,bon_DMG_RC_DEMI_HUMAN,95,bon_DEFIGN_RC_DEMI_HUMAN,20,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Spear"
 ,[1082,weapTyp_SPEARII,0,220,4,0,0,80,0,0,0,0,bon_DMG_RC_DEMI_HUMAN,70,bon_DEFIGN_RC_DEMI_HUMAN,25,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Lance"
-,[1083,weapTyp_ROD,3,70,4,0,0,80,0,0,0,0,bon_TWO_HANDED_STAFF,1,bon_MATK,210,bon_MDMG_RC_DEMI_HUMAN,15,bon_MDEFIGN_RC_DEMI_HUMAN,25,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Destruction Staff"
-,[1084,weapTyp_ROD,3,70,4,0,0,80,0,0,0,0,bon_MATK,135,bon_MDMG_RC_DEMI_HUMAN,15,bon_MDEFIGN_RC_DEMI_HUMAN,25,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Arc Wand"
-,[1085,weapTyp_ROD,3,70,4,0,0,80,0,0,0,0,bon_MATK,135,bon_HEAL_MUL,14,bon_SANC_MUL,14,bon_RED_CASTDELAY,10,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Cure Wand"
+,[1083,weapTyp_ROD,3,70,4,0,0,80,0,0,0,0,bon_TWO_HANDED_STAFF,1,bon_WEAPON_MATK,210,bon_MDMG_RC_DEMI_HUMAN,15,bon_MDEFIGN_RC_DEMI_HUMAN,25,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Destruction Staff"
+,[1084,weapTyp_ROD,3,70,4,0,0,80,0,0,0,0,bon_WEAPON_MATK,135,bon_MDMG_RC_DEMI_HUMAN,15,bon_MDEFIGN_RC_DEMI_HUMAN,25,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Arc Wand"
+,[1085,weapTyp_ROD,3,70,4,0,0,80,0,0,0,0,bon_WEAPON_MATK,135,bon_HEAL_MUL,14,bon_SANC_MUL,14,bon_RED_CASTDELAY,10,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Cure Wand"
 ,[1086,weapTyp_MACE,0,130,4,0,0,80,0,0,0,0,bon_DMG_RC_DEMI_HUMAN,75,bon_DEFIGN_RC_DEMI_HUMAN,25,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Morning Star"
 ,[1087,weapTyp_AXEII,0,220,4,0,0,80,0,0,0,0,bon_DMG_RC_DEMI_HUMAN,70,bon_DEFIGN_RC_DEMI_HUMAN,25,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Two-handed Axe"
 ,[1088,weapTyp_AXE,70,130,4,0,0,80,0,0,0,0,bon_DMG_RC_DEMI_HUMAN,75,bon_DEFIGN_RC_DEMI_HUMAN,20,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Cleaver"
@@ -1097,11 +1097,11 @@
 ,[1091,weapTyp_KATAR,0,140,4,0,0,80,0,0,0,0,bon_DMG_RC_DEMI_HUMAN,70,bon_CRIT_DMG_RC_DEMI_HUMAN,20,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Jamadhar"
 ,[1092,weapTyp_INSTRUMENT,0,50,4,0,0,80,0,0,0,0,bon_DMG_RC_DEMI_HUMAN,95,bon_DEFIGN_RC_DEMI_HUMAN,20,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Guitar"
 ,[1093,weapTyp_WHIP,0,50,4,0,0,80,0,0,0,0,bon_DMG_RC_DEMI_HUMAN,95,bon_DEFIGN_RC_DEMI_HUMAN,20,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Lariat"
-,[1094,weapTyp_BOOK,0,90,4,0,0,80,0,0,0,0,bon_MATK,115,bon_DMG_RC_DEMI_HUMAN,80,bon_DEFIGN_RC_DEMI_HUMAN,25,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Tablet"
-,[1095,weapTyp_BOOK,0,90,4,0,0,80,0,0,0,0,bon_MATK,115,bon_DMG_RC_DEMI_HUMAN,80,bon_MDEFIGN_RC_DEMI_HUMAN,25,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Apocalypse"
+,[1094,weapTyp_BOOK,0,90,4,0,0,80,0,0,0,0,bon_WEAPON_MATK,115,bon_DMG_RC_DEMI_HUMAN,80,bon_DEFIGN_RC_DEMI_HUMAN,25,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Tablet"
+,[1095,weapTyp_BOOK,0,90,4,0,0,80,0,0,0,0,bon_WEAPON_MATK,115,bon_DMG_RC_DEMI_HUMAN,80,bon_MDEFIGN_RC_DEMI_HUMAN,25,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Apocalypse"
 ,[1096,weapTyp_KNUCKLE,0,30,4,0,0,80,0,0,0,0,bon_DMG_RC_DEMI_HUMAN,95,bon_DEFIGN_RC_DEMI_HUMAN,25,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Claw"
 ,[1097,weapTyp_KNUCKLE,0,30,4,0,0,80,0,0,0,0,bon_DMG_RC_DEMI_HUMAN,95,bon_DEFIGN_RC_DEMI_HUMAN,20,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Fist"
-,[1098,weapTyp_HUUMA_SHURIKEN,0,55,4,0,0,80,0,0,0,0,bon_DMG_RC_DEMI_HUMAN,95,bon_DEFIGN_RC_DEMI_HUMAN,20,bon_MATK,90,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Shuriken"
+,[1098,weapTyp_HUUMA_SHURIKEN,0,55,4,0,0,80,0,0,0,0,bon_DMG_RC_DEMI_HUMAN,95,bon_DEFIGN_RC_DEMI_HUMAN,20,bon_WEAPON_MATK,90,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Shuriken"
 ,[1099,weapTyp_HANDGUN,0,80,4,0,0,80,0,0,0,0,bon_DMG_RC_DEMI_HUMAN,55,bon_DEFIGN_RC_DEMI_HUMAN,20,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Pistol"
 ,[1100,weapTyp_RIFLE,0,90,4,0,0,80,0,0,0,0,bon_DMG_RC_DEMI_HUMAN,75,bon_DEFIGN_RC_DEMI_HUMAN,20,5418,30,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Rifle"
 ,[1101,weapTyp_GATLING_GUN,0,90,4,0,0,80,0,0,0,0,bon_DMG_RC_DEMI_HUMAN,35,bon_DEFIGN_RC_DEMI_HUMAN,20,5418,30,bon_UNBREAKABLE,1,bon_NONE] // "Glorious Gatling Gun"
@@ -1143,7 +1143,7 @@
 ,[1137,weapTyp_MACE,0,57,1,3,0,2,0,0,0,0,bon_NO_UPGRADES,1,bon_NONE] // "Novice Mace"
 ,[1138,weapTyp_AXEII,1,100,1,3,0,3,0,0,0,0,bon_NO_UPGRADES,1,bon_NONE] // "Novice Battle Axe"
 ,[1139,weapTyp_BOW,0,49,1,3,0,4,0,0,0,0,bon_NO_UPGRADES,1,bon_NONE] // "Novice Composite Bow"
-,[1140,weapTyp_ROD,2,15,1,3,0,0,0,0,0,0,bon_MATK,32,bon_NO_UPGRADES,1,bon_NONE] // "Novice Rod"
+,[1140,weapTyp_ROD,2,15,1,3,0,0,0,0,0,0,bon_WEAPON_MATK,32,bon_NO_UPGRADES,1,bon_NONE] // "Novice Rod"
 ,[1141,itm_type_UNOBTAINABLE,/*0*/999,0,0,0,20,0,0,0,0,0,bon_NONE] // "Fisherman''s Scarf"'
 ,[1142,itm_type_UNOBTAINABLE,/*0*/999,0,0,0,25,0,0,0,0,0,bon_NONE] // "Fishing Boots"
 ,[1143,itm_type_UNOBTAINABLE,/*0*/999,0,0,0,10,0,0,0,0,0,bon_NONE] // "Lure"
@@ -1171,12 +1171,12 @@
 ,[1165,weapTyp_AXEII,56,250,3,2,300,80,0,0,0,0,bon_VIT,2,bon_NONE] // "Veteran Axe"
 ,[1166,weapTyp_AXEII,126,210,4,0,270,75,0,0,1,1,bon_NONE] // "Bradium Stone Hammer"
 ,[1167,weapTyp_AXEII,1070,330,3,1,400,50,0,0,1,1,5326,15,bon_NONE] // "Giant Axe"
-,[1168,weapTyp_ROD,77,100,4,0,10,70,0,0,1,1,bon_MATK,155,bon_INT,4,bon_NONE] // "Withered Branch Staff""Dead Tree Cane"
-,[1169,weapTyp_ROD,1055,30,3,2,50,50,0,0,0,0,bon_MATK,180,bon_INT,4,bon_NONE] // "La''cryma Stick"'
-,[1170,weapTyp_ROD,1053,30,3,1,50,50,0,0,0,0,bon_ELEMENT,6,bon_MATK,175,bon_INT,4,bon_NONE] // "Croce Staff"
-,[1171,weapTyp_ROD,1055,30,4,0,50,50,0,0,0,0,bon_MATK,170,bon_INT,2,bon_DEX,1,bon_NONE] // "Staff of Ord"
-,[1172,weapTyp_ROD,1055,30,4,0,100,50,0,0,1,1,bon_TWO_HANDED_STAFF,1,bon_MATK,240,bon_INT,3,bon_HP_ADD,300,bon_NONE] // "Kronos"
-,[1173,weapTyp_ROD,1053,30,3,1,100,50,0,0,1,1,bon_TWO_HANDED_STAFF,1,bon_ELEMENT,6,bon_MATK,220,bon_INT,6,bon_VIT,2,bon_NONE] // "Staff of Thea""Dea Staff"
+,[1168,weapTyp_ROD,77,100,4,0,10,70,0,0,1,1,bon_WEAPON_MATK,155,bon_INT,4,bon_NONE] // "Withered Branch Staff""Dead Tree Cane"
+,[1169,weapTyp_ROD,1055,30,3,2,50,50,0,0,0,0,bon_WEAPON_MATK,180,bon_INT,4,"ev_ref",1,bon_MDEF,1,"ev_ref",1,bon_DMG_SKILL + skill_WI_STORM_GUST,1,"ref_lvl",10,bon_CAST_SKILL + skill_WI_STORM_GUST,8,bon_NONE] // "La''cryma Stick"'
+,[1170,weapTyp_ROD,1053,30,3,1,50,50,0,0,0,0,bon_ELEMENT,6,bon_WEAPON_MATK,175,bon_INT,4,bon_NONE] // "Croce Staff"
+,[1171,weapTyp_ROD,1055,30,4,0,50,50,0,0,0,0,bon_WEAPON_MATK,170,bon_INT,2,bon_DEX,1,bon_NONE] // "Staff of Ord"
+,[1172,weapTyp_ROD,1055,30,4,0,100,50,0,0,1,1,bon_TWO_HANDED_STAFF,1,bon_WEAPON_MATK,240,bon_INT,3,bon_HP_ADD,300,bon_NONE] // "Kronos"
+,[1173,weapTyp_ROD,1053,30,3,1,100,50,0,0,1,1,bon_TWO_HANDED_STAFF,1,bon_ELEMENT,6,bon_WEAPON_MATK,220,bon_INT,6,bon_VIT,2,bon_NONE] // "Staff of Thea""Dea Staff"
 ,[1174,weapTyp_BOW,124,100,3,2,100,50,0,0,1,1,5272,10,5040,10,5044,10,bon_NONE] // "Falken Blitz"
 ,[1175,weapTyp_KATAR,122,120,3,2,120,50,0,0,1,1,5084,10,bon_NONE] // "Krishna"
 ,[1176,weapTyp_KATAR,122,130,3,2,100,50,0,0,0,0,5264,20,bon_NONE] // "Chakram"
@@ -1271,15 +1271,15 @@
 ,[1265,itm_type_HEAD_UPPER,2117,12,0,1,10,100,0,0,0,0,bon_MDEF,5,bon_LUK,1,bon_INT,1,bon_DMG_RANGE,5,bon_NONE] // "Dying Swan"
 ,[1266,itm_type_HEAD_UPPER,/*0*/999,6,0,0,20,70,0,0,0,0,bon_VIT,2,bon_INT,2,bon_NONE] // "Yggdrasil Crown"
 ,[1267,weapTyp_DAGGER,2114,142,3,1,60,102,0,0,1,1,bon_NONE] // "Black Wing"
-,[1268,weapTyp_DAGGER,1001,107,4,0,60,120,0,0,1,1,bon_SP_ADD,100,bon_MATK,120,bon_SP_REGEN,5,bon_NONE] // "Ancient Dagger"
-,[1269,weapTyp_SPEAR,2113,180,3,1,180,102,0,0,1,1,bon_MATK,40,bon_NONE] // "Imperial Spear"
-,[1270,weapTyp_INSTRUMENT,2116,170,3,1,80,102,0,0,1,1,bon_MATK,50,bon_NONE] // "Green Whistle"
+,[1268,weapTyp_DAGGER,1001,107,4,0,60,120,0,0,1,1,bon_SP_ADD,100,bon_WEAPON_MATK,120,bon_SP_REGEN,5,bon_NONE] // "Ancient Dagger"
+,[1269,weapTyp_SPEAR,2113,180,3,1,180,102,0,0,1,1,bon_WEAPON_MATK,40,bon_NONE] // "Imperial Spear"
+,[1270,weapTyp_INSTRUMENT,2116,170,3,1,80,102,0,0,1,1,bon_WEAPON_MATK,50,bon_NONE] // "Green Whistle"
 ,[1271,weapTyp_WHIP,2117,170,3,1,80,102,0,0,1,1,bon_NONE] // "Stem Whip"
-,[1272,weapTyp_WHIP,2117,100,4,0,100,101,0,0,1,1,bon_AGI,-2,bon_INT,2,bon_MATK,130,bon_NONE] // "Rose Vine""Rosebine""Rosevine"
-,[1273,weapTyp_BOW,2054,75,3,0,170,105,0,0,1,1,bon_MATK,100,bon_INT,4,bon_NONE] // "Mystic Bow"
+,[1272,weapTyp_WHIP,2117,100,4,0,100,101,0,0,1,1,bon_AGI,-2,bon_INT,2,bon_WEAPON_MATK,130,bon_NONE] // "Rose Vine""Rosebine""Rosevine"
+,[1273,weapTyp_BOW,2054,75,3,0,170,105,0,0,1,1,bon_WEAPON_MATK,100,bon_INT,4,bon_NONE] // "Mystic Bow"
 ,[1274,weapTyp_SWORD,2086,180,3,0,40,110,0,0,1,1,bon_AGI,1,bon_HP_MUL,-5,bon_NONE] // "Chrome Metal Sword"
 ,[1275,weapTyp_2HSWORD,2051,280,3,0,220,110,0,0,1,1,bon_AGI,3,bon_HP_MUL,-10,bon_NONE] // "Two Handed Chrome Metal Sword"
-,[1276,weapTyp_MACE,2119,15,3,1,100,102,0,0,1,1,bon_MATK,100,bon_NONE] // "Red Ether Bag"
+,[1276,weapTyp_MACE,2119,15,3,1,100,102,0,0,1,1,bon_WEAPON_MATK,100,bon_NONE] // "Red Ether Bag"
 ,[1277,itm_type_SHIELD,2113,120,0,1,250,102,0,0,0,0,bon_MDEF,5,bon_NONE] // "Imperial Guard"
 ,[1278,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "Imperial Spear and Guard"
 ,[1279,itm_type_SET,/*0*/999,0,0,0,0,0,0,0,0,0,bon_HIT,5,bon_MATK,5,bon_NONE] // "Black Wing and Black Cat"
@@ -1290,12 +1290,12 @@
 ,[1284,weapTyp_2HSWORD,2107,280,3,0,340,100,0,0,0,0,bon_NONE] // "Alca Bringer"
 ,[1285,weapTyp_MACE,2092,175,3,2,150,100,0,0,0,0,bon_NONE] // "Carga Mace"
 ,[1286,weapTyp_BOW,2054,160,3,1,150,100,0,0,0,0,bon_DEX,2,bon_NONE] // "Elven Bow"
-,[1287,weapTyp_STAFF,2001,30,3,0,50,100,0,0,0,0,bon_MATK,180,bon_NONE] // "Laphine Staff"
+,[1287,weapTyp_STAFF,2001,30,3,0,50,100,0,0,0,0,bon_WEAPON_MATK,180,bon_NONE] // "Laphine Staff"
 ,[1288,weapTyp_MACE,2112,450,3,0,300,99,0,0,0,0,bon_NONE] // "Pile Bunker"
 ,[1289,weapTyp_2HSPEAR,4000,120,4,0,100,65,0,0,1,1,bon_DMG_RC_DEMI_HUMAN,10,bon_IGN_DEF_NONBOSS,1,bon_NONE] // "Ahlspiess"
 ,[1290,itm_type_SHOES,0,12,0,0,0,1,0,0,0,0,bon_NONE] // "Feral Boots"
 ,[1291,weapTyp_KNUCKLE,/*2115*/999,142,3,1,50,102,0,0,1,1,bon_NONE] // "Sura''s Rampage"'
-,[1292,weapTyp_STAFF,2118,40,3,1,50,102,0,0,1,1,bon_MATK,180,bon_CAST_SKILL_FLAT+678,3,bon_NONE] // "Mental Stick"
+,[1292,weapTyp_STAFF,2118,40,3,1,50,102,0,0,1,1,bon_WEAPON_MATK,180,bon_CAST_SKILL_FLAT+678,3,bon_NONE] // "Mental Stick"
 ,[1293,itm_type_SHIELD,0,60,0,1,30,22,0,0,0,0,bon_NONE] // "Silver Guard"
 ,[1294,itm_type_SHIELD,1001,90,0,1,60,22,0,0,0,0,bon_NONE] // "Round Buckler"
 ,[1295,itm_type_SHIELD,0,55,0,1,70,1,0,0,0,0,bon_NONE] // "Immune Shield"
@@ -1318,8 +1318,8 @@
 ,[1312,itm_type_SET,/*0*/999,0,0,0,0,0,0,0,0,0,bon_RED_RC_ANGEL,9,bon_NONE] // "Spirit Whispers + Heart Hairpin"
 ,[1313,weapTyp_BOW,1,82,2,0,0,26,0,0,0,0,bon_NONE] // "Eden Bow I"
 ,[1314,weapTyp_BOW,1,120,2,0,0,40,0,0,0,0,bon_NONE] // "Eden Bow II"
-,[1315,weapTyp_DAGGER,0,124,2,0,0,26,0,0,0,0,bon_MATK,60,bon_NONE] // "Eden Dagger I"
-,[1316,weapTyp_DAGGER,0,158,2,0,0,40,0,0,0,0,bon_MATK,70,bon_NONE] // "Eden Dagger II"
+,[1315,weapTyp_DAGGER,0,124,2,0,0,26,0,0,0,0,bon_WEAPON_MATK,60,bon_NONE] // "Eden Dagger I"
+,[1316,weapTyp_DAGGER,0,158,2,0,0,40,0,0,0,0,bon_WEAPON_MATK,70,bon_NONE] // "Eden Dagger II"
 ,[1317,itm_type_SHOES,0,14,0,0,0,12,0,0,0,0,bon_HP_REGEN,10,bon_SP_REGEN,2,bon_NONE] // "Eden Group Boots I"
 ,[1318,itm_type_SHOES,0,16,0,0,0,26,0,0,0,0,bon_HP_REGEN,12,bon_SP_REGEN,4,bon_NONE] // "Eden Group Boots II"
 ,[1319,itm_type_SHOES,0,18,0,0,0,40,0,0,0,0,bon_HP_REGEN,14,bon_SP_REGEN,6,bon_NONE] // "Eden Group Boots III"
@@ -1336,8 +1336,8 @@
 ,[1330,weapTyp_SWORD,1,170,2,0,0,40,0,0,0,0,bon_NONE] // "Eden Sabre II"
 ,[1331,weapTyp_2HSWORD,1,162,2,0,0,26,0,0,0,0,bon_NONE] // "Eden Slayer I"
 ,[1332,weapTyp_2HSWORD,1,185,2,0,0,40,0,0,0,0,bon_NONE] // "Eden Slayer II"
-,[1333,weapTyp_ROD,71,60,2,0,0,26,0,0,0,0,bon_MATK,125,bon_INT,2,bon_NONE] // "Eden Staff I"
-,[1334,weapTyp_ROD,71,60,2,0,0,40,0,0,0,0,bon_MATK,150,bon_INT,3,bon_NONE] // "Eden Staff II"
+,[1333,weapTyp_ROD,71,60,2,0,0,26,0,0,0,0,bon_WEAPON_MATK,125,bon_INT,2,bon_NONE] // "Eden Staff I"
+,[1334,weapTyp_ROD,71,60,2,0,0,40,0,0,0,0,bon_WEAPON_MATK,150,bon_INT,3,bon_NONE] // "Eden Staff II"
 ,[1335,itm_type_HEAD_UPPER,/*0*/999,5,0,1,30,1,0,0,0,0,bon_NONE] // "Cat Ear Beret"
 ,[1336,itm_type_HEAD_UPPER,/*0*/999,6,0,0,30,70,0,0,0,0,bon_STR,2,bon_FLEE,10,bon_RED_ELE_WIND,5,bon_NONE] // "Aquarius Diadem"
 ,[1337,itm_type_HEAD_UPPER,/*0*/999,6,0,0,30,70,0,0,0,0,bon_INT,2,bon_MATK_MUL,2,bon_RED_ELE_FIRE,5,bon_NONE] // "Aries Diadem"
@@ -1390,15 +1390,15 @@
 ,[1384,weapTyp_AXEII,1001,250,4,1,190,95,0,0,62,62,bon_ELEMENT,1,bon_RES_STATUS_CRISTALLIZATION,5,bon_NONE] // "End Sectora"
 ,[1385,weapTyp_SPEAR,2113,180,4,1,160,100,0,0,62,62,bon_SP_ADD,-100,bon_NONE] // "Cannon Spear"
 ,[1386,weapTyp_SPEARII,2107,20,4,0,2000,140,0,0,62,62,bon_NONE] // "Gigantic Lance"
-,[1387,weapTyp_BOOK,2118,100,4,2,100,100,0,0,62,62,bon_MATK,160,bon_DEX,1,bon_UNBREAKABLE,1,bon_NONE] // "Cold Magic Book"
-,[1388,weapTyp_ROD,2109,30,4,1,40,55,0,0,62,62,bon_MATK,160,bon_ELEMENT,6,bon_UNBREAKABLE,1,bon_NONE] // "Light Of Recovery""Recovery Light"
+,[1387,weapTyp_BOOK,2118,100,4,2,100,100,0,0,62,62,bon_WEAPON_MATK,160,bon_DEX,1,bon_UNBREAKABLE,1,bon_NONE] // "Cold Magic Book"
+,[1388,weapTyp_ROD,2109,30,4,1,40,55,0,0,62,62,bon_WEAPON_MATK,160,bon_ELEMENT,6,bon_UNBREAKABLE,1,bon_NONE] // "Light Of Recovery""Recovery Light"
 ,[1389,itm_type_SHIELD,2051,130,0,1,280,100,0,0,63,63,bon_RED_SIZ_LARGE,5,bon_NONE] // "Giant Shield"
 ,[1390,itm_type_SHIELD,2111,30,0,1,100,100,0,0,63,63,bon_INT,1,bon_MDEF,2,bon_NONE] // "Gefenia report of water"
 ,[1391,itm_type_SHIELD,2109,20,0,1,50,140,0,0,63,63,bon_MDEF,5,bon_HEAL_MUL,5,bon_NONE] // "Bible of Promise (2nd vol.)"
 ,[1392,itm_type_GARMENT,2094,1,0,0,40,130,0,0,0,0,bon_MDEF,5,bon_SKILL_ENABLE,46,bon_NONE] // "Salvage Cape"
 ,[1393,itm_type_ACCESSORY,2108,3,0,1,40,100,0,0,0,0,bon_SP_ADD,20,bon_CRIT,3,bon_NONE] // "Assassin''s glove"'
-,[1394,weapTyp_DAGGER,1001,160,4,0,50,110,0,0,62,62,bon_MATK,80,bon_ELEMENT,4,bon_CH_STATUS_FREEZE,1,bon_NONE] // "As-nail"
-,[1395,weapTyp_DAGGER,1001,160,4,0,50,110,0,0,62,62,bon_MATK,80,bon_ELEMENT,3,bon_CH_STATUS_STONE,1,bon_NONE] // "Scarlet-nail"
+,[1394,weapTyp_DAGGER,1001,160,4,0,50,110,0,0,62,62,bon_WEAPON_MATK,80,bon_ELEMENT,4,bon_CH_STATUS_FREEZE,1,bon_NONE] // "As-nail"
+,[1395,weapTyp_DAGGER,1001,160,4,0,50,110,0,0,62,62,bon_WEAPON_MATK,80,bon_ELEMENT,3,bon_CH_STATUS_STONE,1,bon_NONE] // "Scarlet-nail"
 ,[1396,itm_type_ARMOR,2119,66,0,1,66,100,0,0,0,0,bon_DEX,1,bon_SP_ADD,30,bon_NONE] // "Green Surgical Gown"
 ,[1397,weapTyp_MACE,1053,170,4,0,150,100,0,0,62,62,bon_ELEMENT,7,bon_SKILL_AUTOCAST,116,bon_NONE] // "Bloody Cross"
 ,[1398,weapTyp_BOW,2114,150,4,2,110,100,0,0,62,62,bon_NONE] // "Catapult""Thief Crossbow" "Each refine increase damage of Triangle shot,' but increases it''s sp cost"',
@@ -1415,29 +1415,29 @@
 ,[1409,itm_type_ACCESSORY,2110,0,0,0,10,100,0,0,0,0,bon_DEX,2,bon_DMG_RANGE,3,bon_NONE] // White Wing Brooch
 ,[1410,itm_type_SHOES,2110,18,0,1,40,100,0,0,0,0,bon_AGI,2,bon_NONE] // White Wing Boots
 ,[1411,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ASPD_ADD,2,bon_DMG_SKILL+512,50,bon_DMG_RANGE,30,bon_NONE] // White Wing Set
-,[1412,weapTyp_ROD,2111,30,4,2,90,80,0,0,45,45,bon_MATK,230,bon_INT,3,bon_DMG_SKILL+126,12,bon_TWO_HANDED_STAFF,1,bon_NONE] // "Golden Rod Staff"
-,[1413,weapTyp_ROD,2111,30,4,0,90,80,0,0,0,0,bon_MATK,270,bon_INT,5,bon_DMG_SKILL+126,30,bon_TWO_HANDED_STAFF,1,bon_NONE] // "Empowered Golden Rod Staff"
+,[1412,weapTyp_ROD,2111,30,4,2,90,80,0,0,45,45,bon_WEAPON_MATK,230,bon_INT,3,bon_DMG_SKILL+126,12,bon_TWO_HANDED_STAFF,1,bon_NONE] // "Golden Rod Staff"
+,[1413,weapTyp_ROD,2111,30,4,0,90,80,0,0,0,0,bon_WEAPON_MATK,270,bon_INT,5,bon_DMG_SKILL+126,30,bon_TWO_HANDED_STAFF,1,bon_NONE] // "Empowered Golden Rod Staff"
 ,[1414,itm_type_ARMOR,2111,40,0,0,50,100,0,0,0,0,bon_MDEF,10,bon_INT,1,bon_CAST_SKILL_FLAT+127,3,bon_NONE] // Golden Rod Robe INT 120 -> int +1
 ,[1415,itm_type_ACCESSORY,2111,2,0,1,20,100,0,0,0,0,bon_SKILL_AUTOCAST,120,bon_RED_ELE_WIND,15,bon_MDEF,2,bon_INT,2,bon_NONE] // Golden Rod Orb
 ,[1416,itm_type_SHOES,2111,12,0,0,50,100,0,0,0,0,bon_RED_ELE_WIND,15,bon_MDEF,2,bon_HP_ADD,500,bon_NONE] // Golden Rod Shoes
 ,[1417,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_INC_MAGIC_WIND,40,bon_INC_MAGIC_EARTH,-30,bon_RED_ELE_WIND,-50,bon_NONE] // Golden Rod Set
 ,[1418,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_INC_MAGIC_WIND,60,bon_INC_MAGIC_EARTH,-60,bon_RED_ELE_WIND,-50,bon_NONE] // Empowered Gold Rod Set
-,[1419,weapTyp_ROD,2111,30,4,2,90,80,0,0,45,45,bon_MATK,230,bon_INT,3,bon_DMG_SKILL+54,10,bon_DMG_SKILL+55,10,bon_TWO_HANDED_STAFF,1,bon_NONE] // "Aqua Rod Staff"
-,[1420,weapTyp_ROD,2111,30,4,0,90,80,0,0,0,0,bon_MATK,270,bon_INT,5,bon_DMG_SKILL+54,30,bon_DMG_SKILL+55,30,bon_TWO_HANDED_STAFF,1,bon_NONE] // "Empowered Aqua Rod Staff"
+,[1419,weapTyp_ROD,2111,30,4,2,90,80,0,0,45,45,bon_WEAPON_MATK,230,bon_INT,3,bon_DMG_SKILL+54,10,bon_DMG_SKILL+55,10,bon_TWO_HANDED_STAFF,1,bon_NONE] // "Aqua Rod Staff"
+,[1420,weapTyp_ROD,2111,30,4,0,90,80,0,0,0,0,bon_WEAPON_MATK,270,bon_INT,5,bon_DMG_SKILL+54,30,bon_DMG_SKILL+55,30,bon_TWO_HANDED_STAFF,1,bon_NONE] // "Empowered Aqua Rod Staff"
 ,[1421,itm_type_ARMOR,2111,40,0,0,50,100,0,0,0,0,bon_MDEF,10,bon_INT,1,bon_CAST_SKILL_FLAT+131,3,bon_NONE] // Aqua Rod Robe
 ,[1422,itm_type_ACCESSORY,2111,2,0,1,20,100,0,0,0,0,bon_SKILL_AUTOCAST,121,bon_RED_ELE_WATER,15,bon_MDEF,2,bon_INT,2,bon_NONE] // Aqua Rod Orb
 ,[1423,itm_type_SHOES,2111,12,0,0,50,100,0,0,0,0,bon_RED_ELE_WATER,15,bon_MDEF,2,bon_HP_ADD,500,bon_NONE] // Aqua Rod Shoes
 ,[1424,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_INC_MAGIC_WATER,40,bon_INC_MAGIC_WIND,-30,bon_RED_ELE_WIND,-50,bon_NONE] // Aqua Rod Set
 ,[1425,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_INC_MAGIC_WATER,60,bon_INC_MAGIC_WIND,-60,bon_RED_ELE_WIND,-50,bon_NONE] // Empowered Aqua Rod Set
-,[1426,weapTyp_ROD,2111,30,4,2,90,80,0,0,45,45,bon_MATK,230,bon_INT,3,bon_DMG_SKILL+51,10,bon_DMG_SKILL+52,10,bon_TWO_HANDED_STAFF,1,bon_NONE] // "Crimson Rod Staff"
-,[1427,weapTyp_ROD,2111,30,4,0,90,80,0,0,0,0,bon_MATK,270,bon_INT,5,bon_DMG_SKILL+51,30,bon_DMG_SKILL+52,30,bon_TWO_HANDED_STAFF,1,bon_NONE] // "Empowered Crimson Rod Staff"
+,[1426,weapTyp_ROD,2111,30,4,2,90,80,0,0,45,45,bon_WEAPON_MATK,230,bon_INT,3,bon_DMG_SKILL+51,10,bon_DMG_SKILL+52,10,bon_TWO_HANDED_STAFF,1,bon_NONE] // "Crimson Rod Staff"
+,[1427,weapTyp_ROD,2111,30,4,0,90,80,0,0,0,0,bon_WEAPON_MATK,270,bon_INT,5,bon_DMG_SKILL+51,30,bon_DMG_SKILL+52,30,bon_TWO_HANDED_STAFF,1,bon_NONE] // "Empowered Crimson Rod Staff"
 ,[1428,itm_type_ARMOR,2111,40,0,0,50,100,0,0,0,0,bon_MDEF,10,bon_INT,1,bon_CAST_SKILL_FLAT+125,3,bon_NONE] // Crimson Rod Robe
 ,[1429,itm_type_ACCESSORY,2111,2,0,1,20,100,0,0,0,0,bon_SKILL_AUTOCAST,122,bon_RED_ELE_FIRE,15,bon_MDEF,2,bon_INT,2,bon_NONE] // Crimson Rod Orb
 ,[1430,itm_type_SHOES,2111,12,0,0,50,100,0,0,0,0,bon_RED_ELE_FIRE,15,bon_MDEF,2,bon_HP_ADD,500,bon_NONE] // Crimson Rod Shoes
 ,[1431,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_INC_MAGIC_FIRE,40,bon_INC_MAGIC_WATER,-30,bon_RED_ELE_WATER,-50,bon_NONE] // Crimson Rod Set
 ,[1432,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_INC_MAGIC_FIRE,60,bon_INC_MAGIC_WATER,-60,bon_RED_ELE_WATER,-50,bon_NONE] // Empowered Crimson Rod Set
-,[1433,weapTyp_ROD,2111,30,4,2,90,80,0,0,45,45,bon_MATK,230,bon_INT,3,bon_DMG_SKILL+132,10,bon_DMG_SKILL+133,10,bon_TWO_HANDED_STAFF,1,bon_NONE] // "Forest Rod Staff"
-,[1434,weapTyp_ROD,2111,30,4,0,90,80,0,0,0,0,bon_MATK,270,bon_INT,5,bon_DMG_SKILL+132,30,bon_DMG_SKILL+133,30,bon_TWO_HANDED_STAFF,1,bon_NONE] // "Empowered Forest Rod Staff"
+,[1433,weapTyp_ROD,2111,30,4,2,90,80,0,0,45,45,bon_WEAPON_MATK,230,bon_INT,3,bon_DMG_SKILL+132,10,bon_DMG_SKILL+133,10,bon_TWO_HANDED_STAFF,1,bon_NONE] // "Forest Rod Staff"
+,[1434,weapTyp_ROD,2111,30,4,0,90,80,0,0,0,0,bon_WEAPON_MATK,270,bon_INT,5,bon_DMG_SKILL+132,30,bon_DMG_SKILL+133,30,bon_TWO_HANDED_STAFF,1,bon_NONE] // "Empowered Forest Rod Staff"
 ,[1435,itm_type_ARMOR,2111,40,0,0,50,100,0,0,0,0,bon_MDEF,10,bon_INT,1,bon_CAST_SKILL_FLAT+133,1,bon_NONE] // Forest Rod Robe
 ,[1436,itm_type_ACCESSORY,2111,2,0,1,20,100,0,0,0,0,bon_SKILL_AUTOCAST,123,bon_RED_ELE_FIRE,15,bon_MDEF,2,bon_INT,2,bon_NONE] // Forest Rod Orb
 ,[1437,itm_type_SHOES,2111,12,0,0,50,100,0,0,0,0,bon_RED_ELE_EARTH,15,bon_MDEF,2,bon_HP_ADD,500,bon_NONE] // Forest Rod Shoes
@@ -1455,8 +1455,8 @@
 ,[1449,itm_type_ARMOR,4000,60,0,0,100,85,0,0,0,0,bon_MDEF,3,bon_STR,1,bon_DEFIGN_RC_DEMI_HUMAN,10,bon_DEFIGN_RC_BRUTE,10,bon_NONE] // "Bone Plate"
 ,[1450,itm_type_SHOES,2117,15,0,1,30,105,0,0,0,0,bon_AGI,1,bon_ASPD_MUL,2,bon_NONE] // "Dance Shoes"
 ,[1451,weapTyp_DAGGER,58,130,3,1,70,99,0,0,0,0,bon_INT,3,bon_NONE] // "Kurenai"
-,[1452,weapTyp_DAGGER,58,120,3,1,60,110,0,0,0,0,bon_INT,3,bon_MATK,100,bon_NONE] // "Kodaichi"/"Raksasa Dagger"
-,[1453,weapTyp_DAGGER,58,50,4,1,60,110,0,0,0,0,bon_MATK,120,bon_RED_CAST,5,bon_NONE] // "Mikazuki"/"Mikatsuki"
+,[1452,weapTyp_DAGGER,58,120,3,1,60,110,0,0,0,0,bon_INT,3,bon_WEAPON_MATK,100,bon_NONE] // "Kodaichi"/"Raksasa Dagger"
+,[1453,weapTyp_DAGGER,58,50,4,1,60,110,0,0,0,0,bon_WEAPON_MATK,120,bon_RED_CAST,5,bon_NONE] // "Mikazuki"/"Mikatsuki"
 ,[1454,itm_type_ARMOR,58,70,0,"0/1",120,100,0,0,0,0,bon_AGI,1,bon_NONE] // "Special Ninja Suit"
 ,[1455,itm_type_ARMOR,58,90,0,1,180,100,0,0,0,0,bon_HP_MUL,15,bon_SP_MUL,-30,bon_NONE] // "Ninja Scale Armor"
 ,[1456,itm_type_ARMOR,58,60,0,1,150,100,0,0,0,0,bon_AGI,1,bon_NONE] // "Special Alloy Armor"/"Tenebris Latitantes"
@@ -1497,7 +1497,7 @@
 ,[1491,itm_type_SET,/*0*/999,0,0,0,0,0,0,0,0,0,bon_NONE] // "RWC Memory Knife + RWC 2012 Pendant"
 ,[1492,itm_type_SET,/*0*/999,0,0,0,0,0,0,0,0,0,bon_NONE] // "RWC Memory Mace + RWC 2012 Ring"
 ,[1493,itm_type_SET,/*0*/999,0,0,0,0,0,0,0,0,0,bon_NONE] // "RWC Memory Staff + RWC 2012 Pendant"
-,[1494,weapTyp_WHIP,/*2117*/999,200,4,1,220,120,0,0,0,0,bon_LUK,-20,bon_INT,10,bon_VIT,10,bon_MATK,130,bon_DMG_RANGE,20,bon_NONE] // "Sword Whip of Thana"
+,[1494,weapTyp_WHIP,/*2117*/999,200,4,1,220,120,0,0,0,0,bon_LUK,-20,bon_INT,10,bon_VIT,10,bon_WEAPON_MATK,130,bon_DMG_RANGE,20,bon_NONE] // "Sword Whip of Thana"
 ,[1495,itm_type_ACCESSORY,64,0,0,1,10,100,0,0,0,0,bon_RED_CAST,-50,bon_DMG_SKILL+654,150,bon_NONE] // "Sound Amplifier"
 ,[1496,weapTyp_KNUCKLE,0,142,3,1,50,102,0,0,1,1,bon_DMG_SKILL+skill_SUR_EARTH_SHAKER,20,bon_DMG_SKILL+skill_SUR_SKY_NET_BLOW,20,bon_NONE] // "Sura Rampage"
 ,[1497,itm_type_HEAD_UPPER,0,1,0,1,100,10,0,0,0,0,bon_MDEF,5,bon_CRIT,5,bon_ASPD_MUL,5,bon_FLEE,5,bon_PDODGE,5,bon_NONE] // "UFO Poring Hat"
@@ -1509,8 +1509,8 @@
 ,[1503,itm_type_SHOES,2107,32,0,0,90,100,0,0,0,0,bon_SP_ADD,40,bon_NONE] // "Peuz''s Greaves"'
 ,[1504,itm_type_ACCESSORY,2107,3,0,1,20,100,0,0,0,0,bon_ATK,20,bon_SP_ADD,20,bon_NONE] // "Peuz''s Seal"'
 ,[1505,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_SKILL_AUTOCAST,124,bon_DMG_SIZ_MEDIUM,10,bon_DMG_SIZ_SMALL,10,bon_DMG_SIZ_LARGE,10,bon_DMG_SKILL+449,100,bon_DMG_SKILL+446,100,bon_NONE] // Peuz''s Set'
-,[1506,weapTyp_ROD,2109,30,4,2,90,80,0,0,54,53,bon_MATK,160,bon_INT,2,bon_HEAL_MUL,10,bon_NONE] // "Wand of Affection"
-,[1507,weapTyp_ROD,2109,30,4,0,90,80,0,0,0,0,bon_MATK,180,bon_INT,4,bon_HEAL_MUL,20,bon_NONE] // "Empowered Wand of Affection"
+,[1506,weapTyp_ROD,2109,30,4,2,90,80,0,0,54,53,bon_WEAPON_MATK,160,bon_INT,2,bon_HEAL_MUL,10,bon_NONE] // "Wand of Affection"
+,[1507,weapTyp_ROD,2109,30,4,0,90,80,0,0,0,0,bon_WEAPON_MATK,180,bon_INT,4,bon_HEAL_MUL,20,bon_NONE] // "Empowered Wand of Affection"
 ,[1508,itm_type_ARMOR,2109,22,0,0,50,100,0,0,0,0,bon_USR_ELEMENT,ele_HOLY,bon_MDEF,10,bon_INT,1,bon_NONE] // Robe of Affection
 ,[1509,itm_type_GARMENT,2109,12,0,1,30,100,0,0,0,0,bon_SKILL_AUTOCAST,125,bon_PDODGE,5,bon_NONE] // Shawl of Affection
 ,[1510,itm_type_SHOES,2109,12,0,0,50,100,0,0,0,0,bon_HP_ADD,500,bon_RED_RC_FORMLESS,-10,bon_RED_RC_UNDEAD,-10,bon_RED_RC_BRUTE,-10,bon_RED_RC_PLANT,-10,bon_RED_RC_INSECT,-10,bon_RED_RC_FISH,-10,bon_RED_RC_DEMON,-10,bon_RED_RC_DEMI_HUMAN,10,bon_RED_RC_ANGEL,-10,bon_RED_RC_DRAGON,-10,bon_NONE] // Shoes of Affection
@@ -1540,11 +1540,11 @@
 ,[1534,itm_type_ACCESSORY,2109,0,0,0,0,110,0,0,0,0,bon_HEAL_MUL,2,bon_INT,2,bon_NONE] // Seal of Cathedral
 ,[1535,itm_type_HEAD_MIDDLE,/*0*/999,0,0,0,0,1,0,0,0,0,bon_ALL_STATS,1,bon_NONE] // "Gozarian Mask"
 ,[1536,itm_type_ACCESSORY,2109,0,0,0,0,110,0,0,0,0,bon_HEAL_MUL,2,bon_DEX,2,bon_NONE] // Ring of Archbishop
-,[1537,weapTyp_MACE,2109,170,4,0,120,100,0,0,54,53,bon_INT,1,bon_STR,1,bon_MATK,170,bon_NONE] // Mace of Judgement
+,[1537,weapTyp_MACE,2109,170,4,0,120,100,0,0,54,53,bon_INT,1,bon_STR,1,bon_WEAPON_MATK,170,bon_NONE] // Mace of Judgement
 ,[1538,itm_type_SHOES,2109,12,0,0,30,100,0,0,0,0,bon_SP_ADD,150,bon_RED_RC_UNDEAD,10,bon_RED_RC_FORMLESS,-10,bon_RED_RC_BRUTE,-10,bon_RED_RC_PLANT,-10,bon_RED_RC_INSECT,-10,bon_RED_RC_FISH,-10,bon_RED_RC_DEMON,10,bon_RED_RC_DEMI_HUMAN,-10,bon_RED_RC_ANGEL,-10,bon_RED_RC_DRAGON,-10,bon_NONE] // Shoes of Judgement
 ,[1539,itm_type_GARMENT,2109,12,0,0,30,110,0,0,0,0,bon_FLEE,5,bon_NONE] // Shawl of Judgement
 ,[1540,itm_type_ARMOR,2109,22,0,0,30,110,0,0,0,0,bon_USR_ELEMENT,7,bon_DMG_SKILL+490,30,bon_INT,1,bon_STR,1,bon_MDEF,10,bon_NONE] // Robe of Judgement
-,[1541,weapTyp_MACE,2109,170,4,1,120,100,0,0,0,0,bon_INT,2,bon_STR,2,bon_MATK,180,bon_NONE] // Empowered Mace of Judgement
+,[1541,weapTyp_MACE,2109,170,4,1,120,100,0,0,0,0,bon_INT,2,bon_STR,2,bon_WEAPON_MATK,180,bon_NONE] // Empowered Mace of Judgement
 ,[1542,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL+492,200,bon_DMG_ELE_UNDEAD,15,bon_NONE] // Robe of Judgement + Shoes of Judgement + Shawl of Judgement + Mace of Judgement
 ,[1543,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL+492,200,bon_DMG_ELE_UNDEAD,30,bon_NONE] // Robe of Judgement + Shoes of Judgement + Shawl of Judgement + Empowered Mace of Judgement
 ,[1544,itm_type_GARMENT,/*0*/999,18,0,1,20,1,0,0,0,0,bon_NONE] // Archangel Wing
@@ -1596,17 +1596,17 @@
 ,[1586,weapTyp_DAGGER,1,129,4,0,0,1,0,0,0,0,bon_RED_RC_DEMI_HUMAN,10,bon_RED_RC_DEMON,-10,bon_IGN_DEF_RC_DEMI_HUMAN,1,bon_SP_MUL,10,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Combat Knife (7 d.)"
 ,[1587,weapTyp_KATAR,0,189,4,0,0,1,0,0,0,0,bon_DMG_RC_DEMI_HUMAN,70,bon_DEF,3,bon_FLEE,5,bon_PDODGE,2,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Infiltrator (7 d.)"
 ,[1588,weapTyp_AXEII,0,229,4,0,0,1,0,0,0,0,bon_ELEMENT,6,bon_DMG_RC_DEMON,3,bon_SKILL_ENABLE,4,bon_STR,10,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Epsilon (7 d.)"
-,[1589,weapTyp_BOOK,0,135,3,0,0,1,0,0,0,0,bon_MATK,140,bon_ASPD_MUL,5,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Sage''s Diary (7 d.)"'
-,[1590,weapTyp_BOOK,0,168,4,0,0,1,0,0,0,0,bon_MATK,100,bon_STR,5,bon_DEX,2,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Hardcover Book (7 d.)"
+,[1589,weapTyp_BOOK,0,135,3,0,0,1,0,0,0,0,bon_WEAPON_MATK,140,bon_ASPD_MUL,5,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Sage''s Diary (7 d.)"'
+,[1590,weapTyp_BOOK,0,168,4,0,0,1,0,0,0,0,bon_WEAPON_MATK,100,bon_STR,5,bon_DEX,2,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Hardcover Book (7 d.)"
 ,[1591,weapTyp_RIFLE,0,170,3,0,0,1,0,0,0,0,bon_HIT,20,bon_CRIT,50,bon_PHY_ATK,40,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Improved Action Rifle (7 d.)"
 ,[1592,weapTyp_SPEARII,0,220,3,0,0,1,0,0,0,0,bon_DMG_SIZ_LARGE,50,bon_DMG_SIZ_MEDIUM,50,bon_DMG_SIZ_SMALL,50,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Lance (7 d.)"
 ,[1593,weapTyp_SWORD,1,185,4,0,0,1,0,0,0,0,bon_STR,2,bon_DEF,1,bon_SKILL_ENABLE,3,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Cutlas (7 d.)"
 ,[1594,weapTyp_AXE,90,110,3,0,0,1,0,0,0,0,bon_DMG_SIZ_LARGE,70,bon_DMG_SIZ_MEDIUM,70,bon_DMG_SIZ_SMALL,70,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Orcish Axe (7 d.)"
 ,[1595,weapTyp_BOW,64,194,4,0,0,1,0,0,0,0,bon_DMG_RANGE,20,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Ballista (7 d.)"
-,[1596,weapTyp_STAFF,3,1,4,0,0,1,0,0,0,0,bon_DEX,4,bon_MATK,145,bon_HP_ADD,500,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Staff of Life (7 d.)"
+,[1596,weapTyp_STAFF,3,1,4,0,0,1,0,0,0,0,bon_DEX,4,bon_WEAPON_MATK,145,bon_HP_ADD,500,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Staff of Life (7 d.)"
 ,[1597,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK_MUL,-5,bon_HP_ADD,300,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Staff of Life (7 d.) + Survivor''s Manteau"'
 ,[1598,weapTyp_SWORD,1,148,4,0,0,1,0,0,0,0,bon_DMG_RC_DEMI_HUMAN,40,bon_SKILL_ENABLE,50,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Nagan (7 d.)"
-,[1599,weapTyp_ROD,3,165,3,0,0,1,0,0,0,0,bon_STR,10,bon_INT,4,bon_MATK,120,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Mighty Staff (7 d.)"
+,[1599,weapTyp_ROD,3,165,3,0,0,1,0,0,0,0,bon_STR,10,bon_INT,4,bon_WEAPON_MATK,120,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Mighty Staff (7 d.)"
 ,[1600,weapTyp_MACE,53,193,4,0,0,1,0,0,0,0,bon_DMG_ELE_UNDEAD,40,bon_DMG_RC_DEMON,40,bon_DMG_RC_DEMI_HUMAN,30,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Quadrille (7 d.)"
 ,[1601,weapTyp_KATAR,0,148,4,0,0,1,0,0,0,0,bon_IGN_DEF_RC_DEMI_HUMAN,1,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Bloody Roar (7 d.)"
 ,[1602,weapTyp_HANDGUN,0,100,3,0,0,1,0,0,0,0,bon_PHY_ATK,40,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Wasteland Outlaw (7 d.)"
@@ -1622,7 +1622,7 @@
 ,[1612,weapTyp_DAGGER,1,153,3,0,0,1,0,0,0,0,bon_DMG_SIZ_LARGE,40,bon_DMG_SIZ_MEDIUM,40,bon_DMG_SIZ_SMALL,40,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Damascus (7 d.)"
 ,[1613,weapTyp_SWORD,61,185,3,0,0,1,0,0,0,0,bon_DMG_SIZ_LARGE,40,bon_DMG_SIZ_MEDIUM,40,bon_DMG_SIZ_SMALL,40,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Flamberge (7 d.)"
 ,[1614,weapTyp_DAGGER,1,85,4,0,0,1,0,0,0,0,bon_SP_MUL,10,bon_NONE]  // "Mythic Moonlight Dagger (7 d.)"
-,[1615,weapTyp_BOOK,0,145,3,0,0,1,0,0,0,0,bon_MATK,100,bon_MDMG_RC_FORMLESS,15,bon_MDMG_RC_UNDEAD,15,bon_MDMG_RC_BRUTE,15,bon_MDMG_RC_PLANT,15,bon_MDMG_RC_INSECT,15,bon_MDMG_RC_FISH,15,bon_MDMG_RC_DEMON,15,bon_MDMG_RC_DEMI_HUMAN,15,bon_MDMG_RC_ANGEL,15,bon_MDMG_RC_DRAGON,15,bon_INT,3,bon_DEX,2,bon_CRIT,20,bon_DMG_SIZ_LARGE,40,bon_DMG_SIZ_MEDIUM,40,bon_DMG_SIZ_SMALL,40,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Encyclopedia (7 d.)"
+,[1615,weapTyp_BOOK,0,145,3,0,0,1,0,0,0,0,bon_WEAPON_MATK,100,bon_MDMG_RC_FORMLESS,15,bon_MDMG_RC_UNDEAD,15,bon_MDMG_RC_BRUTE,15,bon_MDMG_RC_PLANT,15,bon_MDMG_RC_INSECT,15,bon_MDMG_RC_FISH,15,bon_MDMG_RC_DEMON,15,bon_MDMG_RC_DEMI_HUMAN,15,bon_MDMG_RC_ANGEL,15,bon_MDMG_RC_DRAGON,15,bon_INT,3,bon_DEX,2,bon_CRIT,20,bon_DMG_SIZ_LARGE,40,bon_DMG_SIZ_MEDIUM,40,bon_DMG_SIZ_SMALL,40,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Encyclopedia (7 d.)"
 ,[1616,weapTyp_SPEAR,0,74,1,0,0,1,0,0,0,0,bon_DMG_SIZ_LARGE,70,bon_DMG_SIZ_MEDIUM,70,bon_DMG_SIZ_SMALL,70,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE,bon_NONE] // "Mythic Pike (7 d.)",
 ,[1617,weapTyp_SWORD,1,120,4,0,0,1,0,0,0,0,bon_ELEMENT,3,bon_NO_UPGRADES,1,bon_NONE] // "Mythic Solar Sword (7 d.)"
 ,[1618,weapTyp_MACE,53,150,3,0,0,1,0,0,0,0,bon_CH_STATUS_STUN,1,bon_CH_STATUS_BLIND,1,bon_CH_STATUS_POISON,1,bon_CH_STATUS_FREEZE,1,bon_NO_UPGRADES,1,bon_NONE]// "Mythic Wrench (7 d.)"
@@ -1633,9 +1633,9 @@
 ,[1623,weapTyp_DAGGER,55,209,4,0,0,1,0,0,0,0,bon_CRIT,90,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Dagger of Counter (7 d.)"
 ,[1624,weapTyp_SPEAR,1,100,4,0,85,48,0,0,0,0,bon_DMG_SIZ_MEDIUM,20,bon_IGN_DEF_NONBOSS,1,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Skewer (7 d.)"
 ,[1625,weapTyp_KATAR,0,179,4,0,0,1,0,0,0,0,bon_CH_STATUS_CURSE,50,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE]  // "Mythic Cursed Katar (7 d.)"
-,[1626,weapTyp_DAGGER,58,120,1,0,0,1,0,0,0,0,bon_MATK,98,bon_MDMG_RC_FORMLESS,15,bon_MDMG_RC_UNDEAD,15,bon_MDMG_RC_BRUTE,15,bon_MDMG_RC_PLANT,15,bon_MDMG_RC_INSECT,15,bon_MDMG_RC_FISH,15,bon_MDMG_RC_DEMON,15,bon_MDMG_RC_DEMI_HUMAN,15,bon_MDMG_RC_ANGEL,15,bon_MDMG_RC_DRAGON,15,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Asura (7 d.)"
-,[1627,weapTyp_STAFF,53,10,3,0,0,1,0,0,0,0,bon_MATK,125,bon_ELEMENT,6,bon_HEAL_MUL,15,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE]  // "Mythic Staff of Yggdrasil (7 d.)"
-,[1628,weapTyp_STAFF,53,10,3,0,0,1,0,0,0,0,bon_MATK,100,bon_ELEMENT,6,bon_HEAL_MUL,18,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Staff of Healing (7 d.)"
+,[1626,weapTyp_DAGGER,58,120,1,0,0,1,0,0,0,0,bon_WEAPON_MATK,98,bon_MDMG_RC_FORMLESS,15,bon_MDMG_RC_UNDEAD,15,bon_MDMG_RC_BRUTE,15,bon_MDMG_RC_PLANT,15,bon_MDMG_RC_INSECT,15,bon_MDMG_RC_FISH,15,bon_MDMG_RC_DEMON,15,bon_MDMG_RC_DEMI_HUMAN,15,bon_MDMG_RC_ANGEL,15,bon_MDMG_RC_DRAGON,15,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Asura (7 d.)"
+,[1627,weapTyp_STAFF,53,10,3,0,0,1,0,0,0,0,bon_WEAPON_MATK,125,bon_ELEMENT,6,bon_HEAL_MUL,15,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE]  // "Mythic Staff of Yggdrasil (7 d.)"
+,[1628,weapTyp_STAFF,53,10,3,0,0,1,0,0,0,0,bon_WEAPON_MATK,100,bon_ELEMENT,6,bon_HEAL_MUL,18,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Staff of Healing (7 d.)"
 ,[1629,weapTyp_BOW,76,185,4,0,0,1,0,0,0,0,bon_ELEMENT,6,bon_INT,5,bon_NO_UPGRADES,1,bon_SKILL_ENABLE,5,bon_SKILL_ENABLE,6,bon_RES_STATUS_CURSE,50,bon_RES_STATUS_POISON,50,bon_RES_STATUS_BLIND,50,bon_RES_STATUS_CHAOS,50,bon_RES_STATUS_SILENCE,50,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Rudra Bow (7 d.)"
 ,[1630,weapTyp_SPEAR,0,195,3,0,0,1,0,0,0,0,bon_STR,1,bon_INT,2,bon_DEX,1,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE]  // "Mythic Pole Axe (7 d.)"
 ,[1631,itm_type_ACCESSORY,0,0,0,0,0,1,0,0,0,0,bon_ATK,30,bon_NONE] // "Prisoner''s Flail (Rental 7 d.)"'
@@ -1688,12 +1688,12 @@
 ,[1678,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,131,bon_RED_RC_BRUTE,1,bon_NONE] // "Shadow Tamer Shield"
 ,[1679,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,131,bon_DMG_RC_BRUTE,2,bon_NONE] // "Shadow Tamer Boots"
 ,[1680,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_EXP_RC_BRUTE,3,bon_NONE] // "Shadow Tamer Shield + Shadow Tamer Boots"
-,[1681,itm_type_HEAD_UPPER,0,15,0,1,20,1,0,0,0,0,bon_NONE] // "Amistr Hat"
+,[1681,itm_type_HEAD_UPPER,0,15,0,1,20,1,0,0,0,0,"ev_ref",2,bon_ATK,10,"ev_ref",2,bon_MATK,10,"ref_lvl",7,bon_RED_CAST,-10,"ref_lvl",9,bon_INC_MAGIC_NEUTRAL,10,"ref_lvl",9,bon_INC_MAGIC_HOLY,10,"ref_lvl",11,bon_PHY_ATK,5,"ref_lvl",11,bon_MATK_MUL,3,bon_NONE] // "Amistr Hat"
 ,[1682,itm_type_HEAD_UPPER,0,35,0,0,40,1,0,0,0,0,bon_NONE] // "Officer''s Cap"'
 ,[1683,itm_type_ACCESSORY,215,1,0,0,40,130,0,0,0,0,bon_STR,5,bon_HP_MUL,-6,bon_SP_MUL,6,bon_NONE] // "Glove Of Shura"
-,[1684,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "Amistr Hat + Holy Stick"
-,[1685,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "Amistr Hat + Twin Edge of Naght Sieger(blue)"
-,[1686,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "Amistr Hat + Twin Edge of Naght Sieger(red)"
+,[1684,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"ev_weap_ref",2,bon_MATK,10,"ev_weap_ref",2,bon_DMG_SKILL + skill_ABI_ADORAMUS,30,bon_NONE] // "Amistr Hat + Holy Stick"
+,[1685,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"ev_weap_ref",2,bon_DMG_SKILL + skill_GEN_CART_CANNON,10,bon_NONE] // "Amistr Hat + Twin Edge of Naght Sieger(blue)"
+,[1686,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"ev_weap_ref",2,bon_DMG_SKILL + skill_GEN_CART_CANNON,10,bon_NONE] // "Amistr Hat + Twin Edge of Naght Sieger(red)"
 ,[1687,itm_type_HEAD_UPPER,0,5,0,0,100,1,0,0,0,0,bon_RED_RC_DRAGON,8,bon_RED_RC_DEMI_HUMAN,8,bon_NONE] // "Dragon Claw Helm"
 ,[1688,weapTyp_HANDGUN,0,150,3,1,80,99,0,0,0,0,bon_DMG_SKILL+429,20,bon_NONE] // "Heaven''s Feather & Hell''s Fire"'
 ,[1689,weapTyp_HANDGUN,0,200,3,0,100,140,0,0,0,0,bon_HIT,5,bon_RED_CASTDELAY,-10,bon_DMG_RANGE,30,bon_NONE] // "Altair & Ares"
@@ -1706,9 +1706,9 @@
 ,[1696,weapTyp_GATLING_GUN,0,250,4,0,250,140,0,0,0,0,bon_HIT,-25,bon_CRIT,10,bon_DMG_RANGE,20,bon_NONE] // "Tempest"
 ,[1697,weapTyp_GRENADE_LAUNCHER,0,410,4,1,240,110,0,0,0,0,bon_NONE] // "End Of The Horizon"
 ,[1698,weapTyp_GRENADE_LAUNCHER,0,480,4,0,200,141,0,0,0,0,bon_NONE] // "Southern Cross"
-,[1699,weapTyp_HUUMA_SHURIKEN,0,150,3,2,150,110,0,0,0,0,bon_MATK,50,bon_DMG_SKILL+728,20,bon_NONE] // "Huuma Swirling Petal"
-,[1700,weapTyp_HUUMA_SHURIKEN,0,200,4,0,150,110,0,0,0,0,bon_ELEMENT,ele_WATER,bon_MATK,50,bon_NONE] // "Huuma Fluttering Snow"
-,[1701,weapTyp_HUUMA_SHURIKEN,0,200,4,0,150,110,0,0,0,0,bon_ELEMENT,ele_WIND,bon_MATK,50,bon_NONE] // "Huuma Thunderstorm"
+,[1699,weapTyp_HUUMA_SHURIKEN,0,150,3,2,150,110,0,0,0,0,bon_WEAPON_MATK,50,bon_DMG_SKILL+728,20,bon_NONE] // "Huuma Swirling Petal"
+,[1700,weapTyp_HUUMA_SHURIKEN,0,200,4,0,150,110,0,0,0,0,bon_ELEMENT,ele_WATER,bon_WEAPON_MATK,50,bon_NONE] // "Huuma Fluttering Snow"
+,[1701,weapTyp_HUUMA_SHURIKEN,0,200,4,0,150,110,0,0,0,0,bon_ELEMENT,ele_WIND,bon_WEAPON_MATK,50,bon_NONE] // "Huuma Thunderstorm"
 ,[1702,itm_type_HEAD_UPPER,0,35,0,1,40,1,0,0,0,0,bon_NONE] // "Dog Cap"
 ,[1703,weapTyp_GATLING_GUN,0,180,3,1,0,100,0,0,0,0,bon_HIT,-20,bon_CRIT,10,bon_ASPD_ADD,1,bon_DMG_SKILL+760,20,bon_NONE] // "Probation Gatling Gun"
 ,[1704,weapTyp_GRENADE_LAUNCHER,0,350,3,1,0,100,0,0,0,0,bon_DMG_SKILL+759,20,bon_NONE] // "Probation Grenade Launcher"
@@ -1726,7 +1726,7 @@
 ,[1716,itm_type_SHADOW_WEAPON,0,0,0,0,0,0,0,0,0,131,bon_MATK,10,bon_NONE] // "Shadow Diviner Gloves"
 ,[1717,itm_type_SHADOW_PENDANT,0,0,0,0,0,0,0,0,0,131,bon_SP_ADD,50,bon_NONE] // "Shadow Diviner Pendant"
 ,[1718,itm_type_SHADOW_EARRING,0,0,0,0,0,0,0,0,0,131,bon_RED_CAST,-1,bon_NONE] // "Shadow Diviner Ring"
-,[1719,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Diviner Set"
+,[1719,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"set_sum" + (fl_SHADOW_WEAPON + fl_SHADOW_EARRING + fl_SHADOW_PENDANT),23,bon_MATK_MUL,1,bon_NONE] // "Shadow Diviner Set"
 ,[1720,itm_type_SHADOW_ARMOR,51,0,0,0,0,0,0,0,0,130,bon_NONE] // "Shadow Knight Armor"
 ,[1721,itm_type_SHADOW_SHOES,51,0,0,0,0,0,0,0,0,130,bon_DMG_SKILL+skill_KN_PIERCE,20,bon_NONE] // "Shadow Knight Boots"
 ,[1722,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL+skill_KN_BOWLING_BASH,20,bon_NONE] // "Shadow Knight Set"
@@ -1767,10 +1767,10 @@
 ,[1757,itm_type_SHADOW_SHOES,54,0,0,0,0,0,0,0,0,130,bon_NONE] // "Shadow Dancer Boots"
 ,[1758,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "Shadow Dancer Set"
 //,0,0,0,0,
-,[1759,itm_type_HEAD_UPPER,0,0,0,1,10,0,0,0,0,0,bon_NONE] //Diabolic Halo
-,[1760,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //Diabolic Halo + Mental Stick
-,[1761,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //Diabolic Halo + Kronos
-,[1762,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //Diabolic Halo + Mikatsuki + Raksasa Dagger
+,[1759,itm_type_HEAD_UPPER,0,0,0,1,10,0,0,0,0,0,"ev_ref",2,bon_MATK,15,"ref_lvl",7,bon_RED_CAST,-10,"ref_lvl",9,bon_INC_MAGIC_NEUTRAL,10,"ref_lvl",9,bon_INC_MAGIC_DARK,10,"ref_lvl",11,bon_INC_MAGIC_EARTH,10,"ref_lvl",11,bon_INC_MAGIC_FIRE,10,"ref_lvl",11,bon_INC_MAGIC_WATER,10,"ref_lvl",11,bon_INC_MAGIC_WIND,10,bon_NONE] //Diabolic Halo
+,[1760,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"ev_weap_ref",2,bon_DMG_SKILL + skill_SOR_PSYCHIC_WAVE,5,bon_NONE] //Diabolic Halo + Mental Stick
+,[1761,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"ev_weap_ref",2,bon_DMG_SKILL + skill_WAR_HELL_INFERNO,10,bon_NONE] //Diabolic Halo + Kronos
+,[1762,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"ev_weap_ref",1,bon_DMG_SKILL + skill_NIN_FLAMING_PETALS,5,"ev_weap_ref",1,bon_DMG_SKILL + skill_NIN_FREEZING_SPEAR,5,"ev_weap_ref",1,bon_DMG_SKILL + skill_NIN_WIND_BLADE,5,"ev_weapII_ref",1,bon_DMG_SKILL + skill_NIN_FLAMING_PETALS,5,"ev_weapII_ref",1,bon_DMG_SKILL + skill_NIN_FREEZING_SPEAR,5,"ev_weapII_ref",1,bon_DMG_SKILL + skill_NIN_WIND_BLADE,5,bon_NONE] //Diabolic Halo + Mikatsuki + Raksasa Dagger
 //,0,0,0,0,
 ,[1763,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,131,bon_DEF,1,bon_NONE] // "Shadow Boots of Hypnos"
 ,[1764,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,131,bon_DEF,1,bon_NONE] // "Shadow Boots of Harpos"
@@ -1803,7 +1803,7 @@
 ,[1787,itm_type_ACCESSORY,0,10,0,0,40,100,0,0,0,0,bon_AGI,2,bon_DMG_SKILL+skill_GLT_CROSS_IMPACT,5,bon_NONE] // Loki''s Muffler'
 //Dewata,0,0,0,0,
 ,[1788,itm_type_HEAD_UPPER,0,1,0,0,10,0,0,0,0,0,bon_RED_RC_BRUTE,5,bon_RED_RC_PLANT,5,bon_DMG_RC_BRUTE,5,bon_DMG_RC_PLANT,5,bon_NONE] // Jaty Crown
-,[1789,weapTyp_DAGGER,0,107,3,1,70,30,0,0,0,0,bon_MATK,70,bon_NONE] // Keris
+,[1789,weapTyp_DAGGER,0,107,3,1,70,30,0,0,0,0,bon_WEAPON_MATK,70,bon_NONE] // Keris
 //,0,0,0,0,
 ,[1790,itm_type_HEAD_UPPER,0,5,0,1,60,1,0,0,0,0,bon_FLEE,10,bon_AGI,5,bon_IGN_DEF_RC_DEMI_HUMAN,10,bon_IGN_DEF_RC_BRUTE,10,bon_SKILL_ENABLE,52,bon_NONE] // Wolf King Helm
 //Eclage,0,0,0,0,
@@ -1893,18 +1893,18 @@
 ,[1870,itm_type_ARMOR,224,100,0,1,80,140,0,0,0,0,bon_HP_MUL,10,bon_SP_MUL,10,bon_NONE]//Luxurious Doram Suit
 ,[1871,itm_type_GARMENT,224,25,0,1,40,140,0,0,0,0,bon_FLEE,7,bon_RED_ELE_NEUTRAL,3,bon_NONE]//Luxurious Doram Manteau
 ,[1872,itm_type_SHOES,224,30,0,1,60,140,0,0,0,0,bon_HP_ADD,300,bon_SP_ADD,100,bon_NONE]//Luxurious Doram Shoes
-,[1873,weapTyp_STAFF,224,80,2,3,40,60,0,0,0,0,bon_MATK,180,bon_SP_ADD,50,bon_NONE]//Marvelous Foxtail Staff //Every 3 refine level: MATK +10, MaxSP +10.,
+,[1873,weapTyp_STAFF,224,80,2,3,40,60,0,0,0,0,bon_WEAPON_MATK,180,bon_SP_ADD,50,bon_NONE]//Marvelous Foxtail Staff //Every 3 refine level: MATK +10, MaxSP +10.,
 ,[1874,weapTyp_STAFF,224,195,3,2,30,100,0,0,0,0,bon_DMG_RANGE,8,bon_HP_ADD,200,bon_NONE]//Fine Foxtail Replica //For every 3 refine level: DEX +3, MaxSP +15.,
 ,[1875,weapTyp_STAFF,224,150,2,3,30,60,0,0,0,0,bon_DMG_RANGE,8,bon_HP_ADD,100,bon_NONE]//Foxtail Replica  //For every 3 refine level: DEX +2, MaxSP +10.,
 ,[1876,weapTyp_STAFF,224,70,2,1,30,20,0,0,0,0,bon_DEX,1,bon_HP_ADD,200,bon_SP_ADD,100,bon_DMG_RANGE,8,bon_NONE]//Large Foxtail Staff
-,[1877,weapTyp_STAFF,224,100,3,2,50,100,0,0,0,0,bon_MATK,240,bon_SP_ADD,100,bon_NONE]//Wondrous Foxtail Staff //For every 3 refine level: MATK +2%, MaxSP +1%.,
-,[1878,weapTyp_STAFF,224,70,2,1,30,20,0,0,0,0,bon_MATK,100,bon_INT,1,bon_HP_ADD,100,bon_SP_ADD,150,bon_NONE]//Dragonfly Sitting Foxtail Staff
+,[1877,weapTyp_STAFF,224,100,3,2,50,100,0,0,0,0,bon_WEAPON_MATK,240,bon_SP_ADD,100,bon_NONE]//Wondrous Foxtail Staff //For every 3 refine level: MATK +2%, MaxSP +1%.,
+,[1878,weapTyp_STAFF,224,70,2,1,30,20,0,0,0,0,bon_WEAPON_MATK,100,bon_INT,1,bon_HP_ADD,100,bon_SP_ADD,150,bon_NONE]//Dragonfly Sitting Foxtail Staff
 ,[1879,weapTyp_STAFF,224,30,1,0,0,0,0,0,0,0,bon_NONE]//Shoot Foxtail Staff
 ,[1880,weapTyp_STAFF,224,240,3,2,30,140,0,0,0,0,bon_DMG_RANGE,8,bon_HP_MUL,5,bon_NONE]//Elaborate Foxtail Replica //For every 2 refine level: DEX +3, MaxSP +15.,
 ,[1881,weapTyp_STAFF,224,270,4,1,30,175,0,0,1,1,bon_DMG_RANGE,9,bon_HP_MUL,7,bon_NONE]//Elaborate Yellow Foxtail Replica //Every 2 refine level: Long ranged physical attack +1%, MaxSP +20.,
-,[1882,weapTyp_STAFF,224,50,2,1,20,12,0,0,0,0,bon_MATK,70,bon_SP_ADD,50,bon_NONE]//Enriched Foxtail Staff 
-,[1883,weapTyp_STAFF,224,120,3,2,60,140,0,0,0,0,bon_MATK,260,bon_SP_ADD,100,bon_NONE]//Magic Foxtail Staff //For every 3 refine level: MATK +2%, MaxSP +1%.,
-,[1884,weapTyp_STAFF,224,140,4,1,70,175,0,0,1,1,bon_MATK,280,bon_NONE]//Magic Yellow Foxtail Staff //Every 2 refine level MATK +3%.
+,[1882,weapTyp_STAFF,224,50,2,1,20,12,0,0,0,0,bon_WEAPON_MATK,70,bon_SP_ADD,50,bon_NONE]//Enriched Foxtail Staff 
+,[1883,weapTyp_STAFF,224,120,3,2,60,140,0,0,0,0,bon_WEAPON_MATK,260,bon_SP_ADD,100,bon_NONE]//Magic Foxtail Staff //For every 3 refine level: MATK +2%, MaxSP +1%.,
+,[1884,weapTyp_STAFF,224,140,4,1,70,175,0,0,1,1,bon_WEAPON_MATK,280,bon_NONE]//Magic Yellow Foxtail Staff //Every 2 refine level MATK +3%.
 ,[1885,weapTyp_STAFF,224,50,2,1,20,12,0,0,0,0,bon_HP_ADD,200,bon_DMG_RANGE,5,bon_NONE]//Long Foxtail Staff
 ,[1886,itm_type_ACCESSORY,224,0,0,1,1,100,0,0,0,0,bon_PDODGE,5,bon_NONE]//Fresh Grass Necklace
 ,[1887,itm_type_ACCESSORY,224,0,0,1,1,100,0,0,0,0,bon_HEAL_MUL,5,bon_NONE]//Cute Grass Necklace
@@ -1937,16 +1937,16 @@
 ,[1914,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_HP_MUL,20,bon_SP_MUL,20,bon_DMG_SKILL+skill_SUM_CATNIP_METEOR,200,bon_NONE] // "Elegant Doram Charm Grass Superior Leaf Set"
 ,[1915,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_HP_MUL,30,bon_SP_MUL,9,bon_DMG_SKILL+skill_SUM_LUNATIC_CARROT_BEAT,200,bon_NONE] // "Elegant Doram Fresh Grass Superior Bunny Set"
 ,[1916,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_HP_MUL,25,bon_SP_MUL,15,bon_HEAL_MUL,30,bon_SKILL_ENABLE,55,bon_NONE] // "Elegant Doram Cute Grass Superior Tuna Set"
-,[1917,weapTyp_STAFF,224,40,1,1,10,3,0,0,0,0,bon_HP_ADD,100,bon_MATK,15,bon_NONE] // "Beginner Foxtail Staff"
+,[1917,weapTyp_STAFF,224,40,1,1,10,3,0,0,0,0,bon_HP_ADD,100,bon_WEAPON_MATK,15,bon_NONE] // "Beginner Foxtail Staff"
 ,[1918,itm_type_HEAD_UPPER,224,2,0,1,10,20,0,0,0,0,bon_LUK,1,bon_NONE] // "Parfaille Vigilante Hat" //Adds a chance to auto cast Level 3 Blessing when dealing physical or magical attacks.
 ,[1919,itm_type_ACCESSORY,0,0,0,0,10,0,0,0,0,0,bon_NONE] // "Foxtail Ring"
 //Eden Group stuff part 2,0,0,0,0,
-,[1920,weapTyp_BOOK,0,135,3,0,0,60,0,0,0,0,bon_MATK,110,bon_NO_UPGRADES,1,bon_NONE] // "Eden Book I"
+,[1920,weapTyp_BOOK,0,135,3,0,0,60,0,0,0,0,bon_WEAPON_MATK,110,bon_NO_UPGRADES,1,bon_NONE] // "Eden Book I"
 ,[1921,weapTyp_BOW,54,140,3,0,0,60,0,0,0,0,bon_NO_UPGRADES,1,bon_NONE] // "Eden Bow III"
-,[1922,weapTyp_DAGGER,0,165,3,0,0,60,0,0,0,0,bon_MATK,80,bon_NO_UPGRADES,1,bon_NONE] // "Eden Dagger III"
-,[1923,weapTyp_STAFF,224,120,2,0,0,26,0,0,0,0,bon_DEX,3,bon_INT,3,bon_MATK,135,bon_DMG_RANGE,5,bon_NO_UPGRADES,1,bon_NONE] // "Eden Foxtail I"
-,[1924,weapTyp_STAFF,224,135,2,0,0,40,0,0,0,0,bon_DEX,4,bon_INT,4,bon_MATK,165,bon_DMG_RANGE,6,bon_NO_UPGRADES,1,bon_NONE] // "Eden Foxtail II"
-,[1925,weapTyp_STAFF,224,150,3,0,0,60,0,0,0,0,bon_DEX,5,bon_INT,5,bon_MATK,195,bon_DMG_RANGE,7,bon_NO_UPGRADES,1,bon_NONE] // "Eden Foxtail III"
+,[1922,weapTyp_DAGGER,0,165,3,0,0,60,0,0,0,0,bon_WEAPON_MATK,80,bon_NO_UPGRADES,1,bon_NONE] // "Eden Dagger III"
+,[1923,weapTyp_STAFF,224,120,2,0,0,26,0,0,0,0,bon_DEX,3,bon_INT,3,bon_WEAPON_MATK,135,bon_DMG_RANGE,5,bon_NO_UPGRADES,1,bon_NONE] // "Eden Foxtail I"
+,[1924,weapTyp_STAFF,224,135,2,0,0,40,0,0,0,0,bon_DEX,4,bon_INT,4,bon_WEAPON_MATK,165,bon_DMG_RANGE,6,bon_NO_UPGRADES,1,bon_NONE] // "Eden Foxtail II"
+,[1925,weapTyp_STAFF,224,150,3,0,0,60,0,0,0,0,bon_DEX,5,bon_INT,5,bon_WEAPON_MATK,195,bon_DMG_RANGE,7,bon_NO_UPGRADES,1,bon_NONE] // "Eden Foxtail III"
 ,[1926,weapTyp_INSTRUMENT,0,125,3,0,0,60,0,0,0,0,bon_NO_UPGRADES,1,bon_NONE] // "Eden Guitar I"
 ,[1927,weapTyp_KATAR,0,155,3,0,0,60,0,0,0,0,bon_NO_UPGRADES,1,bon_NONE] // "Eden Katar I"
 ,[1928,weapTyp_KNUCKLE,0,120,3,0,0,60,0,0,0,0,bon_NO_UPGRADES,1,bon_NONE] // "Eden Knuckle I"
@@ -1955,14 +1955,14 @@
 ,[1931,weapTyp_SWORD,1,185,3,0,0,60,0,0,0,0,bon_NO_UPGRADES,1,bon_NONE] // "Eden Sabre III"
 ,[1932,weapTyp_2HSWORD,1,200,3,0,0,60,0,0,0,0,bon_NO_UPGRADES,1,bon_NONE] // "Eden Slayer III"
 ,[1933,weapTyp_2HSPEAR,1,165,3,0,0,60,0,0,0,0,bon_NO_UPGRADES,1,bon_NONE] // "Eden Spear I"
-,[1934,weapTyp_ROD,71,60,3,0,0,60,0,0,0,0,bon_MATK,170,bon_INT,4,bon_NO_UPGRADES,1,bon_NONE] // "Eden Staff III"
+,[1934,weapTyp_ROD,71,60,3,0,0,60,0,0,0,0,bon_WEAPON_MATK,170,bon_INT,4,bon_NO_UPGRADES,1,bon_NONE] // "Eden Staff III"
 ,[1935,weapTyp_WHIP,0,125,3,0,0,60,0,0,0,0,bon_NO_UPGRADES,1,bon_NONE] // "Eden Tail I"
 ,[1936,itm_type_SHOES,0,20,0,0,0,60,0,0,0,0,bon_VIT,1,bon_AGI,1,bon_HP_REG,28,bon_SP_REG,12,bon_NO_UPGRADES,1,bon_NONE] // "Eden Team Boots IV"
 ,[1937,itm_type_HEAD_UPPER,0,5,0,0,0,60,0,0,0,0,bon_NONE] // "Eden Group Hat II"
 ,[1938,itm_type_GARMENT,0,18,0,0,0,60,0,0,0,0,bon_FLEE,12,bon_RED_ELE_NEUTRAL,10,bon_NONE] // "Eden Group Manteau II"
 ,[1939,itm_type_ARMOR,0,70,0,0,0,60,0,0,0,0,bon_MDEF,5,bon_HP_ADD,500,bon_SP_ADD,50,bon_STR,1,bon_INT,1,bon_DEX,1,bon_NONE] // "Eden Group Uniform IV"
 ,[1940,weapTyp_AXEII,0,195,3,0,0,60,0,0,0,0,bon_NO_UPGRADES,1,bon_NONE] // "Eden Group Two Handed Axe I"
-,[1941,weapTyp_HUUMA_SHURIKEN,0,150,3,0,0,60,0,0,0,0,bon_MATK,50,bon_NO_UPGRADES,1,bon_NONE] // "Eden Group Huuma Shuriken I"
+,[1941,weapTyp_HUUMA_SHURIKEN,0,150,3,0,0,60,0,0,0,0,bon_WEAPON_MATK,50,bon_NO_UPGRADES,1,bon_NONE] // "Eden Group Huuma Shuriken I"
 ,[1942,itm_type_HEAD_UPPER,0,12,0,1,80,1,0,0,0,0,bon_NONE] // "General''s Helmet"'
 ,[1943,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "General''s Helmet + Gungnir"'
 ,[1944,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "General''s Helmet + Zweihander"'
@@ -2007,11 +2007,11 @@
 ,[1982,itm_type_ACCESSORY,2117,0,0,1,10,130,0,0,0,0,bon_RED_CAST,-25,bon_NONE] // "Floral Bracelet Of Aigu"
 ,[1983,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL+skill_CG_ARROW_VULCAN,200,bon_NONE] // "Aigu Set" "Floral Mic Of Aigu + Floral Bracelet Of Aigu"
 ,[1984,itm_type_ARMOR,2000,20,0,1,150,130,0,0,0,0,bon_USR_ELEMENT,ele_WATER,bon_NONE] // "Frozen Breastplate"
-,[1985,weapTyp_INSTRUMENT,2000,180,3,2,25,160,0,0,0,0,bon_MATK,120,bon_DELAY_SKILL_FLAT+skill_MIWA_IMPROVISED_SONG,2,bon_NONE] // "ContrabassContrabass"
-,[1986,weapTyp_WHIP,2000,150,3,2,20,160,0,0,0,0,bon_MATK,120,bon_ASPD_MUL,20,bon_NONE] // "Gymnastics Ribbon"
+,[1985,weapTyp_INSTRUMENT,2000,180,3,2,25,160,0,0,0,0,bon_WEAPON_MATK,120,bon_DELAY_SKILL_FLAT+skill_MIWA_IMPROVISED_SONG,2,bon_NONE] // "ContrabassContrabass"
+,[1986,weapTyp_WHIP,2000,150,3,2,20,160,0,0,0,0,bon_WEAPON_MATK,120,bon_ASPD_MUL,20,bon_NONE] // "Gymnastics Ribbon"
 ,[1987,itm_type_ACCESSORY,226,0,0,0,20,160,0,0,0,0,bon_NONE] // "Hero Ring"
-,[1988,weapTyp_DAGGER,0,110,3,1,50,24,0,0,0,0,bon_ELEMENT,ele_POISON,bon_MATK,50,bon_NONE] // "Faceworm Leg"
-,[1989,weapTyp_DAGGER,226,180,4,2,50,100,0,0,0,0,bon_MATK,120,bon_INT,3,bon_NONE] // "Faceworm Queen Leg"
+,[1988,weapTyp_DAGGER,0,110,3,1,50,24,0,0,0,0,bon_ELEMENT,ele_POISON,bon_WEAPON_MATK,50,bon_NONE] // "Faceworm Leg"
+,[1989,weapTyp_DAGGER,226,180,4,2,50,100,0,0,0,0,bon_WEAPON_MATK,120,bon_INT,3,bon_NONE] // "Faceworm Queen Leg"
 ,[1990,itm_type_SHIELD,0,80,0,1,0,125,0,0,0,0,bon_NONE] // "Seraphing Shield"
 ,[1991,itm_type_HEAD_LOWER,0,12,0,0,30,1,0,0,0,0,bon_HEAL_MUL,5,bon_NONE] // "Sacred Rosary"
 ,[1992,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "Sacred Rosary + Recovery Light"
@@ -2064,7 +2064,7 @@
 ,[2037,itm_type_ARMOR,0,120,0,1,200,1,0,0,0,0,bon_ATK,50,bon_NONE] // "Armor of Sixtus the Mighty"
 ,[2038,itm_type_ARMOR,0,120,0,1,200,1,0,0,0,0,bon_ATK,50,bon_NONE] // "Armor of Sixtus the Agile"
 ,[2039,itm_type_ARMOR,0,120,0,1,200,1,0,0,0,0,bon_ATK,50,bon_NONE] // "Armor of Sixtus the Tough"
-,[2040,itm_type_ARMOR,0,120,0,1,200,1,0,0,0,0,bon_MATK,50,"ev_ref",3,bon_MATK_MUL,2,"ref_lvl",7,bon_MDEFIGN_RC_BRUTE,30,"ref_lvl",7,bon_MDEFIGN_RC_DEMON,30,bon_NONE] // "Armor of Sixtus the Wise"
+,[2040,itm_type_ARMOR,0,120,0,1,200,1,0,0,0,0,bon_MATK,50,"ev_ref",3,bon_MATK_MUL,2,"ref_lvl",7,bon_MDEFIGN_RC_BRUTE,30,"ref_lvl",7,bon_MDEFIGN_RC_DEMON,30,"ref_lvl",9,bon_MDMG_RC_BRUTE,10,"ref_lvl",9,bon_MDMG_RC_DEMON,10,"ref_lvl",11,bon_MDMG_ELE_EARTH,10,"ref_lvl",11,bon_MDMG_ELE_WIND,10,bon_NONE] // "Armor of Sixtus the Wise"
 ,[2041,itm_type_ARMOR,0,120,0,1,200,1,0,0,0,0,bon_ATK,50,bon_NONE] // "Armor of Sixtus the Dexterous"
 ,[2042,itm_type_ARMOR,0,120,0,1,200,1,0,0,0,0,bon_ATK,50,bon_NONE] // "Armor of Sixtus the Lucky"
 ,[2043,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_PHY_ATK,10,bon_NONE] // "Sixtus + Temporal Str"
@@ -2077,26 +2077,27 @@
 ,[2050,weapTyp_2HSWORD,207,180,4,2,100,100,0,0,0,0,bon_NONE] // "Runic Katana"
 ,[2051,weapTyp_2HSWORD,207,180,4,2,100,100,0,0,0,0,bon_NONE] // "Dragon Slayer (Ancient Weapon)"
 ,[2052,weapTyp_SPEAR,213,180,4,2,120,100,0,0,0,0,bon_NONE] // "Trident of Undine"
-,[2053,weapTyp_SWORD,213,130,4,2,100,100,0,0,0,0,bon_MATK,170,bon_NONE] // "Blade of Light"
+,[2053,weapTyp_SWORD,213,130,4,2,100,100,0,0,0,0,bon_WEAPON_MATK,170,"ev_ref",2,bon_MATK,10,"ev_ref",3,bon_DMG_SKILL + skill_ROY_RAY_OF_GENESIS,5,"ev_ref",3,bon_DMG_SKILL + skill_PA_GLORIA_DOMINI,5,"ref_lvl",9,bon_RED_CAST,-10,"ref_lvl",11,bon_INC_MAGIC_HOLY,15,bon_NONE] // "Blade of Light"
 ,[2054,weapTyp_BOW,2076,180,4,2,100,100,0,0,0,0,bon_NONE] // "Bow of Narcissus"
-,[2055,weapTyp_INSTRUMENT,216,160,4,2,70,100,0,0,0,0,bon_MATK,190,bon_NONE] // "Tide Conch"
-,[2056,weapTyp_WHIP,217,160,4,2,70,100,0,0,0,0,bon_MATK,190,bon_NONE] // "Thorn Whip"
+,[2055,weapTyp_INSTRUMENT,216,160,4,2,70,100,0,0,0,0,bon_WEAPON_MATK,190,"ev_ref",2,bon_MATK,10,"ev_ref",3,bon_INC_MAGIC_NEUTRAL,4,"ref_lvl",9,bon_DMG_SKILL + skill_MIWA_REVERBERATION,10,"ref_lvl",9,bon_DMG_SKILL + skill_MIWA_METALLIC_SOUND,10,bon_NONE] // "Tide Conch"
+,[2056,weapTyp_WHIP,217,160,4,2,70,100,0,0,0,0,bon_WEAPON_MATK,190,"ev_ref",2,bon_MATK,10,"ev_ref",3,bon_INC_MAGIC_NEUTRAL,4,"ref_lvl",9,bon_DMG_SKILL + skill_MIWA_REVERBERATION,10,"ref_lvl",9,bon_DMG_SKILL + skill_MIWA_METALLIC_SOUND,10,bon_NONE] // "Thorn Whip"
 ,[2057,weapTyp_KATAR,208,185,4,2,120,100,0,0,0,0,bon_NONE] // "Hand of Death"
 ,[2058,weapTyp_KATAR,208,185,4,2,100,100,0,0,0,0,bon_NONE] // "Steel Flower"
-,[2059,weapTyp_SWORD,214,150,4,2,80,100,0,0,0,0,bon_MATK,150,bon_NONE] // "Magic Sword"
-,[2060,weapTyp_SWORD,214,165,4,2,90,100,0,0,0,0,bon_NONE] // "Fatalist"
+// ,[2059,weapTyp_DAGGER,214,150,4,2,80,100,0,0,0,0,bon_WEAPON_MATK,150,"ev_ref",2,bon_MATK,10,"ev_ref",3,bon_ASPD_MUL,2,"ref_lvl",9,bon_INC_MAGIC_ALL,10,"ref_lvl",11,bon_SKILL_AUTOCAST,151,bon_NONE] // "Magic Sword""Winged Sword"
+,[2059,weapTyp_DAGGER,214,0,1,0,0,0,0,0,0,0,bon_NONE] // "Magic Sword""Winged Sword"
+,[2060,weapTyp_DAGGER,214,0,1,0,0,0,0,0,0,0,bon_NONE] // "Fatalist""Fatebringer"
 ,[2061,weapTyp_BOW,2088,180,4,2,100,100,0,0,0,0,bon_NONE] // "Empyrean"
 ,[2062,weapTyp_BOW,210,170,4,2,80,100,0,0,0,0,bon_NONE] // "Scarlet Dragon''s Bow"'
-,[2063,weapTyp_STAFF,211,100,4,2,80,100,0,0,0,0,bon_MATK,200,bon_NONE] // "Rusty Dragon''s Wand"'
-,[2064,weapTyp_STAFF,211,100,4,2,80,100,0,0,0,0,bon_MATK,200,"ev_ref",3,bon_DMG_SKILL + skill_WAR_JACK_FROST,12,bon_NONE] // "Wand of the Purple Orb"
-,[2065,weapTyp_ROD,218,40,4,2,50,100,0,0,0,0,bon_MATK,155,bon_NONE] // "Shadow Eater"
-,[2066,weapTyp_ROD,218,40,4,2,50,100,0,0,0,0,bon_MATK,150,bon_NONE] // "Ice Guardian"
+,[2063,weapTyp_STAFF,211,100,4,2,80,100,0,0,0,0,bon_WEAPON_MATK,200,bon_NONE] // "Rusty Dragon''s Wand"'
+,[2064,weapTyp_STAFF,211,100,4,2,80,100,0,0,0,0,bon_WEAPON_MATK,200,"ev_ref",2,bon_MATK,10,"ev_ref",3,bon_DMG_SKILL + skill_WAR_JACK_FROST,12,"ref_lvl",9,bon_INC_MAGIC_WATER,7,"ref_lvl",11,bon_MDMG_ELE_FIRE,7,bon_NONE] // "Wand of the Purple Orb"
+,[2065,weapTyp_ROD,218,40,4,2,50,100,0,0,0,0,bon_WEAPON_MATK,155,bon_NONE] // "Shadow Eater"
+,[2066,weapTyp_ROD,218,40,4,2,50,100,0,0,0,0,bon_WEAPON_MATK,150,"ev_ref",2,bon_MATK,10,"ev_ref",3,bon_DMG_SKILL + skill_SOR_DIAMOND_DUST,8,"ref_lvl",9,bon_MDMG_RC_UNDEAD,10,"ref_lvl",11,bon_INC_MAGIC_WATER,10,bon_NONE] // "Ice Guardian"
 ,[2067,weapTyp_AXEII,212,270,4,2,600,100,0,0,0,0,bon_NONE] // "Avenger"
 ,[2068,weapTyp_MACE,212,300,4,2,300,100,0,0,0,0,bon_NONE] // "Big Badaboom"
 ,[2069,weapTyp_SWORD,219,180,4,2,80,100,0,0,0,0,bon_NONE] // "Sword of Blue Fire"
 ,[2070,weapTyp_SWORD,219,190,4,2,100,100,0,0,0,0,bon_NONE] // "Slate Sword"
-,[2071,weapTyp_BOOK,209,165,4,2,50,100,0,0,0,0,bon_MATK,160,bon_NONE] // "All-Holy Book"
-,[2072,weapTyp_MACE,209,170,4,2,80,100,0,0,0,0,bon_MATK,165,bon_MATK_MUL,3,bon_NONE] // "Mace of the Righteous"
+,[2071,weapTyp_BOOK,209,165,4,2,50,100,0,0,0,0,bon_WEAPON_MATK,160,bon_NONE] // "All-Holy Book"
+,[2072,weapTyp_MACE,209,170,4,2,80,100,0,0,0,0,bon_WEAPON_MATK,165,bon_MATK_MUL,3,"ev_ref",2,bon_INC_MAGIC_HOLY,1,"ev_ref",3,bon_DMG_SKILL + skill_ABI_ADORAMUS,5,"ref_lvl",9,bon_RED_CAST,-10,"ref_lvl",11,bon_INC_MAGIC_HOLY,10,bon_NONE] // "Mace of the Righteous"
 ,[2073,weapTyp_KNUCKLE,215,180,4,2,100,100,0,0,0,0,bon_NONE] // "Iron Claw"
 ,[2074,weapTyp_KNUCKLE,215,185,4,2,70,100,0,0,0,0,bon_NONE] // "Claws of the Bifrost"
 ,[2075,weapTyp_HUUMA_SHURIKEN,221,230,4,2,130,100,0,0,0,0,bon_NONE] // "Four Mirrors"
@@ -2104,10 +2105,10 @@
 ,[2077,weapTyp_DAGGER,221,150,4,2,100,100,0,0,0,0,bon_NONE] // "Sharp Wind"
 ,[2078,weapTyp_SHOTGUN,222,275,4,2,140,100,0,0,0,0,bon_NONE] // "Demon''s Shot"'
 ,[2079,weapTyp_HANDGUN,222,150,4,2,70,100,0,0,0,0,bon_NONE] // "Crimson Rose"
-,[2080,weapTyp_RIFLE,222,150,4,2,100,100,0,0,0,0,bon_MATK,210,bon_NONE] // "Master of Souls"
+,[2080,weapTyp_RIFLE,222,150,4,2,100,100,0,0,0,0,bon_WEAPON_MATK,210,"ev_ref",2,bon_MATK,10,"ev_ref",3,bon_ASPD_MUL,3,"ref_lvl",7,bon_MATK_MUL,5,"ref_lvl",7,bon_ASPD_ADD,1,bon_NONE] // "Master of Souls"
 ,[2081,weapTyp_GRENADE_LAUNCHER,222,320,4,2,210,100,0,0,0,0,bon_NONE] // "Big Game Trophy"
 ,[2082,weapTyp_GATLING_GUN,222,205,4,2,270,100,0,0,0,0,bon_NONE] // "Guttling Gun"
-,[2083,weapTyp_ROD,224,300,4,2,110,100,0,0,0,0,bon_MATK,300,bon_NONE] // "Meowmeow Foxtail"
+,[2083,weapTyp_ROD,224,300,4,2,110,100,0,0,0,0,bon_WEAPON_MATK,300,"ev_ref",2,bon_ATK,10,"ev_ref",2,bon_MATK,10,"ev_ref",3,bon_PHY_ATK,2,"ev_ref",3,bon_MATK_MUL,2,"ref_lvl",7,bon_DMG_SKILL + skill_SUM_LUNATIC_CARROT_BEAT,15,"ref_lvl",7,bon_DMG_SKILL + skill_SUM_SILVERVINE_STEM_SPEAR,15,"ref_lvl",9,bon_ASPD_MUL,10,"ref_lvl",9,bon_RED_CAST,-10,"ref_lvl",11,bon_DMG_SKILL + skill_SUM_PICKY_PECK,20,"ref_lvl",11,bon_DMG_SKILL + skill_SUM_CATNIP_METEOR,20,bon_NONE] // "Meowmeow Foxtail"
 ,[2084,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "Kagero & Oboro Dual Dagger Set"
 ,[2085,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // "Dog Cap + Tornado Axe"
 //Geffen Magic Tournament,0,0,0,0,
@@ -2123,20 +2124,20 @@
 ,[2095,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RED_CASTDELAY,5,bon_RED_RC_DEMI_HUMAN,5,bon_NONE] // "Anti-magic Suit + Magic Intensifier Ring"
 ,[2096,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ASPD_MUL,5,bon_NONE] // "Anti-magic Suit + Physical Enhancer Ring"
 //Ghost Place,0,0,0,0,
-,[2097,weapTyp_SPEAR,2051,150,4,1,300,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_MATK,100,bon_NONE] // "Thanatos Spear"
-,[2098,weapTyp_2HSPEAR,2051,150,4,1,300,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_MATK,50,bon_NONE] // "Thanatos Long Spear"
-,[2099,weapTyp_ROD,2146,100,4,1,100,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_MATK,200,bon_HEAL_MUL,15,bon_NONE] // "Thanatos Staff"
-,[2100,weapTyp_KNUCKLE,215,160,4,1,60,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_MATK,50,bon_NONE] // "Thanatos Knuckle"
-,[2101,weapTyp_INSTRUMENT,216,200,4,1,200,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_MATK,130,bon_DMG_RANGE,20,bon_NONE] // "Thanatos Violin"
-,[2102,weapTyp_WHIP,217,200,4,1,220,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_MATK,130,bon_DMG_RANGE,20,bon_NONE] // "Thanatos Whip"
-,[2103,weapTyp_STAFF,2146,120,4,1,140,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_MATK,250,bon_HEAL_MUL,18,bon_NONE] // "Thanatos Two-handed Staff"
-,[2104,weapTyp_DAGGER,2075,100,4,1,80,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_MATK,130,bon_NONE] // "Thanatos Dagger"
-,[2105,weapTyp_SWORD,2051,150,4,1,70,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_MATK,100,bon_NONE] // "Thanatos Sword"
-,[2106,weapTyp_MACE,2092,180,4,1,300,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_MATK,120,bon_NONE] // "Thanatos Hammer"
-,[2107,weapTyp_BOW,2054,180,4,1,130,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_MATK,110,bon_NONE] // "Thanatos Bow"
-,[2108,weapTyp_2HSWORD,2051,280,4,1,130,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_MATK,120,bon_NONE] // "Thanatos Great Sword"
-,[2109,weapTyp_KATAR,208,220,4,1,180,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_MATK,80,bon_NONE] // "Thanatos Katar"
-,[2110,weapTyp_AXEII,2070,300,4,1,400,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_MATK,80,bon_NONE] // "Thanatos Axe"
+,[2097,weapTyp_SPEAR,2051,150,4,1,300,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_WEAPON_MATK,100,bon_NONE] // "Thanatos Spear"
+,[2098,weapTyp_2HSPEAR,2051,150,4,1,300,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_WEAPON_MATK,50,bon_NONE] // "Thanatos Long Spear"
+,[2099,weapTyp_ROD,2146,100,4,1,100,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_WEAPON_MATK,200,bon_HEAL_MUL,15,bon_NONE] // "Thanatos Staff"
+,[2100,weapTyp_KNUCKLE,215,160,4,1,60,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_WEAPON_MATK,50,bon_NONE] // "Thanatos Knuckle"
+,[2101,weapTyp_INSTRUMENT,216,200,4,1,200,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_WEAPON_MATK,130,bon_DMG_RANGE,20,bon_NONE] // "Thanatos Violin"
+,[2102,weapTyp_WHIP,217,200,4,1,220,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_WEAPON_MATK,130,bon_DMG_RANGE,20,bon_NONE] // "Thanatos Whip"
+,[2103,weapTyp_STAFF,2146,120,4,1,140,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_WEAPON_MATK,250,bon_HEAL_MUL,18,bon_NONE] // "Thanatos Two-handed Staff"
+,[2104,weapTyp_DAGGER,2075,100,4,1,80,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_WEAPON_MATK,130,bon_NONE] // "Thanatos Dagger"
+,[2105,weapTyp_SWORD,2051,150,4,1,70,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_WEAPON_MATK,100,bon_NONE] // "Thanatos Sword"
+,[2106,weapTyp_MACE,2092,180,4,1,300,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_WEAPON_MATK,120,bon_NONE] // "Thanatos Hammer"
+,[2107,weapTyp_BOW,2054,180,4,1,130,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_WEAPON_MATK,110,bon_NONE] // "Thanatos Bow"
+,[2108,weapTyp_2HSWORD,2051,280,4,1,130,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_WEAPON_MATK,120,bon_NONE] // "Thanatos Great Sword"
+,[2109,weapTyp_KATAR,208,220,4,1,180,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_WEAPON_MATK,80,bon_NONE] // "Thanatos Katar"
+,[2110,weapTyp_AXEII,2070,300,4,1,400,120,0,0,0,0,bon_INT,6,bon_VIT,6,bon_LUK,-6,bon_WEAPON_MATK,80,bon_NONE] // "Thanatos Axe"
 ,[2111,itm_type_ARMOR,2075,90,0,1,240,120,0,0,0,0,bon_RED_ELE_HOLY,10,bon_MDEF,10,bon_NONE] // "Armor Of Gray"
 ,[2112,itm_type_SHOES,2001,0,0,1,0,120,0,0,0,0,bon_RED_ELE_HOLY,2,bon_NONE] // "Boots of Gray"
 ,[2113,itm_type_GARMENT,2001,0,0,1,0,120,0,0,0,0,bon_RED_ELE_HOLY,5,bon_NONE] // "Cloak Of Gray"
@@ -2146,7 +2147,7 @@
 ,[2117,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RED_ELE_NEUTRAL,15,bon_SKILL_AUTOCAST,144,bon_NONE] // "Armor Of Gray Set"
 ,[2118,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RED_ELE_NEUTRAL,15,bon_MATK_MUL,25,bon_HP_MUL,25,bon_SP_MUL,25,bon_NONE] // "Robe Of Gray Set"
 //Devil''s Tower',0,0,0,0,
-,[2119,weapTyp_STAFF,2077,30,3,1,80,100,0,87,87,87,bon_MATK,155,bon_MDMG_RC_DEMON,10,bon_MDMG_RC_UNDEAD,10,bon_DMG_RC_DEMON,10,bon_DMG_RC_UNDEAD,10,bon_NONE] // "Evil Slayer Vanquisher Staff"
+,[2119,weapTyp_STAFF,2077,30,3,1,80,100,0,87,87,87,bon_WEAPON_MATK,155,bon_MDMG_RC_DEMON,10,bon_MDMG_RC_UNDEAD,10,bon_DMG_RC_DEMON,10,bon_DMG_RC_UNDEAD,10,bon_NONE] // "Evil Slayer Vanquisher Staff"
 ,[2120,weapTyp_DAGGER,2000,120,3,1,90,100,0,87,87,87,bon_DMG_RC_DEMON,10,bon_DMG_RC_UNDEAD,10,bon_NONE] // "Evil Slayer Stabber Dagger"
 ,[2121,weapTyp_MACE,2000,125,3,1,135,100,0,87,87,87,bon_DMG_RC_DEMON,10,bon_DMG_RC_UNDEAD,10,bon_NONE] // "Evil Slayer Destroyer Hammer"
 ,[2122,weapTyp_BOW,2000,115,3,1,135,100,0,87,87,87,bon_DMG_RC_DEMON,10,bon_DMG_RC_UNDEAD,10,bon_NONE] // "Evil Slayer Piercer Bow"
@@ -2189,34 +2190,34 @@
 //Old Glast Heim missing items,0,0,0,0,
 ,[2154,weapTyp_2HSWORD,2051,330,1,1,250,150,0,0,0,0,bon_STR,20,bon_NONE] // "Heavy Sword"
 ,[2155,weapTyp_SWORD,96,60,1,0,50,1,0,0,0,0,bon_ELEMENT,ele_HOLY,bon_NONE] // "Ceremonial Sword"
-,[2156,weapTyp_STAFF,211,100,1,1,100,150,0,0,0,0,bon_MATK,300,bon_INT,20,bon_NONE] // "Staff Of Geffen"
-,[2157,weapTyp_DAGGER,97,35,1,0,50,1,0,0,0,0,bon_MATK,25,bon_NONE] // "Goldsmithing Dagger"
+,[2156,weapTyp_STAFF,211,100,1,1,100,150,0,0,0,0,bon_WEAPON_MATK,300,bon_INT,20,bon_NONE] // "Staff Of Geffen"
+,[2157,weapTyp_DAGGER,97,35,1,0,50,1,0,0,0,0,bon_WEAPON_MATK,25,bon_NONE] // "Goldsmithing Dagger"
 ,[2158,itm_type_ARMOR,2051,120,0,1,300,150,0,0,0,0,bon_MDEF,25,bon_NONE] // "Engraved Armor"
 ,[2159,itm_type_ACCESSORY,1,3,0,1,10,60,0,0,0,0,bon_MDEF,3,bon_ALL_STATS,1,bon_SKILL_ENABLE,60,bon_NONE] // "Silversmith Bracelet"
 //Sky Fortress,0,0,0,0,
 ,[2160,weapTyp_2HSWORD,2051,340,4,2,340,170,0,0,0,0,bon_NONE] // "Lindy Hop"
-,[2161,weapTyp_STAFF,2077,150,4,2,150,170,0,0,0,0,bon_MATK,320,bon_INT,5,bon_NONE] // "Sunflower Boy"
-,[2162,weapTyp_STAFF,2065,100,4,1,100,160,0,0,96,95,bon_MATK,200,bon_INT,6,bon_NONE] // "Vicious Mind Staff"
-,[2163,weapTyp_ROD,2001,60,4,1,60,160,0,0,96,95,bon_MATK,120,bon_INT,5,bon_NONE] // "Vicious Mind Rod"
+,[2161,weapTyp_STAFF,2077,150,4,2,150,170,0,0,0,0,bon_WEAPON_MATK,320,bon_INT,5,bon_NONE] // "Sunflower Boy"
+,[2162,weapTyp_STAFF,2065,100,4,1,100,160,0,0,96,95,bon_WEAPON_MATK,200,bon_INT,6,bon_NONE] // "Vicious Mind Staff"
+,[2163,weapTyp_ROD,2001,60,4,1,60,160,0,0,96,95,bon_WEAPON_MATK,120,bon_INT,5,bon_NONE] // "Vicious Mind Rod"
 ,[2164,weapTyp_HANDGUN,2001,150,4,1,150,160,0,0,98,97,bon_NONE] // "Vicious Mind Revolver"
-,[2165,weapTyp_WHIP,2001,130,4,1,130,160,0,0,98,97,bon_MATK,50,bon_NONE] // "Vicious Mind Wire"
-,[2166,weapTyp_INSTRUMENT,2001,100,4,1,100,160,0,0,98,97,bon_MATK,50,bon_NONE] // "Vicious Mind Violin"
+,[2165,weapTyp_WHIP,2001,130,4,1,130,160,0,0,98,97,bon_WEAPON_MATK,50,bon_NONE] // "Vicious Mind Wire"
+,[2166,weapTyp_INSTRUMENT,2001,100,4,1,100,160,0,0,98,97,bon_WEAPON_MATK,50,bon_NONE] // "Vicious Mind Violin"
 ,[2167,weapTyp_BOW,2001,170,4,1,170,160,0,0,98,97,bon_NONE] // "Vicious Mind Bow"
 ,[2168,weapTyp_BOOK,2001,95,4,1,95,160,0,0,98,97,bon_NONE] // "Vicious Mind Book"
 ,[2169,weapTyp_KATAR,2001,180,4,1,180,160,0,0,98,97,bon_NONE] // "Vicious Mind Katar"
-,[2170,weapTyp_HUUMA_SHURIKEN,2001,150,4,1,150,160,0,0,98,97,bon_MATK,50,bon_NONE] // "Vicious Mind Huuma Shuriken"
+,[2170,weapTyp_HUUMA_SHURIKEN,2001,150,4,1,150,160,0,0,98,97,bon_WEAPON_MATK,50,bon_NONE] // "Vicious Mind Huuma Shuriken"
 ,[2171,weapTyp_AXEII,2001,250,4,1,250,160,0,0,98,97,bon_NONE] // "Vicious Mind Two Handed Axe"
 ,[2172,weapTyp_MACE,2001,130,4,1,130,160,0,0,98,97,bon_NONE] // "Vicious Mind Mace"
 ,[2173,weapTyp_KNUCKLE,2001,150,4,1,150,160,0,0,98,97,bon_NONE] // "Vicious Mind Knuckle"
-,[2174,weapTyp_DAGGER,2001,105,4,1,105,160,0,0,98,97,bon_MATK,50,bon_NONE] // "Vicious Mind Dagger"
+,[2174,weapTyp_DAGGER,2001,105,4,1,105,160,0,0,98,97,bon_WEAPON_MATK,50,bon_NONE] // "Vicious Mind Dagger"
 ,[2175,weapTyp_SWORD,2001,135,4,1,135,160,0,0,98,97,bon_NONE] // "Vicious Mind Sabre"
 ,[2176,weapTyp_2HSWORD,2001,220,4,1,220,160,0,0,98,97,bon_NONE] // "Vicious Mind Two-Handed Sword"
 ,[2177,weapTyp_SPEAR,2001,140,4,1,140,160,0,0,98,97,bon_NONE] // "Vicious Mind Spear"
 ,[2178,weapTyp_2HSPEAR,2001,225,4,1,225,160,0,0,98,97,bon_NONE] // "Vicious Mind Lance"
 ,[2179,weapTyp_KATAR,2001,300,4,2,250,170,0,0,0,0,bon_NONE] // "Juliette D Rachel"
 //Crimson weapons,0,0,0,0,
-,[2180,weapTyp_STAFF,65,100,3,2,100,70,0,0,0,0,bon_MATK,150,bon_INT,5,bon_NONE] // "Crimson Staff"
-,[2181,weapTyp_ROD,3,60,3,2,60,70,0,0,0,0,bon_MATK,70,bon_INT,4,bon_NONE] // "Crimson Rod"
+,[2180,weapTyp_STAFF,65,100,3,2,100,70,0,0,0,0,bon_WEAPON_MATK,150,bon_INT,5,bon_NONE] // "Crimson Staff"
+,[2181,weapTyp_ROD,3,60,3,2,60,70,0,0,0,0,bon_WEAPON_MATK,70,bon_INT,4,bon_NONE] // "Crimson Rod"
 ,[2182,weapTyp_HANDGUN,1,100,3,2,100,70,0,0,0,0,bon_NONE] // "Crimson Revolver"
 ,[2183,weapTyp_WHIP,1,80,3,2,80,70,0,0,0,0,bon_NONE] // "Crimson Wire"
 ,[2184,weapTyp_INSTRUMENT,1,80,3,2,80,70,0,0,0,0,bon_NONE] // "Crimson Violin"
@@ -2311,13 +2312,13 @@
 ,[2255,itm_type_SHADOW_WEAPON,207,0,0,0,0,0,0,0,0,0,bon_DMG_RANGE,3,bon_NONE] //Wyrmeater''s Shadow Gloves'
 ,[2256,itm_type_SHADOW_WEAPON,215,0,0,0,0,0,0,0,0,0,bon_DMG_SIZ_SMALL,3,bon_DMG_SIZ_MEDIUM,3,bon_DMG_SIZ_LARGE,3,bon_NONE] //Tiger Spirit Shadow Gloves
 ,[2257,itm_type_SHADOW_WEAPON,208,0,0,0,0,0,0,0,0,0,bon_NONE] //Katra''s Shadow Gloves'
-,[2258,itm_type_SHADOW_WEAPON,209,0,0,0,0,0,0,0,0,0,bon_INC_MAGIC_HOLY,3,bon_NONE] //Exorcist Shadow Gloves
+,[2258,itm_type_SHADOW_WEAPON,209,0,0,0,0,0,0,0,0,0,bon_INC_MAGIC_HOLY,3,"ev_ref",1,bon_ATK,1,"ev_ref",1,bon_MATK,1,"ref_lvl",7,bon_INC_MAGIC_HOLY,3,"ref_lvl",9,bon_INC_MAGIC_HOLY,4,bon_NONE] //Exorcist Shadow Gloves
 ,[2259,itm_type_SHADOW_WEAPON,210,0,0,0,0,0,0,0,0,0,bon_DMG_RANGE,3,bon_NONE] //Rondius'' Shadow Gloves'
-,[2260,itm_type_SHADOW_WEAPON,213,0,0,0,0,0,0,0,0,0,bon_INC_MAGIC_HOLY,3,bon_NONE] //Gunther''s Shadow Gloves'
+,[2260,itm_type_SHADOW_WEAPON,213,0,0,0,0,0,0,0,0,0,bon_INC_MAGIC_HOLY,3,"ev_ref",1,bon_ATK,1,"ev_ref",1,bon_MATK,1,"ref_lvl",7,bon_INC_MAGIC_HOLY,3,"ref_lvl",9,bon_INC_MAGIC_HOLY,4,bon_NONE] //Gunther''s Shadow Gloves'
 ,[2261,itm_type_SHADOW_WEAPON,212,0,0,0,0,0,0,0,0,0,bon_DMG_RANGE,3,bon_NONE] //Talos'' Shadow Gloves'
-,[2262,itm_type_SHADOW_WEAPON,218,0,0,0,0,0,0,0,0,0,bon_INC_MAGIC_WIND,3,bon_NONE] //Sylphir''s Shadow Gloves'
+,[2262,itm_type_SHADOW_WEAPON,218,0,0,0,0,0,0,0,0,0,bon_INC_MAGIC_WIND,3,"ev_ref",1,bon_ATK,1,"ev_ref",1,bon_MATK,1,"ref_lvl",7,bon_INC_MAGIC_WIND,3,"ref_lvl",9,bon_INC_MAGIC_WIND,4,bon_NONE] //Sylphir''s Shadow Gloves'
 ,[2263,itm_type_SHADOW_WEAPON,214,0,0,0,0,0,0,0,0,0,bon_SKILL_AUTOCAST,151,bon_NONE] //Dordaleon''s Shadow Gloves'
-,[2264,itm_type_SHADOW_WEAPON,211,0,0,0,0,0,0,0,0,0,bon_INC_MAGIC_EARTH,3,bon_NONE] //Osma''s Shadow Gloves'
+,[2264,itm_type_SHADOW_WEAPON,211,0,0,0,0,0,0,0,0,0,bon_INC_MAGIC_EARTH,3,"ev_ref",1,bon_ATK,1,"ev_ref",1,bon_MATK,1,"ref_lvl",7,bon_INC_MAGIC_EARTH,3,"ref_lvl",9,bon_INC_MAGIC_EARTH,4,bon_NONE] //Osma''s Shadow Gloves'
 ,[2265,itm_type_SHADOW_WEAPON,2054,0,0,0,0,0,0,0,0,0,bon_DMG_RANGE,3,bon_NONE] //Garmia''s Shadow Gloves'
 ,[2266,itm_type_SHADOW_WEAPON,219,0,0,0,0,0,0,0,0,0,bon_DMG_RANGE,3,bon_NONE] //Boscard''s Shadow Gloves'
 
@@ -2329,7 +2330,7 @@
 ,[2272,itm_type_SHADOW_EARRING,213,0,0,0,0,0,0,0,0,0,bon_DELAY_SKILL_FLAT + skill_ROY_RAY_OF_GENESIS,0.2,bon_NONE] //Gunther''s Shadow Ring'
 ,[2273,itm_type_SHADOW_EARRING,212,0,0,0,0,0,0,0,0,0,bon_NONE] //Talos'' Shadow Ring'
 ,[2274,itm_type_SHADOW_EARRING,218,0,0,0,0,0,0,0,0,0,bon_NONE] //Sylphir''s Shadow Ring'
-,[2275,itm_type_SHADOW_EARRING,214,0,0,0,0,0,0,0,0,0,bon_INC_MAGIC_WATER,2,bon_INC_MAGIC_NEUTRAL,2,bon_INC_MAGIC_FIRE,2,bon_NONE] //Dordaleon''s Shadow Ring'
+,[2275,itm_type_SHADOW_EARRING,214,0,0,0,0,0,0,0,0,0,bon_INC_MAGIC_WATER,2,bon_INC_MAGIC_NEUTRAL,2,bon_INC_MAGIC_FIRE,2,"ev_ref",1,bon_HP_ADD,10,"ev_ref",3,bon_INC_MAGIC_WATER,2,"ev_ref",3,bon_INC_MAGIC_NEUTRAL,2,"ev_ref",3,bon_INC_MAGIC_FIRE,2,bon_NONE] //Dordaleon''s Shadow Ring'
 ,[2276,itm_type_SHADOW_EARRING,211,0,0,0,0,0,0,0,0,0,bon_DELAY_SKILL_FLAT + skill_WAR_EARTH_STRAIN,0.2,bon_NONE] //Osma''s Shadow Ring'
 ,[2277,itm_type_SHADOW_EARRING,2054,0,0,0,0,0,0,0,0,0,bon_DELAY_SKILL_FLAT + skill_CG_ARROW_VULCAN,0.2,bon_NONE] //Garmia''s Shadow Ring'
 ,[2278,itm_type_SHADOW_EARRING,219,0,0,0,0,0,0,0,0,0,bon_DMG_SIZ_SMALL,5,bon_DMG_SIZ_MEDIUM,5,bon_DMG_SIZ_LARGE,5,bon_NONE] //Boscard''s Shadow Ring'
@@ -2381,7 +2382,7 @@
 ,[2317,weapTyp_BOW,214,140,3,2,100,100,0,0,0,0,"ev_bdex",20,bon_DMG_RANGE,5,"ref_lvl",7,bon_DMG_RANGE,10,"ref_lvl",9,bon_DMG_SKILL + skill_AR_DOUBLE_STRAFE,50,bon_NONE] // "Vigilante Bow"
 ,[2318,weapTyp_DAGGER,221,100,3,2,80,100,0,0,0,0,"ref_lvl",7,bon_DMG_RANGE,2,"ref_lvl",9,bon_DMG_RANGE,3,bon_NONE] // "Monokage"
 ,[2319,weapTyp_HUUMA_SHURIKEN,221,250,4,2,200,100,0,0,0,0,bon_DMG_SKILL + skill_KAG_SWIRLING_PETAL,20,"ref_lvl",7,bon_DMG_RANGE,3,"ref_lvl",9,bon_DMG_SKILL + skill_KAG_SWIRLING_PETAL,20,bon_NONE] // Huuma Shuriken of Dancing Petals [2]
-,[2320,weapTyp_BOOK,218,120,3,2,80,100,0,0,0,0,bon_INT,4,bon_MATK,150,bon_DMG_SKILL + skill_MA_COLD_BOLT,10,bon_DMG_SKILL + skill_MA_FIRE_BOLT,10,bon_DMG_SKILL + skill_MA_LIGHTNING_BOLT,10,"ref_lvl",7,bon_DMG_SKILL + skill_MA_COLD_BOLT,10,"ref_lvl",7,bon_DMG_SKILL + skill_MA_FIRE_BOLT,10,"ref_lvl",7,bon_DMG_SKILL + skill_MA_LIGHTNING_BOLT,10,"ref_lvl",9,bon_DMG_SKILL + skill_MA_COLD_BOLT,10,"ref_lvl",9,bon_DMG_SKILL + skill_MA_FIRE_BOLT,10,"ref_lvl",9,bon_DMG_SKILL + skill_MA_LIGHTNING_BOLT,10,bon_NONE] // Elemental Origin [2]
+,[2320,weapTyp_BOOK,218,120,3,2,80,100,0,0,0,0,bon_INT,4,bon_WEAPON_MATK,150,bon_DMG_SKILL + skill_MA_COLD_BOLT,10,bon_DMG_SKILL + skill_MA_FIRE_BOLT,10,bon_DMG_SKILL + skill_MA_LIGHTNING_BOLT,10,"ref_lvl",7,bon_DMG_SKILL + skill_MA_COLD_BOLT,10,"ref_lvl",7,bon_DMG_SKILL + skill_MA_FIRE_BOLT,10,"ref_lvl",7,bon_DMG_SKILL + skill_MA_LIGHTNING_BOLT,10,"ref_lvl",9,bon_DMG_SKILL + skill_MA_COLD_BOLT,10,"ref_lvl",9,bon_DMG_SKILL + skill_MA_FIRE_BOLT,10,"ref_lvl",9,bon_DMG_SKILL + skill_MA_LIGHTNING_BOLT,10,bon_NONE] // Elemental Origin [2]
 ,[2321,weapTyp_AXEII,212,300,3,2,400,100,0,0,0,0,bon_UNBREAKABLE,1,"ref_lvl",7,bon_DMG_CRIT,5,"ref_lvl",9,bon_DMG_CRIT,10,bon_NONE] // Mine Worker''s Pickaxe [2]'
 ,[2322,weapTyp_INSTRUMENT,216,140,3,2,100,100,0,0,0,0,"ref_lvl",9,bon_ASPD_ADD,1,bon_NONE] // Hippie Guitar [2]
 ,[2323,weapTyp_WHIP,217,140,3,2,100,100,0,0,0,0,"ref_lvl",9,bon_ASPD_ADD,1,bon_NONE] // Hippie Rope [2]
@@ -2400,7 +2401,7 @@
 ,[2335,itm_type_GARMENT,226,0,0,0,40,100,0,0,0,0,bon_RED_ELE_NEUTRAL,20,"ref_lvl",7,bon_RED_ELE_NEUTRAL,5,"ref_lvl",9,bon_RED_ELE_NEUTRAL,5,bon_NONE] // Drifter''s Cape'
 ,[2336,itm_type_SHOES,226,0,0,1,50,100,0,0,0,0,bon_SP_MUL,5,"ref_lvl",7,bon_SP_MUL,5,"ref_lvl",9,bon_SP_MUL,5,bon_NONE] // Spurred Boots
 ,[2337,weapTyp_MACE,226,120,3,3,70,100,0,0,0,0,"ev_ref",2,bon_CH_STATUS_STUN,3,bon_NONE] // Liquor Bottle
-,[2338,weapTyp_ROD,2053,60,3,3,50,100,0,0,0,0,bon_MATK,150,bon_HEAL_MUL,10,"ref_lvl",7,bon_HEAL_MUL,5,"ref_lvl",9,bon_HEAL_MUL,10,bon_NONE] // Elder Staff
+,[2338,weapTyp_ROD,2053,60,3,3,50,100,0,0,0,0,bon_WEAPON_MATK,150,bon_HEAL_MUL,10,"ref_lvl",7,bon_HEAL_MUL,5,"ref_lvl",9,bon_HEAL_MUL,10,bon_NONE] // Elder Staff
 
 ,[2339,itm_type_GARMENT,218,12,0,0,50,100,0,0,0,0,bon_FLEE,10,"ev_ref",3,bon_FLEE,5,"ev_ref",3,bon_RED_ELE_NEUTRAL,10,"ref_lvl",9,bon_ASPD_MUL,5,bon_NONE] // Elemental Cape
 ,[2340,itm_type_GARMENT,221,12,0,0,50,100,0,0,0,0,bon_FLEE,20,"ref_lvl",7,bon_DMG_RANGE,5,"ref_lvl",9,bon_DMG_RANGE,5,bon_NONE] // Golden Scarf
@@ -2416,14 +2417,14 @@
 ,[2349,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ATK,30,bon_ASPD_ADD,1,bon_DMG_CRIT,20,bon_NONE] // "Hippie Set"
 //Triple Trouble
 //Horror Toy Factory
-,[2350,weapTyp_SWORD,1,120,3,3,50,80,0,0,0,108,bon_MATK,80,"ev_ref",1,bon_MATK,1,bon_SKILL_ENABLE,68,bon_NONE] // "Old Parasol"
+,[2350,weapTyp_SWORD,1,120,3,3,50,80,0,0,0,108,bon_WEAPON_MATK,80,"ev_ref",1,bon_MATK,1,bon_SKILL_ENABLE,68,bon_NONE] // "Old Parasol"
 ,[2351,itm_type_ACCESSORY,2001,0,0,1,20,100,0,0,0,0,bon_SP_ADD,-300,bon_SKILL_ENABLE,16,bon_NONE] // "Red Lantern"
 ,[2352,itm_type_ACCESSORY,2001,0,0,1,10,110,0,0,0,0,bon_SP_ADD,200,bon_SKILL_ENABLE,69,bon_NONE] // "Hurt Mind"
 ,[2353,itm_type_ACCESSORY,2001,0,0,1,10,110,0,0,0,0,bon_HP_ADD,500,bon_NONE] // "Kind Heart"
 ,[2354,itm_type_HEAD_UPPER,1,0,0,1,20,0,0,0,0,0,bon_MATK,20,"ev_ref",1,bon_MATK,5,bon_NONE] // "Lush Rose"
 ,[2355,itm_type_ACCESSORY,2001,0,0,1,10,110,0,0,0,0,bon_SP_ADD,200,bon_HP_ADD,500,bon_SKILL_ENABLE,70,bon_SKILL_AUTOCAST,155,bon_SKILL_AUTOCAST,156,bon_SKILL_AUTOCAST,157,bon_SKILL_AUTOCAST,158,bon_NONE] // "Evil Spirit Gloves"
 ,[2356,itm_type_HEAD_UPPER,0,0,0,1,20,0,0,0,0,0,bon_DEX,3,bon_MATK,40,"ev_ref",1,bon_MATK,7,bon_NONE] // "Celine''s Ribbon"'
-,[2357,weapTyp_MACE,2053,195,4,0,150,40,0,0,0,0,bon_ELEMENT,ele_HOLY,bon_MATK,150,bon_SKILL_AUTOCAST,159,bon_NONE] // "Noble Cross"
+,[2357,weapTyp_MACE,2053,195,4,0,150,40,0,0,0,0,bon_ELEMENT,ele_HOLY,bon_WEAPON_MATK,150,bon_SKILL_AUTOCAST,159,bon_NONE] // "Noble Cross"
 ,[2358,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_SKILL_AUTOCAST,155,bon_SKILL_AUTOCAST,156,bon_SKILL_AUTOCAST,157,bon_SKILL_AUTOCAST,158,bon_NONE] // "Hurt Mind + Kind Heart"
 ,[2359,itm_type_ACCESSORY,2001,0,0,1,50,100,0,0,0,0,bon_MATK_MUL,5,bon_RED_CAST,-10,bon_NONE] // "Celine''s Brooch"'
 ,[2360,itm_type_GARMENT,0,20,0,1,10,1,0,0,0,0,"ev_ref",2,bon_PHY_ATK,1,"ev_ref",2,bon_MATK_MUL,1,"ref_lvl",9,bon_ATK,30,"ref_lvl",9,bon_MATK,30,bon_NONE] // "Christmas Wings"
@@ -2447,13 +2448,13 @@
 ,[2375,itm_type_SHOES,1,10,0,1,40,99,0,0,0,0,bon_HP_ADD,100,bon_SP_ADD,10,"ev_ref",1,bon_HP_ADD,100,"ev_ref",1,bon_SP_ADD,5,bon_NONE] //Illusion Shoes [1]
 ,[2376,weapTyp_SPEARII,51,240,4,2,200,99,0,0,0,0,bon_DMG_ELE_SHADOW,20,bon_DMG_RC_DEMON,20,bon_DMG_RC_UNDEAD,20,bon_RED_ELE2_SHADOW,10,bon_RED_RC_DEMON,10,bon_RED_RC_UNDEAD,10,"ev_ref",2,bon_DMG_ELE_SHADOW,3,"ev_ref",2,bon_DMG_RC_DEMON,3,"ev_ref",2,bon_DMG_RC_UNDEAD,3,"ev_ref",2,bon_RED_ELE2_SHADOW,3,"ev_ref",2,bon_RED_RC_DEMON,3,"ev_ref",2,bon_RED_RC_UNDEAD,3,bon_NONE] //Illusion Spectral Spear [1]
 ,[2377,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ASPD_MUL,8,"set_ref"+(fl_WEAPON+fl_SHOES),7,bon_DMG_SKILL + skill_ROY_VANISHING_POINT,20,"set_sum"+(fl_WEAPON+fl_SHOES),18,bon_DMG_RANGE,10,"set_sum"+(fl_WEAPON+fl_SHOES),22,bon_DMG_SKILL + skill_ROY_VANISHING_POINT,30,bon_NONE] //Illusion Shoes + Illusion Spectral Spear
-,[2378,weapTyp_ROD,1055,60,4,2,50,99,0,0,0,0,bon_MATK,180,bon_INT,3,bon_DEX,2,bon_NONE] //Illusion Staff of Bordeaux [2]
+,[2378,weapTyp_ROD,1055,60,4,2,50,99,0,0,0,0,bon_WEAPON_MATK,180,bon_INT,3,bon_DEX,2,bon_NONE] //Illusion Staff of Bordeaux [2]
 ,[2379,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_SKILL + skill_SOR_PSYCHIC_WAVE,10,"set_ref" + (fl_WEAPON+fl_GARMENT),7,bon_DMG_SKILL + skill_SOR_EARTH_GRAVE,40,"set_sum" + (fl_WEAPON+fl_GARMENT),18,bon_INC_MAGIC_NEUTRAL,10,"set_sum" + (fl_WEAPON+fl_GARMENT),18,bon_INC_MAGIC_EARTH,10,"set_sum" + (fl_WEAPON+fl_GARMENT),22,bon_INC_MAGIC_WATER,10,bon_NONE] //Illusion Staff of Bordeaux + Illusion Muffler
 ,[2380,weapTyp_DAGGER,1,150,4,1,70,99,0,0,0,0,bon_SP_MUL,10,bon_NONE] //Illusion Moonlight Dagger [1]
 //Illusion of Vampire
 ,[2381,weapTyp_KATAR,208,200,4,2,150,100,0,0,0,0,bon_DEF,3,bon_FLEE,5,bon_PDODGE,2,bon_DMG_RC_DEMI_HUMAN,60,"ref_lvl",9,bon_FLEE,5,"ref_lvl",9,bon_PDODGE,2,"ref_lvl",10,bon_PHY_ATK,5,bon_NONE] // Illusion Infiltrator [2]
 ,[2382,weapTyp_KATAR,208,220,3,2,170,100,0,0,0,0,bon_NONE] // Illusion Sharpened Legbone of Ghoul [2]
-,[2383,weapTyp_STAFF,2055,150,4,2,240,100,0,0,0,0,bon_MATK,250,bon_INT,6,bon_DEX,2,"ev_ref",2,bon_INT,1,"ev_ref",2,bon_DEX,1,bon_NONE] // Illusion Wizardry Staff [2]
+,[2383,weapTyp_STAFF,2055,150,4,2,240,100,0,0,0,0,bon_WEAPON_MATK,250,bon_INT,6,bon_DEX,2,"ev_ref",2,bon_INT,1,"ev_ref",2,bon_DEX,1,bon_NONE] // Illusion Wizardry Staff [2]
 ,[2384,weapTyp_BOW,2054,0,0,0,0,0,0,0,0,0,"ev_ref",1,bon_DMG_RANGE,1,bon_NONE] // Illusion Ballista [2]
 ,[2385,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ATK,50,bon_DMG_RANGE,5,"set_ref" + (fl_WEAPON+fl_HEAD),7,bon_DMG_SKILL + skill_RAN_ARROW_STORM,20,"set_sum" + (fl_WEAPON+fl_HEAD),18,bon_PHY_ATK,10,"set_sum" + (fl_WEAPON+fl_HEAD),22,bon_DMG_SKILL + skill_RAN_ARROW_STORM,30,bon_NONE] // Illusion Ballista + Illusion Apple of Archer
 ,[2386,weapTyp_BOOK,2000,170,4,2,80,100,0,0,0,0,bon_DMG_ELE_WATER,10,bon_DMG_ELE_EARTH,10,bon_DMG_ELE_FIRE,10,bon_DMG_ELE_WIND,10,bon_RED_ELE_HOLY,-30,"ev_ref",3,bon_DMG_ELE_WATER,10,"ev_ref",3,bon_DMG_ELE_EARTH,10,"ev_ref",3,bon_DMG_ELE_FIRE,10,"ev_ref",3,bon_DMG_ELE_WIND,10,bon_NONE] // Illusion Book of the Apocalypse
@@ -2467,7 +2468,7 @@
 //Illusion of Frozen
 ,[2394,weapTyp_KNUCKLE,215,250,4,2,50,120,0,0,0,0,bon_DMG_SKILL + skill_SUR_SKY_NET_BLOW,10,bon_DMG_SKILL + skill_SUR_DRAGON_COMBO,10,"ev_ref",2,bon_DMG_SKILL + skill_SUR_SKY_NET_BLOW,5,"ev_ref",2,bon_DMG_SKILL + skill_SUR_DRAGON_COMBO,5,"ev_ref",3,bon_DMG_SKILL + skill_SUR_TIGER_CANNON,5,bon_NONE] // Illusion Combo Battle Glove [2]
 ,[2395,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ATK,40,"set_ref"+(fl_WEAPON+fl_GARMENT),7,bon_DMG_SKILL + skill_SUR_TIGER_CANNON,20,"set_sum"+(fl_WEAPON+fl_GARMENT),18,bon_DELAY_SKILL_FLAT + skill_SUR_FLASH_COMBO,1,"set_sum"+(fl_WEAPON+fl_GARMENT),22,bon_DMG_SKILL + skill_SUR_TIGER_CANNON,15,bon_NONE] // Illusion Combo Battle Glove + Illusion Muffler
-,[2396,weapTyp_HUUMA_SHURIKEN,221,250,4,2,150,120,0,0,0,0,bon_MATK,50,"ev_ref",1,bon_DMG_RANGE,3,"ev_ref",3,bon_ATK,30,bon_NONE] // Illusion Huuma Fluttering Snow [2]
+,[2396,weapTyp_HUUMA_SHURIKEN,221,250,4,2,150,120,0,0,0,0,bon_WEAPON_MATK,50,"ev_ref",1,bon_DMG_RANGE,3,"ev_ref",3,bon_ATK,30,bon_NONE] // Illusion Huuma Fluttering Snow [2]
 ,[2397,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RED_CAST,-15,"set_sum" + (fl_WEAPON+fl_HEAD),7,bon_DMG_SKILL + skill_KAG_SWIRLING_PETAL,25,"set_sum" + (fl_WEAPON+fl_HEAD),18,bon_DMG_SKILL + skill_KAG_SWIRLING_PETAL,25,"set_sum" + (fl_WEAPON+fl_HEAD),22,bon_DELAY_SKILL_FLAT + skill_KAG_SWIRLING_PETAL,1,bon_NONE] // Illusion Huuma Fluttering Snow + Illusion Apple of Archer
 ,[2398,itm_type_HEAD_UPPER,2096,15,0,1,40,120,0,0,0,0,bon_PHY_ATK,1,"ev_ref",1,bon_ATK,2,bon_NONE] // Illusion Cap [1]
 ,[2399,itm_type_GARMENT,2055,30,0,1,55,130,0,0,0,0,bon_VIT,15,bon_NONE] // Illusion Survivor''s Manteau [1]'
@@ -2538,7 +2539,7 @@
 
 ,[2450,itm_type_GARMENT,0,30,0,1,50,80,0,0,0,0,bon_STR,2,bon_HP_MUL,10,bon_RED_ELE_NEUTRAL,-20,bon_RED_ELE_WATER,-20,bon_RED_ELE_FIRE,-20,bon_RED_ELE_WIND,-20,bon_RED_ELE_POISON,-20,bon_RED_ELE_HOLY,-20,bon_RED_ELE_SHADOW,-20,bon_RED_ELE_GHOST,-20,bon_NONE] // Loyalists Hood
 ,[2451,itm_type_GARMENT,0,15,0,1,50,100,0,0,0,0,bon_HP_MUL,5,bon_SP_MUL,5,bon_MDEF,15,bon_RED_RC_DEMI_HUMAN,5,"ev_ref",3,bon_HP_MUL,3,"ev_ref",3,bon_SP_MUL,3,bon_NONE] // Manteau Of Guardsman
-,[2452,weapTyp_BOOK,0,180,3,4,50,100,0,0,0,0,bon_MATK,170,"ev_ref",1,bon_HP_ADD,200,"ev_ref",1,bon_SP_ADD,50,"ev_ref",1,bon_ASPD_MUL,1,bon_SKILL_AUTOCAST,162,"ref_lvl",8,bon_SKILL_AUTOCAST,163,"ref_lvl",10,bon_SKILL_AUTOCAST,164,bon_NONE] // Book of the Sun God
+,[2452,weapTyp_BOOK,0,180,3,4,50,100,0,0,0,0,bon_WEAPON_MATK,170,"ev_ref",1,bon_HP_ADD,200,"ev_ref",1,bon_SP_ADD,50,"ev_ref",1,bon_ASPD_MUL,1,bon_SKILL_AUTOCAST,162,"ref_lvl",8,bon_SKILL_AUTOCAST,163,"ref_lvl",10,bon_SKILL_AUTOCAST,164,bon_NONE] // Book of the Sun God
 ,[2453,itm_type_GARMENT,0,18,0,1,30,90,0,0,0,0,bon_MDEF,10,bon_DEX,5,bon_INT,5,bon_INC_MAGIC_NEUTRAL,5,"ref_lvl",7,bon_INC_MAGIC_NEUTRAL,10,"ref_lvl",7,bon_RED_ELE_SHADOW,20,"ref_lvl",7,bon_RED_ELE_HOLY,20,"ref_lvl",9,bon_INC_MAGIC_NEUTRAL,10,"ref_lvl",9,bon_RED_ELE_SHADOW,20,"ref_lvl",9,bon_RED_ELE_HOLY,20,bon_NONE] // Seraphim Robe
 ,[2454,itm_type_ARMOR,0,30,0,1,120,70,0,0,0,0,bon_MDEF,5,bon_RED_RC_BRUTE,5,"ev_ref",1,bon_MDEF,1,"ev_ref",1,bon_RED_RC_BRUTE,1,bon_NONE] // Shepherd Clothes
 
@@ -2625,21 +2626,21 @@
 ,[2532,itm_type_ACCESSORY,0,0,0,1,10,130,0,0,0,0,bon_MATK_MUL,5,bon_NONE]//Illusion Battle Chip L
 ,[2533,itm_type_ACCESSORY,0,0,0,1,10,130,0,0,0,0,bon_MATK_MUL,5,bon_NONE]//Illusion Battle Chip R
 
-,[2534,weapTyp_BOW,214,190,4,2,60,130,0,0,0,0,bon_MATK,135,bon_DMG_RANGE,5,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SKILL + skill_SHA_TRIANGLE_SHOT,15,"ref_lvl",11,bon_DMG_RANGE,10,bon_NONE]//AC-B44-OS
+,[2534,weapTyp_BOW,214,190,4,2,60,130,0,0,0,0,bon_WEAPON_MATK,135,bon_DMG_RANGE,5,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SKILL + skill_SHA_TRIANGLE_SHOT,15,"ref_lvl",11,bon_DMG_RANGE,10,bon_NONE]//AC-B44-OS
 ,[2535,weapTyp_2HSWORD,2051,250,4,2,180,130,0,0,0,0,bon_CRIT,5,bon_UNBREAKABLE,1,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_CRIT,15,"ref_lvl",11,bon_DMG_SIZ_SMALL,20,"ref_lvl",11,bon_DMG_SIZ_MEDIUM,20,bon_NONE]//Beam Claymore-OS
 ,[2536,weapTyp_AXEII,212,400,4,2,450,130,0,0,0,0,bon_RED_SIZ_MEDIUM,10,bon_RED_SIZ_LARGE,10,"ref_lvl",7,bon_RED_SIZ_MEDIUM,15,"ref_lvl",7,bon_RED_SIZ_LARGE,15,"ref_lvl",9,bon_DMG_RANGE,15,"ref_lvl",11,bon_RED_CASTDELAY,10,bon_NONE]//Blasti-OS
 ,[2537,weapTyp_SPEAR,213,190,4,2,100,130,0,0,0,0,bon_ASPD_MUL,3,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SKILL + skill_ROY_VANISHING_POINT,20,"ref_lvl",11,bon_DMG_SKILL + skill_ROY_VANISHING_POINT,15,bon_NONE]//Boost Lance-OS
 ,[2538,weapTyp_KNUCKLE,215,175,4,2,90,130,0,0,0,0,bon_PHY_ATK,3,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SKILL + skill_SUR_RAMPAGE_BLASTER,15,"ref_lvl",11,bon_DMG_SIZ_MEDIUM,20,"ref_lvl",11,bon_DMG_SIZ_LARGE,20,bon_NONE]//Burning Knuckle-OS
-,[2539,weapTyp_SWORD,2072,160,4,2,80,130,0,0,0,0,bon_MATK,150,bon_SKILL_AUTOCAST,119,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SKILL + skill_MA_FIRE_BALL,30,"ref_lvl",11,bon_SKILL_AUTOCAST,166,bon_NONE]//Cannon Rapier-OS
+,[2539,weapTyp_SWORD,2072,160,4,2,80,130,0,0,0,0,bon_WEAPON_MATK,150,bon_SKILL_AUTOCAST,119,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SKILL + skill_MA_FIRE_BALL,30,"ref_lvl",11,bon_SKILL_AUTOCAST,166,bon_NONE]//Cannon Rapier-OS
 ,[2540,weapTyp_BOOK,2095,180,4,2,120,130,0,0,0,0,bon_PHY_ATK,3,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SIZ_SMALL,20,"ref_lvl",9,bon_DMG_SIZ_MEDIUM,20,"ref_lvl",11,bon_DMG_CRIT,20,bon_NONE]//Circuit Board-OS
-,[2541,weapTyp_ROD,224,250,4,2,120,130,0,0,0,0,bon_MATK,350,bon_MATK_MUL,5,bon_UNBREAKABLE,1,"ref_lvl",7,bon_DMG_SKILL + skill_SUM_SILVERVINE_STEM_SPEAR,20,"ref_lvl",9,bon_RED_CAST,-10,"ref_lvl",9,bon_INC_MAGIC_EARTH,15,"ref_lvl",9,bon_INC_MAGIC_FIRE,15,"ref_lvl",9,bon_INC_MAGIC_WATER,15,"ref_lvl",9,bon_INC_MAGIC_GHOST,15,"ref_lvl",9,bon_INC_MAGIC_NEUTRAL,15,"ref_lvl",11,bon_DMG_SKILL + skill_SUM_CATNIP_METEOR,30,bon_NONE]//Electric Fox-OS
+,[2541,weapTyp_ROD,224,250,4,2,120,130,0,0,0,0,bon_WEAPON_MATK,350,bon_MATK_MUL,5,bon_UNBREAKABLE,1,"ref_lvl",7,bon_DMG_SKILL + skill_SUM_SILVERVINE_STEM_SPEAR,20,"ref_lvl",9,bon_RED_CAST,-10,"ref_lvl",9,bon_INC_MAGIC_EARTH,15,"ref_lvl",9,bon_INC_MAGIC_FIRE,15,"ref_lvl",9,bon_INC_MAGIC_WATER,15,"ref_lvl",9,bon_INC_MAGIC_GHOST,15,"ref_lvl",9,bon_INC_MAGIC_NEUTRAL,15,"ref_lvl",11,bon_DMG_SKILL + skill_SUM_CATNIP_METEOR,30,bon_NONE]//Electric Fox-OS
 ,[2542,weapTyp_RIFLE,222,250,4,2,100,130,0,0,0,0,bon_PHY_ATK,3,"ref_lvl",7,bon_DMG_RANGE,7,"ref_lvl",9,bon_DMG_SKILL + skill_REB_GODS_HAMMER,20,bon_NONE]//HR-S55-OS
-,[2543,weapTyp_DAGGER,221,150,4,2,90,130,0,0,0,0,bon_MATK,150,bon_DMG_ELE_SHADOW,5,bon_MDMG_ELE_SHADOW,5,bon_DMG_ELE_UNDEAD,5,bon_MDMG_ELE_UNDEAD,5,"ref_lvl",7,bon_DMG_ELE_UNDEAD,10,"ref_lvl",7,bon_MDMG_ELE_UNDEAD,10,"ref_lvl",7,bon_DMG_ELE_UNDEAD,10,"ref_lvl",7,bon_MDMG_ELE_UNDEAD,10,"ref_lvl",9,bon_DMG_SKILL + skill_KAG_KUNAI_SPLASH,20,"ref_lvl",11,bon_DMG_ELE_UNDEAD,10,"ref_lvl",11,bon_MDMG_ELE_UNDEAD,10,"ref_lvl",11,bon_DMG_ELE_UNDEAD,10,"ref_lvl",11,bon_MDMG_ELE_UNDEAD,10,bon_NONE]//Kuroiro-OS
+,[2543,weapTyp_DAGGER,221,150,4,2,90,130,0,0,0,0,bon_WEAPON_MATK,150,bon_DMG_ELE_SHADOW,5,bon_MDMG_ELE_SHADOW,5,bon_DMG_ELE_UNDEAD,5,bon_MDMG_ELE_UNDEAD,5,"ref_lvl",7,bon_DMG_ELE_UNDEAD,10,"ref_lvl",7,bon_MDMG_ELE_UNDEAD,10,"ref_lvl",7,bon_DMG_ELE_UNDEAD,10,"ref_lvl",7,bon_MDMG_ELE_UNDEAD,10,"ref_lvl",9,bon_DMG_SKILL + skill_KAG_KUNAI_SPLASH,20,"ref_lvl",11,bon_DMG_ELE_UNDEAD,10,"ref_lvl",11,bon_MDMG_ELE_UNDEAD,10,"ref_lvl",11,bon_DMG_ELE_UNDEAD,10,"ref_lvl",11,bon_MDMG_ELE_UNDEAD,10,bon_NONE]//Kuroiro-OS
 ,[2544,weapTyp_KATAR,208,190,4,2,130,130,0,0,0,0,bon_PHY_ATK,3,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SKILL + skill_GLT_CROSS_RIPPER_SLASHER,15,"ref_lvl",11,bon_DMG_SIZ_SMALL,20,"ref_lvl",11,bon_DMG_SIZ_MEDIUM,20,bon_NONE]//Meuchler-OS
 ,[2545,weapTyp_BOW,227,170,4,2,120,130,0,0,0,0,bon_PHY_ATK,3,"ref_lvl",7,bon_DMG_RANGE,7,"ref_lvl",9,bon_DELAY_SKILL_FLAT + skill_MIWA_SEVERE_RAINSTORM,2,"ref_lvl",11,bon_DMG_SKILL + skill_MIWA_SEVERE_RAINSTORM,15,bon_NONE]//MH-P89-OS
-,[2546,weapTyp_ROD,228,80,4,2,90,130,0,0,0,0,bon_MATK,175,bon_UNBREAKABLE,1,bon_MDMG_ELE_EARTH,5,bon_MDMG_ELE_NEUTRAL,5,"ref_lvl",7,bon_RED_CAST,-7,"ref_lvl",9,bon_INC_MAGIC_FIRE,30,"ref_lvl",11,bon_RED_CASTDELAY,10,bon_NONE]//Rutilus Stick-OS
+,[2546,weapTyp_ROD,228,80,4,2,90,130,0,0,0,0,bon_WEAPON_MATK,175,bon_UNBREAKABLE,1,bon_MDMG_ELE_EARTH,5,bon_MDMG_ELE_NEUTRAL,5,"ref_lvl",7,bon_RED_CAST,-7,"ref_lvl",9,bon_INC_MAGIC_FIRE,30,"ref_lvl",11,bon_RED_CASTDELAY,10,bon_NONE]//Rutilus Stick-OS
 ,[2547,weapTyp_MACE,219,185,4,2,80,130,0,0,0,0,bon_PHY_ATK,3,"ref_lvl",7,bon_RED_CAST,-7,"ref_lvl",9,bon_DMG_SKILL + skill_GEN_CART_CANNON,20,"ref_lvl",11,bon_DMG_RANGE,15,bon_NONE]//Saphir Hall-OS
-,[2548,weapTyp_MACE,209,150,4,2,120,130,0,0,0,0,bon_MATK,170,bon_MATK_MUL,3,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SKILL + skill_ABI_ADORAMUS,20,"ref_lvl",11,bon_INC_MAGIC_HOLY,15,bon_NONE]//Ultio-OS
+,[2548,weapTyp_MACE,209,150,4,2,120,130,0,0,0,0,bon_WEAPON_MATK,170,bon_MATK_MUL,3,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SKILL + skill_ABI_ADORAMUS,20,"ref_lvl",11,bon_INC_MAGIC_HOLY,15,bon_NONE]//Ultio-OS
 ,[2549,weapTyp_BOW,210,200,4,2,120,130,0,0,0,0,bon_PHY_ATK,3,"ref_lvl",7,bon_DMG_RANGE,7,"ref_lvl",9,bon_DMG_SKILL + skill_RAN_ARROW_STORM,30,"ref_lvl",11,bon_DMG_SKILL + skill_RAN_ARROW_STORM,20,bon_NONE]//Virtual Bow-OS
 
 ,[2550,itm_type_ARMOR,0,85,0,1,150,175,0,0,0,0,bon_ATK,100,"ref_lvl",7,bon_DEF,100,"ref_lvl",9,bon_DEF,50,bon_NONE]//Lava Leather Armor
@@ -2691,10 +2692,10 @@
 
 ,[2591,weapTyp_2HSWORD,2051,280,4,2,400,175,0,0,0,0,"ev_ref",2,bon_ATK,20,"ref_lvl",7,bon_DMG_CRIT,10,"ref_lvl",9,bon_UNBREAKABLE,1,bon_NONE]//Two handed Sword of Kingdom
 ,[2592,weapTyp_2HSPEAR,2051,205,3,2,100,175,0,0,0,0,"ev_ref",2,bon_DMG_RANGE,3,"ref_lvl",7,bon_PHY_ATK,5,"ref_lvl",9,bon_DMG_RC_FORMLESS,15,"ref_lvl",9,bon_DMG_RC_UNDEAD,15,"ref_lvl",9,bon_DMG_RC_BRUTE,15,"ref_lvl",9,bon_DMG_RC_PLANT,15,"ref_lvl",9,bon_DMG_RC_INSECT,15,"ref_lvl",9,bon_DMG_RC_FISH,15,"ref_lvl",9,bon_DMG_RC_DEMON,15,"ref_lvl",9,bon_DMG_RC_DEMI_HUMAN,15,"ref_lvl",9,bon_DMG_RC_ANGEL,15,"ref_lvl",9,bon_DMG_RC_DRAGON,15,bon_NONE]//Two handed Lnace of Kingdom
-,[2593,weapTyp_STAFF,0,110,4,2,80,175,0,0,0,0,bon_INT,7,bon_MATK,300,bon_UNBREAKABLE,1,"ev_ref",2,bon_MATK_MUL,1,"ref_lvl",7,bon_INC_MAGIC_FIRE,5,"ref_lvl",7,bon_INC_MAGIC_EARTH,5,"ref_lvl",7,bon_INC_MAGIC_WATER,5,"ref_lvl",7,bon_INC_MAGIC_WIND,5,"ref_lvl",9,bon_INC_MAGIC_FIRE,10,"ref_lvl",9,bon_INC_MAGIC_EARTH,10,"ref_lvl",9,bon_INC_MAGIC_WATER,10,"ref_lvl",9,bon_INC_MAGIC_WIND,10,"ref_lvl",11,bon_RED_SIZ_SMALL,20,"ref_lvl",11,bon_RED_SIZ_MEDIUM,20,"ref_lvl",11,bon_RED_SIZ_LARGE,20,"ref_lvl",13,bon_RED_CASTDELAY,15,bon_NONE]//Staff of Blue Flame
+,[2593,weapTyp_STAFF,0,110,4,2,80,175,0,0,0,0,bon_INT,7,bon_WEAPON_MATK,300,bon_UNBREAKABLE,1,"ev_ref",2,bon_MATK_MUL,1,"ref_lvl",7,bon_INC_MAGIC_FIRE,5,"ref_lvl",7,bon_INC_MAGIC_EARTH,5,"ref_lvl",7,bon_INC_MAGIC_WATER,5,"ref_lvl",7,bon_INC_MAGIC_WIND,5,"ref_lvl",9,bon_INC_MAGIC_FIRE,10,"ref_lvl",9,bon_INC_MAGIC_EARTH,10,"ref_lvl",9,bon_INC_MAGIC_WATER,10,"ref_lvl",9,bon_INC_MAGIC_WIND,10,"ref_lvl",11,bon_RED_SIZ_SMALL,20,"ref_lvl",11,bon_RED_SIZ_MEDIUM,20,"ref_lvl",11,bon_RED_SIZ_LARGE,20,"ref_lvl",13,bon_RED_CASTDELAY,15,bon_NONE]//Staff of Blue Flame
 ,[2594,weapTyp_BOOK,0,210,3,2,80,175,0,0,0,0,bon_HP_MUL,5,bon_SP_MUL,5,"ev_ref",2,bon_ATK,20,"ref_lvl",7,bon_DMG_RC_UNDEAD,10,"ref_lvl",7,bon_DMG_RC_DEMON,10,"ref_lvl",7,bon_MDMG_RC_UNDEAD,10,"ref_lvl",7,bon_MDMG_RC_DEMON,10,"ref_lvl",9,bon_DMG_RC_UNDEAD,15,"ref_lvl",9,bon_DMG_RC_DEMON,15,"ref_lvl",9,bon_MDMG_RC_UNDEAD,15,"ref_lvl",9,bon_MDMG_RC_DEMON,15,"ref_lvl",11,bon_DMG_ELE_UNDEAD,15,"ref_lvl",11,bon_DMG_ELE_SHADOW,15,"ref_lvl",11,bon_MDMG_ELE_UNDEAD,15,"ref_lvl",11,bon_MDMG_ELE_SHADOW,15,bon_NONE]//Prisoner Diary
-,[2595,weapTyp_ROD,0,110,4,2,80,175,0,0,0,0,bon_INT,5,bon_MATK,180,bon_UNBREAKABLE,1,"ev_ref",2,bon_MATK,15,"ref_lvl",7,bon_INC_MAGIC_WATER,5,"ref_lvl",7,bon_INC_MAGIC_HOLY,5,"ref_lvl",9,bon_INC_MAGIC_WATER,10,"ref_lvl",9,bon_INC_MAGIC_HOLY,10,bon_NONE]//Wand of Ice
-,[2596,weapTyp_ROD,0,110,4,2,80,175,0,0,0,0,bon_INT,5,bon_MATK,180,bon_UNBREAKABLE,1,"ev_ref",2,bon_MATK,15,"ref_lvl",7,bon_INC_MAGIC_FIRE,5,"ref_lvl",7,bon_INC_MAGIC_EARTH,5,"ref_lvl",9,bon_INC_MAGIC_FIRE,10,"ref_lvl",9,bon_INC_MAGIC_EARTH,10,bon_NONE]//Wand of Flame
+,[2595,weapTyp_ROD,0,110,4,2,80,175,0,0,0,0,bon_INT,5,bon_WEAPON_MATK,180,bon_UNBREAKABLE,1,"ev_ref",2,bon_MATK,15,"ref_lvl",7,bon_INC_MAGIC_WATER,5,"ref_lvl",7,bon_INC_MAGIC_HOLY,5,"ref_lvl",9,bon_INC_MAGIC_WATER,10,"ref_lvl",9,bon_INC_MAGIC_HOLY,10,bon_NONE]//Wand of Ice
+,[2596,weapTyp_ROD,0,110,4,2,80,175,0,0,0,0,bon_INT,5,bon_WEAPON_MATK,180,bon_UNBREAKABLE,1,"ev_ref",2,bon_MATK,15,"ref_lvl",7,bon_INC_MAGIC_FIRE,5,"ref_lvl",7,bon_INC_MAGIC_EARTH,5,"ref_lvl",9,bon_INC_MAGIC_FIRE,10,"ref_lvl",9,bon_INC_MAGIC_EARTH,10,bon_NONE]//Wand of Flame
 
 ,[2597,itm_type_HEAD_MIDDLE,0,0,0,0,50,70,0,0,0,0,bon_CRIT,3,bon_DMG_CRIT,3,"ev_bdex",10,bon_DMG_CRIT,-2,"ev_bluk",10,bon_CRIT,1,"ev_bluk",10,bon_MATK,2,"ev_bluk",10,bon_ATK,2,"bluk_hi",108,bon_CRIT,5,"bluk_hi",108,bon_DMG_CRIT,10,"bluk_hi",120,bon_CRIT,10,"bluk_hi",120,bon_DMG_CRIT,17,bon_NONE]//Gambler's Seal
 ,[2598,itm_type_HEAD_LOWER,0,0,0,0,30,80,0,0,0,0,bon_DMG_CRIT,5,bon_NONE]//Heart Card in Mouth
@@ -2705,7 +2706,7 @@
 //Illusion Teddy Bear
 ,[2602,weapTyp_DAGGER,55,170,4,2,90,120,0,0,0,0,bon_CRIT,90,"ev_ref",2,bon_DMG_CRIT,3,"ref_lvl",7,bon_PHY_ATK,5,"ref_lvl",9,bon_DMG_SIZ_SMALL,20,"ref_lvl",9,bon_DMG_SIZ_MEDIUM,20,"ref_lvl",9,bon_DMG_SIZ_LARGE,20,"ref_lvl",11,bon_DMG_ELE_EARTH,20,"ref_lvl",11,bon_DMG_ELE_FIRE,20,"ref_lvl",11,bon_DMG_ELE_GHOST,20,"ref_lvl",11,bon_DMG_ELE_HOLY,20,"ref_lvl",11,bon_DMG_ELE_NEUTRAL,20,"ref_lvl",11,bon_DMG_ELE_POISON,20,"ref_lvl",11,bon_DMG_ELE_SHADOW,20,"ref_lvl",11,bon_DMG_ELE_UNDEAD,20,"ref_lvl",11,bon_DMG_ELE_WATER,20,"ref_lvl",11,bon_DMG_ELE_WIND,20,bon_NONE]//Illusion Counter Dagger
 ,[2603,weapTyp_SHOTGUN,222,240,4,2,130,120,0,0,0,0,bon_DEX,1,"ev_ref",2,bon_DMG_RANGE,5,"ref_lvl",7,bon_ASPD_MUL,15,"ref_lvl",9,bon_DMG_RANGE,9,"ref_lvl",11,bon_SKILL_AUTOCAST,167,bon_NONE]//Illusion Gate Keeper-DD
-,[2604,weapTyp_STAFF,1,100,4,2,120,120,0,0,0,0,bon_DEX,2,bon_INT,2,bon_MATK,240,bon_HP_ADD,600,"ev_ref",2,bon_MATK_MUL,1,"ref_lvl",7,bon_MDMG_SIZ_SMALL,15,"ref_lvl",7,bon_MDMG_SIZ_MEDIUM,15,"ref_lvl",9,bon_RED_SIZ_SMALL,15,"ref_lvl",9,bon_RED_SIZ_MEDIUM,15,"ref_lvl",11,bon_RED_ELE2_FIRE,15,"ref_lvl",11,bon_RED_ELE2_WIND,15,"ref_lvl",11,bon_RED_ELE2_WATER,15,"ref_lvl",11,bon_RED_ELE2_EARTH,15,bon_NONE]//Illusion Survivor's Staff
+,[2604,weapTyp_STAFF,1,100,4,2,120,120,0,0,0,0,bon_DEX,2,bon_INT,2,bon_WEAPON_MATK,240,bon_HP_ADD,600,"ev_ref",2,bon_MATK_MUL,1,"ref_lvl",7,bon_MDMG_SIZ_SMALL,15,"ref_lvl",7,bon_MDMG_SIZ_MEDIUM,15,"ref_lvl",9,bon_RED_SIZ_SMALL,15,"ref_lvl",9,bon_RED_SIZ_MEDIUM,15,"ref_lvl",11,bon_RED_ELE2_FIRE,15,"ref_lvl",11,bon_RED_ELE2_WIND,15,"ref_lvl",11,bon_RED_ELE2_WATER,15,"ref_lvl",11,bon_RED_ELE2_EARTH,15,bon_NONE]//Illusion Survivor's Staff
 ,[2605,itm_type_SHOES,0,16,0,1,60,100,0,0,0,0,"ev_ref",1,bon_ASPD_MUL,1,"ev_ref",3,bon_CRIT,5,bon_NONE]//Illusion Boots
 ,[2606,itm_type_HEAD_UPPER,1,3,0,1,10,120,0,0,0,0,bon_STR,2,"ev_ref",2,bon_ATK,10,"ref_lvl",7,bon_DMG_ELE_WATER,10,"ref_lvl",7,bon_DMG_ELE_WIND,10,"ref_lvl",7,bon_DMG_ELE_EARTH,10,"ref_lvl",7,bon_DMG_ELE_NEUTRAL,10,"ref_lvl",9,bon_DMG_SIZ_SMALL,15,"ref_lvl",9,bon_DMG_SIZ_LARGE,15,bon_NONE]//Illusion Hot-blooded Headband
 //Illusion Turtle
@@ -2741,8 +2742,8 @@
 ,[2634,itm_type_GARMENT,0,10,0,1,50,50,0,0,0,0,bon_DMG_CRIT,3,bon_NONE]//Bloody Muffler
 ,[2635,itm_type_HEAD_MIDDLE,0,2,0,1,10,100,0,0,0,0,bon_MDMG_SIZ_SMALL,10,bon_MDMG_SIZ_MEDIUM,10,bon_MDMG_SIZ_LARGE,10,bon_RED_RC_DEMI_HUMAN,5,bon_NONE]//Vermillion Ribbon
 ,[2636,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_CRIT,5,bon_CRIT,10,"garm_ref_lvl",5,bon_DMG_CRIT,3,"garm_ref_lvl",7,bon_DMG_CRIT,4,bon_NONE]//Bloody Muffler + Critical Ring
-// ,[2637,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2638,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+,[2637,weapTyp_SWORD,214,150,4,2,80,100,0,0,0,0,bon_WEAPON_MATK,150,"ev_ref",2,bon_MATK,10,"ev_ref",3,bon_ASPD_MUL,2,"ref_lvl",9,bon_INC_MAGIC_ALL,10,"ref_lvl",11,bon_SKILL_AUTOCAST,151,bon_NONE] // "Magic Sword""Winged Sword"
+,[2638,weapTyp_SWORD,214,165,4,2,90,100,0,0,0,0,"ev_ref",2,bon_ATK,10,"ev_ref",3,bon_ASPD_MUL,2,"ref_lvl",9,bon_DMG_SKILL + skill_SHA_FATAL_MENACE,20,"ref_lvl",11,bon_RED_CASTDELAY,7,bon_NONE] // "Fatalist""Fatebringer"
 // ,[2639,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
 // ,[2640,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
 
@@ -2791,9 +2792,7 @@ function BuildItemDescription( bonusType, bonusValue )
 	wNAME1[19] = GetWord(17);
 	wIS = " +";
 	if ( bonusValue < 0 )
-	{
 		wIS = " ";
-	}
 
 	var CBIstr = "";
 	if(1 <= bonusType && bonusType <=11) // Stats and Shown Substats
@@ -2846,13 +2845,9 @@ function BuildItemDescription( bonusType, bonusValue )
 	if ( bonusType === bon_RED_FIXEDCAST )
 	{ // fixed cast reduction
 		if ( bonusValue > 0 )
-		{
 			CBIstr += GetWord(254) + " -" + bonusValue +"%<br/>";
-		}
 		else
-		{
 			CBIstr += GetWord(254) + " +" + (bonusValue * -1) + "%<br/>";
-		}
 	}
 	if(73 == bonusType) // Casttime
 		CBIstr += "[" + GetWord(154) + "]" + wIS + bonusValue +"%<br/>";
@@ -2894,13 +2889,9 @@ function BuildItemDescription( bonusType, bonusValue )
 	if(bon_RED_DMG_MALAYA == bonusType)
 		CBIstr += GetWord(271) + wIS + bonusValue +"%<br/>";
 	if ( bonusType === bon_MATK )
-	{
 		CBIstr += "[" + GetWord( 22 ) + "]" + wIS + bonusValue +"<br/>";
-	}
 	if ( bonusType === bon_MATK_MUL )
-	{
 		CBIstr += "[" + GetWord( 22 ) + "]" + wIS + bonusValue +"%<br/>";
-	}
 	if(91 == bonusType)
 		CBIstr += "Heal amount increased by"+ wIS + bonusValue +"%<br/>";
 	if(92 == bonusType)
@@ -2926,10 +2917,9 @@ function BuildItemDescription( bonusType, bonusValue )
 	if(150 <= bonusType && bonusType <=169)
 		CBIstr += GetWord(209) +"["+ AilmentsOBJ[bonusType-150][Language] +"]"+ GetWord(210) + bonusValue +"%<br/>";
 	if(170 <= bonusType && bonusType <=179) // Race MagDmg
-		CBIstr += "Magical damage  on " + "["+ SyuzokuOBJ[bonusType-170][Language] + "]" + GetWord(181) + wIS + bonusValue +"%<br/>";
+		CBIstr += GetWord(273) + "["+ SyuzokuOBJ[bonusType-170][Language] + "]" + GetWord(181) + wIS + bonusValue +"%<br/>";
 	if(180 <= bonusType && bonusType <=189)
 		CBIstr += "Ignore " + bonusValue +"% of the " + "[" + SyuzokuOBJ[bonusType-180][Language] + "] monster's defence<br/>";
-		// CBIstr += "Ignore " + "["+ SyuzokuOBJ[bonusType-180][Language] + "]" +"% of the monster's defence<br/>";
 	if(190 <= bonusType && bonusType <=192)
 		CBIstr += GetWord(184) + "[" + SizeOBJ[bonusType-190][Language] + "]" + GetWord(211) + wIS + bonusValue +"%<br/>";
 	if(193 == bonusType)
@@ -2967,98 +2957,54 @@ function BuildItemDescription( bonusType, bonusValue )
 	if(bon_DMG_SKILL <= bonusType && bonusType <= 6999)
 		CBIstr += "[" + SKILL_NAME[bonusType -5000][Language] + GetWord(223) + wIS + bonusValue +"%<br/>";
 	if(bon_CAST_SKILL <= bonusType && bonusType <= 8999)
-	{
-		/*if(bonusValue > 0)
-			CBIstr += "["+ SKILL_NAME[bonusType -7000][Language] +"] Cast Time "+ bonusValue +"%<br/>";
-		else*/
 			CBIstr += "["+ SKILL_NAME[bonusType -7000][Language] +"] Cast Time "+ (-1 * bonusValue) +"%<br/>";
-	}
 	if(bon_CAST_SKILL_FLAT <= bonusType && bonusType <= bon_CAST_SKILL_FLAT+999)
 	{
-		/*if(bonusValue > 0)
-			CBIstr += "["+ SKILL_NAME[bonusType -7000][Language] +"] Cast Time "+ bonusValue +"%<br/>";
-		else*/
 		if (bon_CAST_SKILL_FLAT == bonusType)
 			CBIstr += "[Cast Time] "+ (-1 * bonusValue) +"sec<br/>";
 		else
 			CBIstr += "["+ SKILL_NAME[bonusType -bon_CAST_SKILL_FLAT][Language] +"] Cast Time "+ (-1 * bonusValue) +"sec<br/>";
 	}
 	if(bon_DELAY_SKILL_FLAT <= bonusType && bonusType <= bon_DELAY_SKILL_FLAT+999)
-	{
-		/*if(bonusValue > 0)
-			CBIstr += "["+ SKILL_NAME[bonusType -7000][Language] +"] Cast Time "+ bonusValue +"%<br/>";
-		else*/
 			CBIstr += "["+ SKILL_NAME[bonusType -bon_DELAY_SKILL_FLAT][Language] +"] Cooldown "+ (-1 * bonusValue) +"sec<br/>";
-	}
 	if(bonusType  == bon_DEFIGN_SIZ_SMALL)
-	{
 		CBIstr += "Ignores " + bonusValue + "% of physical defense rate of small size enemies<br>";
-	}
 	if(bonusType  == bon_DEFIGN_SIZ_MEDIUM)
-	{
 		CBIstr += "Ignores " + bonusValue + "% of physical defense rate of medium size enemies<br>";
-	}
 	if(bonusType  == bon_DEFIGN_SIZ_LARGE)
-	{
 		CBIstr += "Ignores " + bonusValue + "% of physical defense rate of large size enemies<br>";
-	}
 	if(bonusType  == bon_MDEFIGN_SIZ_SMALL)
-	{
 		CBIstr += "Ignores " + bonusValue + "% of magical defense rate of small size enemies<br>";
-	}
 	if(bonusType  == bon_MDEFIGN_SIZ_MEDIUM)
-	{
 		CBIstr += "Ignores " + bonusValue + "% of magical defense rate of medium size enemies<br>";
-	}
 	if(bonusType  == bon_MDEFIGN_SIZ_LARGE)
-	{
 		CBIstr += "Ignores " + bonusValue + "% of magical defense rate of large size enemies<br>";
-	}
 	if(bonusType  == bon_DEFIGN_RC_ALL)//
-	{
 		CBIstr += "Ignores " + bonusValue + "% of target's DEF.<br>";
-	}
 	if(bonusType  == bon_MDEFIGN_RC_ALL)
-	{
-	CBIstr += "Ignores " + bonusValue + "% of target's MDEF.<br>";
-	}
+		CBIstr += "Ignores " + bonusValue + "% of target's MDEF.<br>";
 	if(bonusType  == bon_DEFIGN_RC_BOSS)
-	{
 		CBIstr += "On [Boss] monsters<br>Ignores " + bonusValue + "% of target's DEF.<br>";
-	}
 	if(bonusType  == bon_MDEFIGN_RC_BOSS)
-	{
 		CBIstr += "On [Boss] monsters<br>Ignores " + bonusValue + "% of target's MDEF.<br>";
-	}
 	if(bonusType  == bon_DEFIGN_RC_NON_BOSS)
-	{
 		CBIstr += "On [Normal] monsters<br>Ignores " + bonusValue + "% of target's DEF.<br>";
-	}
 	if(bonusType  == bon_MDEFIGN_RC_NON_BOSS)
-	{
 		CBIstr += "On [Normal] monsters<br>Ignores " + bonusValue + "% of target's MDEF.<br>";
-	}
 	if(bonusType  == bon_MDMG_ELE_ALL)
-	{
 		CBIstr += GetWord(273) + "[All] element monsters by" + wIS + bonusValue +"%<br/>";
-	}
 	if(bonusType  == bon_INC_MAGIC_ALL)
-	{
 		CBIstr += GetWord(257) + "[All]" + GetWord(258) + wIS + bonusValue +"%<br/>";
-	}
 	if(bonusType  == bon_MDMG_SIZ_SMALL)
-	{
 		CBIstr += GetWord(273) + "[" + SizeOBJ[0][Language] + "]" + GetWord(180) + wIS + bonusValue +"%<br/>";
-	}
 	if(bonusType  == bon_MDMG_SIZ_MEDIUM)
-	{
 		CBIstr += GetWord(273) + "[" + SizeOBJ[1][Language] + "]" + GetWord(180) + wIS + bonusValue +"%<br/>";
-	}
 	if(bonusType  == bon_MDMG_SIZ_LARGE)
-	{
 		CBIstr += GetWord(273) + "[" + SizeOBJ[2][Language] + "]" + GetWord(180) + wIS + bonusValue +"%<br/>";
-	}
-
+	if(bonusType  == bon_MDMG_BOSS)
+		CBIstr += GetWord(273) + "[" + GetWord(179) + "]" + GetWord(181) + wIS + bonusValue +"%<br/>";
+	if(bonusType  == bon_WEAPON_MATK)
+		CBIstr += "Weapon Matk : " + bonusValue +"<br/>";
 	return CBIstr;
 }
 

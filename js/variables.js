@@ -106,8 +106,8 @@ var varianceAttack = 0;
 var varianceAttack2 = 0;
 var weaponUpgradeAttack = 0;
 var weaponUpgradeAttack2 = 0;
-var overrefineMagicAttack = 0;
-var minOverrefineMagicAttack = 0;
+// var overrefineMagicAttack = 0;
+// var minOverrefineMagicAttack = 0;
 
 // modifiers
 var weaponSizeMod = 1;

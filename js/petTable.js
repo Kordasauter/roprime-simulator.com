@@ -50,7 +50,7 @@ PET_OBJ = [
 ,[ 47,"Goblin Rider (Physical Damage on Demi-Human Race+3%)",0,bon_DMG_RC_DEMI_HUMAN,3,0]
 ,[ 48,"Golem (MHP+100,FLEE-5)",0,bon_HP_ADD,100,bon_FLEE,-5,0]
 ,[ 49,"Gremlin [Cordial] (DEX+1,HIT+1)",0,bon_DEX,1,bon_HIT,1,0]
-,[ 50,"Gremlin [Loyal] (DEX+2,HIT+1)",0,bon_DEX,1,bon_HIT,1,0]
+,[ 50,"Gremlin [Loyal] (DEX+2,HIT+1)",0,bon_DEX,2,bon_HIT,1,0]
 ,[ 51,"Grand Peco [Awkward/Shy] (MHP+150)",0,bon_HP_ADD,150,0]
 ,[ 52,"Grand Peco [Neutral] (MHP+200)",0,bon_HP_ADD,200,0]
 ,[ 53,"Grand Peco [Cordial] (MHP+300)",0,bon_HP_ADD,300,0]

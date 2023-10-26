@@ -1847,14 +1847,6 @@ function CalcSkillDamage()
 				w_SkillMod = (n_A_ActiveSkillLV * 2.5) + ((n_A_ActiveSkillLV * 0.2) * SkillSearch( skill_GEN_CART_REMODELING )) + ( n_A_INT * 0.02);
 				w_SkillMod *= n_A_BaseLV / 100.0;
 			}
-			if(EquipNumSearch(1681))
-			{ //"Amistr Hat"
-				// if(EquipNumSearch(932)||EquipNumSearch(933))//Twin Edge of Naght Sieger
-				if(EquipNumSearch(932))//Twin Edge of Naght Sieger blue only
-				{
-					w_SkillMod += 0.1 * Math.floor(n_A_Weapon_ATKplus / 2);
-				}
-			}
 			
 			fixedCastTime *= 0.0;
 			variableCastTime *= 0.5 + 0.5 * n_A_ActiveSkillLV;
@@ -6011,6 +6003,7 @@ function CalcSkillDamage()
 		else if ( n_A_ActiveSkill == skill_NIN_FREEZING_SPEAR )
 		{
 			n_A_Weapon_element = ele_WATER;
+			w_SkillMod = 0.7;
 			w_TotalHits = n_A_ActiveSkillLV + 2;
 			
 			fixedCastTime *= n_A_ActiveSkillLV * 0.7 * 0.2;
@@ -6029,7 +6022,7 @@ function CalcSkillDamage()
 		else if ( n_A_ActiveSkill == skill_NIN_WIND_BLADE )
 		{
 			n_A_Weapon_element = ele_WIND;
-			w_SkillMod = 1.0;
+			w_SkillMod = 1.5;
 			w_TotalHits = Math.floor(n_A_ActiveSkillLV / 2) +1;
 			
 			fixedCastTime *= (Math.floor(n_A_ActiveSkillLV / 2) + 1)*0.2;
@@ -6253,6 +6246,7 @@ function CalcSkillDamage()
 				else
 				{
 					w_SkillMod = 30.0 + ( (n_A_ActiveSkillLV - 5) * 2.0 );
+					console.log("w_SkillMod = " + w_SkillMod);
 				}
 			}
 			else if(PATCH == 2)
@@ -6659,21 +6653,21 @@ function CalcSkillDamage()
 		
 		
 		
-		if (damageType == kDmgTypeMagic) {
-			var mElementBoost = 100 + StPlusCalc2(bon_INC_MAGIC_NEUTRAL+n_A_Weapon_element) + StPlusCard(bon_INC_MAGIC_NEUTRAL+n_A_Weapon_element)+ StPlusEnchant(bon_INC_MAGIC_NEUTRAL+n_A_Weapon_element);
-			w_SkillMod *= mElementBoost / 100.0;
-		}
+		// if (damageType == kDmgTypeMagic) {
+			// var mElementBoost = 100 + StPlusCalc2(bon_INC_MAGIC_NEUTRAL+n_A_Weapon_element) + StPlusCard(bon_INC_MAGIC_NEUTRAL+n_A_Weapon_element)+ StPlusEnchant(bon_INC_MAGIC_NEUTRAL+n_A_Weapon_element);
+			// w_SkillMod *= mElementBoost / 100.0;
+		// }
 		// calculate damage
 		if ( n_subHits === 0 )
 		{
 			// No sub-hits for the magic formula
 			for ( var i = 0; i < 3; i++ )
 			{
-				w_DMG[i] = CalcMagicDamage( n_A_MATK[i] * w_SkillMod );
-				if(EquipNumSearch(1684) && n_A_ActiveSkill == skill_ABI_ADORAMUS)// Amistr Hat + Holy Stick
-				{
-					w_DMG[i]  += Math.floor(w_DMG[i] * (0.3 * Math.floor(n_A_Weapon_ATKplus / 2)));
-				}
+				
+				console.log("CalcMATKMultipliers(n_A_MATK[i]) = " + CalcMATKMultipliers(n_A_MATK[i]));
+				// console.log("w_SkillMod  = " + (w_SkillMod ));
+				w_DMG[i] = CalcMagicDamage( CalcMATKMultipliers(n_A_MATK[i]) * w_SkillMod );
+				// console.log("w_DMG[i] = " + w_DMG[i]);
 				if(EquipNumSearch(1732) && n_A_ActiveSkill == skill_PR_MAGNUS_EXORCISMUS)
 				{
 					w_DMG[i]  += Math.floor(w_DMG[i] * (n_A_SHADOW_BODY_DEF_PLUS * 0.05));

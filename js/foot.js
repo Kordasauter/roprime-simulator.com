@@ -537,9 +537,13 @@ with ( document.calcForm )
 	
  	// CalcMATK ----------------------------------------------------
 	calcMAtk(0);
-	STR = n_A_StatMATK +" + "+ n_A_EquipMATK;
-	calcMAtk(1);
-	STR += "<BR>(" + n_A_StatMATK +" + "+ n_A_EquipMATK + " &plusmn; " + n_A_MATK_Variance + ")";
+	let statMATK = CalcStatMatk();
+	let extraMATK = calcExtraMATK() + calcWeaponMATK() + calcBuffMATK();
+	let varianceMATK = calcVarianceMATK();
+	STR =  statMATK +" + "+ extraMATK;
+	// calcMAtk(1);
+	// console.log("matk mul " + magicAtkMul());
+	STR += "<BR>(" + Math.floor(statMATK * (1+( magicAtkMul()/100))) +" + "+ Math.floor(extraMATK * (1+( magicAtkMul()/100))) + " &plusmn; " + varianceMATK + ")";
 	
 	myInnerHtml("A_MATK", STR,0);
 	

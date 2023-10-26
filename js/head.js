@@ -1048,15 +1048,9 @@ function ApplySkillModifiers( damage )
 	{
 		dmgMultiplier += 4 * Math.floor(n_A_Weapon_ATKplus / 3);
 	}
-	if(((n_A_ActiveSkill == skill_RUN_DRAGON_BREATH || n_A_ActiveSkill == skill_RUN_DRAGON_BREATH_WATER) && EquipNumSearch(2051)) || //Dragon Slayer (Ancient Weapon)
-	   ((n_A_ActiveSkill == skill_ROY_RAY_OF_GENESIS || n_A_ActiveSkill == skill_PA_GLORIA_DOMINI) && EquipNumSearch(2053)) || //Blade of Light
-	   ( n_A_ActiveSkill == skill_ABI_ADORAMUS && EquipNumSearch(2072)) ) //Mace of the Righteous
+	if(((n_A_ActiveSkill == skill_RUN_DRAGON_BREATH || n_A_ActiveSkill == skill_RUN_DRAGON_BREATH_WATER) && EquipNumSearch(2051))) //Dragon Slayer (Ancient Weapon)
 	{
 		dmgMultiplier += 5 * Math.floor(n_A_Weapon_ATKplus / 3);
-	}
-	if(n_A_ActiveSkill == skill_SOR_DIAMOND_DUST && EquipNumSearch(2066)) //Ice Guardian
-	{
-		dmgMultiplier += 8 * Math.floor(n_A_Weapon_ATKplus / 3);
 	}
 	if((n_A_ActiveSkill == skill_RUN_SONIC_WAVE && EquipNumSearch(2050)) ||//Runic Katana
 	   (n_A_ActiveSkill == skill_MEC_AXE_TORNADO && EquipNumSearch(2067))||//Avenger
@@ -1078,8 +1072,6 @@ function ApplySkillModifiers( damage )
 	}
 	
 	if((n_A_ActiveSkill == skill_MIWA_SEVERE_RAINSTORM  && EquipNumSearch(2054) && n_A_Weapon_ATKplus >= 9) ||  //"Bow of Narcissus"
-	  ((n_A_ActiveSkill == skill_MIWA_REVERBERATION || n_A_ActiveSkill == skill_MIWA_METALLIC_SOUND ) && EquipNumSearch(2055) && n_A_Weapon_ATKplus >= 9) || //Tide Conch
-	  ((n_A_ActiveSkill == skill_MIWA_REVERBERATION || n_A_ActiveSkill == skill_MIWA_METALLIC_SOUND ) && EquipNumSearch(2056) && n_A_Weapon_ATKplus >= 9) || //Thorn Whip
 	  ((n_A_ActiveSkill == skill_MEC_VULCAN_ARM || n_A_ActiveSkill == skill_MEC_ARM_CANNON ) && EquipNumSearch(2068) && n_A_Weapon_ATKplus >= 9) ||  //Big Badaboom
 	   (n_A_ActiveSkill == skill_SUR_RAMPAGE_BLASTER && EquipNumSearch(2073) && n_A_Weapon_ATKplus >= 9) )  //Iron Claw
 	{
@@ -1089,9 +1081,7 @@ function ApplySkillModifiers( damage )
 	    (n_A_ActiveSkill == skill_GEN_CART_CANNON && EquipNumSearch(2069) && n_A_Weapon_ATKplus >= 9) || //Sword of Blue Fire
 	    (n_A_ActiveSkill == skill_SUR_TIGER_CANNON && EquipNumSearch(2074) && n_A_Weapon_ATKplus >= 9)|| //Claws of the Bifrost
 	    (n_A_ActiveSkill == skill_REB_DRAGON_TAIL && EquipNumSearch(2081) && n_A_Weapon_ATKplus >= 7) ||//Big Game Trophy
-	    (n_A_ActiveSkill == skill_REB_ROUND_TRIP && EquipNumSearch(2082) && n_A_Weapon_ATKplus >= 7)  ||//Guttling Gun
-	    (n_A_ActiveSkill == skill_SUM_LUNATIC_CARROT_BEAT && EquipNumSearch(2083) && n_A_Weapon_ATKplus >= 7)  ||//Meowmeow Foxtail
-	    (n_A_ActiveSkill == skill_SUM_SILVERVINE_STEM_SPEAR && EquipNumSearch(2083) && n_A_Weapon_ATKplus >= 7)  ) //Meowmeow Foxtail
+	    (n_A_ActiveSkill == skill_REB_ROUND_TRIP && EquipNumSearch(2082) && n_A_Weapon_ATKplus >= 7)  ) //Guttling Gun
 	{
 		dmgMultiplier += 15;
 		if((n_A_ActiveSkill == skill_REB_DRAGON_TAIL && EquipNumSearch(2081) && n_A_Weapon_ATKplus >= 11) ||//Big Game Trophy
@@ -1099,11 +1089,8 @@ function ApplySkillModifiers( damage )
 			dmgMultiplier += 15;
 	}
 	if((n_A_ActiveSkill == skill_GLT_ROLLING_CUTTER && EquipNumSearch(2058) && n_A_Weapon_ATKplus >= 9) || //Steel Flower
-	   (n_A_ActiveSkill == skill_SHA_FATAL_MENACE && EquipNumSearch(2060) && n_A_Weapon_ATKplus >= 9)   || //Fatalist
 	   ((n_A_ActiveSkill == skill_ROY_SPEAR_CANNON || n_A_ActiveSkill == skill_ROY_VANISHING_POINT) && EquipNumSearch(2052) && n_A_Weapon_ATKplus >= 11) ||//Trident of Undine
-	   (n_A_ActiveSkill == skill_GEN_CART_TORNADO && EquipNumSearch(2070) && n_A_Weapon_ATKplus >= 9)   ||//Slate Sword
-	   (n_A_ActiveSkill == skill_SUM_CATNIP_METEOR && EquipNumSearch(2083) && n_A_Weapon_ATKplus >= 11) ||//Meowmeow Foxtail
-	   (n_A_ActiveSkill == skill_SUM_PICKY_PECK && EquipNumSearch(2083) && n_A_Weapon_ATKplus >= 11)    ) //Meowmeow Foxtail
+	   (n_A_ActiveSkill == skill_GEN_CART_TORNADO && EquipNumSearch(2070) && n_A_Weapon_ATKplus >= 9)   ) //Slate Sword
 	{
 		dmgMultiplier += 20;
 	}
@@ -1592,22 +1579,20 @@ function ApplySkillModifiers( damage )
 				dmgMultiplier += 10;
 		}
 	}
+	if (  n_A_ActiveSkill == skill_PR_MAGNUS_EXORCISMUS  || 
+	  n_A_ActiveSkill == skill_AC_HOLY_LIGHT  || 
+	  n_A_ActiveSkill == skill_AC_HOLY_LIGHT_SL ||
+	  n_A_ActiveSkill == skill_PR_HOLY_LIGHT_SL ||
+	  n_A_ActiveSkill == skill_ABI_ADORAMUS ||
+	  n_A_ActiveSkill == skill_ABI_JUDEX  ) 
+	{
+		if ( SkillSearch( skill_HP_BASILICA ) )
+		{
+			dmgMultiplier += 3 * SkillSearch( skill_HP_BASILICA );
+		}
+	}
 
 	damage = damage * (100+StPlusCalc2(bon_DMG_SKILL+n_A_ActiveSkill)+StPlusCard(bon_DMG_SKILL+n_A_ActiveSkill) + dmgMultiplier) /100;
-	
-	/* 
-		For some reason the Earthworm Charm Multiplier has to be recalculate after the "spirit of life" multiplier
-	*/
-	// if(EquipNumSearch(1904) && n_A_ActiveSkill == skill_SUM_PICKY_PECK)
-	// { //"Plump Earthworm Charm"
-		// damage *= 1 + ((Math.floor(SU_DEX /6) * n_A_ActiveSkillLV) / 100) * EquipNumSearch(1904);
-	// }
-	if(EquipNumSearch(1902) && n_A_ActiveSkill == skill_SUM_SILVERVINE_STEM_SPEAR)
-	{ //"Shining Branch Charm"
-		// var SV_StemLv = parseInt(formElements["SkillSubNum2"].value);
-		// damage *= 1 + ((Math.floor(SU_INT /6) * 5) / 100) * EquipNumSearch(1902);
-	}
-	
 	
 	if ( n_A_ActiveSkill == skill_RG_BACK_STAB &&
 		 n_A_WeaponType == weapTyp_BOW )
@@ -1643,8 +1628,6 @@ function ApplySkillModifiers( damage )
 		var randomNumber = Math.floor( Math.random() * ( maxPercentage - 14 ) ) + 15;
 		gloomyMultiplier = randomNumber / 100.0;
 		gloomyMultiplier += 1.0;
-		if( n_A_ActiveSkill == skill_ROY_SHIELD_PRESS)
-			console.log("shield press");
 		
 		if ( n_A_ActiveSkill == skill_KN_BRANDISH_SPEAR   ||
 		   	 n_A_ActiveSkill == skill_CR_SHIELD_BOOMERANG ||
