@@ -5860,6 +5860,7 @@ function CalcSkillDamage()
 			n_A_Weapon_element = ele_GHOST;
 			//w_SkillMod = 0.7 + n_A_ActiveSkillLV * 0.1;
 			w_SkillMod = 0.7 * n_A_ActiveSkillLV;//prime
+			w_SkillMod *= n_A_BaseLV/100;//prime
 			
 			fixedCastTime *= 0.0;
 			variableCastTime *= 1.0;
