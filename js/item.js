@@ -2494,7 +2494,7 @@
 ,[2415,itm_type_ACCESSORY,0,0,0,1,50,50,0,0,0,0,bon_STR,1,bon_INT,1,bon_HP_MUL,3,bon_SP_MUL,3,bon_NONE] //Imperial Ring
 ,[2416,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //Imperial Ring + Imperial Guard
 ,[2417,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"ev_weap_ref",2,bon_DMG_SKILL + skill_ROY_SPEAR_CANNON,7,"ev_weap_ref",2,bon_DMG_SKILL + skill_ROY_VANISHING_POINT,7,bon_NONE] //Imperial Ring + Imperial Spear
-,[2418,itm_type_HEAD_UPPER,0,8,0,0,10,70,0,0,0,0,bon_RED_RC_DEMI_HUMAN,11,bon_NONE] //Jejecap
+,[2418,itm_type_HEAD_UPPER,0,8,0,0,10,70,0,0,0,0,bon_STR,2,bon_INT,3,bon_RED_RC_DEMI_HUMAN,11,bon_NONE] //Jejecap
 
 ,[2419,itm_type_ACCESSORY,0,0,0,1,10,20,0,0,0,0,"ev_blvl",3,bon_DMG_SKILL + skill_MEC_AXE_TORNADO,1,"ev_blvl",5,bon_DMG_SKILL + skill_MEC_POWER_SWING,1,bon_NONE] //Arquien's Necklace
 ,[2420,itm_type_HEAD_UPPER,212,20,0,1,20,100,0,0,0,0,bon_DELAY_SKILL_FLAT + skill_MEC_AXE_BOOMERANG,1,"ref_lvl",9,bon_DMG_SKILL + skill_MEC_AXE_BOOMERANG,40,"ref_lvl",9,bon_DMG_SKILL + skill_MEC_AXE_TORNADO,40,bon_NONE] //Sea Captain Hat
@@ -2744,8 +2744,18 @@
 ,[2636,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_CRIT,5,bon_CRIT,10,"garm_ref_lvl",5,bon_DMG_CRIT,3,"garm_ref_lvl",7,bon_DMG_CRIT,4,bon_NONE]//Bloody Muffler + Critical Ring
 ,[2637,weapTyp_SWORD,214,150,4,2,80,100,0,0,0,0,bon_WEAPON_MATK,150,"ev_ref",2,bon_MATK,10,"ev_ref",3,bon_ASPD_MUL,2,"ref_lvl",9,bon_INC_MAGIC_ALL,10,"ref_lvl",11,bon_SKILL_AUTOCAST,151,bon_NONE] // "Magic Sword""Winged Sword"
 ,[2638,weapTyp_SWORD,214,165,4,2,90,100,0,0,0,0,"ev_ref",2,bon_ATK,10,"ev_ref",3,bon_ASPD_MUL,2,"ref_lvl",9,bon_DMG_SKILL + skill_SHA_FATAL_MENACE,20,"ref_lvl",11,bon_RED_CASTDELAY,7,bon_NONE] // "Fatalist""Fatebringer"
-// ,[2639,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2640,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+,[2639,itm_type_HEAD_UPPER,207,10,0,1,20,100,0,0,0,0,bon_DMG_SKILL + skill_RUN_SONIC_WAVE,50,bon_DMG_SKILL + skill_RUN_WIND_CUTTER,50,"ref_lvl",9,bon_DMG_SKILL + skill_RUN_IGNITION_BREAK,30,bon_NONE]//Black Ribbon
+,[2640,itm_type_HEAD_UPPER,0,0,0,1,70,90,0,0,0,0,bon_HP_MUL,5,bon_SP_MUL,5,bon_DMG_SKILL + skill_RUN_DRAGON_BREATH,15,bon_DMG_SKILL + skill_RUN_DRAGON_BREATH_WATER,15,"ref_lvl",6,bon_DMG_SKILL + skill_RUN_DRAGON_BREATH,15,"ref_lvl",6,bon_DMG_SKILL + skill_RUN_DRAGON_BREATH_WATER,15,"ref_lvl",8,bon_DMG_SKILL + skill_RUN_DRAGON_BREATH,15,"ref_lvl",8,bon_DMG_SKILL + skill_RUN_DRAGON_BREATH_WATER,15,bon_NONE]//Red Baby Dragon Hat
+,[2641,itm_type_ACCESSORY,0,0,0,1,50,100,0,0,0,0,bon_STR,5,bon_AGI,5,bon_VIT,5,bon_SKILL_ENABLE,75,"ev_blvl",1,bon_DMG_SKILL + skill_SW_BASH,1,"ev_blvl",5,bon_DMG_SKILL + skill_KN_BOWLING_BASH,3,bon_NONE]//Toy Ring
+// ,[2642,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2643,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2644,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2645,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2646,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2647,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2648,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2649,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2650,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
 
 
 // ,[,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK,50,"set_ref"+(fl_WEAPON+fl_HEAD),7,bon_RED_CAST,-10,"set_sum"+(fl_WEAPON+fl_HEAD),18,bon_MDMG_SIZ_SMALL,15,"set_sum"+(fl_WEAPON+fl_HEAD),18,bon_MDMG_SIZ_MEDIUM,15,"set_sum"+(fl_WEAPON+fl_HEAD),22,bon_MATK,50,"set_sum"+(fl_WEAPON+fl_HEAD),22,bon_INC_MAGIC_FIRE,20,bon_NONE]//Illusion Fancy Flower + Illusion Bazerald

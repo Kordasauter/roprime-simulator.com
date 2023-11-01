@@ -1045,6 +1045,13 @@ function StPlusCalc()
 		wSPC_LUK += n_A_BODY_DEF_PLUS;
 	}
 	
+	if( EquipNumSearch(2641) )
+	{//Toy Ring
+		wSPC_STR += Math.floor(SkillSearch(skill_SW_SWORD_MASTERY)/2) * EquipNumSearch(2641);
+		wSPC_AGI += Math.floor(SkillSearch(skill_SW_SWORD_MASTERY)/2) * EquipNumSearch(2641);
+		wSPC_VIT += Math.floor(SkillSearch(skill_SW_SWORD_MASTERY)/2) * EquipNumSearch(2641);
+	}
+	
 	// Acolyte Buffs
 	wSPC_STR += acolyteBuffs[ksBlessing];
 	wSPC_INT += acolyteBuffs[ksBlessing];
@@ -1504,7 +1511,7 @@ function StPlusCalc()
 //Special Enchants
 	for(var i = 0; i < 6; i++)
 	{
-		if(EnchNumSearch( 281 + i ))//Special STR = 281 ~ Special Luk = 286
+		if(EnchNumSearch( 841 + i ))//Special STR = 281 ~ Special Luk = 286
 		{
 			if(n_A_SHOULDER_DEF_PLUS >7)
 			{

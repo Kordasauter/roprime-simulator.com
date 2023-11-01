@@ -659,14 +659,14 @@ function magicAtkMul()
 		}
 		
 //Enchant
-		if(EnchNumSearch( 284 ))//Special INT = 284
+		if(EnchNumSearch( 844 ))//Special INT = 284
 		{
 			if(n_A_SHOULDER_DEF_PLUS >8)
 			{
 				matk_mul += 1;
 			}
 		}
-		if(EnchNumSearch( 285 ))//Special DEX = 285
+		if(EnchNumSearch( 845 ))//Special DEX = 285
 		{
 			if(n_A_SHOULDER_DEF_PLUS >8)
 			{

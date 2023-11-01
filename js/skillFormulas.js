@@ -6259,7 +6259,10 @@ function CalcSkillDamage()
 			SG_Special_HITnum = w_TotalHits;
 			
 			fixedCastTime *= 2.0;
-			variableCastTime *= /*8.0 */+ 4.0 + 1.0 * n_A_ActiveSkillLV;
+			if(n_A_ActiveSkillLV <= 5)
+				variableCastTime *= 4.0 + (1.0 * n_A_ActiveSkillLV);
+			else
+				variableCastTime *= 9.0;
 			n_Delay[ksDelayGlobal] = 2.0;
 			n_Delay[ksDelayCooldown] = 15.0;
 		}
