@@ -2586,6 +2586,22 @@ function CalcRangedMod()
 	{ // Gale Bow
 		n_tok[bon_DMG_RANGE] += 25;
 	}
+	if ( EquipNumSearch( 2657 ) && n_A_Arrow == arrTyp_FIRE )
+	{ // Elemental Tights + Burning Bow
+		n_tok[bon_DMG_RANGE] += 20;
+	}
+	else if ( EquipNumSearch( 2658 ) && n_A_Arrow == arrTyp_CRYSTAL )
+	{ // Elemental Tights + Freezing Bow
+		n_tok[bon_DMG_RANGE] += 20;
+	}
+	else if ( EquipNumSearch( 2659 ) && n_A_Arrow == arrTyp_STONE )
+	{ // Elemental Tights + Earthen Bow
+		n_tok[bon_DMG_RANGE] += 20;
+	}
+	else if ( EquipNumSearch( 2660 ) && n_A_Arrow == arrTyp_WIND )
+	{ // Elemental Tights + Gale Bow
+		n_tok[bon_DMG_RANGE] += 20;
+	}
 	else if ( EquipNumSearch( 630 ) && n_A_Arrow == arrTyp_STEEL )
 	{ // Orc Archer Bow
 		n_tok[bon_DMG_RANGE] += 50;
@@ -6077,6 +6093,7 @@ function calcCrit( n_A_CRI )
 	return n_A_CRI;
 }
 
+//reworking
 function calcASPD()
 {
 	n_A_ASPD = 0;
@@ -6125,189 +6142,8 @@ function calcASPD()
 	}
 		
 	// % ASPD Mods ---------------------------------------------
-	var aspdMultiplier = 0;
-	var ASPDch = 0; // for some mutual exclusive skills
+	var aspdMultiplier = getSkillASPDMul();
 
-	// Skills
-	if ( SkillSearch( skill_GS_GATLING_FEVER ) )
-	{ // Gatling Fever
-		if ( n_A_WeaponType == weapTyp_GATLING_GUN )
-		{
-			aspdMultiplier += SkillSearch( skill_GS_GATLING_FEVER );
-		}
-	}
-	// if ( ( SkillSearch( skill_AC_INCREASE_AGI ) || acolyteBuffs[ksIncreaseAgi] ) )
-	// {
-		// if ( SkillSearch( skill_AC_INCREASE_AGI ))
-		// {
-			// aspdMultiplier += SkillSearch( skill_AC_INCREASE_AGI );
-		// }
-		// else
-		// {
-			// aspdMultiplier += acolyteBuffs[ksIncreaseAgi] ;
-		// }
-		
-	// }
-	if ( ( SkillSearch( skill_SUR_GENTLE_TOUCH_CHANGE ) || acolyteBuffs[ksPPChange] ) )
-	{ // Suras PP Change ASPD increase: [(Target’s AGI x Skill Level) / 60] %
-		if ( SkillSearch( skill_SUR_GENTLE_TOUCH_CHANGE ) )
-		{
-			var aspdMod = ( ( n_A_AGI * SkillSearch( skill_SUR_GENTLE_TOUCH_CHANGE ) ) / 60.0 );
-			aspdMultiplier += aspdMod;
-		}
-		else
-		{
-			aspdMultiplier += ( ( acolyteBuffs[ksSuraAgility] * acolyteBuffs[ksPPChange] ) / 60.0 );
-		}
-	}
-	if ( performerBuffs[ksWandererSolo] === ksGloomyShynessW && performerBuffs[ksWandererSoloLevel] > 0 )
-	{ // Gloomy Shyness
-		aspdMultiplier -= 15 + 5 * performerBuffs[ksWandererSoloLevel];
-	}
-	else if ( performerBuffs[ksMaestroSolo] === ksGloomyShynessM && performerBuffs[ksMaestroSoloLevel] > 0 )
-	{ // Gloomy Shyness
-		aspdMultiplier -= 15 + 5 * performerBuffs[ksMaestroSoloLevel];
-	}
-	if ( SkillSearch( skill_LK_FRENZY ) )
-	{ // Frenzy
-		aspdMultiplier += 30;
-	}
-	if ( SkillSearch( skill_RG_INTIMIDATE ) )
-	{ // Intimidate
-		aspdMultiplier += SkillSearch( skill_RG_INTIMIDATE );
-	}
-	
-	if ( n_A_WeaponType == weapTyp_BOOK && SkillSearch( skill_SA_STUDY ) )
-	{ // Study
-		aspdMultiplier += Math.floor( ( SkillSearch( skill_SA_STUDY ) ) / 2 );
-	}
-	if ( miscEffects[ksQuagmire] == 0 && miscEffects[ksAgiDown] == 0 )
-	{ // things affected by Quagmire/agi down
-		if ( n_A_WeaponType == 3 && SkillSearch( skill_KN_TWOHAND_QUICKEN ) && SkillSearch(skill_LK_FRENZY) == 0 )
-		{ // Two Handed Quicken
-			aspdMultiplier += 30;
-		}
-		if ( SkillSearch( skill_BS_ADRENALINE_RUSH ) )
-		{ // Own AR
-			if ( weapTyp_AXE <= n_A_WeaponType && n_A_WeaponType<=weapTyp_MACE )
-			{
-				aspdMultiplier += 30;
-			}
-		}
-		else if ( otherBuffs[ksAdrenalineRush] == 1 )
-		{ // PartyAR
-			if ( weapTyp_AXE <= n_A_WeaponType && n_A_WeaponType <= weapTyp_MACE )
-			{
-				aspdMultiplier += 25;
-			}
-		}
-		else if ( otherBuffs[ksAdrenalineRush] == 2 )
-		{ // PartyFAR
-			if ( n_A_WeaponType != weapTyp_BOW && !(weapTyp_HANDGUN <= n_A_WeaponType && n_A_WeaponType <= weapTyp_GRENADE) )
-			{
-				aspdMultiplier += 25;
-			}
-		}
-		else if ( otherBuffs[ksAdrenalineRush] == 3 )
-		{ // AR Scroll
-			if ( weapTyp_AXE <= n_A_WeaponType && n_A_WeaponType<=weapTyp_MACE )
-			{
-				aspdMultiplier += 30;
-			}
-		}
-
-		if ( n_A_WeaponType == weapTyp_SWORD && SkillSearch( skill_KN_ONE_HAND_QUICKEN ) )
-		{ // One Handed Quicken
-			aspdMultiplier += 30;
-			ASPDch = 1;
-		}
-		if ( ASPDch === 0 && ( TimeItemNumSearch( temp_ALCHESET ) || TimeItemNumSearch( temp_NOBLE ) ) )
-		{ // ???
-			aspdMultiplier += 30;
-			ASPDch = 1;
-		}
-		if ( ( n_A_WeaponType == weapTyp_SPEAR || n_A_WeaponType == weapTyp_2HSPEAR ) && SkillSearch( skill_CR_SPEAR_QUICKEN ) )
-		{ // Spear Quicken
-			aspdMultiplier += 30;
-			ASPDch = 1;
-		}
-	}
-	if ( SkillSearch( skill_TKM_SOLAR_LUNAR_AND_STELLAR_SHADOW ) && n_A_JobLV >= 50 )
-	{ // Shadow
-		ASPDch = 1;
-		aspdMultiplier += 3 * SkillSearch( skill_TKM_SOLAR_LUNAR_AND_STELLAR_SHADOW );
-	}
-	if ( SkillSearch( skill_GS_LAST_STAND ) )
-	{ // Last Stand
-		aspdMultiplier += 20;
-	}
-	if ( SkillSearch( skill_GS_SINGLE_ACTION ) )
-	{ // Single Action
-		aspdMultiplier += Math.floor( ( SkillSearch( skill_GS_SINGLE_ACTION ) + 1 ) / 2 );
-	}
-	if ( performerBuffs[ksBardSolo] === ksImpressiveRiff &&
-	     performerBuffs[ksBardSoloLevel] > 0 &&
-	     ASPDch === 0 )
-	{ // Impressive Riff
-		if ( n_A_WeaponType != weapTyp_BOW &&
-		     !( weapTyp_HANDGUN <= n_A_WeaponType && n_A_WeaponType <= weapTyp_GRENADE_LAUNCHER ) )
-		{
-			var skillBonus = performerBuffs[ksBardSoloLevel];
-			/*var musicLessonsBonus = performerBuffs[ksMusicLessons];
-			var agiBonus = Math.floor( performerBuffs[ksBardAgi] / 10 );
-			aspdMultiplier += skillBonus + musicLessonsBonus + agiBonus;*/
-			aspdMultiplier += (skillBonus * 2) -1 + Math.floor(skillBonus / 10);
-		}
-	}
-	if ( n_A_JobSearch2() === cls_CRU && SkillSearch( skill_KN_CAVALIER_MASTERY ) )
-	{ // Cavalier Mastery
-		aspdMultiplier -= ( 5 - SkillSearch( skill_KN_CAVALIER_MASTERY ) ) * 10;
-	}
-	if ( n_A_JobSearch2() === cls_KNI &&
-		 ( SkillSearch( skill_KN_CAVALIER_MASTERY ) || SkillSearch( skill_RUN_DRAGON_TRAINING ) ) )
-	{ // Cavalier or Dragon Mastery
-		if ( SkillSearch( skill_KN_CAVALIER_MASTERY ) )
-		{
-			aspdMultiplier -= ( 5 - SkillSearch( skill_KN_CAVALIER_MASTERY ) ) * 10;
-		}
-		else
-		{
-			aspdMultiplier -= ( 5 - SkillSearch( skill_RUN_DRAGON_TRAINING ) ) * 5;
-		}
-	}
-	if ( SkillSearch( skill_MO_MENTAL_STRENGTH ) )
-	{ // Mental Strength
-		aspdMultiplier -= 25;
-	}
-	if ( SkillSearch( skill_CR_DEFENDING_AURA ) )
-	{ // Defending Aura
-		aspdMultiplier -= ( 25 - SkillSearch( skill_CR_DEFENDING_AURA ) * 5 );
-	}
-	if ( performerBuffs[ksWandererSolo] === ksSwingDance && performerBuffs[ksWandererSoloLevel] > 0 )
-	{ // Swing Dance
-		var skillBonus = performerBuffs[ksWandererSoloLevel] * 5;
-		var voiceLessonsBonus = performerBuffs[ksWandererVoiceLessons];
-
-		aspdMultiplier += skillBonus + voiceLessonsBonus;
-	}
-	if ( performerBuffs[ksChorus] === ksDancesWithWargs &&
-		 performerBuffs[ksChorusLevel] > 0 &&
-		 performerBuffs[ksNumPerformers] >= 2 )
-	{ // Dances with Wargs
-		var skillBonus = 5;
-		var performerBonus = performerBuffs[ksNumPerformers] * 5;
-		
-		if ( performerBonus > 25 )
-		{
-			performerBonus = 25;
-		}
-
-		aspdMultiplier += skillBonus + performerBonus;
-	}
-	// if ( SkillSearch( skill_RUN_FIGHTING_SPIRIT ) )
-	// { // Asir Rune
-		// aspdMultiplier += SkillSearch( skill_RUN_RUNE_MASTERY ) / 10.0 * 4;
-	// }
 		
 // Items
 	if ( usableItems[ksAttackSpeed] || usableItems[ksGuaranaCandy] )
@@ -6331,378 +6167,21 @@ function calcASPD()
 	aspdMultiplier = ( 100 - aspdMultiplier ) / 100.0
 	
 	// Correction ---------------------------------------------
-	var aspdCorrection = 0;
-	if ( n_A_AGI < 205 )
-	{
-		aspdCorrection = ( Math.sqrt( 205 ) - Math.sqrt( n_A_AGI ) ) / 7.15;
-	}
+	var aspdCorrection = getASPDCorrection();
 	
 	// Penalty ------------------------------------------------
-	var aspdPenalty = 0.96;
-	if ( jobASPD > 145 )
-	{
-		aspdPenalty = 1 - ( jobASPD - 144 ) / 50;
-	}
-		
+	var aspdPenalty = getASPDPenalty();
+	
 	// Calculate ASPD -----------------------------------------
 	 n_A_ASPD = ( 200 - ( 200 - ( jobASPD + shieldPenalty - aspdCorrection + statASPD * aspdPenalty ) ) * aspdMultiplier );
 	
 	// Equipment ASPD -----------------------------------------
-	var equipASPD = n_tok[bon_ASPD_MUL];
-	if ( EquipNumSearch( 654 ) )
-	{ // Western Outlaw
-		equipASPD += Math.floor( n_A_AGI / 14 );
-	}
-	if ( EquipNumSearch( 1602 ) )
-	{ // "Mythic Wasteland Outlaw (7 d.)"
-		equipASPD += Math.floor( n_A_AGI / 14 );
-	}
-	if ( n_A_Equip[eq_WEAPON] === 484 && SU_STR >= 50 )
-	{ // Sage's Diary
-		equipASPD += 5;
-	}
-	if ( EquipNumSearch( 624 ) )
-	{ // Hurricane Fury
-		equipASPD += n_A_Weapon_ATKplus;
-	}
-	if ( EquipNumSearch( 641 ) )
-	{ // Book of the Dead
-		equipASPD += n_A_Weapon_ATKplus;
-	}
-	if ( SU_STR >= 77 && EquipNumSearch( 944 ) )
-	{ // Lunar Skillet
-		equipASPD += 4;
-	}
-	if ( n_A_JobSearch2() === cls_KNI && rebirthClass && EquipNumSearch( 855 ) )
-	{ // Tournament Shield System Set
-		equipASPD -= 5;
-	}
-	if ( EquipNumSearch( 1086 ) || EquipNumSearch( 1088 ) )
-	{ // Glorious Morning Star/Cleaver
-		if ( n_A_Weapon_ATKplus >= 6 )
-		{
-			equipASPD += 5;
-		}
-		if ( n_A_Weapon_ATKplus >= 9 )
-		{
-			equipASPD += 5;
-		}
-	}
-	if ( EquipNumSearch( 1081 ) )
-	{ // Glorious Spear
-		if ( n_A_Weapon_ATKplus >= 6 )
-		{
-			equipASPD += 10;
-		}
-	}
-	if ( EquipNumSearch( 1077 ) )
-	{ // Glorious Flamberge
-		if ( n_A_Weapon_ATKplus >= 7 )
-		{
-			equipASPD += 5;
-		}
-		if ( n_A_Weapon_ATKplus >= 9 )
-		{
-			equipASPD += 5;
-		}
-	}
-	if ( SU_STR >= 95 && EquipNumSearch( 621 ) )
-	{ // DoomSlayer
-		equipASPD -= 40;
-	}
-	if ( EquipNumSearch( 903 ) && n_A_JobSearch2() === cls_CRU )
-	{ // Assaulter Spear
-		equipASPD += 20;
-	}
-	if ( SU_STR >= 95 && EquipNumSearch( 1167 ) )
-	{ // Giant Axe
-		equipASPD += 3;
-	}
-	if ( EquipNumSearch( 1121 ) && n_A_JobSearch() === cls_THI )
-	{ // Thief Figurine
-		equipASPD += 3 * EquipNumSearch( 1121 );
-	}
-	if ( EquipNumSearch( 1299 ) && n_A_HEAD_DEF_PLUS >= 7 )
-	{ // Mercury Riser
-		equipASPD += 2;
-		if ( n_A_HEAD_DEF_PLUS >= 9 )
-		{
-			equipASPD += 2;
-		}
-	}
-	if ( EquipNumSearch( 1341 ) && n_A_HEAD_DEF_PLUS >= 7 )
-	{ // Leo Diadem
-		equipASPD += 3;
-	}
-	if ( EquipNumSearch( 1354 ) && n_A_HEAD_DEF_PLUS >= 7 )
-	{ // Sagittarius Crown
-		equipASPD += 2;
-	}
-	if ( EquipNumSearch( 1355 ) && n_A_HEAD_DEF_PLUS >= 8 )
-	{ // Scorpio Crown
-		equipASPD += 2;
-		if ( EquipNumSearch( 1355 ) && n_A_HEAD_DEF_PLUS >= 10 )
-		{ // Scorpio Crown
-			equipASPD += 2;
-		}
-	}
-	if ( EquipNumSearch( 1004 ) || EquipNumSearch( 1006 ) )
-	{ // Rogue's Treasure + Cold Heart/Black Cat
-		equipASPD += Math.floor( n_A_Weapon_ATKplus / 2 );
-	}
-	if ( usableItems[ksCelermineJuice] )
-	{ // Celermine Juice
-		equipASPD += 10;
-	}
-	if ( EquipNumSearch( 1464 ) )
-	{ //Heroic Backpack
-		if (n_A_SHOULDER_DEF_PLUS >= 7 && SU_AGI >= 90) { equipASPD += 8; }
-	}
-	if ( EquipNumSearch( 1584 ) )
-	{ //Golden Angel HAirband
-		if (SU_AGI >= 70) { equipASPD += 2; }
-		if (n_A_HEAD_DEF_PLUS >= 7 && SU_AGI >= 70) { equipASPD += 3; }
-	}
-	if ( EquipNumSearch( 1515 ) )
-	{ //Pegasus Ear Wing
-		if (n_A_BaseLV >= 100) { equipASPD += 1; }
-		if (n_A_BaseLV >= 150) { equipASPD += 1; }
-	}
-	if ( EquipNumSearch( 1553 ) )
-	{//Small poring Band
-		if ( n_A_HEAD_DEF_PLUS >= 3)
-		{
-			equipASPD += 2;
-		}
-		if ( n_A_HEAD_DEF_PLUS >= 6)
-		{
-			equipASPD += 2;
-		}
-		if ( n_A_HEAD_DEF_PLUS >= 9)
-		{
-			equipASPD += 2;
-		}
-	}
-	if ( EquipNumSearch( 1497 ) )
-	{ // UFO Poring Hat
-		if ( n_A_HEAD_DEF_PLUS >= 9 )
-		{
-			equipASPD += 5;
-		}
-	}
-	if(EquipNumSearch(1545))
-	{ //Fallen Angel Wing
-		equipASPD += Math.floor(SU_AGI/20);
-	}
-	if(EquipNumSearch(2029))
-	{ //Supplement Part Agi
-		if(n_A_SHOES_DEF_PLUS >=4)
-			equipASPD += 1;
-	}
-	if(EquipNumSearch(2035))
-	{ //Pile Bunker S
-		equipASPD += Math.floor(n_A_Weapon_ATKplus / 2);
-	}
-	if (EquipNumSearch(2038))
-	{//Armor of Sixtus the Agile
-		equipASPD += 2 * Math.floor(n_A_BODY_DEF_PLUS / 3);
-	}
-	if((EquipNumSearch(2052) || EquipNumSearch(2057) || EquipNumSearch(2061) || EquipNumSearch(2071) ) && n_A_Weapon_ATKplus >= 9) 
-	{//Trident of Undine || Hand of Death || Empyrean || All-Holy Book
-		equipASPD += 10;
-	}
-	if(EquipNumSearch(2058))
-	{//Steel Flower
-		equipASPD += 2 *  Math.floor(n_A_Weapon_ATKplus / 3);
-	}
-	if(EquipNumSearch(2079))
-	{//Crimson Rose
-		equipASPD += 3 *  Math.floor(n_A_Weapon_ATKplus / 3);
-	}
-	if(EquipNumSearch(1942))
-	{ //"General's Helmet"
-		if(n_A_HEAD_DEF_PLUS >=7)
-			equipASPD += 10;
-	}
-	if(EquipNumSearch(2198) || EquipNumSearch(1953))  //Agi Boots
-	{
-		equipASPD += 3 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
-	}
-	if(EquipNumSearch(1947))  //Agi Boots Slot
-	{
-		equipASPD += 2 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
-	}
-	if(EquipNumSearch(2092))
-	{//Revised Encyclopedia + Giant Encyclopedia
-		equipASPD += n_A_LEFT_DEF_PLUS;
-	}
-	if(EquipNumSearch(2131))
-	{//Felrock's Boots
-		if(n_A_SHOES_DEF_PLUS >= 7)
-			equipASPD += 5;
-		if(n_A_SHOES_DEF_PLUS >= 9)
-			equipASPD += 5;
-	}
-	if(EquipNumSearch(2147))
-	{// "Chronocloak of Luck"
-		equipASPD += 5 * Math.floor(n_A_SHOULDER_DEF_PLUS / 4);
-	}
-	if(EquipNumSearch(2160) || //Lindy Hop
-	   EquipNumSearch(2179) )  //Juliette D Rachel
-	{
-		equipASPD += n_A_Weapon_ATKplus;
-	}
-	if(EquipNumSearch(2227) )  // Old Bone Circlet [1]
-	{
-		equipASPD += n_A_HEAD_DEF_PLUS;
-	}
-	if(EquipNumSearch(2229))
-	{// Fallen Warrior Manteau
-		equipASPD += Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
-		if(SU_AGI >= 90)
-			equipASPD += 3;
-	}
-	if(EquipNumSearch(2240))
-	{// Ultralight Magic Shield [1]
-		if(n_A_LEFT_DEF_PLUS >= 7)
-			equipASPD += 2;
-		if(n_A_LEFT_DEF_PLUS >= 9)
-			equipASPD += 3;
-	}
-	if(EquipNumSearch(2251))
-	{//YSF01 Greave
-		if(n_A_SHOES_DEF_PLUS >= 8)
-			equipASPD += 8;
-	}
-	if(EquipNumSearch(2253))
-	{//YSF01 Plate + Greave
-		equipASPD += n_A_SHOES_DEF_PLUS;
-	}
-	if(EquipNumSearch(2414))
-	{//Rebellion's Scarf
-		equipASPD += 2 * SkillSearch(skill_REB_MASS_SPIRAL);
-	}
-	if(n_A_Equip[eq_ACCI] == 2449)
-	{//Demon God's Ring
-		if(n_A_card[card_loc_ACCI] == 641 || n_A_card[card_loc_ACCI] == 642 || n_A_card[card_loc_ACCI] == 643)
-		{
-			equipASPD += 5;
-		}
-	}
-	if(n_A_Equip[eq_ACCII] == 2449)
-	{//Demon God's Ring
-		if(n_A_card[card_loc_ACCII] == 641 || n_A_card[card_loc_ACCII] == 642 || n_A_card[card_loc_ACCII] == 643)
-		{
-			equipASPD += 5;
-		}
-	}
+	var equipASPD = getEquipASPDMul();
+	console.log("getEquipASPDMul() " + getEquipASPDMul());
+
+	//Skill
+	var skillASPD = getSkillASPDMul();
 	
-	// if(EquipNumSearch())
-	// {
-		// equipASPD += ;
-	// }
-	
-//Cards
-	if(CardNumSearch(556))
-	{//Cenere Card
-		equipASPD += 2 * Math.floor(SU_AGI/10);
-	}
-	if(CardNumSearch(589))
-	{//Big Eggring Card
-		if(SU_AGI <=50)
-		{
-			equipASPD -= 2 * Math.floor(SU_AGI/10);
-		}
-		else
-		{
-			equipASPD -= 10;
-		}
-	}
-	if(CardNumSearch(691))
-	{//Gigantes Card
-		if(SU_AGI >= 120)
-			equipASPD += 3 * CardNumSearch(691);
-	}
-	if(CardNumSearch(700))
-	{//GC109 Card
-		if(n_A_BaseLV >= 90)
-			equipASPD += CardNumSearch(700);
-		if(n_A_BaseLV >= 120)
-			equipASPD += CardNumSearch(700);
-	}
-	if(CardNumSearch(770))
-	{//Cutie Card
-		equipASPD += Math.floor(n_A_SHOES_DEF_PLUS / 2);
-	}
-	
-//Shadows
-	if ( EquipNumSearch( 1747 ) )// "Shadow Sage Armor"
-	{ 
-		if(SkillSearch(skill_SA_HINDSIGHT))
-		{
-			equipASPD += n_A_SHADOW_BODY_DEF_PLUS;
-		}
-	}	
-	if ( EquipNumSearch( 1755 ) || EquipNumSearch( 1758 ))// "Shadow Bard Set" or "Shadow Dancer Set"
-	{ 
-		if(SkillSearch(skill_BD_AMP))
-		{
-			equipASPD += 50;
-		}
-	}
-	if ( EquipNumSearch( 1713 ) )
-	{ // "Shadow Swordsman Ring"
-		if(n_A_SHADOW_EARRING_DEF_PLUS >= 7)
-		{
-			equipASPD += 2;
-		}
-	}
-	if( (EquipNumSearch( 1809 ) &&  SkillSearch(skill_RUN_ENCHANT_BLADE) ) ||// Shadow Runeknight Shield
-		(EquipNumSearch( 1816 ) &&  SkillSearch(skill_SHA_AUTO_SHADOW_SPELL) ) ||//Shadow Shadowchaser Shield
-		EquipNumSearch( 1824 ) ) //Shadow Super Novice Shield
-	{
-		equipASPD += n_A_SHADOW_SHIELD_DEF_PLUS;
-	}
-	if( EquipNumSearch( 1824 ) ) //Shadow Super Novice Shield
-	{
-		if(n_A_SHADOW_SHIELD_DEF_PLUS >= 9){ equipASPD += SkillSearch(skill_TH_DOUBLE_ATTACK);}
-	}
-	// if ( SkillSearch( skill_RUN_FIGHTING_SPIRIT ) )
-	// { // Asir Rune
-		// equipASPD += SkillSearch( skill_RUN_RUNE_MASTERY ) / 10.0 * 4;
-	// }
-	
-//Enchants
-	if(EnchNumSearch( 5246 ))
-	{//Modification Orb (Speed)
-		if(n_A_SHOULDER_DEF_PLUS >= 7)
-			equipASPD += 3 * EnchNumSearch( 5246 );
-		if(n_A_SHOULDER_DEF_PLUS >= 9)
-			equipASPD += 3 * EnchNumSearch( 5246 );
-	}
-	
-//Skill
-	if ( ( SkillSearch( skill_AC_INCREASE_AGI ) || acolyteBuffs[ksIncreaseAgi] ) )
-	{ // INCREASE AGI
-		if ( SkillSearch( skill_AC_INCREASE_AGI ))
-		{
-			equipASPD += SkillSearch( skill_AC_INCREASE_AGI );
-		}
-		else
-		{
-			equipASPD += acolyteBuffs[ksIncreaseAgi] ;
-		}
-		
-	}
-	if ( n_A_WeaponType == 3 && SkillSearch( skill_KN_TWOHAND_QUICKEN ) )
-		{ // Two Handed Quicken
-			equipASPD += 10;
-		}
-	
-	if ( SkillSearch( skill_RUN_FIGHTING_SPIRIT ) )
-	{ // Asir Rune
-		n_A_ASPD += SkillSearch( skill_RUN_RUNE_MASTERY ) / 10.0 * 4;
-	} 
 	equipASPD = equipASPD / 100.0 ;
 	percentAspdEquipment = (195 - n_A_ASPD) * equipASPD;
 	n_A_ASPD += percentAspdEquipment;
@@ -6830,6 +6309,40 @@ function calcASPD()
 		if(n_A_SHOES_DEF_PLUS >= 11)
 			flatASPD += 1;
 	}
+	
+	if ( EquipNumSearch( 2657 ) && n_A_Arrow == arrTyp_FIRE )
+	{ // Elemental Tights + Burning Bow
+		flatASPD += 1;
+	}
+	else if ( EquipNumSearch( 2658 ) && n_A_Arrow == arrTyp_CRYSTAL )
+	{ // Elemental Tights + Freezing Bow
+		flatASPD += 1;
+	}
+	else if ( EquipNumSearch( 2659 ) && n_A_Arrow == arrTyp_STONE )
+	{ // Elemental Tights + Earthen Bow
+		flatASPD += 1;
+	}
+	else if ( EquipNumSearch( 2660 ) && n_A_Arrow == arrTyp_WIND )
+	{ // Elemental Tights + Gale Bow
+		flatASPD += 1;
+	}
+	
+	if ( EquipNumSearch( 2662 ) && n_A_Arrow == arrTyp_FIRE )
+	{ // Elemental Tights + Burning Bow
+		flatASPD += 1;
+	}
+	else if ( EquipNumSearch( 2663 ) && n_A_Arrow == arrTyp_CRYSTAL )
+	{ // Elemental Tights + Freezing Bow
+		flatASPD += 1;
+	}
+	else if ( EquipNumSearch( 2664 ) && n_A_Arrow == arrTyp_STONE )
+	{ // Elemental Tights + Earthen Bow
+		flatASPD += 1;
+	}
+	else if ( EquipNumSearch( 2665 ) && n_A_Arrow == arrTyp_WIND )
+	{ // Elemental Tights + Gale Bow
+		flatASPD += 1;
+	}
 	// if(EquipNumSearch())
 	// {
 	// }
@@ -6898,7 +6411,7 @@ function calcASPD()
 	{
 		flatASPD += 1;
 	}
-	n_A_ASPD += flatASPD;
+	n_A_ASPD += flatASPD + getSkillASPDFlat();
 
 	// Cap to limits ------------------------------------------
 	if ( thirdClass === 1 || n_A_JOB == cls_KAGOB || n_A_JOB == cls_ENOVI || n_A_JOB == cls_REB)
@@ -6911,6 +6424,582 @@ function calcASPD()
 	}
 	
 	return n_A_ASPD.toFixed(2);
+}
+
+
+
+function getASPDPenalty()
+{
+	let jobBaseASPD = ItemAspd[n_A_JOB][n_A_WeaponType + 1]; // BaseASPD
+	let ASPDPenalty = 0.96;
+	
+	if ( jobBaseASPD > 145 )
+		ASPDPenalty = 1 - (jobBaseASPD - 144) / 50;
+	
+	return ASPDPenalty;
+}
+
+function getASPDCorrection()
+{
+	let ASPDCorrection = 0;
+	if ( n_A_AGI < 205 )
+		ASPDCorrection = ( Math.sqrt( 205 ) - Math.sqrt( n_A_AGI ) ) / 7.15;
+	
+	return ASPDCorrection;	
+}
+
+function getEquipASPDMul()
+{
+	let equipASPDMul = n_tok[bon_ASPD_MUL];
+	
+	// var equipASPD = ;
+	if ( EquipNumSearch( 654 ) )
+	{ // Western Outlaw
+		equipASPDMul += Math.floor( n_A_AGI / 14 );
+	}
+	if ( EquipNumSearch( 1602 ) )
+	{ // "Mythic Wasteland Outlaw (7 d.)"
+		equipASPDMul += Math.floor( n_A_AGI / 14 );
+	}
+	if ( n_A_Equip[eq_WEAPON] === 484 && SU_STR >= 50 )
+	{ // Sage's Diary
+		equipASPDMul += 5;
+	}
+	if ( EquipNumSearch( 624 ) )
+	{ // Hurricane Fury
+		equipASPDMul += n_A_Weapon_ATKplus;
+	}
+	if ( EquipNumSearch( 641 ) )
+	{ // Book of the Dead
+		equipASPDMul += n_A_Weapon_ATKplus;
+	}
+	if ( SU_STR >= 77 && EquipNumSearch( 944 ) )
+	{ // Lunar Skillet
+		equipASPDMul += 4;
+	}
+	if ( n_A_JobSearch2() === cls_KNI && rebirthClass && EquipNumSearch( 855 ) )
+	{ // Tournament Shield System Set
+		equipASPDMul -= 5;
+	}
+	if ( EquipNumSearch( 1086 ) || EquipNumSearch( 1088 ) )
+	{ // Glorious Morning Star/Cleaver
+		if ( n_A_Weapon_ATKplus >= 6 )
+		{
+			equipASPDMul += 5;
+		}
+		if ( n_A_Weapon_ATKplus >= 9 )
+		{
+			equipASPDMul += 5;
+		}
+	}
+	if ( EquipNumSearch( 1081 ) )
+	{ // Glorious Spear
+		if ( n_A_Weapon_ATKplus >= 6 )
+		{
+			equipASPDMul += 10;
+		}
+	}
+	if ( EquipNumSearch( 1077 ) )
+	{ // Glorious Flamberge
+		if ( n_A_Weapon_ATKplus >= 7 )
+		{
+			equipASPDMul += 5;
+		}
+		if ( n_A_Weapon_ATKplus >= 9 )
+		{
+			equipASPDMul += 5;
+		}
+	}
+	if ( SU_STR >= 95 && EquipNumSearch( 621 ) )
+	{ // DoomSlayer
+		equipASPDMul -= 40;
+	}
+	if ( EquipNumSearch( 903 ) && n_A_JobSearch2() === cls_CRU )
+	{ // Assaulter Spear
+		equipASPDMul += 20;
+	}
+	if ( SU_STR >= 95 && EquipNumSearch( 1167 ) )
+	{ // Giant Axe
+		equipASPDMul += 3;
+	}
+	if ( EquipNumSearch( 1121 ) && n_A_JobSearch() === cls_THI )
+	{ // Thief Figurine
+		equipASPDMul += 3 * EquipNumSearch( 1121 );
+	}
+	if ( EquipNumSearch( 1299 ) && n_A_HEAD_DEF_PLUS >= 7 )
+	{ // Mercury Riser
+		equipASPDMul += 2;
+		if ( n_A_HEAD_DEF_PLUS >= 9 )
+		{
+			equipASPDMul += 2;
+		}
+	}
+	if ( EquipNumSearch( 1341 ) && n_A_HEAD_DEF_PLUS >= 7 )
+	{ // Leo Diadem
+		equipASPDMul += 3;
+	}
+	if ( EquipNumSearch( 1354 ) && n_A_HEAD_DEF_PLUS >= 7 )
+	{ // Sagittarius Crown
+		equipASPDMul += 2;
+	}
+	if ( EquipNumSearch( 1355 ) && n_A_HEAD_DEF_PLUS >= 8 )
+	{ // Scorpio Crown
+		equipASPDMul += 2;
+		if ( EquipNumSearch( 1355 ) && n_A_HEAD_DEF_PLUS >= 10 )
+		{ // Scorpio Crown
+			equipASPDMul += 2;
+		}
+	}
+	if ( EquipNumSearch( 1004 ) || EquipNumSearch( 1006 ) )
+	{ // Rogue's Treasure + Cold Heart/Black Cat
+		equipASPDMul += Math.floor( n_A_Weapon_ATKplus / 2 );
+	}
+	if ( usableItems[ksCelermineJuice] )
+	{ // Celermine Juice
+		equipASPDMul += 10;
+	}
+	if ( EquipNumSearch( 1464 ) )
+	{ //Heroic Backpack
+		if (n_A_SHOULDER_DEF_PLUS >= 7 && SU_AGI >= 90) { equipASPDMul += 8; }
+	}
+	if ( EquipNumSearch( 1584 ) )
+	{ //Golden Angel HAirband
+		if (SU_AGI >= 70) { equipASPDMul += 2; }
+		if (n_A_HEAD_DEF_PLUS >= 7 && SU_AGI >= 70) { equipASPDMul += 3; }
+	}
+	if ( EquipNumSearch( 1515 ) )
+	{ //Pegasus Ear Wing
+		if (n_A_BaseLV >= 100) { equipASPDMul += 1; }
+		if (n_A_BaseLV >= 150) { equipASPDMul += 1; }
+	}
+	if ( EquipNumSearch( 1553 ) )
+	{//Small poring Band
+		if ( n_A_HEAD_DEF_PLUS >= 3)
+		{
+			equipASPDMul += 2;
+		}
+		if ( n_A_HEAD_DEF_PLUS >= 6)
+		{
+			equipASPDMul += 2;
+		}
+		if ( n_A_HEAD_DEF_PLUS >= 9)
+		{
+			equipASPDMul += 2;
+		}
+	}
+	if ( EquipNumSearch( 1497 ) )
+	{ // UFO Poring Hat
+		if ( n_A_HEAD_DEF_PLUS >= 9 )
+		{
+			equipASPDMul += 5;
+		}
+	}
+	if(EquipNumSearch(1545))
+	{ //Fallen Angel Wing
+		equipASPDMul += Math.floor(SU_AGI/20);
+	}
+	if(EquipNumSearch(2029))
+	{ //Supplement Part Agi
+		if(n_A_SHOES_DEF_PLUS >=4)
+			equipASPDMul += 1;
+	}
+	if(EquipNumSearch(2035))
+	{ //Pile Bunker S
+		equipASPDMul += Math.floor(n_A_Weapon_ATKplus / 2);
+	}
+	if (EquipNumSearch(2038))
+	{//Armor of Sixtus the Agile
+		equipASPDMul += 2 * Math.floor(n_A_BODY_DEF_PLUS / 3);
+	}
+	if((EquipNumSearch(2052) || EquipNumSearch(2057) || EquipNumSearch(2061) || EquipNumSearch(2071) ) && n_A_Weapon_ATKplus >= 9) 
+	{//Trident of Undine || Hand of Death || Empyrean || All-Holy Book
+		equipASPDMul += 10;
+	}
+	if(EquipNumSearch(2058))
+	{//Steel Flower
+		equipASPDMul += 2 *  Math.floor(n_A_Weapon_ATKplus / 3);
+	}
+	if(EquipNumSearch(2079))
+	{//Crimson Rose
+		equipASPDMul += 3 *  Math.floor(n_A_Weapon_ATKplus / 3);
+	}
+	if(EquipNumSearch(1942))
+	{ //"General's Helmet"
+		if(n_A_HEAD_DEF_PLUS >=7)
+			equipASPDMul += 10;
+	}
+	if(EquipNumSearch(2198) || EquipNumSearch(1953))  //Agi Boots
+	{
+		equipASPDMul += 3 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
+	}
+	if(EquipNumSearch(1947))  //Agi Boots Slot
+	{
+		equipASPDMul += 2 * Math.floor(n_A_SHOES_DEF_PLUS / 3);
+	}
+	if(EquipNumSearch(2092))
+	{//Revised Encyclopedia + Giant Encyclopedia
+		equipASPDMul += n_A_LEFT_DEF_PLUS;
+	}
+	if(EquipNumSearch(2131))
+	{//Felrock's Boots
+		if(n_A_SHOES_DEF_PLUS >= 7)
+			equipASPDMul += 5;
+		if(n_A_SHOES_DEF_PLUS >= 9)
+			equipASPDMul += 5;
+	}
+	if(EquipNumSearch(2147))
+	{// "Chronocloak of Luck"
+		equipASPDMul += 5 * Math.floor(n_A_SHOULDER_DEF_PLUS / 4);
+	}
+	if(EquipNumSearch(2160) || //Lindy Hop
+	   EquipNumSearch(2179) )  //Juliette D Rachel
+	{
+		equipASPDMul += n_A_Weapon_ATKplus;
+	}
+	if(EquipNumSearch(2227) )  // Old Bone Circlet [1]
+	{
+		equipASPDMul += n_A_HEAD_DEF_PLUS;
+	}
+	if(EquipNumSearch(2229))
+	{// Fallen Warrior Manteau
+		equipASPDMul += Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
+		if(SU_AGI >= 90)
+			equipASPDMul += 3;
+	}
+	if(EquipNumSearch(2240))
+	{// Ultralight Magic Shield [1]
+		if(n_A_LEFT_DEF_PLUS >= 7)
+			equipASPDMul += 2;
+		if(n_A_LEFT_DEF_PLUS >= 9)
+			equipASPDMul += 3;
+	}
+	if(EquipNumSearch(2251))
+	{//YSF01 Greave
+		if(n_A_SHOES_DEF_PLUS >= 8)
+			equipASPDMul += 8;
+	}
+	if(EquipNumSearch(2253))
+	{//YSF01 Plate + Greave
+		equipASPDMul += n_A_SHOES_DEF_PLUS;
+	}
+	if(EquipNumSearch(2414))
+	{//Rebellion's Scarf
+		equipASPDMul += 2 * SkillSearch(skill_REB_MASS_SPIRAL);
+	}
+	if(n_A_Equip[eq_ACCI] == 2449)
+	{//Demon God's Ring
+		if(n_A_card[card_loc_ACCI] == 641 || n_A_card[card_loc_ACCI] == 642 || n_A_card[card_loc_ACCI] == 643)
+		{
+			equipASPDMul += 5;
+		}
+	}
+	if(n_A_Equip[eq_ACCII] == 2449)
+	{//Demon God's Ring
+		if(n_A_card[card_loc_ACCII] == 641 || n_A_card[card_loc_ACCII] == 642 || n_A_card[card_loc_ACCII] == 643)
+		{
+			equipASPDMul += 5;
+		}
+	}
+	
+	// if(EquipNumSearch())
+	// {
+		// equipASPDMul += ;
+	// }
+	
+//Cards
+	if(CardNumSearch(556))
+	{//Cenere Card
+		equipASPDMul += 2 * Math.floor(SU_AGI/10);
+	}
+	if(CardNumSearch(589))
+	{//Big Eggring Card
+		if(SU_AGI <=50)
+		{
+			equipASPDMul -= 2 * Math.floor(SU_AGI/10);
+		}
+		else
+		{
+			equipASPDMul -= 10;
+		}
+	}
+	if(CardNumSearch(691))
+	{//Gigantes Card
+		if(SU_AGI >= 120)
+			equipASPDMul += 3 * CardNumSearch(691);
+	}
+	if(CardNumSearch(700))
+	{//GC109 Card
+		if(n_A_BaseLV >= 90)
+			equipASPDMul += CardNumSearch(700);
+		if(n_A_BaseLV >= 120)
+			equipASPDMul += CardNumSearch(700);
+	}
+	if(CardNumSearch(770))
+	{//Cutie Card
+		equipASPDMul += Math.floor(n_A_SHOES_DEF_PLUS / 2);
+	}
+	
+//Shadows
+	if ( EquipNumSearch( 1747 ) )// "Shadow Sage Armor"
+	{ 
+		if(SkillSearch(skill_SA_HINDSIGHT))
+		{
+			equipASPDMul += n_A_SHADOW_BODY_DEF_PLUS;
+		}
+	}	
+	if ( EquipNumSearch( 1755 ) || EquipNumSearch( 1758 ))// "Shadow Bard Set" or "Shadow Dancer Set"
+	{ 
+		if(SkillSearch(skill_BD_AMP))
+		{
+			equipASPDMul += 50;
+		}
+	}
+	if ( EquipNumSearch( 1713 ) )
+	{ // "Shadow Swordsman Ring"
+		if(n_A_SHADOW_EARRING_DEF_PLUS >= 7)
+		{
+			equipASPDMul += 2;
+		}
+	}
+	if( (EquipNumSearch( 1809 ) &&  SkillSearch(skill_RUN_ENCHANT_BLADE) ) ||// Shadow Runeknight Shield
+		(EquipNumSearch( 1816 ) &&  SkillSearch(skill_SHA_AUTO_SHADOW_SPELL) ) ||//Shadow Shadowchaser Shield
+		EquipNumSearch( 1824 ) ) //Shadow Super Novice Shield
+	{
+		equipASPDMul += n_A_SHADOW_SHIELD_DEF_PLUS;
+	}
+	if( EquipNumSearch( 1824 ) ) //Shadow Super Novice Shield
+	{
+		if(n_A_SHADOW_SHIELD_DEF_PLUS >= 9){ equipASPDMul += SkillSearch(skill_TH_DOUBLE_ATTACK);}
+	}
+	// if ( SkillSearch( skill_RUN_FIGHTING_SPIRIT ) )
+	// { // Asir Rune
+		// equipASPDMul += SkillSearch( skill_RUN_RUNE_MASTERY ) / 10.0 * 4;
+	// }
+	
+//Enchants
+	if(EnchNumSearch( 5246 ))
+	{//Modification Orb (Speed)
+		if(n_A_SHOULDER_DEF_PLUS >= 7)
+			equipASPDMul += 3 * EnchNumSearch( 5246 );
+		if(n_A_SHOULDER_DEF_PLUS >= 9)
+			equipASPDMul += 3 * EnchNumSearch( 5246 );
+	}
+	
+//Skill
+//some skills give equipASPD
+	
+	if ( ( SkillSearch( skill_AC_INCREASE_AGI ) || acolyteBuffs[ksIncreaseAgi] ) )
+	{ // INCREASE AGI
+		if ( SkillSearch( skill_AC_INCREASE_AGI ))
+			equipASPDMul += SkillSearch( skill_AC_INCREASE_AGI );
+		else
+			equipASPDMul += acolyteBuffs[ksIncreaseAgi] ;
+		
+	}
+	
+	// Two Handed Quicken
+	if ( n_A_WeaponType == 3 && SkillSearch( skill_KN_TWOHAND_QUICKEN ) )
+		skillASPDMul += 10;
+	
+	return equipASPDMul;
+}
+
+function getEquipASPDFlat()
+{
+	let equipASPDFlat = 0;
+	
+	return equipASPDFlat;
+}
+
+function getSkillASPDMul()
+{
+	let skillASPDMul = 0;
+	let ASPDch = 0; // for some mutual exclusive skills
+
+	// Skills
+	if ( SkillSearch( skill_GS_GATLING_FEVER ) )
+	{ // Gatling Fever
+		if ( n_A_WeaponType == weapTyp_GATLING_GUN )
+		{
+			skillASPDMul += SkillSearch( skill_GS_GATLING_FEVER );
+		}
+	}
+
+	if ( ( SkillSearch( skill_SUR_GENTLE_TOUCH_CHANGE ) || acolyteBuffs[ksPPChange] ) )
+	{ // Suras PP Change ASPD increase: [(Target’s AGI x Skill Level) / 60] %
+		if ( SkillSearch( skill_SUR_GENTLE_TOUCH_CHANGE ) )
+		{
+			var aspdMod = ( ( n_A_AGI * SkillSearch( skill_SUR_GENTLE_TOUCH_CHANGE ) ) / 60.0 );
+			skillASPDMul += aspdMod;
+		}
+		else
+		{
+			skillASPDMul += ( ( acolyteBuffs[ksSuraAgility] * acolyteBuffs[ksPPChange] ) / 60.0 );
+		}
+	}
+	if ( performerBuffs[ksWandererSolo] === ksGloomyShynessW && performerBuffs[ksWandererSoloLevel] > 0 )
+	{ // Gloomy Shyness
+		skillASPDMul -= 15 + 5 * performerBuffs[ksWandererSoloLevel];
+	}
+	else if ( performerBuffs[ksMaestroSolo] === ksGloomyShynessM && performerBuffs[ksMaestroSoloLevel] > 0 )
+	{ // Gloomy Shyness
+		skillASPDMul -= 15 + 5 * performerBuffs[ksMaestroSoloLevel];
+	}
+	if ( SkillSearch( skill_LK_FRENZY ) )
+	{ // Frenzy
+		skillASPDMul += 30;
+	}
+	if ( SkillSearch( skill_RG_INTIMIDATE ) )
+	{ // Intimidate
+		skillASPDMul += SkillSearch( skill_RG_INTIMIDATE );
+	}
+	
+	if ( n_A_WeaponType == weapTyp_BOOK && SkillSearch( skill_SA_STUDY ) )
+	{ // Study
+		skillASPDMul += Math.floor( ( SkillSearch( skill_SA_STUDY ) ) / 2 );
+	}
+	if ( miscEffects[ksQuagmire] == 0 && miscEffects[ksAgiDown] == 0 )
+	{ // things affected by Quagmire/agi down
+		if ( n_A_WeaponType == 3 && SkillSearch( skill_KN_TWOHAND_QUICKEN ) && SkillSearch(skill_LK_FRENZY) == 0 )
+		{ // Two Handed Quicken
+			skillASPDMul += 30;
+		}
+		if ( SkillSearch( skill_BS_ADRENALINE_RUSH ) )
+		{ // Own AR
+			if ( weapTyp_AXE <= n_A_WeaponType && n_A_WeaponType<=weapTyp_MACE )
+			{
+				skillASPDMul += 30;
+			}
+		}
+		else if ( otherBuffs[ksAdrenalineRush] == 1 )
+		{ // PartyAR
+			if ( weapTyp_AXE <= n_A_WeaponType && n_A_WeaponType <= weapTyp_MACE )
+			{
+				skillASPDMul += 25;
+			}
+		}
+		else if ( otherBuffs[ksAdrenalineRush] == 2 )
+		{ // PartyFAR
+			if ( n_A_WeaponType != weapTyp_BOW && !(weapTyp_HANDGUN <= n_A_WeaponType && n_A_WeaponType <= weapTyp_GRENADE) )
+			{
+				skillASPDMul += 25;
+			}
+		}
+		else if ( otherBuffs[ksAdrenalineRush] == 3 )
+		{ // AR Scroll
+			if ( weapTyp_AXE <= n_A_WeaponType && n_A_WeaponType<=weapTyp_MACE )
+			{
+				skillASPDMul += 30;
+			}
+		}
+
+		if ( n_A_WeaponType == weapTyp_SWORD && SkillSearch( skill_KN_ONE_HAND_QUICKEN ) )
+		{ // One Handed Quicken
+			skillASPDMul += 30;
+			ASPDch = 1;
+		}
+		if ( ASPDch === 0 && ( TimeItemNumSearch( temp_ALCHESET ) || TimeItemNumSearch( temp_NOBLE ) ) )
+		{ // ???
+			skillASPDMul += 30;
+			ASPDch = 1;
+		}
+		if ( ( n_A_WeaponType == weapTyp_SPEAR || n_A_WeaponType == weapTyp_2HSPEAR ) && SkillSearch( skill_CR_SPEAR_QUICKEN ) )
+		{ // Spear Quicken
+			skillASPDMul += 30;
+			ASPDch = 1;
+		}
+	}
+	if ( SkillSearch( skill_TKM_SOLAR_LUNAR_AND_STELLAR_SHADOW ) && n_A_JobLV >= 50 )
+	{ // Shadow
+		ASPDch = 1;
+		skillASPDMul += 3 * SkillSearch( skill_TKM_SOLAR_LUNAR_AND_STELLAR_SHADOW );
+	}
+	if ( SkillSearch( skill_GS_LAST_STAND ) )
+	{ // Last Stand
+		skillASPDMul += 20;
+	}
+	if ( SkillSearch( skill_GS_SINGLE_ACTION ) )
+	{ // Single Action
+		skillASPDMul += Math.floor( ( SkillSearch( skill_GS_SINGLE_ACTION ) + 1 ) / 2 );
+	}
+	if ( performerBuffs[ksBardSolo] === ksImpressiveRiff &&
+	     performerBuffs[ksBardSoloLevel] > 0 &&
+	     ASPDch === 0 )
+	{ // Impressive Riff
+		if ( n_A_WeaponType != weapTyp_BOW &&
+		     !( weapTyp_HANDGUN <= n_A_WeaponType && n_A_WeaponType <= weapTyp_GRENADE_LAUNCHER ) )
+		{
+			var skillBonus = performerBuffs[ksBardSoloLevel];
+			/*var musicLessonsBonus = performerBuffs[ksMusicLessons];
+			var agiBonus = Math.floor( performerBuffs[ksBardAgi] / 10 );
+			skillASPDMul += skillBonus + musicLessonsBonus + agiBonus;*/
+			skillASPDMul += (skillBonus * 2) -1 + Math.floor(skillBonus / 10);
+		}
+	}
+	if ( n_A_JobSearch2() === cls_CRU && SkillSearch( skill_KN_CAVALIER_MASTERY ) )
+	{ // Cavalier Mastery
+		skillASPDMul -= ( 5 - SkillSearch( skill_KN_CAVALIER_MASTERY ) ) * 10;
+	}
+	if ( n_A_JobSearch2() === cls_KNI &&
+		 ( SkillSearch( skill_KN_CAVALIER_MASTERY ) || SkillSearch( skill_RUN_DRAGON_TRAINING ) ) )
+	{ // Cavalier or Dragon Mastery
+		if ( SkillSearch( skill_KN_CAVALIER_MASTERY ) )
+		{
+			skillASPDMul -= ( 5 - SkillSearch( skill_KN_CAVALIER_MASTERY ) ) * 10;
+		}
+		else
+		{
+			skillASPDMul -= ( 5 - SkillSearch( skill_RUN_DRAGON_TRAINING ) ) * 5;
+		}
+	}
+	if ( SkillSearch( skill_MO_MENTAL_STRENGTH ) )
+	{ // Mental Strength
+		skillASPDMul -= 25;
+	}
+	if ( SkillSearch( skill_CR_DEFENDING_AURA ) )
+	{ // Defending Aura
+		skillASPDMul -= ( 25 - SkillSearch( skill_CR_DEFENDING_AURA ) * 5 );
+	}
+	if ( performerBuffs[ksWandererSolo] === ksSwingDance && performerBuffs[ksWandererSoloLevel] > 0 )
+	{ // Swing Dance
+		var skillBonus = performerBuffs[ksWandererSoloLevel] * 5;
+		var voiceLessonsBonus = performerBuffs[ksWandererVoiceLessons];
+
+		skillASPDMul += skillBonus + voiceLessonsBonus;
+	}
+	if ( performerBuffs[ksChorus] === ksDancesWithWargs &&
+		 performerBuffs[ksChorusLevel] > 0 &&
+		 performerBuffs[ksNumPerformers] >= 2 )
+	{ // Dances with Wargs
+		var skillBonus = 5;
+		var performerBonus = performerBuffs[ksNumPerformers] * 5;
+		
+		if ( performerBonus > 25 )
+		{
+			performerBonus = 25;
+		}
+
+		skillASPDMul += skillBonus + performerBonus;
+	}
+	// if ( SkillSearch( skill_RUN_FIGHTING_SPIRIT ) )
+	// { // Asir Rune
+		// skillASPDMul += SkillSearch( skill_RUN_RUNE_MASTERY ) / 10.0 * 4;
+	// }
+	
+	return skillASPDMul;
+}
+
+function getSkillASPDFlat()
+{
+	let skillASPDFlat = 0;
+	
+		
+	if ( SkillSearch( skill_RUN_FIGHTING_SPIRIT ) )
+	{ // Asir Rune
+		skillASPDFlat += SkillSearch( skill_RUN_RUNE_MASTERY ) / 10.0 * 4;
+	} 
+	
+	return skillASPDFlat;
 }
 
 // reset variable cast
@@ -7098,6 +7187,14 @@ function CalcVariableCast()
 			VCT -= 5;
 		}
 	}
+	
+	if ( (EquipNumSearch( 2642 ) ) )
+	{// Mechanical Plant Hat
+		if(CardNumSearch(339))//Tower Keeper Card
+		{
+			VCT -= 10;
+		}
+	}
 //Enchants
 	if(EnchNumSearch( 5247 ))
 	{//Modification Orb (Caster)
@@ -7169,6 +7266,7 @@ function CalcVariableCast()
 			VCT -= 2;
 		}
 	}
+	
 	
 	
 	
@@ -7883,7 +7981,10 @@ function calcRaceElementalReduction()
 	{//Seraphim Robe
 		n_tok[bon_RED_ELE_HOLY] -= SkillSearch(skill_CR_FAITH) * 3;
 	}
-
+	if ( EquipNumSearch( 2657 ) && n_A_Arrow == arrTyp_FIRE )
+	{ // Elemental Tights + Burning Bow
+		n_tok[bon_RED_ELE_FIRE] -= 10;
+	}
 //Shadows
 	if ( EquipNumSearch( 1672 ) )
 	{ // "Shadow Dragonslayer Shield"

@@ -1006,6 +1006,8 @@ function SetCard()
 ,[899,   card_com_SHOES,"Ominous Freezer","",bon_HP_MUL,10,bon_STR,2,"blvl_hi",160,bon_DMG_SKILL + skill_RUN_HUNDRED_SPEAR,10,"blvl_hi",160,bon_DMG_SKILL + skill_ROY_OVERBRAND,10,"ref_lvl",9,bon_DMG_SKILL + skill_RUN_HUNDRED_SPEAR,10,"ref_lvl",9,bon_DMG_SKILL + skill_ROY_OVERBRAND,10,0]
 ,[900,   card_com_SHIELD,"Ominous Turtle General","",bon_DEF,50,bon_MDEF,5,bon_RED_SIZ_SMALL,25,bon_RED_SIZ_MEDIUM,25,bon_RED_SIZ_LARGE,25,0]
 ,[901,   itm_type_SET,"Turtle General + Ominous Turtle General","",bon_HIT,25,bon_RED_SIZ_SMALL,5,bon_RED_SIZ_MEDIUM,5,bon_RED_SIZ_LARGE,5,bon_DMG_SIZ_SMALL,20,bon_DMG_SIZ_MEDIUM,20,bon_DMG_SIZ_LARGE,20,0]
+//
+,[902,   card_comp_HEAD,"Weakened Fenrir","",bon_MATK,25,0]
 ];
 
 CardNum = cardOBJ.length -1;

@@ -2747,15 +2747,45 @@
 ,[2639,itm_type_HEAD_UPPER,207,10,0,1,20,100,0,0,0,0,bon_DMG_SKILL + skill_RUN_SONIC_WAVE,50,bon_DMG_SKILL + skill_RUN_WIND_CUTTER,50,"ref_lvl",9,bon_DMG_SKILL + skill_RUN_IGNITION_BREAK,30,bon_NONE]//Black Ribbon
 ,[2640,itm_type_HEAD_UPPER,0,0,0,1,70,90,0,0,0,0,bon_HP_MUL,5,bon_SP_MUL,5,bon_DMG_SKILL + skill_RUN_DRAGON_BREATH,15,bon_DMG_SKILL + skill_RUN_DRAGON_BREATH_WATER,15,"ref_lvl",6,bon_DMG_SKILL + skill_RUN_DRAGON_BREATH,15,"ref_lvl",6,bon_DMG_SKILL + skill_RUN_DRAGON_BREATH_WATER,15,"ref_lvl",8,bon_DMG_SKILL + skill_RUN_DRAGON_BREATH,15,"ref_lvl",8,bon_DMG_SKILL + skill_RUN_DRAGON_BREATH_WATER,15,bon_NONE]//Red Baby Dragon Hat
 ,[2641,itm_type_ACCESSORY,0,0,0,1,50,100,0,0,0,0,bon_STR,5,bon_AGI,5,bon_VIT,5,bon_SKILL_ENABLE,75,"ev_blvl",1,bon_DMG_SKILL + skill_SW_BASH,1,"ev_blvl",5,bon_DMG_SKILL + skill_KN_BOWLING_BASH,3,bon_NONE]//Toy Ring
-// ,[2642,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2643,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2644,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2645,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2646,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2647,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2648,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2649,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2650,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+,[2642,itm_type_HEAD_UPPER,0,10,0,1,50,45,0,0,0,0,bon_DEX,2,bon_MDEF,7,bon_DMG_SKILL + skill_GEN_SPORE_EXPLOSION,5,"ev_ref",2,bon_DMG_SKILL + skill_GEN_SPORE_EXPLOSION,5,bon_NONE]//Mechanical Plant Hat
+,[2643,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"ev_head_ref",1,bon_DMG_SKILL + skill_GEN_SPORE_EXPLOSION,5,bon_NONE]//Mechanical Plant Hat + Bio Protector
+,[2644,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RED_CASTDELAY,5,bon_NONE]//Mechanical Plant Hat + Pipe
+,[2645,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE]//Mechanical Plant Hat + Bio Protector + Pipe
+,[2646,itm_type_HEAD_UPPER,1,4,0,1,20,20,0,0,0,0,bon_DMG_RC_BRUTE,2,bon_NONE]//Sleeping Kitty Cat
+,[2647,itm_type_HEAD_UPPER,0,6,0,0,30,20,0,0,0,0,bon_DEX,1,bon_AGI,1,bon_FLEE,10,bon_NONE]//Monkey On Fur Hat
+,[2648,itm_type_GARMENT,0,8,0,1,70,1,0,0,0,0,bon_SP_MUL,3,bon_MDEF,3,"ref_lvl",6,bon_SP_MUL,3,bon_NONE]//Magic Stole
+,[2649,itm_type_ARMOR,0,35,0,1,30,1,0,0,0,0,bon_VIT,1,"ev_ref",2,bon_HP_MUL,1,"ev_ref",2,bon_SP_MUL,1,bon_NONE]//Nectar Suit
+,[2650,itm_type_GARMENT,0,2,0,1,10,1,0,0,0,0,bon_MDEF,3,bon_FLEE,7,bon_RED_ELE_NEUTRAL,7,bon_NONE]//Beach Towel
+,[2651,itm_type_HEAD_MIDDLE,1,3,0,0,40,20,0,0,0,0,bon_RES_STATUS_STUN,10,bon_RES_STATUS_FREEZE,10,bon_NONE]//Stunner Shades
+,[2652,itm_type_HEAD_UPPER,0,12,0,1,60,1,0,0,0,0,bon_STR,2,bon_INT,2,"ev_ref",1,bon_ATK,1,"ev_ref",1,bon_MATK,1,bon_NONE]//Evil's Bone Hat
+,[2653,itm_type_HEAD_LOWER,0,0,0,0,30,30,0,0,0,0,bon_LUK,1,bon_SKILL_AUTOCAST,169,bon_NONE]//Miracle Blue Rose
+,[2654,itm_type_HEAD_UPPER,0,3,0,1,40,1,0,0,0,0,bon_INT,2,bon_DEX,2,bon_AGI,1,bon_NONE]//Black Musang Hat
+,[2655,itm_type_HEAD_UPPER,0,3,0,1,40,1,0,0,0,0,bon_STR,2,bon_VIT,2,bon_LUK,1,bon_NONE]//White Musang Hat
+,[2656,itm_type_ARMOR,0,45,0,1,50,80,0,0,0,0,bon_DMG_RANGE,2,"ref_lvl",7,bon_UNBREAKABLE,1,"ref_lvl",8,bon_DMG_RANGE,2,"ref_lvl",9,bon_DMG_RANGE,3,bon_NONE]//Elemental Tights
+,[2657,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE]//Elemental Tights + Burning Bow
+,[2658,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE]//Elemental Tights + Earth Bow
+,[2659,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE]//Elemental Tights + Frozen Bow
+,[2660,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE]//Elemental Tights + Gust Bow
+,[2661,itm_type_GARMENT,0,13,0,1,40,100,0,0,0,0,bon_DMG_RANGE,2,"ref_lvl",8,bon_DMG_RANGE,2,"ref_lvl",9,bon_DMG_RANGE,3,bon_NONE]//Elemental Towel
+,[2662,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE]//Elemental Towel + Burning Bow
+,[2663,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE]//Elemental Towel + Earth Bow
+,[2664,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE]//Elemental Towel + Frozen Bow
+,[2665,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE]//Elemental Towel + Gust Bow
+,[2666,itm_type_HEAD_UPPER,0,5,0,1,30,20,0,0,0,0,bon_MDEF,5,"ref_lvl",5,bon_RED_RC_DRAGON,5,"ref_lvl",7,bon_RED_RC_DRAGON,5,bon_NONE]//Flying Helmet
+,[2667,itm_type_HEAD_UPPER,0,4,0,0,1,1,0,0,0,0,bon_DMG_CRIT,10,bon_FLEE,10,bon_NONE]//Wickebine's Black Cat Ears
+,[2668,itm_type_SHIELD,0,2,0,1,30,30,0,0,0,0,bon_INT,2,bon_MATK,5,"bint_hi",120,bon_MATK,25,bon_NONE]//Solomon's Key
+,[2669,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE]//Solomon's Key + Ring of the Ancient Wise King
+,[2670,itm_type_HEAD_UPPER,0,6,0,0,0,1,0,0,0,0,bon_INT,2,bon_SP_ADD,50,bon_NONE]//Time Keeper Hat
+,[2671,itm_type_ACCESSORY,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,3,bon_NONE]//Bunch of Carnation
+// ,[2672,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2673,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2674,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2675,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2676,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2677,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2678,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2679,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2680,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
 
 
 // ,[,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK,50,"set_ref"+(fl_WEAPON+fl_HEAD),7,bon_RED_CAST,-10,"set_sum"+(fl_WEAPON+fl_HEAD),18,bon_MDMG_SIZ_SMALL,15,"set_sum"+(fl_WEAPON+fl_HEAD),18,bon_MDMG_SIZ_MEDIUM,15,"set_sum"+(fl_WEAPON+fl_HEAD),22,bon_MATK,50,"set_sum"+(fl_WEAPON+fl_HEAD),22,bon_INC_MAGIC_FIRE,20,bon_NONE]//Illusion Fancy Flower + Illusion Bazerald
@@ -3432,6 +3462,18 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2620,2611,2374,"NULL"] //Illusion Iron Driver + Illusion Muffler
 ,[2624,2623,2421,"NULL"] //Magic Neuromodulator + Violet Halo
 ,[2636,2634,330,"NULL"] //Bloody Muffler + Critical Ring
+,[2643,2642,2577,"NULL"] //Mechanical Plant Hat + Bio Protector
+,[2644,2642,271,"NULL"] //Mechanical Plant Hat + Pipe
+,[2645,2642,2577,271,"NULL"] //Mechanical Plant Hat + Bio Protector + Pipe
+,[2657,2656,626,"NULL"] //Elemental Tights + Burning Bow
+,[2658,2656,627,"NULL"] //Elemental Tights + Earth Bow
+,[2659,2656,628,"NULL"] //Elemental Tights + Frozen Bow
+,[2660,2656,629,"NULL"] //Elemental Tights + Gust Bow
+,[2662,2661,626,"NULL"] //Elemental Towel + Burning Bow
+,[2663,2661,627,"NULL"] //Elemental Towel + Earth Bow
+,[2664,2661,628,"NULL"] //Elemental Towel + Frozen Bow
+,[2665,2661,629,"NULL"] //Elemental Towel + Gust Bow
+// ,[2669,2668,,"NULL"] //Solomon's Key + Ring of the Ancient Wise King (missing)
 // ,[,,,"NULL"] //
 // ,[,,,"NULL"] //
 

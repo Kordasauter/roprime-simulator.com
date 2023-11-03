@@ -466,6 +466,45 @@ function CalcFinalDamage( damage, type )
 */
 }
 
+// Calc Dmg from RAWDmg (rawDmg, (min,avg,max,crit:=10)), bypass def
+function CalcFinalDamage2( damage, type )
+{ 
+	var aura_blade = 0;
+	if ( n_A_WeaponType !== weapTyp_NONE && SkillSearch( skill_LK_AURA_BLADE ) )
+	{ // aura blade
+		aura_blade += n_A_BaseLV * (SkillSearch( skill_LK_AURA_BLADE ) + 3);
+	}
+	
+	
+	damage = ApplyDamageModifiers( damage );
+	damage = ApplySkillModifiers( damage );
+	
+	
+	if ( type == 10 )
+	{
+		damage = ( damage * 1.4 );
+		if ( SkillSearch( skill_RUN_GIANT_GROWTH )  && damageType != kDmgTypeRanged)
+		{
+			let basedmg = GetBaseDmg( n_A_Weapon_element, false, 0 );
+			damage += (basedmg[2] * 2.5);
+		}
+	}
+	else
+	{
+		damage = ( damage );
+		if ( SkillSearch( skill_RUN_GIANT_GROWTH ) && damageType != kDmgTypeRanged)
+		{
+			let basedmg = GetBaseDmg( n_A_Weapon_element, false, 0 );
+			damage += (basedmg[type] * 2.5);
+		}
+	}
+	damage += aura_blade;
+	damage = Math.floor(tPlusDamCut(damage));	
+	damage = Max( 0, damage );
+		
+	return Math.floor( damage );
+}
+
 function CalcRightHandDamage( w998 )
 {
 	trifectaDamage = w998B * trifectaBlowDamage;
@@ -1599,6 +1638,23 @@ function ApplySkillModifiers( damage )
 		{ // Banshee card gives a bonus to mages who use these skills
 			dmgMultiplier += 20 * CardNumSearch(card_HEAD_BANSHEE);
 		}
+	}
+	
+	if ( EquipNumSearch( 2662 ) && n_A_Arrow == arrTyp_FIRE && (n_A_ActiveSkill === skill_RAN_ARROW_STORM || n_A_ActiveSkill === skill_MIWA_SEVERE_RAINSTORM))
+	{ // Elemental Tights + Burning Bow
+		dmgMultiplier += n_A_SHOULDER_DEF_PLUS * 5;
+	}
+	else if ( EquipNumSearch( 2663 ) && n_A_Arrow == arrTyp_CRYSTAL && (n_A_ActiveSkill === skill_RAN_ARROW_STORM || n_A_ActiveSkill === skill_MIWA_SEVERE_RAINSTORM))
+	{ // Elemental Tights + Freezing Bow
+		dmgMultiplier += n_A_SHOULDER_DEF_PLUS * 5;
+	}
+	else if ( EquipNumSearch( 2664 ) && n_A_Arrow == arrTyp_STONE && (n_A_ActiveSkill === skill_RAN_ARROW_STORM || n_A_ActiveSkill === skill_MIWA_SEVERE_RAINSTORM))
+	{ // Elemental Tights + Earthen Bow
+		dmgMultiplier += n_A_SHOULDER_DEF_PLUS * 5;
+	}
+	else if ( EquipNumSearch( 2665 ) && n_A_Arrow == arrTyp_WIND && (n_A_ActiveSkill === skill_RAN_ARROW_STORM || n_A_ActiveSkill === skill_MIWA_SEVERE_RAINSTORM))
+	{ // Elemental Tights + Gale Bow
+		dmgMultiplier += n_A_SHOULDER_DEF_PLUS * 5;
 	}
 	
 	// if ( n_A_ActiveSkill==skill_WI_EARTH_SPIKE ||

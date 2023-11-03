@@ -206,7 +206,8 @@ function clashingATKFormula(weight)
 	}
 	return tempAttack;
 }
-function CalcSkillDamageType() {
+function CalcSkillDamageType() 
+{
 	if (  n_A_WeaponType === weapTyp_BOW 		  ||
 		   n_A_WeaponType === weapTyp_HANDGUN     ||
 	 	   n_A_WeaponType === weapTyp_RIFLE       ||
@@ -238,9 +239,12 @@ function CalcSkillDamageType() {
 			
 
 }
+
 function CalcSkillDamage()
 {
 	// Ready!!!
+	let ignoreDef = false;
+	let ignoreMdef = false;
 	w_SkillMod = 1; // SkillMod
 	w_VarCast = 0.8;
 	w_FixCast = 0.2;
@@ -1832,6 +1836,7 @@ function CalcSkillDamage()
 		else if ( n_A_ActiveSkill === skill_GEN_CART_CANNON )
 		{
 			damageType = kDmgTypeRanged;
+			ignoreDef = true;
 			
 			// Old formula:  350% + (Skill Level)*50% + (Cart Remodeling Level)*Int/2%
 			// Old formula: w_SkillMod = ( 1.4 + n_A_ActiveSkillLV * 0.6 ) + ( SkillSearch( skill_GEN_CART_REMODELING ) * ( n_A_INT ) ) / 100.0;
@@ -2400,6 +2405,7 @@ function CalcSkillDamage()
 		else if ( n_A_ActiveSkill === skill_MEC_ARM_CANNON )
 		{
 			damageType = kDmgTypeRanged;
+			ignoreDef = true;
 			if(PATCH < 2)
 			{
 				// Small Monster:  ATK [ { ( Skill Level x 400 ) + 300 } x Caster s Base Level / 120 ] %
@@ -2867,17 +2873,14 @@ function CalcSkillDamage()
 		for ( var i = 0; i < 3; i++ )
 		{
 			w_MagiclBulet = i;
-			// if(n_A_ActiveSkill == skill_SUM_PICKY_PECK)
-			// {
-				// console.log("n_A_DMG[i],i : " + n_A_DMG[i]+" , "+i);
-				// console.log("CalcFinalDamage");
-			// }
-			// if(n_A_ActiveSkill != skill_SUM_PICKY_PECK)
+			if(ignoreDef)
+			{
+				w_DMG[i] = CalcFinalDamage2(n_A_DMG[i],i);
+				w_DMG[i] -= n_B[en_HARDDEF];
+			}
+			else
 				w_DMG[i] = CalcFinalDamage(n_A_DMG[i],i);
-			// else
-				
-			// if(n_A_ActiveSkill == skill_SUM_PICKY_PECK)
-				// console.log("w_DMG[i],i : " + w_DMG[i]+" , "+i);
+
 			if ( n_A_ActiveSkill==skill_CR_SHIELD_BOOMERANG_SL )
 			{
 				w_DMG[i] *= 2; 
