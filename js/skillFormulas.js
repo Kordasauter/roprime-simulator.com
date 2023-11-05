@@ -4644,6 +4644,7 @@ function CalcSkillDamage()
 		{
 			w_DMG[i] = totalDamage;
 			w_DMG[i] = ApplyDamageModifiers( w_DMG[i] );
+			w_DMG[i] = Math.floor(ApplySkillModifiers( w_DMG[i] ));
 			//w_DMG[i] = ApplyEnemyDefense( w_DMG[i], i, 0 ); ***ignores defense?
 			InnStr[i] = w_DMG[i];
 		}

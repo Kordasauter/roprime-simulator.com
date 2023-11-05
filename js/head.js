@@ -2266,7 +2266,7 @@ function DisplayCastAndDelay()
 	else if ( longestDelay == ksDelayCooldown )
 	{ // skill cooldown
 		strSUB2name += "<font size=2>Delay (Skill Cooldown)</font></br>";
-		strSUB2 += n_Delay[ksDelayCooldown].toFixed(1) + " sec</br>";
+		strSUB2 += n_Delay[ksDelayCooldown].toFixed(2) + " sec</br>";
 	}
 
 	myInnerHtml("bSUB2name",strSUB2name,0);

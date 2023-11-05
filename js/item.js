@@ -1298,7 +1298,7 @@
 ,[1292,weapTyp_STAFF,2118,40,3,1,50,102,0,0,1,1,bon_WEAPON_MATK,180,bon_CAST_SKILL_FLAT+678,3,bon_NONE] // "Mental Stick"
 ,[1293,itm_type_SHIELD,0,60,0,1,30,22,0,0,0,0,bon_NONE] // "Silver Guard"
 ,[1294,itm_type_SHIELD,1001,90,0,1,60,22,0,0,0,0,bon_NONE] // "Round Buckler"
-,[1295,itm_type_SHIELD,0,55,0,1,70,1,0,0,0,0,bon_NONE] // "Immune Shield"
+,[1295,itm_type_SHIELD,0,55,0,1,70,1,0,0,0,0,"ref_lvl",7,bon_RED_ELE_NEUTRAL,5,"ref_lvl",9,bon_RED_ELE_WATER,5,"ref_lvl",9,bon_RED_ELE_EARTH,5,"ref_lvl",9,bon_RED_ELE_FIRE,5,"ref_lvl",9,bon_RED_ELE_WIND,5,bon_NONE] // "Immune Shield"
 ,[1296,itm_type_HEAD_UPPER,0,2,0,1,20,30,0,0,0,0,bon_NONE] // "Snake Head"
 ,[1297,itm_type_HEAD_UPPER,0,8,0,1,50,0,0,0,0,0,bon_VIT,2,bon_INT,2,bon_SP_ADD,50,bon_NONE] // "Purple Cowboy Hat"
 ,[1298,itm_type_HEAD_UPPER,/*0*/999,12,0,1,100,70,0,0,0,0,bon_RED_RC_DEMI_HUMAN,10,bon_RED_BOSS,10,bon_NONE] // "Abysmal Knight Helm"
@@ -2047,7 +2047,7 @@
 ,[2020,weapTyp_MACE,2092,195,4,2,300,130,0,0,0,0,bon_CRIT,20,bon_UNBREAKABLE,1,bon_NONE] // "Robot''s Arm"'
 ,[2021,weapTyp_2HSWORD,2051,300,4,1,500,130,0,0,0,0,bon_ASPD_MUL,-5,bon_UNBREAKABLE,1,bon_NONE] // "Gigantic Blade" "Gigant Blade"
 ,[2022,weapTyp_AXEII,2092,320,4,1,400,100,0,0,0,0,bon_DELAY_SKILL_FLAT + skill_MEC_AXE_TORNADO,1,bon_NONE] // "Tornado Axe"
-,[2023,itm_type_ARMOR,2212,110,0,1,300,130,0,0,0,0,bon_RED_SIZ_MEDIUM,10,bon_RED_SIZ_SMALL,10,bon_UNBREAKABLE,1,bon_NONE] // "Upgrade Part - Plate"
+,[2023,itm_type_ARMOR,2212,110,0,0,300,130,0,0,0,0,bon_RED_SIZ_MEDIUM,10,bon_RED_SIZ_SMALL,10,bon_UNBREAKABLE,1,bon_NONE] // "Upgrade Part - Plate"
 ,[2024,itm_type_SHOES,2212,23,0,1,100,100,0,0,0,0,bon_NONE] // "Reinforced Parts - Booster" "Upgrade Part - Booster"
 ,[2025,itm_type_GARMENT,2212,25,0,1,150,100,0,0,0,0,bon_RED_CASTDELAY,10,bon_NONE] // "Reinforced Parts - Engine" "Upgrade Part - Engine"
 ,[2026,itm_type_ACCESSORY,2212,0,0,1,50,100,0,0,0,0,bon_PHY_ATK,4,bon_HIT,10,bon_DMG_SKILL + skill_MEC_BOOST_KNUCKLE,25,bon_NONE] // "Reinforced Parts - Gun Barrel" "Upgrade Part - Gun Barrel"
@@ -2426,7 +2426,7 @@
 ,[2356,itm_type_HEAD_UPPER,0,0,0,1,20,0,0,0,0,0,bon_DEX,3,bon_MATK,40,"ev_ref",1,bon_MATK,7,bon_NONE] // "Celine''s Ribbon"'
 ,[2357,weapTyp_MACE,2053,195,4,0,150,40,0,0,0,0,bon_ELEMENT,ele_HOLY,bon_WEAPON_MATK,150,bon_SKILL_AUTOCAST,159,bon_NONE] // "Noble Cross"
 ,[2358,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_SKILL_AUTOCAST,155,bon_SKILL_AUTOCAST,156,bon_SKILL_AUTOCAST,157,bon_SKILL_AUTOCAST,158,bon_NONE] // "Hurt Mind + Kind Heart"
-,[2359,itm_type_ACCESSORY,2001,0,0,1,50,100,0,0,0,0,bon_MATK_MUL,5,bon_RED_CAST,-10,bon_NONE] // "Celine''s Brooch"'
+,[2359,itm_type_ACCESSORY,226,0,0,1,50,100,0,0,0,0,bon_MATK_MUL,5,bon_RED_CAST,-10,bon_NONE] // "Celine''s Brooch"'
 ,[2360,itm_type_GARMENT,0,20,0,1,10,1,0,0,0,0,"ev_ref",2,bon_PHY_ATK,1,"ev_ref",2,bon_MATK_MUL,1,"ref_lvl",9,bon_ATK,30,"ref_lvl",9,bon_MATK,30,bon_NONE] // "Christmas Wings"
 ,[2361,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ATK,50,bon_MATK,50,bon_ASPD_ADD,1,bon_NONE] // "Celine''s Brooch + Evilspirit Gloves"'
 ,[2362,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RED_FIXEDCAST_FLAT,0.3,"ev_head_ref",1,bon_MATK,10,"head_ref_lvl",7,bon_MDMG_RC_DEMI_HUMAN,10,"head_ref_lvl",7,bon_MDMG_RC_DEMON,10,"head_ref_lvl",9,bon_INC_MAGIC_EARTH,10,"head_ref_lvl",9,bon_INC_MAGIC_FIRE,10,"head_ref_lvl",9,bon_INC_MAGIC_NEUTRAL,10,"head_ref_lvl",9,bon_INC_MAGIC_WIND,10,"head_ref_lvl",9,bon_INC_MAGIC_WATER,10,"head_ref_lvl",11,bon_MDMG_BOSS,20,bon_NONE] // "Celine''s Brooch + Celine''s Ribbon"'
@@ -2573,7 +2573,7 @@
 ,[2480,itm_type_ACCESSORY,0,0,0,1,60,80,0,0,0,0,"ev_bstr",18,bon_INT,3,"ev_bstr",18,bon_MDEFIGN_RC_ALL,15,"ev_bagi",18,bon_LUK,3,"ev_bagi",18,bon_PDODGE,1,"ev_bvit",18,bon_DEX,3,"ev_bvit",18,bon_RED_CAST,-1,"ev_bint",18,bon_STR,3,"ev_bint",18,bon_RED_CASTDELAY,1,"ev_bdex",18,bon_VIT,3,"ev_bdex",18,bon_HP_MUL,1,"ev_bluk",18,bon_AGI,3,"ev_bluk",18,bon_DEFIGN_RC_ALL,15,bon_NONE]//Perverse Demon Mask
 ,[2481,itm_type_HEAD_MIDDLE,0,0,0,0,30,70,0,0,0,0,bon_STR,2,"ev_bint",8,bon_ATK,5,"ev_bint",8,bon_HEAL_REC,1,"ev_bint",8,bon_RED_CAST,-1,"bint_hi",108,bon_ATK,50,"bint_hi",108,bon_HEAL_REC,5,"bint_hi",108,bon_RED_CAST,-4,"bint_hi",120,bon_ATK,125,"bint_hi",120,bon_HEAL_REC,10,"bint_hi",120,bon_RED_CAST,-6,bon_NONE]//Seraphim Coronet
 ,[2482,itm_type_HEAD_LOWER,0,0,0,0,30,80,0,0,0,0,bon_HEAL_REC,5,bon_NONE]//Seraphim Feather
-,[2483,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_CAST_SKILL + skill_ABI_COLUCEO_HEAL,100,bon_RED_RC_DEMI_HUMAN,2,bon_HEAL_REC,5,bon_CH_STATUS_BLEEDING,100,bon_CH_STATUS_CHAOS,100,"ev_bint",8,bon_RED_CAST,-1,"bint_hi",108,bon_RED_CAST,-4,"bint_hi",108,bon_RED_RC_DEMI_HUMAN,2,"bint_hi",108,bon_HEAL_REC,10,"bint_hi",120,bon_RED_CAST,-6,"bint_hi",120,bon_RED_RC_DEMI_HUMAN,4,"bint_hi",120,bon_HEAL_REC,15,bon_NONE]//Seraphim Coronet + Seraphim Feather
+,[2483,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_CAST_SKILL + skill_ABI_COLUCEO_HEAL,100,bon_RED_RC_DEMI_HUMAN,2,bon_HEAL_REC,5,bon_RES_STATUS_BLEEDING,100,bon_RES_STATUS_CHAOS,100,"ev_bint",8,bon_RED_CAST,-1,"bint_hi",108,bon_RED_CAST,-4,"bint_hi",108,bon_RED_RC_DEMI_HUMAN,2,"bint_hi",108,bon_HEAL_REC,10,"bint_hi",120,bon_RED_CAST,-6,"bint_hi",120,bon_RED_RC_DEMI_HUMAN,4,"bint_hi",120,bon_HEAL_REC,15,bon_NONE]//Seraphim Coronet + Seraphim Feather
 ,[2484,itm_type_ACCESSORY,0,0,0,0,0,0,0,0,0,0,bon_EXP_RC_FORMLESS,5,bon_EXP_RC_UNDEAD,5,bon_EXP_RC_BRUTE,5,bon_EXP_RC_PLANT,5,bon_EXP_RC_INSECT,5,bon_EXP_RC_FISH,5,bon_EXP_RC_DEMON,5,bon_EXP_RC_DEMI_HUMAN,5,bon_EXP_RC_ANGEL,5,bon_EXP_RC_DRAGON,5,bon_RED_NONBOSS,-5,bon_NONE]//Saehrimnir Gloves
 ,[2485,itm_type_SHADOW_SHOES,0,0,0,0,0,0,0,0,0,0,bon_VIT,1,"ref_lvl",7,bon_VIT,1,"ref_lvl",9,bon_VIT,1,bon_NONE]//Vital Shadow Shoes
 ,[2486,itm_type_SHADOW_SHIELD,0,0,0,0,0,0,0,0,0,0,bon_VIT,1,"ev_ref",1,bon_DEF,1,bon_NONE]//Vital Shadow Shield
