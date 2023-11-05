@@ -2219,19 +2219,19 @@ function DisplayCastAndDelay()
 			else
 			{ // Normal Hits
 				strSUB2name += "Time/Hit<BR>";
-				strSUB2 += n_Delay[ksDelayASPD].toFixed(1) + " sec</br>";
+				strSUB2 += n_Delay[ksDelayASPD].toFixed(2) + " sec</br>";
 			}
 		}
 		else
 		{ // skill with ASPD delay
 			strSUB2name += "<font size=2>Delay (ASPD Based)</font></br>";
-			strSUB2 += n_Delay[ksDelayASPD].toFixed(1) + " sec</br>";
+			strSUB2 += n_Delay[ksDelayASPD].toFixed(2) + " sec</br>";
 		}
 	}
 	else if ( longestDelay == ksDelayGlobal )
 	{ // global after-cast delay
 		strSUB2name += "<Font size=2>Delay (Global)</font></br>";
-		strSUB2 += n_Delay[ksDelayGlobal].toFixed(1) + " sec</br>";
+		strSUB2 += n_Delay[ksDelayGlobal].toFixed(2) + " sec</br>";
 	}
 	else if ( longestDelay == ksDelayAnimation )
 	{		
@@ -2240,28 +2240,28 @@ function DisplayCastAndDelay()
 			 n_A_ActiveSkill == skill_CH_GLACIER_FIST )
 		{
 			strSUB2name += "<font size=2>Delay (+delay reception combo)</font></br>";
-			strSUB2 += n_Delay[ksDelayAnimation].toFixed(1) +"~"+ (n_Delay[ksDelayAnimation].toFixed(1) + 0.3) + " sec</br>";
+			strSUB2 += n_Delay[ksDelayAnimation].toFixed(2) +"~"+ (n_Delay[ksDelayAnimation].toFixed(2) + 0.3) + " sec</br>";
 		}
 		else
 		{
 			strSUB2name += "<font size=2>Delay (Forced Motion)</font></br>";
-			strSUB2 += n_Delay[ksDelayAnimation].toFixed(1) + " sec</br>";
+			strSUB2 += n_Delay[ksDelayAnimation].toFixed(2) + " sec</br>";
 		}
 	}
 	else if ( longestDelay == ksDelayE )
 	{
 		strSUB2name += "<Font size=2>Delay (Input Limit)</font></br>";
-		strSUB2 += n_Delay[ksDelayE].toFixed(1) + " sec</br>";
+		strSUB2 += n_Delay[ksDelayE].toFixed(2) + " sec</br>";
 	}
 	else if ( longestDelay == ksDelayF )
 	{
 		strSUB2name += "<Font size=2>Damage Interval</font></br>";
-		strSUB2 += n_Delay[ksDelayF].toFixed(1) + " sec</br>";
+		strSUB2 += n_Delay[ksDelayF].toFixed(2) + " sec</br>";
 	}
 	else if ( longestDelay == ksDelaySkillDuration )
 	{
 		strSUB2name += "<font size=2>Delay (Skill-Duration)</font></br>";
-		strSUB2 += n_Delay[ksDelaySkillDuration].toFixed(1) + " sec</br>";
+		strSUB2 += n_Delay[ksDelaySkillDuration].toFixed(2) + " sec</br>";
 	}
 	else if ( longestDelay == ksDelayCooldown )
 	{ // skill cooldown
