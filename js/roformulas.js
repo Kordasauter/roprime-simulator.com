@@ -6799,7 +6799,7 @@ function getEquipASPDMul()
 	
 	// Two Handed Quicken
 	if ( n_A_WeaponType == 3 && SkillSearch( skill_KN_TWOHAND_QUICKEN ) )
-		skillASPDMul += 10;
+		equipASPDMul += 10;
 	
 	return equipASPDMul;
 }
