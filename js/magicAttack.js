@@ -326,6 +326,7 @@ function magicElementMultiplier()
 	
 	eleMul = n_tok[bon_MDMG_ELE_NEUTRAL + Math.floor(n_B[en_ELEMENT]/10)];
 	eleMul += n_tok[bon_MDMG_ELE_ALL];
+	console.log("n_tok[bon_MDMG_ELE_ALL] = " + n_tok[bon_MDMG_ELE_ALL]);
 	
 	return eleMul;
 }
@@ -353,6 +354,14 @@ function magicSkillElementMultiplier()
 		}
 		
 	}	
+	
+	if(EquipNumSearch(2674))
+	{//Celine Dress + Celine Ribbon
+		if(n_A_Weapon_element == ele_HOLY || n_A_Weapon_element == ele_DARK || n_A_Weapon_element == ele_POISON || n_A_Weapon_element == ele_GHOST)
+		{
+			eleSkillMul += (n_A_HEAD_DEF_PLUS + n_A_BODY_DEF_PLUS);
+		}
+	}
 		
 //skill (element)
 	if((SkillSearch( skill_SA_ENDOW_BLAZE ) && n_A_Weapon_element == ele_FIRE) || 

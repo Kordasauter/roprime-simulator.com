@@ -46,13 +46,16 @@ ITEM_SP_TIME_OBJ =[
 ,[43,"Hahoe Mask + Witch's Pumpkin hat","ATK +50",1,1530,bon_ATK,50,0]
 ,[44,"Mace of Judgement","Dmg +20% vs. Demons",1,1537,bon_DMG_RC_DEMON,20,0]
 ,[45,"Empowered Mace of Judgement","Dmg +40% vs. Demons",1,1541,bon_DMG_RC_DEMON,40,0]
+,[46,"Celine's Dress","magical damage against all race monsters + 15%",1,2673,bon_MDMG_RC_FORMLESS,15,bon_MDMG_RC_UNDEAD,15,bon_MDMG_RC_BRUTE,15,bon_MDMG_RC_PLANT,15,bon_MDMG_RC_INSECT,15,bon_MDMG_RC_FISH,15,bon_MDMG_RC_DEMON,15,bon_MDMG_RC_DEMI_HUMAN,15,bon_MDMG_RC_ANGEL,15,bon_MDMG_RC_DRAGON,15,0]
+,[47,"Elemental Boots","Int + 70 and Matk + 10%",1,2676,bon_INT,70,bon_MATK_MUL,10,0]
+//,[id,"item_name","effect_desc",1=Equip/2=Card,item/card_id,bonus_typ,bonus_amount,0]
 ];
 ITEM_SP_TIME_OBJ_SORT = [
     0,
     5,10,4,27,6,3, // A
     26,37,30,31, // B
-    39, // C
-    45, // E
+    46,39, // C
+    47,45, // E
     15,11,12,14,13, // G
     43,17,32,20, // H
     2,1,7, // I

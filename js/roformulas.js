@@ -6177,7 +6177,6 @@ function calcASPD()
 	
 	// Equipment ASPD -----------------------------------------
 	var equipASPD = getEquipASPDMul();
-	console.log("getEquipASPDMul() " + getEquipASPDMul());
 
 	//Skill
 	var skillASPD = getSkillASPDMul();

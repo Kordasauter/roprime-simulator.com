@@ -2777,13 +2777,13 @@
 ,[2669,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE]//Solomon's Key + Ring of the Ancient Wise King
 ,[2670,itm_type_HEAD_UPPER,0,6,0,0,0,1,0,0,0,0,bon_INT,2,bon_SP_ADD,50,bon_NONE]//Time Keeper Hat
 ,[2671,itm_type_ACCESSORY,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,3,bon_NONE]//Bunch of Carnation
-// ,[2672,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2673,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2674,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2675,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2676,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2677,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2678,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+,[2672,itm_type_ARMOR,0,40,0,1,50,130,0,0,0,0,bon_MATK,50,"ref_lvl",7,bon_RED_CAST,-10,"ref_lvl",9,bon_INC_MAGIC_ALL,10,"ref_lvl",11,bon_RED_CASTDELAY,10,"ref_lvl",12,bon_RED_CASTDELAY,5,bon_NONE]//Celine's Dress
+,[2673,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK_MUL,10,bon_MDMG_SIZ_SMALL,15,bon_MDMG_SIZ_MEDIUM,15,bon_MDMG_SIZ_LARGE,15,bon_NONE]//Celine's Dress + Evilspirit Glove
+,[2674,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"set_sum" + (fl_HEAD+fl_ARMOR),19,bon_MATK_MUL,15,"set_sum" + (fl_HEAD+fl_ARMOR),23,bon_MDMG_ELE_ALL,20,bon_NONE]//Celine's Dress + Celine's Ribbon
+,[2675,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"ev_body_ref",1,bon_MATK,10,"body_ref_lvl",9,bon_INC_MAGIC_WATER,10,"body_ref_lvl",9,bon_INC_MAGIC_WIND,10,"body_ref_lvl",9,bon_INC_MAGIC_EARTH,10,"body_ref_lvl",9,bon_INC_MAGIC_FIRE,10,"body_ref_lvl",9,bon_INC_MAGIC_NEUTRAL,10,"body_ref_lvl",11,bon_RED_CAST,-5,"body_ref_lvl",13,bon_UNBREAKABLE,1,bon_NONE]//Celine's Dress + Celine's Brooch
+,[2676,itm_type_SHOES,0,10,0,1,10,10,0,0,0,0,bon_DMG_SKILL + skill_MA_FIRE_BALL,15,bon_DMG_SKILL + skill_MA_COLD_BOLT,15,bon_DMG_SKILL + skill_MA_LIGHTNING_BOLT,15,bon_DMG_SKILL + skill_WI_EARTH_SPIKE,15,"ev_ref",1,bon_DMG_SKILL + skill_MA_FIRE_BALL,2,"ev_ref",1,bon_DMG_SKILL + skill_MA_COLD_BOLT,2,"ev_ref",1,bon_DMG_SKILL + skill_MA_LIGHTNING_BOLT,2,"ev_ref",1,bon_DMG_SKILL + skill_WI_EARTH_SPIKE,2,"ref_lvl",7,bon_MATK,20,"ref_lvl",11,bon_INC_MAGIC_WATER,10,"ref_lvl",11,bon_INC_MAGIC_WIND,10,"ref_lvl",11,bon_INC_MAGIC_FIRE,10,"ref_lvl",11,bon_INC_MAGIC_EARTH,10,bon_NONE]//Elemental Boots
+,[2677,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ASPD_ADD,2,bon_MATK,70,"weap_ref_lvl",10,bon_INC_MAGIC_ALL,10,bon_NONE]//Elemental Boots + Elemental Sword
+,[2678,itm_type_SHIELD,0,40,0,1,10,1,0,0,0,0,bon_DEX,1,bon_MDEF,6,bon_RED_ELE_NEUTRAL,5,bon_RED_ELE_WATER,5,bon_RED_ELE_EARTH,5,bon_RED_ELE_FIRE,5,bon_RED_ELE_WIND,5,bon_RED_ELE_POISON,5,bon_RED_ELE_HOLY,5,bon_RED_ELE_SHADOW,5,bon_RED_ELE_GHOST,5,bon_RED_ELE_UNDEAD,5,bon_NONE]//Mad Bunny
 // ,[2679,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
 // ,[2680,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
 
@@ -3474,6 +3474,10 @@ function BuildItemDescription( bonusType, bonusValue )
 ,[2664,2661,628,"NULL"] //Elemental Towel + Frozen Bow
 ,[2665,2661,629,"NULL"] //Elemental Towel + Gust Bow
 // ,[2669,2668,,"NULL"] //Solomon's Key + Ring of the Ancient Wise King (missing)
+,[2673,2672,2355,"NULL"] //Celine's Dress + Evilspirit Glove
+,[2674,2672,2356,"NULL"] //Celine's Dress + Celine's Ribbon
+,[2675,2672,2359,"NULL"] //Celine's Dress + Celine's Brooch
+,[2677,2676,939,"NULL"] //Elemental Boots + Elemental Sword
 // ,[,,,"NULL"] //
 // ,[,,,"NULL"] //
 

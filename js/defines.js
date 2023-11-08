@@ -2311,6 +2311,8 @@ temp_BINER = 37;
 temp_ROUBEL = 38;
 temp_CRONOS = 39;
 temp_NEMESIS = 40;
+temp_CELINE_DRESS = 41;
+temp_ELEMENTAL_BOOTS = 42;
 }
 
 {//ench_type
