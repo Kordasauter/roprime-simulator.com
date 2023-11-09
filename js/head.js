@@ -1913,6 +1913,14 @@ function tPlusDamCut( damage )
 		{ // Whirlwind
 			damage = Math.floor( damage * multipliers[otherBuffs[ksElementFieldLvl] - 1] / 100 );
 		}
+		
+		if ( monsterDebuffs[status_en_SIGHTLESS_MIND] )
+		{ // Sightless Mind
+			if(n_B[en_BOSS] == 1)
+				damage *= 1.15;
+			else
+				damage *= 1.30;
+		}
 	}
 	
 	// Monster Buffs

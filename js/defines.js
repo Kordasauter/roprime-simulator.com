@@ -1046,6 +1046,7 @@ status_en_MARSH_OF_ABYSS = 27;
 status_en_GLOOMY_DAY = 28;
 status_en_DARK_CLAW = 29;
 status_en_ANALYZE = 30;
+status_en_SIGHTLESS_MIND = 31;
 
 // monsterBuffs
 var status_en_buff_IncreaseAGI = 0;
@@ -2158,10 +2159,17 @@ var ksResistantSouls = 13;
 var ksStriking = 14;
 var ksOdinsPower = 15;
 var ksStrikingEndowBonus = 16;
+var ksInsignia = 17;
+var ksInsigniaLvl = 18;
 // elemental field level values
 var ksVolcano = 0;
 var ksDeluge = 1;
 var ksWhirlwind = 2;
+// Insignia
+var ksFireInsignia = 0;
+var ksWindInsignia = 1;
+var ksWaterInsignia = 2;
+var ksEarthInsignia = 3;
 
 // miscEffects
 var ksPetEffects = 0;

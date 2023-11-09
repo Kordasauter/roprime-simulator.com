@@ -369,6 +369,15 @@ function magicSkillElementMultiplier()
 	(SkillSearch( skill_SA_ENDOW_TORNADO ) && n_A_Weapon_element == ele_WIND) ||
 	(SkillSearch( skill_SA_ENDOW_QUAKE ) && n_A_Weapon_element == ele_EARTH) )
 		eleSkillMul += 5;
+		
+	if((otherBuffs[ksInsignia] == ksFireInsignia) && (otherBuffs[ksInsigniaLvl] == 3) && (n_A_Weapon_element == ele_FIRE))
+		eleSkillMul += 25;
+	if((otherBuffs[ksInsignia] == ksWindInsignia) && (otherBuffs[ksInsigniaLvl] == 3) && (n_A_Weapon_element == ele_WIND))
+		eleSkillMul += 25;
+	if((otherBuffs[ksInsignia] == ksWaterInsignia) && (otherBuffs[ksInsigniaLvl] == 3) && (n_A_Weapon_element == ele_WATER))
+		eleSkillMul += 25;
+	if((otherBuffs[ksInsignia] == ksEarthInsignia) && (otherBuffs[ksInsigniaLvl] == 3) && (n_A_Weapon_element == ele_EARTH))
+		eleSkillMul += 25;
 	
 	return eleSkillMul;
 }
@@ -1219,6 +1228,11 @@ function calcEquipMATK()
 			equipMATK += 25 * EnchNumSearch( 5244 );
 	}
 	// console.log(equipMATK);
+	
+//Buffs
+	if((otherBuffs[ksInsignia] == ksFireInsignia) && (otherBuffs[ksInsigniaLvl] == 3))
+		equipMATK += 50;
+	
 	return equipMATK;
 }
 

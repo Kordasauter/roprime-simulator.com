@@ -1362,6 +1362,9 @@ function CalcEquipAtk()
 			
 		}
 	}
+	
+	if((otherBuffs[ksInsignia] == ksFireInsignia) && (otherBuffs[ksInsigniaLvl] == 2))
+		equipmentAttack += 50;
 
 	return equipmentAttack;
 }
@@ -2180,6 +2183,10 @@ function CalcAttackMod()
 	{//Restless Dead Card + Vampire's Familiar [1]
 		n_tok[bon_PHY_ATK] += Math.floor(n_A_BODY_DEF_PLUS / 3);
 	}
+	
+	//Every Insignia level 2 increase atk +10%
+	if(otherBuffs[ksInsigniaLvl] == 2)
+		n_tok[bon_PHY_ATK] += 10;
 	
 	attackMod *= ( 100 + n_tok[bon_PHY_ATK] ) / 100;
 	
@@ -3765,6 +3772,9 @@ function calcHP()
 		additiveHP += 1000;
 	}
 	
+	if((otherBuffs[ksInsignia] == ksEarthInsignia) && (otherBuffs[ksInsigniaLvl] == 2))
+		additiveHP += 500;
+	
 	n_A_MaxHP += additiveHP;
 
 	if(n_A_MaxHP < 1)
@@ -4528,6 +4538,9 @@ function calcSP( n_A_MaxSP )
 	{
 		w += 100;
 	}
+	
+	if((otherBuffs[ksInsignia] == ksEarthInsignia) && (otherBuffs[ksInsigniaLvl] == 3))
+		w += 50;
 
 	n_A_MaxSP += w;
 	n_A_MaxSP = Max(0,n_A_MaxSP);
@@ -4952,6 +4965,9 @@ function calcHardDef( n_A_totalDEF )
 	{ // Assumptio
 		n_A_DEF += acolyteBuffs[ksAssumptio] * 50;
 	}
+	
+	if((otherBuffs[ksInsignia] == ksEarthInsignia) && (otherBuffs[ksInsigniaLvl] == 2))
+		n_A_DEF += 50;
 		
 	// Total Physical Defense
 	n_A_totalDEF = n_A_DEF + n_A_DEFplus;
@@ -5244,6 +5260,8 @@ function calcHardMDef(n_A_MDEF)
 			}
 		}
 	}
+	if((otherBuffs[ksInsignia] == ksEarthInsignia) && (otherBuffs[ksInsigniaLvl] == 3))
+		n_A_MDEF += 50;
 	
 	// Multipliers-----------------
 	var mdefMultiplier = 0;
@@ -6985,6 +7003,9 @@ function getSkillASPDMul()
 		// skillASPDMul += SkillSearch( skill_RUN_RUNE_MASTERY ) / 10.0 * 4;
 	// }
 	
+	if((otherBuffs[ksInsignia] == ksWindInsignia) && (otherBuffs[ksInsigniaLvl] == 2))
+		skillASPDMul += 10;
+	
 	return skillASPDMul;
 }
 
@@ -7297,7 +7318,12 @@ function CalcVariableCast()
 	
 	if (SkillSearch(skill_WAR_INTENSE_TELEKINESIS)) {
 	    variableCastTime -= (10 * SkillSearch(skill_WAR_INTENSE_TELEKINESIS)) / 100;
-;	}
+	}
+	
+	if((otherBuffs[ksInsignia] == ksWaterInsignia) && (otherBuffs[ksInsigniaLvl] == 3) && (n_A_Weapon_element += ele_WATER))
+		variableCastTime -= 30;
+	if((otherBuffs[ksInsignia] == ksWindInsignia) && (otherBuffs[ksInsigniaLvl] == 3) && (n_A_Weapon_element += ele_WIND))
+		variableCastTime -= 30;
 		
 	return variableCastTime;
 }
@@ -7788,6 +7814,15 @@ function getWeaponElement()
 	{
 		n_A_Weapon_element = ele_NEUTRAL + SkillSearch( skill_KAG_GET_ELEMENTAL_SEAL );
 	}
+	
+	if((otherBuffs[ksInsignia] == ksFireInsignia) && (otherBuffs[ksInsigniaLvl] == 2))
+		n_A_Weapon_element += ele_FIRE;
+	if((otherBuffs[ksInsignia] == ksWindInsignia) && (otherBuffs[ksInsigniaLvl] == 2))
+		n_A_Weapon_element += ele_WIND;
+	if((otherBuffs[ksInsignia] == ksWaterInsignia) && (otherBuffs[ksInsigniaLvl] == 2))
+		n_A_Weapon_element += ele_WATER;
+	if((otherBuffs[ksInsignia] == ksEarthInsignia) && (otherBuffs[ksInsigniaLvl] == 2))
+		n_A_Weapon_element += ele_EARTH;
 	
 	BK_Weapon_element = n_A_Weapon_element;
 }

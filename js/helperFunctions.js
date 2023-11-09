@@ -1131,62 +1131,62 @@ function BuildPassiveSkillTable()
 		skillESelect.style.width = 85+'px';
 	}
 	
-	if (JobSkillPassOBJ[job][8] === skill_SOR_SPIRIT_CONTROL) {
-		for ( var i = 3; i >= 0; i-- )
-		{
-			skillCSelect.options[i] = null;
-		}
-		var w_name=["0 (Idle)","1 (Passive)","2 (Defense)","3 (Offense)"];
-		for ( var i = 0; i <= 3; i++ )
-		{
-			skillCSelect.options[i] = new Option(w_name[i],i);
-		}
-		// adjust the width
-		skillCSelect.style.width = 95+'px';
-	}
-	
 	if (JobSkillPassOBJ[job][9] === skill_SOR_SPIRIT_CONTROL) {
 		for ( var i = 3; i >= 0; i-- )
 		{
-			skillDSelect.options[i] = null;
+			formElements["A_Skill9"].options[i] = null;
 		}
 		var w_name=["0 (Idle)","1 (Passive)","2 (Defense)","3 (Offense)"];
 		for ( var i = 0; i <= 3; i++ )
 		{
-			skillDSelect.options[i] = new Option(w_name[i],i);
+			formElements["A_Skill9"].options[i] = new Option(w_name[i],i);
 		}
 		// adjust the width
-		skillDSelect.style.width = 95+'px';
+		formElements["A_Skill9"].style.width = 95+'px';
 	}
 	
-	if ( JobSkillPassOBJ[job][9] === skill_SOR_SUMMON_TYPE )
-	{
+	if (JobSkillPassOBJ[job][10] === skill_SOR_SPIRIT_CONTROL) {
 		for ( var i = 3; i >= 0; i-- )
 		{
-			skillDSelect.options[i] = null;
+			formElements["A_Skill10"].options[i] = null;
 		}
-		var w_name=["Agni","Ventus","Aqua","Terra"];
+		var w_name=["0 (Idle)","1 (Passive)","2 (Defense)","3 (Offense)"];
 		for ( var i = 0; i <= 3; i++ )
 		{
-			skillDSelect.options[i] = new Option(w_name[i],i);
+			formElements["A_Skill10"].options[i] = new Option(w_name[i],i);
 		}
 		// adjust the width
-		skillDSelect.style.width = 85+'px';
+		formElements["A_Skill10"].style.width = 95+'px';
 	}
 	
 	if ( JobSkillPassOBJ[job][10] === skill_SOR_SUMMON_TYPE )
 	{
 		for ( var i = 3; i >= 0; i-- )
 		{
-			skillHSelect.options[i] = null;
+			formElements["A_Skill10"].options[i] = null;
 		}
 		var w_name=["Agni","Ventus","Aqua","Terra"];
 		for ( var i = 0; i <= 3; i++ )
 		{
-			skillHSelect.options[i] = new Option(w_name[i],i);
+			formElements["A_Skill10"].options[i] = new Option(w_name[i],i);
 		}
 		// adjust the width
-		skillHSelect.style.width = 85+'px';
+		formElements["A_Skill10"].style.width = 85+'px';
+	}
+	
+	if ( JobSkillPassOBJ[job][11] === skill_SOR_SUMMON_TYPE )
+	{
+		for ( var i = 3; i >= 0; i-- )
+		{
+			formElements["A_Skill11"].options[i] = null;
+		}
+		var w_name=["Agni","Ventus","Aqua","Terra"];
+		for ( var i = 0; i <= 3; i++ )
+		{
+			formElements["A_Skill11"].options[i] = new Option(w_name[i],i);
+		}
+		// adjust the width
+		formElements["A_Skill11"].style.width = 85+'px';
 	}
 
 	for ( var i = 0; JobSkillPassOBJ[n_A_JOB][i] !== 999; i++ )
@@ -1794,17 +1794,22 @@ with(document.calcForm)
 	//myInnerHtml( "EN615_1", SKILL_NAME[741][Language], 0 );
 	//myInnerHtml( "EN615_2", '<select name="friggsSong" style="width:65px;" onchange="ToggleOtherBuffs()"></select>', 0 );
 	
+	// Insigna
+	myInnerHtml( "EN616_1", '<select name="insigniaField" style="width:110px;" onchange="StAllCalc()"></select>', 0 );
+	myInnerHtml( "EN616_2", '<select name="insigniaFieldLvl" style="width:65px;" onchange="ToggleOtherBuffs()"></select>', 0 );
+	insigniaField.options[0] = new Option(SKILL_NAME[711][Language],0);
+	insigniaField.options[1] = new Option(SKILL_NAME[712][Language],1);
+	insigniaField.options[2] = new Option(SKILL_NAME[713][Language],2);
+	insigniaField.options[4] = new Option(SKILL_NAME[714][Language],3);
+
+	
 	for ( var i = 0; i <= 10; i++ )
 	{ // lvl10 skills
 		var off = '0';
 		if ( i === 0 )
-		{
 			off = 'Off';
-		}
 		else
-		{
 			off = i;
-		}
 		
 		provoke.options[i] = new Option(i,i); // Self Provoke
 		windWalker.options[i] = new Option( off, i ); // WindWalk
@@ -1814,13 +1819,9 @@ with(document.calcForm)
 	{ // lvl5 skills
 		var off = '0';
 		if ( i === 0 )
-		{
 			off = 'Off';
-		}
 		else
-		{
 			off = i;
-		}
 		
 		eleFieldLvl.options[i] = new Option(i,i); // Volcano, Deluge, Whirlwind
 		mindBreaker.options[i] = new Option(i,i); // Self Mindbreaker
@@ -1833,15 +1834,21 @@ with(document.calcForm)
 	{ // lvl2 skills
 		var off = '0';
 		if ( i === 0 )
-		{
 			off = 'Off';
-		}
 		else
-		{
 			off = i;
-		}
 		
 		odinsPower.options[i] = new Option( off, i ); // Odin's Power
+	}
+	for ( var i = 0; i <= 3; i++ )
+	{ // lvl3 skills
+		var off = '0';
+		if ( i === 0 )
+			off = 'Off';
+		else
+			off = i;
+
+		insigniaFieldLvl.options[i] = new Option( off, i ); // Odin's Power
 	}
 }
 }
@@ -2153,8 +2160,8 @@ with(document.calcForm)
 		str += '</tr><tr>';
 		str += '<td id="AnalyzeLabel" class="padded"></td>';
 		str += '<td id="AnalyzeInput" class="padded"></td>';
-		str += '<td class="padded"></td>';
-		str += '<td class="padded"></td>';
+		str += '<td id="SightlessMindLabel" class="padded"></td>';
+		str += '<td id="SightlessMindInput" class="padded"></td>';
 	}
 	// else
 	// {
@@ -2198,7 +2205,8 @@ with(document.calcForm)
 	w_name[27] = AilmentsOBJ[14][Language]; // Marsh of Abyss
 	w_name[28] = AilmentsOBJ[17][Language]; // Gloomy Day
 	w_name[29] = AilmentsOBJ[18][Language]; // Dark Claw
-	w_name[30] = AilmentsOBJ[19][Language]; // Dark Claw
+	w_name[30] = AilmentsOBJ[19][Language]; // Analyze
+	w_name[31] = AilmentsOBJ[20][Language]; // Sightless Mind
 	for ( var i = 0; i <= 20; i++ )
 	{
 		myInnerHtml( "BI" + i + "_1", w_name[i], 0 );
@@ -2217,6 +2225,7 @@ with(document.calcForm)
 	myInnerHtml( "GloomyDayLabel", w_name[28], 0 );
 	myInnerHtml( "DarkClawLabel", w_name[29], 0 );
 	myInnerHtml( "AnalyzeLabel", w_name[30], 0 );
+	myInnerHtml( "SightlessMindLabel", w_name[31], 0 );
 	
 	// Build the selection options
 	var html_SKILL = new Array();
@@ -2248,6 +2257,7 @@ with(document.calcForm)
 	html_SKILL[28] = '<select name="GloomyDay" style="width:65px;" onchange="ToggleMonsterDebuff()"></select>';
 	html_SKILL[29] = '<select name="DarkClaw" style="width:65px;" onchange="ToggleMonsterDebuff()"></select>';
 	html_SKILL[30] = '<select name="Analyze" style="width:65px;" onchange="ToggleMonsterDebuff()"></select>';
+	html_SKILL[31] = '<input type="checkbox" name="SightlessMind" style="width:65px;" onchange="ToggleMonsterDebuff()">';
 	for ( var i = 0; i <= 20; i++ )
 	{
 		myInnerHtml("BI"+i+"_2",html_SKILL[i],0);
@@ -2259,6 +2269,7 @@ with(document.calcForm)
 	myInnerHtml("GloomyDayInput",html_SKILL[28],0);
 	myInnerHtml("DarkClawInput", html_SKILL[29],0);
 	myInnerHtml("AnalyzeInput", html_SKILL[30],0);
+	myInnerHtml("SightlessMindInput", html_SKILL[31],0);
 
 	// Build options for 10 level skills
 	for ( var i = 0; i <= 10; i++ )
@@ -2314,6 +2325,7 @@ with(document.calcForm)
 		
 		Analyze.options[i] = new Option( off, i );
 	}
+	
 	// PvM Debuffs
 	if ( PlayerVersusPlayer === 0 )
 	{

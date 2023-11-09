@@ -393,6 +393,8 @@ with ( document.calcForm )
 		otherBuffs[ksStriking] = parseInt(formElements["striking"].value);
 		otherBuffs[ksStrikingEndowBonus] = parseInt(formElements["strikingEndow"].value);
 		otherBuffs[ksOdinsPower] = parseInt(formElements["odinsPower"].value);
+		otherBuffs[ksInsignia] = parseInt(formElements["insigniaField"].value);
+		otherBuffs[ksInsigniaLvl] = parseInt(formElements["insigniaFieldLvl"].value);
 		//otherBuffs[ksFriggsSong] = parseInt(formElements["friggsSong"].value);
 	}
 

@@ -63,6 +63,7 @@ with( document.calcForm )
 		monsterDebuffs[status_en_GLOOMY_DAY] = parseInt(formElements["GloomyDay"].value);
 		monsterDebuffs[status_en_DARK_CLAW] = parseInt(formElements["DarkClaw"].value);
 		monsterDebuffs[status_en_ANALYZE] = parseInt(formElements["Analyze"].value);
+		monsterDebuffs[status_en_SIGHTLESS_MIND] = SightlessMind.checked;
 	}
 	
 	{ // Monster Buffs

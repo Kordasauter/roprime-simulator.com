@@ -2698,7 +2698,7 @@ ITEM_NAME = [
 ,[2676,"",0,"Elemental Boots","<br>[If refine lv +7 or higher]<br>-Has a chance to gain Int + 70 and Matk + 10% for 5 seconds when dealing physical damage",0]
 ,[2677,"",0,"Elemental Boots + Elemental Sword",0]
 ,[2678,"Злой кролик",0,"Mad Bunny",0]
-// ,[2679,"",0,"PlaceHolder",0]
+,[2679,"Кольцо героя",0,"Ring of Hero",0]
 // ,[2680,"",0,"PlaceHolder",0]
 ]
 };

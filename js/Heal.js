@@ -217,6 +217,8 @@ function CalcRecoveryMultiplier()
 			recoveryMultiplier += ( n_A_HEAD_DEF_PLUS - 5 ) * 2;
 		}
 	}
+	if((otherBuffs[ksInsignia] == ksWaterInsignia) && (otherBuffs[ksInsigniaLvl] == 2))
+		recoveryMultiplier += 10;
 	
 	return recoveryMultiplier;
 }

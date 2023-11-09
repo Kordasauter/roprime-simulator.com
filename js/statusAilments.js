@@ -20,5 +20,6 @@ AilmentsOBJ = [
 ,["","Gloomy Day"]
 ,["","Dark Claw"]
 ,["","Analyze"]
+,["","Sightless Mind"]
 ];
 }

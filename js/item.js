@@ -2422,7 +2422,7 @@
 ,[2352,itm_type_ACCESSORY,2001,0,0,1,10,110,0,0,0,0,bon_SP_ADD,200,bon_SKILL_ENABLE,69,bon_NONE] // "Hurt Mind"
 ,[2353,itm_type_ACCESSORY,2001,0,0,1,10,110,0,0,0,0,bon_HP_ADD,500,bon_NONE] // "Kind Heart"
 ,[2354,itm_type_HEAD_UPPER,1,0,0,1,20,0,0,0,0,0,bon_MATK,20,"ev_ref",1,bon_MATK,5,bon_NONE] // "Lush Rose"
-,[2355,itm_type_ACCESSORY,2001,0,0,1,10,110,0,0,0,0,bon_SP_ADD,200,bon_HP_ADD,500,bon_SKILL_ENABLE,70,bon_SKILL_AUTOCAST,155,bon_SKILL_AUTOCAST,156,bon_SKILL_AUTOCAST,157,bon_SKILL_AUTOCAST,158,bon_NONE] // "Evil Spirit Gloves"
+,[2355,itm_type_ACCESSORY,226,0,0,1,10,110,0,0,0,0,bon_SP_ADD,200,bon_HP_ADD,500,bon_SKILL_ENABLE,70,bon_SKILL_AUTOCAST,155,bon_SKILL_AUTOCAST,156,bon_SKILL_AUTOCAST,157,bon_SKILL_AUTOCAST,158,bon_NONE] // "Evil Spirit Gloves"
 ,[2356,itm_type_HEAD_UPPER,0,0,0,1,20,0,0,0,0,0,bon_DEX,3,bon_MATK,40,"ev_ref",1,bon_MATK,7,bon_NONE] // "Celine''s Ribbon"'
 ,[2357,weapTyp_MACE,2053,195,4,0,150,40,0,0,0,0,bon_ELEMENT,ele_HOLY,bon_WEAPON_MATK,150,bon_SKILL_AUTOCAST,159,bon_NONE] // "Noble Cross"
 ,[2358,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_SKILL_AUTOCAST,155,bon_SKILL_AUTOCAST,156,bon_SKILL_AUTOCAST,157,bon_SKILL_AUTOCAST,158,bon_NONE] // "Hurt Mind + Kind Heart"
@@ -2571,7 +2571,7 @@
 ,[2478,itm_type_HEAD_UPPER,0,10,0,1,20,1,0,0,0,0,"ev_ref",2,bon_ATK,10,"ev_ref",2,bon_MATK,10,"ref_lvl",7,bon_RED_RC_FORMLESS,5,"ref_lvl",9,bon_DMG_RC_FORMLESS,10,"ref_lvl",9,bon_MDMG_RC_FORMLESS,10,"ref_lvl",11,bon_PHY_ATK,5,"ref_lvl",11,bon_MATK_MUL,5,"ref_lvl",11,bon_DMG_RC_FORMLESS,22,"ref_lvl",11,bon_MDMG_RC_FORMLESS,22,"ref_lvl",12,bon_DMG_RC_FORMLESS,2,"ref_lvl",12,bon_MDMG_RC_FORMLESS,2,bon_NONE]//Highlander's Hat
 ,[2479,itm_type_GARMENT,0,0,0,1,15,1,0,0,0,0,bon_HP_MUL,2,bon_MDEF,10,"ref_lvl",7,bon_HP_MUL,4,"ref_lvl",8,bon_HP_MUL,6,"ref_lvl",9,bon_HP_MUL,8,bon_NONE]//Etran's Undershirt
 ,[2480,itm_type_ACCESSORY,0,0,0,1,60,80,0,0,0,0,"ev_bstr",18,bon_INT,3,"ev_bstr",18,bon_MDEFIGN_RC_ALL,15,"ev_bagi",18,bon_LUK,3,"ev_bagi",18,bon_PDODGE,1,"ev_bvit",18,bon_DEX,3,"ev_bvit",18,bon_RED_CAST,-1,"ev_bint",18,bon_STR,3,"ev_bint",18,bon_RED_CASTDELAY,1,"ev_bdex",18,bon_VIT,3,"ev_bdex",18,bon_HP_MUL,1,"ev_bluk",18,bon_AGI,3,"ev_bluk",18,bon_DEFIGN_RC_ALL,15,bon_NONE]//Perverse Demon Mask
-,[2481,itm_type_HEAD_MIDDLE,0,0,0,0,30,70,0,0,0,0,bon_STR,2,"ev_bint",8,bon_ATK,5,"ev_bint",8,bon_HEAL_REC,1,"ev_bint",8,bon_RED_CAST,-1,"bint_hi",108,bon_ATK,50,"bint_hi",108,bon_HEAL_REC,5,"bint_hi",108,bon_RED_CAST,-4,"bint_hi",120,bon_ATK,125,"bint_hi",120,bon_HEAL_REC,10,"bint_hi",120,bon_RED_CAST,-6,bon_NONE]//Seraphim Coronet
+,[2481,itm_type_HEAD_MIDDLE,0,0,0,0,30,70,0,0,0,0,bon_STR,2,"ev_bint",8,bon_ATK,5,"ev_bint",8,bon_HEAL_REC,1,"ev_bint",8,bon_RED_CAST,1,"bint_hi",108,bon_ATK,50,"bint_hi",108,bon_HEAL_REC,5,"bint_hi",108,bon_RED_CAST,4,"bint_hi",120,bon_ATK,125,"bint_hi",120,bon_HEAL_REC,10,"bint_hi",120,bon_RED_CAST,6,bon_NONE]//Seraphim Coronet
 ,[2482,itm_type_HEAD_LOWER,0,0,0,0,30,80,0,0,0,0,bon_HEAL_REC,5,bon_NONE]//Seraphim Feather
 ,[2483,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_CAST_SKILL + skill_ABI_COLUCEO_HEAL,100,bon_RED_RC_DEMI_HUMAN,2,bon_HEAL_REC,5,bon_RES_STATUS_BLEEDING,100,bon_RES_STATUS_CHAOS,100,"ev_bint",8,bon_RED_CAST,-1,"bint_hi",108,bon_RED_CAST,-4,"bint_hi",108,bon_RED_RC_DEMI_HUMAN,2,"bint_hi",108,bon_HEAL_REC,10,"bint_hi",120,bon_RED_CAST,-6,"bint_hi",120,bon_RED_RC_DEMI_HUMAN,4,"bint_hi",120,bon_HEAL_REC,15,bon_NONE]//Seraphim Coronet + Seraphim Feather
 ,[2484,itm_type_ACCESSORY,0,0,0,0,0,0,0,0,0,0,bon_EXP_RC_FORMLESS,5,bon_EXP_RC_UNDEAD,5,bon_EXP_RC_BRUTE,5,bon_EXP_RC_PLANT,5,bon_EXP_RC_INSECT,5,bon_EXP_RC_FISH,5,bon_EXP_RC_DEMON,5,bon_EXP_RC_DEMI_HUMAN,5,bon_EXP_RC_ANGEL,5,bon_EXP_RC_DRAGON,5,bon_RED_NONBOSS,-5,bon_NONE]//Saehrimnir Gloves
@@ -2784,7 +2784,7 @@
 ,[2676,itm_type_SHOES,0,10,0,1,10,10,0,0,0,0,bon_DMG_SKILL + skill_MA_FIRE_BALL,15,bon_DMG_SKILL + skill_MA_COLD_BOLT,15,bon_DMG_SKILL + skill_MA_LIGHTNING_BOLT,15,bon_DMG_SKILL + skill_WI_EARTH_SPIKE,15,"ev_ref",1,bon_DMG_SKILL + skill_MA_FIRE_BALL,2,"ev_ref",1,bon_DMG_SKILL + skill_MA_COLD_BOLT,2,"ev_ref",1,bon_DMG_SKILL + skill_MA_LIGHTNING_BOLT,2,"ev_ref",1,bon_DMG_SKILL + skill_WI_EARTH_SPIKE,2,"ref_lvl",7,bon_MATK,20,"ref_lvl",11,bon_INC_MAGIC_WATER,10,"ref_lvl",11,bon_INC_MAGIC_WIND,10,"ref_lvl",11,bon_INC_MAGIC_FIRE,10,"ref_lvl",11,bon_INC_MAGIC_EARTH,10,bon_NONE]//Elemental Boots
 ,[2677,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ASPD_ADD,2,bon_MATK,70,"weap_ref_lvl",10,bon_INC_MAGIC_ALL,10,bon_NONE]//Elemental Boots + Elemental Sword
 ,[2678,itm_type_SHIELD,0,40,0,1,10,1,0,0,0,0,bon_DEX,1,bon_MDEF,6,bon_RED_ELE_NEUTRAL,5,bon_RED_ELE_WATER,5,bon_RED_ELE_EARTH,5,bon_RED_ELE_FIRE,5,bon_RED_ELE_WIND,5,bon_RED_ELE_POISON,5,bon_RED_ELE_HOLY,5,bon_RED_ELE_SHADOW,5,bon_RED_ELE_GHOST,5,bon_RED_ELE_UNDEAD,5,bon_NONE]//Mad Bunny
-// ,[2679,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+,[2679,itm_type_ACCESSORY,0,0,0,1,10,100,0,0,0,0,bon_ASPD_MUL,10,"bstr_hi",120,bon_ATK,50,"bstr_hi",120,bon_HP_MUL,5,"bstr_hi",120,bon_SP_MUL,5,bon_NONE]//Ring of Hero
 // ,[2680,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
 
 
