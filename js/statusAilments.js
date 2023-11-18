@@ -20,5 +20,6 @@ AilmentsOBJ = [
 ,["Элегия","Gloomy Day"]
 ,["Темный коготь","Dark Claw"]
 ,["Эвристический анализ","Analyze"]
+,["Испуг","Sightless Mind"]
 ];
 }
