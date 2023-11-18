@@ -2875,7 +2875,7 @@ function CalcSkillDamage()
 			w_MagiclBulet = i;
 			if(ignoreDef)
 			{
-				w_DMG[i] = CalcFinalDamage2(n_A_DMG[i],i);
+				w_DMG[i] = CalcFinalDamageBypassDef(n_A_DMG[i],i);
 				w_DMG[i] -= n_B[en_HARDDEF];
 			}
 			else
@@ -4438,7 +4438,7 @@ function CalcSkillDamage()
 			w_SkillMod = ( ( endowLevel * 0.5 ) + ( n_A_ActiveSkillLV * n_A_INT / 100.0 ) ) * n_A_BaseLV / 100.0;
 			for ( var i = 0; i < 3; i++ )
 			{ // Apply Enemy Magic Defence
-				magicDamage[i] = CalcMagicDamage( n_A_MATK[i] * w_SkillMod );
+				magicDamage[i] = CalcMagicDamage( CalcMATKMultipliers(n_A_MATK[i]) * w_SkillMod );
 			}
 			myInnerHtml( "CRInum", magicDamage[0] + "-" + magicDamage[2], 0 );
 			
@@ -4459,7 +4459,7 @@ function CalcSkillDamage()
 			w_SkillMod = ( ( n_A_ActiveSkillLV * n_A_INT / 200.0 ) + ( endowLevel * 1.2 ) + ( strikingLevel * 1.2 ) ) * n_A_BaseLV / 100.0;
 			for ( var i = 0; i < 3; i++ )
 			{ // Apply Enemy Magic Defence
-				magicDamage[i] = CalcMagicDamage( n_A_MATK[i] * w_SkillMod );
+				magicDamage[i] = CalcMagicDamage( CalcMATKMultipliers(n_A_MATK[i]) * w_SkillMod );
 			}
 			
 			// post damage to form
@@ -4477,7 +4477,7 @@ function CalcSkillDamage()
 			w_SkillMod = ( (( n_A_ActiveSkillLV  + 2) * (n_A_INT / 200.0 )) + ( (endowLevel + strikingLevel) * 1.5 ) ) * n_A_BaseLV / 100.0;
 			for ( var i = 0; i < 3; i++ )
 			{ // Apply Enemy Magic Defence
-				magicDamage[i] = CalcMagicDamage( n_A_MATK[i] * w_SkillMod );
+				magicDamage[i] = CalcMagicDamage( CalcMATKMultipliers(n_A_MATK[i]) * w_SkillMod );
 			}
 			
 			// post damage to form
@@ -4519,7 +4519,7 @@ function CalcSkillDamage()
 		w_SkillMod = ( n_A_ActiveSkillLV + 1.0 ) * n_A_BaseLV / 100.0;
 		for ( var i = 0; i < 3; i++ )
 		{ // Apply Enemy Magic Defence
-			magicDamage[i] = CalcMagicDamage( n_A_MATK[i] * w_SkillMod );
+			magicDamage[i] = CalcMagicDamage( CalcMATKMultipliers(n_A_MATK[i]) * w_SkillMod );
 		}
 		myInnerHtml( "CRInum", magicDamage[0] + "-" + magicDamage[2], 0 );
 		
@@ -4840,7 +4840,7 @@ function CalcSkillDamage()
 			// Calc Raw Damage
 			for ( var i = 0; i < 3; i++ )
 			{
-				magicDamage[i] = n_A_MATK[i] * w_SkillMod;
+				magicDamage[i] = CalcMATKMultipliers(n_A_MATK[i]) * w_SkillMod;
 				magicDamage[i] *= n_A_JobLV / 25.0;
 				magicDamage[i] *= 1+(HolyMagicMul/100);
 				magicDamage[i] = CalcMagicDamage( magicDamage[i] );
@@ -4867,7 +4867,7 @@ function CalcSkillDamage()
 			// Calc Raw Damage
 			for ( var i = 0; i < 3; i++ )
 			{
-				magicDamage[i] = n_A_MATK[i] * w_SkillMod;
+				magicDamage[i] = CalcMATKMultipliers(n_A_MATK[i]) * w_SkillMod;
 				magicDamage[i] *= 1+(HolyMagicMul/100);
 				magicDamage[i] = CalcMagicDamage( magicDamage[i] );
 			}
@@ -4891,7 +4891,7 @@ function CalcSkillDamage()
 			// Calc Raw Damage
 			for ( var i = 0; i < 3; i++ )
 			{
-				magicDamage[i] = n_A_MATK[i] * w_SkillMod;
+				magicDamage[i] = CalcMATKMultipliers(n_A_MATK[i]) * w_SkillMod;
 				magicDamage[i] *= 1+(HolyMagicMul/100);
 				magicDamage[i] = CalcMagicDamage( magicDamage[i] );
 			}
@@ -4910,6 +4910,8 @@ function CalcSkillDamage()
 		fixedCastTime *= 0.5;
 		variableCastTime *= 1.5 + 0.5 * n_A_ActiveSkillLV;
 		n_Delay[ksDelayGlobal] = 2.0;
+		if((n_A_ActiveSkill >= 5) && (PATCH >= 1))
+			n_Delay[ksDelayGlobal] = 1.0;
 		n_Delay[ksDelayCooldown] = 5.0;
 		if(EquipNumSearch(2272))
 		{// Gunther's Shadow Ring
@@ -5034,7 +5036,7 @@ function CalcSkillDamage()
 		
 		for ( var i = 0; i < 3; i++ )
 		{
-			fireDamage[i] = n_A_MATK[i] * w_SkillMod;
+			fireDamage[i] = CalcMATKMultipliers(n_A_MATK[i]) * w_SkillMod;
 			fireDamage[i] = CalcMagicDamage( fireDamage[i] );
 		}
 		myInnerHtml( "CRIATKname", "Fire portion of damage", 0 );
@@ -5060,7 +5062,7 @@ function CalcSkillDamage()
 		
 		for ( var i = 0; i < 3; i++ )
 		{
-			shadowDamage[i] = n_A_MATK[i] * w_SkillMod;
+			shadowDamage[i] = CalcMATKMultipliers(n_A_MATK[i]) * w_SkillMod;
 			shadowDamage[i] = CalcMagicDamage( shadowDamage[i] );
 		}
 		myInnerHtml( "CRInumname", "Shadow portion of damage", 0 );
@@ -6486,8 +6488,13 @@ function CalcSkillDamage()
 		{
 			var boltLevel = parseInt(formElements["SkillSubNum"].value);
 			n_A_Weapon_element = ele_FIRE;
+			let MNC = 0;
+			if(EquipNumSearch(2460) && n_A_HEAD_DEF_PLUS >= 9)
+			{//Magician's Night Cap
+					MNC += Math.floor(n_A_BaseLV / 5) * 3;
+			}
 			
-			var bonus = (100 + StPlusCalc2(bon_DMG_SKILL+skill_MA_FIRE_BOLT)+StPlusCard(bon_DMG_SKILL+skill_MA_FIRE_BOLT)+StPlusEnchant(bon_DMG_SKILL+skill_MA_FIRE_BOLT))/100.0;
+			var bonus = (100 + StPlusCalc2(bon_DMG_SKILL+skill_MA_FIRE_BOLT)+StPlusCard(bon_DMG_SKILL+skill_MA_FIRE_BOLT)+StPlusEnchant(bon_DMG_SKILL+skill_MA_FIRE_BOLT)+MNC)/100.0;
 			if(PATCH < 2)
 			{// MATK [(100 * Bolt Skill Level) + (50 * Skill Level)] %
 				w_SkillMod = (( n_A_ActiveSkillLV * 0.5 ) + boltLevel)*bonus;
@@ -6503,8 +6510,12 @@ function CalcSkillDamage()
 		{
 			var boltLevel = parseInt(formElements["SkillSubNum"].value);
 			n_A_Weapon_element = ele_WATER;
-			
-			var bonus = (100 + StPlusCalc2(bon_DMG_SKILL+skill_MA_COLD_BOLT)+StPlusCard(bon_DMG_SKILL+skill_MA_COLD_BOLT)+StPlusEnchant(bon_DMG_SKILL+skill_MA_COLD_BOLT))/100.0;
+			let MNC = 0;
+			if(EquipNumSearch(2460) && n_A_HEAD_DEF_PLUS >= 9)
+			{//Magician's Night Cap
+					MNC += Math.floor(n_A_BaseLV / 5) * 3;
+			}
+			var bonus = (100 + StPlusCalc2(bon_DMG_SKILL+skill_MA_COLD_BOLT)+StPlusCard(bon_DMG_SKILL+skill_MA_COLD_BOLT)+StPlusEnchant(bon_DMG_SKILL+skill_MA_COLD_BOLT)+MNC)/100.0;
 			if(PATCH < 2)
 			{// MATK [(100 * Bolt Skill Level) + (50 * Skill Level)] %
 				w_SkillMod = (( n_A_ActiveSkillLV * 0.5 ) + boltLevel)*bonus;
@@ -6521,8 +6532,13 @@ function CalcSkillDamage()
 		{
 			var boltLevel = parseInt(formElements["SkillSubNum"].value);
 			n_A_Weapon_element = ele_WIND;
-
-			var bonus = (100 + StPlusCalc2(bon_DMG_SKILL+skill_MA_LIGHTNING_BOLT)+StPlusCard(bon_DMG_SKILL+skill_MA_LIGHTNING_BOLT)+StPlusEnchant(bon_DMG_SKILL+skill_MA_LIGHTNING_BOLT))/100.0;
+			let MNC = 0;
+			if(EquipNumSearch(2460) && n_A_HEAD_DEF_PLUS >= 9)
+			{//Magician's Night Cap
+					MNC += Math.floor(n_A_BaseLV / 5) * 3;
+			}
+			
+			var bonus = (100 + StPlusCalc2(bon_DMG_SKILL+skill_MA_LIGHTNING_BOLT)+StPlusCard(bon_DMG_SKILL+skill_MA_LIGHTNING_BOLT)+StPlusEnchant(bon_DMG_SKILL+skill_MA_LIGHTNING_BOLT)+MNC)/100.0;
 			if(PATCH < 2)
 			{// MATK [(100 * Bolt Skill Level) + (50 * Skill Level)] %
 				w_SkillMod = (( n_A_ActiveSkillLV * 0.5 ) + boltLevel)*bonus;
@@ -6672,7 +6688,7 @@ function CalcSkillDamage()
 			for ( var i = 0; i < 3; i++ )
 			{
 				
-				console.log("CalcMATKMultipliers(n_A_MATK[i]) = " + CalcMATKMultipliers(n_A_MATK[i]));
+				// console.log("CalcMATKMultipliers(n_A_MATK[i]) = " + CalcMATKMultipliers(n_A_MATK[i]));
 				// console.log("w_SkillMod  = " + (w_SkillMod ));
 				w_DMG[i] = CalcMagicDamage( CalcMATKMultipliers(n_A_MATK[i]) * w_SkillMod );
 				// console.log("w_DMG[i] = " + w_DMG[i]);
@@ -6733,7 +6749,7 @@ function CalcSkillDamage()
 			// There are sub-hits for the magic formula
 			for ( var i = 0; i < 3; i++ )
 			{
-				w_DMG[i] = Math.floor( CalcMagicDamage( n_A_MATK[i] * w_SkillMod ) / w_TotalHits );
+				w_DMG[i] = Math.floor( CalcMagicDamage( CalcMATKMultipliers(n_A_MATK[i]) * w_SkillMod ) / w_TotalHits );
 				Last_DMG_A[i] = Last_DMG_B[i] = w_DMG[i] * w_TotalHits;
 				InnStr[i] += Last_DMG_A[i] + " (" + w_DMG[i] + SubName[8][Language] + w_TotalHits + "hit)";
 				w_DMG[i] *= w_TotalHits;

@@ -467,7 +467,7 @@ function CalcFinalDamage( damage, type )
 }
 
 // Calc Dmg from RAWDmg (rawDmg, (min,avg,max,crit:=10)), bypass def
-function CalcFinalDamage2( damage, type )
+function CalcFinalDamageBypassDef( damage, type )
 { 
 	var aura_blade = 0;
 	if ( n_A_WeaponType !== weapTyp_NONE && SkillSearch( skill_LK_AURA_BLADE ) )
@@ -1666,7 +1666,7 @@ function ApplySkillModifiers( damage )
 		// }
 	// }
 
-	damage = damage * (100+StPlusCalc2(bon_DMG_SKILL+n_A_ActiveSkill)+StPlusCard(bon_DMG_SKILL+n_A_ActiveSkill) + dmgMultiplier) /100;
+	damage = damage * (100+StPlusCalc2(bon_DMG_SKILL+n_A_ActiveSkill)+StPlusCard(bon_DMG_SKILL+n_A_ActiveSkill) + dmgMultiplier) /100;	
 	
 	if ( n_A_ActiveSkill == skill_RG_BACK_STAB &&
 		 n_A_WeaponType == weapTyp_BOW )
