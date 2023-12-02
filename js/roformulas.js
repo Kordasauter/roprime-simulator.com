@@ -2074,6 +2074,10 @@ function CalcAttackMod()
 			n_tok[bon_PHY_ATK] += 5;
 		}
 	}
+	if(EquipNumSearch(2684))
+	{//Tengu Shoes
+		n_tok[bon_PHY_ATK] += 4 * SkillSearch(skill_SUR_GENTLE_TOUCH_SILENCE);
+	}
 	
 //shadows
 	if ( EquipNumSearch( 1660 ) )
@@ -3968,6 +3972,10 @@ function calcHP()
 	{// Fallen Warrior Manteau
 		hpMultiplier += Math.floor(n_A_SHOULDER_DEF_PLUS / 2);
 	}
+	if(EquipNumSearch(2684))
+	{//Tengu Shoes
+		hpMultiplier += 2 * SkillSearch(skill_SUR_GENTLE_TOUCH_CURE);
+	}
 	
 //Shadows
 	if ( EquipNumSearch( 1653 ) )
@@ -4891,6 +4899,10 @@ function calcHardDef( n_A_totalDEF )
 		{
 			n_A_DEF += 50;
 		}
+	}
+	if(EquipNumSearch(2684))
+	{//Tengu Shoes
+		n_A_DEF += 30 * SkillSearch(skill_SUR_GENTLE_TOUCH_REVITALIZE);
 	}
 	
 // Shadows
@@ -6431,7 +6443,7 @@ function calcASPD()
 	n_A_ASPD += flatASPD + getSkillASPDFlat();
 
 	// Cap to limits ------------------------------------------
-	if ( thirdClass === 1 || n_A_JOB == cls_KAGOB || n_A_JOB == cls_ENOVI || n_A_JOB == cls_REB)
+	if ( thirdClass === 1 || n_A_JOB == cls_KAGOB || n_A_JOB == cls_ENOVI || n_A_JOB == cls_REB || n_A_JOB == cls_SUM)
 	{ // 3rd class
 		n_A_ASPD = Min( n_A_ASPD, 193 );
 	}
@@ -6453,7 +6465,7 @@ function getASPDPenalty()
 	if ( jobBaseASPD > 145 )
 		ASPDPenalty = 1 - (jobBaseASPD - 144) / 50;
 	
-	return ASPDPenalty;
+	return ASPDPenalty.toFixed(2);
 }
 
 function getASPDCorrection()
@@ -6462,7 +6474,7 @@ function getASPDCorrection()
 	if ( n_A_AGI < 205 )
 		ASPDCorrection = ( Math.sqrt( 205 ) - Math.sqrt( n_A_AGI ) ) / 7.15;
 	
-	return ASPDCorrection;	
+	return ASPDCorrection.toFixed(3);	
 }
 
 function getEquipASPDMul()
@@ -6716,6 +6728,10 @@ function getEquipASPDMul()
 		{
 			equipASPDMul += 5;
 		}
+	}
+	if(EquipNumSearch(2684))
+	{//Tengu Shoes
+		equipASPDMul += 2 * SkillSearch(skill_SUR_GENTLE_TOUCH_CHANGE);
 	}
 	
 	// if(EquipNumSearch())
@@ -7025,62 +7041,67 @@ function getSkillASPDFlat()
 // reset variable cast
 function CalcVariableCast()
 {
-	variableCastTime = ( 1 - Math.sqrt( ( n_A_DEX * 2 + n_A_INT ) / 530 ) );
-	variableCastTime = Max( variableCastTime, 0 );
+	let VTCRed = getStatVTCReduction();
+	VTCRed *= getGearVTCReduction()/100;
+	VTCRed *= getSkillVTCReduction()/100;
 	
-	
-	var VCT=100;
-	VCT += n_tok[bon_RED_CAST];
+	return VTCRed;
+}
+
+function getGearVTCReduction()
+{
+	let GearVTCReduc = 100;
+	GearVTCReduc += n_tok[bon_RED_CAST];
 	
 	if ( n_A_JobSearch() == cls_MAG && CardNumSearch( 454 ) )
 	{ // MageSet ?
-		VCT -= 15;
+		GearVTCReduc -= 15;
 	}
 	if ( n_A_JobSearch2() == cls_SAG && CardNumSearch( 460 ) )
 	{ // SageSet ?
-		VCT -= 15;
+		GearVTCReduc -= 15;
 	}
 	if ( EquipNumSearch( 750 ) )
 	{ // Set ?
-		VCT -= n_A_Weapon_ATKplus;
+		GearVTCReduc -= n_A_Weapon_ATKplus;
 	}
 	if ( n_A_card[8] == 177 )
 	{ // Katheryne
-		VCT -= n_A_HEAD_DEF_PLUS;
+		GearVTCReduc -= n_A_HEAD_DEF_PLUS;
 	}
 	/*if ( EquipNumSearch( 849 ) )
 	{ // Balloon Hat
-		VCT -= n_A_HEAD_DEF_PLUS;
+		GearVTCReduc -= n_A_HEAD_DEF_PLUS;
 	}*/
 	if ( n_A_Weapon_ATKplus >= 9 &&EquipNumSearch(1084))
 	{ // Glorious Arc Wand
-		VCT -= 5;
+		GearVTCReduc -= 5;
 	}
 	if ( n_A_Weapon_ATKplus >= 9 &&EquipNumSearch(1095))
 	{ // Glorious Apocalypse
-		VCT -= 5;
+		GearVTCReduc -= 5;
 	}
 	if(SU_DEX >= 120 && EquipNumSearch(1260))
 	{ // Magic Stone Hat
-		VCT -= 2;
+		GearVTCReduc -= 2;
 	}
 	if ( EquipNumSearch( 1145 ) )
 	{ // Mini Propeller (Kafra)
-		VCT -= n_A_HEAD_DEF_PLUS;
+		GearVTCReduc -= n_A_HEAD_DEF_PLUS;
 	}
 	if ( EquipNumSearch( 750 ) )
 	{ // Spiritual Ring/Soul Staff/Wizardry Staff
-		VCT -= n_A_Weapon_ATKplus;
+		GearVTCReduc -= n_A_Weapon_ATKplus;
 	}
 	if ( EquipNumSearch( 872 ) )
 	{ // Crown of Deceit
 		if ( n_A_HEAD_DEF_PLUS >= 7 )
 		{
-			VCT -= 5;
+			GearVTCReduc -= 5;
 		}
 		if ( n_A_HEAD_DEF_PLUS >= 9 )
 		{
-			VCT -= 5;
+			GearVTCReduc -= 5;
 		}
 	}
 	if ( EquipNumSearch( 1149 ) )
@@ -7089,84 +7110,84 @@ function CalcVariableCast()
 		{ // Evil Bone Wand or Thorn Staff of Darkness
 			if ( n_A_Weapon_ATKplus >= 10 )
 			{
-				VCT -= 10;
+				GearVTCReduc -= 10;
 			}
 		}
 	}
 	if ( EquipNumSearch( 1339 ) && n_A_HEAD_DEF_PLUS >= 8 )
 	{ // Capricorn Diadem
-		VCT -= 3;
+		GearVTCReduc -= 3;
 	}
 	if ( EquipNumSearch( 1344 ) && n_A_HEAD_DEF_PLUS >= 7 )
 	{ // Sagittarius Diadem
-		VCT -= 3;
+		GearVTCReduc -= 3;
 		if ( n_A_HEAD_DEF_PLUS >= 9 )
 		{
-			VCT -= 2;
+			GearVTCReduc -= 2;
 		}
 	}
 	if ( EquipNumSearch( 1006 ) )
 	{ // Rogue's Treasure + Black Cat
-		VCT -= Math.floor( n_A_Weapon_ATKplus / 2 );
+		GearVTCReduc -= Math.floor( n_A_Weapon_ATKplus / 2 );
 	}
 	if ( EquipNumSearch( 1497 ) )
 	{ // UFO Poring Hat
 		if ( n_A_HEAD_DEF_PLUS >= 7 )
 		{
-			VCT -= 5;
+			GearVTCReduc -= 5;
 		}
 	}
 	if( EquipNumSearch( 1964 ) )
 	{//Hero Magic Coat
 		if(n_A_BODY_DEF_PLUS % 2 == 1) // If an odd refine level
 		{
-			VCT += 20;
+			GearVTCReduc += 20;
 		}
 		else
 		{
-			VCT -= Math.floor(n_A_BODY_DEF_PLUS / 2);
+			GearVTCReduc -= Math.floor(n_A_BODY_DEF_PLUS / 2);
 		}
 	}
 	if( EquipNumSearch( 1968 ) )
 	{//Hero Nependess Shoes
 		if(n_A_SHOES_DEF_PLUS >=8)
-			VCT -= 5;
+			GearVTCReduc -= 5;
 		if(n_A_SHOES_DEF_PLUS >=8 && n_A_SHOES_DEF_PLUS < 11) 
-			VCT -= n_A_SHOES_DEF_PLUS - 8;
+			GearVTCReduc -= n_A_SHOES_DEF_PLUS - 8;
 		if(n_A_SHOES_DEF_PLUS >=11)
-			VCT -= 3;
+			GearVTCReduc -= 3;
 		if(n_A_SHOES_DEF_PLUS >=11 && n_A_SHOES_DEF_PLUS < 13)
-			VCT -= (n_A_SHOES_DEF_PLUS - 11) * 3;
+			GearVTCReduc -= (n_A_SHOES_DEF_PLUS - 11) * 3;
 		if(n_A_SHOES_DEF_PLUS >=13)
-			VCT -= 9;
+			GearVTCReduc -= 9;
 	}
 
 	if( ( EquipNumSearch(2063) || EquipNumSearch(2065) ) && n_A_Weapon_ATKplus >= 9)
 	{// Rusty Dragon's Wand || Shadow Eater
-		VCT -= 10;
+		GearVTCReduc -= 10;
 	}
 	if(EquipNumSearch(2068) && n_A_Weapon_ATKplus >= 11) 
 	{//Big Badaboom
-		VCT -= 15;
+		GearVTCReduc -= 15;
 	}
 	if(EquipNumSearch(2130))
 	{//Felrock's Cloak
 		if(n_A_SHOULDER_DEF_PLUS >= 7)
-			VCT -= 10;
+			GearVTCReduc -= 10;
 		if(n_A_SHOULDER_DEF_PLUS >= 9)
-			VCT -= 10;
+			GearVTCReduc -= 10;
 		if(n_A_SHOULDER_DEF_PLUS >= 12)
-			VCT -= 5;
+			GearVTCReduc -= 5;
 	}
 	if(EquipNumSearch(2236))
 	{// Agenda Robe + Ancient Cape[0]\[1]
-		VCT -= n_A_BODY_DEF_PLUS * 2;
+		GearVTCReduc -= n_A_BODY_DEF_PLUS * 2;
 	}
 	if(EquipNumSearch(2234))
 	{//Mercenary Ring Type B
 		if(n_A_JobSearch() == cls_NOV)
 		{
-			VCT -= 30;
+			GearVTCReduc -= 30;
 		}
 	}
 	
@@ -7174,37 +7195,37 @@ function CalcVariableCast()
 	{ //"Shadow Wizard Boots"
 		if ( n_A_ActiveSkill == skill_WI_METEOR_STORM || n_A_ActiveSkill == skill_WI_LORD_OF_VERMILLION || n_A_ActiveSkill == skill_WI_STORM_GUST )
 		{
-			VCT -= 3 * n_A_SHADOW_SHOES_DEF_PLUS;
+			GearVTCReduc -= 3 * n_A_SHADOW_SHOES_DEF_PLUS;
 		}
 	}
 	
 	if( EquipNumSearch(2309) || //Mechanic set
 		EquipNumSearch(2314) )  //Geneticist set
 	{
-		VCT -= Math.floor((n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_SHIELD_DEF_PLUS)/2);
+		GearVTCReduc -= Math.floor((n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_SHIELD_DEF_PLUS)/2);
 	}
 	
 	if( EquipNumSearch( 1824 ) ) //Shadow Super Novice Shield
 	{
-		VCT -= n_A_SHADOW_SHIELD_DEF_PLUS;
-		if(n_A_SHADOW_SHIELD_DEF_PLUS >= 9){ VCT -= SkillSearch(skill_AR_OWLS_EYE);}
+		GearVTCReduc -= n_A_SHADOW_SHIELD_DEF_PLUS;
+		if(n_A_SHADOW_SHIELD_DEF_PLUS >= 9){ GearVTCReduc -= SkillSearch(skill_AR_OWLS_EYE);}
 	}
 	if ( EquipNumSearch(1996) )
 	{ // Shadow Doram Mage Gloves
-		VCT -= n_A_SHADOW_WEAPON_DEF_PLUS;
+		GearVTCReduc -= n_A_SHADOW_WEAPON_DEF_PLUS;
 	}
 	if(n_A_Equip[eq_ACCI] == 2449)
 	{//Demon God's Ring
 		if(n_A_card[card_loc_ACCI] == 647 || n_A_card[card_loc_ACCI] == 648 || n_A_card[card_loc_ACCI] == 649)
 		{
-			VCT -= 5;
+			GearVTCReduc -= 5;
 		}
 	}
 	if(n_A_Equip[eq_ACCII] == 2449)
 	{//Demon God's Ring
 		if(n_A_card[card_loc_ACCII] == 647 || n_A_card[card_loc_ACCII] == 648 || n_A_card[card_loc_ACCII] == 649)
 		{
-			VCT -= 5;
+			GearVTCReduc -= 5;
 		}
 	}
 	
@@ -7212,70 +7233,48 @@ function CalcVariableCast()
 	{// Mechanical Plant Hat
 		if(CardNumSearch(339))//Tower Keeper Card
 		{
-			VCT -= 10;
+			GearVTCReduc -= 10;
 		}
 	}
+	
 //Enchants
 	if(EnchNumSearch( 5247 ))
 	{//Modification Orb (Caster)
 		if(n_A_SHOULDER_DEF_PLUS >= 7)
-			VCT -= 3 * EnchNumSearch( 5247 );
+			GearVTCReduc -= 3 * EnchNumSearch( 5247 );
 		if(n_A_SHOULDER_DEF_PLUS >= 9)
-			VCT -= 3 * EnchNumSearch( 5247 );
-	}
-	
-// Skills
-	if ( performerBuffs[ksBardSolo] === ksMagicStrings && performerBuffs[ksBardSoloLevel] > 0 )
-	{ // Magic Strings
-		var skillBonus = performerBuffs[ksBardSoloLevel];
-		/*var musicLessonsBonus = performerBuffs[ksMusicLessons];
-		var dexBonus = Math.floor( performerBuffs[ksBardDex] / 10 );
-		VCT -= skillBonus + musicLessonsBonus + dexBonus;*/
-		VCT -= skillBonus * 2;
-	}
-	if ( SkillSearch(skill_KAG_16TH_NIGHT) ) {
-		VCT -= 50;
+			GearVTCReduc -= 3 * EnchNumSearch( 5247 );
 	}
 	
 	if ( TimeItemNumSearch( temp_ISILLA ) )
 	{ // Isilla
-		VCT -= 50;
+		GearVTCReduc -= 50;
 	}
-
-	if ( VCT < 0 )
-	{
-		VCT=0;
-	}
-
-	variableCastTime *= VCT /100;
-
-	VCT = 100;
-	
-	if(StPlusCalc2(bon_CAST_SKILL+ n_A_ActiveSkill) != 0)
-		VCT -= StPlusCalc2(bon_CAST_SKILL+ n_A_ActiveSkill);
+		if(StPlusCalc2(bon_CAST_SKILL+ n_A_ActiveSkill) != 0)
+		GearVTCReduc -= StPlusCalc2(bon_CAST_SKILL+ n_A_ActiveSkill);
 	if(StPlusCard(bon_CAST_SKILL+ n_A_ActiveSkill) != 0)
-		VCT -= StPlusCard(bon_CAST_SKILL+ n_A_ActiveSkill);
+		GearVTCReduc -= StPlusCard(bon_CAST_SKILL+ n_A_ActiveSkill);
 	if(StPlusEnchant(bon_CAST_SKILL+ n_A_ActiveSkill) != 0)
-		VCT -= StPlusEnchant(bon_CAST_SKILL+ n_A_ActiveSkill);
+		GearVTCReduc -= StPlusEnchant(bon_CAST_SKILL+ n_A_ActiveSkill);
 	if ( n_A_ActiveSkill==321 || n_A_ActiveSkill==197)
 	{ // Guillotine Fist
 		if ( SkillSearch(195) && n_A_Weapon_ATKplus >= 9 && EquipNumSearch(1097))
 		{ // Glorious Fist
-			VCT -= 100;
+			GearVTCReduc -= 100;
 		}
 	}
 	if ( n_A_ActiveSkill === 430 )
 	{ // Tracking
 		if ( n_A_Weapon_ATKplus >= 9 && EquipNumSearch( 1100 ) )
 		{ // Glorious Rifle
-			VCT += 25;
+			GearVTCReduc += 25;
 		}
 	}
 	if ( (EquipNumSearch( 1637 ) ) )
 	{// "Thanatos' Dolor Hat"
 		if(n_A_HEAD_DEF_PLUS > 8)
 		{
-			VCT -= 10;
+			GearVTCReduc -= 10;
 		}
 	}
 	
@@ -7283,27 +7282,36 @@ function CalcVariableCast()
 	{// "Shadow Diviner Ring"
 		if(n_A_SHADOW_EARRING_DEF_PLUS >= 7)
 		{
-			VCT -= 2;
+			GearVTCReduc -= 2;
 		}
 	}
+	return Max( GearVTCReduc, 0);
+}
+
+function getSkillVTCReduction()
+{
+	let SkillVTCReduc = 100;
 	
-	
-	
-	
-	if ( VCT < 0 )
-	{
-		VCT = 0;
+	// Skills
+	if ( performerBuffs[ksBardSolo] === ksMagicStrings && performerBuffs[ksBardSoloLevel] > 0 )
+	{ // Magic Strings
+		var skillBonus = performerBuffs[ksBardSoloLevel];
+		/*var musicLessonsBonus = performerBuffs[ksMusicLessons];
+		var dexBonus = Math.floor( performerBuffs[ksBardDex] / 10 );
+		VCT -= skillBonus + musicLessonsBonus + dexBonus;*/
+		SkillVTCReduc -= skillBonus * 2;
 	}
-	
-	variableCastTime *= VCT /100;
+	if ( SkillSearch(skill_KAG_16TH_NIGHT) ) {
+		SkillVTCReduc -= 50;
+	}
 
 	if ( acolyteBuffs[ksSuffragium] )
 	{
-		variableCastTime *= ( 100 - ( 5 + ( 5 * acolyteBuffs[ksSuffragium] ) ) ) / 100;
+		SkillVTCReduc *= ( 100 - ( 5 + ( 5 * acolyteBuffs[ksSuffragium] ) ) ) / 100;
 	}
 	if ( SkillSearch( skill_PR_MEMORIZE ) )
 	{
-		variableCastTime = variableCastTime / 2;
+		SkillVTCReduc = SkillVTCReduc / 2;
 	}
 		
 	if ( SkillSearch( skill_WAR_READING_SPELLBOOK ) )
@@ -7312,22 +7320,33 @@ function CalcVariableCast()
 		var w2 = [51,54,56,57,125,126,127,128,131,132,133,534,540,542,545,547,553];
 		if ( NumSearch( n_A_ActiveSkill, w2 ) )
 		{
-			variableCastTime = 0;
+			SkillVTCReduc = 0;
 		}
 	}
 	
 	if (SkillSearch(skill_WAR_INTENSE_TELEKINESIS)) {
-	    variableCastTime -= (10 * SkillSearch(skill_WAR_INTENSE_TELEKINESIS)) / 100;
+	    SkillVTCReduc -= (10 * SkillSearch(skill_WAR_INTENSE_TELEKINESIS)) / 100;
 	}
 	
 	if((otherBuffs[ksInsignia] == ksWaterInsignia) && (otherBuffs[ksInsigniaLvl] == 3) && (n_A_Weapon_element += ele_WATER))
-		variableCastTime -= 30;
+		SkillVTCReduc -= 30;
 	if((otherBuffs[ksInsignia] == ksWindInsignia) && (otherBuffs[ksInsigniaLvl] == 3) && (n_A_Weapon_element += ele_WIND))
-		variableCastTime -= 30;
+		SkillVTCReduc -= 30;
 		
-	return variableCastTime;
+	return Max( SkillVTCReduc, 0);
 }
 
+function getStatVTCReduction()
+{
+	return Max( ( 1 - Math.sqrt( ( n_A_DEX * 2 + n_A_INT ) / 530 ) ), 0 );
+}
+
+function getFlatVTCReduction()
+{
+	let FlatVTCReduc = 0;
+	
+	return FlatVTCReduc;
+}
 function CalcFixedCast()
 {
 	fixedCastTime = 1;
@@ -8211,6 +8230,10 @@ function calcRaceElementalReduction()
 	{//Winged Diadem
 			n_tok[bon_RED_BOSS] += n_A_HEAD_DEF_PLUS;
 		
+	}
+	if(EquipNumSearch(2684))
+	{//Tengu Shoes
+		n_tok[bon_RED_RC_DEMI_HUMAN] += SkillSearch(skill_SUR_GENTLE_TOUCH_REVITALIZE);
 	}
 
 	// Sanctuary. Not sure why this is here...

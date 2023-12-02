@@ -1008,6 +1008,11 @@ function SetCard()
 ,[901,   itm_type_SET,"Turtle General + Ominous Turtle General","",bon_HIT,25,bon_RED_SIZ_SMALL,5,bon_RED_SIZ_MEDIUM,5,bon_RED_SIZ_LARGE,5,bon_DMG_SIZ_SMALL,20,bon_DMG_SIZ_MEDIUM,20,bon_DMG_SIZ_LARGE,20,0]
 //
 ,[902,   card_comp_HEAD,"Weakened Fenrir","",bon_MATK,25,0]
+//
+,[903,   card_com_ARMOR,"Odd Coelacanth","",bon_SP_MUL,5,bon_MDEF,50,0]
+,[904,   card_com_ARMOR,"Black Coelacanth","",bon_HP_MUL,10,bon_DEF,100,0]
+,[905,   card_comp_HEAD,"Mutant Coelacanth","",bon_MATK_MUL,2,"ev_head_ref",2,bon_MATK_MUL,1,"ev_head_ref",2,bon_HP_MUL,-1,0]
+,[906,   card_comp_HEAD,"Cruel Coelacanth","",bon_PHY_ATK,2,"ev_head_ref",2,bon_PHY_ATK,1,"ev_head_ref",2,bon_SP_MUL,-1,0]
 ];
 
 CardNum = cardOBJ.length -1;

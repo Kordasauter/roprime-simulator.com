@@ -2785,7 +2785,17 @@
 ,[2677,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ASPD_ADD,2,bon_MATK,70,"weap_ref_lvl",10,bon_INC_MAGIC_ALL,10,bon_NONE]//Elemental Boots + Elemental Sword
 ,[2678,itm_type_SHIELD,0,40,0,1,10,1,0,0,0,0,bon_DEX,1,bon_MDEF,6,bon_RED_ELE_NEUTRAL,5,bon_RED_ELE_WATER,5,bon_RED_ELE_EARTH,5,bon_RED_ELE_FIRE,5,bon_RED_ELE_WIND,5,bon_RED_ELE_POISON,5,bon_RED_ELE_HOLY,5,bon_RED_ELE_SHADOW,5,bon_RED_ELE_GHOST,5,bon_RED_ELE_UNDEAD,5,bon_NONE]//Mad Bunny
 ,[2679,itm_type_ACCESSORY,0,0,0,1,10,100,0,0,0,0,bon_ASPD_MUL,10,"bstr_hi",120,bon_ATK,50,"bstr_hi",120,bon_HP_MUL,5,"bstr_hi",120,bon_SP_MUL,5,bon_NONE]//Ring of Hero
-// ,[2680,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+,[2680,itm_type_HEAD_MIDDLE,0,0,0,1,10,1,0,0,0,0,bon_ATK,5,bon_MATK,5,bon_RED_CASTDELAY,4,bon_NONE]//Wings of Fortune
+,[2681,itm_type_HEAD_LOWER,0,0,0,0,10,100,0,0,0,0,bon_RED_CASTDELAY,3,bon_NONE]//Open Air Headset
+,[2682,itm_type_ARMOR,0,60,0,0,80,100,0,0,0,0,bon_ATK,10,bon_DMG_RANGE,5,"ref_lvl",9,bon_ATK,20,"ref_lvl",9,bon_DMG_RANGE,5,"ref_lvl",10,bon_ATK,20,"ref_lvl",10,bon_DMG_RANGE,10,"ref_lvl",10,bon_UNBREAKABLE,1,"ref_lvl",11,bon_ATK,30,"ref_lvl",11,bon_DMG_RANGE,10,bon_NONE]//Purple Armor
+,[2683,itm_type_ACCESSORY,0,0,0,1,10,20,0,0,0,0,bon_CRIT,5,bon_ASPD_MUL,5,"ev_blvl",15,bon_DMG_SKILL + skill_SUR_DRAGON_COMBO,2,"ev_blvl",20,bon_DMG_SKILL + skill_SUR_KNUCKLE_ARROW,2,"ev_blvl",30,bon_DMG_SKILL + skill_SUR_SKY_NET_BLOW,2,bon_NONE]//Fallen Monk Rosary
+,[2684,itm_type_SHOES,0,12,0,0,40,100,0,0,0,0,bon_HP_MUL,3,bon_SP_MUL,3,bon_MDEF,10,bon_SKILL_ENABLE,76,"ref_lvl",5,bon_HP_MUL,7,"ref_lvl",5,bon_SP_MUL,7,"ref_lvl",7,bon_HP_MUL,10,"ref_lvl",7,bon_SP_MUL,10,bon_NONE]//Tengu Shoes
+// ,[2685,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2686,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2687,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2688,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2689,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2690,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
 
 
 // ,[,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK,50,"set_ref"+(fl_WEAPON+fl_HEAD),7,bon_RED_CAST,-10,"set_sum"+(fl_WEAPON+fl_HEAD),18,bon_MDMG_SIZ_SMALL,15,"set_sum"+(fl_WEAPON+fl_HEAD),18,bon_MDMG_SIZ_MEDIUM,15,"set_sum"+(fl_WEAPON+fl_HEAD),22,bon_MATK,50,"set_sum"+(fl_WEAPON+fl_HEAD),22,bon_INC_MAGIC_FIRE,20,bon_NONE]//Illusion Fancy Flower + Illusion Bazerald
