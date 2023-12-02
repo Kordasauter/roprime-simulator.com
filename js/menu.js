@@ -5,7 +5,7 @@ function setMenu()
 	
 	let str = "";
 	let code = CentralLabCode();
-	str +="<div class=\"sidebar-heading\">Last update : 18/11/2023</div>";
+	str +="<div class=\"sidebar-heading\">Last update : 02/12/2023</div>";
 	if(index == "index.html" || path == "/")
 		str +="<li class=\"nav-item active\">";
 	else
@@ -187,7 +187,7 @@ function CentralLabCode()
 	// create new Date object for different city
 	// using supplied offset
 	var nd = new Date(utc + (3600000*offset));
-	<!-- d = d.getTime() + (d.getTimezoneOffset()); -->
+	//<!-- d = d.getTime() + (d.getTimezoneOffset()); -->
 	let code = ((nd.getMonth() + 1) + (nd.getDate())) * 5
 	bincode[8] = code;
 	for(let i = 7; i >= 0; i--)
