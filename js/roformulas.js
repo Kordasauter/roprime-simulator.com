@@ -1041,6 +1041,10 @@ function CalcEquipAtk()
 	{//Toy Ring
 		equipmentAttack += 10 * Math.floor(SkillSearch(skill_SW_SWORD_MASTERY)/2) * EquipNumSearch(2641);
 	}
+	if(EquipNumSearch(2687))
+	{//Emerald Ring
+		equipmentAttack += 20 * Math.floor(SkillSearch(skill_AR_DOUBLE_STRAFE));
+	}
 	
 //Cards
 	if(CardNumSearch(557))
@@ -3976,6 +3980,10 @@ function calcHP()
 	{//Tengu Shoes
 		hpMultiplier += 2 * SkillSearch(skill_SUR_GENTLE_TOUCH_CURE);
 	}
+	if(EquipNumSearch(2685))
+	{//Traveler's Shoes
+		hpMultiplier += 2 * SkillSearch(skill_MIWA_FRIGGS_SONG);
+	}
 	
 //Shadows
 	if ( EquipNumSearch( 1653 ) )
@@ -6733,6 +6741,11 @@ function getEquipASPDMul()
 	{//Tengu Shoes
 		equipASPDMul += 2 * SkillSearch(skill_SUR_GENTLE_TOUCH_CHANGE);
 	}
+
+	if(EquipNumSearch(2685))
+	{//Traveler's Shoes
+		equipASPDMul += 4 * SkillSearch(skill_MIN_HARMONIZE);
+	}
 	
 	// if(EquipNumSearch())
 	// {
@@ -7235,6 +7248,11 @@ function getGearVTCReduction()
 		{
 			GearVTCReduc -= 10;
 		}
+	}
+	
+	if(EquipNumSearch(2685) && n_A_ActiveSkill == skill_MIWA_METALLIC_SOUND)
+	{//Traveler's Shoes
+		GearVTCReduc -= 10 * SkillSearch(skill_MIWA_GLOOMY_SHYNESS);
 	}
 	
 //Enchants

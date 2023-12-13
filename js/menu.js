@@ -5,7 +5,7 @@ function setMenu()
 	
 	let str = "";
 	let code = CentralLabCode();
-	str +="<div class=\"sidebar-heading\">Last update : 02/12/2023</div>";
+	str +="<div class=\"sidebar-heading\">Last update : 13/12/2023</div>";
 	if(index == "index.html" || path == "/")
 		str +="<li class=\"nav-item active\">";
 	else

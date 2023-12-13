@@ -1656,6 +1656,16 @@ function ApplySkillModifiers( damage )
 	{ // Elemental Tights + Gale Bow
 		dmgMultiplier += n_A_SHOULDER_DEF_PLUS * 5;
 	}
+
+	if(EquipNumSearch(2685) && (n_A_ActiveSkill == skill_MIWA_METALLIC_SOUND))
+	{//Traveler's Shoes
+		dmgMultiplier += 10 * SkillSearch(skill_MIWA_GLOOMY_SHYNESS);
+	}
+
+	if(EquipNumSearch(2687) && (n_A_ActiveSkill == skill_RAN_ARROW_STORM) && (n_A_HEAD_DEF_PLUS >= 9))
+	{//Autumn Headband
+		dmgMultiplier += Math.floor(n_A_BaseLV / 5);
+	}
 	
 	// if ( n_A_ActiveSkill==skill_WI_EARTH_SPIKE ||
 		 // n_A_ActiveSkill == skill_WI_HEAVENS_DRIVE )

@@ -2790,10 +2790,10 @@
 ,[2682,itm_type_ARMOR,0,60,0,0,80,100,0,0,0,0,bon_ATK,10,bon_DMG_RANGE,5,"ref_lvl",9,bon_ATK,20,"ref_lvl",9,bon_DMG_RANGE,5,"ref_lvl",10,bon_ATK,20,"ref_lvl",10,bon_DMG_RANGE,10,"ref_lvl",10,bon_UNBREAKABLE,1,"ref_lvl",11,bon_ATK,30,"ref_lvl",11,bon_DMG_RANGE,10,bon_NONE]//Purple Armor
 ,[2683,itm_type_ACCESSORY,0,0,0,1,10,20,0,0,0,0,bon_CRIT,5,bon_ASPD_MUL,5,"ev_blvl",15,bon_DMG_SKILL + skill_SUR_DRAGON_COMBO,2,"ev_blvl",20,bon_DMG_SKILL + skill_SUR_KNUCKLE_ARROW,2,"ev_blvl",30,bon_DMG_SKILL + skill_SUR_SKY_NET_BLOW,2,bon_NONE]//Fallen Monk Rosary
 ,[2684,itm_type_SHOES,0,12,0,0,40,100,0,0,0,0,bon_HP_MUL,3,bon_SP_MUL,3,bon_MDEF,10,bon_SKILL_ENABLE,76,"ref_lvl",5,bon_HP_MUL,7,"ref_lvl",5,bon_SP_MUL,7,"ref_lvl",7,bon_HP_MUL,10,"ref_lvl",7,bon_SP_MUL,10,bon_NONE]//Tengu Shoes
-// ,[2685,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2686,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2687,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2688,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+,[2685,itm_type_SHOES,0,15,0,0,50,100,0,0,0,0,bon_HP_MUL,3,bon_SP_MUL,3,bon_MATK_MUL,2,bon_INC_MAGIC_NEUTRAL,2,"ref_lvl",5,bon_HP_MUL,7,"ref_lvl",5,bon_SP_MUL,7,"ref_lvl",5,bon_MATK_MUL,3,"ref_lvl",5,bon_INC_MAGIC_NEUTRAL,3,"ref_lvl",7,bon_HP_MUL,10,"ref_lvl",7,bon_SP_MUL,10,"ref_lvl",7,bon_MATK_MUL,5,"ref_lvl",7,bon_INC_MAGIC_NEUTRAL,5,bon_NONE]//Traveler Shoes
+,[2686,itm_type_HEAD_UPPER,0,0,0,1,1,1,0,0,0,0,bon_INT,3,"ev_ref",1,bon_MATK_MUL,1,"ref_lvl",7,bon_DMG_SKILL + skill_MIWA_REVERBERATION,30,"ref_lvl",10,bon_DELAY_SKILL_FLAT + skill_MIWA_METALLIC_SOUND,2,bon_NONE]//
+,[2687,itm_type_HEAD_UPPER,210,10,0,1,20,100,0,0,0,0,"ev_bdex",5,bon_ATK,2,bon_CAST_SKILL + skill_RAN_ARROW_STORM,100,bon_NONE]//Autumn Headband
+,[2688,itm_type_ACCESSORY,0,0,0,1,30,100,0,0,0,0,bon_AGI,5,bon_VIT,5,bon_DEX,5,"ev_blvl",1,bon_DMG_SKILL + skill_AR_ARROW_SHOWER,1,"ev_blvl",1,bon_DMG_SKILL + skill_AR_DOUBLE_STRAFE,1,"ev_blvl",10,bon_DMG_SKILL + skill_MIWA_SEVERE_RAINSTORM,2,bon_NONE]//Emerald Ring
 // ,[2689,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
 // ,[2690,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
 

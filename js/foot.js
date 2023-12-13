@@ -948,6 +948,21 @@ function StPlusCalc()
 		wSPC_VIT += n_A_BODY_DEF_PLUS;
 		wSPC_LUK += n_A_BODY_DEF_PLUS;
 	}
+	if(EquipNumSearch(2685))
+	{//Traveler's Shoes
+		wSPC_STR += SkillSearch(skill_WAN_SWING_DANCE);
+		wSPC_AGI += SkillSearch(skill_WAN_SWING_DANCE);
+		wSPC_VIT += SkillSearch(skill_WAN_SWING_DANCE);
+		wSPC_INT += SkillSearch(skill_WAN_SWING_DANCE);
+		wSPC_DEX += SkillSearch(skill_WAN_SWING_DANCE);
+		wSPC_LUK += SkillSearch(skill_WAN_SWING_DANCE);
+	}
+	if(EquipNumSearch(2687))
+	{//Emerald Ring
+		wSPC_AGI += Math.floor(SkillSearch(skill_AR_DOUBLE_STRAFE));
+		wSPC_VIT += Math.floor(SkillSearch(skill_AR_DOUBLE_STRAFE));
+		wSPC_DEX += Math.floor(SkillSearch(skill_AR_DOUBLE_STRAFE));
+	}
 	
 
 	wSPCall = StPlusCard(bon_ALL_STATS);
