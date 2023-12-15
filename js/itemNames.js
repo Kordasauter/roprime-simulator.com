@@ -2708,7 +2708,7 @@ ITEM_NAME = [
 ,[2686,"Крылофон",0,"Winged Headphones",0]
 ,[2687,"Ободок осенних листьев","<br>Уменьшает затрату SP при использовании умения Ливень стрел на 28.<br>Шанс 4% на востановление 1% SP при совершении физической атаки.<br>[При заточке на +9 и выше]<br>Увеличивает урон от умения Ливень стрел на 1% за каждые 5 базовых уровней.","Autumn Headband","<br>Reduces the SP cost of Arrow Storm by 28.<br>Adds a 4% chance of restoring 1% of damage as SP when performing a physical attack.<br>If upgrade level is +9 or higher,<br>Increases the damage of Arrow Storm by 1% for every 5 base levels.",0]
 ,[2688,"Изумрудное кольцо","<br>Ловкость + 1 за каждые 2 уровня умения Двойной выстрел.<br>Живучесть +1 за каждые 2 уровня умения Двойной выстрел.<br>Сноровка + 1 за каждые 2 уровня умения Двойной выстрел.<br>Атака + 20 за каждые 2 уровня умения Двойной выстрел.<br>Уменьшает затрату SP при использовании умения Импровизация на 18.","Emerald Ring","<br>Additional Agi + 1 per 2 levels of Double Strafe known.<br>Vit + 5<br>Additional Vit + 1 per 2 levels of Double Strafe known.<br>Dex + 5<br>Additional Dex + 1 per 2 levels of Double Strafe known.<br>Atk + 20 per 2 levels of Double Strafe known.",0]
-// ,[2689,"",0,"PlaceHolder",0]
+,[2689,"Изумрудное кольцо (10 уровня умения Двойной выстрел)",0,"Emerald Ring (Double Strafe level 10)",0]
 // ,[2690,"",0,"PlaceHolder",0]
 ]
 };

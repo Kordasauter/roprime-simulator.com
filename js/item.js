@@ -2794,7 +2794,7 @@
 ,[2686,itm_type_HEAD_UPPER,0,0,0,1,1,1,0,0,0,0,bon_INT,3,"ev_ref",1,bon_MATK_MUL,1,"ref_lvl",7,bon_DMG_SKILL + skill_MIWA_REVERBERATION,30,"ref_lvl",10,bon_DELAY_SKILL_FLAT + skill_MIWA_METALLIC_SOUND,2,bon_NONE]//
 ,[2687,itm_type_HEAD_UPPER,210,10,0,1,20,100,0,0,0,0,"ev_bdex",5,bon_ATK,2,bon_CAST_SKILL + skill_RAN_ARROW_STORM,100,bon_NONE]//Autumn Headband
 ,[2688,itm_type_ACCESSORY,0,0,0,1,30,100,0,0,0,0,bon_AGI,5,bon_VIT,5,bon_DEX,5,"ev_blvl",1,bon_DMG_SKILL + skill_AR_ARROW_SHOWER,1,"ev_blvl",1,bon_DMG_SKILL + skill_AR_DOUBLE_STRAFE,1,"ev_blvl",10,bon_DMG_SKILL + skill_MIWA_SEVERE_RAINSTORM,2,bon_NONE]//Emerald Ring
-// ,[2689,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+,[2689,itm_type_ACCESSORY,0,0,0,1,30,100,0,0,0,0,bon_AGI,10,bon_VIT,10,bon_DEX,10,bon_ATK,100,"ev_blvl",1,bon_DMG_SKILL + skill_AR_ARROW_SHOWER,1,"ev_blvl",1,bon_DMG_SKILL + skill_AR_DOUBLE_STRAFE,1,"ev_blvl",10,bon_DMG_SKILL + skill_MIWA_SEVERE_RAINSTORM,2,bon_NONE]//Emerald Ring
 // ,[2690,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
 
 

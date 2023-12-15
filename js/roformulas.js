@@ -1041,10 +1041,10 @@ function CalcEquipAtk()
 	{//Toy Ring
 		equipmentAttack += 10 * Math.floor(SkillSearch(skill_SW_SWORD_MASTERY)/2) * EquipNumSearch(2641);
 	}
-	if(EquipNumSearch(2687))
-	{//Emerald Ring
-		equipmentAttack += 20 * Math.floor(SkillSearch(skill_AR_DOUBLE_STRAFE));
-	}
+	// if(EquipNumSearch(2688))
+	// {//Emerald Ring
+	// 	equipmentAttack += 20 * Math.floor(SkillSearch(skill_AR_DOUBLE_STRAFE));
+	// }
 	
 //Cards
 	if(CardNumSearch(557))

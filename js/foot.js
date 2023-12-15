@@ -957,12 +957,12 @@ function StPlusCalc()
 		wSPC_DEX += SkillSearch(skill_WAN_SWING_DANCE);
 		wSPC_LUK += SkillSearch(skill_WAN_SWING_DANCE);
 	}
-	if(EquipNumSearch(2687))
-	{//Emerald Ring
-		wSPC_AGI += Math.floor(SkillSearch(skill_AR_DOUBLE_STRAFE));
-		wSPC_VIT += Math.floor(SkillSearch(skill_AR_DOUBLE_STRAFE));
-		wSPC_DEX += Math.floor(SkillSearch(skill_AR_DOUBLE_STRAFE));
-	}
+	// if(EquipNumSearch(2688))
+	// {//Emerald Ring
+	// 	wSPC_AGI += Math.floor(SkillSearch(skill_AR_DOUBLE_STRAFE));
+	// 	wSPC_VIT += Math.floor(SkillSearch(skill_AR_DOUBLE_STRAFE));
+	// 	wSPC_DEX += Math.floor(SkillSearch(skill_AR_DOUBLE_STRAFE));
+	// }
 	
 
 	wSPCall = StPlusCard(bon_ALL_STATS);
