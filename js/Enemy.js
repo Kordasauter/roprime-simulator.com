@@ -711,6 +711,20 @@ with( document.calcForm )
 function CalcIgnDef()
 {	
 //Physic
+	if ( n_tok[bon_IGN_DEF_RC_FORMLESS+n_B[en_RACE]] >= 1 )
+	{
+		n_tok[bon_DEFIGN_RC_FORMLESS+n_B[en_RACE]] = 100;
+	}
+
+	if ( n_tok[bon_IGN_DEF_NONBOSS] >= 1 && n_B[en_BOSS] == 0 )
+	{
+		n_tok[bon_DEFIGN_RC_BOSS] = 100;
+	}
+
+	if ( n_tok[bon_IGN_DEF_NONBOSS] >= 10 )
+	{
+		n_tok[bon_DEFIGN_RC_NON_BOSS] = 100;
+	}
 	for(var i = 0 ; i < 6 ; i++)
 	{
 		if ( EquipNumSearch( 2037 + i ) && i != 3)
@@ -843,6 +857,20 @@ function CalcIgnDef()
 	if(EquipNumSearch(2305) || EquipNumSearch(2307) || EquipNumSearch(2313))
 	{//Guillotine Cross Set || Ranger Set || Wanderer Set
 		n_tok[bon_DEFIGN_RC_ALL] += n_A_SHADOW_SHIELD_DEF_PLUS + n_A_SHADOW_WEAPON_DEF_PLUS;
+	}
+	if( EquipNumSearch(2210) )   
+	{// Abusive Robe
+		n_tok[bon_DEFIGN_RC_DEMI_HUMAN] += 4 * n_A_BODY_DEF_PLUS;
+		n_tok[bon_DEFIGN_RC_DEMON] += 4 * n_A_BODY_DEF_PLUS;
+		n_tok[bon_DEFIGN_RC_UNDEAD] += 4 * n_A_BODY_DEF_PLUS;
+	}
+	if(EquipNumSearch(2588))
+	{//Fire Dance Shadow Earring + Shadow Rebellion Armor
+		n_tok[bon_DEFIGN_RC_ALL] += (n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_SHOES_DEF_PLUS);
+	}
+	if(EquipNumSearch(2590))
+	{//Fire Dance Shadow Earring + Shadow Rebellion Armor
+		n_tok[bon_DEFIGN_RC_ALL] += (n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_SHOES_DEF_PLUS);
 	}
 //Magic
 	if ( acolyteBuffs[ksExpiatio] )

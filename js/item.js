@@ -1805,7 +1805,7 @@
 ,[1788,itm_type_HEAD_UPPER,0,1,0,0,10,0,0,0,0,0,bon_RED_RC_BRUTE,5,bon_RED_RC_PLANT,5,bon_DMG_RC_BRUTE,5,bon_DMG_RC_PLANT,5,bon_NONE] // Jaty Crown
 ,[1789,weapTyp_DAGGER,0,107,3,1,70,30,0,0,0,0,bon_WEAPON_MATK,70,bon_NONE] // Keris
 //,0,0,0,0,
-,[1790,itm_type_HEAD_UPPER,0,5,0,1,60,1,0,0,0,0,bon_FLEE,10,bon_AGI,5,bon_IGN_DEF_RC_DEMI_HUMAN,10,bon_IGN_DEF_RC_BRUTE,10,bon_SKILL_ENABLE,52,bon_NONE] // Wolf King Helm
+,[1790,itm_type_HEAD_UPPER,0,5,0,1,60,1,0,0,0,0,bon_FLEE,10,bon_AGI,5,bon_DEFIGN_RC_DEMI_HUMAN,10,bon_DEFIGN_RC_BRUTE,10,bon_SKILL_ENABLE,52,bon_NONE] // Wolf King Helm
 //Eclage,0,0,0,0,
 ,[1791,itm_type_ACCESSORY,0,0,0,0,5,0,0,0,0,0,bon_MDEF,10,bon_NONE] // "Ettlang Keepsake"
 ,[1792,itm_type_ACCESSORY,0,0,0,1,10,100,0,0,0,0,bon_HP_ADD,100,bon_SP_ADD,20,bon_NONE] // "Str Glove"
@@ -2250,8 +2250,8 @@
 ,[2208,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_SP_MUL,10,bon_FLEE,10,bon_NONE] // Flattery Robe + Ancient Cape[0]\[1]
 ,[2209,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_HP_MUL,10,bon_MATK_MUL,2,bon_NONE] // Flattery Robe + Survivor''s Manteau'
 ,[2210,itm_type_ARMOR,0,0,0,1,10,100,0,0,101,101,bon_SKILL_ENABLE,64,bon_NONE] // Abusive Robe
-,[2211,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_IGN_DEF_RC_DEMI_HUMAN,15,bon_IGN_DEF_RC_DEMON,15,bon_IGN_DEF_RC_UNDEAD,15,bon_LUK,3,bon_CRIT,10,bon_NONE] // Abusive Robe + Morrigane''s Manteau'
-,[2212,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_IGN_DEF_RC_DEMI_HUMAN,15,bon_IGN_DEF_RC_DEMON,15,bon_IGN_DEF_RC_UNDEAD,15,bon_HP_MUL,10,bon_PHY_ATK,2,bon_NONE] // Abusive Robe + Valkyrie Manteau
+,[2211,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DEFIGN_RC_DEMI_HUMAN,15,bon_DEFIGN_RC_DEMON,15,bon_DEFIGN_RC_UNDEAD,15,bon_LUK,3,bon_CRIT,10,bon_NONE] // Abusive Robe + Morrigane''s Manteau'
+,[2212,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DEFIGN_RC_DEMI_HUMAN,15,bon_DEFIGN_RC_DEMON,15,bon_DEFIGN_RC_UNDEAD,15,bon_HP_MUL,10,bon_PHY_ATK,2,bon_NONE] // Abusive Robe + Valkyrie Manteau
 ,[2213,weapTyp_MACE,0,80,3,1,100,40,0,0,0,0,bon_ASPD_ADD,10,bon_NONE] // Spoon
 //Nightmare Glastheim,0,0,0,0,
 ,[2214,itm_type_HEAD_UPPER,1001,3,0,1,30,99,0,0,0,0,bon_NONE] // Cursed Book [1]
@@ -2969,7 +2969,7 @@ function BuildItemDescription( bonusType, bonusValue )
 	if(170 <= bonusType && bonusType <=179) // Race MagDmg
 		CBIstr += GetWord(273) + "["+ SyuzokuOBJ[bonusType-170][Language] + "]" + GetWord(181) + wIS + bonusValue +"%<br/>";
 	if(180 <= bonusType && bonusType <=189)
-		CBIstr += "Ignore " + bonusValue +"% of the " + "[" + SyuzokuOBJ[bonusType-180][Language] + "] monster's defence<br/>";
+		CBIstr += "Ignore 100% of the " + "[" + SyuzokuOBJ[bonusType-180][Language] + "] monster's defence<br/>";
 	if(190 <= bonusType && bonusType <=192)
 		CBIstr += GetWord(184) + "[" + SizeOBJ[bonusType-190][Language] + "]" + GetWord(211) + wIS + bonusValue +"%<br/>";
 	if(193 == bonusType)

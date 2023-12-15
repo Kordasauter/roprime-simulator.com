@@ -1648,21 +1648,6 @@ function CalcRacialMod()
 			n_tok[bon_DMG_RC_BRUTE] += 20;
 		}
 	}
-
-	if( EquipNumSearch(2305) || //Guillotine Cross set
-		EquipNumSearch(2307) || //Ranger set
-		EquipNumSearch(2313) )  //Wanderer Set
-	{
-		n_tok[bon_DEFIGN_RC_ALL] += n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_SHIELD_DEF_PLUS;
-	}
-	if( EquipNumSearch(2306) || //Arch Bishop set
-		EquipNumSearch(2308) || //Royal Guard set
-		EquipNumSearch(2310) || //Sorcerer set
-		EquipNumSearch(2311) || //Shadow Chaser set
-		EquipNumSearch(2312) )  //Warlock set
-	{
-		n_tok[bon_MDEFIGN_RC_ALL] += n_A_SHADOW_WEAPON_DEF_PLUS + n_A_SHADOW_SHIELD_DEF_PLUS;
-	}
 	if(EquipNumSearch(2075) && n_A_Weapon_ATKplus >= 11)
 	{//Four Mirrors
 		n_tok[bon_DMG_RC_UNDEAD] += 20;
@@ -1672,12 +1657,6 @@ function CalcRacialMod()
 	{//Demon's Shot
 		n_tok[bon_DMG_RC_UNDEAD] += 15;
 		n_tok[bon_DMG_RC_DEMON] += 15;
-	}
-	if( EquipNumSearch(2210) )   
-	{// Abusive Robe
-		n_tok[bon_DEFIGN_RC_DEMI_HUMAN] += 4 * n_A_BODY_DEF_PLUS;
-		n_tok[bon_DEFIGN_RC_DEMON] += 4 * n_A_BODY_DEF_PLUS;
-		n_tok[bon_DEFIGN_RC_UNDEAD] += 4 * n_A_BODY_DEF_PLUS;
 	}
 	
 // Magical
@@ -1737,14 +1716,7 @@ function CalcRacialMod()
 		if (n_A_SHADOW_SHIELD_DEF_PLUS >= 7) { n_tok[bon_DMG_RC_BRUTE] += 1; }
 		if (n_A_SHADOW_SHIELD_DEF_PLUS >= 9) { n_tok[bon_DMG_RC_BRUTE] += 3; }
 	}
-	if(EquipNumSearch(2588))
-	{//Fire Dance Shadow Earring + Shadow Rebellion Armor
-		n_tok[bon_DEFIGN_RC_ALL] += (n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_SHOES_DEF_PLUS);
-	}
-	if(EquipNumSearch(2590))
-	{//Fire Dance Shadow Earring + Shadow Rebellion Armor
-		n_tok[bon_DEFIGN_RC_ALL] += (n_A_SHADOW_EARRING_DEF_PLUS + n_A_SHADOW_SHOES_DEF_PLUS);
-	}
+
 //Cards
 	if ( CardNumSearch( 711 ) )
 	{ // "Piranha Card"
@@ -1759,16 +1731,16 @@ function CalcRacialMod()
 	{ // Race Reduction
 		racialMod -= monsterBuffs[status_en_buff_Race];
 	}
-	for(var i = 0; i<10;i++)
-	{
-		if(n_tok[bon_DEFIGN_RC_FORMLESS + i] > 100)
-			n_tok[bon_DEFIGN_RC_FORMLESS + i] = 100;
-	}
-	for(var i = 0; i<10;i++)
-	{
-		if(n_tok[bon_MDEFIGN_RC_FORMLESS + i] > 100)
-			n_tok[bon_MDEFIGN_RC_FORMLESS + i] = 100;
-	}
+	// for(var i = 0; i<10;i++)
+	// {
+	// 	if(n_tok[bon_DEFIGN_RC_FORMLESS + i] > 100)
+	// 		n_tok[bon_DEFIGN_RC_FORMLESS + i] = 100;
+	// }
+	// for(var i = 0; i<10;i++)
+	// {
+	// 	if(n_tok[bon_MDEFIGN_RC_FORMLESS + i] > 100)
+	// 		n_tok[bon_MDEFIGN_RC_FORMLESS + i] = 100;
+	// }
 }
 
 function CalcSpecialRacialMod()
