@@ -9058,7 +9058,7 @@ TKM_SOLAR_WRATH = {
 	hitDivisibility : `1`,
 	isSpecialFormula : false,
 	skillFormula(SkillLV){
-		if(n_B[en_SIZE] == siz_SMALL)
+		if((n_B[en_SIZE] == siz_SMALL) && (SkillLV > 0))
 			return (n_A_BaseLV + n_A_LUK + n_A_DEX) / (3 * (4 - SkillLV));
 		return 0;
 	}
@@ -9082,7 +9082,7 @@ TKM_LUNAR_WRATH = {
 	hitDivisibility : `1`,
 	isSpecialFormula : false,
 	skillFormula(SkillLV){
-		if(n_B[en_SIZE] == siz_MEDIUM && n_B[en_HP] >= 6000)
+		if((n_B[en_SIZE] == siz_MEDIUM) && (n_B[en_HP] >= 6000) && (SkillLV > 0))
 			return (n_A_BaseLV + n_A_LUK + n_A_DEX) / (3 * (4 - SkillLV));
 		return 0;
 	}
@@ -9106,7 +9106,7 @@ TKM_STELLAR_WRATH = {
 	hitDivisibility : `1`,
 	isSpecialFormula : false,
 	skillFormula(SkillLV){
-		if(n_B[en_SIZE] == siz_LARGE && n_B[en_HP] >= 20000)
+		if((n_B[en_SIZE] == siz_LARGE) && (n_B[en_HP] >= 20000) && (SkillLV > 0))
 			return (n_A_BaseLV + n_A_LUK + n_A_DEX) / (3 * (4 - SkillLV));
 		return 0;
 	}

@@ -62,7 +62,7 @@ function calc()
 	// if(Skill[n_A_ActiveSkill].isMagic == true)
 		CalcSkillDamage_old();
 	// else
-	// 	CalcSkillDamage();
+		// CalcSkillDamage();
 
 	// Display additional data.
 	DisplayAdditionalBattleInfo();

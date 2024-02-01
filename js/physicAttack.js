@@ -717,6 +717,7 @@ function getSizeMultiplier()
 	{ 
 		sizeMultiplier -= monsterBuffs[status_en_buff_Size];
 	}
+	
 	return sizeMultiplier;
 }
 function getTargetPropertyMultiplier()
@@ -1509,7 +1510,8 @@ function getWeaponATKHighUpgradeBonus2()
 }
 function getSizePenalty()
 {
-	return weaponsize[n_A_WeaponType][n_B[en_SIZE]];;
+	return 1;
+	return weaponsize[n_A_WeaponType][n_B[en_SIZE]];
 }
 function getSizePenalty2()
 {
