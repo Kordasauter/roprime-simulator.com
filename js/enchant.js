@@ -590,36 +590,36 @@
 ,[  588,"Crit. Damage +28%",0,bon_DMG_CRIT,28,bon_NONE]
 ,[  589,"Crit. Damage +29%",0,bon_DMG_CRIT,29,bon_NONE]
 ,[  590,"Crit. Damage +30%",0,bon_DMG_CRIT,30,bon_NONE]
-,[  591,"ATK +1%",0,bon_PHY_ATK,1,bon_NONE]//ench_ATK_MUL +1
-,[  592,"ATK +2%",0,bon_PHY_ATK,2,bon_NONE]
-,[  593,"ATK +3%",0,bon_PHY_ATK,3,bon_NONE]
-,[  594,"ATK +4%",0,bon_PHY_ATK,4,bon_NONE]
-,[  595,"ATK +5%",0,bon_PHY_ATK,5,bon_NONE]
-,[  596,"ATK +6%",0,bon_PHY_ATK,6,bon_NONE]
-,[  597,"ATK +7%",0,bon_PHY_ATK,7,bon_NONE]
-,[  598,"ATK +8%",0,bon_PHY_ATK,8,bon_NONE]
-,[  599,"ATK +9%",0,bon_PHY_ATK,9,bon_NONE]
-,[  600,"ATK +10%",0,bon_PHY_ATK,10,bon_NONE]
-,[  601,"ATK +11%",0,bon_PHY_ATK,11,bon_NONE]
-,[  602,"ATK +12%",0,bon_PHY_ATK,12,bon_NONE]
-,[  603,"ATK +13%",0,bon_PHY_ATK,13,bon_NONE]
-,[  604,"ATK +14%",0,bon_PHY_ATK,14,bon_NONE]
-,[  605,"ATK +15%",0,bon_PHY_ATK,15,bon_NONE]
-,[  606,"ATK +16%",0,bon_PHY_ATK,16,bon_NONE]
-,[  607,"ATK +17%",0,bon_PHY_ATK,17,bon_NONE]
-,[  608,"ATK +18%",0,bon_PHY_ATK,18,bon_NONE]
-,[  609,"ATK +19%",0,bon_PHY_ATK,19,bon_NONE]
-,[  610,"ATK +20%",0,bon_PHY_ATK,20,bon_NONE]
-,[  611,"ATK +21%",0,bon_PHY_ATK,21,bon_NONE]
-,[  612,"ATK +22%",0,bon_PHY_ATK,22,bon_NONE]
-,[  613,"ATK +23%",0,bon_PHY_ATK,23,bon_NONE]
-,[  614,"ATK +24%",0,bon_PHY_ATK,24,bon_NONE]
-,[  615,"ATK +25%",0,bon_PHY_ATK,25,bon_NONE]
-,[  616,"ATK +26%",0,bon_PHY_ATK,26,bon_NONE]
-,[  617,"ATK +27%",0,bon_PHY_ATK,27,bon_NONE]
-,[  618,"ATK +28%",0,bon_PHY_ATK,28,bon_NONE]
-,[  619,"ATK +29%",0,bon_PHY_ATK,29,bon_NONE]
-,[  620,"ATK +30%",0,bon_PHY_ATK,30,bon_NONE]
+,[  591,"ATK +1%",0,bon_ATK_MUL,1,bon_NONE]//ench_ATK_MUL +1
+,[  592,"ATK +2%",0,bon_ATK_MUL,2,bon_NONE]
+,[  593,"ATK +3%",0,bon_ATK_MUL,3,bon_NONE]
+,[  594,"ATK +4%",0,bon_ATK_MUL,4,bon_NONE]
+,[  595,"ATK +5%",0,bon_ATK_MUL,5,bon_NONE]
+,[  596,"ATK +6%",0,bon_ATK_MUL,6,bon_NONE]
+,[  597,"ATK +7%",0,bon_ATK_MUL,7,bon_NONE]
+,[  598,"ATK +8%",0,bon_ATK_MUL,8,bon_NONE]
+,[  599,"ATK +9%",0,bon_ATK_MUL,9,bon_NONE]
+,[  600,"ATK +10%",0,bon_ATK_MUL,10,bon_NONE]
+,[  601,"ATK +11%",0,bon_ATK_MUL,11,bon_NONE]
+,[  602,"ATK +12%",0,bon_ATK_MUL,12,bon_NONE]
+,[  603,"ATK +13%",0,bon_ATK_MUL,13,bon_NONE]
+,[  604,"ATK +14%",0,bon_ATK_MUL,14,bon_NONE]
+,[  605,"ATK +15%",0,bon_ATK_MUL,15,bon_NONE]
+,[  606,"ATK +16%",0,bon_ATK_MUL,16,bon_NONE]
+,[  607,"ATK +17%",0,bon_ATK_MUL,17,bon_NONE]
+,[  608,"ATK +18%",0,bon_ATK_MUL,18,bon_NONE]
+,[  609,"ATK +19%",0,bon_ATK_MUL,19,bon_NONE]
+,[  610,"ATK +20%",0,bon_ATK_MUL,20,bon_NONE]
+,[  611,"ATK +21%",0,bon_ATK_MUL,21,bon_NONE]
+,[  612,"ATK +22%",0,bon_ATK_MUL,22,bon_NONE]
+,[  613,"ATK +23%",0,bon_ATK_MUL,23,bon_NONE]
+,[  614,"ATK +24%",0,bon_ATK_MUL,24,bon_NONE]
+,[  615,"ATK +25%",0,bon_ATK_MUL,25,bon_NONE]
+,[  616,"ATK +26%",0,bon_ATK_MUL,26,bon_NONE]
+,[  617,"ATK +27%",0,bon_ATK_MUL,27,bon_NONE]
+,[  618,"ATK +28%",0,bon_ATK_MUL,28,bon_NONE]
+,[  619,"ATK +29%",0,bon_ATK_MUL,29,bon_NONE]
+,[  620,"ATK +30%",0,bon_ATK_MUL,30,bon_NONE]
 ,[  621,"ATK +1",0,bon_ATK,1,bon_NONE]//ench_ATK +1
 ,[  622,"ATK +2",0,bon_ATK,2,bon_NONE]
 ,[  623,"ATK +3",0,bon_ATK,3,bon_NONE]
@@ -5080,17 +5080,17 @@
 ,[ 5078,"Bypass magic defense against boss +98%",0,bon_MDEFIGN_RC_BOSS,98,bon_NONE]
 ,[ 5079,"Bypass magic defense against boss +99%",0,bon_MDEFIGN_RC_BOSS,99,bon_NONE]
 ,[ 5080,"Bypass magic defense against boss +100%",0,bon_MDEFIGN_RC_BOSS,100,bon_NONE]
-,[ 5081,"Mettle 1",0,bon_PHY_ATK,4,bon_HIT,10,bon_NONE]//ench_METTLE + 1
-,[ 5082,"Mettle 2",0,bon_PHY_ATK,8,bon_HIT,20,bon_NONE]
-,[ 5083,"Mettle 3",0,bon_PHY_ATK,12,bon_HIT,30,bon_NONE]
-,[ 5084,"Mettle 4",0,bon_PHY_ATK,16,bon_HIT,40,bon_NONE]
-,[ 5085,"Mettle 5",0,bon_PHY_ATK,20,bon_HIT,50,bon_NONE]
-,[ 5086,"Mettle 6",0,bon_PHY_ATK,24,bon_HIT,60,bon_NONE]
-,[ 5087,"Mettle 7",0,bon_PHY_ATK,28,bon_HIT,70,bon_NONE]
-,[ 5088,"Mettle 8",0,bon_PHY_ATK,32,bon_HIT,80,bon_NONE]
-,[ 5089,"Mettle 9",0,bon_PHY_ATK,36,bon_HIT,90,bon_NONE]
-,[ 5090,"Mettle 10",0,bon_PHY_ATK,44,bon_HIT,100,bon_NONE]
-,[ 5091,"Tenacity 1","Perfect Hit +1",bon_PHY_ATK,4,bon_NONE]//ench_TENACITY + 1
+,[ 5081,"Mettle 1",0,bon_ATK_MUL,4,bon_HIT,10,bon_NONE]//ench_METTLE + 1
+,[ 5082,"Mettle 2",0,bon_ATK_MUL,8,bon_HIT,20,bon_NONE]
+,[ 5083,"Mettle 3",0,bon_ATK_MUL,12,bon_HIT,30,bon_NONE]
+,[ 5084,"Mettle 4",0,bon_ATK_MUL,16,bon_HIT,40,bon_NONE]
+,[ 5085,"Mettle 5",0,bon_ATK_MUL,20,bon_HIT,50,bon_NONE]
+,[ 5086,"Mettle 6",0,bon_ATK_MUL,24,bon_HIT,60,bon_NONE]
+,[ 5087,"Mettle 7",0,bon_ATK_MUL,28,bon_HIT,70,bon_NONE]
+,[ 5088,"Mettle 8",0,bon_ATK_MUL,32,bon_HIT,80,bon_NONE]
+,[ 5089,"Mettle 9",0,bon_ATK_MUL,36,bon_HIT,90,bon_NONE]
+,[ 5090,"Mettle 10",0,bon_ATK_MUL,44,bon_HIT,100,bon_NONE]
+,[ 5091,"Tenacity 1","Perfect Hit +1",bon_PHY_ATK,4,bon_NONE]//ench_TENACITY + 1 //wrong bonus, should be bShortAtkRate (the opposite of bLongAtkRate)
 ,[ 5092,"Tenacity 2","Perfect Hit +2",bon_PHY_ATK,8,bon_NONE]
 ,[ 5093,"Tenacity 3","Perfect Hit +3",bon_PHY_ATK,12,bon_NONE]
 ,[ 5094,"Tenacity 4","Perfect Hit +4",bon_PHY_ATK,16,bon_NONE]
@@ -5242,7 +5242,7 @@
 ,[ 5240,"Magic damage against normal monsters +30%",0,bon_MDMG_NON_BOSS,30,bon_NONE]
 ,[ 5241,"Modification Orb (DEF)","If upgrade level is +7 or higher, additional Def + 10.<br>If upgrade level is +9 or higher, additional Def + 10.",bon_DEF,25,bon_NONE]//ench_MOD_ORB_DEF
 ,[ 5242,"Modification Orb (MDEF)","If upgrade level is +7 or higher, additional Mdef + 3.<br>If upgrade level is +9 or higher, additional Mdef + 3.",bon_MDEF,2,bon_NONE]//ench_MOD_ORB_MDEF
-,[ 5243,"Modification Orb (ATK)","If upgrade level is +7 or higher, Atk + 25.<br>If upgrade level is +9 or higher, additional Atk + 25.",bon_PHY_ATK,5,bon_NONE]//ench_MOD_ORB_ATK
+,[ 5243,"Modification Orb (ATK)","If upgrade level is +7 or higher, Atk + 25.<br>If upgrade level is +9 or higher, additional Atk + 25.",bon_ATK_MUL,5,bon_NONE]//ench_MOD_ORB_ATK
 ,[ 5244,"Modification Orb (MATK)","If upgrade level is +7 or higher, Matk + 25.<br>If upgrade level is +9 or higher, additional Matk + 25.",bon_MATK_MUL,5,bon_NONE]//ench_MOD_ORB_MATK
 ,[ 5245,"Modification Orb (Sharpshooter)","If upgrade level is +7 or higher, increases long-ranged damage on targets by an additional 2%.<br>If upgrade level is +9 or higher, increases long-ranged damage on targets by an additional 2%.",bon_DMG_RANGE,3,bon_NONE]//ench_MOD_ORB_SHARPSHOOTER
 ,[ 5246,"Modification Orb (Speed)","If upgrade level is +7 or higher, Aspd + 3%.<br>If upgrade level is +9 or higher, additional Aspd + 3%.",bon_ASPD_ADD,1,bon_NONE]//ench_MOD_ORB_SPEED
@@ -5261,9 +5261,9 @@
 ,[ 5259,"Modification Orb (Drain Soul)","Adds a 1% chance of restoring 1% of damage as SP when performing a physical attack.",bon_NONE]//ench_MOD_ORB_DRAIN_SOUL
 ,[ 5260,"Modification Orb (Magic Soul)","Adds a 1% chance of buffing the user for 10 seconds when performing a magical attack; Restores 80 SP every 0.5 seconds.",bon_NONE]//ench_MOD_ORB_MAGIC_SOUL
 ,[ 5261,"Modification Orb (Unlimited Vitality)","HP + 400 every 0.5 seconds<br>SP - 20 every second",bon_VIT,50,bon_NONE]//ench_MOD_ORB_UNLIMITED_VITALITY
-,[ 5262,"Modification Orb (Spell Buster)",0,bon_INT,50,bon_MATK_MUL,15,bon_PHY_ATK,-15,bon_NONE]//ench_MOD_ORB_SPELL_BUSTER
+,[ 5262,"Modification Orb (Spell Buster)",0,bon_INT,50,bon_MATK_MUL,15,bon_ATK_MUL,-15,bon_NONE]//ench_MOD_ORB_SPELL_BUSTER
 ,[ 5263,"Modification Orb (Fierce Shooter)","SP - 20 every second.",bon_DEX,50,bon_DMG_RANGE,10,bon_NONE]//ench_MOD_ORB_FIERCE_SHOOTER
-,[ 5264,"Modification Orb (Overpower)",0,bon_STR,50,bon_PHY_ATK,15,bon_MATK_MUL,-15,bon_NONE]//ench_MOD_ORB_OVERPOWER
+,[ 5264,"Modification Orb (Overpower)",0,bon_STR,50,bon_ATK_MUL,15,bon_MATK_MUL,-15,bon_NONE]//ench_MOD_ORB_OVERPOWER
 ,[ 5265,"Modification Orb (Fatal Flash)","HP - 300 every second",bon_AGI,50,bon_DMG_CRIT,10,bon_NONE]//ench_MOD_ORB_FATAL_FLASH
 ,[ 5266,"Modification Orb (Lucky Strike)","HP - 300 every second",bon_LUK,50,bon_MDMG_ELE_ALL,10,bon_NONE]//ench_MOD_ORB_LUCKY_STRIKE
 ,[ 5267,"Place_Holder",0,bon_NONE]
@@ -5510,7 +5510,57 @@
 ,[ 5508,"Bypass magic defense against normal monsters +28%",0,bon_MDMG_NON_BOSS,28,bon_NONE]
 ,[ 5509,"Bypass magic defense against normal monsters +29%",0,bon_MDMG_NON_BOSS,29,bon_NONE]
 ,[ 5510,"Bypass magic defense against normal monsters +30%",0,bon_MDMG_NON_BOSS,30,bon_NONE]
-];
+,[ 5511,"Double Strafe Lv.1",0,bon_AGI,1,bon_VIT,1,bon_DEX,1,bon_ATK,20,bon_NONE]//double strafe level for Emerald Ring
+,[ 5512,"Double Strafe Lv.2",0,bon_AGI,1,bon_VIT,1,bon_DEX,1,bon_ATK,20,bon_NONE]
+,[ 5513,"Double Strafe Lv.3",0,bon_AGI,2,bon_VIT,2,bon_DEX,2,bon_ATK,40,bon_NONE]
+,[ 5514,"Double Strafe Lv.4",0,bon_AGI,2,bon_VIT,2,bon_DEX,2,bon_ATK,40,bon_NONE]
+,[ 5515,"Double Strafe Lv.5",0,bon_AGI,3,bon_VIT,3,bon_DEX,3,bon_ATK,60,bon_NONE]
+,[ 5516,"Double Strafe Lv.6",0,bon_AGI,3,bon_VIT,3,bon_DEX,3,bon_ATK,60,bon_NONE]
+,[ 5517,"Double Strafe Lv.7",0,bon_AGI,4,bon_VIT,4,bon_DEX,4,bon_ATK,80,bon_NONE]
+,[ 5518,"Double Strafe Lv.8",0,bon_AGI,4,bon_VIT,4,bon_DEX,4,bon_ATK,80,bon_NONE]
+,[ 5519,"Double Strafe Lv.9",0,bon_AGI,5,bon_VIT,5,bon_DEX,5,bon_ATK,100,bon_NONE]
+,[ 5520,"Double Strafe Lv.10",0,bon_AGI,5,bon_VIT,5,bon_DEX,5,bon_ATK,100,bon_NONE]
+,[ 5521,"Gentle Touch-Cure Lv.1",0,bon_HP_MUL,2,bon_NONE]//Gentle Touch-Cure for Tengu Shoes
+,[ 5522,"Gentle Touch-Cure Lv.2",0,bon_HP_MUL,4,bon_NONE]
+,[ 5523,"Gentle Touch-Cure Lv.3",0,bon_HP_MUL,6,bon_NONE]
+,[ 5524,"Gentle Touch-Cure Lv.4",0,bon_HP_MUL,8,bon_NONE]
+,[ 5525,"Gentle Touch-Cure Lv.5",0,bon_HP_MUL,10,bon_NONE]
+,[ 5526,"Gentle Touch-Silence Lv.1",0,bon_PHY_ATK,4,bon_NONE]//Gentle Touch-Silence for Tengu Shoes
+,[ 5527,"Gentle Touch-Silence Lv.2",0,bon_PHY_ATK,8,bon_NONE]
+,[ 5528,"Gentle Touch-Silence Lv.3",0,bon_PHY_ATK,12,bon_NONE]
+,[ 5529,"Gentle Touch-Silence Lv.4",0,bon_PHY_ATK,16,bon_NONE]
+,[ 5530,"Gentle Touch-Silence Lv.5",0,bon_PHY_ATK,20,bon_NONE]
+,[ 5531,"Flaming Petals Lv.1",0,bon_DMG_SKILL + skill_NIN_EXPLODING_DRAGON,3,bon_NONE]//Flaming Petals for Great Shinobi Sash
+,[ 5532,"Flaming Petals Lv.2",0,bon_DMG_SKILL + skill_NIN_EXPLODING_DRAGON,6,bon_NONE]
+,[ 5533,"Flaming Petals Lv.3",0,bon_DMG_SKILL + skill_NIN_EXPLODING_DRAGON,9,bon_NONE]
+,[ 5534,"Flaming Petals Lv.4",0,bon_DMG_SKILL + skill_NIN_EXPLODING_DRAGON,12,bon_NONE]
+,[ 5535,"Flaming Petals Lv.5",0,bon_DMG_SKILL + skill_NIN_EXPLODING_DRAGON,15,bon_NONE]
+,[ 5536,"Flaming Petals Lv.6",0,bon_DMG_SKILL + skill_NIN_EXPLODING_DRAGON,18,bon_NONE]
+,[ 5537,"Flaming Petals Lv.7",0,bon_DMG_SKILL + skill_NIN_EXPLODING_DRAGON,21,bon_NONE]
+,[ 5538,"Flaming Petals Lv.8",0,bon_DMG_SKILL + skill_NIN_EXPLODING_DRAGON,24,bon_NONE]
+,[ 5539,"Flaming Petals Lv.9",0,bon_DMG_SKILL + skill_NIN_EXPLODING_DRAGON,26,bon_NONE]
+,[ 5540,"Flaming Petals Lv.10",0,bon_DMG_SKILL + skill_NIN_EXPLODING_DRAGON,30,bon_NONE]
+,[ 5541,"Freezing Spear Lv.1",0,bon_DMG_SKILL + skill_NIN_SNOW_FLAKE_DRAFT,6,bon_NONE]//Freezing Spear for Great Shinobi Sash
+,[ 5542,"Freezing Spear Lv.2",0,bon_DMG_SKILL + skill_NIN_SNOW_FLAKE_DRAFT,12,bon_NONE]
+,[ 5543,"Freezing Spear Lv.3",0,bon_DMG_SKILL + skill_NIN_SNOW_FLAKE_DRAFT,18,bon_NONE]
+,[ 5544,"Freezing Spear Lv.4",0,bon_DMG_SKILL + skill_NIN_SNOW_FLAKE_DRAFT,24,bon_NONE]
+,[ 5545,"Freezing Spear Lv.5",0,bon_DMG_SKILL + skill_NIN_SNOW_FLAKE_DRAFT,30,bon_NONE]
+,[ 5546,"Freezing Spear Lv.6",0,bon_DMG_SKILL + skill_NIN_SNOW_FLAKE_DRAFT,36,bon_NONE]
+,[ 5547,"Freezing Spear Lv.7",0,bon_DMG_SKILL + skill_NIN_SNOW_FLAKE_DRAFT,42,bon_NONE]
+,[ 5548,"Freezing Spear Lv.8",0,bon_DMG_SKILL + skill_NIN_SNOW_FLAKE_DRAFT,48,bon_NONE]
+,[ 5549,"Freezing Spear Lv.9",0,bon_DMG_SKILL + skill_NIN_SNOW_FLAKE_DRAFT,54,bon_NONE]
+,[ 5550,"Freezing Spear Lv.10",0,bon_DMG_SKILL + skill_NIN_SNOW_FLAKE_DRAFT,60,bon_NONE]
+,[ 5551,"Wind Blade Lv.1",0,bon_DMG_SKILL + skill_NIN_FIRST_WIND,3,bon_NONE]//Wind Blade for Great Shinobi Sash
+,[ 5552,"Wind Blade Lv.2",0,bon_DMG_SKILL + skill_NIN_FIRST_WIND,6,bon_NONE]
+,[ 5553,"Wind Blade Lv.3",0,bon_DMG_SKILL + skill_NIN_FIRST_WIND,9,bon_NONE]
+,[ 5554,"Wind Blade Lv.4",0,bon_DMG_SKILL + skill_NIN_FIRST_WIND,12,bon_NONE]
+,[ 5555,"Wind Blade Lv.5",0,bon_DMG_SKILL + skill_NIN_FIRST_WIND,15,bon_NONE]
+,[ 5556,"Wind Blade Lv.6",0,bon_DMG_SKILL + skill_NIN_FIRST_WIND,18,bon_NONE]
+,[ 5557,"Wind Blade Lv.7",0,bon_DMG_SKILL + skill_NIN_FIRST_WIND,21,bon_NONE]
+,[ 5558,"Wind Blade Lv.8",0,bon_DMG_SKILL + skill_NIN_FIRST_WIND,24,bon_NONE]
+,[ 5559,"Wind Blade Lv.9",0,bon_DMG_SKILL + skill_NIN_FIRST_WIND,27,bon_NONE]
+,[ 5560,"Wind Blade Lv.10",0,bon_DMG_SKILL + skill_NIN_FIRST_WIND,30,bon_NONE]
+]
 //,[  x,"name",0,bon_NONE]
 EnchantNum = EnchantOBJ.length -1;
 }
@@ -5648,5 +5698,12 @@ EnchantNum = EnchantOBJ.length -1;
 /* 129 Magma 3 enchant + Magma Essence 2 */ [ench_NONE,ench_HP_ADD + 2,ench_HP_ADD + 3,ench_HP_ADD + 4,ench_HP_ADD + 5,ench_HP_ADD + 6,ench_HP_ADD + 7,ench_HP_ADD + 8,ench_HP_ADD + 9,ench_HP_ADD + 10,ench_HP_ADD + 11,ench_HP_ADD + 12,ench_HP_ADD + 13,ench_HP_ADD + 14,ench_HP_ADD + 15,ench_HP_ADD + 16,ench_HP_ADD + 17,ench_HP_ADD + 18,ench_HP_ADD + 19,ench_HP_ADD + 20,ench_SP_ADD +1,ench_SP_ADD +2,ench_SP_ADD +3,ench_SP_ADD +4,ench_SP_ADD +5,ench_SP_ADD +6,ench_SP_ADD +7,ench_SP_ADD +8,ench_SP_ADD +9,ench_SP_ADD +10,ench_ATK +1,ench_ATK +2,ench_ATK +3,ench_ATK +4,ench_ATK +5,ench_ATK +6,ench_ATK +7,ench_ATK +8,ench_ATK +9,ench_ATK +10,ench_ATK +11,ench_ATK +12,ench_ATK +13,ench_ATK +14,ench_ATK +15,ench_ATK +16,ench_ATK +17,ench_ATK +18,ench_ATK +19,ench_ATK +20,ench_MATK +1,ench_MATK +2,ench_MATK +3,ench_MATK +4,ench_MATK +5,ench_MATK +6,ench_MATK +7,ench_MATK +8,ench_MATK +9,ench_MATK +10,ench_MATK +11,ench_MATK +12,ench_MATK +13,ench_MATK +14,ench_MATK +15,ench_MATK +16,ench_MATK +17,ench_MATK +18,ench_MATK +19,ench_MATK +20,ench_HIT +1,ench_HIT +2,ench_HIT +3,ench_HIT +4,ench_HIT +5,ench_HIT +6,ench_HIT +7,ench_FLEE +1,ench_FLEE +2,ench_FLEE +3,ench_FLEE +4,ench_FLEE +5,ench_FLEE +6,ench_FLEE +7,ench_FLEE +8,ench_FLEE +9,ench_FLEE +10,ench_FLEE +11,ench_FLEE +12,ench_FLEE +13,ench_FLEE +14,ench_FLEE +15,ench_DEF +10,ench_DEF +15,ench_DEF +20,ench_DEF +25,ench_DEF +30,ench_DEF +35,ench_DEF +40,ench_DEF +45,ench_DEF +50,ench_DEF +55,ench_DEF +60,ench_DEF +65,ench_DEF +70,ench_DEF +75,ench_DEF +80,ench_DEF +85,ench_DEF +90,ench_DEF +95,ench_DEF +100,ench_DEF +105,ench_DEF +110,ench_DEF +115,ench_DEF +120,ench_DEF +125,ench_DEF +130,ench_DEF +135,ench_DEF +140,ench_DEF +145,ench_DEF +150,ench_MDEF +1,ench_MDEF +2,ench_MDEF +3,ench_CRIT +1,ench_CRIT +2,ench_CRIT +3,ench_CRIT +4,ench_CRIT +5,ench_HEAL_MUL +3,ench_HEAL_MUL +4,ench_HEAL_MUL +5,ench_HEAL_MUL +6,ench_HEAL_MUL +7,ench_RED_CAST +5,ench_RED_CAST +6,ench_RED_CAST +7,ench_RED_CAST +8,ench_RED_CAST +9,ench_RED_CAST +10,ench_DMG_ELE_NEUTRAL + 5,ench_DMG_ELE_NEUTRAL + 6,ench_DMG_ELE_NEUTRAL + 7,ench_DMG_ELE_NEUTRAL + 8,ench_DMG_ELE_NEUTRAL + 9,ench_DMG_ELE_NEUTRAL + 10,ench_DMG_ELE_WATER + 5,ench_DMG_ELE_WATER + 6,ench_DMG_ELE_WATER + 7,ench_DMG_ELE_WATER + 8,ench_DMG_ELE_WATER + 9,ench_DMG_ELE_WATER + 10,ench_DMG_ELE_EARTH + 5,ench_DMG_ELE_EARTH + 6,ench_DMG_ELE_EARTH + 7,ench_DMG_ELE_EARTH + 8,ench_DMG_ELE_EARTH + 9,ench_DMG_ELE_EARTH + 10,ench_DMG_ELE_FIRE + 5,ench_DMG_ELE_FIRE + 6,ench_DMG_ELE_FIRE + 7,ench_DMG_ELE_FIRE + 8,ench_DMG_ELE_FIRE + 9,ench_DMG_ELE_FIRE + 10,ench_DMG_ELE_WIND + 5,ench_DMG_ELE_WIND + 6,ench_DMG_ELE_WIND + 7,ench_DMG_ELE_WIND + 8,ench_DMG_ELE_WIND + 9,ench_DMG_ELE_WIND + 10,ench_DMG_ELE_POISON + 5,ench_DMG_ELE_POISON + 6,ench_DMG_ELE_POISON + 7,ench_DMG_ELE_POISON + 8,ench_DMG_ELE_POISON + 9,ench_DMG_ELE_POISON + 10,ench_DMG_ELE_HOLY + 5,ench_DMG_ELE_HOLY + 6,ench_DMG_ELE_HOLY + 7,ench_DMG_ELE_HOLY + 8,ench_DMG_ELE_HOLY + 9,ench_DMG_ELE_HOLY + 10,ench_DMG_ELE_SHADOW + 5,ench_DMG_ELE_SHADOW + 6,ench_DMG_ELE_SHADOW + 7,ench_DMG_ELE_SHADOW + 8,ench_DMG_ELE_SHADOW + 9,ench_DMG_ELE_SHADOW + 10,ench_DMG_ELE_GHOST + 5,ench_DMG_ELE_GHOST + 6,ench_DMG_ELE_GHOST + 7,ench_DMG_ELE_GHOST + 8,ench_DMG_ELE_GHOST + 9,ench_DMG_ELE_GHOST + 10,ench_DMG_ELE_UNDEAD + 5,ench_DMG_ELE_UNDEAD + 6,ench_DMG_ELE_UNDEAD + 7,ench_DMG_ELE_UNDEAD + 8,ench_DMG_ELE_UNDEAD + 9,ench_DMG_ELE_UNDEAD + 10,ench_MDMG_ELE_NEUTRAL + 5,ench_MDMG_ELE_NEUTRAL + 6,ench_MDMG_ELE_NEUTRAL + 7,ench_MDMG_ELE_NEUTRAL + 8,ench_MDMG_ELE_NEUTRAL + 9,ench_MDMG_ELE_NEUTRAL + 10,ench_MDMG_ELE_WATER + 5,ench_MDMG_ELE_WATER + 6,ench_MDMG_ELE_WATER + 7,ench_MDMG_ELE_WATER + 8,ench_MDMG_ELE_WATER + 9,ench_MDMG_ELE_WATER + 10,ench_MDMG_ELE_EARTH + 5,ench_MDMG_ELE_EARTH + 6,ench_MDMG_ELE_EARTH + 7,ench_MDMG_ELE_EARTH + 8,ench_MDMG_ELE_EARTH + 9,ench_MDMG_ELE_EARTH + 10,ench_MDMG_ELE_FIRE + 5,ench_MDMG_ELE_FIRE + 6,ench_MDMG_ELE_FIRE + 7,ench_MDMG_ELE_FIRE + 8,ench_MDMG_ELE_FIRE + 9,ench_MDMG_ELE_FIRE + 10,ench_MDMG_ELE_WIND + 5,ench_MDMG_ELE_WIND + 6,ench_MDMG_ELE_WIND + 7,ench_MDMG_ELE_WIND + 8,ench_MDMG_ELE_WIND + 9,ench_MDMG_ELE_WIND + 10,ench_MDMG_ELE_POISON + 5,ench_MDMG_ELE_POISON + 6,ench_MDMG_ELE_POISON + 7,ench_MDMG_ELE_POISON + 8,ench_MDMG_ELE_POISON + 9,ench_MDMG_ELE_POISON + 10,ench_MDMG_ELE_HOLY + 5,ench_MDMG_ELE_HOLY + 6,ench_MDMG_ELE_HOLY + 7,ench_MDMG_ELE_HOLY + 8,ench_MDMG_ELE_HOLY + 9,ench_MDMG_ELE_HOLY + 10,ench_MDMG_ELE_SHADOW + 5,ench_MDMG_ELE_SHADOW + 6,ench_MDMG_ELE_SHADOW + 7,ench_MDMG_ELE_SHADOW + 8,ench_MDMG_ELE_SHADOW + 9,ench_MDMG_ELE_SHADOW + 10,ench_MDMG_ELE_GHOST + 5,ench_MDMG_ELE_GHOST + 6,ench_MDMG_ELE_GHOST + 7,ench_MDMG_ELE_GHOST + 8,ench_MDMG_ELE_GHOST + 9,ench_MDMG_ELE_GHOST + 10,ench_MDMG_ELE_UNDEAD + 5,ench_MDMG_ELE_UNDEAD + 6,ench_MDMG_ELE_UNDEAD + 7,ench_MDMG_ELE_UNDEAD + 8,ench_MDMG_ELE_UNDEAD + 9,ench_MDMG_ELE_UNDEAD + 10,"NULL"],
 /* 130 Shadow Sword/Staff Book */[ench_NONE,ench_HP_ADD +2,ench_HP_ADD +3,ench_HP_ADD +4,ench_HP_ADD +5,ench_HP_ADD +6,ench_HP_ADD +7,ench_HP_ADD +8,ench_HP_ADD +9,ench_HP_ADD +10,ench_SP_ADD +1,ench_SP_ADD +2,ench_SP_ADD +3,ench_SP_ADD +4,ench_HP_MUL +1,ench_HP_MUL +2,ench_SP_MUL +1,ench_SP_MUL +2,ench_ATK +1,ench_ATK +2,ench_ATK +3,ench_ATK +4,ench_ATK +5,ench_ATK +6,ench_ATK +7,ench_ATK +8,ench_ATK +9,ench_ATK +10,ench_ATK +11,ench_ATK +12,ench_ATK +13,ench_ATK +14,ench_ATK +15,ench_MATK +1,ench_MATK +2,ench_MATK +3,ench_MATK +4,ench_MATK +5,ench_MATK +6,ench_MATK +7,ench_MATK +8,ench_MATK +9,ench_MATK +10,ench_MATK +11,ench_MATK +12,ench_MATK +13,ench_MATK +14,ench_MATK +15,ench_ATK_MUL +1,ench_ATK_MUL +2,ench_ATK_MUL +3,ench_MATK_MUL +1,ench_MATK_MUL +2,ench_MATK_MUL +3,ench_DMG_RANGE +1,ench_DMG_RANGE +2,ench_DMG_RANGE +3,ench_DMG_RANGE +4,ench_DMG_RANGE +5,ench_DMG_CRIT +1,ench_DMG_CRIT +2,ench_DMG_CRIT +3,ench_DMG_CRIT +4,ench_DMG_CRIT +5,ench_HIT +5,ench_HIT +6,ench_HIT +7,ench_HIT +8,ench_HIT +9,ench_HIT +10,ench_HIT +11,ench_HIT +12,ench_HIT +13,ench_HIT +14,ench_HIT +15,ench_FLEE +5,ench_FLEE +6,ench_FLEE +7,ench_FLEE +8,ench_FLEE +9,ench_FLEE +10,ench_FLEE +11,ench_FLEE +12,ench_FLEE +13,ench_FLEE +14,ench_FLEE +15,ench_ASPD_ADD +1,ench_ASPD_MUL +1,ench_ASPD_MUL +2,ench_ASPD_MUL +3,ench_ASPD_MUL +4,ench_ASPD_MUL +5,ench_RED_CAST +1,ench_RED_CAST +2,ench_RED_CAST +3,ench_RED_CAST +4,ench_RED_CAST +5,ench_HEAL_MUL + 3,ench_HEAL_MUL + 4,ench_HEAL_MUL + 5,ench_DEFIGN_RC_NON_BOSS +1,ench_DEFIGN_RC_NON_BOSS +2,ench_DEFIGN_RC_NON_BOSS +3,ench_DEFIGN_RC_NON_BOSS +4,ench_DEFIGN_RC_NON_BOSS +5,ench_DEFIGN_RC_NON_BOSS +6,ench_DEFIGN_RC_NON_BOSS +7,ench_DEFIGN_BOSS +1,ench_DEFIGN_BOSS +2,ench_DEFIGN_BOSS +3,ench_DEFIGN_BOSS +4,ench_DEFIGN_BOSS +5,ench_DEFIGN_BOSS +6,ench_DEFIGN_BOSS +7,ench_MDEFIGN_RC_NON_BOSS +1,ench_MDEFIGN_RC_NON_BOSS +2,ench_MDEFIGN_RC_NON_BOSS +3,ench_MDEFIGN_RC_NON_BOSS +4,ench_MDEFIGN_RC_NON_BOSS +5,ench_MDEFIGN_RC_NON_BOSS +6,ench_MDEFIGN_RC_NON_BOSS +7,ench_MDEFIGN_BOSS +1,ench_MDEFIGN_BOSS +2,ench_MDEFIGN_BOSS +3,ench_MDEFIGN_BOSS +4,ench_MDEFIGN_BOSS +5,ench_MDEFIGN_BOSS +6,ench_MDEFIGN_BOSS +7,ench_DMG_ELE_NEUTRAL +1,ench_DMG_ELE_NEUTRAL +2,ench_DMG_ELE_NEUTRAL +3,ench_DMG_ELE_NEUTRAL +4,ench_DMG_ELE_NEUTRAL +5,ench_DMG_ELE_WATER +1,ench_DMG_ELE_WATER +2,ench_DMG_ELE_WATER +3,ench_DMG_ELE_WATER +4,ench_DMG_ELE_WATER +5,ench_DMG_ELE_EARTH +1,ench_DMG_ELE_EARTH +2,ench_DMG_ELE_EARTH +3,ench_DMG_ELE_EARTH +4,ench_DMG_ELE_EARTH +5,ench_DMG_ELE_FIRE +1,ench_DMG_ELE_FIRE +2,ench_DMG_ELE_FIRE +3,ench_DMG_ELE_FIRE +4,ench_DMG_ELE_FIRE +5,ench_DMG_ELE_WIND +1,ench_DMG_ELE_WIND +2,ench_DMG_ELE_WIND +3,ench_DMG_ELE_WIND +4,ench_DMG_ELE_WIND +5,ench_DMG_ELE_POISON +1,ench_DMG_ELE_POISON +2,ench_DMG_ELE_POISON +3,ench_DMG_ELE_POISON +4,ench_DMG_ELE_POISON +5,ench_DMG_ELE_HOLY +1,ench_DMG_ELE_HOLY +2,ench_DMG_ELE_HOLY +3,ench_DMG_ELE_HOLY +4,ench_DMG_ELE_HOLY +5,ench_DMG_ELE_SHADOW +1,ench_DMG_ELE_SHADOW +2,ench_DMG_ELE_SHADOW +3,ench_DMG_ELE_SHADOW +4,ench_DMG_ELE_SHADOW +5,ench_DMG_ELE_GHOST +1,ench_DMG_ELE_GHOST +2,ench_DMG_ELE_GHOST +3,ench_DMG_ELE_GHOST +4,ench_DMG_ELE_GHOST +5,ench_DMG_ELE_UNDEAD +1,ench_DMG_ELE_UNDEAD +2,ench_DMG_ELE_UNDEAD +3,ench_DMG_ELE_UNDEAD +4,ench_DMG_ELE_UNDEAD +5,ench_MDMG_ELE_NEUTRAL +1,ench_MDMG_ELE_NEUTRAL +2,ench_MDMG_ELE_NEUTRAL +3,ench_MDMG_ELE_NEUTRAL +4,ench_MDMG_ELE_NEUTRAL +5,ench_MDMG_ELE_WATER +1,ench_MDMG_ELE_WATER +2,ench_MDMG_ELE_WATER +3,ench_MDMG_ELE_WATER +4,ench_MDMG_ELE_WATER +5,ench_MDMG_ELE_EARTH +1,ench_MDMG_ELE_EARTH +2,ench_MDMG_ELE_EARTH +3,ench_MDMG_ELE_EARTH +4,ench_MDMG_ELE_EARTH +5,ench_MDMG_ELE_FIRE +1,ench_MDMG_ELE_FIRE +2,ench_MDMG_ELE_FIRE +3,ench_MDMG_ELE_FIRE +4,ench_MDMG_ELE_FIRE +5,ench_MDMG_ELE_WIND +1,ench_MDMG_ELE_WIND +2,ench_MDMG_ELE_WIND +3,ench_MDMG_ELE_WIND +4,ench_MDMG_ELE_WIND +5,ench_MDMG_ELE_POISON +1,ench_MDMG_ELE_POISON +2,ench_MDMG_ELE_POISON +3,ench_MDMG_ELE_POISON +4,ench_MDMG_ELE_POISON +5,ench_MDMG_ELE_HOLY +1,ench_MDMG_ELE_HOLY +2,ench_MDMG_ELE_HOLY +3,ench_MDMG_ELE_HOLY +4,ench_MDMG_ELE_HOLY +5,ench_MDMG_ELE_SHADOW +1,ench_MDMG_ELE_SHADOW +2,ench_MDMG_ELE_SHADOW +3,ench_MDMG_ELE_SHADOW +4,ench_MDMG_ELE_SHADOW +5,ench_MDMG_ELE_GHOST +1,ench_MDMG_ELE_GHOST +2,ench_MDMG_ELE_GHOST +3,ench_MDMG_ELE_GHOST +4,ench_MDMG_ELE_GHOST +5,ench_MDMG_ELE_UNDEAD +1,ench_MDMG_ELE_UNDEAD +2,ench_MDMG_ELE_UNDEAD +3,ench_MDMG_ELE_UNDEAD +4,ench_MDMG_ELE_UNDEAD +5,ench_MDMG_SIZ_SMALL +1,ench_MDMG_SIZ_SMALL +2,ench_MDMG_SIZ_SMALL +3,ench_MDMG_SIZ_SMALL +4,ench_MDMG_SIZ_SMALL +5,ench_MDMG_SIZ_MEDIUM +1,ench_MDMG_SIZ_MEDIUM +2,ench_MDMG_SIZ_MEDIUM +3,ench_MDMG_SIZ_MEDIUM +4,ench_MDMG_SIZ_MEDIUM +5,ench_MDMG_SIZ_LARGE +1,ench_MDMG_SIZ_LARGE +2,ench_MDMG_SIZ_LARGE +3,ench_MDMG_SIZ_LARGE +4,ench_MDMG_SIZ_LARGE +5,"NULL"],
 /* 131 Mysterious Box */[ench_NONE,ench_HP_ADD +2,ench_HP_ADD +3,ench_HP_ADD +4,ench_HP_ADD +5,ench_HP_ADD +6,ench_HP_ADD +7,ench_HP_ADD +8,ench_HP_ADD +9,ench_HP_ADD +10,ench_SP_ADD +1,ench_SP_ADD +2,ench_SP_ADD +3,ench_SP_ADD +4,ench_HP_MUL +1,ench_HP_MUL +2,ench_SP_MUL +1,ench_SP_MUL +2,ench_ATK +1,ench_ATK +2,ench_ATK +3,ench_ATK +4,ench_ATK +5,ench_ATK +6,ench_ATK +7,ench_ATK +8,ench_ATK +9,ench_ATK +10,ench_ATK +11,ench_ATK +12,ench_ATK +13,ench_ATK +14,ench_ATK +15,ench_MATK +1,ench_MATK +2,ench_MATK +3,ench_MATK +4,ench_MATK +5,ench_MATK +6,ench_MATK +7,ench_MATK +8,ench_MATK +9,ench_MATK +10,ench_MATK +11,ench_MATK +12,ench_MATK +13,ench_MATK +14,ench_MATK +15,ench_ATK_MUL +1,ench_ATK_MUL +2,ench_ATK_MUL +3,ench_ATK_MUL +4,ench_ATK_MUL +5,ench_MATK_MUL +1,ench_MATK_MUL +2,ench_MATK_MUL +3,ench_MATK_MUL +4,ench_MATK_MUL +5,ench_DMG_RANGE +1,ench_DMG_RANGE +2,ench_DMG_RANGE +3,ench_DMG_RANGE +4,ench_DMG_RANGE +5,ench_CRIT +1,ench_CRIT +2,ench_CRIT +3,ench_CRIT +4,ench_CRIT +5,ench_DMG_CRIT +1,ench_DMG_CRIT +2,ench_DMG_CRIT +3,ench_DMG_CRIT +4,ench_DMG_CRIT +5,ench_HIT +5,ench_HIT +6,ench_HIT +7,ench_HIT +8,ench_HIT +9,ench_HIT +10,ench_HIT +11,ench_HIT +12,ench_HIT +13,ench_HIT +14,ench_HIT +15,ench_FLEE +5,ench_FLEE +6,ench_FLEE +7,ench_FLEE +8,ench_FLEE +9,ench_FLEE +10,ench_FLEE +11,ench_FLEE +12,ench_FLEE +13,ench_FLEE +14,ench_FLEE +15,ench_ASPD_MUL +3,ench_ASPD_MUL +4,ench_ASPD_MUL +5,ench_ASPD_MUL +6,ench_ASPD_MUL +7,ench_ASPD_MUL +8,ench_ASPD_MUL +9,ench_ASPD_MUL +10,ench_RED_CAST +1,ench_RED_CAST +2,ench_RED_CAST +3,ench_HEAL_MUL +3,ench_HEAL_MUL +4,ench_HEAL_MUL +5,ench_DEF +10,ench_DEF +11,ench_DEF +12,ench_DEF +13,ench_DEF +14,ench_DEF +15,ench_DEF +16,ench_DEF +17,ench_DEF +18,ench_DEF +19,ench_DEF +20,ench_DEF +21,ench_DEF +22,ench_DEF +23,ench_DEF +24,ench_DEF +25,ench_MDEF +1,ench_MDEF +2,ench_MDEF +3,"NULL"],
+/* 132 Emeral Ring */[ench_NONE,ench_DOUBLE_STRAFE_LV + 1,ench_DOUBLE_STRAFE_LV + 2,ench_DOUBLE_STRAFE_LV + 3,ench_DOUBLE_STRAFE_LV + 4,ench_DOUBLE_STRAFE_LV + 5,ench_DOUBLE_STRAFE_LV + 6,ench_DOUBLE_STRAFE_LV + 7,ench_DOUBLE_STRAFE_LV + 8,ench_DOUBLE_STRAFE_LV + 9,ench_DOUBLE_STRAFE_LV + 10,"NULL"],
+/* 133 Tengu Shoes 1 */[ench_NONE,ench_GT_CURE + 1,ench_GT_CURE + 2,ench_GT_CURE + 3,ench_GT_CURE + 4,ench_GT_CURE + 5,"NULL"],
+/* 134 Tengu Shoes 2 */[ench_NONE,ench_GT_SILENCE + 1,ench_GT_SILENCE + 2,ench_GT_SILENCE + 3,ench_GT_SILENCE + 4,ench_GT_SILENCE + 5,"NULL"],
+/* 135  */[ench_NONE,ench_FLAMING_PETALS + 1,ench_FLAMING_PETALS + 2,ench_FLAMING_PETALS + 3,ench_FLAMING_PETALS + 4,ench_FLAMING_PETALS + 5,ench_FLAMING_PETALS + 6,ench_FLAMING_PETALS + 7,ench_FLAMING_PETALS + 8,ench_FLAMING_PETALS + 9,ench_FLAMING_PETALS + 10,"NULL"],
+/* 136  */[ench_NONE,ench_FREEZING_SPEAR + 1,ench_FREEZING_SPEAR + 2,ench_FREEZING_SPEAR + 3,ench_FREEZING_SPEAR + 4,ench_FREEZING_SPEAR + 5,ench_FREEZING_SPEAR + 6,ench_FREEZING_SPEAR + 7,ench_FREEZING_SPEAR + 8,ench_FREEZING_SPEAR + 9,ench_FREEZING_SPEAR + 10,"NULL"],
+/* 137  */[ench_NONE,ench_WIND_BLADE + 1,ench_WIND_BLADE + 2,ench_WIND_BLADE + 3,ench_WIND_BLADE + 4,ench_WIND_BLADE + 5,ench_WIND_BLADE + 6,ench_WIND_BLADE + 7,ench_WIND_BLADE + 8,ench_WIND_BLADE + 9,ench_WIND_BLADE + 10,"NULL"],
+/* 138  */[ench_NONE,"NULL"],
 ];
 }

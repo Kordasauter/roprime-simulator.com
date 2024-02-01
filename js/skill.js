@@ -1356,6 +1356,7 @@ JobSkillActiveOBJ = [
 ,[74,1, 13,4] // Double Attack 4
 ,[75,1,151,5] // Hammer Fall 5
 ,[76,1,225,1] // Cast Cancel 1
+,[77,1, 27,6] // Increase Agi 6
 ];
 }
 

@@ -2709,7 +2709,17 @@ ITEM_NAME = [
 ,[2687,"Ободок осенних листьев","<br>Уменьшает затрату SP при использовании умения Ливень стрел на 28.<br>Шанс 4% на востановление 1% SP при совершении физической атаки.<br>[При заточке на +9 и выше]<br>Увеличивает урон от умения Ливень стрел на 1% за каждые 5 базовых уровней.","Autumn Headband","<br>Reduces the SP cost of Arrow Storm by 28.<br>Adds a 4% chance of restoring 1% of damage as SP when performing a physical attack.<br>If upgrade level is +9 or higher,<br>Increases the damage of Arrow Storm by 1% for every 5 base levels.",0]
 ,[2688,"Изумрудное кольцо","<br>Ловкость + 1 за каждые 2 уровня умения Двойной выстрел.<br>Живучесть +1 за каждые 2 уровня умения Двойной выстрел.<br>Сноровка + 1 за каждые 2 уровня умения Двойной выстрел.<br>Атака + 20 за каждые 2 уровня умения Двойной выстрел.<br>Уменьшает затрату SP при использовании умения Импровизация на 18.","Emerald Ring","<br>Additional Agi + 1 per 2 levels of Double Strafe known.<br>Vit + 5<br>Additional Vit + 1 per 2 levels of Double Strafe known.<br>Dex + 5<br>Additional Dex + 1 per 2 levels of Double Strafe known.<br>Atk + 20 per 2 levels of Double Strafe known.",0]
 ,[2689,"Изумрудное кольцо (10 уровня умения Двойной выстрел)",0,"Emerald Ring (Double Strafe level 10)",0]
-// ,[2690,"",0,"PlaceHolder",0]
+,[2690,"Пояс великого синоби",0,"Great Shinobi Sash","Increases the damage of Exploding Dragon by 10% per level of Flaming Petals known.<br>Increases the damage of First Wind by 10% per level of Wind Blade known.<br>Increases the damage of Snow Flake Draft by 20% per level of Freezing Spear known.",0]//item id 490487
+,[2691,"Пояс великого синоби (illusion skills lv max)",0,"Great Shinobi Sash (illusion skills lv max)","Increases the damage of Exploding Dragon by 10% per level of Flaming Petals known.<br>Increases the damage of First Wind by 10% per level of Wind Blade known.<br>Increases the damage of Snow Flake Draft by 20% per level of Freezing Spear known.",0]
+,[2692,"Щит бурлящего хаоса",0,"Shield of Raging Chaos",0]
+,[2693,"Темно-синие очки",0,"Deep Blue Sunglasses",0]
+,[2694,"Рог цилиня",0,"Kirin Horn","Set Bonus<br>Attack delay 1<br>Kirin Horn[1]<br>Aspd + 1<br>Reduces damage taken from Demi-Human, Brute, Fish, Demon, and Undead race enemies by 1%.<br><br>Set Bonus<br>Attack delay 2<br>Kirin Horn[1]<br>Aspd + 1<br>Reduces damage taken from Demi-Human, Brute, Fish, Demon, and Undead race enemies by 1%.",0]
+// ,[2695,"",0,"PlaceHolder",0]
+// ,[2696,"",0,"PlaceHolder",0]
+// ,[2697,"",0,"PlaceHolder",0]
+// ,[2698,"",0,"PlaceHolder",0]
+// ,[2699,"",0,"PlaceHolder",0]
+// ,[2700,"",0,"PlaceHolder",0]
 ]
 };
 // ,[,0,0,"",0]

@@ -432,6 +432,7 @@ bon_MDMG_SIZ_LARGE = 370;
 
 bon_MDMG_BOSS = 371;
 bon_WEAPON_MATK = 372;
+bon_ATK_MUL = 373;
 
 
 
@@ -456,7 +457,7 @@ bon_DELAY_SKILL_FLAT = 11000;
 bon_SKILL_ENABLE = 220;
 bon_SKILL_AUTOCAST = 221;
 // ^ ColdBolt, FireBolt, Bash, TStorm, TU, 
-
+AutocastList = [];
 }
 {//enchant bonus
 ench_NONE = 0;
@@ -650,7 +651,13 @@ ench_MDMG_SIZ_MEDIUM = ench_MDMG_SIZ_SMALL + 30;
 ench_MDMG_SIZ_LARGE = ench_MDMG_SIZ_MEDIUM + 30;
 ench_DEFIGN_RC_NON_BOSS = ench_MDMG_SIZ_LARGE + 30;
 ench_MDEFIGN_RC_NON_BOSS = ench_DEFIGN_RC_NON_BOSS + 30;
-// ench_ = ench_MDEFIGN_RC_NON_BOSS + 30;
+ench_DOUBLE_STRAFE_LV = ench_MDEFIGN_RC_NON_BOSS + 30;
+ench_GT_CURE = ench_DOUBLE_STRAFE_LV + 10;
+ench_GT_SILENCE = ench_GT_CURE + 5;
+ench_FLAMING_PETALS = ench_GT_SILENCE + 5;
+ench_FREEZING_SPEAR = ench_FLAMING_PETALS + 10;
+ench_WIND_BLADE = ench_FREEZING_SPEAR + 10;
+// ench_ = ench_WIND_BLADE + 10;
 
 }
 

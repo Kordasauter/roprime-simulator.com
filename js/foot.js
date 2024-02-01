@@ -1624,7 +1624,8 @@ function StPlusCalc()
 function StPlusCalc2( nSTP2 )
 { 
 	var w = bon_NONE;
-
+	if(nSTP2 == bon_SKILL_AUTOCAST)
+		w = new Array();
 	for ( var i = 0; i <= 32; i++ )
 	{	 // for each equip/ card
 		for ( var j = 0; ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START] != bon_NONE; j += 2 )
@@ -1677,7 +1678,10 @@ function StPlusCalc2( nSTP2 )
 						refine = 0;
 						break;
 				}
-				w += BonusCalc(ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START],refine,ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START + 1],ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START + 3]);
+				if(nSTP2 == bon_SKILL_AUTOCAST)
+					w.push(ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START + 3]);
+				else
+					w += BonusCalc(ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START],refine,ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START + 1],ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START + 3]);
 			}
 			if ( nSTP2 == ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START] && !isNaN(ItemOBJ[n_A_Equip[i]][j + itm_BONUS_START - 2]))
 			{	//if there is no "refine over" or "for every x refine before" 
@@ -1693,6 +1697,8 @@ function StPlusCalc2( nSTP2 )
 function StPlusCard( nSTP2 )
 { 
 	var w=0;
+	if(nSTP2 == bon_SKILL_AUTOCAST)
+		w = new Array();
 	for(var i=0;i<=25;i++)
 	{
 		for(var j=0;cardOBJ[n_A_card[i]][j +4] != 0;j += 2)
@@ -1727,7 +1733,10 @@ function StPlusCard( nSTP2 )
 						refine = 0;
 						break;
 				}
-				w += BonusCalc(cardOBJ[n_A_card[i]][j + 4],refine,cardOBJ[n_A_card[i]][j + 4 + 1],cardOBJ[n_A_card[i]][j + 4 + 3]);
+				if(nSTP2 == bon_SKILL_AUTOCAST)
+					n_tok[221].push(cardOBJ[n_A_card[i]][j + 4 + 3]);
+				else
+					w += BonusCalc(cardOBJ[n_A_card[i]][j + 4],refine,cardOBJ[n_A_card[i]][j + 4 + 1],cardOBJ[n_A_card[i]][j + 4 + 3]);
 			}
 			if ( nSTP2 == cardOBJ[n_A_card[i]][j + 4] && 
 			cardOBJ[n_A_card[i]][j + 4 - 2] != "ev_ref" && 
@@ -1761,7 +1770,10 @@ function StPlusCard( nSTP2 )
 			cardOBJ[n_A_card[i]][j + 4 - 2] != "garm_ref_lvl" &&
 			cardOBJ[n_A_card[i]][j + 4 - 2] != "shoes_ref_lvl")
 			{	//if there is no "refine over" or "for every x refine before" 
-				w += cardOBJ[n_A_card[i]][j + 4 + 1];
+				if(nSTP2 == bon_SKILL_AUTOCAST)
+					n_tok[221].push(cardOBJ[n_A_card[i]][j + 4 + 1]);
+				else
+					w += cardOBJ[n_A_card[i]][j + 4 + 1];
 			}
 		}
 	}

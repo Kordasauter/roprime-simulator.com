@@ -240,7 +240,7 @@ function CalcSkillDamageType()
 
 }
 
-function CalcSkillDamage()
+function CalcSkillDamage_old()
 {
 	// Ready!!!
 	let ignoreDef = false;
@@ -1713,7 +1713,7 @@ function CalcSkillDamage()
 		{
 			// Amplification: 600%-1500% damage
 			var damage = parseInt(formElements["SkillSubNum"].value);
-			damage *= n_A_ActiveSkillLV * 5.0;
+			damage *= n_A_ActiveSkillLV + 5.0;
 			w_SkillMod = 1;
 			
 			// calc reflected damage
@@ -1843,12 +1843,12 @@ function CalcSkillDamage()
 			
 			if(PATCH <= 1)
 			{
-				// formula:[(n_A_ActiveSkillLV * 0.6 ) + {(Cart_Remodeling_Lv × 50) × (INT ÷ 40)}]
+				// formula:[(Skill Level * 0.6 ) + {(Cart_Remodeling_Lv × 50) × (INT ÷ 40)}]
 				w_SkillMod = (((SkillSearch( skill_GEN_CART_REMODELING ) * 50) * ( n_A_INT / 40)) + (n_A_ActiveSkillLV * 60))/100
 			}
 			else if(PATCH == 2)
 			{
-				// formula:[(n_A_ActiveSkillLV * 0.6 ) + {((Skill Level x 20) x Cart_Remodeling_Lv) + (INT x 2)}] x (BaseLv ÷ 100)
+				// formula:[(Skill Level * 0.6 ) + {((Skill Level x 20) x Cart_Remodeling_Lv) + (INT x 2)}] x (BaseLv ÷ 100)
 				w_SkillMod = (n_A_ActiveSkillLV * 2.5) + ((n_A_ActiveSkillLV * 0.2) * SkillSearch( skill_GEN_CART_REMODELING )) + ( n_A_INT * 0.02);
 				w_SkillMod *= n_A_BaseLV / 100.0;
 			}
@@ -1878,7 +1878,7 @@ function CalcSkillDamage()
 			}
 			else
 			{
-				w_SkillMod = ( n_A_ActiveSkillLV * 0.8 ) + ( n_A_AGI / 100.0 ) * n_A_BaseLV / 100.0;
+				w_SkillMod = (( n_A_ActiveSkillLV * 0.8 ) + ( n_A_AGI / 100.0 )) * (n_A_BaseLV / 100.0);
 			}
 			
 			fixedCastTime *= 0.0;
@@ -2956,9 +2956,10 @@ function CalcSkillDamage()
 		{
 			w_SkillMod += n_A_ActiveSkillLV *0.4;
 			w_TotalHits = 2;
-			var numEnemies = parseInt(formElements["SkillSubNum"].value);
+			
 			if (  n_A_WeaponType == weapTyp_2HSWORD)//prime
 			{
+				let numEnemies = parseInt(formElements["SkillSubNum"].value);
 				if(numEnemies == 0)
 				{
 					w_TotalHits = 2;

@@ -305,6 +305,12 @@ function magicRaceMultiplier()
 	let rcMul=0;
 	
 	rcMul = n_tok[bon_MDMG_RC_FORMLESS + n_B[en_RACE]];
+	// Red Pom Hat
+	if ( EquipNumSearch( 1250 ) && n_A_HEAD_DEF_PLUS >= 5 && n_B[en_RACE]== race_DEMI_HUMAN)
+		raceMultiplier += n_A_HEAD_DEF_PLUS * 2;
+	// "Headband Beret"
+	if ( EquipNumSearch( 1666 ) &&  n_A_HEAD_DEF_PLUS >= 6 && n_B[en_RACE]== race_DEMI_HUMAN)
+		rcMul += n_A_HEAD_DEF_PLUS - 5;
 	
 	if ( n_B[en_RACE] == race_DRAGON  && SkillSearch( skill_SA_DRAGONOLOGY ) )
 		rcMul += SkillSearch( skill_SA_DRAGONOLOGY ) * 2;

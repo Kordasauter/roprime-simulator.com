@@ -5,7 +5,7 @@ function setMenu()
 	
 	let str = "";
 	let code = CentralLabCode();
-	str +="<div class=\"sidebar-heading\">Last update : 15/12/2023</div>";
+	str +="<div class=\"sidebar-heading\">Last update : 01/02/2024</div>";
 	if(index == "index.html" || path == "/")
 		str +="<li class=\"nav-item active\">";
 	else
@@ -39,7 +39,7 @@ function setMenu()
 	str +="<span>Patch Notes<br></span></a>";
 	str +="</li>";
 	str +="<li class=\"nav-item\">";
-	str +="<a class=\"nav-link\">";
+	str +="<span class=\"nav-link\">";
 	str +="<i class=\"fas fa-fw fa-calendar-days\"></i>";
 	str +="<span>Central Lab Code: " + code[8];
 	str +="<table style=\"border:solid;\">";
@@ -121,7 +121,7 @@ function setMenu()
 	str +="</tr>";
 	str +="</table>";
 	str +="</span>";
-	str +="</a>";
+	str +="</span>";
 	str +="</li>";
 	
 	

@@ -2167,7 +2167,24 @@ function ClickShoes( data, isRefine )
 		formElements["A_SHOES_ENCHANT_3"].disabled = false;
 		formElements["A_SHOES_ENCHANT_2"].disabled = true;
 	}
-	// else if(garm_id == 9999)
+	else if(shoes_id == 2684)
+	{//Tengu Shoes
+		if(!isRefine)
+		{
+			CleanEnchant("A_SHOES_ENCHANT");
+			let ench_num = 133;
+			formElements["A_SHOES_ENCHANT_2"].options[0] = new Option("Gentle Touche-Cure Lv.0",EnchantOBJ[EnchantListOBJ[ench_num][0]][0]);
+			for ( var i = 1; EnchantListOBJ[ench_num][i] != "NULL"; i++ )
+				formElements["A_SHOES_ENCHANT_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench_num][i]][1],EnchantOBJ[EnchantListOBJ[ench_num][i]][0]);
+			ench_num = 134;
+			formElements["A_SHOES_ENCHANT_3"].options[0] = new Option("Gentle Touche-Silence Lv.0",EnchantOBJ[EnchantListOBJ[ench_num][0]][0]);
+			for ( var i = 1; EnchantListOBJ[ench_num][i] != "NULL"; i++ )
+				formElements["A_SHOES_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench_num][i]][1],EnchantOBJ[EnchantListOBJ[ench_num][i]][0]);
+		}
+		formElements["A_SHOES_ENCHANT_3"].disabled = false;
+		formElements["A_SHOES_ENCHANT_2"].disabled = false;
+	}
+	// else if(shoes_id == 9999)
 	// {
 		// if(!isRefine)
 		// {
@@ -2769,10 +2786,6 @@ function ClickAcces( data, numAccess )
 		formElements[formAcc + "_3"].disabled = false;
 		formElements[formAcc + "_2"].disabled = false;
 	}
-	// else if(access_id == 9999)
-	// {
-		// CleanEnchant(formAcc);
-	// }
 	else if(access_id == 2351 || access_id == 2352 || access_id == 2353 || access_id == 2355)
 	{//Red Lantern || Hurt Mind || Kind Heart || Evilspirit Gloves
 		CleanEnchant(formAcc);
@@ -2795,6 +2808,40 @@ function ClickAcces( data, numAccess )
 		}
 		formElements[formAcc + "_2"].disabled = false;
 	}
+	else if(access_id == 2688)
+	{//Emerald Ring
+		CleanEnchant(formAcc);
+		
+		let ench1 = 132;
+		formElements[formAcc + "_2"].options[0] = new Option("Double Strafe Lv.0",EnchantOBJ[EnchantListOBJ[ench1][0]][0]);
+		for ( var i = 1; EnchantListOBJ[ench1][i] != "NULL"; i++ )
+			formElements[formAcc + "_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench1][i]][1],EnchantOBJ[EnchantListOBJ[ench1][i]][0]);
+		formElements[formAcc + "_2"].disabled = false;
+	}
+	else if(access_id == 2690 || access_id == 2691)
+	{//Great Shinobi Sash
+		CleanEnchant(formAcc);
+		
+		let ench1 = 135;
+		formElements[formAcc + "_2"].options[0] = new Option("Flaming Petal Lv.0",EnchantOBJ[EnchantListOBJ[ench1][0]][0]);
+		for ( var i = 1; EnchantListOBJ[ench1][i] != "NULL"; i++ )
+			formElements[formAcc + "_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench1][i]][1],EnchantOBJ[EnchantListOBJ[ench1][i]][0]);
+		ench1 = 136;
+		formElements[formAcc + "_3"].options[0] = new Option("Freezing Spear Lv.0",EnchantOBJ[EnchantListOBJ[ench1][0]][0]);
+		for ( var i = 1; EnchantListOBJ[ench1][i] != "NULL"; i++ )
+			formElements[formAcc + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench1][i]][1],EnchantOBJ[EnchantListOBJ[ench1][i]][0]);
+		ench1 = 137;
+		formElements[formAcc + "_4"].options[0] = new Option("Wind Blade Lv.0",EnchantOBJ[EnchantListOBJ[ench1][0]][0]);
+		for ( var i = 1; EnchantListOBJ[ench1][i] != "NULL"; i++ )
+			formElements[formAcc + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench1][i]][1],EnchantOBJ[EnchantListOBJ[ench1][i]][0]);
+		formElements[formAcc + "_2"].disabled = false;
+		formElements[formAcc + "_3"].disabled = false;
+		formElements[formAcc + "_4"].disabled = false;
+	}
+	// else if(access_id == 9999)
+	// {
+		// CleanEnchant(formAcc);
+	// }
 	else
 	{
 		CleanEnchant(formAcc);
@@ -3976,11 +4023,11 @@ with(document.calcForm)
 	{
 		myInnerHtml( "AASkillName", "<br/># Performers: ", 0 );
 		myInnerHtml( "AASkill", '<select id="SkillSubNum" style="width:50px;" onchange="calc()"></select>', 0 );
-		for ( var i = 2; i <= 12; i++ )
+		for ( var i = 1; i <= 12; i++ )
 		{
-			SkillSubNum.options[i - 2] = new Option( i, i );
+			SkillSubNum.options[i - 1] = new Option( i, i );
 		}
-		SkillSubNum.value = 2;
+		SkillSubNum.value = 1;
 	}
 	else if ( n_A_ActiveSkill === skill_MIWA_REVERBERATION )
 	{
@@ -4123,6 +4170,8 @@ with(document.calcForm)
 	{
 		myInnerHtml( "AASkillName", "<br/># Hits: ", 0 );
 		myInnerHtml( "AASkill", '<select id="SkillSubNum" style="width:50px;" onchange="calc()"></select>', 0 );
+		myInnerHtml( "AASkillName2", "<br/>Moon Slasher : ", 0 );
+		myInnerHtml( "AASkill2", '<input type="checkbox" name="SkillSubNum2" onchange="calc()">', 0 );
 		for ( var i = 1; i <= 3; i++ )
 		{
 			SkillSubNum.options[i - 1] = new Option( i, i );

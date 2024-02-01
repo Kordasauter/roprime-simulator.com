@@ -372,7 +372,7 @@ function SetCard()
 ,[320,2,"Dark Illusion",0,bon_RED_CAST,-10,bon_HP_MUL,-10,bon_SP_MUL,-10,0]
 ,[321,4,"Dark Frame","6% chance of inflicting [Stone] status when receiving physical damage",0]
 ,[322,6,"Dark Lord",0,221,72,0]
-,[323,1,"Turtle General",0,bon_PHY_ATK,20,221,73,0]
+,[323,1,"Turtle General",0,bon_ATK_MUL,20,221,73,0]
 ,[324,7,"Dumpling Kid","3% chance of Candy and 1% chance of Candy Cane item dropping when killing a Demi-human race monster<BR>+50% HP restoration with those items",0]
 ,[325,1,"Chepet","(on your enemy not yourself)",221,74,0]
 ,[326,1,"Zipper Bear","1 SP is drained with each physical attack<BR>If equipped by a Merchant job type:<BR>Weapon becomes unbreakable",bon_ATK,30,0]
@@ -650,7 +650,7 @@ function SetCard()
 //Lasagna
 ,[587,	 card_com_ARMOR,"Grass Fabre",0,bon_LUK,1,bon_HP_ADD,100,0]
 ,[588,	 card_com_ARMOR,"Eggring",0,bon_LUK,2,bon_HP_ADD,50,0]
-,[589,	 card_com_GARMENT,"Big Eggring","ATK -5 for every 10 base points of STR.<br>ASPD -2% for every 10 base points of AGI.<br>MaxHP -200 for every 10 base points of VIT.<br>MATK -5 for every 10 base points of INT.<br>Long ranged physical damage -1% for every 10 base points of DEX.<br>Critical damage -2% for every 10 base points of LUK.<br>All Stats can't be lower than 0.",bon_HP_ADD,1000,bon_PHY_ATK,25,bon_MATK,25,bon_ASPD_MUL,10,bon_DMG_RANGE,5,bon_DMG_CRIT,10,0]
+,[589,	 card_com_GARMENT,"Big Eggring","ATK -5 for every 10 base points of STR.<br>ASPD -2% for every 10 base points of AGI.<br>MaxHP -200 for every 10 base points of VIT.<br>MATK -5 for every 10 base points of INT.<br>Long ranged physical damage -1% for every 10 base points of DEX.<br>Critical damage -2% for every 10 base points of LUK.<br>All Stats can't be lower than 0.",bon_HP_ADD,1000,bon_ATK,25,bon_MATK,25,bon_ASPD_MUL,10,bon_DMG_RANGE,5,bon_DMG_CRIT,10,0]
 ,[590,	 card_com_SHOES,"Hunter Wolf",0,bon_SP_ADD,30,0]
 ,[591,	 card_com_ARMOR,"Sweet Roda Frog",0,bon_SP_ADD,10,bon_HP_ADD,300,0]
 ,[592,	 card_comp_WEAPON,"Wild Hornet",0,bon_ATK,5,0]
@@ -751,9 +751,9 @@ function SetCard()
 ,[677,	 card_com_SHOES,"Geffen Gangster","",bon_ASPD_MUL,5,bon_CRIT,3,0]
 ,[678,	 card_com_SHOES,"Faymont"," SP regen +10%<br>Has a chance of auto casting Lv 1 [Zen] when taking physical damage.",0]
 ,[679,	 card_com_SHOES,"Ordre","",bon_MATK_MUL,3,bon_INC_MAGIC_WIND,5,bon_INC_MAGIC_WATER,5,0]
-,[680,	 card_com_SHOES,"Blut Hase","",bon_DMG_RANGE,5,bon_PHY_ATK,5,0]
+,[680,	 card_com_SHOES,"Blut Hase","",bon_DMG_RANGE,5,bon_ATK_MUL,5,0]
 ,[681,	 card_com_SHOES,"Kuro Akuma","",bon_RED_CAST,-3,bon_DMG_SKILL + skill_NIN_FLAMING_PETALS,5,bon_DMG_SKILL + skill_NIN_FREEZING_SPEAR,5,bon_DMG_SKILL + skill_NIN_WIND_BLADE,5,bon_DMG_RANGE,5,0]
-,[682,	 card_com_SHOES,"Ifodes","",bon_PHY_ATK,3,bon_ASPD_MUL,5,0]
+,[682,	 card_com_SHOES,"Ifodes","",bon_ATK_MUL,3,bon_ASPD_MUL,5,0]
 ,[683,	 card_com_SHOES,"Licheni","",bon_MATK_MUL,3,bon_INC_MAGIC_HOLY,5,bon_HEAL_MUL,5,0]
 ,[684,	 card_com_SHOES,"Fay Kanavian","Has a chance to transform into [Golem] for 7 sec. when attacks<br>[During transform]<br>DEF +300",0]
 //Ghost Palace
@@ -800,7 +800,7 @@ function SetCard()
 ,[714,   card_com_ACC,"Taffy","",bon_PHY_ATK,1,0]
 ,[715,   card_com_ARMOR,"Watcher","Drain 5 SP from wearer when receiving physical attack.",bon_ATK,30,0]
 // Sky Fortress Invasion
-,[716,   card_comp_WEAPON,"Immortal Cursed Knight","",bon_PHY_ATK,10,bon_SKILL_AUTOCAST,146,0]
+,[716,   card_comp_WEAPON,"Immortal Cursed Knight","",bon_ATK_MUL,10,bon_SKILL_AUTOCAST,146,0]
 ,[717,   card_comp_WEAPON,"Immortal Wind Ghost","",bon_MATK_MUL,10,bon_SKILL_AUTOCAST,147,0]
 ,[718,   card_com_SHOES,"Stephen Jack Ernest Wolf","	Adds a chance of increasing FLEE by 200 for 10 second when dealing physical attacks.<br>Adds a chance of increasing movement speed for 10 second when dealing magical attacks.<br>Adds a chance of autocasting Level 5 Fire Walk when wearer receive physical attacks.<br>Adds a chance of autocasting Level 5 Electric Walk when wearer receive magical attacks.",0]
 ,[719,   itm_type_SET,"Stephen J.E. Wolf + Immortal Cursed Knight","",bon_ASPD_ADD,1,0]
@@ -862,7 +862,7 @@ function SetCard()
 ,[772,   card_com_ARMOR,"Evil","Adds a 30% chance of inflicting Freezing<br>on the attacker when receiving a physical attack.<br>Adds an additional 10% chance of inflicting<br>Freezing on the attacker when receiving<br>a physical attack, if the users base Int is 110 or higher.",bon_MDEF,5,0]
 //Rock Ridge
 ,[773,   card_com_ACC_L,"Cowraiders Class 1","",bon_AGI,7,bon_HIT,7,0]
-,[774,   card_com_ACC_R,"Cowraiders Class 2","",bon_STR,4,bon_PHY_ATK,4,0]
+,[774,   card_com_ACC_R,"Cowraiders Class 2","",bon_STR,4,bon_ATK_MUL,4,0]
 ,[775,   card_comp_WEAPON,"Cowraiders Class 3","When compounded on Dagger class weapon:<br>Refine Level +10: ATK +20, MATK +20.<br>Refine Level +14: ATK +20, MATK +20.",bon_ATK,5,bon_MATK,5,0]
 ,[776,   card_com_SHOES,"Coyote","Skill casts cannot be interrupted (except in WoE)",bon_HP_MUL,-12,bon_SP_MUL,-6,"ref_lvl",10,bon_HP_MUL,6,"ref_lvl",10,bon_SP_MUL,3,0]
 ,[777,   card_comp_WEAPON,"Mine Cowraiders Class 1","",bon_DMG_SKILL + skill_GS_SPREAD_SHOT,10,"ref_lvl",10,bon_DMG_SKILL + skill_GS_SPREAD_SHOT,20,"ref_lvl",14,bon_DMG_SKILL + skill_GS_SPREAD_SHOT,20,0]
@@ -872,7 +872,7 @@ function SetCard()
 ,[781,   card_com_GARMENT,"Rockridge Arclouse","","ev_bint",10,bon_MATK,3,"ev_bint",10,bon_ASPD_MUL,1,"bint_hi",120,bon_MATK,40,0]
 ,[782,   card_com_GARMENT,"Rockridge Cramp","","ev_bstr",10,bon_ATK,3,"ev_bstr",10,bon_ASPD_MUL,1,"bstr_hi",120,bon_ATK,40,0]
 ,[783,   card_com_ACC_L,"Mechaspider","Adds a chance of damaging the targets weapon when performing a physical attack.<br>Adds a chance of damaging the targets armor when performing a physical attack.",0]
-,[784,   itm_type_SET,"Cowraiders Class 1 & 2","",bon_STR,3,bon_PHY_ATK,3,0]
+,[784,   itm_type_SET,"Cowraiders Class 1 & 2","",bon_STR,3,bon_ATK_MUL,3,0]
 ,[785,   itm_type_SET,"Cowraiders Class 1 & 3","",bon_DMG_SIZ_SMALL,15,0]
 ,[786,   itm_type_SET,"Cowraiders Class 1 & Mine Cowraiders Class 1","",bon_DMG_SKILL + skill_GS_SPREAD_SHOT,50,0]
 ,[787,   itm_type_SET,"Cowraiders Class 2 & Mine Cowraiders Class 2","",bon_DMG_SKILL + skill_GS_TRIGGER_HAPPY_SHOT,50,0]
@@ -880,11 +880,11 @@ function SetCard()
 //Triple Trouble
 //Horror Toy Factory
 ,[789,   card_com_ARMOR,"Decorated Evil Tree","",bon_HP_ADD,1000,bon_SP_ADD,150,bon_FLEE,-25,0]
-,[790,   card_com_SHOES,"Vicious Cookie","",bon_PHY_ATK,1,bon_MATK_MUL,1,bon_HP_MUL,-2,"ev_ref",2,bon_PHY_ATK,1,"ev_ref",2,bon_MATK_MUL,1,"ev_ref",2,bon_HP_MUL,-2,0]
+,[790,   card_com_SHOES,"Vicious Cookie","",bon_ATK_MUL,1,bon_MATK_MUL,1,bon_HP_MUL,-2,"ev_ref",2,bon_ATK_MUL,1,"ev_ref",2,bon_MATK_MUL,1,"ev_ref",2,bon_HP_MUL,-2,0]
 ,[791,   card_comp_WEAPON,"Evil Dwelling Box","Adds a chance of inflicting Curse on the target when performing a magical attack.",bon_HP_ADD,-1225,0]
 ,[792,   card_com_ACC,"Creepy Demon","Adds a chance of inflicting Curse on the attacker when receiving a magical attack.",bon_HP_MUL,13,0]
 ,[793,   card_com_ACC,"Malicious Baby Ghost","Adds a chance of inflicting Curse on the attacker when receiving a physical attack.",bon_HP_MUL,13,0]
-,[794,   card_comp_WEAPON,"Dancing Marionette","",bon_ASPD_MUL,10,bon_PHY_ATK,-3,0]
+,[794,   card_comp_WEAPON,"Dancing Marionette","",bon_ASPD_MUL,10,bon_ATK_MUL,-3,0]
 ,[795,   card_com_SHOES,"Abandoned Teddy Bear","Has a chance to inflict Curse on wearer when dealing physical and magical attack.",bon_SP_MUL,20,0]
 ,[796,   card_comp_WEAPON,"Celine Kimi","Has a chance to autocast Level 3 Critical Wound to all enemies when dealing magical attack.<br>Every 3 refine levels, increases the trigger rate.",bon_MATK_MUL,10,0]
 //Nightmare Pyramids
@@ -916,7 +916,7 @@ function SetCard()
 ,[819,   itm_type_SET,"Resentful Soldier + Archer Skeleton","Adds a 2% chance of buffing the user for 5 seconds when performing a physical attack:<br>-Aspd + 1.",0]
 ,[820,   card_com_ARMOR,"Angry Nine Tail","",bon_CRIT,5,bon_DMG_CRIT,10,"ref_lvl",10,bon_CRIT,10,0]
 ,[821,   itm_type_SET,"Angry Nine Tail + Nine Tail","Adds a 2% chance of buffing the user for 5 seconds when performing a short-ranged attack:<br>-Flee + 10.",0]
-,[822,   card_comp_HEAD,"Fury Hero","Adds a 0.5% chance of buffing the user for 5 seconds when performing a short-ranged attack:<br>-Buff: Level 1 Endure.",bon_PHY_ATK,2,0]
+,[822,   card_comp_HEAD,"Fury Hero","Adds a 0.5% chance of buffing the user for 5 seconds when performing a short-ranged attack:<br>-Buff: Level 1 Endure.",bon_ATK_MUL,2,0]
 ,[823,   card_comp_WEAPON,"Wizard of Veritas","Adds a 0.5% chance of buffing the user for 5 seconds when performing a magical attack:<br>-The users casting cannot be interrupted outside of WoE.",bon_MATK,25,0]
 ,[824,   card_com_ARMOR,"Angry Moonlight Flower","",bon_SKILL_ENABLE,71,0]
 ,[825,   itm_type_SET,"Angry Moonlight Flower + Moonlight Flower","Adds a 7% chance of buffing the user for 5 seconds when performing a short-ranged attack:<br>-Perfect Dodge + 10.",0]
@@ -956,7 +956,7 @@ function SetCard()
 //Magma dungeon 3
 ,[855,   card_com_SHIELD,"Firm Blazzer","",bon_RED_ELE2_NEUTRAL,15,bon_RED_RC_DEMON,15,0]
 ,[856,   card_com_SHOES,"Firm Nightmare Terror","",bon_SP_MUL,5,0]
-,[857,   itm_type_SET,"Firm Nightmare Terror + Nightmare Terror","",bon_PHY_ATK,10,0]
+,[857,   itm_type_SET,"Firm Nightmare Terror + Nightmare Terror","",bon_ATK_MUL,10,0]
 ,[858,   itm_type_SET,"Firm Nightmare Terror + Nightmare","",bon_SP_MUL,10,0]
 ,[859,   card_comp_HEAD,"Firm Flying Deleter","",bon_HP_MUL,5,0]
 ,[860,   itm_type_SET,"Firm Flying Deleter + Bungisngis","",bon_HP_MUL,5,0]
@@ -968,8 +968,8 @@ function SetCard()
 ,[866,   card_com_SHIELD,"Firm Muspell","",bon_RED_RC_DRAGON,30,bon_RED_RC_DEMON,30,bon_RED_RC_BRUTE,30,0]
 //Glast Heim Abyss
 ,[867,   card_comp_WEAPON,"Polluted Wander Man","",bon_DMG_SIZ_MEDIUM,30,bon_DMG_SIZ_LARGE,30,0]
-,[868,   card_com_ARMOR,"Polluted Raydric","",bon_PHY_ATK,5,0]
-,[869,   itm_type_SET,"Polluted Raydric + Raydric","",bon_RED_ELE_NEUTRAL,10,bon_PHY_ATK,5,0]
+,[868,   card_com_ARMOR,"Polluted Raydric","",bon_ATK_MUL,5,0]
+,[869,   itm_type_SET,"Polluted Raydric + Raydric","",bon_RED_ELE_NEUTRAL,10,bon_ATK_MUL,5,0]
 ,[870,   card_comp_WEAPON,"Polluted Raydrick Archer","",bon_DMG_RANGE,10,0]
 ,[871,   itm_type_SET,"Polluted Raydrick Archer + Powerful Archer Skeleton","",bon_DMG_RANGE,10,0]
 ,[872,   card_com_SHIELD,"Frozen Gargoyle","",bon_DEF,20,bon_RED_SIZ_MEDIUM,25,bon_RED_SIZ_LARGE,25,bon_RED_SIZ_SMALL,-5,0]
@@ -992,7 +992,7 @@ function SetCard()
 ,[887,   itm_type_SET,"White Knight + Khalitzburg Knight","",bon_RED_SIZ_MEDIUM,5,bon_RED_SIZ_LARGE,5,bon_DMG_SIZ_MEDIUM,15,bon_DMG_SIZ_LARGE,15,0]
 //Illusion Teddy Bear
 ,[888,   card_comp_WEAPON,"Soul Fragment","",bon_MATK,5,bon_MDMG_SIZ_MEDIUM,15,0]
-,[889,   card_com_ARMOR,"Hardworking Pitman","",bon_HIT,10,bon_PHY_ATK,5,"ref_lvl",10,bon_HIT,5,0]
+,[889,   card_com_ARMOR,"Hardworking Pitman","",bon_HIT,10,bon_ATK_MUL,5,"ref_lvl",10,bon_HIT,5,0]
 ,[890,   card_com_GARMENT,"Sinister Dwelling Obsidian","","ev_bagi",10,bon_FLEE,3,"ev_bagi",10,bon_ASPD_MUL,1,"bagi_hi",120,bon_ASPD_ADD,1,0]
 ,[891,   card_comp_WEAPON,"Colorful Teddy Bear","",bon_MATK,5,bon_MDMG_SIZ_LARGE,15,0]
 ,[892,   card_com_SHOES,"Shiny Teddy Bear","Increases SP consumption of skills by 10%.","ev_ref",1,bon_INC_MAGIC_HOLY,3,0]

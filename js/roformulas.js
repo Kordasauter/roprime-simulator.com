@@ -146,23 +146,22 @@ function calcAttackSpecialBoosts() {
 			baseDamageMod -= 25;
 	}
 	
-		n_A_Weapon_ATK = Math.floor(n_A_Weapon_ATK * baseDamageMod / 100.0);
-		weaponUpgradeAttack = Math.floor(weaponUpgradeAttack * baseDamageMod / 100.0);
-		statusAttack = Math.floor(statusAttack * baseDamageMod / 100.0);
-		strengthBonusAttack = Math.floor(strengthBonusAttack * baseDamageMod / 100.0);
-		equipmentAttack = Math.floor(equipmentAttack * baseDamageMod / 100.0);
-		overrefineAttack = Math.floor(overrefineAttack * baseDamageMod / 100.0);
-		varianceAttack = Math.floor(varianceAttack * baseDamageMod / 100.0);
-		minOverrefineAttack = Math.floor(minOverrefineAttack * baseDamageMod / 100.0);
-		if ( n_Nitou ) {
-			n_A_Weapon2_ATK = Math.floor(n_A_Weapon2_ATK * baseDamageMod / 100.0);
-			weaponUpgradeAttack2 = Math.floor(weaponUpgradeAttack2 * baseDamageMod / 100.0);
-			strengthBonusAttack2 = Math.floor(strengthBonusAttack2 * baseDamageMod / 100.0);
-			overrefineAttack2 = Math.floor(overrefineAttack2 * baseDamageMod / 100.0);
-			varianceAttack2 = Math.floor(varianceAttack2 * baseDamageMod / 100.0);
-			minOverrefineAttack2 = Math.floor(minOverrefineAttack2 * baseDamageMod / 100.0);
-		}
-	
+	n_A_Weapon_ATK = Math.floor(n_A_Weapon_ATK * baseDamageMod / 100.0);
+	weaponUpgradeAttack = Math.floor(weaponUpgradeAttack * baseDamageMod / 100.0);
+	statusAttack = Math.floor(statusAttack * baseDamageMod / 100.0);
+	strengthBonusAttack = Math.floor(strengthBonusAttack * baseDamageMod / 100.0);
+	equipmentAttack = Math.floor(equipmentAttack * baseDamageMod / 100.0);
+	overrefineAttack = Math.floor(overrefineAttack * baseDamageMod / 100.0);
+	varianceAttack = Math.floor(varianceAttack * baseDamageMod / 100.0);
+	minOverrefineAttack = Math.floor(minOverrefineAttack * baseDamageMod / 100.0);
+	if ( n_Nitou ) {
+		n_A_Weapon2_ATK = Math.floor(n_A_Weapon2_ATK * baseDamageMod / 100.0);
+		weaponUpgradeAttack2 = Math.floor(weaponUpgradeAttack2 * baseDamageMod / 100.0);
+		strengthBonusAttack2 = Math.floor(strengthBonusAttack2 * baseDamageMod / 100.0);
+		overrefineAttack2 = Math.floor(overrefineAttack2 * baseDamageMod / 100.0);
+		varianceAttack2 = Math.floor(varianceAttack2 * baseDamageMod / 100.0);
+		minOverrefineAttack2 = Math.floor(minOverrefineAttack2 * baseDamageMod / 100.0);
+	}
 }
 
 function CalcAtk()
@@ -1342,30 +1341,30 @@ function CalcEquipAtk()
 		equipmentAttack += 100;
 	}
 	//TEST
-	if ( SkillSearch( skill_MS_MAXIMUM_POWER_THUST ) )
-	{
-		equipmentAttack += n_A_Weapon_ATK * (0.20 * SkillSearch( skill_MS_MAXIMUM_POWER_THUST ));
-	}
-	else
-	{
-		if ( SkillSearch( skill_BS_POWER_THRUST ) )
-		{
-			equipmentAttack += n_A_Weapon_ATK * (SkillSearch( skill_BS_POWER_THRUST ) * 0.05);
-		}
-		else if ( otherBuffs[ksPowerThrust] )
-		{
-			equipmentAttack += n_A_Weapon_ATK * 0.05;
-			if (otherBuffs[ksPowerThrust] >= 3 )
-			{
-				equipmentAttack += n_A_Weapon_ATK * 0.05;
-			}
-			if (otherBuffs[ksPowerThrust] >= 5 )
-			{
-				equipmentAttack += n_A_Weapon_ATK * 0.05;
-			}
+	// if ( SkillSearch( skill_MS_MAXIMUM_POWER_THUST ) )
+	// {
+	// 	equipmentAttack += n_A_Weapon_ATK * (0.20 * SkillSearch( skill_MS_MAXIMUM_POWER_THUST ));
+	// }
+	// else
+	// {
+	// 	if ( SkillSearch( skill_BS_POWER_THRUST ) )
+	// 	{
+	// 		equipmentAttack += n_A_Weapon_ATK * (SkillSearch( skill_BS_POWER_THRUST ) * 0.05);
+	// 	}
+	// 	else if ( otherBuffs[ksPowerThrust] )
+	// 	{
+	// 		equipmentAttack += n_A_Weapon_ATK * 0.05;
+	// 		if (otherBuffs[ksPowerThrust] >= 3 )
+	// 		{
+	// 			equipmentAttack += n_A_Weapon_ATK * 0.05;
+	// 		}
+	// 		if (otherBuffs[ksPowerThrust] >= 5 )
+	// 		{
+	// 			equipmentAttack += n_A_Weapon_ATK * 0.05;
+	// 		}
 			
-		}
-	}
+	// 	}
+	// }
 	
 	if((otherBuffs[ksInsignia] == ksFireInsignia) && (otherBuffs[ksInsigniaLvl] == 2))
 		equipmentAttack += 50;
@@ -1399,7 +1398,7 @@ function CalcMasteryAtk()
 	}
 	if ( n_A_WeaponType == weapTyp_AXE || n_A_WeaponType == weapTyp_AXEII )
 	{ // alchemist or mechanic axe mastery
-		masteryAttack += 3 *SkillSearch( skill_AL_AXE_MASTERY );
+		masteryAttack += 3 * SkillSearch( skill_AL_AXE_MASTERY );
 		masteryAttack += 5 * SkillSearch( skill_MEC_AXE_TRAINING );
 	}
 	if ( n_A_WeaponType == weapTyp_MACE )
@@ -1698,6 +1697,12 @@ function CalcRacialMod()
 		{
 			n_tok[bon_DMG_RC_DRAGON] += 6 ;
 		}
+	}
+	//Armor of Sixtus the Mighty
+	if( EquipNumSearch( 2037 ) && n_A_BODY_DEF_PLUS >= 9)
+	{
+		n_tok[bon_DMG_RC_BRUTE] += 10 ;
+		n_tok[bon_DMG_RC_DEMON] += 10 ;
 	}
 	
 //Shadows
@@ -2450,10 +2455,10 @@ function CalcCriticalMod()
 	}
 	
 // Pets
-	if ( miscEffects[ksPetEffects] == 22 )
-	{ // Dullahan Pet
-		n_tok[bon_DMG_CRIT] += 5;
-	}
+	// if ( miscEffects[ksPetEffects] == 22 )
+	// { // Dullahan Pet
+	// 	n_tok[bon_DMG_CRIT] += 5;
+	// }
 	
 	//Skills
 	if ( performerBuffs[ksDancerSolo] === ksLadyLuck && performerBuffs[ksDancerSoloLevel] > 0 )
@@ -6352,8 +6357,23 @@ function calcASPD()
 	{ // Elemental Tights + Gale Bow
 		flatASPD += 1;
 	}
+	if(n_A_Equip[eq_ACCI] == 2694)
+	{//Kirin Horn
+		if(EnchNumSearch( ench_ASPD_ADD +1 ))
+			flatASPD += 1;
+		if(EnchNumSearch( ench_ASPD_ADD +2 ))
+			flatASPD += 1;
+	}
+	if(n_A_Equip[eq_ACCII] == 2694)
+	{//Kirin Horn
+		if(EnchNumSearch( ench_ASPD_ADD +1 ))
+			flatASPD += 1;
+		if(EnchNumSearch( ench_ASPD_ADD +2 ))
+			flatASPD += 1;
+	}
 	// if(EquipNumSearch())
 	// {
+	//	flatASPD += 1;
 	// }
 	
 //Cards
@@ -8028,6 +8048,44 @@ function calcRaceElementalReduction()
 	{ // Elemental Tights + Burning Bow
 		n_tok[bon_RED_ELE_FIRE] -= 10;
 	}
+	if ( n_A_Equip[eq_ACCI] == 2694 )
+	{ // Kirin Horn
+		if(EnchNumSearch( ench_ASPD_ADD + 1 ))
+		{
+			n_tok[bon_RED_RC_DEMI_HUMAN] += 1;
+			n_tok[bon_RED_RC_BRUTE] += 1;
+			n_tok[bon_RED_RC_FISH] += 1;
+			n_tok[bon_RED_RC_DEMON] += 1;
+			n_tok[bon_RED_RC_UNDEAD] += 1;
+		}
+		if(EnchNumSearch( ench_ASPD_ADD + 2 ))
+		{
+			n_tok[bon_RED_RC_DEMI_HUMAN] += 1;
+			n_tok[bon_RED_RC_BRUTE] += 1;
+			n_tok[bon_RED_RC_FISH] += 1;
+			n_tok[bon_RED_RC_DEMON] += 1;
+			n_tok[bon_RED_RC_UNDEAD] += 1;
+		}
+	}
+	if ( n_A_Equip[eq_ACCII] == 2694 )
+	{ // Kirin Horn
+		if(EnchNumSearch( ench_ASPD_ADD + 1 ))
+		{
+			n_tok[bon_RED_RC_DEMI_HUMAN] += 1;
+			n_tok[bon_RED_RC_BRUTE] += 1;
+			n_tok[bon_RED_RC_FISH] += 1;
+			n_tok[bon_RED_RC_DEMON] += 1;
+			n_tok[bon_RED_RC_UNDEAD] += 1;
+		}
+		if(EnchNumSearch( ench_ASPD_ADD + 2 ))
+		{
+			n_tok[bon_RED_RC_DEMI_HUMAN] += 1;
+			n_tok[bon_RED_RC_BRUTE] += 1;
+			n_tok[bon_RED_RC_FISH] += 1;
+			n_tok[bon_RED_RC_DEMON] += 1;
+			n_tok[bon_RED_RC_UNDEAD] += 1;
+		}
+	}
 //Shadows
 	if ( EquipNumSearch( 1672 ) )
 	{ // "Shadow Dragonslayer Shield"
@@ -8619,30 +8677,30 @@ function CalcSkillModAdditions( skillMod )
 { 
 // skillmod + x
 	// Power Thrust and Maximum Power Thrust
-	// if ( SkillSearch( skill_MS_MAXIMUM_POWER_THUST ) )
-	// {
-		// skillMod += 20 * SkillSearch( skill_MS_MAXIMUM_POWER_THUST );
-	// }
-	// else
-	// {
-		// if ( SkillSearch( skill_BS_POWER_THRUST ) )
-		// {
-			// skillMod += SkillSearch( skill_BS_POWER_THRUST ) * 5;
-		// }
-		// else if ( otherBuffs[ksPowerThrust] )
-		// {
-			// skillMod += 5;
-			// if (otherBuffs[ksPowerThrust] >= 3 )
-			// {
-				// skillMod += 5;
-			// }
-			// if (otherBuffs[ksPowerThrust] >= 5 )
-			// {
-				// skillMod += 5;
-			// }
+	if ( SkillSearch( skill_MS_MAXIMUM_POWER_THUST ) )
+	{
+		skillMod += 20 * SkillSearch( skill_MS_MAXIMUM_POWER_THUST );
+	}
+	else
+	{
+		if ( SkillSearch( skill_BS_POWER_THRUST ) )
+		{
+			skillMod += SkillSearch( skill_BS_POWER_THRUST ) * 5;
+		}
+		else if ( otherBuffs[ksPowerThrust] )
+		{
+			skillMod += 5;
+			if (otherBuffs[ksPowerThrust] >= 3 )
+			{
+				skillMod += 5;
+			}
+			if (otherBuffs[ksPowerThrust] >= 5 )
+			{
+				skillMod += 5;
+			}
 			
-		// }
-	// }
+		}
+	}
 	
 	// Spear Dynamo
 	if ( SkillSearch( skill_LK_SPEAR_DYNAMO ) )

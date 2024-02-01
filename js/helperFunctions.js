@@ -156,6 +156,7 @@ function calcSpecialTok()
 
 function ClearBonuses()
 {
+	// AutocastList = [];
 	for ( var i = 1; i <= 200; i++ )
 	{
 		n_tok[i] = 0;
@@ -163,13 +164,19 @@ function ClearBonuses()
 		n_tok[i] += StPlusCard(i);
 		n_tok[i] += StPlusEnchant(i);
 	}
-	for ( var i = 290; i <= 372; i++ )
+	n_tok[221] = [];
+	(StPlusCalc2(221));
+	(StPlusCard(221));
+	// n_tok[221].push(StPlusEnchant(221));
+	for ( var i = 290; i <= 373; i++ )
 	{
 		n_tok[i] = 0;
 		n_tok[i] += StPlusCalc2(i);
 		n_tok[i] += StPlusCard(i);
 		n_tok[i] += StPlusEnchant(i);
 	}
+	//temporal, for test without breaking the sim
+	n_tok[bon_PHY_ATK] += n_tok[bon_ATK_MUL];
 	
 	calcSpecialTok();	
 	if ( SkillSearch(skill_SOR_SPIRIT_CONTROL) === 2 &&
