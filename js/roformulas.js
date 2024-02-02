@@ -7631,6 +7631,7 @@ function CalcDelay()
 	
 	n_tok[bon_RED_CASTDELAY] = Min( n_tok[bon_RED_CASTDELAY], 100 );
 	globalCastDelay = n_tok[bon_RED_CASTDELAY];
+	return globalCastDelay;
 }
 
 function calcReUse()

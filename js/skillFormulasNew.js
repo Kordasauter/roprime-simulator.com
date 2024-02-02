@@ -4742,8 +4742,8 @@ MO_SUMMON_SPIRIT_SPHERE = {
 			case skill_MO_MAX_GUILLOTINE_FIST:
 				numSpheres = 0;
 				break;
-			case skill_SUR_FALLEN_EMPIRE:
-				numSpheres -=2;
+			// case skill_SUR_FALLEN_EMPIRE:
+			// 	numSpheres -=2;
 				break;
 			default:
 				break;
@@ -5037,7 +5037,7 @@ MO_GUILLOTINE_FIST = {
 	animation : `0`,
 	isMagic : false,
 	canCrit : false,
-	accuracyCheck : true,
+	accuracyCheck : false,
 	bypassDef : true,
 	hitAmount : `1`,
 	hitDivisibility : `1`,
@@ -8290,7 +8290,7 @@ MO_MAX_GUILLOTINE_FIST = {
 	animation : `0`,
 	isMagic : false,
 	canCrit : false,
-	accuracyCheck : true,
+	accuracyCheck : false,
 	bypassDef : true,
 	hitAmount : `1`,
 	hitDivisibility : `1`,
@@ -15394,7 +15394,20 @@ ROY_OVERBRAND = {
 	canCrit : false,
 	accuracyCheck : true,
 	bypassDef : false,
-	hitAmount : `1`,
+	hitAmount : `
+	switch(PATCH){
+		case 0:
+		case 1:
+			1
+			break;
+		case 2:
+			3
+			break;
+		default:
+			1
+			break;
+	}
+	`,
 	hitDivisibility : `1`,
 	isSpecialFormula : false,
 	skillFormula(SkillLV){
@@ -21714,14 +21727,19 @@ SUR_KNUCKLE_ARROW_KNOCKBACK = {
 function CalcSkillDamage()
 {
 	let baseDmg = [0,0,0];
+
+	if(Skill[n_A_ActiveSkill].isMagic)
+		baseDmg = calcMAtk(0);
+	else if(Skill[n_A_ActiveSkill].id == skill_MO_GUILLOTINE_FIST || Skill[n_A_ActiveSkill].id == skill_MO_MAX_GUILLOTINE_FIST)
+		baseDmg = getBaseDamageNoMastery(0);
+	else 
+		baseDmg = getBaseDamage(0);
 	if(n_Nitou)
 	{
-		let baseDmg1 = getBaseDamage(0);
-		let baseDmg2 = getBaseDamage2(0);
 		if(Skill[n_A_ActiveSkill].id == 0)
 		{
-			baseDmg1 = getFinalDamage(getBaseDamage(0),Skill[n_A_ActiveSkill],n_A_ActiveSkillLV,0);
-			baseDmg2 = getFinalDamage(getBaseDamage2(0),Skill[n_A_ActiveSkill],n_A_ActiveSkillLV,0);
+			let baseDmg1 = getFinalDamage(baseDmg,Skill[n_A_ActiveSkill],n_A_ActiveSkillLV,0);
+			let baseDmg2 = getFinalDamage(getBaseDamage2(0),Skill[n_A_ActiveSkill],n_A_ActiveSkillLV,0);
 			for(let i = 0;i <= 2;i++){
 				//damage can't go below 0
 				if(baseDmg1[i]<0)
@@ -21734,7 +21752,7 @@ function CalcSkillDamage()
 		}
 		else
 		{
-			displayDamage(getFinalDamage(getBaseDamage(0),Skill[n_A_ActiveSkill],n_A_ActiveSkillLV,0),Skill[n_A_ActiveSkill]);
+			displayDamage(getFinalDamage(baseDmg,Skill[n_A_ActiveSkill],n_A_ActiveSkillLV,0),Skill[n_A_ActiveSkill]);
 		}
 		displayAdditionalDamage();
 	}
@@ -21743,9 +21761,9 @@ function CalcSkillDamage()
 		if(Skill[n_A_ActiveSkill].id == skill_MO_GUILLOTINE_FIST || Skill[n_A_ActiveSkill].id == skill_MO_MAX_GUILLOTINE_FIST)
 			displayDamage(getFinalDamage(getBaseDamageNoMastery(0),Skill[n_A_ActiveSkill],n_A_ActiveSkillLV,0),Skill[n_A_ActiveSkill]);
 		else
-			displayDamage(getFinalDamage(getBaseDamage(0),Skill[n_A_ActiveSkill],n_A_ActiveSkillLV,0),Skill[n_A_ActiveSkill]);
+			displayDamage(getFinalDamage(baseDmg,Skill[n_A_ActiveSkill],n_A_ActiveSkillLV,0),Skill[n_A_ActiveSkill]);
 	}
-	displayAdditionalDamage()
+	displayAdditionalDamage();
 }
 
 function displayDamage(finalDamage,sk)
@@ -21868,6 +21886,9 @@ function displayAdditionalDamage()
 			str_bSUB += displaySubHitsGiantGrowth(skill_TH_DOUBLE_ATTACK,0);
 		}
 	}
+	if(n_A_ActiveSkill != skill_ALL_BASIC_ATTACK)
+		DisplayCastAndDelay();
+
 	myInnerHtml( "bSUBname", str_bSUBname, 0 );
 	myInnerHtml( "bSUB", str_bSUB, 0 );
 }

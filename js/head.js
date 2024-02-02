@@ -59,9 +59,7 @@ function calc()
 	CalcBaseDamageMods();
 	
 	// Calculate damage.
-	// if(Skill[n_A_ActiveSkill].isMagic == true)
 		CalcSkillDamage_old();
-	// else
 		// CalcSkillDamage();
 
 	// Display additional data.
@@ -244,6 +242,10 @@ function CalcHitAfterSpecialSkills()
 		w_HIT = w_HIT + (100 - w_HIT) * (StPlusCalc2(bon_CH_GUIDE_ATK)+StPlusCard(bon_CH_GUIDE_ATK)) / 100;
 
 	w_HIT = Math.floor( w_HIT * 100) / 100;
+
+	if(Skill[n_A_ActiveSkill].accuracyCheck == false)
+		w_HIT = 100;
+
 }
 
 function CalcCriticalBlowChance()
@@ -2161,8 +2163,8 @@ function DisplayCastAndDelay()
 	str_bSUBname = "";
 	str_bSUB = "";
 	// print cast time
-	fixedCastTime = eval(Skill[n_A_ActiveSkill].fixedCastTime) * CalcFixedCast();
-	variableCastTime = eval(Skill[n_A_ActiveSkill].variableCastTime) * CalcVariableCast();
+	// fixedCastTime = eval(Skill[n_A_ActiveSkill].fixedCastTime) * CalcFixedCast();
+	// variableCastTime = eval(Skill[n_A_ActiveSkill].variableCastTime) * CalcVariableCast();
 	totalCastTime = fixedCastTime + variableCastTime;
 
 	// totalCastTime = Skill[n_A_ActiveSkill].fixedCastTime + Skill[n_A_ActiveSkill].variableCastTime;
@@ -2193,12 +2195,14 @@ function DisplayCastAndDelay()
 		totalDelay = n_Delay[ksDelayASPD];
 		longestDelay = ksDelayASPD;
 	}
+	n_Delay[ksDelayGlobal] = eval(Skill[n_A_ActiveSkill].castDelay);//new
 	n_Delay[ksDelayGlobal] = Math.floor( n_Delay[ksDelayGlobal] * ( 100 - globalCastDelay ) ) / 100;
 	if ( n_Delay[ksDelayGlobal] > totalDelay )
 	{
 		totalDelay = n_Delay[ksDelayGlobal];
 		longestDelay = ksDelayGlobal;
 	}
+	n_Delay[ksDelayAnimation] = eval(Skill[n_A_ActiveSkill].animation);//new
 	if ( n_Delay[ksDelayAnimation] > totalDelay )
 	{
 		totalDelay = n_Delay[ksDelayAnimation];
@@ -2223,6 +2227,7 @@ function DisplayCastAndDelay()
 		totalDelay = n_Delay[ksDelaySkillDuration] - totalCastTime;
 		longestDelay = ksDelaySkillDuration;
 	}
+	n_Delay[ksDelayCooldown] = eval(Skill[n_A_ActiveSkill].animation);//new
 	if ( n_Delay[ksDelayCooldown] > totalDelay )
 	{
 		totalDelay = n_Delay[ksDelayCooldown];

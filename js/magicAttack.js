@@ -50,7 +50,7 @@ function calcMAtk( includeMultipliers )
 	{
 		BK_n_A_MATK[i] = n_A_MATK[i];
 	}
-	
+	return n_A_MATK;
 }
 
 function CalcMATKMultipliers(MATK)

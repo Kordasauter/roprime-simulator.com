@@ -239,14 +239,14 @@ function getFinalDamage(finalDamage,sk,SkillLevel,isCrit)
 				if(PATCH < 2)
 				{
 					// let sizePart = (((1 + n_B[en_SIZE]) * 2) + SkillLevel - 1) * n_A_STR;
-					let sizePart = (((n_B[en_SIZE]) * 2) + SkillLevel - 1) * n_A_STR;
+					let sizePart = (((n_B[en_SIZE] + 1) * 2) + SkillLevel - 1) * n_A_STR;
 					let weightPart = n_B[en_LEVEL] * 50;
 
-					finalDamage[i] += sizePart + weightPart;
+					// finalDamage[i] += sizePart + weightPart;
 					// finalDamage[i] += (sizePart + weightPart) - (Math.floor(n_B[en_HARDDEF]) + getSoftDEF(true));
 					// finalDamage[i] += (sizePart + weightPart) - (MonsterOBJ[n_B[en_ID]][en_HARDDEF] + getSoftDEF(true));
 					
-					// finalDamage[i] += ((sizePart + weightPart) * getHardDEFReduction());
+					finalDamage[i] += ((sizePart + weightPart) * getHardDEFReduction());
 					// finalDamage[i] = Math.floor(finalDamage[i] - getSoftDEF(true));
 					// finalDamage[i] = Math.floor(finalDamage[i] - n_B[en_HARDDEF]);
 				}
