@@ -59,8 +59,8 @@ function calc()
 	CalcBaseDamageMods();
 	
 	// Calculate damage.
-		CalcSkillDamage_old();
-		// CalcSkillDamage();
+		CalcSkillDamage_old();//rem for beta
+		// CalcSkillDamage();//uncomment for beta
 
 	// Display additional data.
 	DisplayAdditionalBattleInfo();
@@ -2000,8 +2000,8 @@ function DisplayAdditionalBattleInfo()
 		else
 			str_bSUB += "<br/>" + str_PerHIT_DMG;
 	}
-	// myInnerHtml( "bSUBname", str_bSUBname, 0 );
-	// myInnerHtml( "bSUB", str_bSUB, 0 );
+	myInnerHtml( "bSUBname", str_bSUBname, 0 );//rem for beta
+	myInnerHtml( "bSUB", str_bSUB, 0 );//rem for beta
 	myInnerHtml( "BattleHIT", w_HIT_HYOUJI + SubName[0][Language], 0 );
 
 	if ( n_B[en_ID] == 547 && n_A_ActiveSkill != skill_ALL_BASIC_ATTACK && n_A_ActiveSkill != 325 )
@@ -2163,8 +2163,8 @@ function DisplayCastAndDelay()
 	str_bSUBname = "";
 	str_bSUB = "";
 	// print cast time
-	// fixedCastTime = eval(Skill[n_A_ActiveSkill].fixedCastTime) * CalcFixedCast();
-	// variableCastTime = eval(Skill[n_A_ActiveSkill].variableCastTime) * CalcVariableCast();
+	fixedCastTime = eval(Skill[n_A_ActiveSkill].fixedCastTime) * CalcFixedCast();
+	variableCastTime = eval(Skill[n_A_ActiveSkill].variableCastTime) * CalcVariableCast();
 	totalCastTime = fixedCastTime + variableCastTime;
 
 	// totalCastTime = Skill[n_A_ActiveSkill].fixedCastTime + Skill[n_A_ActiveSkill].variableCastTime;

@@ -1604,7 +1604,7 @@ function getWeaponATKBonus(watk)
 
 	// if(sc->getSCE(SC_STRIKING))
 	// 	watk += sc->getSCE(SC_STRIKING)->val2;
-	watk += SOR_STRIKING.skillFormula(SkillSearch(skill_SOR_STRIKING));
+	watk += SOR_STRIKING.skillFormula(otherBuffs[ksStriking]);
 
 	// if(sc->getSCE(SC_RUSHWINDMILL))
 	// 	watk += sc->getSCE(SC_RUSHWINDMILL)->val3;
@@ -4268,4 +4268,41 @@ function getSkillMultiplier(currentSkill)
 	// }
 
 	return (StPlusCalc2(bon_DMG_SKILL+currentSkill)+StPlusCard(bon_DMG_SKILL+currentSkill) + testSkMod) ;	
+}
+
+function testCalcHP(level,hp_increase,hp_factor)
+{
+	let base_hp = 35 + level * (hp_increase / 100.);
+
+	for (let i = 2; i <= level; i++)
+		base_hp += Math.round(((hp_factor / 100.) * i) + 0.5); //Don't have round()
+	// if (job_id == JOB_SUMMONER || job_id == JOB_SPIRIT_HANDLER)
+	// 	base_hp += floor((base_hp / 2) + 0.5);
+	return base_hp;
+}
+
+function testCalcSP(level,sp_increase)
+{
+	let base_sp = 10 + Math.floor(level * (sp_increase / 100.));
+
+	// switch (job_id) {
+	// 	case JOB_NINJA:
+	// 		if (level >= 10)
+	// 			base_sp -= 22;
+	// 		else
+	// 			base_sp = 11 + 3*level;
+	// 		break;
+	// 	case JOB_GUNSLINGER:
+	// 		if (level > 10)
+	// 			base_sp -= 18;
+	// 		else
+	// 			base_sp = 9 + 3*level;
+	// 		break;
+	// 	case JOB_SUMMONER:
+	// 	case JOB_SPIRIT_HANDLER:
+	// 		base_sp -= floor(base_sp / 2);
+	// 		break;
+	// }
+
+	return base_sp;
 }

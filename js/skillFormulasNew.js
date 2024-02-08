@@ -15854,7 +15854,7 @@ SHA_TRIANGLE_SHOT = {
 	accuracyCheck : true,
 	bypassDef : false,
 	hitAmount : `1`,
-	hitDivisibility : `1`,
+	hitDivisibility : `3`,
 	isSpecialFormula : false,
 	skillFormula(SkillLV){
 		switch(PATCH){
