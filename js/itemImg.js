@@ -1218,7 +1218,7 @@ ITEM_IMAGE = [
 ,[1214,"Red Wing Hat",0]
 ,[1215,"Scooter Helm",0]
 ,[1216,"Captain's Pipe",0]
-,[1217",0],"0]//""Captains's Hat + Pipe""",(Unknown Effect)
+,[1217,"Captains's Hat + Pipe",0]//""Captains's Hat + Pipe""",(Unknown Effect)
 ,[1218,"Moon Rabbit Hat",0]
 ,[1219,"Samambaia",0]
 ,[1220,"Lunatic Hat",0]
@@ -1476,27 +1476,27 @@ ITEM_IMAGE = [
 ,[1472,"Chambered RWC 2012 Ring & Chambered RWC 2012 Pendant",0]
 ,[1473,"Chambered RWC 2012 Ring & RWC 2012 Pendant",0]
 ,[1474,"RWC 2012 Ring & Chambered RWC 2012 Pendant",0]
-,[1475,"WoE Robe," 0] // ""WoE Robe"""
-,[1476,"WoE Suit," 0] // ""WoE Suit"""
-,[1477,"WoE Plate," 0] // ""WoE Plate"""
-,[1478,"WoE Muffler," 0] // ""WoE Muffler"""
-,[1479,"WoE Manteau," 0] // ""WoE Manteau"""
-,[1480,"WoE Shoes," 0] // ""WoE Shoes"""
-,[1481,"WoE Boots," 0] // ""WoE Boots"""
-,[1482,"WoE Greaves," 0] // ""WoE Greaves"""
-,[1483,"Handkerchief in Mouth," 0] // ""Handkerchief in Mouth"""
-,[1484,"WoE Plate + WoE Manteau + WoE Greaves," 0] // ""WoE Plate + WoE Manteau + WoE Greaves"""
-,[1485,"WoE Suit + WoE Manteau + WoE Boots," 0] // ""WoE Suit + WoE Manteau + WoE Boots"""
-,[1486,"WoE Robe + WoE Muffler + WoE Shoes," 0] // ""WoE Robe + WoE Muffler + WoE Shoes"""
-,[1487,"RWC Memory Knife," 0] // ""RWC Memory Knife"""
-,[1488,"RWC Memory Mace," 0] // ""RWC Memory Mace"""
-,[1489,"RWC Memory Staff," 0] // ""RWC Memory Staff"""
-,[1490,"RWC Memory Knife + RWC 2012 Ring," 0] // ""RWC Memory Knife + RWC 2012 Ring"""
-,[1491,"RWC Memory Knife + RWC 2012 Pendant," 0] // ""RWC Memory Knife + RWC 2012 Pendant"""
-,[1492,"RWC Memory Mace + RWC 2012 Ring," 0] // ""RWC Memory Mace + RWC 2012 Ring"""
-,[1493,"RWC Memory Staff + RWC 2012 Pendant," 0] // ""RWC Memory Staff + RWC 2012 Pendant"""
-,[1494,"Sword Whip of Thana," 0] // ""Sword Whip of Thana"""
-,[1495,"Sound Amplifier," 0] // ""Sound Amplifier"""
+,[1475,"WoE Robe,",0] // ""WoE Robe"""
+,[1476,"WoE Suit,",0] // ""WoE Suit"""
+,[1477,"WoE Plate,",0] // ""WoE Plate"""
+,[1478,"WoE Muffler,",0] // ""WoE Muffler"""
+,[1479,"WoE Manteau,",0] // ""WoE Manteau"""
+,[1480,"WoE Shoes,",0] // ""WoE Shoes"""
+,[1481,"WoE Boots,",0] // ""WoE Boots"""
+,[1482,"WoE Greaves,",0] // ""WoE Greaves"""
+,[1483,"Handkerchief in Mouth,",0] // ""Handkerchief in Mouth"""
+,[1484,"WoE Plate + WoE Manteau + WoE Greaves",0] // ""WoE Plate + WoE Manteau + WoE Greaves"""
+,[1485,"WoE Suit + WoE Manteau + WoE Boots",0] // ""WoE Suit + WoE Manteau + WoE Boots"""
+,[1486,"WoE Robe + WoE Muffler + WoE Shoes",0] // ""WoE Robe + WoE Muffler + WoE Shoes"""
+,[1487,"RWC Memory Knife",0] // ""RWC Memory Knife"""
+,[1488,"RWC Memory Mace",0] // ""RWC Memory Mace"""
+,[1489,"RWC Memory Staff",0] // ""RWC Memory Staff"""
+,[1490,"RWC Memory Knife + RWC 2012 Ring",0] // ""RWC Memory Knife + RWC 2012 Ring"""
+,[1491,"RWC Memory Knife + RWC 2012 Pendant",0] // ""RWC Memory Knife + RWC 2012 Pendant"""
+,[1492,"RWC Memory Mace + RWC 2012 Ring",0] // ""RWC Memory Mace + RWC 2012 Ring"""
+,[1493,"RWC Memory Staff + RWC 2012 Pendant",0] // ""RWC Memory Staff + RWC 2012 Pendant"""
+,[1494,"Sword Whip of Thana",0] // ""Sword Whip of Thana"""
+,[1495,"Sound Amplifier",0] // ""Sound Amplifier"""
 ,[1496,"Sura Rampage",0]
 ,[1497,"UFO Poring Hat",0]
 ,[1498,"Poring Cake Hat (kRO)",0]

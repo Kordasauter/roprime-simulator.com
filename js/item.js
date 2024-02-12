@@ -2454,7 +2454,7 @@
 ,[2381,weapTyp_KATAR,208,200,4,2,150,100,0,0,0,0,bon_DEF,3,bon_FLEE,5,bon_PDODGE,2,bon_DMG_RC_DEMI_HUMAN,60,"ref_lvl",9,bon_FLEE,5,"ref_lvl",9,bon_PDODGE,2,"ref_lvl",10,bon_ATK_MUL,5,bon_NONE] // Illusion Infiltrator [2]
 ,[2382,weapTyp_KATAR,208,220,3,2,170,100,0,0,0,0,bon_NONE] // Illusion Sharpened Legbone of Ghoul [2]
 ,[2383,weapTyp_STAFF,2055,150,4,2,240,100,0,0,0,0,bon_WEAPON_MATK,250,bon_INT,6,bon_DEX,2,"ev_ref",2,bon_INT,1,"ev_ref",2,bon_DEX,1,bon_NONE] // Illusion Wizardry Staff [2]
-,[2384,weapTyp_BOW,2054,0,0,0,0,0,0,0,0,0,"ev_ref",1,bon_DMG_RANGE,1,bon_NONE] // Illusion Ballista [2]
+,[2384,weapTyp_BOW,2054,200,4,2,350,100,0,0,0,0,"ev_ref",1,bon_DMG_RANGE,1,bon_NONE] // Illusion Ballista [2]
 ,[2385,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ATK,50,bon_DMG_RANGE,5,"set_ref" + (fl_WEAPON+fl_HEAD),7,bon_DMG_SKILL + skill_RAN_ARROW_STORM,20,"set_sum" + (fl_WEAPON+fl_HEAD),18,bon_ATK_MUL,10,"set_sum" + (fl_WEAPON+fl_HEAD),22,bon_DMG_SKILL + skill_RAN_ARROW_STORM,30,bon_NONE] // Illusion Ballista + Illusion Apple of Archer
 ,[2386,weapTyp_BOOK,2000,170,4,2,80,100,0,0,0,0,bon_DMG_ELE_WATER,10,bon_DMG_ELE_EARTH,10,bon_DMG_ELE_FIRE,10,bon_DMG_ELE_WIND,10,bon_RED_ELE_HOLY,-30,"ev_ref",3,bon_DMG_ELE_WATER,10,"ev_ref",3,bon_DMG_ELE_EARTH,10,"ev_ref",3,bon_DMG_ELE_FIRE,10,"ev_ref",3,bon_DMG_ELE_WIND,10,bon_NONE] // Illusion Book of the Apocalypse
 ,[2387,itm_type_GARMENT,1,18,0,1,60,100,0,0,0,0,bon_AGI,2,"ev_ref",2,bon_AGI,1,bon_NONE] //Illusion Ancient Cape [1]
