@@ -59,7 +59,7 @@ function calc()
 	CalcBaseDamageMods();
 	
 	// Calculate damage.
-		CalcSkillDamage_old();//rem for beta
+		CalcSkillDamage_old();//comment for beta
 		// CalcSkillDamage();//uncomment for beta
 
 	// Display additional data.
@@ -2007,8 +2007,8 @@ function DisplayAdditionalBattleInfo()
 		else
 			str_bSUB += "<br/>" + str_PerHIT_DMG;
 	}
-	myInnerHtml( "bSUBname", str_bSUBname, 0 );//rem for beta
-	myInnerHtml( "bSUB", str_bSUB, 0 );//rem for beta
+	myInnerHtml( "bSUBname", str_bSUBname, 0 );//comment for beta
+	myInnerHtml( "bSUB", str_bSUB, 0 );//comment for beta
 	myInnerHtml( "BattleHIT", w_HIT_HYOUJI + SubName[0][Language], 0 );
 
 	if ( n_B[en_ID] == 547 && n_A_ActiveSkill != skill_ALL_BASIC_ATTACK && n_A_ActiveSkill != 325 )
