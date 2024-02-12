@@ -4230,13 +4230,13 @@ function CalcSkillDamage_old()
 		{
 			n_A_Weapon_element = ele_EARTH;
 			//w_DMG[2] = Math.floor((75 + n_A_DEX) * (1+ n_A_INT /100) * n_A_ActiveSkillLV * element[n_B[en_ELEMENT]][ele_EARTH]/100);
-			w_DMG[2] = Math.floor((n_A_DEX*(3 + n_A_BaseLV/100) * (1+ n_A_INT /35) + SkillSearch(skill_RAN_RESEARCH_TRAP)) * n_A_ActiveSkillLV * element[n_B[en_ELEMENT]][ele_FIRE]/100);//prime
+			w_DMG[2] = Math.floor((n_A_DEX*(3 + n_A_BaseLV/100) * (1+ n_A_INT /35) + SkillSearch(skill_RAN_RESEARCH_TRAP)) * n_A_ActiveSkillLV * element[n_B[en_ELEMENT]][ele_EARTH]/100);//prime
 		}
 		else if(n_A_ActiveSkill==skill_HU_BLAST_MINE)
 		{
 			n_A_Weapon_element = ele_WIND;
 			//w_DMG[2] = Math.floor((50 + n_A_DEX/2) * (1+ n_A_INT /100) * n_A_ActiveSkillLV * element[n_B[en_ELEMENT]][ele_WIND]/100);
-			w_DMG[2] = Math.floor((n_A_DEX*(3 + n_A_BaseLV/100) * (1+ n_A_INT /35) + SkillSearch(skill_RAN_RESEARCH_TRAP)) * n_A_ActiveSkillLV * element[n_B[en_ELEMENT]][ele_FIRE]/100);//prime
+			w_DMG[2] = Math.floor((n_A_DEX*(3 + n_A_BaseLV/100) * (1+ n_A_INT /35) + SkillSearch(skill_RAN_RESEARCH_TRAP)) * n_A_ActiveSkillLV * element[n_B[en_ELEMENT]][ele_WIND]/100);//prime
 		}
 		else if(n_A_ActiveSkill==skill_HU_CLAYMORE_TRAP)
 		{

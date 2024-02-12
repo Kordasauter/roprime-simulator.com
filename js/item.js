@@ -1270,7 +1270,7 @@
 ,[1264,itm_type_HEAD_UPPER,2113,17,0,1,10,100,0,0,0,0,bon_MDEF,5,bon_VIT,2,bon_INT,1,bon_NONE] // "Reissue Schmitz Helm"
 ,[1265,itm_type_HEAD_UPPER,2117,12,0,1,10,100,0,0,0,0,bon_MDEF,5,bon_LUK,1,bon_INT,1,bon_DMG_RANGE,5,bon_NONE] // "Dying Swan"
 ,[1266,itm_type_HEAD_UPPER,/*0*/999,6,0,0,20,70,0,0,0,0,bon_VIT,2,bon_INT,2,bon_NONE] // "Yggdrasil Crown"
-,[1267,weapTyp_DAGGER,2114,142,3,1,60,102,0,0,1,1,bon_NONE] // "Black Wing"
+,[1267,weapTyp_DAGGER,2114,142,3,1,60,102,0,0,1,1,bon_DMG_SKILL + skill_SHA_FATAL_MENACE,30,bon_NONE] // "Black Wing"
 ,[1268,weapTyp_DAGGER,1001,107,4,0,60,120,0,0,1,1,bon_SP_ADD,100,bon_WEAPON_MATK,120,bon_SP_REGEN,5,bon_NONE] // "Ancient Dagger"
 ,[1269,weapTyp_SPEAR,2113,180,3,1,180,102,0,0,1,1,bon_WEAPON_MATK,40,bon_NONE] // "Imperial Spear"
 ,[1270,weapTyp_INSTRUMENT,2116,170,3,1,80,102,0,0,1,1,bon_WEAPON_MATK,50,bon_NONE] // "Green Whistle"
@@ -2083,9 +2083,8 @@
 ,[2056,weapTyp_WHIP,217,160,4,2,70,100,0,0,0,0,bon_WEAPON_MATK,190,"ev_ref",2,bon_MATK,10,"ev_ref",3,bon_INC_MAGIC_NEUTRAL,4,"ref_lvl",9,bon_DMG_SKILL + skill_MIWA_REVERBERATION,10,"ref_lvl",9,bon_DMG_SKILL + skill_MIWA_METALLIC_SOUND,10,bon_NONE] // "Thorn Whip"
 ,[2057,weapTyp_KATAR,208,185,4,2,120,100,0,0,0,0,bon_NONE] // "Hand of Death"
 ,[2058,weapTyp_KATAR,208,185,4,2,100,100,0,0,0,0,bon_NONE] // "Steel Flower"
-// ,[2059,weapTyp_DAGGER,214,150,4,2,80,100,0,0,0,0,bon_WEAPON_MATK,150,"ev_ref",2,bon_MATK,10,"ev_ref",3,bon_ASPD_MUL,2,"ref_lvl",9,bon_INC_MAGIC_ALL,10,"ref_lvl",11,bon_SKILL_AUTOCAST,151,bon_NONE] // "Magic Sword""Winged Sword"
-,[2059,weapTyp_DAGGER,214,0,1,0,0,0,0,0,0,0,bon_NONE] // "Magic Sword""Winged Sword"
-,[2060,weapTyp_DAGGER,214,0,1,0,0,0,0,0,0,0,bon_NONE] // "Fatalist""Fatebringer"
+,[2059,weapTyp_DAGGER,214,150,4,2,80,100,0,0,0,0,bon_WEAPON_MATK,150,"ev_ref",2,bon_MATK,10,"ev_ref",3,bon_ASPD_MUL,2,"ref_lvl",9,bon_INC_MAGIC_ALL,10,"ref_lvl",11,bon_SKILL_AUTOCAST,151,bon_NONE] // "Magic Sword""Winged Sword"
+,[2060,weapTyp_DAGGER,214,165,4,2,90,100,0,0,0,0,"ev_ref",2,bon_ATK,10,"ev_ref",3,bon_ASPD_MUL,2,"ref_lvl",9,bon_DMG_SKILL + skill_SHA_FATAL_MENACE,20,"ref_lvl",11,bon_RED_CASTDELAY,7,bon_NONE] // "Fatalist""Fatebringer"
 ,[2061,weapTyp_BOW,2088,180,4,2,100,100,0,0,0,0,bon_NONE] // "Empyrean"
 ,[2062,weapTyp_BOW,210,170,4,2,80,100,0,0,0,0,bon_NONE] // "Scarlet Dragon''s Bow"'
 ,[2063,weapTyp_STAFF,211,100,4,2,80,100,0,0,0,0,bon_WEAPON_MATK,200,bon_NONE] // "Rusty Dragon''s Wand"'
@@ -2742,8 +2741,8 @@
 ,[2634,itm_type_GARMENT,0,10,0,1,50,50,0,0,0,0,bon_DMG_CRIT,3,bon_NONE]//Bloody Muffler
 ,[2635,itm_type_HEAD_MIDDLE,0,2,0,1,10,100,0,0,0,0,bon_MDMG_SIZ_SMALL,10,bon_MDMG_SIZ_MEDIUM,10,bon_MDMG_SIZ_LARGE,10,bon_RED_RC_DEMI_HUMAN,5,bon_NONE]//Vermillion Ribbon
 ,[2636,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DMG_CRIT,5,bon_CRIT,10,"garm_ref_lvl",5,bon_DMG_CRIT,3,"garm_ref_lvl",7,bon_DMG_CRIT,4,bon_NONE]//Bloody Muffler + Critical Ring
-,[2637,weapTyp_SWORD,214,150,4,2,80,100,0,0,0,0,bon_WEAPON_MATK,150,"ev_ref",2,bon_MATK,10,"ev_ref",3,bon_ASPD_MUL,2,"ref_lvl",9,bon_INC_MAGIC_ALL,10,"ref_lvl",11,bon_SKILL_AUTOCAST,151,bon_NONE] // "Magic Sword""Winged Sword"
-,[2638,weapTyp_SWORD,214,165,4,2,90,100,0,0,0,0,"ev_ref",2,bon_ATK,10,"ev_ref",3,bon_ASPD_MUL,2,"ref_lvl",9,bon_DMG_SKILL + skill_SHA_FATAL_MENACE,20,"ref_lvl",11,bon_RED_CASTDELAY,7,bon_NONE] // "Fatalist""Fatebringer"
+,[2637,weapTyp_SWORD,214,0,1,0,0,0,0,0,0,0,bon_NONE] // "Magic Sword""Winged Sword"
+,[2638,weapTyp_SWORD,214,0,1,0,0,0,0,0,0,0,bon_NONE] // "Fatalist""Fatebringer"
 ,[2639,itm_type_HEAD_UPPER,207,10,0,1,20,100,0,0,0,0,bon_DMG_SKILL + skill_RUN_SONIC_WAVE,50,bon_DMG_SKILL + skill_RUN_WIND_CUTTER,50,"ref_lvl",9,bon_DMG_SKILL + skill_RUN_IGNITION_BREAK,30,bon_NONE]//Black Ribbon
 ,[2640,itm_type_HEAD_UPPER,0,0,0,1,70,90,0,0,0,0,bon_HP_MUL,5,bon_SP_MUL,5,bon_DMG_SKILL + skill_RUN_DRAGON_BREATH,15,bon_DMG_SKILL + skill_RUN_DRAGON_BREATH_WATER,15,"ref_lvl",6,bon_DMG_SKILL + skill_RUN_DRAGON_BREATH,15,"ref_lvl",6,bon_DMG_SKILL + skill_RUN_DRAGON_BREATH_WATER,15,"ref_lvl",8,bon_DMG_SKILL + skill_RUN_DRAGON_BREATH,15,"ref_lvl",8,bon_DMG_SKILL + skill_RUN_DRAGON_BREATH_WATER,15,bon_NONE]//Red Baby Dragon Hat
 ,[2641,itm_type_ACCESSORY,0,0,0,1,50,100,0,0,0,0,bon_STR,5,bon_AGI,5,bon_VIT,5,bon_SKILL_ENABLE,75,"ev_blvl",1,bon_DMG_SKILL + skill_SW_BASH,1,"ev_blvl",5,bon_DMG_SKILL + skill_KN_BOWLING_BASH,3,bon_NONE]//Toy Ring

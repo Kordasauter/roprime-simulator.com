@@ -1085,6 +1085,13 @@ function calcEquipMATK()
 		else
 			equipMATK += 200;
 	}
+	if(EquipNumSearch(1267))
+	{//Black Wing
+		if((n_A_Equip[eq_WEAPON] == 1267) && (n_A_Weapon_ATKplus >= 6))
+			equipMATK += (n_A_Weapon_ATKplus - 5) * 3;
+		if((n_A_Equip[eq_WEAPONII] == 1267) && (n_A_Weapon2_ATKplus >= 6))
+			equipMATK += (n_A_Weapon2_ATKplus - 5) * 3;
+	}
 	
 //shadows
 	if ( EquipNumSearch( 1657 ) )

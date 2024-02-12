@@ -145,14 +145,16 @@ function getFinalDamage(finalDamage,sk,SkillLevel,isCrit)
 				case skill_MIWA_SOUND_OF_DESTRUCTION:
 				case skill_GEN_THORN_TRAP:
 				case skill_REB_BINDING_TRAP:
-				case skill_HU_LAND_MINE:
-				case skill_HU_BLAST_MINE:
-				case skill_HU_CLAYMORE_TRAP:
 				case skill_HU_BLITZ_BEAT:
 				case skill_MEC_SELF_DESTRUCTION:
 					finalDamage[0] = sk.skillFormula(SkillLevel);
 					finalDamage[1] = finalDamage[0];
 					finalDamage[2] = finalDamage[0];
+					break;
+				case skill_HU_LAND_MINE:
+				case skill_HU_BLAST_MINE:
+				case skill_HU_CLAYMORE_TRAP:
+					finalDamage = sk.skillFormula(SkillLevel);
 					break;
 				case skill_GEN_HELLS_PLANT:
 					if(PATCH < 2)
@@ -4256,6 +4258,13 @@ function getSkillMultiplier(currentSkill)
 	if(EquipNumSearch(2687) && (currentSkill == skill_RAN_ARROW_STORM) && (n_A_HEAD_DEF_PLUS >= 9))
 	{//Autumn Headband
 		testSkMod += Math.floor(n_A_BaseLV / 5);
+	}
+	if(EquipNumSearch(1267) && (n_A_ActiveSkill == skill_SHA_FATAL_MENACE))
+	{//Black Wing
+		if((n_A_Equip[eq_WEAPON] == 1267) && (n_A_Weapon_ATKplus >= 6))
+			testSkMod += (n_A_Weapon_ATKplus - 5) * 2;
+		if((n_A_Equip[eq_WEAPONII] == 1267) && (n_A_Weapon2_ATKplus >= 6))
+			testSkMod += (n_A_Weapon2_ATKplus - 5) * 2;
 	}
 	
 	// if ( currentSkill==skill_WI_EARTH_SPIKE ||

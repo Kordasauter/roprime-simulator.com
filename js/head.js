@@ -1672,6 +1672,13 @@ function ApplySkillModifiers( damage )
 		dmgMultiplier += Math.floor(n_A_BaseLV / 5);
 	}
 	
+	if(EquipNumSearch(1267) && (n_A_ActiveSkill == skill_SHA_FATAL_MENACE))
+	{//Black Wing
+		if((n_A_Equip[eq_WEAPON] == 1267) && (n_A_Weapon_ATKplus >= 6))
+			dmgMultiplier += (n_A_Weapon_ATKplus - 5) * 2;
+		if((n_A_Equip[eq_WEAPONII] == 1267) && (n_A_Weapon2_ATKplus >= 6))
+			dmgMultiplier += (n_A_Weapon2_ATKplus - 5) * 2;
+	}
 	// if ( n_A_ActiveSkill==skill_WI_EARTH_SPIKE ||
 		 // n_A_ActiveSkill == skill_WI_HEAVENS_DRIVE )
 	// {
