@@ -1,368 +1,601 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="The Ragnarok Prime Calculator, able to simulate stats, equipment, status resistance, skills and damage from Characters in PVM, MVP and PVP environments">
-    <meta name="author" content="Kord">
-	<meta name="keywords" content="Ragnarok,Online,Ragnarok Online,EuRO,PVP,PVM,WOE,MVP,Calc,Calculator,Sim,Simulator,New,Current,prime,Ragnarok Prime,RO Prime,Loki,4 Games,185/65,185">
-	<link rel="canonical" href="https://roprime-simulator.com/expscaler.html">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="The Ragnarok Prime Calculator, able to simulate stats, equipment, status resistance, skills and damage from Characters in PVM, MVP and PVP environments"
+    />
+    <meta name="author" content="Kord" />
+    <meta
+      name="keywords"
+      content="Ragnarok,Online,Ragnarok Online,EuRO,PVP,PVM,WOE,MVP,Calc,Calculator,Sim,Simulator,New,Current,prime,Ragnarok Prime,RO Prime,Loki,4 Games,185/65,185"
+    />
+    <link rel="canonical" href="https://roprime-simulator.com/expscaler.html" />
     <title>Ragnarok Prime Simulator - Exp Scaler</title>
 
     <!-- Custom fonts for this template-->
     <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.css" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/68044697ab.js" crossorigin="anonymous"></script>
-	<!-- Simulator -->
-	<!--globals-->
-	<!-- <script src="js/ga.js" type="text/javascript"></script> -->
-	<script type="text/javascript">//<![CDATA[
-		var Language = 1; // japanese = 0, english = 1
-		var PlayerVersusPlayer = 0;
-	//]]></script>
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/variables.js"></script>
-	<!--tables-->
-	<script type="text/javascript" src="js/defines.js"></script>
-	<script type="text/javascript" src="js/monster.js"></script>
-	<script type="text/javascript" src="js/monster_new.js"></script>
-	<!--functions-->
-	<script type="text/javascript" src="js/scaler.js"></script>
-	<!--form-->
-	<script type="text/javascript" src="js/head.js"></script>
-	<script type="text/javascript" src="js/events.js"></script>
-	<script type="text/javascript" src="js/cookies.js"></script>
-	
-	<!-- AdSense -->
-	<script type="text/plain" data-cookie-consent="targeting" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6824539470557939" 
-		  crossorigin="anonymous"></script>
-	<!-- end of AdSense-->
+    <link href="css/sb-admin-2.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/68044697ab.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Simulator -->
+    <!--globals-->
+    <!-- <script src="js/ga.js" type="text/javascript"></script> -->
+    <script type="text/javascript">
+      //<![CDATA[
+      var Language = 1; // japanese = 0, english = 1
+      var PlayerVersusPlayer = 0;
+      //]]>
+    </script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/variables.js"></script>
+    <!--tables-->
+    <script type="text/javascript" src="js/defines.js"></script>
+    <script type="text/javascript" src="js/monster.js"></script>
+    <script type="text/javascript" src="js/monster_new.js"></script>
+    <!--functions-->
+    <script type="text/javascript" src="js/scaler.js"></script>
+    <!--form-->
+    <script type="text/javascript" src="js/head.js"></script>
+    <script type="text/javascript" src="js/events.js"></script>
+    <script type="text/javascript" src="js/cookies.js"></script>
 
-	<!-- Analytics -->
-	<script type="text/plain" data-cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-78085FSM4Q"></script>
-			<script type="text/plain" data-cookie-consent="tracking">
-			  window.dataLayer = window.dataLayer || [];
-			  function gtag(){dataLayer.push(arguments);}
-			  gtag('js', new Date());
+    <!-- AdSense -->
+    <script
+      type="text/plain"
+      data-cookie-consent="targeting"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6824539470557939"
+      crossorigin="anonymous"
+    ></script>
+    <!-- end of AdSense-->
 
-			  gtag('config', 'G-78085FSM4Q');
-			</script>
-	<!-- end of Analytics-->
+    <!-- Analytics -->
+    <script
+      type="text/plain"
+      data-cookie-consent="tracking"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-78085FSM4Q"
+    ></script>
+    <script type="text/plain" data-cookie-consent="tracking">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-	
-	
-</head>
+      gtag('config', 'G-78085FSM4Q');
+    </script>
+    <!-- end of Analytics-->
+  </head>
 
-<body id="page-top" onload="BuildSearchTable()">
-	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRDV25K"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
-	
+  <body id="page-top" onload="BuildSearchTable()">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MRDV25K"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <!-- Page Wrapper -->
     <div id="wrapper">
+      <!-- Sidebar -->
+      <ul
+        class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+        id="accordionSidebar"
+      >
+        <!-- Sidebar - Brand -->
+        <a
+          class="sidebar-brand d-flex align-items-center justify-content-center"
+          href="index.html"
+        >
+          <div class="sidebar-brand-icon">
+            <img src=".\\img\\angeling.gif" style="width: 50px;"></img>
+            <!-- <img src=".\\img\\2936.gif" style="width: 50px;transform: scale(-1, 1);"></img> -->
+            <!-- <img src=".\\img\\1062.gif" style="width: 50px;transform: scale(-1, 1);"></img> -->
+            <!-- <img src=".\\img\\1514.gif" style="width: 50px;transform: scale(-1, 1);"></img> -->
+          </div>
+          <div class="sidebar-brand-text mx-3">Ragnarok Prime Simulator</div>
+        </a>
 
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <!-- Divider -->
+        <hr class="sidebar-divider" />
 
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon ">
-                    <!-- <img src=".\\img\\angeling.gif" style="width: 50px;"></img> -->
-                    <!-- <img src=".\\img\\2936.gif" style="width: 50px;transform: scale(-1, 1);"></img> -->
-					<!-- <img src=".\\img\\1062.gif" style="width: 50px;transform: scale(-1, 1);"></img> -->
-					<img src=".\\img\\1514.gif" style="width: 50px;transform: scale(-1, 1);"></img>
+        <!-- Nav Item - Dashboard -->
+        <span id="menu"></span>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider" />
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+      </ul>
+      <!-- End of Sidebar -->
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav
+            class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
+          >
+            <!-- Sidebar Toggle (Topbar) -->
+            <button
+              id="sidebarToggleTop"
+              class="btn btn-link d-md-none rounded-circle mr-3"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+          </nav>
+          <!-- End of Topbar -->
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <form
+              name="calcForm"
+              action="https://roprime-simulator.com/(EmptyReference!)"
+            >
+              <!-- Scaler-->
+              <div
+                class="padded_side"
+                style="overflow-x: auto; width: fit-content"
+              >
+                <div class="card shadow mb-4">
+                  <!-- Card Header -->
+                  <div
+                    class="card-header d-flex flex-row align-items-center justify-content-between head_bg"
+                    onclick="ToggleVisibility('Search_Window')"
+                  >
+                    <h6 class="m-0 font-weight-bold text-primary head_btn">
+                      <span class="padded_large"
+                        >Ragnarok Prime Monster Search</span
+                      >
+                    </h6>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="card-body" id="Search_Window">
+                    <table class="shadow">
+                      <tbody>
+                        <tr>
+                          <td class="bgDkRow1 padded">
+                            <span id="Search">
+                              <!-- <div class="bgMdTitle mdTitle" onclick="ToggleVisibility('Level')">Character</div> -->
+                              <div id="Level" style="display: block">
+                                <table class="shadow">
+                                  <tbody>
+                                    <tr>
+                                      <td id="RangeLevelLabel" class="padded">
+                                        Range Lv.
+                                      </td>
+                                      <td id="RangeLevelInput" class="padded">
+                                        <select
+                                          id="RangeLevel"
+                                          style="width: 100px"
+                                        >
+                                          <option value="0">0</option>
+                                          <option value="1">±1</option>
+                                          <option value="2">±2</option>
+                                          <option value="3">±3</option>
+                                          <option value="4">±4</option>
+                                          <option value="5">±5</option>
+                                          <option value="6">±6</option>
+                                          <option value="7">±7</option>
+                                          <option value="8">±8</option>
+                                          <option value="9">±9</option>
+                                          <option value="10">±10</option>
+                                          <option value="11">±11</option>
+                                          <option value="12">±12</option>
+                                          <option value="13">±13</option>
+                                          <option value="14">±14</option>
+                                          <option value="15">±15</option>
+                                          <option value="16">
+                                            -5 to +15 (100%~140% exp)
+                                          </option>
+                                          <option value="17">
+                                            -10 to +15 (95%~140% exp)
+                                          </option>
+                                          <option value="18">
+                                            -15 to +15 (90%~140% exp)
+                                          </option>
+                                          <option value="19">
+                                            -20 to +15 (85%~140% exp)
+                                          </option>
+                                          <option value="20">
+                                            -25 to +15 (60%~140% exp)
+                                          </option>
+                                          <option value="21">
+                                            -30 to +15 (35%~140% exp)
+                                          </option>
+                                        </select>
+                                      </td>
+                                      <td id="PremiumLabel" class="padded">
+                                        Premium
+                                      </td>
+                                      <td id="PremiumInput" class="padded">
+                                        <input type="checkbox" id="Premium" />
+                                      </td>
+                                      <td id="BaseManualLabel" class="padded">
+                                        Battle Manual (Base Exp)
+                                      </td>
+                                      <td id="BaseManualInput" class="padded">
+                                        <select
+                                          id="BaseManual"
+                                          style="width: 75px"
+                                        >
+                                          <option value="0">None</option>
+                                          <option value="1">+30%</option>
+                                          <option value="2">+50%</option>
+                                          <option value="3">+75%</option>
+                                          <option value="4">+100%</option>
+                                        </select>
+                                      </td>
+                                      <td id="JobManualLabel" class="padded">
+                                        Battle Manual (Job Exp)
+                                      </td>
+                                      <td id="JobManualInput" class="padded">
+                                        <select
+                                          id="JobManual"
+                                          style="width: 75px"
+                                        >
+                                          <option value="0">None</option>
+                                          <option value="1">+30%</option>
+                                          <option value="2">+50%</option>
+                                          <option value="3">+75%</option>
+                                          <option value="4">+100%</option>
+                                        </select>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <div
+                                class="bgMdTitle mdTitle"
+                                onclick="ToggleVisibility('Race')"
+                              >
+                                Race &amp; Element
+                              </div>
+                              <div id="Race" style="display: block">
+                                <table class="shadow">
+                                  <tbody>
+                                    <tr>
+                                      <td id="RCFormlessLabel" class="padded">
+                                        Formless
+                                      </td>
+                                      <td id="RCFormlessInput" class="padded">
+                                        <input
+                                          type="checkbox"
+                                          id="RC_Formless"
+                                          checked=""
+                                        />
+                                      </td>
+                                      <td id="RCUndeadLabel" class="padded">
+                                        Undead
+                                      </td>
+                                      <td id="RCUndeadInput" class="padded">
+                                        <input
+                                          type="checkbox"
+                                          id="RC_Undead"
+                                          checked=""
+                                        />
+                                      </td>
+                                      <td id="RCBruteLabel" class="padded">
+                                        Brute
+                                      </td>
+                                      <td id="RCBruteInput" class="padded">
+                                        <input
+                                          type="checkbox"
+                                          id="RC_Brute"
+                                          checked=""
+                                        />
+                                      </td>
+                                      <td id="RCPlantLabel" class="padded">
+                                        Plant
+                                      </td>
+                                      <td id="RCPlantInput" class="padded">
+                                        <input
+                                          type="checkbox"
+                                          id="RC_Plant"
+                                          checked=""
+                                        />
+                                      </td>
+                                      <td id="RCInsectLabel" class="padded">
+                                        Insect
+                                      </td>
+                                      <td id="RCInsectInput" class="padded">
+                                        <input
+                                          type="checkbox"
+                                          id="RC_Insect"
+                                          checked=""
+                                        />
+                                      </td>
+                                      <td id="RCFishLabel" class="padded">
+                                        Fish
+                                      </td>
+                                      <td id="RCFishInput" class="padded">
+                                        <input
+                                          type="checkbox"
+                                          id="RC_Fish"
+                                          checked=""
+                                        />
+                                      </td>
+                                      <td id="RCDemonLabel" class="padded">
+                                        Demon
+                                      </td>
+                                      <td id="RCDemonInput" class="padded">
+                                        <input
+                                          type="checkbox"
+                                          id="RC_Demon"
+                                          checked=""
+                                        />
+                                      </td>
+                                      <td id="RCDemi_HumanLabel" class="padded">
+                                        Demi Human
+                                      </td>
+                                      <td id="RCDemi_HumanInput" class="padded">
+                                        <input
+                                          type="checkbox"
+                                          id="RC_Demi_Human"
+                                          checked=""
+                                        />
+                                      </td>
+                                      <td id="RCAngelLabel" class="padded">
+                                        Angel
+                                      </td>
+                                      <td id="RCAngelInput" class="padded">
+                                        <input
+                                          type="checkbox"
+                                          id="RC_Angel"
+                                          checked=""
+                                        />
+                                      </td>
+                                      <td id="RCDragonLabel" class="padded">
+                                        Dragon
+                                      </td>
+                                      <td id="RCDragonInput" class="padded">
+                                        <input
+                                          type="checkbox"
+                                          id="RC_Dragon"
+                                          checked=""
+                                        />
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td id="ELENeutralLabel" class="padded">
+                                        Neutral
+                                      </td>
+                                      <td id="ELENeutralInput" class="padded">
+                                        <input
+                                          type="checkbox"
+                                          id="ELE_Neutral"
+                                          checked=""
+                                        />
+                                      </td>
+                                      <td id="ELEWaterLabel" class="padded">
+                                        Water
+                                      </td>
+                                      <td id="ELEWaterInput" class="padded">
+                                        <input
+                                          type="checkbox"
+                                          id="ELE_Water"
+                                          checked=""
+                                        />
+                                      </td>
+                                      <td id="ELEEarthLabel" class="padded">
+                                        Earth
+                                      </td>
+                                      <td id="ELEEarthInput" class="padded">
+                                        <input
+                                          type="checkbox"
+                                          id="ELE_Earth"
+                                          checked=""
+                                        />
+                                      </td>
+                                      <td id="ELEFireLabel" class="padded">
+                                        Fire
+                                      </td>
+                                      <td id="ELEFireInput" class="padded">
+                                        <input
+                                          type="checkbox"
+                                          id="ELE_Fire"
+                                          checked=""
+                                        />
+                                      </td>
+                                      <td id="ELEWindLabel" class="padded">
+                                        Wind
+                                      </td>
+                                      <td id="ELEWindInput" class="padded">
+                                        <input
+                                          type="checkbox"
+                                          id="ELE_Wind"
+                                          checked=""
+                                        />
+                                      </td>
+                                      <td id="ELEPoisonLabel" class="padded">
+                                        Poison
+                                      </td>
+                                      <td id="ELEPoisonInput" class="padded">
+                                        <input
+                                          type="checkbox"
+                                          id="ELE_Poison"
+                                          checked=""
+                                        />
+                                      </td>
+                                      <td id="ELEHolyLabel" class="padded">
+                                        Holy
+                                      </td>
+                                      <td id="ELEHolyInput" class="padded">
+                                        <input
+                                          type="checkbox"
+                                          id="ELE_Holy"
+                                          checked=""
+                                        />
+                                      </td>
+                                      <td id="ELEShadowLabel" class="padded">
+                                        Shadow
+                                      </td>
+                                      <td id="ELEShadowInput" class="padded">
+                                        <input
+                                          type="checkbox"
+                                          id="ELE_Shadow"
+                                          checked=""
+                                        />
+                                      </td>
+                                      <td id="ELEGhostLabel" class="padded">
+                                        Ghost
+                                      </td>
+                                      <td id="ELEGhostInput" class="padded">
+                                        <input
+                                          type="checkbox"
+                                          id="ELE_Ghost"
+                                          checked=""
+                                        />
+                                      </td>
+                                      <td id="ELEUndeadLabel" class="padded">
+                                        Undead
+                                      </td>
+                                      <td id="ELEUndeadInput" class="padded">
+                                        <input
+                                          type="checkbox"
+                                          id="ELE_Undead"
+                                          checked=""
+                                        />
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td id="SizeSmallLabel" class="padded">
+                                        Small
+                                      </td>
+                                      <td id="SizeSmallInput" class="padded">
+                                        <input
+                                          type="checkbox"
+                                          id="SizeSmall"
+                                          checked=""
+                                        />
+                                      </td>
+                                      <td id="SizeMediumLabel" class="padded">
+                                        Medium
+                                      </td>
+                                      <td id="SizeMediumInput" class="padded">
+                                        <input
+                                          type="checkbox"
+                                          id="SizeMedium"
+                                          checked=""
+                                        />
+                                      </td>
+                                      <td id="SizeLargeLabel" class="padded">
+                                        Large
+                                      </td>
+                                      <td id="SizeLargeInput" class="padded">
+                                        <input
+                                          type="checkbox"
+                                          id="SizeLarge"
+                                          checked=""
+                                        />
+                                      </td>
+                                      <td class="padded"></td>
+                                      <td class="padded"></td>
+                                      <td class="padded"></td>
+                                      <td class="padded"></td>
+                                      <td class="padded"></td>
+                                      <td class="padded"></td>
+                                      <td class="padded"></td>
+                                      <td class="padded"></td>
+                                      <td class="padded"></td>
+                                      <td class="padded"></td>
+                                      <td class="padded"></td>
+                                      <td class="padded"></td>
+                                      <td class="padded"></td>
+                                      <td class="padded"></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <div id="SearchInput" class="padded">
+                                <input
+                                  type="button"
+                                  id="Search"
+                                  value="Search"
+                                  onclick="BuildMonsterTable()"
+                                />
+                              </div>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="bgDkRow1 padded">
+                            <span id="Monsters"></span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
-                <div class="sidebar-brand-text mx-3">Ragnarok Prime Simulator</div>
-            </a>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Nav Item - Dashboard -->
-			<span id="menu"></span>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+              </div>
+              <div>
+                <script
+                  async
+                  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6824539470557939"
+                  crossorigin="anonymous"
+                ></script>
+                <!-- lower_ads -->
+                <ins
+                  class="adsbygoogle"
+                  style="display: block"
+                  data-ad-client="ca-pub-6824539470557939"
+                  data-ad-slot="8250308300"
+                  data-ad-format="auto"
+                  data-full-width-responsive="true"
+                ></ins>
+                <script>
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <!-- <span>Copyright &copy; Your Website 2021</span> -->
+              Original simulator created by
+              <a href="http://roratorio.2-d.jp/ro/">ROratorio</a> and
+              <a href="https://irowiki.org/">IROWiki.org</a><br />
+              Currently updated and maintained by Kord<br />
+              Current Version 1.3<br />
             </div>
-			
-			
-        </ul>
-        <!-- End of Sidebar -->
-
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
-           
-		   <!-- Main Content -->
-            <div id="content">
-				
-				<!-- Topbar -->
-				<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-						
-                    </button>
-
-                </nav>
-				<!-- End of Topbar -->
-						
-				<!-- Begin Page Content -->
-				<div class="container-fluid">
-				
-					<form name="calcForm" action="https://roprime-simulator.com/(EmptyReference!)">
-						<!-- Scaler-->
-						<div class="padded_side" style="overflow-x:auto;width: fit-content;">
-							<div class="card shadow mb-4">
-								<!-- Card Header -->
-								<div
-									class="card-header d-flex flex-row align-items-center justify-content-between head_bg" onclick="ToggleVisibility('Search_Window')">
-									<h6 class="m-0 font-weight-bold text-primary head_btn"><span class="padded_large">Ragnarok Prime Monster Search</span></h6>
-								</div>
-								<!-- Card Body -->
-								<div class="card-body" id="Search_Window">
-									<table class="shadow">
-										<tbody>
-											<tr>
-												<td class="bgDkRow1 padded">
-													<span id="Search">
-														<!-- <div class="bgMdTitle mdTitle" onclick="ToggleVisibility('Level')">Character</div> -->
-														<div id="Level" style="display:block">
-															<table class="shadow">
-																<tbody>
-																	<tr>
-																		<td id="RangeLevelLabel" class="padded">Range Lv.</td>
-																		<td id="RangeLevelInput" class="padded">
-																			<select id="RangeLevel" style="width:100px;">
-																				<option value="0">0</option>
-																				<option value="1">±1</option>
-																				<option value="2">±2</option>
-																				<option value="3">±3</option>
-																				<option value="4">±4</option>
-																				<option value="5">±5</option>
-																				<option value="6">±6</option>
-																				<option value="7">±7</option>
-																				<option value="8">±8</option>
-																				<option value="9">±9</option>
-																				<option value="10">±10</option>
-																				<option value="11">±11</option>
-																				<option value="12">±12</option>
-																				<option value="13">±13</option>
-																				<option value="14">±14</option>
-																				<option value="15">±15</option>
-																				<option value="16">-5 to +15 (100%~140% exp)</option>
-																				<option value="17">-10 to +15 (95%~140% exp)</option>
-																				<option value="18">-15 to +15 (90%~140% exp)</option>
-																				<option value="19">-20 to +15 (85%~140% exp)</option>
-																				<option value="20">-25 to +15 (60%~140% exp)</option>
-																				<option value="21">-30 to +15 (35%~140% exp)</option>
-																			</select>
-																		</td>
-																		<td id="PremiumLabel" class="padded">Premium</td>
-																		<td id="PremiumInput" class="padded">
-																			<input type="checkbox" id="Premium">
-																		</td>
-																		<td id="BaseManualLabel" class="padded">Battle Manual (Base Exp)</td>
-																		<td id="BaseManualInput" class="padded">
-																			<select id="BaseManual" style="width:75px;">
-																				<option value="0">None</option>
-																				<option value="1">+30%</option>
-																				<option value="2">+50%</option>
-																				<option value="3">+75%</option>
-																				<option value="4">+100%</option>
-																			</select>
-																		</td>
-																		<td id="JobManualLabel" class="padded">Battle Manual (Job Exp)</td>
-																		<td id="JobManualInput" class="padded">
-																			<select id="JobManual" style="width:75px;">
-																				<option value="0">None</option>
-																				<option value="1">+30%</option>
-																				<option value="2">+50%</option>
-																				<option value="3">+75%</option>
-																				<option value="4">+100%</option>
-																			</select>
-																		</td>
-																	</tr>
-																</tbody>
-															</table>
-														</div>
-														<div class="bgMdTitle mdTitle" onclick="ToggleVisibility('Race')">Race &amp; Element</div>
-														<div id="Race" style="display:block">
-															<table class="shadow">
-																<tbody>
-																	<tr>
-																		<td id="RCFormlessLabel" class="padded">Formless</td>
-																		<td id="RCFormlessInput" class="padded">
-																			<input type="checkbox" id="RC_Formless" checked="">
-																		</td><td id="RCUndeadLabel" class="padded">Undead</td>
-																		<td id="RCUndeadInput" class="padded">
-																		<input type="checkbox" id="RC_Undead" checked="">
-																		</td>
-																		<td id="RCBruteLabel" class="padded">Brute </td>
-																		<td id="RCBruteInput" class="padded">
-																		<input type="checkbox" id="RC_Brute" checked=""></td>
-																		<td id="RCPlantLabel" class="padded">Plant</td>
-																		<td id="RCPlantInput" class="padded">
-																		<input type="checkbox" id="RC_Plant" checked=""></td>
-																		<td id="RCInsectLabel" class="padded">Insect</td>
-																		<td id="RCInsectInput" class="padded">
-																		<input type="checkbox" id="RC_Insect" checked="">
-																		</td>
-																		<td id="RCFishLabel" class="padded">Fish</td>
-																		<td id="RCFishInput" class="padded">
-																			<input type="checkbox" id="RC_Fish" checked="">
-																		</td>
-																		<td id="RCDemonLabel" class="padded">Demon</td>
-																		<td id="RCDemonInput" class="padded">
-																		<input type="checkbox" id="RC_Demon" checked=""></td>
-																		<td id="RCDemi_HumanLabel" class="padded">Demi Human</td>
-																		<td id="RCDemi_HumanInput" class="padded">
-																		<input type="checkbox" id="RC_Demi_Human" checked=""></td>
-																		<td id="RCAngelLabel" class="padded">Angel</td>
-																		<td id="RCAngelInput" class="padded">
-																		<input type="checkbox" id="RC_Angel" checked=""></td>
-																		<td id="RCDragonLabel" class="padded">Dragon</td>
-																		<td id="RCDragonInput" class="padded">
-																			<input type="checkbox" id="RC_Dragon" checked="">
-																		</td>
-																	</tr>
-																	<tr>
-																		<td id="ELENeutralLabel" class="padded">Neutral</td>
-																		<td id="ELENeutralInput" class="padded">
-																		<input type="checkbox" id="ELE_Neutral" checked=""></td>
-																		<td id="ELEWaterLabel" class="padded">Water</td>
-																		<td id="ELEWaterInput" class="padded">
-																		<input type="checkbox" id="ELE_Water" checked=""></td>
-																		<td id="ELEEarthLabel" class="padded">Earth</td>
-																		<td id="ELEEarthInput" class="padded">
-																		<input type="checkbox" id="ELE_Earth" checked=""></td>
-																		<td id="ELEFireLabel" class="padded">Fire</td>
-																		<td id="ELEFireInput" class="padded">
-																		<input type="checkbox" id="ELE_Fire" checked=""></td>
-																		<td id="ELEWindLabel" class="padded">Wind</td>
-																		<td id="ELEWindInput" class="padded">
-																		<input type="checkbox" id="ELE_Wind" checked=""></td>
-																		<td id="ELEPoisonLabel" class="padded">Poison</td>
-																		<td id="ELEPoisonInput" class="padded">
-																		<input type="checkbox" id="ELE_Poison" checked=""></td>
-																		<td id="ELEHolyLabel" class="padded">Holy</td>
-																		<td id="ELEHolyInput" class="padded">
-																		<input type="checkbox" id="ELE_Holy" checked=""></td>
-																		<td id="ELEShadowLabel" class="padded">Shadow</td>
-																		<td id="ELEShadowInput" class="padded">
-																		<input type="checkbox" id="ELE_Shadow" checked=""></td>
-																		<td id="ELEGhostLabel" class="padded">Ghost</td>
-																		<td id="ELEGhostInput" class="padded">
-																		<input type="checkbox" id="ELE_Ghost" checked=""></td>
-																		<td id="ELEUndeadLabel" class="padded">Undead</td>
-																		<td id="ELEUndeadInput" class="padded">
-																			<input type="checkbox" id="ELE_Undead" checked="">
-																		</td>
-																	</tr>
-																	<tr>
-																		<td id="SizeSmallLabel" class="padded">Small</td>
-																		<td id="SizeSmallInput" class="padded">
-																			<input type="checkbox" id="SizeSmall" checked="">
-																		</td>
-																		<td id="SizeMediumLabel" class="padded">Medium</td>
-																		<td id="SizeMediumInput" class="padded">
-																			<input type="checkbox" id="SizeMedium" checked="">
-																		</td>
-																		<td id="SizeLargeLabel" class="padded">Large</td>
-																		<td id="SizeLargeInput" class="padded">
-																			<input type="checkbox" id="SizeLarge" checked="">
-																		</td>
-																		<td class="padded"></td>
-																		<td class="padded"></td>
-																		<td class="padded"></td>
-																		<td class="padded"></td>
-																		<td class="padded"></td>
-																		<td class="padded"></td>
-																		<td class="padded"></td>
-																		<td class="padded"></td>
-																		<td class="padded"></td>
-																		<td class="padded"></td>
-																		<td class="padded"></td>
-																		<td class="padded"></td>
-																		<td class="padded"></td>
-																		<td class="padded"></td>
-																	</tr>
-																</tbody>
-															</table>
-														</div>
-														<div id="SearchInput" class="padded">
-															<input type="button" id="Search" value="Search" onclick="BuildMonsterTable()">
-														</div>
-													</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="bgDkRow1 padded">
-													<span id="Monsters"></span>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-						<div>
-							<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6824539470557939"
-     crossorigin="anonymous"></script>
-<!-- lower_ads -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-6824539470557939"
-     data-ad-slot="8250308300"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-						</div>
-					</form>
-					
-				</div>
-			</div>
-			<!-- Footer -->
-			<footer class="sticky-footer bg-white">
-				<div class="container my-auto">
-					<div class="copyright text-center my-auto">
-						<!-- <span>Copyright &copy; Your Website 2021</span> -->
-						Original simulator created by
-						<a href="http://roratorio.2-d.jp/ro/">ROratorio</a> and <a href="https://irowiki.org/">IROWiki.org</a><br>
-						Currently updated and maintained by Kord<br>
-						Current Version 1.3<br>
-						
-					</div>
-				</div>
-			</footer>
-			<!-- End of Footer -->
-			
-		</div>
-        <!-- End of Content Wrapper -->
-
-	</div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+      </div>
+      <!-- End of Content Wrapper -->
+    </div>
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
+      <i class="fas fa-angle-up"></i>
     </a>
 
-	<!-- Bootstrap core JavaScript-->
+    <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -371,39 +604,35 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
-	<script>
-		var version = '61';
-		var jsassets = [
-		'js/menu.js',
-		];
-		
-		function loadAssets() {
-			jsassets.forEach(function(src) {
-                var script = document.createElement('script');
-                script.src = src;
-                script.async = false;
-                document.head.appendChild(script);
-            }); 
-		}
-		
-		$(function() {
-			loadAssets();
-			//activate Chosen for selects
-			$(window).on('selects-ready', function() {
-				$("select").chosen({no_results_text: "Oops, nothing found!"}); 
-			});
-			
-		 	<!-- $(".card" ).draggable(); -->
-		});
-		$(":button").on('mousedown',function() {
+    <script>
+      var version = '62';
+      var jsassets = ["js/menu.js"];
 
-		  jQuery(this).addClass('activebutton');
-		  
-		  }).on('mouseup mouseleave', function() {
-			jQuery(this).removeClass('activebutton');
-		});
-		
-	</script>
-</body>
+      function loadAssets() {
+        jsassets.forEach(function (src) {
+          var script = document.createElement("script");
+          script.src = src;
+          script.async = false;
+          document.head.appendChild(script);
+        });
+      }
 
+      $(function () {
+        loadAssets();
+        //activate Chosen for selects
+        $(window).on("selects-ready", function () {
+          $("select").chosen({ no_results_text: "Oops, nothing found!" });
+        });
+
+        <!-- $(".card" ).draggable(); -->
+      });
+      $(":button")
+        .on("mousedown", function () {
+          jQuery(this).addClass("activebutton");
+        })
+        .on("mouseup mouseleave", function () {
+          jQuery(this).removeClass("activebutton");
+        });
+    </script>
+  </body>
 </html>
