@@ -15176,7 +15176,7 @@ const Skill = [
 		switch(PATCH){
 			case 0:
 			case 1:
-				0.8 - (n_A_ActiveSkillLV * 0.2);
+				Max((0.8 - (n_A_ActiveSkillLV * 0.2)),0.2);
 				break;
 			case 2:
 				0.6 - (n_A_ActiveSkillLV * 0.1);
@@ -22373,7 +22373,8 @@ function displayDamage(finalDamage, sk) {
 function displayAdditionalDamage() {
   if (Skill[n_A_ActiveSkill].canCrit) {
     let str_Title = SubName[3][Language];
-    let str_Content = displaySubHits(skill_ALL_BASIC_ATTACK, 1);
+    // let str_Content = displaySubHits(skill_ALL_BASIC_ATTACK, 1);
+    let str_Content = displaySubHits(n_A_ActiveSkill, n_A_ActiveSkillLV, 1);
     //Double Attack || Snake Head || Sidewinder Card
     if (
       ((SkillSearch(skill_TH_DOUBLE_ATTACK) &&
@@ -22387,7 +22388,7 @@ function displayAdditionalDamage() {
       n_A_ActiveSkill == skill_ALL_BASIC_ATTACK
     ) {
       str_Title += "<BR>Double Attack (CRIT)<BR>-";
-      str_Content += displaySubHits(skill_TH_DOUBLE_ATTACK, 1);
+      str_Content += displaySubHits(skill_TH_DOUBLE_ATTACK, SkillSearch(skill_TH_DOUBLE_ATTACK),1);
     }
     //Giant Growth
     if (
@@ -22395,7 +22396,7 @@ function displayAdditionalDamage() {
       n_A_ActiveSkill == skill_ALL_BASIC_ATTACK
     ) {
       str_Title += "<BR>Giant Growth (CRIT)";
-      str_Content += displaySubHits(skill_RUN_GIANT_GROWTH, 1);
+      str_Content += displaySubHits(skill_RUN_GIANT_GROWTH, SkillSearch(skill_RUN_GIANT_GROWTH), 1);
       if (
         (SkillSearch(skill_TH_DOUBLE_ATTACK) &&
           n_A_WeaponType == weapTyp_DAGGER) ||
@@ -22435,7 +22436,7 @@ function displayAdditionalDamage() {
   ) {
     str_bSUBname += "Double Attack <BR>-<BR>";
     // str_bSUBname += "Double Attack (CRIT)<BR><BR>";
-    str_bSUB += displaySubHits(skill_TH_DOUBLE_ATTACK, 0);
+    str_bSUB += displaySubHits(skill_TH_DOUBLE_ATTACK, SkillSearch(skill_TH_DOUBLE_ATTACK), 0);
     // displaySubHits(skill_TH_DOUBLE_ATTACK,1);
   }
   //Raging Trifecta Blow
@@ -22444,7 +22445,7 @@ function displayAdditionalDamage() {
     n_A_ActiveSkill == skill_ALL_BASIC_ATTACK
   ) {
     str_bSUBname += "Raging Trifecta Blow <BR>-<BR>";
-    str_bSUB += displaySubHits(skill_MO_RAGING_TRIFECTA_BLOW, 0);
+    str_bSUB += displaySubHits(skill_MO_RAGING_TRIFECTA_BLOW, SkillSearch(skill_MO_RAGING_TRIFECTA_BLOW), 0);
   }
   //Auto Blitz Beat
   if (
@@ -22452,7 +22453,7 @@ function displayAdditionalDamage() {
     n_A_ActiveSkill == skill_ALL_BASIC_ATTACK
   ) {
     str_bSUBname += "Auto Blitz Beat <BR>";
-    str_bSUB += displaySubHits(skill_HU_BLITZ_BEAT, 0);
+    str_bSUB += displaySubHits(skill_HU_BLITZ_BEAT, SkillSearch(skill_HU_BLITZ_BEAT), 0);
   }
   //Auto Warg Strike
   if (
@@ -22460,7 +22461,7 @@ function displayAdditionalDamage() {
     n_A_ActiveSkill == skill_ALL_BASIC_ATTACK
   ) {
     str_bSUBname += "Auto Warg Strike <BR>";
-    str_bSUB += displaySubHits(skill_RAN_WARG_STRIKE, 0);
+    str_bSUB += displaySubHits(skill_RAN_WARG_STRIKE, SkillSearch(skill_RAN_WARG_STRIKE), 0);
   }
   //Giant Growth
   if (
@@ -22468,7 +22469,7 @@ function displayAdditionalDamage() {
     n_A_ActiveSkill == skill_ALL_BASIC_ATTACK
   ) {
     str_bSUBname += "Giant Growth <BR>";
-    str_bSUB += displaySubHits(skill_RUN_GIANT_GROWTH, 0);
+    str_bSUB += displaySubHits(skill_RUN_GIANT_GROWTH, SkillSearch(skill_RUN_GIANT_GROWTH), 0);
     if (
       (SkillSearch(skill_TH_DOUBLE_ATTACK) &&
         n_A_WeaponType == weapTyp_DAGGER) ||
@@ -22485,19 +22486,20 @@ function displayAdditionalDamage() {
   myInnerHtml("bSUB", str_bSUB, 0);
 }
 
-function displaySubHits(autosSkill, isCrit) {
+function displaySubHits(autoSkill,autoSkillLv, isCrit) {
   let textStr = "";
   let numHits = 0;
   let tempDMG = getFinalDamage(
     getBaseDamage(isCrit),
-    Skill[autosSkill],
-    SkillSearch(autosSkill),
+    Skill[autoSkill],
+	autoSkillLv,
+	5,
     isCrit
   );
-  if (eval(Skill[autosSkill].hitDivisibility) > 1)
-    numHits = eval(Skill[autosSkill].hitDivisibility);
-  if (eval(Skill[autosSkill].hitAmount) > 1)
-    numHits = eval(Skill[autosSkill].hitAmount);
+  if (eval(Skill[autoSkill].hitDivisibility) > 1)
+    numHits = eval(Skill[autoSkill].hitDivisibility);
+  if (eval(Skill[autoSkill].hitAmount) > 1)
+    numHits = eval(Skill[autoSkill].hitAmount);
   if (numHits > 0) {
     if (tempDMG[0] === tempDMG[2])
       textStr +=
@@ -22526,23 +22528,23 @@ function displaySubHits(autosSkill, isCrit) {
   return textStr;
 }
 
-function displaySubHitsGiantGrowth(autosSkill, isCrit) {
+function displaySubHitsGiantGrowth(autoSkill, isCrit) {
   let textStr = "";
   let numHits = 0;
   let GIANT_GROWTH = RUN_GIANT_GROWTH.skillFormula2(1) / 100;
   let tempDMG = getFinalDamage(
     getBaseDamage(isCrit),
-    Skill[autosSkill],
-    SkillSearch(autosSkill),
+    Skill[autoSkill],
+    SkillSearch(autoSkill),
     isCrit
   );
   tempDMG[0] *= GIANT_GROWTH;
   tempDMG[1] *= GIANT_GROWTH;
   tempDMG[2] *= GIANT_GROWTH;
-  if (eval(Skill[autosSkill].hitDivisibility) > 1)
-    numHits = eval(Skill[autosSkill].hitDivisibility);
-  if (eval(Skill[autosSkill].hitAmount) > 1)
-    numHits = eval(Skill[autosSkill].hitAmount);
+  if (eval(Skill[autoSkill].hitDivisibility) > 1)
+    numHits = eval(Skill[autoSkill].hitDivisibility);
+  if (eval(Skill[autoSkill].hitAmount) > 1)
+    numHits = eval(Skill[autoSkill].hitAmount);
   if (numHits > 0) {
     if (tempDMG[0] === tempDMG[2])
       textStr +=
