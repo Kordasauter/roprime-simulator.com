@@ -856,34 +856,70 @@ function ApplySkillModifiers(damage) {
   // if (n_A_Weapon_element == ele_NEUTRAL + SkillSearch( skill_KAG_GET_ELEMENTAL_SEAL ) && SkillSearch( skill_KAG_GET_ELEMENTAL_SEAL ) !== ele_EARTH)
   // dmgMultiplier += 10*SkillSearch( skill_KAG_SUMMON_ELEMENTAL_SEAL );
   // }
-  if (SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL)) {
-    switch (SkillSearch(skill_KAG_GET_ELEMENTAL_SEAL)) {
-      case ele_WATER:
-        if (n_A_ActiveSkill == skill_NIN_FREEZING_SPEAR)
-          dmgMultiplier += 5 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
-        if (n_A_ActiveSkill == skill_NIN_SNOW_FLAKE_DRAFT)
-          dmgMultiplier += 25 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
-        break;
-      case ele_EARTH:
-        break;
-      case ele_FIRE:
-        if (n_A_ActiveSkill == skill_NIN_FLAMING_PETALS)
-          dmgMultiplier += 20 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
-        if (n_A_ActiveSkill == skill_NIN_BLAZE_SHIELD)
-          dmgMultiplier += 5 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
-        if (n_A_ActiveSkill == skill_NIN_EXPLODING_DRAGON)
-          dmgMultiplier += 15 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
-        break;
-      case ele_WIND:
-        if (n_A_ActiveSkill == skill_NIN_WIND_BLADE)
-          dmgMultiplier += 20 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
-        if (n_A_ActiveSkill == skill_NIN_LIGHTNING_JOLT)
-          dmgMultiplier += 15 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
-        if (n_A_ActiveSkill == skill_NIN_FIRST_WIND)
-          dmgMultiplier += 10 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
-        break;
-      default:
-        break;
+  if(PATCH >= 2)
+  {
+    if (SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL)) {
+      switch (SkillSearch(skill_KAG_GET_ELEMENTAL_SEAL)) {
+        case ele_WATER:
+          if (n_A_ActiveSkill == skill_NIN_FREEZING_SPEAR)
+            dmgMultiplier += 20 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
+          if (n_A_ActiveSkill == skill_NIN_SNOW_FLAKE_DRAFT)
+            dmgMultiplier += 100 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
+          break;
+        case ele_EARTH:
+          break;
+        case ele_FIRE:
+          if (n_A_ActiveSkill == skill_NIN_FLAMING_PETALS)
+            dmgMultiplier += 20 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
+          if (n_A_ActiveSkill == skill_NIN_BLAZE_SHIELD)
+            dmgMultiplier += 20 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
+          if (n_A_ActiveSkill == skill_NIN_EXPLODING_DRAGON)
+            dmgMultiplier += 15 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
+          break;
+        case ele_WIND:
+          if (n_A_ActiveSkill == skill_NIN_WIND_BLADE)
+            dmgMultiplier += 20 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
+          if (n_A_ActiveSkill == skill_NIN_LIGHTNING_JOLT)
+            dmgMultiplier += 15 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
+          if (n_A_ActiveSkill == skill_NIN_FIRST_WIND)
+            dmgMultiplier += 10 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
+          break;
+        default:
+          break;
+      }
+    }
+  }
+  else
+  {
+    if (SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL)) {
+      switch (SkillSearch(skill_KAG_GET_ELEMENTAL_SEAL)) {
+        case ele_WATER:
+          if (n_A_ActiveSkill == skill_NIN_FREEZING_SPEAR)
+            dmgMultiplier += 5 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
+          if (n_A_ActiveSkill == skill_NIN_SNOW_FLAKE_DRAFT)
+            dmgMultiplier += 25 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
+          break;
+        case ele_EARTH:
+          break;
+        case ele_FIRE:
+          if (n_A_ActiveSkill == skill_NIN_FLAMING_PETALS)
+            dmgMultiplier += 20 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
+          if (n_A_ActiveSkill == skill_NIN_BLAZE_SHIELD)
+            dmgMultiplier += 5 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
+          if (n_A_ActiveSkill == skill_NIN_EXPLODING_DRAGON)
+            dmgMultiplier += 100 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
+          break;
+        case ele_WIND:
+          if (n_A_ActiveSkill == skill_NIN_WIND_BLADE)
+            dmgMultiplier += 20 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
+          if (n_A_ActiveSkill == skill_NIN_LIGHTNING_JOLT)
+            dmgMultiplier += 20 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
+          if (n_A_ActiveSkill == skill_NIN_FIRST_WIND)
+            dmgMultiplier += 100 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
+          break;
+        default:
+          break;
+      }
     }
   }
   if (
@@ -2292,7 +2328,7 @@ function DisplayCastAndDelay() {
 
   // calculate longest delay
   totalDelay = 0;
-
+  n_Delay[ksDelayCooldown] = eval(Skill[n_A_ActiveSkill].cooldown); //new
   if (SkillSearch(skill_WAR_READING_SPELLBOOK)) {
     // instant list
     var w2 = [
@@ -2339,7 +2375,7 @@ function DisplayCastAndDelay() {
     totalDelay = n_Delay[ksDelaySkillDuration] - totalCastTime;
     longestDelay = ksDelaySkillDuration;
   }
-  n_Delay[ksDelayCooldown] = eval(Skill[n_A_ActiveSkill].animation); //new
+//   n_Delay[ksDelayCooldown] = eval(Skill[n_A_ActiveSkill].cooldown); //new
   if (n_Delay[ksDelayCooldown] > totalDelay) {
     totalDelay = n_Delay[ksDelayCooldown];
     longestDelay = ksDelayCooldown;
