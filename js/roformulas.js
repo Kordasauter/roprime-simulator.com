@@ -1553,6 +1553,7 @@ function CalcElementalMod(weaponElement) {
       n_tok[bon_DMG_ELE_HOLY] += 6;
     }
   }
+  
   if (CardNumSearch(552) && n_A_BODY_DEF_PLUS >= 9) {
     // Wood Goblin
     n_tok[bon_DMG_ELE_WATER] += 5;
@@ -1567,6 +1568,16 @@ function CalcElementalMod(weaponElement) {
       }
     }
   }
+	if(EquipNumSearch(2699) && n_A_LEFT_DEF_PLUS >= 11)
+	{
+		//dark cannon ball
+		if((n_A_Arrow == 1)) 
+      n_tok[bon_DMG_ELE_DARK] += 10;
+		//holy cannon ball
+		if((n_A_Arrow == 2))
+      n_tok[bon_DMG_ELE_HOLY] += 10;
+	}
+  
   if (EquipNumSearch(2075) && n_A_Weapon_ATKplus >= 11) {
     //Four Mirrors
     n_tok[bon_DMG_ELE_FIRE] += 15;
@@ -1682,6 +1693,8 @@ function CalcRacialMod() {
     n_tok[bon_DMG_RC_BRUTE] += 10;
     n_tok[bon_DMG_RC_DEMON] += 10;
   }
+
+
 
   //Shadows
   if (EquipNumSearch(1673)) {
@@ -1886,6 +1899,10 @@ function CalcBossMod() {
     //Demon's Shot
     n_tok[bon_DMG_BOSS] += 10;
   }
+
+  //Black Feather
+  if(EquipNumSearch(2695) && (n_A_HEAD_DEF_PLUS >= 10) && (SkillSearch(skill_SHA_INVISIBILITY) == 5))
+    n_tok[bon_DMG_BOSS] += 50;
 
   if (n_B[en_BOSS] === 1) {
     bossMod = n_tok[bon_DMG_BOSS];
@@ -8642,7 +8659,14 @@ function CalcFixedCastFlat() {
   }
   return reductionFlat;
 }
+function CalcVariableCastFlat()
+{
+    let variableReductionFlat = 0;
 
+    variableReductionFlat -= StPlusCalc2(bon_CAST_SKILL_FLAT + n_A_ActiveSkill);
+
+    return variableReductionFlat;
+}
 function CalcDelay() {
   globalCastDelay = 0;
 

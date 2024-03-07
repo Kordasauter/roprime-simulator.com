@@ -332,7 +332,7 @@ function magicElementMultiplier()
 	
 	eleMul = n_tok[bon_MDMG_ELE_NEUTRAL + Math.floor(n_B[en_ELEMENT]/10)];
 	eleMul += n_tok[bon_MDMG_ELE_ALL];
-	console.log("n_tok[bon_MDMG_ELE_ALL] = " + n_tok[bon_MDMG_ELE_ALL]);
+	// console.log("n_tok[bon_MDMG_ELE_ALL] = " + n_tok[bon_MDMG_ELE_ALL]);
 	
 	return eleMul;
 }

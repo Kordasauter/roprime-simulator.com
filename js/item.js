@@ -1622,7 +1622,7 @@
 ,[1611,weapTyp_DAGGER,1,105,4,0,0,1,0,0,0,0,bon_CH_BREAK_WEAPON,5,bon_NONE] // "Mythic Swordbreaker (7 d.)"
 ,[1612,weapTyp_DAGGER,1,153,3,0,0,1,0,0,0,0,bon_DMG_SIZ_LARGE,40,bon_DMG_SIZ_MEDIUM,40,bon_DMG_SIZ_SMALL,40,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Damascus (7 d.)"
 ,[1613,weapTyp_SWORD,61,185,3,0,0,1,0,0,0,0,bon_DMG_SIZ_LARGE,40,bon_DMG_SIZ_MEDIUM,40,bon_DMG_SIZ_SMALL,40,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Flamberge (7 d.)"
-,[1614,weapTyp_DAGGER,1,85,4,0,0,1,0,0,0,0,bon_SP_MUL,10,bon_NONE]  // "Mythic Moonlight Dagger (7 d.)"
+,[1614,weapTyp_DAGGER,1,85,4,0,0,1,0,0,0,0,bon_SP_MUL,10,bon_NONE]		// "Mythic Moonlight Dagger (7 d.)"
 ,[1615,weapTyp_BOOK,0,145,3,0,0,1,0,0,0,0,bon_WEAPON_MATK,100,bon_MDMG_RC_FORMLESS,15,bon_MDMG_RC_UNDEAD,15,bon_MDMG_RC_BRUTE,15,bon_MDMG_RC_PLANT,15,bon_MDMG_RC_INSECT,15,bon_MDMG_RC_FISH,15,bon_MDMG_RC_DEMON,15,bon_MDMG_RC_DEMI_HUMAN,15,bon_MDMG_RC_ANGEL,15,bon_MDMG_RC_DRAGON,15,bon_INT,3,bon_DEX,2,bon_CRIT,20,bon_DMG_SIZ_LARGE,40,bon_DMG_SIZ_MEDIUM,40,bon_DMG_SIZ_SMALL,40,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Encyclopedia (7 d.)"
 ,[1616,weapTyp_SPEAR,0,74,1,0,0,1,0,0,0,0,bon_DMG_SIZ_LARGE,70,bon_DMG_SIZ_MEDIUM,70,bon_DMG_SIZ_SMALL,70,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE,bon_NONE] // "Mythic Pike (7 d.)",
 ,[1617,weapTyp_SWORD,1,120,4,0,0,1,0,0,0,0,bon_ELEMENT,3,bon_NO_UPGRADES,1,bon_NONE] // "Mythic Solar Sword (7 d.)"
@@ -1633,12 +1633,12 @@
 ,[1622,weapTyp_KNUCKLE,1,110,4,0,45,46,0,0,0,0,bon_ASPD_MUL,5,bon_DMG_ELE_UNDEAD,5,bon_DMG_ELE_WATER,10,bon_DMG_ELE_EARTH,10,bon_DMG_ELE_FIRE,10,bon_DMG_ELE_WIND,10,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Kaiser Knuckle (7 d.)"
 ,[1623,weapTyp_DAGGER,55,209,4,0,0,1,0,0,0,0,bon_CRIT,90,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Dagger of Counter (7 d.)"
 ,[1624,weapTyp_SPEAR,1,100,4,0,85,48,0,0,0,0,bon_DMG_SIZ_MEDIUM,20,bon_IGN_DEF_NONBOSS,1,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Skewer (7 d.)"
-,[1625,weapTyp_KATAR,0,179,4,0,0,1,0,0,0,0,bon_CH_STATUS_CURSE,50,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE]  // "Mythic Cursed Katar (7 d.)"
+,[1625,weapTyp_KATAR,0,179,4,0,0,1,0,0,0,0,bon_CH_STATUS_CURSE,50,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE]		// "Mythic Cursed Katar (7 d.)"
 ,[1626,weapTyp_DAGGER,58,120,1,0,0,1,0,0,0,0,bon_WEAPON_MATK,98,bon_MDMG_RC_FORMLESS,15,bon_MDMG_RC_UNDEAD,15,bon_MDMG_RC_BRUTE,15,bon_MDMG_RC_PLANT,15,bon_MDMG_RC_INSECT,15,bon_MDMG_RC_FISH,15,bon_MDMG_RC_DEMON,15,bon_MDMG_RC_DEMI_HUMAN,15,bon_MDMG_RC_ANGEL,15,bon_MDMG_RC_DRAGON,15,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Asura (7 d.)"
-,[1627,weapTyp_STAFF,53,10,3,0,0,1,0,0,0,0,bon_WEAPON_MATK,125,bon_ELEMENT,6,bon_HEAL_MUL,15,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE]  // "Mythic Staff of Yggdrasil (7 d.)"
+,[1627,weapTyp_STAFF,53,10,3,0,0,1,0,0,0,0,bon_WEAPON_MATK,125,bon_ELEMENT,6,bon_HEAL_MUL,15,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE]		// "Mythic Staff of Yggdrasil (7 d.)"
 ,[1628,weapTyp_STAFF,53,10,3,0,0,1,0,0,0,0,bon_WEAPON_MATK,100,bon_ELEMENT,6,bon_HEAL_MUL,18,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Staff of Healing (7 d.)"
 ,[1629,weapTyp_BOW,76,185,4,0,0,1,0,0,0,0,bon_ELEMENT,6,bon_INT,5,bon_NO_UPGRADES,1,bon_SKILL_ENABLE,5,bon_SKILL_ENABLE,6,bon_RES_STATUS_CURSE,50,bon_RES_STATUS_POISON,50,bon_RES_STATUS_BLIND,50,bon_RES_STATUS_CHAOS,50,bon_RES_STATUS_SILENCE,50,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE] // "Mythic Rudra Bow (7 d.)"
-,[1630,weapTyp_SPEAR,0,195,3,0,0,1,0,0,0,0,bon_STR,1,bon_INT,2,bon_DEX,1,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE]  // "Mythic Pole Axe (7 d.)"
+,[1630,weapTyp_SPEAR,0,195,3,0,0,1,0,0,0,0,bon_STR,1,bon_INT,2,bon_DEX,1,bon_NO_UPGRADES,1,bon_UNBREAKABLE,1,bon_NONE]		// "Mythic Pole Axe (7 d.)"
 ,[1631,itm_type_ACCESSORY,0,0,0,0,0,1,0,0,0,0,bon_ATK,30,bon_NONE] // "Prisoner''s Flail (Rental 7 d.)"'
 ,[1632,itm_type_ACCESSORY,0,0,0,1,10,90,0,0,0,0,bon_MDEF,15,bon_NONE] // "Black Rosary"
 ,[1633,itm_type_HEAD_UPPER,0,1,0,1,0,1,0,0,0,0,bon_INT,3,bon_MDMG_RC_UNDEAD,10,bon_NONE] // "Zaha Doll Hat"
@@ -1896,7 +1896,7 @@
 ,[1872,itm_type_SHOES,224,30,0,1,60,140,0,0,0,0,bon_HP_ADD,300,bon_SP_ADD,100,bon_NONE]//Luxurious Doram Shoes
 ,[1873,weapTyp_STAFF,224,80,2,3,40,60,0,0,0,0,bon_WEAPON_MATK,180,bon_SP_ADD,50,bon_NONE]//Marvelous Foxtail Staff //Every 3 refine level: MATK +10, MaxSP +10.,
 ,[1874,weapTyp_STAFF,224,195,3,2,30,100,0,0,0,0,bon_DMG_RANGE,8,bon_HP_ADD,200,bon_NONE]//Fine Foxtail Replica //For every 3 refine level: DEX +3, MaxSP +15.,
-,[1875,weapTyp_STAFF,224,150,2,3,30,60,0,0,0,0,bon_DMG_RANGE,8,bon_HP_ADD,100,bon_NONE]//Foxtail Replica  //For every 3 refine level: DEX +2, MaxSP +10.,
+,[1875,weapTyp_STAFF,224,150,2,3,30,60,0,0,0,0,bon_DMG_RANGE,8,bon_HP_ADD,100,bon_NONE]//Foxtail Replica		//For every 3 refine level: DEX +2, MaxSP +10.,
 ,[1876,weapTyp_STAFF,224,70,2,1,30,20,0,0,0,0,bon_DEX,1,bon_HP_ADD,200,bon_SP_ADD,100,bon_DMG_RANGE,8,bon_NONE]//Large Foxtail Staff
 ,[1877,weapTyp_STAFF,224,100,3,2,50,100,0,0,0,0,bon_WEAPON_MATK,240,bon_SP_ADD,100,bon_NONE]//Wondrous Foxtail Staff //For every 3 refine level: MATK +2%, MaxSP +1%.,
 ,[1878,weapTyp_STAFF,224,70,2,1,30,20,0,0,0,0,bon_WEAPON_MATK,100,bon_INT,1,bon_HP_ADD,100,bon_SP_ADD,150,bon_NONE]//Dragonfly Sitting Foxtail Staff
@@ -2800,13 +2800,13 @@
 ,[2692,itm_type_SHIELD,0,80,0,1,50,90,0,0,0,0,bon_MDEF,5,bon_RED_ELE_SHADOW,25,"ref_lvl",5,bon_ASPD_ADD,1,"ref_lvl",9,bon_ASPD_ADD,1,bon_NONE]//Shield of Raging Chaos
 ,[2693,itm_type_HEAD_MIDDLE,0,0,0,1,10,1,0,0,0,0,bon_RED_CAST,-5,bon_NONE]//Deep Blue Sunglasses
 ,[2694,itm_type_ACCESSORY,0,0,0,1,50,50,0,0,0,0,bon_AGI,2,bon_ASPD_MUL,2,bon_SKILL_ENABLE,77,bon_RED_RC_DEMI_HUMAN,1,bon_RED_RC_BRUTE,1,bon_RED_RC_FISH,1,bon_RED_RC_DEMON,2,bon_RED_RC_UNDEAD,2,"bagi_hi",100,bon_ASPD_MUL,5,bon_NONE]//Kirin Horn
-// ,[2695,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2696,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2697,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2698,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2699,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-// ,[2700,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
-
+,[2695,itm_type_HEAD_UPPER,0,18,0,0,100,100,0,0,0,0,bon_MDEF,15,bon_DEX,10,bon_DMG_SKILL + skill_SHA_FEINT_BOMB,10,"ref_lvl",7,bon_HIT,30,"ref_lvl",7,bon_DMG_SKILL + skill_SHA_FEINT_BOMB,15,"ref_lvl",9,bon_HIT,20,"ref_lvl",9,bon_DMG_SKILL + skill_SHA_FEINT_BOMB,25,"ref_lvl",10,bon_DEFIGN_RC_ALL,100,bon_NONE]//Black Feather
+,[2696,itm_type_ACCESSORY,0,0,0,0,10,20,0,0,0,0,bon_SKILL_AUTOCAST,170,"ev_blvl",1,bon_DMG_SKILL + skill_RG_BACK_STAB,2,bon_NONE]//Shadow Ring
+,[2697,itm_type_HEAD_LOWER,0,0,0,0,30,80,0,0,0,0,bon_ASPD_ADD,1,bon_NONE]//Royal Guard Necklace
+,[2698,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RES_STATUS_BLIND,100,bon_RES_STATUS_SILENCE,100,bon_ATK,40,bon_ASPD_MUL,3,bon_DMG_RC_DEMI_HUMAN,2,bon_DMG_RC_BRUTE,2,"bagi_hi",108,bon_ATK,60,"bagi_hi",108,bon_ASPD_MUL,5,"bagi_hi",108,bon_DMG_RC_DEMI_HUMAN,2,"bagi_hi",108,bon_DMG_RC_BRUTE,2,"bagi_hi",120,bon_ATK,80,"bagi_hi",120,bon_ASPD_MUL,7,"bagi_hi",120,bon_DMG_RC_DEMI_HUMAN,4,"bagi_hi",120,bon_DMG_RC_BRUTE,4,bon_NONE]//Royal Guard Necklace + Imperial Feather
+,[2699,itm_type_SHIELD,2056,100,0,1,250,100,0,0,0,0,bon_UNBREAKABLE,1,"ev_ref",1,bon_ATK,10,"ref_lvl",7,bon_ASPD_MUL,10,"ref_lvl",9,bon_DMG_RANGE,10,"ref_lvl",9,bon_RED_CASTDELAY,5,"ref_lvl",11,bon_DMG_SKILL + skill_GEN_CART_CANNON,15,"ref_lvl",11,bon_DMG_SKILL + skill_MEC_ARM_CANNON,15,bon_NONE]//Angel Mirror [1]
+,[2700,itm_type_HEAD_MIDDLE,0,0,0,0,20,30,0,0,0,0,bon_CAST_SKILL_FLAT + skill_CR_SACRIFICE,2,bon_CAST_SKILL_FLAT + skill_PA_GLORIA_DOMINI,2,bon_HP_MUL,1,bon_ASPD_MUL,1,"ev_blvl",1,bon_DMG_SKILL + skill_PA_MARTYR_RECONING,2,"blvl_hi",100,bon_HP_MUL,1,"blvl_hi",100,bon_ASPD_MUL,1,"blvl_hi",150,bon_HP_MUL,1,"blvl_hi",150,bon_ASPD_MUL,1,bon_NONE]//Noble Mask
+// ,[2701,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
 
 // ,[,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK,50,"set_ref"+(fl_WEAPON+fl_HEAD),7,bon_RED_CAST,-10,"set_sum"+(fl_WEAPON+fl_HEAD),18,bon_MDMG_SIZ_SMALL,15,"set_sum"+(fl_WEAPON+fl_HEAD),18,bon_MDMG_SIZ_MEDIUM,15,"set_sum"+(fl_WEAPON+fl_HEAD),22,bon_MATK,50,"set_sum"+(fl_WEAPON+fl_HEAD),22,bon_INC_MAGIC_FIRE,20,bon_NONE]//Illusion Fancy Flower + Illusion Bazerald
 
@@ -2829,998 +2829,999 @@ ItemMax = ItemOBJ.length -1;
 // ID, WeapType, ReqJob, Atk, wLVL, slots, Weight, reqBLVL, bonus[type], bonusamount, bonus2[type], .., bon_NONE
 
 function BuildItemDescription(bonusType, bonusValue) {
-  var wNAME1 = new Array();
+		var wNAME1 = new Array();
 
-  wNAME1[0] = "";
-  wNAME1[1] = GetWord(6);
-  wNAME1[2] = GetWord(7);
-  wNAME1[3] = GetWord(8);
-  wNAME1[4] = GetWord(9);
-  wNAME1[5] = GetWord(10);
-  wNAME1[6] = GetWord(11);
-  wNAME1[7] = GetWord(169);
-  wNAME1[8] = GetWord(18);
-  wNAME1[9] = GetWord(19);
-  wNAME1[10] = GetWord(171);
-  wNAME1[11] = GetWord(20);
-  wNAME1[12] = GetWord(170);
-  wNAME1[13] = wNAME1[15] = GetWord(14);
-  wNAME1[14] = wNAME1[16] = GetWord(15);
-  wNAME1[17] = GetWord(40);
-  wNAME1[18] = GetWord(16);
-  wNAME1[19] = GetWord(17);
-  wIS = " +";
-  if (bonusValue < 0) wIS = " ";
+		wNAME1[0] = "";
+		wNAME1[1] = GetWord(6);
+		wNAME1[2] = GetWord(7);
+		wNAME1[3] = GetWord(8);
+		wNAME1[4] = GetWord(9);
+		wNAME1[5] = GetWord(10);
+		wNAME1[6] = GetWord(11);
+		wNAME1[7] = GetWord(169);
+		wNAME1[8] = GetWord(18);
+		wNAME1[9] = GetWord(19);
+		wNAME1[10] = GetWord(171);
+		wNAME1[11] = GetWord(20);
+		wNAME1[12] = GetWord(170);
+		wNAME1[13] = wNAME1[15] = GetWord(14);
+		wNAME1[14] = wNAME1[16] = GetWord(15);
+		wNAME1[17] = GetWord(40);
+		wNAME1[18] = GetWord(16);
+		wNAME1[19] = GetWord(17);
+		wIS = " +";
+		if (bonusValue < 0) wIS = " ";
 
-  var CBIstr = "";
-  if (1 <= bonusType && bonusType <= 11)
-    // Stats and Shown Substats
-    CBIstr += "[" + wNAME1[bonusType] + "]" + wIS + bonusValue + "<br/>";
-  if (12 == bonusType)
-    // ASPD Mul
-    CBIstr += "[" + wNAME1[bonusType] + "]" + wIS + bonusValue + "%<br/>";
-  if (bon_ASPD_ADD == bonusType)
-    // ASPD Add
-    CBIstr += "[" + wNAME1[12] + "]" + wIS + bonusValue + "<br/>";
-  if (13 <= bonusType && bonusType <= 14)
-    // HP and SP Add
-    CBIstr += "[" + wNAME1[bonusType] + "]" + wIS + bonusValue + "<br/>";
-  if (15 <= bonusType && bonusType <= 16)
-    // HP and SP Mult
-    CBIstr += "[" + wNAME1[bonusType] + "]" + wIS + bonusValue + "%<br/>";
-  if (bonusType >= bon_ATK && bonusType <= bon_MDEF) {
-    // ATK, Def, MDef
-    CBIstr += "[" + wNAME1[bonusType] + "]" + wIS + bonusValue + "<br/>";
-  }
-  if (20 == bonusType)
-    // Element
-    CBIstr +=
-      "[" + ZokuseiOBJ[bonusValue][Language] + "]" + GetWord(173) + "<br/>";
-  if (22 == bonusType) {
-    // Ignore NonBoss Def
-    if (bonusValue == 1) CBIstr += GetWord(174) + "<br/>";
-    else CBIstr += GetWord(175) + "<br/>";
-  }
-  if (23 == bonusType)
-    // IcePick
-    CBIstr += GetWord(176) + "<br/>";
-  if (24 == bonusType)
-    // usrDef/%
-    CBIstr += GetWord(177) + bonusValue + "<br/>";
-  if (25 == bonusType)
-    // Range Dmg
-    CBIstr += GetWord(178) + wIS + bonusValue + "%<br/>";
-  if (26 == bonusType)
-    // Boss Dmg
-    CBIstr +=
-      GetWord(183) +
-      "[" +
-      GetWord(179) +
-      "]" +
-      GetWord(181) +
-      wIS +
-      bonusValue +
-      "%<br/>";
-  if (27 <= bonusType && bonusType <= 29)
-    // Size Dmg
-    CBIstr +=
-      GetWord(183) +
-      "[" +
-      SizeOBJ[bonusType - 27][Language] +
-      "]" +
-      GetWord(180) +
-      wIS +
-      bonusValue +
-      "%<br/>";
-  if (30 <= bonusType && bonusType <= 39)
-    // Race Dmg
-    CBIstr +=
-      GetWord(183) +
-      "[" +
-      SyuzokuOBJ[bonusType - 30][Language] +
-      "]" +
-      GetWord(181) +
-      wIS +
-      bonusValue +
-      "%<br/>";
-  if (40 <= bonusType && bonusType <= 49)
-    // Ele Dmg
-    CBIstr +=
-      GetWord(183) +
-      "[" +
-      ZokuseiOBJ[bonusType - 40][Language] +
-      "]" +
-      GetWord(182) +
-      wIS +
-      bonusValue +
-      "%<br/>";
-  if (50 <= bonusType && bonusType <= 59)
-    // Race Red
-    CBIstr +=
-      GetWord(184) +
-      "[" +
-      SyuzokuOBJ[bonusType - 50][Language] +
-      "]" +
-      GetWord(185) +
-      wIS +
-      bonusValue +
-      "%<br/>";
-  if (60 <= bonusType && bonusType <= 69)
-    // Ele Red
-    CBIstr +=
-      GetWord(184) +
-      "[" +
-      ZokuseiOBJ[bonusType - 60][Language] +
-      "]" +
-      GetWord(186) +
-      wIS +
-      bonusValue +
-      "%<br/>";
-  if (70 == bonusType)
-    // Crit Dmg
-    CBIstr += GetWord(187) + wIS + bonusValue + "%<br/>";
-  if (71 == bonusType)
-    // Reflect
-    CBIstr += "Reflect Melee Physical Attacks by " + bonusValue + "%<br/>";
-  if (340 <= bonusType && bonusType <= 349)
-    // Ele Magic Power
-    CBIstr +=
-      GetWord(257) +
-      "[" +
-      ZokuseiOBJ[bonusType - 340][Language] +
-      "]" +
-      GetWord(258) +
-      wIS +
-      bonusValue +
-      "%<br/>";
-  if (bonusType === bon_RED_FIXEDCAST) {
-    // fixed cast reduction
-    if (bonusValue > 0) CBIstr += GetWord(254) + " -" + bonusValue + "%<br/>";
-    else CBIstr += GetWord(254) + " +" + bonusValue * -1 + "%<br/>";
-  }
-  if (73 == bonusType)
-    // Casttime
-    CBIstr += "[" + GetWord(154) + "]" + wIS + bonusValue + "%<br/>";
-  if (74 == bonusType) {
-    // CastDelay
-    if (bonusValue > 0) CBIstr += GetWord(188) + " -" + bonusValue + "%<br/>";
-    else CBIstr += GetWord(188) + " +" + bonusValue * -1 + "%<br/>";
-  }
-  if (75 == bonusType)
-    CBIstr += "[" + GetWord(24) + "]" + wIS + bonusValue + "%<br/>";
-  if (76 == bonusType)
-    CBIstr += "[" + GetWord(25) + "]" + wIS + bonusValue + "%<br/>";
-  if (77 == bonusType) CBIstr += GetWord(189) + wIS + bonusValue + "%<br/>";
-  if (78 == bonusType) CBIstr += GetWord(190) + wIS + bonusValue + "%<br/>";
-  if (79 == bonusType) CBIstr += GetWord(191) + wIS + bonusValue + "%<br/>";
-  if (80 == bonusType)
-    CBIstr +=
-      "Physical damage" +
-      wIS +
-      bonusValue +
-      "%(versus Normal/Boss/Guardian)<br/>";
-  if (81 == bonusType) CBIstr += GetWord(194) + wIS + bonusValue + "%<br/>";
-  if (82 == bonusType) CBIstr += GetWord(195) + wIS + bonusValue + "%<br/>";
-  if (83 == bonusType) CBIstr += GetWord(196) + wIS + bonusValue + "%<br/>";
-  if (84 == bonusType) CBIstr += GetWord(197) + wIS + bonusValue + "%<br/>";
-  if (85 == bonusType) CBIstr += GetWord(198) + bonusValue + "%<br/>";
-  if (86 == bonusType)
-    CBIstr += GetWord(199) + bonusValue + "%" + GetWord(200) + "<br/>";
-  if (87 == bonusType) CBIstr += GetWord(40) + wIS + bonusValue + "%<br/>";
-  if (bon_DMG_SCARABA == bonusType)
-    CBIstr += GetWord(268) + wIS + bonusValue + "%<br/>";
-  if (bon_RED_DMG_MALAYA == bonusType)
-    CBIstr += GetWord(271) + wIS + bonusValue + "%<br/>";
-  if (bonusType === bon_MATK)
-    CBIstr += "[" + GetWord(22) + "]" + wIS + bonusValue + "<br/>";
-  if (bonusType === bon_MATK_MUL)
-    CBIstr += "[" + GetWord(22) + "]" + wIS + bonusValue + "%<br/>";
-  if (91 == bonusType)
-    CBIstr += "Heal amount increased by" + wIS + bonusValue + "%<br/>";
-  if (92 == bonusType)
-    CBIstr +=
-      "Heal amount on yourself increased by" + wIS + bonusValue + "%<br/>";
-  if (93 == bonusType)
-    CBIstr += "Heal damage increase on undead by" + wIS + bonusValue + "%<br/>";
-  if (94 == bonusType || 95 == bonusType)
-    CBIstr +=
-      "Sanctuary effectiveness increased by" + wIS + bonusValue + "%<br/>";
-  if (96 == bonusType)
-    CBIstr +=
-      "Sanctuary damage effectiveness against Demon increased by" +
-      wIS +
-      bonusValue +
-      "%<br/>";
-  if (97 == bonusType)
-    CBIstr += "[" + GetWord(254) + "]" + " -" + bonusValue + "s<br/>";
-  if (98 == bonusType)
-    // Non Boss Dmg
-    CBIstr +=
-      GetWord(183) +
-      "[" +
-      GetWord(275) +
-      "]" +
-      GetWord(181) +
-      wIS +
-      bonusValue +
-      "%<br/>";
-  if (99 == bonusType)
-    // Non Boss Mdmg
-    CBIstr +=
-      "Magical damage on " +
-      "[" +
-      GetWord(275) +
-      "]" +
-      GetWord(181) +
-      wIS +
-      bonusValue +
-      "%<br/>";
-  if (110 <= bonusType && bonusType <= 119)
-    CBIstr +=
-      GetWord(202) +
-      "[" +
-      SyuzokuOBJ[bonusType - 110][Language] +
-      "]" +
-      GetWord(203) +
-      wIS +
-      bonusValue +
-      "<br/>";
-  if (120 <= bonusType && bonusType <= 129)
-    CBIstr +=
-      GetWord(204) +
-      "[" +
-      SyuzokuOBJ[bonusType - 120][Language] +
-      "]" +
-      GetWord(205) +
-      wIS +
-      bonusValue +
-      "%<br/>";
-  if (130 <= bonusType && bonusType <= 149)
-    CBIstr +=
-      GetWord(206) +
-      bonusValue +
-      GetWord(207) +
-      AilmentsOBJ[bonusType - 130][Language] +
-      GetWord(208) +
-      "<br/>";
-  if (150 <= bonusType && bonusType <= 169)
-    CBIstr +=
-      GetWord(209) +
-      "[" +
-      AilmentsOBJ[bonusType - 150][Language] +
-      "]" +
-      GetWord(210) +
-      bonusValue +
-      "%<br/>";
-  if (170 <= bonusType && bonusType <= 179)
-    // Race MagDmg
-    CBIstr +=
-      GetWord(273) +
-      "[" +
-      SyuzokuOBJ[bonusType - 170][Language] +
-      "]" +
-      GetWord(181) +
-      wIS +
-      bonusValue +
-      "%<br/>";
-  if (180 <= bonusType && bonusType <= 189)
-    CBIstr +=
-      "Ignore 100% of the " +
-      "[" +
-      SyuzokuOBJ[bonusType - 180][Language] +
-      "] monster's defence<br/>";
-  if (190 <= bonusType && bonusType <= 192)
-    CBIstr +=
-      GetWord(184) +
-      "[" +
-      SizeOBJ[bonusType - 190][Language] +
-      "]" +
-      GetWord(211) +
-      wIS +
-      bonusValue +
-      "%<br/>";
-  if (193 == bonusType)
-    CBIstr += "<Font color='#FF0000'>" + GetWord(212) + "</Font><br/>";
-  if (194 == bonusType) CBIstr += GetWord(213) + "<br/>";
-  if (195 == bonusType) CBIstr += GetWord(214) + "<br/>";
-  if (198 == bonusType)
-    CBIstr +=
-      GetWord(215) +
-      "[" +
-      ZokuseiOBJ[bonusValue][Language] +
-      "]" +
-      GetWord(216) +
-      "<br/>";
-  if (212 <= bonusType && bonusType <= 215)
-    CBIstr += "[" + wNAME1[bonusType - 210] + "]" + wIS + bonusValue + "<br/>";
-  if (bon_SKILL_ENABLE == bonusType)
-    CBIstr +=
-      GetWord(217) +
-      SKILL_NAME[InsertSkill[bonusValue][2]][Language] +
-      "] Lv" +
-      InsertSkill[bonusValue][3] +
-      "<br/>";
-  if (bon_SKILL_AUTOCAST == bonusType) {
-    CBIstr +=
-      AUTOSPELL_NAME[AutoSpellSkill[bonusValue][5]][Language] + GetWord(222);
-    if (AutoSpellSkill[bonusValue][4] == 0)
-      CBIstr += AUTOSPELL_NAME2[1][Language];
-    else CBIstr += AutoSpellSkill[bonusValue][4] + GetWord(221);
-    CBIstr +=
-      GetWord(219) +
-      SKILL_NAME[AutoSpellSkill[bonusValue][2]][Language] +
-      "] Lv " +
-      AutoSpellSkill[bonusValue][3] +
-      "<br/>";
-  }
-  if (300 <= bonusType && bonusType <= 309)
-    CBIstr +=
-      "On [" +
-      SyuzokuOBJ[bonusType - 300][Language] +
-      "] race monsters, ignore " +
-      bonusValue +
-      "% [DEF]<br/>";
-  if (310 <= bonusType && bonusType <= 319)
-    CBIstr +=
-      "On [" +
-      SyuzokuOBJ[bonusType - 310][Language] +
-      "] race monsters, ignore " +
-      bonusValue +
-      "% [MDEF]<br/>";
-  if (320 <= bonusType && bonusType <= 329)
-    CBIstr +=
-      "On [" +
-      SyuzokuOBJ[bonusType - 320][Language] +
-      "] race monster, +" +
-      bonusValue +
-      "% Critical Damage<br/>";
-  if (330 <= bonusType && bonusType <= 339)
-    CBIstr +=
-      GetWord(184) +
-      "[" +
-      ZokuseiOBJ[bonusType - 330][Language] +
-      "] element monsters by" +
-      wIS +
-      bonusValue +
-      "%<br/>";
-  //CBIstr += ZokuseiOBJ[bonusType-330][Language] +"Monster Tolerance Attributes "+ wIS + bonusValue +"%<br/>";
-  if (350 <= bonusType && bonusType <= 359)
-    CBIstr +=
-      GetWord(273) +
-      "[" +
-      ZokuseiOBJ[bonusType - 350][Language] +
-      "] element monsters by" +
-      wIS +
-      bonusValue +
-      "%<br/>";
-  if (bon_DMG_SKILL <= bonusType && bonusType <= 6999)
-    CBIstr +=
-      "[" +
-      SKILL_NAME[bonusType - 5000][Language] +
-      GetWord(223) +
-      wIS +
-      bonusValue +
-      "%<br/>";
-  if (bon_CAST_SKILL <= bonusType && bonusType <= 8999)
-    CBIstr +=
-      "[" +
-      SKILL_NAME[bonusType - 7000][Language] +
-      "] Cast Time " +
-      -1 * bonusValue +
-      "%<br/>";
-  if (
-    bon_CAST_SKILL_FLAT <= bonusType &&
-    bonusType <= bon_CAST_SKILL_FLAT + 999
-  ) {
-    if (bon_CAST_SKILL_FLAT == bonusType)
-      CBIstr += "[Cast Time] " + -1 * bonusValue + "sec<br/>";
-    else
-      CBIstr +=
-        "[" +
-        SKILL_NAME[bonusType - bon_CAST_SKILL_FLAT][Language] +
-        "] Cast Time " +
-        -1 * bonusValue +
-        "sec<br/>";
-  }
-  if (
-    bon_DELAY_SKILL_FLAT <= bonusType &&
-    bonusType <= bon_DELAY_SKILL_FLAT + 999
-  )
-    CBIstr +=
-      "[" +
-      SKILL_NAME[bonusType - bon_DELAY_SKILL_FLAT][Language] +
-      "] Cooldown " +
-      -1 * bonusValue +
-      "sec<br/>";
-  if (bonusType == bon_DEFIGN_SIZ_SMALL)
-    CBIstr +=
-      "Ignores " +
-      bonusValue +
-      "% of physical defense rate of small size enemies<br>";
-  if (bonusType == bon_DEFIGN_SIZ_MEDIUM)
-    CBIstr +=
-      "Ignores " +
-      bonusValue +
-      "% of physical defense rate of medium size enemies<br>";
-  if (bonusType == bon_DEFIGN_SIZ_LARGE)
-    CBIstr +=
-      "Ignores " +
-      bonusValue +
-      "% of physical defense rate of large size enemies<br>";
-  if (bonusType == bon_MDEFIGN_SIZ_SMALL)
-    CBIstr +=
-      "Ignores " +
-      bonusValue +
-      "% of magical defense rate of small size enemies<br>";
-  if (bonusType == bon_MDEFIGN_SIZ_MEDIUM)
-    CBIstr +=
-      "Ignores " +
-      bonusValue +
-      "% of magical defense rate of medium size enemies<br>";
-  if (bonusType == bon_MDEFIGN_SIZ_LARGE)
-    CBIstr +=
-      "Ignores " +
-      bonusValue +
-      "% of magical defense rate of large size enemies<br>";
-  if (bonusType == bon_DEFIGN_RC_ALL)
-    //
-    CBIstr += "Ignores " + bonusValue + "% of target's DEF.<br>";
-  if (bonusType == bon_MDEFIGN_RC_ALL)
-    CBIstr += "Ignores " + bonusValue + "% of target's MDEF.<br>";
-  if (bonusType == bon_DEFIGN_RC_BOSS)
-    CBIstr +=
-      "On [Boss] monsters<br>Ignores " + bonusValue + "% of target's DEF.<br>";
-  if (bonusType == bon_MDEFIGN_RC_BOSS)
-    CBIstr +=
-      "On [Boss] monsters<br>Ignores " + bonusValue + "% of target's MDEF.<br>";
-  if (bonusType == bon_DEFIGN_RC_NON_BOSS)
-    CBIstr +=
-      "On [Normal] monsters<br>Ignores " +
-      bonusValue +
-      "% of target's DEF.<br>";
-  if (bonusType == bon_MDEFIGN_RC_NON_BOSS)
-    CBIstr +=
-      "On [Normal] monsters<br>Ignores " +
-      bonusValue +
-      "% of target's MDEF.<br>";
-  if (bonusType == bon_MDMG_ELE_ALL)
-    CBIstr +=
-      GetWord(273) + "[All] element monsters by" + wIS + bonusValue + "%<br/>";
-  if (bonusType == bon_INC_MAGIC_ALL)
-    CBIstr +=
-      GetWord(257) + "[All]" + GetWord(258) + wIS + bonusValue + "%<br/>";
-  if (bonusType == bon_MDMG_SIZ_SMALL)
-    CBIstr +=
-      GetWord(273) +
-      "[" +
-      SizeOBJ[0][Language] +
-      "]" +
-      GetWord(180) +
-      wIS +
-      bonusValue +
-      "%<br/>";
-  if (bonusType == bon_MDMG_SIZ_MEDIUM)
-    CBIstr +=
-      GetWord(273) +
-      "[" +
-      SizeOBJ[1][Language] +
-      "]" +
-      GetWord(180) +
-      wIS +
-      bonusValue +
-      "%<br/>";
-  if (bonusType == bon_MDMG_SIZ_LARGE)
-    CBIstr +=
-      GetWord(273) +
-      "[" +
-      SizeOBJ[2][Language] +
-      "]" +
-      GetWord(180) +
-      wIS +
-      bonusValue +
-      "%<br/>";
-  if (bonusType == bon_MDMG_BOSS)
-    CBIstr +=
-      GetWord(273) +
-      "[" +
-      GetWord(179) +
-      "]" +
-      GetWord(181) +
-      wIS +
-      bonusValue +
-      "%<br/>";
-  if (bonusType == bon_WEAPON_MATK)
-    CBIstr += "Weapon Matk : " + bonusValue + "<br/>";
-  if (bonusType == bon_ATK_MUL) CBIstr += "[ATK]" + wIS + bonusValue + "%<br/>";
-  return CBIstr;
+		var CBIstr = "";
+		if (1 <= bonusType && bonusType <= 11)
+				// Stats and Shown Substats
+				CBIstr += "[" + wNAME1[bonusType] + "]" + wIS + bonusValue + "<br/>";
+		if (12 == bonusType)
+				// ASPD Mul
+				CBIstr += "[" + wNAME1[bonusType] + "]" + wIS + bonusValue + "%<br/>";
+		if (bon_ASPD_ADD == bonusType)
+				// ASPD Add
+				CBIstr += "[" + wNAME1[12] + "]" + wIS + bonusValue + "<br/>";
+		if (13 <= bonusType && bonusType <= 14)
+				// HP and SP Add
+				CBIstr += "[" + wNAME1[bonusType] + "]" + wIS + bonusValue + "<br/>";
+		if (15 <= bonusType && bonusType <= 16)
+				// HP and SP Mult
+				CBIstr += "[" + wNAME1[bonusType] + "]" + wIS + bonusValue + "%<br/>";
+		if (bonusType >= bon_ATK && bonusType <= bon_MDEF) {
+				// ATK, Def, MDef
+				CBIstr += "[" + wNAME1[bonusType] + "]" + wIS + bonusValue + "<br/>";
+		}
+		if (20 == bonusType)
+				// Element
+				CBIstr +=
+						"[" + ZokuseiOBJ[bonusValue][Language] + "]" + GetWord(173) + "<br/>";
+		if (22 == bonusType) {
+				// Ignore NonBoss Def
+				if (bonusValue == 1) CBIstr += GetWord(174) + "<br/>";
+				else CBIstr += GetWord(175) + "<br/>";
+		}
+		if (23 == bonusType)
+				// IcePick
+				CBIstr += GetWord(176) + "<br/>";
+		if (24 == bonusType)
+				// usrDef/%
+				CBIstr += GetWord(177) + bonusValue + "<br/>";
+		if (25 == bonusType)
+				// Range Dmg
+				CBIstr += GetWord(178) + wIS + bonusValue + "%<br/>";
+		if (26 == bonusType)
+				// Boss Dmg
+				CBIstr +=
+						GetWord(183) +
+						"[" +
+						GetWord(179) +
+						"]" +
+						GetWord(181) +
+						wIS +
+						bonusValue +
+						"%<br/>";
+		if (27 <= bonusType && bonusType <= 29)
+				// Size Dmg
+				CBIstr +=
+						GetWord(183) +
+						"[" +
+						SizeOBJ[bonusType - 27][Language] +
+						"]" +
+						GetWord(180) +
+						wIS +
+						bonusValue +
+						"%<br/>";
+		if (30 <= bonusType && bonusType <= 39)
+				// Race Dmg
+				CBIstr +=
+						GetWord(183) +
+						"[" +
+						SyuzokuOBJ[bonusType - 30][Language] +
+						"]" +
+						GetWord(181) +
+						wIS +
+						bonusValue +
+						"%<br/>";
+		if (40 <= bonusType && bonusType <= 49)
+				// Ele Dmg
+				CBIstr +=
+						GetWord(183) +
+						"[" +
+						ZokuseiOBJ[bonusType - 40][Language] +
+						"]" +
+						GetWord(182) +
+						wIS +
+						bonusValue +
+						"%<br/>";
+		if (50 <= bonusType && bonusType <= 59)
+				// Race Red
+				CBIstr +=
+						GetWord(184) +
+						"[" +
+						SyuzokuOBJ[bonusType - 50][Language] +
+						"]" +
+						GetWord(185) +
+						wIS +
+						bonusValue +
+						"%<br/>";
+		if (60 <= bonusType && bonusType <= 69)
+				// Ele Red
+				CBIstr +=
+						GetWord(184) +
+						"[" +
+						ZokuseiOBJ[bonusType - 60][Language] +
+						"]" +
+						GetWord(186) +
+						wIS +
+						bonusValue +
+						"%<br/>";
+		if (70 == bonusType)
+				// Crit Dmg
+				CBIstr += GetWord(187) + wIS + bonusValue + "%<br/>";
+		if (71 == bonusType)
+				// Reflect
+				CBIstr += "Reflect Melee Physical Attacks by " + bonusValue + "%<br/>";
+		if (340 <= bonusType && bonusType <= 349)
+				// Ele Magic Power
+				CBIstr +=
+						GetWord(257) +
+						"[" +
+						ZokuseiOBJ[bonusType - 340][Language] +
+						"]" +
+						GetWord(258) +
+						wIS +
+						bonusValue +
+						"%<br/>";
+		if (bonusType === bon_RED_FIXEDCAST) {
+				// fixed cast reduction
+				if (bonusValue > 0) CBIstr += GetWord(254) + " -" + bonusValue + "%<br/>";
+				else CBIstr += GetWord(254) + " +" + bonusValue * -1 + "%<br/>";
+		}
+		if (73 == bonusType)
+				// Casttime
+				CBIstr += "[" + GetWord(154) + "]" + wIS + bonusValue + "%<br/>";
+		if (74 == bonusType) {
+				// CastDelay
+				if (bonusValue > 0) CBIstr += GetWord(188) + " -" + bonusValue + "%<br/>";
+				else CBIstr += GetWord(188) + " +" + bonusValue * -1 + "%<br/>";
+		}
+		if (75 == bonusType)
+				CBIstr += "[" + GetWord(24) + "]" + wIS + bonusValue + "%<br/>";
+		if (76 == bonusType)
+				CBIstr += "[" + GetWord(25) + "]" + wIS + bonusValue + "%<br/>";
+		if (77 == bonusType) CBIstr += GetWord(189) + wIS + bonusValue + "%<br/>";
+		if (78 == bonusType) CBIstr += GetWord(190) + wIS + bonusValue + "%<br/>";
+		if (79 == bonusType) CBIstr += GetWord(191) + wIS + bonusValue + "%<br/>";
+		if (80 == bonusType)
+				CBIstr +=
+						"Physical damage" +
+						wIS +
+						bonusValue +
+						"%(versus Normal/Boss/Guardian)<br/>";
+		if (81 == bonusType) CBIstr += GetWord(194) + wIS + bonusValue + "%<br/>";
+		if (82 == bonusType) CBIstr += GetWord(195) + wIS + bonusValue + "%<br/>";
+		if (83 == bonusType) CBIstr += GetWord(196) + wIS + bonusValue + "%<br/>";
+		if (84 == bonusType) CBIstr += GetWord(197) + wIS + bonusValue + "%<br/>";
+		if (85 == bonusType) CBIstr += GetWord(198) + bonusValue + "%<br/>";
+		if (86 == bonusType)
+				CBIstr += GetWord(199) + bonusValue + "%" + GetWord(200) + "<br/>";
+		if (87 == bonusType) CBIstr += GetWord(40) + wIS + bonusValue + "%<br/>";
+		if (bon_DMG_SCARABA == bonusType)
+				CBIstr += GetWord(268) + wIS + bonusValue + "%<br/>";
+		if (bon_RED_DMG_MALAYA == bonusType)
+				CBIstr += GetWord(271) + wIS + bonusValue + "%<br/>";
+		if (bonusType === bon_MATK)
+				CBIstr += "[" + GetWord(22) + "]" + wIS + bonusValue + "<br/>";
+		if (bonusType === bon_MATK_MUL)
+				CBIstr += "[" + GetWord(22) + "]" + wIS + bonusValue + "%<br/>";
+		if (91 == bonusType)
+				CBIstr += "Heal amount increased by" + wIS + bonusValue + "%<br/>";
+		if (92 == bonusType)
+				CBIstr +=
+						"Heal amount on yourself increased by" + wIS + bonusValue + "%<br/>";
+		if (93 == bonusType)
+				CBIstr += "Heal damage increase on undead by" + wIS + bonusValue + "%<br/>";
+		if (94 == bonusType || 95 == bonusType)
+				CBIstr +=
+						"Sanctuary effectiveness increased by" + wIS + bonusValue + "%<br/>";
+		if (96 == bonusType)
+				CBIstr +=
+						"Sanctuary damage effectiveness against Demon increased by" +
+						wIS +
+						bonusValue +
+						"%<br/>";
+		if (97 == bonusType)
+				CBIstr += "[" + GetWord(254) + "]" + " -" + bonusValue + "s<br/>";
+		if (98 == bonusType)
+				// Non Boss Dmg
+				CBIstr +=
+						GetWord(183) +
+						"[" +
+						GetWord(275) +
+						"]" +
+						GetWord(181) +
+						wIS +
+						bonusValue +
+						"%<br/>";
+		if (99 == bonusType)
+				// Non Boss Mdmg
+				CBIstr +=
+						"Magical damage on " +
+						"[" +
+						GetWord(275) +
+						"]" +
+						GetWord(181) +
+						wIS +
+						bonusValue +
+						"%<br/>";
+		if (110 <= bonusType && bonusType <= 119)
+				CBIstr +=
+						GetWord(202) +
+						"[" +
+						SyuzokuOBJ[bonusType - 110][Language] +
+						"]" +
+						GetWord(203) +
+						wIS +
+						bonusValue +
+						"<br/>";
+		if (120 <= bonusType && bonusType <= 129)
+				CBIstr +=
+						GetWord(204) +
+						"[" +
+						SyuzokuOBJ[bonusType - 120][Language] +
+						"]" +
+						GetWord(205) +
+						wIS +
+						bonusValue +
+						"%<br/>";
+		if (130 <= bonusType && bonusType <= 149)
+				CBIstr +=
+						GetWord(206) +
+						bonusValue +
+						GetWord(207) +
+						AilmentsOBJ[bonusType - 130][Language] +
+						GetWord(208) +
+						"<br/>";
+		if (150 <= bonusType && bonusType <= 169)
+				CBIstr +=
+						GetWord(209) +
+						"[" +
+						AilmentsOBJ[bonusType - 150][Language] +
+						"]" +
+						GetWord(210) +
+						bonusValue +
+						"%<br/>";
+		if (170 <= bonusType && bonusType <= 179)
+				// Race MagDmg
+				CBIstr +=
+						GetWord(273) +
+						"[" +
+						SyuzokuOBJ[bonusType - 170][Language] +
+						"]" +
+						GetWord(181) +
+						wIS +
+						bonusValue +
+						"%<br/>";
+		if (180 <= bonusType && bonusType <= 189)
+				CBIstr +=
+						"Ignore 100% of the " +
+						"[" +
+						SyuzokuOBJ[bonusType - 180][Language] +
+						"] monster's defence<br/>";
+		if (190 <= bonusType && bonusType <= 192)
+				CBIstr +=
+						GetWord(184) +
+						"[" +
+						SizeOBJ[bonusType - 190][Language] +
+						"]" +
+						GetWord(211) +
+						wIS +
+						bonusValue +
+						"%<br/>";
+		if (193 == bonusType)
+				CBIstr += "<Font color='#FF0000'>" + GetWord(212) + "</Font><br/>";
+		if (194 == bonusType) CBIstr += GetWord(213) + "<br/>";
+		if (195 == bonusType) CBIstr += GetWord(214) + "<br/>";
+		if (198 == bonusType)
+				CBIstr +=
+						GetWord(215) +
+						"[" +
+						ZokuseiOBJ[bonusValue][Language] +
+						"]" +
+						GetWord(216) +
+						"<br/>";
+		if (212 <= bonusType && bonusType <= 215)
+				CBIstr += "[" + wNAME1[bonusType - 210] + "]" + wIS + bonusValue + "<br/>";
+		if (bon_SKILL_ENABLE == bonusType)
+				CBIstr +=
+						GetWord(217) +
+						SKILL_NAME[InsertSkill[bonusValue][2]][Language] +
+						"] Lv" +
+						InsertSkill[bonusValue][3] +
+						"<br/>";
+		if (bon_SKILL_AUTOCAST == bonusType) {
+				CBIstr +=
+						AUTOSPELL_NAME[AutoSpellSkill[bonusValue][5]][Language] + GetWord(222);
+				if (AutoSpellSkill[bonusValue][4] == 0)
+						CBIstr += AUTOSPELL_NAME2[1][Language];
+				else CBIstr += AutoSpellSkill[bonusValue][4] + GetWord(221);
+				CBIstr +=
+						GetWord(219) +
+						SKILL_NAME[AutoSpellSkill[bonusValue][2]][Language] +
+						"] Lv " +
+						AutoSpellSkill[bonusValue][3] +
+						"<br/>";
+		}
+		if (300 <= bonusType && bonusType <= 309)
+				CBIstr +=
+						"On [" +
+						SyuzokuOBJ[bonusType - 300][Language] +
+						"] race monsters, ignore " +
+						bonusValue +
+						"% [DEF]<br/>";
+		if (310 <= bonusType && bonusType <= 319)
+				CBIstr +=
+						"On [" +
+						SyuzokuOBJ[bonusType - 310][Language] +
+						"] race monsters, ignore " +
+						bonusValue +
+						"% [MDEF]<br/>";
+		if (320 <= bonusType && bonusType <= 329)
+				CBIstr +=
+						"On [" +
+						SyuzokuOBJ[bonusType - 320][Language] +
+						"] race monster, +" +
+						bonusValue +
+						"% Critical Damage<br/>";
+		if (330 <= bonusType && bonusType <= 339)
+				CBIstr +=
+						GetWord(184) +
+						"[" +
+						ZokuseiOBJ[bonusType - 330][Language] +
+						"] element monsters by" +
+						wIS +
+						bonusValue +
+						"%<br/>";
+		//CBIstr += ZokuseiOBJ[bonusType-330][Language] +"Monster Tolerance Attributes "+ wIS + bonusValue +"%<br/>";
+		if (350 <= bonusType && bonusType <= 359)
+				CBIstr +=
+						GetWord(273) +
+						"[" +
+						ZokuseiOBJ[bonusType - 350][Language] +
+						"] element monsters by" +
+						wIS +
+						bonusValue +
+						"%<br/>";
+		if (bon_DMG_SKILL <= bonusType && bonusType <= 6999)
+				CBIstr +=
+						"[" +
+						SKILL_NAME[bonusType - 5000][Language] +
+						GetWord(223) +
+						wIS +
+						bonusValue +
+						"%<br/>";
+		if (bon_CAST_SKILL <= bonusType && bonusType <= 8999)
+				CBIstr +=
+						"[" +
+						SKILL_NAME[bonusType - 7000][Language] +
+						"] Cast Time " +
+						-1 * bonusValue +
+						"%<br/>";
+		if (
+				bon_CAST_SKILL_FLAT <= bonusType &&
+				bonusType <= bon_CAST_SKILL_FLAT + 999
+		) {
+				if (bon_CAST_SKILL_FLAT == bonusType)
+						CBIstr += "[Cast Time] " + -1 * bonusValue + "sec<br/>";
+				else
+						CBIstr +=
+								"[" +
+								SKILL_NAME[bonusType - bon_CAST_SKILL_FLAT][Language] +
+								"] Cast Time " +
+								-1 * bonusValue +
+								"sec<br/>";
+		}
+		if (
+				bon_DELAY_SKILL_FLAT <= bonusType &&
+				bonusType <= bon_DELAY_SKILL_FLAT + 999
+		)
+				CBIstr +=
+						"[" +
+						SKILL_NAME[bonusType - bon_DELAY_SKILL_FLAT][Language] +
+						"] Cooldown " +
+						-1 * bonusValue +
+						"sec<br/>";
+		if (bonusType == bon_DEFIGN_SIZ_SMALL)
+				CBIstr +=
+						"Ignores " +
+						bonusValue +
+						"% of physical defense rate of small size enemies<br>";
+		if (bonusType == bon_DEFIGN_SIZ_MEDIUM)
+				CBIstr +=
+						"Ignores " +
+						bonusValue +
+						"% of physical defense rate of medium size enemies<br>";
+		if (bonusType == bon_DEFIGN_SIZ_LARGE)
+				CBIstr +=
+						"Ignores " +
+						bonusValue +
+						"% of physical defense rate of large size enemies<br>";
+		if (bonusType == bon_MDEFIGN_SIZ_SMALL)
+				CBIstr +=
+						"Ignores " +
+						bonusValue +
+						"% of magical defense rate of small size enemies<br>";
+		if (bonusType == bon_MDEFIGN_SIZ_MEDIUM)
+				CBIstr +=
+						"Ignores " +
+						bonusValue +
+						"% of magical defense rate of medium size enemies<br>";
+		if (bonusType == bon_MDEFIGN_SIZ_LARGE)
+				CBIstr +=
+						"Ignores " +
+						bonusValue +
+						"% of magical defense rate of large size enemies<br>";
+		if (bonusType == bon_DEFIGN_RC_ALL)
+				//
+				CBIstr += "Ignores " + bonusValue + "% of target's DEF.<br>";
+		if (bonusType == bon_MDEFIGN_RC_ALL)
+				CBIstr += "Ignores " + bonusValue + "% of target's MDEF.<br>";
+		if (bonusType == bon_DEFIGN_RC_BOSS)
+				CBIstr +=
+						"On [Boss] monsters<br>Ignores " + bonusValue + "% of target's DEF.<br>";
+		if (bonusType == bon_MDEFIGN_RC_BOSS)
+				CBIstr +=
+						"On [Boss] monsters<br>Ignores " + bonusValue + "% of target's MDEF.<br>";
+		if (bonusType == bon_DEFIGN_RC_NON_BOSS)
+				CBIstr +=
+						"On [Normal] monsters<br>Ignores " +
+						bonusValue +
+						"% of target's DEF.<br>";
+		if (bonusType == bon_MDEFIGN_RC_NON_BOSS)
+				CBIstr +=
+						"On [Normal] monsters<br>Ignores " +
+						bonusValue +
+						"% of target's MDEF.<br>";
+		if (bonusType == bon_MDMG_ELE_ALL)
+				CBIstr +=
+						GetWord(273) + "[All] element monsters by" + wIS + bonusValue + "%<br/>";
+		if (bonusType == bon_INC_MAGIC_ALL)
+				CBIstr +=
+						GetWord(257) + "[All]" + GetWord(258) + wIS + bonusValue + "%<br/>";
+		if (bonusType == bon_MDMG_SIZ_SMALL)
+				CBIstr +=
+						GetWord(273) +
+						"[" +
+						SizeOBJ[0][Language] +
+						"]" +
+						GetWord(180) +
+						wIS +
+						bonusValue +
+						"%<br/>";
+		if (bonusType == bon_MDMG_SIZ_MEDIUM)
+				CBIstr +=
+						GetWord(273) +
+						"[" +
+						SizeOBJ[1][Language] +
+						"]" +
+						GetWord(180) +
+						wIS +
+						bonusValue +
+						"%<br/>";
+		if (bonusType == bon_MDMG_SIZ_LARGE)
+				CBIstr +=
+						GetWord(273) +
+						"[" +
+						SizeOBJ[2][Language] +
+						"]" +
+						GetWord(180) +
+						wIS +
+						bonusValue +
+						"%<br/>";
+		if (bonusType == bon_MDMG_BOSS)
+				CBIstr +=
+						GetWord(273) +
+						"[" +
+						GetWord(179) +
+						"]" +
+						GetWord(181) +
+						wIS +
+						bonusValue +
+						"%<br/>";
+		if (bonusType == bon_WEAPON_MATK)
+				CBIstr += "Weapon Matk : " + bonusValue + "<br/>";
+		if (bonusType == bon_ATK_MUL) CBIstr += "[ATK]" + wIS + bonusValue + "%<br/>";
+		return CBIstr;
 }
 
 {
-  w_SE = [
-    [737, 436, 475, "NULL"], // EquipSets
-    [737, 436, 477, "NULL"],
-    [738, 288, 699, "NULL"],
-    [739, 300, 724, "NULL"],
-    [740, 323, 725, "NULL"],
-    [741, 298, 726, "NULL"],
-    [742, 684, 661, 691, "NULL"],
-    [743, 684, 703, 712, "NULL"],
-    [744, 684, 704, 713, "NULL"],
-    [745, 667, 685, 702, 711, "NULL"],
-    [746, 666, 701, 721, 722, "NULL"],
-    [747, 665, 700, 719, 720, "NULL"],
-    [748, 664, 683, 690, 698, 710, "NULL"],
-    [749, 534, 535, 536, 670, "NULL"],
-    [750, 727, 88, "NULL"],
-    [750, 727, 92, "NULL"],
-    [751, 727, 329, "NULL"],
-    [751, 727, 342, "NULL"],
-    [751, 727, 343, "NULL"],
-    [752, 694, 732, "NULL"],
-    [753, 695, 733, "NULL"],
-    [754, 716, 706, "NULL"],
-    [755, 705, 405, "NULL"],
-    [755, 705, 467, "NULL"],
-    [755, 705, 471, "NULL"],
-    [756, 707, 717, "NULL"],
-    [757, 727, 647, "NULL"],
-    [763, 478, 697, "NULL"],
-    [764, 684, 663, 692, "NULL"],
-    [765, 684, 662, "NULL"],
-    [766, 619, 731, "NULL"],
-    [767, 616, 692, "NULL"],
-    [768, 728, 729, "NULL"],
-    [770, 769, 848, "NULL"],
-    [814, 813, 808, "NULL"],
-    [818, 816, 817, "NULL"],
-    [824, 823, 292, "NULL"],
-    [854, 829, 844, "NULL"],
-    [854, 830, 844, "NULL"],
-    [855, 992, 616, "NULL"],
-    [855, 992, 617, "NULL"],
-    [855, 992, 618, "NULL"],
-    [856, 863, 831, "NULL"],
-    [857, 835, 836, "NULL"],
-    [858, 823, 838, 837, "NULL"],
-    [858, 822, 838, 837, "NULL"],
-    [860, 251, 307, 838, "NULL"],
-    [861, 521, 839, "NULL"],
-    [862, 841, 842, "NULL"],
-    [971, 958, 965, 968, "NULL"],
-    [972, 959, 965, 968, "NULL"],
-    [973, 960, 965, 968, "NULL"],
-    [974, 961, 966, 969, "NULL"],
-    [975, 962, 966, 969, "NULL"],
-    [976, 963, 966, 969, "NULL"],
-    [977, 964, 967, 970, "NULL"],
-    [995, 718, 994, "NULL"],
-    [999, 987, 998, 1001, "NULL"],
-    [1004, 442, 1003, "NULL"],
-    [1006, 442, 1005, "NULL"],
-    [1008, 946, 1007, "NULL"],
-    [1010, 990, 1009, "NULL"],
-    [1042, 198, 1041, "NULL"],
-    [1053, 1050, 1051, 1052, "NULL"],
-    [1058, 1055, 1056, 1057, "NULL"],
-    [1114, 1104, 1107, 1110, "NULL"],
-    [1115, 1111, 978, "NULL"],
-    [1115, 1111, 979, "NULL"],
-    [1115, 1111, 980, "NULL"],
-    [1115, 1111, 981, "NULL"],
-    [1115, 1111, 982, "NULL"],
-    [1115, 1111, 983, "NULL"],
-    [1115, 1111, 984, "NULL"],
-    [1202, 247, 1182, "NULL"],
-    [1203, 1189, 1192, "NULL"],
-    [1209, 1208, 385, "NULL"],
-    [1210, 1208, 381, "NULL"],
-    [1211, 1208, 805, "NULL"],
-    [1212, 1208, 887, "NULL"],
-    [1213, 1208, 1037, "NULL"],
-    // ,[1217,804,1216,"NULL"] // Ship captain hat + captain pipe
-    [1237, 1235, 1236, "NULL"],
-    [1238, 684, 1236, "NULL"],
-    [1278, 1269, 1277, "NULL"],
-    [1279, 1267, 1005, "NULL"],
-    [1150, 1149, 936, "NULL"],
-    [1152, 1149, 89, "NULL"],
-    [1153, 1149, 253, "NULL"],
-    [1303, 1302, 377, "NULL"], // "Demon Mask + Succubus Horn"
-    [1304, 1302, 374, "NULL"], // "Demon Mask + Incubus Horn"
-    [1306, 1305, 1174, "NULL"], // "Little Feather Hat + Falken Blitz"
-    [1308, 1307, 644, "NULL"], // "Benevolent Guardian + Healing Staff"
-    [1309, 1307, 863, "NULL"], // "Benevolent Guardian + Holy Stick"
-    [1311, 1310, 151, "NULL"], // "Spirit Whispers + Crescent Hairpin"
-    [1312, 1310, 146, "NULL"], // "Spirit Whispers + Heart Hairpin"
-    [1361, 803, 1359, "NULL"], // "Black Cat (bRO) + Black Cat Tail"
-    [1402, 1175, 1393, "NULL"],
-    [1403, 1176, 1393, "NULL"],
-    [1404, 610, 1396, "NULL"],
-    [1405, 1169, 1390, "NULL"],
-    [1411, 1410, 1409, 1408, 1407, "NULL"], // White Wing Set?
-    [1417, 1412, 1414, 1415, 1416, "NULL"], //ROD SETS
-    [1418, 1413, 1414, 1415, 1416, "NULL"],
-    [1424, 1419, 1421, 1422, 1423, "NULL"],
-    [1425, 1420, 1421, 1422, 1423, "NULL"],
-    [1431, 1426, 1428, 1429, 1430, "NULL"],
-    [1432, 1427, 1428, 1429, 1430, "NULL"],
-    [1438, 1433, 1435, 1436, 1437, "NULL"],
-    [1439, 1434, 1435, 1436, 1437, "NULL"],
-    [1444, 1443, 1442, 1441, 1440, "NULL"],
-    [1460, 1457, 1454, "NULL"],
-    [1461, 1458, 1455, "NULL"],
-    [1462, 1459, 1456, "NULL"],
-    [1471, 1467, 1468, "NULL"], // RWC 2012 Ring & RWC 2012 Pendant
-    [1472, 1469, 1470, "NULL"], // Chambered RWC 2012 Ring & Chambered RWC 2012 Pendant
-    [1473, 1469, 1468, "NULL"], // Chambered RWC 2012 Ring & RWC 2012 Pendant
-    [1474, 1467, 1470, "NULL"], // RWC 2012 Ring & Chambered RWC 2012 Pendant
-    [1484, 1477, 1479, 1482, "NULL"], // WoE Plate + WoE Manteau + WoE Greaves
-    [1485, 1476, 1479, 1481, "NULL"], // WoE Suit + WoE Manteau + WoE Boots
-    [1486, 1475, 1478, 1480, "NULL"], // WoE Robe + WoE Muffler + WoE Shoes
-    [1490, 1487, 1467, "NULL"], // "RWC Memory Knife + RWC 2012 Ring"
-    [1491, 1487, 1468, "NULL"], // "RWC Memory Knife + RWC 2012 Pendant"
-    [1492, 1488, 1467, "NULL"], // "RWC Memory Mace + RWC 2012 Ring"
-    [1493, 1489, 1468, "NULL"], // "RWC Memory Staff + RWC 2012 Pendant"
-    [1505, 1504, 1503, 1502, 1501, "NULL"], // "Peurz set"
-    [1511, 1510, 1509, 1508, 1506, "NULL"], // "Affection set"
-    [1512, 1510, 1509, 1508, 1507, "NULL"], // "Empowered Affection set"
-    [1526, 1522, 247, "NULL"], // "Chibi Pope + Blush"
-    [1529, 1528, 264, "NULL"], // "Witch's Pumpkin Hat + Mr. Smile"
-    [1530, 1528, 678, "NULL"], // "Witch's Pumpkin Hat + Hahoe Mask"
-    [1531, 1528, 364, "NULL"], // "Witch's Pumpkin Hat + Alarm Mask"
-    [1532, 1528, 266, "NULL"], // "Witch's Pumpkin Hat + Opera Masque"
-    [1533, 1528, 1535, "NULL"], // "Witch's Pumpkin Hat + Gozarian Mask"
-    [1542, 1540, 1538, 1539, 1537, "NULL"], // "Robe of Judgement, Shoes of Judgement, Shawl of Judgement, Mace of Judgement"
-    [1543, 1540, 1538, 1539, 1541, "NULL"], // "Robe of Judgement, Shoes of Judgement, Shawl of Judgement, Empowered Mace of Judgement"
-    [1585, 1584, 1583, "NULL"], // "Golden Angel Wing + Golden Angel Hairband"
-    [1597, 436, 1596, "NULL"], //"Mythic Staff of Life (7 d.) + Survivor's Manteau"
-    [1636, 1635, 385, "NULL"], //Valkyrie Circlet + Angel Wing Ears
-    [1652, 1646, 1647, 1648, 1649, 1650, 1651, "NULL"], // "Dragan's Shadow Set"
-    [1655, 1653, 1654, "NULL"], // "Shadow Champion Set"
-    [1659, 1656, 1657, 1658, "NULL"], // "Shadow Mystic Set"
-    [1663, 1660, 1661, 1662, "NULL"], // "Shadow Strongman Set"
-    [1669, 1667, 1668, "NULL"], //"Bandeau of Lovers + Silk Heart"
-    [1674, 1672, 1673, "NULL"], //"Shadow Dragonslayer Set"
-    [1677, 1675, 1676, "NULL"], //"Shadow Undertaker Set"
-    [1680, 1678, 1679, "NULL"], //"Shadow Tamer Set"
-    [1684, 1681, 863, "NULL"], // "Amistr Hat + Holy Stick"
-    [1685, 1681, 932, "NULL"], // "Amistr Hat + Twin Edge of Naght Sieger(blue)"
-    // ,[1686,1681,933,"NULL"] // "Amistr Hat + Twin Edge of Naght Sieger(red)"
-    [1711, 1708, 1709, 1710, "NULL"], // "Shadow Warlock Set"
-    [1715, 1712, 1713, 1714, "NULL"], // "Shadow Swordman Set"
-    [1719, 1716, 1717, 1718, "NULL"], // "Shadow Diviner Set"
-    [1722, 1720, 1721, "NULL"], // "Shadow Knight Set"
-    [1725, 1723, 1724, "NULL"], // "Shadow Crusader Set"
-    [1728, 1726, 1727, "NULL"], // "Shadow Blacksmith Set"
-    [1731, 1729, 1730, "NULL"], // "Shadow Alchemist Set"
-    [1734, 1732, 1733, "NULL"], // "Shadow Priest Set"
-    [1737, 1735, 1736, "NULL"], // "Shadow Monk Set"
-    [1740, 1738, 1739, "NULL"], // "Shadow Assassin Set"
-    [1743, 1741, 1742, "NULL"], // "Shadow Rogue Set"
-    [1746, 1744, 1745, "NULL"], // "Shadow Wizard Set"
-    [1749, 1747, 1748, "NULL"], // "Shadow Sage Set"
-    [1752, 1750, 1751, "NULL"], // "Shadow Hunter Set"
-    [1755, 1753, 1754, "NULL"], // "Shadow Bard Set"
-    [1758, 1756, 1757, "NULL"], // "Shadow Dancer Set"
-    [1760, 1759, 1292, "NULL"], //Diabolic Halo + Mental Stick
-    [1761, 1759, 1172, "NULL"], //Diabolic Halo + Kronos
-    [1762, 1759, 1453, 1452, "NULL"], //Diabolic Halo + Mikatsuki + Raksasa Dagger
-    [1768, 1767, 1765, 1763, "NULL"], //Shadow Shield of the Steadfast + Shadow Armor of Hypnos + Shadow Boots of Hypnos
-    [1769, 1767, 1766, 1764, "NULL"], //Shadow Shield of the Steadfast + Shadow Armor of Harpos + Shadow Boots of Harpos
-    [1774, 1770, 1771, 1772, 1773, "NULL"], //Sapha Set
-    [1779, 1775, 1776, 1777, 1778, "NULL"], //Nab Set
-    [1784, 1780, 1781, 1782, 1783, "NULL"], //Black Wing Set
-    [1804, 1800, 1801, 1802, 1803, "NULL"], //Malaya Set
-    [1843, 1809, 1826, "NULL"], //"Shadow Runeknight Set"
-    [1844, 1810, 1827, "NULL"], //"Shadow Royalguard Set"
-    [1845, 1811, 1828, "NULL"], //"Shadow Mechanic Set"
-    [1846, 1812, 1829, "NULL"], //"Shadow Genetic Set"
-    [1847, 1813, 1830, "NULL"], //"Shadow Archbishop Set"
-    [1848, 1814, 1831, "NULL"], //"Shadow Sura Set"
-    [1849, 1815, 1832, "NULL"], //"Shadow Guillotine Cross Set"
-    [1850, 1816, 1833, "NULL"], //"Shadow Shadowchaser Set"
-    [1851, 1817, 1834, "NULL"], //"Shadow Warlock Set"
-    [1852, 1818, 1835, "NULL"], //"Shadow Sorcerer Set"
-    [1853, 1819, 1836, "NULL"], //"Shadow Ranger Set"
-    [1854, 1820, 1837, "NULL"], //"Shadow Minstrel Set"
-    [1855, 1821, 1838, "NULL"], //"Shadow Wanderer Set"
-    [1856, 1822, 1839, "NULL"], //"Shadow Ninja Set"
-    [1857, 1823, 1840, "NULL"], //"Shadow Taekwon Set"
-    [1858, 1824, 1841, "NULL"], //"Shadow Super Novice Set"
-    [1859, 1825, 1842, "NULL"], //"Shadow Gunslinger Set"
-    [1861, 1860, 1193, "NULL"], //"Feathered Tricorn" + "Piece Of Angent Skin"
-    [1862, 1860, 996, "NULL"], //"Feathered Tricorn" + "Leather of Tendrilion"
-    [1863, 1860, 315, "NULL"], //"Feathered Tricorn" + "Ancient Cape"
-    [1905, 1864, 1865, 1866, "NULL"], //"Doram Gear Set"
-    [1906, 1864, 1865, 1866, 1888, 1896, "NULL"], //"Doram Charm Grass Lesser Leaf Set"
-    [1907, 1864, 1865, 1866, 1886, 1899, "NULL"], //"Doram Fresh Grass Lesser Bunny Set"
-    [1908, 1864, 1865, 1866, 1887, 1893, "NULL"], //"Doram Cute Grass Lesser Tuna Set"
-    [1909, 1870, 1871, 1872, "NULL"], //"Luxury Doram Gear Set"
-    [1910, 1870, 1871, 1872, 1888, 1897, "NULL"], //"Luxury Doram Charm Grass Intermediate Leaf Set"
-    [1911, 1870, 1871, 1872, 1886, 1900, "NULL"], //"Luxury Doram Fresh Grass Intermediate Bunny Set"
-    [1912, 1870, 1871, 1872, 1887, 1894, "NULL"], //"Luxury Doram Cute Grass Intermediate Tuna Set"
-    [1913, 1867, 1868, 1869, "NULL"], //"Elegant Doram Gear Set"
-    [1914, 1867, 1868, 1869, 1888, 1898, "NULL"], //"Elegant Doram Charm Grass Superior Leaf Set"
-    [1915, 1867, 1868, 1869, 1886, 1901, "NULL"], //"Elegant Doram Fresh Grass Superior Bunny Set"
-    [1916, 1867, 1868, 1869, 1887, 1895, "NULL"], //"Elegant Doram Cute Grass Superior Tuna Set"
-    [1943, 1942, 52, "NULL"], //General's Gungnir Set
-    [1944, 1942, 46, "NULL"], //General's Zweihander Set
-    [1945, 1942, 422, "NULL"], //General's Quadrille Set
-    [1959, 1958, 1946, "NULL"], // "Giant God Snake Skin + Temporal Str Boots"
-    [1959, 1958, 1947, "NULL"], // "Giant God Snake Skin + Temporal Agi Boots"
-    [1959, 1958, 1948, "NULL"], // "Giant God Snake Skin + Temporal Vit Boots"
-    [1959, 1958, 1949, "NULL"], // "Giant God Snake Skin + Temporal Int Boots"
-    [1959, 1958, 1950, "NULL"], // "Giant God Snake Skin + Temporal Dex Boots"
-    [1959, 1958, 1951, "NULL"], // "Giant God Snake Skin + Temporal Luk Boots"
-    [1960, 1958, 1952, "NULL"], // "Giant God Snake Skin + Modified Str Boots"
-    [1960, 1958, 1953, "NULL"], // "Giant God Snake Skin + Modified Agi Boots"
-    [1960, 1958, 1954, "NULL"], // "Giant God Snake Skin + Modified Vit Boots"
-    [1960, 1958, 1955, "NULL"], // "Giant God Snake Skin + Modified Int Boots"
-    [1960, 1958, 1956, "NULL"], // "Giant God Snake Skin + Modified Dex Boots"
-    [1960, 1958, 1957, "NULL"], // "Giant God Snake Skin + Modified Luk Boots"
-    [1973, 1971, 1972, "NULL"], // "Yin Yang Set"
-    [1979, 1977, 1978, "NULL"], // "Newoz Set"
-    [1983, 1981, 1982, "NULL"], // "Aigu Set"
-    [1992, 1991, 1388, "NULL"], // "Sacred Set"
-    [2001, 1993, 1995, "NULL"], // "Shadow Doram Battler Gloves + Shadow Doram Battler Shield"
-    [2002, 1994, 1996, "NULL"], // "Shadow Doram Mage Gloves + Shadow Doram Mage Shield"
-    [2003, 1997, 1999, "NULL"], // "Shadow Doram Battler Armor + Shadow Doram Battler Boots"
-    [2004, 1998, 2000, "NULL"], // "Shadow Doram Mage Armor + Shadow Doram Mage Boots"
-    [2005, 1993, 1995, 1997, 1999, "NULL"], // "Shadow Doram Battler Set"
-    [2006, 1994, 1996, 1998, 2000, "NULL"], // "Shadow Doram Mage Set"
-    [2013, 2007, 2010, "NULL"], // "Shadow Oboro Armor + Boots"
-    [2014, 2008, 2011, "NULL"], // "Shadow Kagerou Armor + Boots"
-    [2015, 2009, 2012, "NULL"], // "Shadow Rebellion Armor + Boots"
-    [2016, 2007, 2010, 1822, 1839, "NULL"], // "Shadow Oboro Set"
-    [2017, 2008, 2011, 1822, 1839, "NULL"], // "Shadow Kagerou Set"
-    [2018, 2009, 2012, 1825, 1842, "NULL"], // "Shadow Rebellion Set"
-    [2027, 2023, 2024, 2025, 2026, "NULL"], // "Upgrade Part Set"
-    [2032, 2028, 2029, "NULL"], // "Supplement Part Str + Agi"
-    [2033, 2028, 2030, "NULL"], // "Supplement Part Str + Con"
-    [2034, 2028, 2031, "NULL"], // "Supplement Part Str + Dex"
-    [2043, 2037, 1946, "NULL"], // "Sixtus + Temporal Str"
-    [2044, 2038, 1947, "NULL"], // "Sixtus + Temporal Agi"
-    [2045, 2039, 1948, "NULL"], // "Sixtus + Temporal Vit"
-    [2046, 2040, 1949, "NULL"], // "Sixtus + Temporal Int"
-    [2047, 2041, 1950, "NULL"], // "Sixtus + Temporal Dex"
-    [2048, 2042, 1951, "NULL"], // "Sixtus + Temporal Luk"
-    [2084, 2076, 2077, "NULL"], // Kagero & Oboro Dual Dagger Set
-    [2085, 1702, 2022, "NULL"], // Dog Cap + Tornado Axe
-    [2315, 1702, 2109, "NULL"], // Dog Cap + Thanatos Katar
-    [2316, 1702, 2241, "NULL"], // Dog Cap + Dark Rose
-    [2092, 2086, 640, "NULL"], // "Revised Encyclopedia + Giant Encyclopedia"
-    [2093, 2090, 2088, "NULL"], // "Geffen Magic Robe + Magic Intensifier Ring"
-    [2094, 2090, 2089, "NULL"], // "Geffen Magic Robe + Physical Enhancer Ring"
-    [2095, 2091, 2088, "NULL"], // "Anti-magic Suit + Magic Intensifier Ring"
-    [2096, 2091, 2089, "NULL"], // "Anti-magic Suit + Physical Enhancer Ring"
-    [2117, 2111, 2112, 2113, 2114, "NULL"], // "Armor Of Gray Set"
-    [2118, 2115, 2112, 2113, 2114, "NULL"], // "Robe Of Gray Set"
-    [2128, 2125, 2126, 2127, "NULL"], // "Airship's Set"
-    [2132, 2129, 2130, 2131, "NULL"], // "Felrock's Set"
-    [2139, 2136, 2137, 2138, "NULL"], // "Chip set"
-    [2140, 2137, 2138, "NULL"], // "Broken chip set"
-    [2148, 2142, 1946, "NULL"], // "Chronocloak + Temporal Str"
-    [2149, 2143, 1947, "NULL"], // "Chronocloak + Temporal Agi"
-    [2150, 2144, 1948, "NULL"], // "Chronocloak + Temporal Vit"
-    [2151, 2145, 1949, "NULL"], // "Chronocloak + Temporal Int"
-    [2152, 2146, 1950, "NULL"], // "Chronocloak + Temporal Dex"
-    [2153, 2147, 1951, "NULL"], // "Chronocloak + Temporal Luk"
-    // ,[22,2147,1951,"NULL"] // "Chronocloak + Temporal Luk"
-    [2208, 2207, 315, "NULL"], // Flattery Robe + Ancient Cape[0]\[1]
-    [2209, 2207, 436, "NULL"], // Flattery Robe + Survivor's Manteau
-    [2211, 2210, 701, "NULL"], // Flattery Robe + Morrigane's Manteau
-    [2212, 2210, 535, "NULL"], // Flattery Robe + Valkyrie Manteau
-    [2236, 2230, 315, "NULL"], // Flattery Robe + Ancient Cape[0]\[1]
-    [2237, 2230, 436, "NULL"], // Flattery Robe + Survivor's Manteau
-    [2238, 2231, 701, "NULL"], // Flattery Robe + Morrigane's Manteau
-    [2239, 2231, 535, "NULL"], // Flattery Robe + Valkyrie Manteau
-    [2252, 2249, 2250, "NULL"], // YSF01 Plate + Manteau
-    [2253, 2249, 2251, "NULL"], // YSF01 Plate + Greave
-    [2234, 2249, 2250, 2251, "NULL"], // YSF01 Plate + Manteau + Greave
-    [2291, 2255, 2267, 2279, "NULL"], // Wyrmeater's Shadow Set
-    [2292, 2256, 2268, 2280, "NULL"], // Tiger Spirit Shadow Set
-    [2293, 2257, 2269, 2281, "NULL"], // Katra's Shadow Set
-    [2294, 2258, 2270, 2282, "NULL"], // Exorcist Shadow Set
-    [2295, 2259, 2271, 2283, "NULL"], // Rondius' Shadow Set
-    [2296, 2260, 2272, 2284, "NULL"], // Gunther's Shadow Set
-    [2297, 2261, 2273, 2285, "NULL"], // Talos' Shadow Set
-    [2298, 2262, 2274, 2286, "NULL"], // Sylphir's Shadow Set
-    [2299, 2263, 2275, 2287, "NULL"], // Dordaleon's Shadow Set
-    [2300, 2264, 2276, 2288, "NULL"], // Osma's Shadow Set
-    [2301, 2265, 2277, 2289, "NULL"], // Garmia's Shadow Set
-    [2302, 2266, 2278, 2290, "NULL"], // Boscard's Shadow Set
-    [2303, 2255, 1809, "NULL"], // Rune Knight Shadow Set
-    [2304, 2256, 1814, "NULL"], // Sura Shadow Set
-    [2305, 2257, 1815, "NULL"], // Guillotine Cross Shadow Set
-    [2306, 2258, 1813, "NULL"], // Arch Bishop Shadow Set
-    [2307, 2259, 1819, "NULL"], // Ranger Shadow Set
-    [2308, 2260, 1810, "NULL"], // Royal Guard Shadow Set
-    [2309, 2261, 1811, "NULL"], // Mechanic Shadow Set
-    [2310, 2262, 1818, "NULL"], // Sorcerer Shadow Set
-    [2311, 2263, 1816, "NULL"], // Shadow Chaser Shadow Set
-    [2312, 2264, 1817, "NULL"], // Warlock Shadow Set
-    [2313, 2265, 1821, "NULL"], // Wanderer Shadow Set
-    [2313, 2265, 1820, "NULL"], // Minstrel Shadow Set - Not in item description ??
-    [2314, 2266, 1812, "NULL"], // Genetic Shadow Set
-    [2344, 2317, 2330, 2342, "NULL"], // "Vigilante Set"
-    [2345, 2320, 2331, 2339, "NULL"], // "Elemental Set"
-    [2346, 2319, 2332, 2340, "NULL"], // "Golden Ninja Set (Huuma)"
-    [2347, 2318, 2332, 2340, "NULL"], // "Golden Ninja Set (Kunai)"
-    [2348, 2321, 2333, 2341, "NULL"], // "Mine Worker's Set"
-    [2349, 2322, 2334, 2343, "NULL"], // "Hippie Set"
-    [2349, 2323, 2334, 2343, "NULL"], // "Hippie Set"
-    [2358, 2352, 2353, "NULL"], // "Hurt Mind + Kind Heart"
-    [2361, 2359, 2355, "NULL"], // Celine's Brooch + Evilspirit Gloves
-    [2362, 2359, 2356, "NULL"], // Celine's Brooch + Celine's Ribbon
-    [2363, 2360, 2352, 2357, "NULL"], // "Christmas Wings + Hurt Mind + Noble Cross"
-    [2364, 2360, 2353, 2357, "NULL"], // "Christmas Wings + Kind Heart + Noble Cross"
-    [2365, 2360, 2355, 2350, "NULL"], // "Christmas Wings + Evilspirit Gloves + Old Parasol"
-    [2366, 2360, 2355, 2351, "NULL"], // "Christmas Wings + Evilspirit Gloves + Red Lantern"
-    [2367, 2360, 2352, 2353, "NULL"], // "Christmas Wings + Kind Heart + Hurt Mind"
-    [2371, 2368, 2369, "NULL"], // Illusion Puente Robe + Illusion Long Mace
-    [2372, 2368, 2370, "NULL"], // Illusion Puente Robe + Illusion Nurse Cap
-    [2377, 2375, 2376, "NULL"], // Illusion Shoes + Illusion Spectral Spear
-    [2379, 2378, 2374, "NULL"], // Illusion Staff of Bordeaux + Illusion Muffler
-    [2385, 2384, 2373, "NULL"], // Illusion Ballista + Illusion Apple of Archer
-    [2388, 2387, 2380, "NULL"], // Illusion Ancient Cape + Illusion Moonlight Dagger
-    [2390, 2389, 2386, "NULL"], // Illusion Skull Ring + Illusion Book of the Apocalypse
-    [2392, 2391, 2381, "NULL"], // Illusion Ring + Illusion Infiltrator
-    [2395, 2394, 2374, "NULL"], // Illusion Combo Battle Glove+ Illusion Muffler
-    [2397, 2396, 2373, "NULL"], // Illusion Huuma Fluttering Snow + Illusion Apple of Archer
-    [2400, 2399, 477, "NULL"], // Illusion Survivor's Manteau + Survivor's Rod (int)
-    [2400, 2399, 475, "NULL"], // Illusion Survivor's Manteau + Survivor's Rod (dex)
-    [2401, 2399, 2383, "NULL"], // Illusion Survivor's Manteau + Illusion Wizardry Staff
-    [2408, 2023, 2025, "NULL"], // "Upgrade Part - Plate" + "Upgrade Part - Engine" not displayed in game ???
-    [2412, 2411, 1288, "NULL"], // Processor on Head + Pile Bunker
-    [2416, 2415, 1277, "NULL"], //Imperial Ring + Imperial Guard
-    [2417, 2415, 1269, "NULL"], //Imperial Ring + Imperial Spear
-    [2422, 2421, 643, "NULL"], // Violet Halo + Dark Blinker
-    [2425, 2424, 2423, "NULL"], // Swordman Shadow Earring + Pendant
-    [2426, 2424, 2423, 1720, 1721, 1809, 1826, "NULL"], // Full Class Shadow Set(RK)
-    [2426, 2424, 2423, 1723, 1724, 1810, 1827, "NULL"], // Full Class Shadow Set(RG)
-    [2429, 2428, 2427, "NULL"], // Merchant Shadow Earring + Pendant
-    [2430, 2428, 2427, 1729, 1730, 1812, 1829, "NULL"], // Full Class Shadow Set(GEN)
-    [2430, 2428, 2427, 1726, 1727, 1811, 1828, "NULL"], // Full Class Shadow Set(MEC)
-    [2433, 2432, 2431, "NULL"], // Acolyte Shadow Earring + Pendant
-    [2434, 2432, 2431, 1732, 1733, 1813, 1830, "NULL"], // Full Class Shadow Set(AB)
-    [2434, 2432, 2431, 1735, 1736, 1814, 1831, "NULL"], // Full Class Shadow Set(SUR)
-    [2437, 2436, 2435, "NULL"], // Mage Shadow Earring + Pendant
-    [2438, 2436, 2435, 1744, 1745, 1817, 1834, "NULL"], // Full Class Shadow Set(WAR)
-    [2438, 2436, 2435, 1747, 1748, 1818, 1835, "NULL"], // Full Class Shadow Set(SOR)
-    [2441, 2440, 2439, "NULL"], // Thief Shadow Earring + Pendant
-    [2442, 2440, 2439, 1738, 1739, 1815, 1832, "NULL"], // Full Class Shadow Set(GX)
-    [2442, 2440, 2439, 1741, 1742, 1816, 1833, "NULL"], // Full Class Shadow Set(SC)
-    [2445, 2444, 2443, "NULL"], // Archer Shadow Earring + Pendant
-    [2446, 2444, 2443, 1750, 1751, 1819, 1836, "NULL"], // Full Class Shadow Set(RAN)
-    [2446, 2444, 2443, 1756, 1757, 1821, 1838, "NULL"], // Full Class Shadow Set(WAN)
-    [2446, 2444, 2443, 1753, 1754, 1820, 1837, "NULL"], // Full Class Shadow Set(MIN)
-    [2464, 2463, 2462, "NULL"], // Thief's Handcuff + Prisoner's Uniform
-    [2465, 2463, 252, "NULL"], // Thief's Handcuff + Blinker
-    [2466, 2463, 725, "NULL"], // Thief's Handcuff + Bloodied Shackle Ball
-    [2467, 2463, 323, "NULL"], // Thief's Handcuff + Shackles
-    [2473, 2471, 2472, "NULL"], //Fallen Angel Armor + Fallen Angel Hairband
-    [2474, 2471, 1545, "NULL"], //Fallen Angel Armor + Fallen Angel Wing
-    [2475, 2472, 1545, "NULL"], //Fallen Angel Hairband + Fallen Angel Wing
-    [2483, 2481, 2482, "NULL"], //Seraphim Coronet + Seraphim Feather
-    [2487, 2486, 2485, "NULL"], //Vital Shadow Shoes + Vital Shadow Shield
-    [2490, 2489, 2488, "NULL"], //Athletic Shadow Shoes + Athletic Shadow Shield
-    [2493, 2492, 2491, "NULL"], //Bloody Shadow Shoes + Cranial Shadow Shield
-    [2496, 2495, 2494, "NULL"], //Liberation Shadow Shoes + Safeguard Shadow Shield
-    [2499, 2498, 2497, "NULL"], //Chemical Shadow Shoes + Cadi Shadow Shield
-    [2502, 2501, 2500, "NULL"], //Tamer Shadow Boots + Tamer Shadow Shield
-    [2505, 2504, 2503, "NULL"], //Insecticide Shadow Shoes + Gargantua Shadow Shield
-    [2508, 2507, 2506, "NULL"], //Fisher Shadow Shoes + Homer's Shadow Shield
-    [2511, 2510, 2509, "NULL"], //Seraphim Shadow Shoes + Satanic Shadow Shield
-    [2514, 2513, 2512, "NULL"], //Beholder Shadow Shoes + Flameguard Shadow Shield
-    [2517, 2516, 2515, "NULL"], //Undertaker Shadow Boots + Undertaker Shadow Shield
-    [2520, 2519, 2518, "NULL"], //Dragonslayer Shadow Boots + Dragonslayer Shadow Shield
-    [2522, 2477, 247, "NULL"], //Aristocrat's Headband + Blush
-    [2523, 2479, 288, "NULL"], //Etran's Undershirt + Pantie[1]
-    [2559, 2524, 2526, "NULL"], //Illusion Armor Type A + Illusion Engine Wing Type A
-    [2560, 2524, 2527, "NULL"], //Illusion Armor Type A + Illusion Engine Wing Type B
-    [2561, 2524, 2528, "NULL"], //Illusion Armor Type A + Illusion Leg Type A
-    [2562, 2524, 2529, "NULL"], //Illusion Armor Type A + Illusion Leg Type B
-    [2563, 2525, 2526, "NULL"], //Illusion Armor Type B + Illusion Engine Wing Type A
-    [2564, 2525, 2527, "NULL"], //Illusion Armor Type B + Illusion Engine Wing Type B
-    [2565, 2525, 2528, "NULL"], //Illusion Armor Type B + Illusion Leg Type A
-    [2566, 2525, 2529, "NULL"], //Illusion Armor Type B + Illusion Leg Type B
-    [2567, 2526, 2528, "NULL"], //Illusion Engine Wing Type A + Illusion Leg Type A
-    [2568, 2526, 2529, "NULL"], //Illusion Engine Wing Type A + Illusion Leg Type B
-    [2569, 2527, 2528, "NULL"], //Illusion Engine Wing Type B + Illusion Leg Type A
-    [2570, 2527, 2529, "NULL"], //Illusion Engine Wing Type B + Illusion Leg Type B
-    [2571, 2550, 2551, 2552, "NULL"], //Lava Leather Armor + Manteau + Boots
-    [2572, 2553, 2554, 2555, "NULL"], //Lava Leather Suits + Muffler + Shoes
-    [2573, 2556, 2557, 2558, "NULL"], //Lava Leather Robe + Hood + Sandles
-    [2574, 2551, 2552, "NULL"], //Lava Leather Manteau + Boots
-    [2575, 2554, 2555, "NULL"], //Lava Leather Muffler + Shoes
-    [2576, 2557, 2558, "NULL"], //Lava Leather Hood + Sandles
-    [2578, 2577, 271, "NULL"], //Bio Protector + Pipe
-    [2587, 2581, 2582, 2583, "NULL"], //Fire Dance Shadow Earring + Fire Dance Shadow Pendant + Fire Fire Dance Shadow Shoes
-    [2588, 2581, 2009, "NULL"], //Fire Dance Shadow Earring + Shadow Rebellion Armor
-    [2589, 2584, 2585, 2586, "NULL"], //Wind Spear Petal Shadow Earring + Wind Spear Wind Spear Petal Shadow Pendant + Wind Spear Petal Shadow Shoes
-    [2590, 2584, 2007, "NULL"], //Wind Spear Petal Shadow Earring + Shadow Oboro Armor
-    [2599, 2598, 2597, "NULL"], //Gambler's Seal + Heart Card in Mouth
-    [2601, 2600, 1269, 1277, "NULL"], //Imperial Feather + Imperial Spear + Imperial Guard
-    [2613, 2602, 2399, "NULL"], //Illusion Counter Dagger + Illusion Survivor Manteau
-    [2614, 2603, 2606, "NULL"], //Illusion Gate Keeper-DD + Illusion Hot-blooded Headband
-    [2615, 2604, 2399, "NULL"], //Illusion Survivor's Staff + Illusion Survivor Manteau
-    [2616, 2607, 2387, "NULL"], //Illusion Immaterial Sword + Illusion Ancient Cape
-    [2617, 2608, 2375, "NULL"], //Illusion War Axe + Illusion Shoes
-    [2618, 2609, 2375, "NULL"], //Illusion Pole Axe + Illusion Shoes
-    [2619, 2610, 2373, "NULL"], //Illusion Huuma Wing Shuriken + Illusion Apple of Archer
-    [2620, 2611, 2374, "NULL"], //Illusion Iron Driver + Illusion Muffler
-    [2624, 2623, 2421, "NULL"], //Magic Neuromodulator + Violet Halo
-    [2636, 2634, 330, "NULL"], //Bloody Muffler + Critical Ring
-    [2643, 2642, 2577, "NULL"], //Mechanical Plant Hat + Bio Protector
-    [2644, 2642, 271, "NULL"], //Mechanical Plant Hat + Pipe
-    [2645, 2642, 2577, 271, "NULL"], //Mechanical Plant Hat + Bio Protector + Pipe
-    [2657, 2656, 626, "NULL"], //Elemental Tights + Burning Bow
-    [2658, 2656, 627, "NULL"], //Elemental Tights + Earth Bow
-    [2659, 2656, 628, "NULL"], //Elemental Tights + Frozen Bow
-    [2660, 2656, 629, "NULL"], //Elemental Tights + Gust Bow
-    [2662, 2661, 626, "NULL"], //Elemental Towel + Burning Bow
-    [2663, 2661, 627, "NULL"], //Elemental Towel + Earth Bow
-    [2664, 2661, 628, "NULL"], //Elemental Towel + Frozen Bow
-    [2665, 2661, 629, "NULL"], //Elemental Towel + Gust Bow
-    // ,[2669,2668,,"NULL"] //Solomon's Key + Ring of the Ancient Wise King (missing)
-    [2673, 2672, 2355, "NULL"], //Celine's Dress + Evilspirit Glove
-    [2674, 2672, 2356, "NULL"], //Celine's Dress + Celine's Ribbon
-    [2675, 2672, 2359, "NULL"], //Celine's Dress + Celine's Brooch
-    [2677, 2676, 939, "NULL"], //Elemental Boots + Elemental Sword
-    // ,[,,,"NULL"] //
-    // ,[,,,"NULL"] //
+w_SE = [
+	[737, 436, 475, "NULL"], // EquipSets
+	[737, 436, 477, "NULL"],
+	[738, 288, 699, "NULL"],
+	[739, 300, 724, "NULL"],
+	[740, 323, 725, "NULL"],
+	[741, 298, 726, "NULL"],
+	[742, 684, 661, 691, "NULL"],
+	[743, 684, 703, 712, "NULL"],
+	[744, 684, 704, 713, "NULL"],
+	[745, 667, 685, 702, 711, "NULL"],
+	[746, 666, 701, 721, 722, "NULL"],
+	[747, 665, 700, 719, 720, "NULL"],
+	[748, 664, 683, 690, 698, 710, "NULL"],
+	[749, 534, 535, 536, 670, "NULL"],
+	[750, 727, 88, "NULL"],
+	[750, 727, 92, "NULL"],
+	[751, 727, 329, "NULL"],
+	[751, 727, 342, "NULL"],
+	[751, 727, 343, "NULL"],
+	[752, 694, 732, "NULL"],
+	[753, 695, 733, "NULL"],
+	[754, 716, 706, "NULL"],
+	[755, 705, 405, "NULL"],
+	[755, 705, 467, "NULL"],
+	[755, 705, 471, "NULL"],
+	[756, 707, 717, "NULL"],
+	[757, 727, 647, "NULL"],
+	[763, 478, 697, "NULL"],
+	[764, 684, 663, 692, "NULL"],
+	[765, 684, 662, "NULL"],
+	[766, 619, 731, "NULL"],
+	[767, 616, 692, "NULL"],
+	[768, 728, 729, "NULL"],
+	[770, 769, 848, "NULL"],
+	[814, 813, 808, "NULL"],
+	[818, 816, 817, "NULL"],
+	[824, 823, 292, "NULL"],
+	[854, 829, 844, "NULL"],
+	[854, 830, 844, "NULL"],
+	[855, 992, 616, "NULL"],
+	[855, 992, 617, "NULL"],
+	[855, 992, 618, "NULL"],
+	[856, 863, 831, "NULL"],
+	[857, 835, 836, "NULL"],
+	[858, 823, 838, 837, "NULL"],
+	[858, 822, 838, 837, "NULL"],
+	[860, 251, 307, 838, "NULL"],
+	[861, 521, 839, "NULL"],
+	[862, 841, 842, "NULL"],
+	[971, 958, 965, 968, "NULL"],
+	[972, 959, 965, 968, "NULL"],
+	[973, 960, 965, 968, "NULL"],
+	[974, 961, 966, 969, "NULL"],
+	[975, 962, 966, 969, "NULL"],
+	[976, 963, 966, 969, "NULL"],
+	[977, 964, 967, 970, "NULL"],
+	[995, 718, 994, "NULL"],
+	[999, 987, 998, 1001, "NULL"],
+	[1004, 442, 1003, "NULL"],
+	[1006, 442, 1005, "NULL"],
+	[1008, 946, 1007, "NULL"],
+	[1010, 990, 1009, "NULL"],
+	[1042, 198, 1041, "NULL"],
+	[1053, 1050, 1051, 1052, "NULL"],
+	[1058, 1055, 1056, 1057, "NULL"],
+	[1114, 1104, 1107, 1110, "NULL"],
+	[1115, 1111, 978, "NULL"],
+	[1115, 1111, 979, "NULL"],
+	[1115, 1111, 980, "NULL"],
+	[1115, 1111, 981, "NULL"],
+	[1115, 1111, 982, "NULL"],
+	[1115, 1111, 983, "NULL"],
+	[1115, 1111, 984, "NULL"],
+	[1202, 247, 1182, "NULL"],
+	[1203, 1189, 1192, "NULL"],
+	[1209, 1208, 385, "NULL"],
+	[1210, 1208, 381, "NULL"],
+	[1211, 1208, 805, "NULL"],
+	[1212, 1208, 887, "NULL"],
+	[1213, 1208, 1037, "NULL"],
+	// ,[1217,804,1216,"NULL"] // Ship captain hat + captain pipe
+	[1237, 1235, 1236, "NULL"],
+	[1238, 684, 1236, "NULL"],
+	[1278, 1269, 1277, "NULL"],
+	[1279, 1267, 1005, "NULL"],
+	[1150, 1149, 936, "NULL"],
+	[1152, 1149, 89, "NULL"],
+	[1153, 1149, 253, "NULL"],
+	[1303, 1302, 377, "NULL"], // "Demon Mask + Succubus Horn"
+	[1304, 1302, 374, "NULL"], // "Demon Mask + Incubus Horn"
+	[1306, 1305, 1174, "NULL"], // "Little Feather Hat + Falken Blitz"
+	[1308, 1307, 644, "NULL"], // "Benevolent Guardian + Healing Staff"
+	[1309, 1307, 863, "NULL"], // "Benevolent Guardian + Holy Stick"
+	[1311, 1310, 151, "NULL"], // "Spirit Whispers + Crescent Hairpin"
+	[1312, 1310, 146, "NULL"], // "Spirit Whispers + Heart Hairpin"
+	[1361, 803, 1359, "NULL"], // "Black Cat (bRO) + Black Cat Tail"
+	[1402, 1175, 1393, "NULL"],
+	[1403, 1176, 1393, "NULL"],
+	[1404, 610, 1396, "NULL"],
+	[1405, 1169, 1390, "NULL"],
+	[1411, 1410, 1409, 1408, 1407, "NULL"], // White Wing Set?
+	[1417, 1412, 1414, 1415, 1416, "NULL"], //ROD SETS
+	[1418, 1413, 1414, 1415, 1416, "NULL"],
+	[1424, 1419, 1421, 1422, 1423, "NULL"],
+	[1425, 1420, 1421, 1422, 1423, "NULL"],
+	[1431, 1426, 1428, 1429, 1430, "NULL"],
+	[1432, 1427, 1428, 1429, 1430, "NULL"],
+	[1438, 1433, 1435, 1436, 1437, "NULL"],
+	[1439, 1434, 1435, 1436, 1437, "NULL"],
+	[1444, 1443, 1442, 1441, 1440, "NULL"],
+	[1460, 1457, 1454, "NULL"],
+	[1461, 1458, 1455, "NULL"],
+	[1462, 1459, 1456, "NULL"],
+	[1471, 1467, 1468, "NULL"], // RWC 2012 Ring & RWC 2012 Pendant
+	[1472, 1469, 1470, "NULL"], // Chambered RWC 2012 Ring & Chambered RWC 2012 Pendant
+	[1473, 1469, 1468, "NULL"], // Chambered RWC 2012 Ring & RWC 2012 Pendant
+	[1474, 1467, 1470, "NULL"], // RWC 2012 Ring & Chambered RWC 2012 Pendant
+	[1484, 1477, 1479, 1482, "NULL"], // WoE Plate + WoE Manteau + WoE Greaves
+	[1485, 1476, 1479, 1481, "NULL"], // WoE Suit + WoE Manteau + WoE Boots
+	[1486, 1475, 1478, 1480, "NULL"], // WoE Robe + WoE Muffler + WoE Shoes
+	[1490, 1487, 1467, "NULL"], // "RWC Memory Knife + RWC 2012 Ring"
+	[1491, 1487, 1468, "NULL"], // "RWC Memory Knife + RWC 2012 Pendant"
+	[1492, 1488, 1467, "NULL"], // "RWC Memory Mace + RWC 2012 Ring"
+	[1493, 1489, 1468, "NULL"], // "RWC Memory Staff + RWC 2012 Pendant"
+	[1505, 1504, 1503, 1502, 1501, "NULL"], // "Peurz set"
+	[1511, 1510, 1509, 1508, 1506, "NULL"], // "Affection set"
+	[1512, 1510, 1509, 1508, 1507, "NULL"], // "Empowered Affection set"
+	[1526, 1522, 247, "NULL"], // "Chibi Pope + Blush"
+	[1529, 1528, 264, "NULL"], // "Witch's Pumpkin Hat + Mr. Smile"
+	[1530, 1528, 678, "NULL"], // "Witch's Pumpkin Hat + Hahoe Mask"
+	[1531, 1528, 364, "NULL"], // "Witch's Pumpkin Hat + Alarm Mask"
+	[1532, 1528, 266, "NULL"], // "Witch's Pumpkin Hat + Opera Masque"
+	[1533, 1528, 1535, "NULL"], // "Witch's Pumpkin Hat + Gozarian Mask"
+	[1542, 1540, 1538, 1539, 1537, "NULL"], // "Robe of Judgement, Shoes of Judgement, Shawl of Judgement, Mace of Judgement"
+	[1543, 1540, 1538, 1539, 1541, "NULL"], // "Robe of Judgement, Shoes of Judgement, Shawl of Judgement, Empowered Mace of Judgement"
+	[1585, 1584, 1583, "NULL"], // "Golden Angel Wing + Golden Angel Hairband"
+	[1597, 436, 1596, "NULL"], //"Mythic Staff of Life (7 d.) + Survivor's Manteau"
+	[1636, 1635, 385, "NULL"], //Valkyrie Circlet + Angel Wing Ears
+	[1652, 1646, 1647, 1648, 1649, 1650, 1651, "NULL"], // "Dragan's Shadow Set"
+	[1655, 1653, 1654, "NULL"], // "Shadow Champion Set"
+	[1659, 1656, 1657, 1658, "NULL"], // "Shadow Mystic Set"
+	[1663, 1660, 1661, 1662, "NULL"], // "Shadow Strongman Set"
+	[1669, 1667, 1668, "NULL"], //"Bandeau of Lovers + Silk Heart"
+	[1674, 1672, 1673, "NULL"], //"Shadow Dragonslayer Set"
+	[1677, 1675, 1676, "NULL"], //"Shadow Undertaker Set"
+	[1680, 1678, 1679, "NULL"], //"Shadow Tamer Set"
+	[1684, 1681, 863, "NULL"], // "Amistr Hat + Holy Stick"
+	[1685, 1681, 932, "NULL"], // "Amistr Hat + Twin Edge of Naght Sieger(blue)"
+	// ,[1686,1681,933,"NULL"] // "Amistr Hat + Twin Edge of Naght Sieger(red)"
+	[1711, 1708, 1709, 1710, "NULL"], // "Shadow Warlock Set"
+	[1715, 1712, 1713, 1714, "NULL"], // "Shadow Swordman Set"
+	[1719, 1716, 1717, 1718, "NULL"], // "Shadow Diviner Set"
+	[1722, 1720, 1721, "NULL"], // "Shadow Knight Set"
+	[1725, 1723, 1724, "NULL"], // "Shadow Crusader Set"
+	[1728, 1726, 1727, "NULL"], // "Shadow Blacksmith Set"
+	[1731, 1729, 1730, "NULL"], // "Shadow Alchemist Set"
+	[1734, 1732, 1733, "NULL"], // "Shadow Priest Set"
+	[1737, 1735, 1736, "NULL"], // "Shadow Monk Set"
+	[1740, 1738, 1739, "NULL"], // "Shadow Assassin Set"
+	[1743, 1741, 1742, "NULL"], // "Shadow Rogue Set"
+	[1746, 1744, 1745, "NULL"], // "Shadow Wizard Set"
+	[1749, 1747, 1748, "NULL"], // "Shadow Sage Set"
+	[1752, 1750, 1751, "NULL"], // "Shadow Hunter Set"
+	[1755, 1753, 1754, "NULL"], // "Shadow Bard Set"
+	[1758, 1756, 1757, "NULL"], // "Shadow Dancer Set"
+	[1760, 1759, 1292, "NULL"], //Diabolic Halo + Mental Stick
+	[1761, 1759, 1172, "NULL"], //Diabolic Halo + Kronos
+	[1762, 1759, 1453, 1452, "NULL"], //Diabolic Halo + Mikatsuki + Raksasa Dagger
+	[1768, 1767, 1765, 1763, "NULL"], //Shadow Shield of the Steadfast + Shadow Armor of Hypnos + Shadow Boots of Hypnos
+	[1769, 1767, 1766, 1764, "NULL"], //Shadow Shield of the Steadfast + Shadow Armor of Harpos + Shadow Boots of Harpos
+	[1774, 1770, 1771, 1772, 1773, "NULL"], //Sapha Set
+	[1779, 1775, 1776, 1777, 1778, "NULL"], //Nab Set
+	[1784, 1780, 1781, 1782, 1783, "NULL"], //Black Wing Set
+	[1804, 1800, 1801, 1802, 1803, "NULL"], //Malaya Set
+	[1843, 1809, 1826, "NULL"], //"Shadow Runeknight Set"
+	[1844, 1810, 1827, "NULL"], //"Shadow Royalguard Set"
+	[1845, 1811, 1828, "NULL"], //"Shadow Mechanic Set"
+	[1846, 1812, 1829, "NULL"], //"Shadow Genetic Set"
+	[1847, 1813, 1830, "NULL"], //"Shadow Archbishop Set"
+	[1848, 1814, 1831, "NULL"], //"Shadow Sura Set"
+	[1849, 1815, 1832, "NULL"], //"Shadow Guillotine Cross Set"
+	[1850, 1816, 1833, "NULL"], //"Shadow Shadowchaser Set"
+	[1851, 1817, 1834, "NULL"], //"Shadow Warlock Set"
+	[1852, 1818, 1835, "NULL"], //"Shadow Sorcerer Set"
+	[1853, 1819, 1836, "NULL"], //"Shadow Ranger Set"
+	[1854, 1820, 1837, "NULL"], //"Shadow Minstrel Set"
+	[1855, 1821, 1838, "NULL"], //"Shadow Wanderer Set"
+	[1856, 1822, 1839, "NULL"], //"Shadow Ninja Set"
+	[1857, 1823, 1840, "NULL"], //"Shadow Taekwon Set"
+	[1858, 1824, 1841, "NULL"], //"Shadow Super Novice Set"
+	[1859, 1825, 1842, "NULL"], //"Shadow Gunslinger Set"
+	[1861, 1860, 1193, "NULL"], //"Feathered Tricorn" + "Piece Of Angent Skin"
+	[1862, 1860, 996, "NULL"], //"Feathered Tricorn" + "Leather of Tendrilion"
+	[1863, 1860, 315, "NULL"], //"Feathered Tricorn" + "Ancient Cape"
+	[1905, 1864, 1865, 1866, "NULL"], //"Doram Gear Set"
+	[1906, 1864, 1865, 1866, 1888, 1896, "NULL"], //"Doram Charm Grass Lesser Leaf Set"
+	[1907, 1864, 1865, 1866, 1886, 1899, "NULL"], //"Doram Fresh Grass Lesser Bunny Set"
+	[1908, 1864, 1865, 1866, 1887, 1893, "NULL"], //"Doram Cute Grass Lesser Tuna Set"
+	[1909, 1870, 1871, 1872, "NULL"], //"Luxury Doram Gear Set"
+	[1910, 1870, 1871, 1872, 1888, 1897, "NULL"], //"Luxury Doram Charm Grass Intermediate Leaf Set"
+	[1911, 1870, 1871, 1872, 1886, 1900, "NULL"], //"Luxury Doram Fresh Grass Intermediate Bunny Set"
+	[1912, 1870, 1871, 1872, 1887, 1894, "NULL"], //"Luxury Doram Cute Grass Intermediate Tuna Set"
+	[1913, 1867, 1868, 1869, "NULL"], //"Elegant Doram Gear Set"
+	[1914, 1867, 1868, 1869, 1888, 1898, "NULL"], //"Elegant Doram Charm Grass Superior Leaf Set"
+	[1915, 1867, 1868, 1869, 1886, 1901, "NULL"], //"Elegant Doram Fresh Grass Superior Bunny Set"
+	[1916, 1867, 1868, 1869, 1887, 1895, "NULL"], //"Elegant Doram Cute Grass Superior Tuna Set"
+	[1943, 1942, 52, "NULL"], //General's Gungnir Set
+	[1944, 1942, 46, "NULL"], //General's Zweihander Set
+	[1945, 1942, 422, "NULL"], //General's Quadrille Set
+	[1959, 1958, 1946, "NULL"], // "Giant God Snake Skin + Temporal Str Boots"
+	[1959, 1958, 1947, "NULL"], // "Giant God Snake Skin + Temporal Agi Boots"
+	[1959, 1958, 1948, "NULL"], // "Giant God Snake Skin + Temporal Vit Boots"
+	[1959, 1958, 1949, "NULL"], // "Giant God Snake Skin + Temporal Int Boots"
+	[1959, 1958, 1950, "NULL"], // "Giant God Snake Skin + Temporal Dex Boots"
+	[1959, 1958, 1951, "NULL"], // "Giant God Snake Skin + Temporal Luk Boots"
+	[1960, 1958, 1952, "NULL"], // "Giant God Snake Skin + Modified Str Boots"
+	[1960, 1958, 1953, "NULL"], // "Giant God Snake Skin + Modified Agi Boots"
+	[1960, 1958, 1954, "NULL"], // "Giant God Snake Skin + Modified Vit Boots"
+	[1960, 1958, 1955, "NULL"], // "Giant God Snake Skin + Modified Int Boots"
+	[1960, 1958, 1956, "NULL"], // "Giant God Snake Skin + Modified Dex Boots"
+	[1960, 1958, 1957, "NULL"], // "Giant God Snake Skin + Modified Luk Boots"
+	[1973, 1971, 1972, "NULL"], // "Yin Yang Set"
+	[1979, 1977, 1978, "NULL"], // "Newoz Set"
+	[1983, 1981, 1982, "NULL"], // "Aigu Set"
+	[1992, 1991, 1388, "NULL"], // "Sacred Set"
+	[2001, 1993, 1995, "NULL"], // "Shadow Doram Battler Gloves + Shadow Doram Battler Shield"
+	[2002, 1994, 1996, "NULL"], // "Shadow Doram Mage Gloves + Shadow Doram Mage Shield"
+	[2003, 1997, 1999, "NULL"], // "Shadow Doram Battler Armor + Shadow Doram Battler Boots"
+	[2004, 1998, 2000, "NULL"], // "Shadow Doram Mage Armor + Shadow Doram Mage Boots"
+	[2005, 1993, 1995, 1997, 1999, "NULL"], // "Shadow Doram Battler Set"
+	[2006, 1994, 1996, 1998, 2000, "NULL"], // "Shadow Doram Mage Set"
+	[2013, 2007, 2010, "NULL"], // "Shadow Oboro Armor + Boots"
+	[2014, 2008, 2011, "NULL"], // "Shadow Kagerou Armor + Boots"
+	[2015, 2009, 2012, "NULL"], // "Shadow Rebellion Armor + Boots"
+	[2016, 2007, 2010, 1822, 1839, "NULL"], // "Shadow Oboro Set"
+	[2017, 2008, 2011, 1822, 1839, "NULL"], // "Shadow Kagerou Set"
+	[2018, 2009, 2012, 1825, 1842, "NULL"], // "Shadow Rebellion Set"
+	[2027, 2023, 2024, 2025, 2026, "NULL"], // "Upgrade Part Set"
+	[2032, 2028, 2029, "NULL"], // "Supplement Part Str + Agi"
+	[2033, 2028, 2030, "NULL"], // "Supplement Part Str + Con"
+	[2034, 2028, 2031, "NULL"], // "Supplement Part Str + Dex"
+	[2043, 2037, 1946, "NULL"], // "Sixtus + Temporal Str"
+	[2044, 2038, 1947, "NULL"], // "Sixtus + Temporal Agi"
+	[2045, 2039, 1948, "NULL"], // "Sixtus + Temporal Vit"
+	[2046, 2040, 1949, "NULL"], // "Sixtus + Temporal Int"
+	[2047, 2041, 1950, "NULL"], // "Sixtus + Temporal Dex"
+	[2048, 2042, 1951, "NULL"], // "Sixtus + Temporal Luk"
+	[2084, 2076, 2077, "NULL"], // Kagero & Oboro Dual Dagger Set
+	[2085, 1702, 2022, "NULL"], // Dog Cap + Tornado Axe
+	[2315, 1702, 2109, "NULL"], // Dog Cap + Thanatos Katar
+	[2316, 1702, 2241, "NULL"], // Dog Cap + Dark Rose
+	[2092, 2086, 640, "NULL"], // "Revised Encyclopedia + Giant Encyclopedia"
+	[2093, 2090, 2088, "NULL"], // "Geffen Magic Robe + Magic Intensifier Ring"
+	[2094, 2090, 2089, "NULL"], // "Geffen Magic Robe + Physical Enhancer Ring"
+	[2095, 2091, 2088, "NULL"], // "Anti-magic Suit + Magic Intensifier Ring"
+	[2096, 2091, 2089, "NULL"], // "Anti-magic Suit + Physical Enhancer Ring"
+	[2117, 2111, 2112, 2113, 2114, "NULL"], // "Armor Of Gray Set"
+	[2118, 2115, 2112, 2113, 2114, "NULL"], // "Robe Of Gray Set"
+	[2128, 2125, 2126, 2127, "NULL"], // "Airship's Set"
+	[2132, 2129, 2130, 2131, "NULL"], // "Felrock's Set"
+	[2139, 2136, 2137, 2138, "NULL"], // "Chip set"
+	[2140, 2137, 2138, "NULL"], // "Broken chip set"
+	[2148, 2142, 1946, "NULL"], // "Chronocloak + Temporal Str"
+	[2149, 2143, 1947, "NULL"], // "Chronocloak + Temporal Agi"
+	[2150, 2144, 1948, "NULL"], // "Chronocloak + Temporal Vit"
+	[2151, 2145, 1949, "NULL"], // "Chronocloak + Temporal Int"
+	[2152, 2146, 1950, "NULL"], // "Chronocloak + Temporal Dex"
+	[2153, 2147, 1951, "NULL"], // "Chronocloak + Temporal Luk"
+	// ,[22,2147,1951,"NULL"] // "Chronocloak + Temporal Luk"
+	[2208, 2207, 315, "NULL"], // Flattery Robe + Ancient Cape[0]\[1]
+	[2209, 2207, 436, "NULL"], // Flattery Robe + Survivor's Manteau
+	[2211, 2210, 701, "NULL"], // Flattery Robe + Morrigane's Manteau
+	[2212, 2210, 535, "NULL"], // Flattery Robe + Valkyrie Manteau
+	[2236, 2230, 315, "NULL"], // Flattery Robe + Ancient Cape[0]\[1]
+	[2237, 2230, 436, "NULL"], // Flattery Robe + Survivor's Manteau
+	[2238, 2231, 701, "NULL"], // Flattery Robe + Morrigane's Manteau
+	[2239, 2231, 535, "NULL"], // Flattery Robe + Valkyrie Manteau
+	[2252, 2249, 2250, "NULL"], // YSF01 Plate + Manteau
+	[2253, 2249, 2251, "NULL"], // YSF01 Plate + Greave
+	[2234, 2249, 2250, 2251, "NULL"], // YSF01 Plate + Manteau + Greave
+	[2291, 2255, 2267, 2279, "NULL"], // Wyrmeater's Shadow Set
+	[2292, 2256, 2268, 2280, "NULL"], // Tiger Spirit Shadow Set
+	[2293, 2257, 2269, 2281, "NULL"], // Katra's Shadow Set
+	[2294, 2258, 2270, 2282, "NULL"], // Exorcist Shadow Set
+	[2295, 2259, 2271, 2283, "NULL"], // Rondius' Shadow Set
+	[2296, 2260, 2272, 2284, "NULL"], // Gunther's Shadow Set
+	[2297, 2261, 2273, 2285, "NULL"], // Talos' Shadow Set
+	[2298, 2262, 2274, 2286, "NULL"], // Sylphir's Shadow Set
+	[2299, 2263, 2275, 2287, "NULL"], // Dordaleon's Shadow Set
+	[2300, 2264, 2276, 2288, "NULL"], // Osma's Shadow Set
+	[2301, 2265, 2277, 2289, "NULL"], // Garmia's Shadow Set
+	[2302, 2266, 2278, 2290, "NULL"], // Boscard's Shadow Set
+	[2303, 2255, 1809, "NULL"], // Rune Knight Shadow Set
+	[2304, 2256, 1814, "NULL"], // Sura Shadow Set
+	[2305, 2257, 1815, "NULL"], // Guillotine Cross Shadow Set
+	[2306, 2258, 1813, "NULL"], // Arch Bishop Shadow Set
+	[2307, 2259, 1819, "NULL"], // Ranger Shadow Set
+	[2308, 2260, 1810, "NULL"], // Royal Guard Shadow Set
+	[2309, 2261, 1811, "NULL"], // Mechanic Shadow Set
+	[2310, 2262, 1818, "NULL"], // Sorcerer Shadow Set
+	[2311, 2263, 1816, "NULL"], // Shadow Chaser Shadow Set
+	[2312, 2264, 1817, "NULL"], // Warlock Shadow Set
+	[2313, 2265, 1821, "NULL"], // Wanderer Shadow Set
+	[2313, 2265, 1820, "NULL"], // Minstrel Shadow Set - Not in item description ??
+	[2314, 2266, 1812, "NULL"], // Genetic Shadow Set
+	[2344, 2317, 2330, 2342, "NULL"], // "Vigilante Set"
+	[2345, 2320, 2331, 2339, "NULL"], // "Elemental Set"
+	[2346, 2319, 2332, 2340, "NULL"], // "Golden Ninja Set (Huuma)"
+	[2347, 2318, 2332, 2340, "NULL"], // "Golden Ninja Set (Kunai)"
+	[2348, 2321, 2333, 2341, "NULL"], // "Mine Worker's Set"
+	[2349, 2322, 2334, 2343, "NULL"], // "Hippie Set"
+	[2349, 2323, 2334, 2343, "NULL"], // "Hippie Set"
+	[2358, 2352, 2353, "NULL"], // "Hurt Mind + Kind Heart"
+	[2361, 2359, 2355, "NULL"], // Celine's Brooch + Evilspirit Gloves
+	[2362, 2359, 2356, "NULL"], // Celine's Brooch + Celine's Ribbon
+	[2363, 2360, 2352, 2357, "NULL"], // "Christmas Wings + Hurt Mind + Noble Cross"
+	[2364, 2360, 2353, 2357, "NULL"], // "Christmas Wings + Kind Heart + Noble Cross"
+	[2365, 2360, 2355, 2350, "NULL"], // "Christmas Wings + Evilspirit Gloves + Old Parasol"
+	[2366, 2360, 2355, 2351, "NULL"], // "Christmas Wings + Evilspirit Gloves + Red Lantern"
+	[2367, 2360, 2352, 2353, "NULL"], // "Christmas Wings + Kind Heart + Hurt Mind"
+	[2371, 2368, 2369, "NULL"], // Illusion Puente Robe + Illusion Long Mace
+	[2372, 2368, 2370, "NULL"], // Illusion Puente Robe + Illusion Nurse Cap
+	[2377, 2375, 2376, "NULL"], // Illusion Shoes + Illusion Spectral Spear
+	[2379, 2378, 2374, "NULL"], // Illusion Staff of Bordeaux + Illusion Muffler
+	[2385, 2384, 2373, "NULL"], // Illusion Ballista + Illusion Apple of Archer
+	[2388, 2387, 2380, "NULL"], // Illusion Ancient Cape + Illusion Moonlight Dagger
+	[2390, 2389, 2386, "NULL"], // Illusion Skull Ring + Illusion Book of the Apocalypse
+	[2392, 2391, 2381, "NULL"], // Illusion Ring + Illusion Infiltrator
+	[2395, 2394, 2374, "NULL"], // Illusion Combo Battle Glove+ Illusion Muffler
+	[2397, 2396, 2373, "NULL"], // Illusion Huuma Fluttering Snow + Illusion Apple of Archer
+	[2400, 2399, 477, "NULL"], // Illusion Survivor's Manteau + Survivor's Rod (int)
+	[2400, 2399, 475, "NULL"], // Illusion Survivor's Manteau + Survivor's Rod (dex)
+	[2401, 2399, 2383, "NULL"], // Illusion Survivor's Manteau + Illusion Wizardry Staff
+	[2408, 2023, 2025, "NULL"], // "Upgrade Part - Plate" + "Upgrade Part - Engine" not displayed in game ???
+	[2412, 2411, 1288, "NULL"], // Processor on Head + Pile Bunker
+	[2416, 2415, 1277, "NULL"], //Imperial Ring + Imperial Guard
+	[2417, 2415, 1269, "NULL"], //Imperial Ring + Imperial Spear
+	[2422, 2421, 643, "NULL"], // Violet Halo + Dark Blinker
+	[2425, 2424, 2423, "NULL"], // Swordman Shadow Earring + Pendant
+	[2426, 2424, 2423, 1720, 1721, 1809, 1826, "NULL"], // Full Class Shadow Set(RK)
+	[2426, 2424, 2423, 1723, 1724, 1810, 1827, "NULL"], // Full Class Shadow Set(RG)
+	[2429, 2428, 2427, "NULL"], // Merchant Shadow Earring + Pendant
+	[2430, 2428, 2427, 1729, 1730, 1812, 1829, "NULL"], // Full Class Shadow Set(GEN)
+	[2430, 2428, 2427, 1726, 1727, 1811, 1828, "NULL"], // Full Class Shadow Set(MEC)
+	[2433, 2432, 2431, "NULL"], // Acolyte Shadow Earring + Pendant
+	[2434, 2432, 2431, 1732, 1733, 1813, 1830, "NULL"], // Full Class Shadow Set(AB)
+	[2434, 2432, 2431, 1735, 1736, 1814, 1831, "NULL"], // Full Class Shadow Set(SUR)
+	[2437, 2436, 2435, "NULL"], // Mage Shadow Earring + Pendant
+	[2438, 2436, 2435, 1744, 1745, 1817, 1834, "NULL"], // Full Class Shadow Set(WAR)
+	[2438, 2436, 2435, 1747, 1748, 1818, 1835, "NULL"], // Full Class Shadow Set(SOR)
+	[2441, 2440, 2439, "NULL"], // Thief Shadow Earring + Pendant
+	[2442, 2440, 2439, 1738, 1739, 1815, 1832, "NULL"], // Full Class Shadow Set(GX)
+	[2442, 2440, 2439, 1741, 1742, 1816, 1833, "NULL"], // Full Class Shadow Set(SC)
+	[2445, 2444, 2443, "NULL"], // Archer Shadow Earring + Pendant
+	[2446, 2444, 2443, 1750, 1751, 1819, 1836, "NULL"], // Full Class Shadow Set(RAN)
+	[2446, 2444, 2443, 1756, 1757, 1821, 1838, "NULL"], // Full Class Shadow Set(WAN)
+	[2446, 2444, 2443, 1753, 1754, 1820, 1837, "NULL"], // Full Class Shadow Set(MIN)
+	[2464, 2463, 2462, "NULL"], // Thief's Handcuff + Prisoner's Uniform
+	[2465, 2463, 252, "NULL"], // Thief's Handcuff + Blinker
+	[2466, 2463, 725, "NULL"], // Thief's Handcuff + Bloodied Shackle Ball
+	[2467, 2463, 323, "NULL"], // Thief's Handcuff + Shackles
+	[2473, 2471, 2472, "NULL"], //Fallen Angel Armor + Fallen Angel Hairband
+	[2474, 2471, 1545, "NULL"], //Fallen Angel Armor + Fallen Angel Wing
+	[2475, 2472, 1545, "NULL"], //Fallen Angel Hairband + Fallen Angel Wing
+	[2483, 2481, 2482, "NULL"], //Seraphim Coronet + Seraphim Feather
+	[2487, 2486, 2485, "NULL"], //Vital Shadow Shoes + Vital Shadow Shield
+	[2490, 2489, 2488, "NULL"], //Athletic Shadow Shoes + Athletic Shadow Shield
+	[2493, 2492, 2491, "NULL"], //Bloody Shadow Shoes + Cranial Shadow Shield
+	[2496, 2495, 2494, "NULL"], //Liberation Shadow Shoes + Safeguard Shadow Shield
+	[2499, 2498, 2497, "NULL"], //Chemical Shadow Shoes + Cadi Shadow Shield
+	[2502, 2501, 2500, "NULL"], //Tamer Shadow Boots + Tamer Shadow Shield
+	[2505, 2504, 2503, "NULL"], //Insecticide Shadow Shoes + Gargantua Shadow Shield
+	[2508, 2507, 2506, "NULL"], //Fisher Shadow Shoes + Homer's Shadow Shield
+	[2511, 2510, 2509, "NULL"], //Seraphim Shadow Shoes + Satanic Shadow Shield
+	[2514, 2513, 2512, "NULL"], //Beholder Shadow Shoes + Flameguard Shadow Shield
+	[2517, 2516, 2515, "NULL"], //Undertaker Shadow Boots + Undertaker Shadow Shield
+	[2520, 2519, 2518, "NULL"], //Dragonslayer Shadow Boots + Dragonslayer Shadow Shield
+	[2522, 2477, 247, "NULL"], //Aristocrat's Headband + Blush
+	[2523, 2479, 288, "NULL"], //Etran's Undershirt + Pantie[1]
+	[2559, 2524, 2526, "NULL"], //Illusion Armor Type A + Illusion Engine Wing Type A
+	[2560, 2524, 2527, "NULL"], //Illusion Armor Type A + Illusion Engine Wing Type B
+	[2561, 2524, 2528, "NULL"], //Illusion Armor Type A + Illusion Leg Type A
+	[2562, 2524, 2529, "NULL"], //Illusion Armor Type A + Illusion Leg Type B
+	[2563, 2525, 2526, "NULL"], //Illusion Armor Type B + Illusion Engine Wing Type A
+	[2564, 2525, 2527, "NULL"], //Illusion Armor Type B + Illusion Engine Wing Type B
+	[2565, 2525, 2528, "NULL"], //Illusion Armor Type B + Illusion Leg Type A
+	[2566, 2525, 2529, "NULL"], //Illusion Armor Type B + Illusion Leg Type B
+	[2567, 2526, 2528, "NULL"], //Illusion Engine Wing Type A + Illusion Leg Type A
+	[2568, 2526, 2529, "NULL"], //Illusion Engine Wing Type A + Illusion Leg Type B
+	[2569, 2527, 2528, "NULL"], //Illusion Engine Wing Type B + Illusion Leg Type A
+	[2570, 2527, 2529, "NULL"], //Illusion Engine Wing Type B + Illusion Leg Type B
+	[2571, 2550, 2551, 2552, "NULL"], //Lava Leather Armor + Manteau + Boots
+	[2572, 2553, 2554, 2555, "NULL"], //Lava Leather Suits + Muffler + Shoes
+	[2573, 2556, 2557, 2558, "NULL"], //Lava Leather Robe + Hood + Sandles
+	[2574, 2551, 2552, "NULL"], //Lava Leather Manteau + Boots
+	[2575, 2554, 2555, "NULL"], //Lava Leather Muffler + Shoes
+	[2576, 2557, 2558, "NULL"], //Lava Leather Hood + Sandles
+	[2578, 2577, 271, "NULL"], //Bio Protector + Pipe
+	[2587, 2581, 2582, 2583, "NULL"], //Fire Dance Shadow Earring + Fire Dance Shadow Pendant + Fire Fire Dance Shadow Shoes
+	[2588, 2581, 2009, "NULL"], //Fire Dance Shadow Earring + Shadow Rebellion Armor
+	[2589, 2584, 2585, 2586, "NULL"], //Wind Spear Petal Shadow Earring + Wind Spear Wind Spear Petal Shadow Pendant + Wind Spear Petal Shadow Shoes
+	[2590, 2584, 2007, "NULL"], //Wind Spear Petal Shadow Earring + Shadow Oboro Armor
+	[2599, 2598, 2597, "NULL"], //Gambler's Seal + Heart Card in Mouth
+	[2601, 2600, 1269, 1277, "NULL"], //Imperial Feather + Imperial Spear + Imperial Guard
+	[2613, 2602, 2399, "NULL"], //Illusion Counter Dagger + Illusion Survivor Manteau
+	[2614, 2603, 2606, "NULL"], //Illusion Gate Keeper-DD + Illusion Hot-blooded Headband
+	[2615, 2604, 2399, "NULL"], //Illusion Survivor's Staff + Illusion Survivor Manteau
+	[2616, 2607, 2387, "NULL"], //Illusion Immaterial Sword + Illusion Ancient Cape
+	[2617, 2608, 2375, "NULL"], //Illusion War Axe + Illusion Shoes
+	[2618, 2609, 2375, "NULL"], //Illusion Pole Axe + Illusion Shoes
+	[2619, 2610, 2373, "NULL"], //Illusion Huuma Wing Shuriken + Illusion Apple of Archer
+	[2620, 2611, 2374, "NULL"], //Illusion Iron Driver + Illusion Muffler
+	[2624, 2623, 2421, "NULL"], //Magic Neuromodulator + Violet Halo
+	[2636, 2634, 330, "NULL"], //Bloody Muffler + Critical Ring
+	[2643, 2642, 2577, "NULL"], //Mechanical Plant Hat + Bio Protector
+	[2644, 2642, 271, "NULL"], //Mechanical Plant Hat + Pipe
+	[2645, 2642, 2577, 271, "NULL"], //Mechanical Plant Hat + Bio Protector + Pipe
+	[2657, 2656, 626, "NULL"], //Elemental Tights + Burning Bow
+	[2658, 2656, 627, "NULL"], //Elemental Tights + Earth Bow
+	[2659, 2656, 628, "NULL"], //Elemental Tights + Frozen Bow
+	[2660, 2656, 629, "NULL"], //Elemental Tights + Gust Bow
+	[2662, 2661, 626, "NULL"], //Elemental Towel + Burning Bow
+	[2663, 2661, 627, "NULL"], //Elemental Towel + Earth Bow
+	[2664, 2661, 628, "NULL"], //Elemental Towel + Frozen Bow
+	[2665, 2661, 629, "NULL"], //Elemental Towel + Gust Bow
+	// ,[2669,2668,,"NULL"] //Solomon's Key + Ring of the Ancient Wise King (missing)
+	[2673, 2672, 2355, "NULL"], //Celine's Dress + Evilspirit Glove
+	[2674, 2672, 2356, "NULL"], //Celine's Dress + Celine's Ribbon
+	[2675, 2672, 2359, "NULL"], //Celine's Dress + Celine's Brooch
+	[2677, 2676, 939, "NULL"], //Elemental Boots + Elemental Sword
+	[2698,2697,2600,"NULL"], //Royal Guard Necklace + Imperial Feather
+	// [,,,"NULL"], //
+	// [,,,"NULL"], //
 
-    // ,[,2612,,"NULL"] //Illusion Fancy Flower + Illusion Bazerald
+	// ,[,2612,,"NULL"] //Illusion Fancy Flower + Illusion Bazerald
 
-    // ,[itm_set,item1,item2,...,"NULL"] //
-    //,[itm_set,item1,item2,...,"NULL"] //
-  ];
-  SE_MAXnum = w_SE.length - 1;
+	// ,[itm_set,item1,item2,...,"NULL"] //
+	//,[itm_set,item1,item2,...,"NULL"] //
+];
+SE_MAXnum = w_SE.length - 1;
 }
 
 for (var i = 0; i <= SE_MAXnum; i++) {
-  for (var k = 1; w_SE[i][k] != "NULL"; k++) {
-    for (var j = itm_BONUS_START; ItemOBJ[w_SE[i][k]][j] != 0; j += 2);
-    ItemOBJ[w_SE[i][k]][j] = 90;
-    ItemOBJ[w_SE[i][k]][j + 1] = i;
-    ItemOBJ[w_SE[i][k]][j + 2] = 0;
-  }
+		for (var k = 1; w_SE[i][k] != "NULL"; k++) {
+				for (var j = itm_BONUS_START; ItemOBJ[w_SE[i][k]][j] != 0; j += 2);
+				ItemOBJ[w_SE[i][k]][j] = 90;
+				ItemOBJ[w_SE[i][k]][j + 1] = i;
+				ItemOBJ[w_SE[i][k]][j + 2] = 0;
+		}
 }
 
 function SetEquipName(SENw) {
-  // return SetParts (String) from w_SE[%]
+		// return SetParts (String) from w_SE[%]
 
-  var SENstr = "";
-  for (var i = 0; i <= SE_MAXnum; i++) {
-    if (i == SENw) {
-      for (var j = 1; w_SE[i][j] != "NULL"; j++) {
-        SENstr += "[" + ITEM_NAME[w_SE[i][j]][1 + Language * 2] + "]";
-        if (w_SE[i][j + 1] != "NULL") SENstr += "+";
-      }
-      return SENstr;
-    }
-  }
+		var SENstr = "";
+		for (var i = 0; i <= SE_MAXnum; i++) {
+				if (i == SENw) {
+						for (var j = 1; w_SE[i][j] != "NULL"; j++) {
+								SENstr += "[" + ITEM_NAME[w_SE[i][j]][1 + Language * 2] + "]";
+								if (w_SE[i][j + 1] != "NULL") SENstr += "+";
+						}
+						return SENstr;
+				}
+		}
 }
 
 function SetEquip() {
-  for (var i = 17; i <= 32; i++) n_A_Equip[i] = 736;
+		for (var i = 17; i <= 32; i++) n_A_Equip[i] = 736;
 
-  var w_num = 17;
-  var w_ch = 0;
-  for (var k = 0; k <= SE_MAXnum; k++) {
-    for (
-      var j = 1;
-      w_SE[k][j] != "NULL" && (w_ch == 1 || (w_ch == 0 && j == 1));
-      j++
-    ) {
-      w_ch = 0;
-      for (var i = 0; i <= 16 && w_ch == 0; i++) {
-        if (n_A_Equip[i] == w_SE[k][j]) w_ch = 1;
-      }
-    }
-    if (w_ch == 1) {
-      n_A_Equip[w_num] = w_SE[k][0];
-      w_num++;
-    }
-  }
+		var w_num = 17;
+		var w_ch = 0;
+		for (var k = 0; k <= SE_MAXnum; k++) {
+				for (
+						var j = 1;
+						w_SE[k][j] != "NULL" && (w_ch == 1 || (w_ch == 0 && j == 1));
+						j++
+				) {
+						w_ch = 0;
+						for (var i = 0; i <= 16 && w_ch == 0; i++) {
+								if (n_A_Equip[i] == w_SE[k][j]) w_ch = 1;
+						}
+				}
+				if (w_ch == 1) {
+						n_A_Equip[w_num] = w_SE[k][0];
+						w_num++;
+				}
+		}
 }

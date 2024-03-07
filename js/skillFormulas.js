@@ -5860,7 +5860,7 @@ function CalcSkillDamage_old() {
           w_SkillMod = n_A_ActiveSkillLV * 5.0 + 5.0;
         } else {
           w_SkillMod = 30.0 + (n_A_ActiveSkillLV - 5) * 2.0;
-          console.log("w_SkillMod = " + w_SkillMod);
+          // console.log("w_SkillMod = " + w_SkillMod);
         }
       } else if (PATCH == 2) {
         // MATK (800 + 400 * Skill Level) % * 4 hits
@@ -6389,7 +6389,6 @@ function CalcSkillDamage_old() {
   }
   setupPVPPlayerMods();
   //fixedCastTime += CalcFixedCastFlat();
-  console.log("here");
   if (fixedCastTime < 0) fixedCastTime = 0;
 }
 

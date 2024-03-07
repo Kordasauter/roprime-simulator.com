@@ -57,8 +57,11 @@ function calc() {
   // Calculate damage.
 
   if (BETA) {
+    if(Skill[n_A_ActiveSkill].isMagic)
+      CalcSkillDamage_old();
+    else
     CalcSkillDamage(); //uncomment for beta
-    console.log("beta");
+      console.log("beta");
   } else {
     CalcSkillDamage_old(); //comment for beta
   }
@@ -2155,7 +2158,7 @@ function DisplayAdditionalBattleInfo() {
     if (str_PerHIT_DMG == 0) str_bSUB += n_PerHIT_DMG;
     else str_bSUB += "<br/>" + str_PerHIT_DMG;
   }
-  if (!BETA) {
+  if (!BETA || Skill[n_A_ActiveSkill].isMagic) {
     myInnerHtml("bSUBname", str_bSUBname, 0); //comment for beta
     myInnerHtml("bSUB", str_bSUB, 0); //comment for beta
   }
@@ -2311,8 +2314,13 @@ function DisplayCastAndDelay() {
   // print cast time
   fixedCastTime = eval(Skill[n_A_ActiveSkill].fixedCastTime) * CalcFixedCast();
   fixedCastTime += CalcFixedCastFlat();
+  //prevents cast time from having a negative time
+  fixedCastTime = Max(fixedCastTime,0);
   variableCastTime =
     eval(Skill[n_A_ActiveSkill].variableCastTime) * CalcVariableCast();
+  variableCastTime += CalcVariableCastFlat();
+  //prevents cast time from having a negative time
+  variableCastTime = Max(variableCastTime,0);
   totalCastTime = fixedCastTime + variableCastTime;
 
   // totalCastTime = Skill[n_A_ActiveSkill].fixedCastTime + Skill[n_A_ActiveSkill].variableCastTime;

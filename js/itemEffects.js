@@ -48,6 +48,7 @@ ITEM_SP_TIME_OBJ =[
 ,[45,"Empowered Mace of Judgement","Dmg +40% vs. Demons",1,1541,bon_DMG_RC_DEMON,40,0]
 ,[46,"Celine's Dress","magical damage against all race monsters + 15%",1,2673,bon_MDMG_RC_FORMLESS,15,bon_MDMG_RC_UNDEAD,15,bon_MDMG_RC_BRUTE,15,bon_MDMG_RC_PLANT,15,bon_MDMG_RC_INSECT,15,bon_MDMG_RC_FISH,15,bon_MDMG_RC_DEMON,15,bon_MDMG_RC_DEMI_HUMAN,15,bon_MDMG_RC_ANGEL,15,bon_MDMG_RC_DRAGON,15,0]
 ,[47,"Elemental Boots","Int + 70 and Matk + 10%",1,2676,bon_INT,70,bon_MATK_MUL,10,0]
+,[48,"Shadow Ring","Buffing the user for 20 seconds when using Urgent Escape; Increases the damage of Triangle Shot by 1% for every 3 base levels.",1,2696,"ev_blvl",3,bon_DMG_SKILL + skill_SHA_TRIANGLE_SHOT,1,0]
 //,[id,"item_name","effect_desc",1=Equip/2=Card,item/card_id,bonus_typ,bonus_amount,0]
 ];
 ITEM_SP_TIME_OBJ_SORT = [
@@ -64,7 +65,7 @@ ITEM_SP_TIME_OBJ_SORT = [
     40,21,16,28, // N
     42, // P
     34,38, // R
-    19,22,23,24,36, // S
+    19,48,22,23,24,36, // S
     25,18, // T
     9, // U
     8,29, // V

@@ -1795,8 +1795,41 @@ function StPlusCard( nSTP2 )
 	{
 		for(var j=0;ITEM_SP_TIME_OBJ[w_num[i]][5 + j] != 0;j += 2)
 		{
-			if(nSTP2 == ITEM_SP_TIME_OBJ[w_num[i]][5 + j])
+			if(nSTP2 == ITEM_SP_TIME_OBJ[w_num[i]][5 + j + 2] && isNaN(ITEM_SP_TIME_OBJ[w_num[i]][5 + j]))
+			{
+				var refine = 0;
+
+				switch(cardOBJ[n_A_card[i]][card_att_COMP]){
+					case card_comp_HEAD:
+						refine = n_A_HEAD_DEF_PLUS;
+						break;
+					case card_com_ARMOR:
+						refine = n_A_BODY_DEF_PLUS;
+						break;
+					case card_com_SHIELD:
+						refine = n_A_LEFT_DEF_PLUS;
+						break;
+					case card_com_GARMENT:
+						refine = n_A_SHOULDER_DEF_PLUS;
+						break;
+					case card_com_SHOES:
+						refine = n_A_SHOES_DEF_PLUS;
+						break;
+					case card_comp_WEAPON:
+						if(i <=3)
+							refine = n_A_Weapon_ATKplus;
+						if(i > 3)
+							refine = n_A_Weapon2_ATKplus;
+						break;
+					default:
+						refine = 0;
+						break;
+				}
+				w += BonusCalc(ITEM_SP_TIME_OBJ[w_num[i]][5 + j],refine,ITEM_SP_TIME_OBJ[w_num[i]][5 + j + 1],ITEM_SP_TIME_OBJ[w_num[i]][5 + j + 3]);
+			}
+			if(nSTP2 == ITEM_SP_TIME_OBJ[w_num[i]][5 + j] && !isNaN(ITEM_SP_TIME_OBJ[w_num[i]][5 + j]))
 				w += ITEM_SP_TIME_OBJ[w_num[i]][6 + j];
+
 		}
 	}
 	

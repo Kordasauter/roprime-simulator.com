@@ -7473,7 +7473,7 @@ const Skill = [
     range: [1],
     forcedElement: true,
     skillElement: ele_HOLY,
-    fixedCastTime: `0`,
+    fixedCastTime: `1`,
     variableCastTime: `1`,
     castDelay: `
 		switch(n_A_ActiveSkillLV)
@@ -12264,7 +12264,7 @@ const Skill = [
     cooldown: "0.35",
     animation: `0`,
     isMagic: false,
-    canCrit: false,
+    canCrit: true,
     accuracyCheck: true,
     bypassDef: false,
     hitAmount: `1`,
@@ -17752,7 +17752,7 @@ const Skill = [
         case 1:
         case 2:
           return (
-            (120 * SkillLV + SkillSearch(skill_MIWA_VOICE_LESSONS) * 60) *
+            ((120 * SkillLV )+ SkillSearch(skill_MIWA_VOICE_LESSONS) * 60) *
             (n_A_BaseLV / 100)
           );
         default:

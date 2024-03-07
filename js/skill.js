@@ -1531,6 +1531,7 @@ JobSkillActiveOBJ = [
 ,[167,1,436, 6, 0, 1] // Spread Shot Lv. 6 When Attacking
 ,[168,0, 25, 5, 1, 1] // Heal 5 when recieving physical damage (1%)
 ,[169,1, 92, 1, 0, 1] // Aspersio 1 When Attacking
+,[170,1,168, 1, 5, 1] // Mug 1 When Attacking
 
  //IDAutocast, Type(0=when hit, 1=when attack), SkillID, SkillLVL, Chance, AutoCastTrigger
 ];

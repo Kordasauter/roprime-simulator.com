@@ -2328,6 +2328,7 @@ temp_CRONOS = 39;
 temp_NEMESIS = 40;
 temp_CELINE_DRESS = 41;
 temp_ELEMENTAL_BOOTS = 42;
+temp_SHADOW_RING = 43;
 }
 
 {//ench_type
