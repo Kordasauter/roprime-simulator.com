@@ -392,8 +392,16 @@ function magicSkillElementMultiplier()
 function magicSizMultiplier()
 {
 	let sizMul=0;
+
+	if(EquipNumSearch(2580))
+	{//Hibram's Gloves
+		if(EnchNumSearch(781))//spell 1
+		n_tok[bon_MDMG_SIZ_SMALL + Math.floor(n_B[en_SIZE])] += 5;
+		if(EnchNumSearch(782))//spell 2
+		n_tok[bon_MDMG_SIZ_SMALL + Math.floor(n_B[en_SIZE])] += 5;
+	}
 	
-	sizMul = n_tok[bon_MDMG_SIZ_SMALL + Math.floor(n_B[en_SIZE])];
+	sizMul += n_tok[bon_MDMG_SIZ_SMALL + Math.floor(n_B[en_SIZE])];
 	
 	return sizMul;
 }

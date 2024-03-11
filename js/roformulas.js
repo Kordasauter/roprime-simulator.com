@@ -6885,6 +6885,17 @@ function calcPDodge(n_A_LUCKY) {
     // Old Camouflage Bunny Hood [1]
     n_A_LUCKY += Math.floor(n_A_HEAD_DEF_PLUS / 3);
   }
+  if(EquipNumSearch(2579))
+  {//Arch Bishop Ring
+    if(EnchNumSearch(871))//Cure Lv1
+      n_A_LUCKY += 5;
+    if(EnchNumSearch(874))//Catholic Lv1
+      n_A_LUCKY += 5;
+    if(EnchNumSearch(877))//Archbishop Lv1
+      n_A_LUCKY += 5;
+    if(EnchNumSearch(878))//Archbishop Lv2
+      n_A_LUCKY += 5;
+  }
 
   //Cards
   if (CardNumSearch(743) && (n_A_JOB == cls_GLT || n_A_JOB == cls_GLTt)) {
@@ -8325,6 +8336,13 @@ function getGearVTCReduction() {
     if (n_A_JobSearch() == cls_NOV) {
       GearVTCReduc -= 30;
     }
+  }
+  if(EquipNumSearch(2580))
+  {//Hibram's Gloves
+    if(EnchNumSearch(781))//spell 1
+      GearVTCReduc -= 5;
+    if(EnchNumSearch(782))//spell 2
+      GearVTCReduc -= 5;
   }
 
   if (EquipNumSearch(1745)) {

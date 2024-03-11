@@ -26,7 +26,7 @@ const Skill = [
     isSpecialFormula: false,
     skillFormula(SkillLV) {
       return 100;
-    }, //skillDamage => w_SkillMod in old skillFomulas.js
+    },
   }),
   (ALL_FIRST_AID = {
     id: 1,
@@ -2085,7 +2085,7 @@ const Skill = [
     hitDivisibility: `1`,
     isSpecialFormula: false,
     skillFormula(SkillLV) {
-      return 30 + SkillSearch(skill_AS_LEFTHAND_MASTERY) * 10;
+      return 30 + (SkillLV * 10);
     },
   }),
   (AS_KATAR_MASTERY = {
@@ -4908,6 +4908,9 @@ const Skill = [
           break;
           // case skill_SUR_FALLEN_EMPIRE:
           // 	numSpheres -=2;
+          // break;
+        case skill_SUR_EARTH_SHAKER:
+         	numSpheres -=1;
           break;
         default:
           break;
@@ -8662,7 +8665,7 @@ const Skill = [
     hitDivisibility: `1`,
     isSpecialFormula: true,
     skillFormula(SkillLV) {
-      let batk = getBaseDamage(0);
+      let batk = getBaseDamage(0,false);
       let damage = [0, 0, 0];
       if (PATCH <= 2) {
         for (let i = 0; i <= 2; i++) {
@@ -22273,7 +22276,7 @@ function CalcSkillDamage() {
     Skill[n_A_ActiveSkill].id == skill_MO_MAX_GUILLOTINE_FIST
   )
     baseDmg = getBaseDamageNoMastery(0);
-  else baseDmg = getBaseDamage(0);
+  else baseDmg = getBaseDamage(0,false);
   if (n_Nitou) {
     if (Skill[n_A_ActiveSkill].id == 0) {
       let baseDmg1 = getFinalDamage(
@@ -22283,7 +22286,7 @@ function CalcSkillDamage() {
         0
       );
       let baseDmg2 = getFinalDamage(
-        getBaseDamage2(0),
+        getBaseDamage(0,true),
         Skill[n_A_ActiveSkill],
         n_A_ActiveSkillLV,
         0
@@ -22414,11 +22417,12 @@ function displayAdditionalDamage() {
     //Crit Rate
     myInnerHtml("CRInumname", SubName[4][Language], 0);
     //Show Crit Rate, Player Crit  - enemy Crit Shield
+      //Crit rate - enemy's crit shield
+      let critRate = n_A_CRI - (Max(n_B[en_LUK], 0) / 5);
+      critRate = Min(critRate,100);
+      critRate = Max(critRate,1);
     myInnerHtml(
-      "CRInum",
-      Max(n_A_CRI - Max(n_B[en_LUK], 0) * 5, 1) + SubName[0][Language],
-      0
-    );
+      "CRInum","<span title=\"Player's crit rate : "+ n_A_CRI +", Enemy's crit shield: "+ (Max(n_B[en_LUK], 0) / 5) + "\">" + critRate + SubName[0][Language] + "*</span>",0);
   } else {
     myInnerHtml("CRIATKname", "", 0);
     myInnerHtml("CRIATK", "", 0);
@@ -22489,13 +22493,7 @@ function displayAdditionalDamage() {
 function displaySubHits(autoSkill,autoSkillLv, isCrit) {
   let textStr = "";
   let numHits = 0;
-  let tempDMG = getFinalDamage(
-    getBaseDamage(isCrit),
-    Skill[autoSkill],
-	autoSkillLv,
-	5,
-    isCrit
-  );
+  let tempDMG = getFinalDamage(getBaseDamage(isCrit),Skill[autoSkill],autoSkillLv,isCrit);
   if (eval(Skill[autoSkill].hitDivisibility) > 1)
     numHits = eval(Skill[autoSkill].hitDivisibility);
   if (eval(Skill[autoSkill].hitAmount) > 1)
@@ -22532,12 +22530,7 @@ function displaySubHitsGiantGrowth(autoSkill, isCrit) {
   let textStr = "";
   let numHits = 0;
   let GIANT_GROWTH = RUN_GIANT_GROWTH.skillFormula2(1) / 100;
-  let tempDMG = getFinalDamage(
-    getBaseDamage(isCrit),
-    Skill[autoSkill],
-    SkillSearch(autoSkill),
-    isCrit
-  );
+  let tempDMG = getFinalDamage(getBaseDamage(isCrit),Skill[autoSkill],SkillSearch(autoSkill),isCrit);
   tempDMG[0] *= GIANT_GROWTH;
   tempDMG[1] *= GIANT_GROWTH;
   tempDMG[2] *= GIANT_GROWTH;

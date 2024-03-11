@@ -1068,6 +1068,17 @@ function StPlusCalc()
 		wSPC_AGI += Math.floor(SkillSearch(skill_SW_SWORD_MASTERY)/2) * EquipNumSearch(2641);
 		wSPC_VIT += Math.floor(SkillSearch(skill_SW_SWORD_MASTERY)/2) * EquipNumSearch(2641);
 	}
+	if(EquipNumSearch(2579))
+	{//Arch Bishop Ring
+	  if(EnchNumSearch(871))//Cure Lv1
+	  	wSPC_LUK += 2;
+	  if(EnchNumSearch(874))//Catholic Lv1
+	  	wSPC_LUK += 2;
+	  if(EnchNumSearch(877))//Archbishop Lv1
+	  	wSPC_LUK += 2;
+	  if(EnchNumSearch(878))//Archbishop Lv2
+	  	wSPC_LUK += 2;
+	}
 	
 	// Acolyte Buffs
 	wSPC_STR += acolyteBuffs[ksBlessing];

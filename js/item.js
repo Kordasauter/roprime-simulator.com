@@ -609,7 +609,7 @@
 ,[604,itm_type_ARMOR,1,25,0,1,220,45,0,0,0,0,bon_USR_ELEMENT,3,bon_NONE] // "Fire Spirits Armor [1]"
 ,[605,itm_type_ARMOR,1,25,0,1,220,45,0,0,0,0,bon_USR_ELEMENT,1,bon_NONE] // "Water Spirits Armor [1]"
 ,[606,itm_type_ARMOR,1,25,0,1,220,45,0,0,0,0,bon_USR_ELEMENT,4,bon_NONE] // "Wind Spirits Armor [1]"
-,[607,weapTyp_DAGGER,1,70,4,1,60,36,0,0,1,1,bon_ICE_PICK,1,bon_NONE] // "Icepick [1]"
+,[607,weapTyp_DAGGER,1,70,4,1,60,36,0,0,1,1,bon_ICE_PICK,1,bon_NONE] // "Ice pick [1]"
 ,[608,itm_type_HEAD_UPPER,1,7,0,1,40,45,0,0,0,0,bon_INT,1,bon_NONE] // "Crown [1]"
 ,[609,itm_type_HEAD_UPPER,1,7,0,1,40,45,0,0,0,0,bon_INT,1,bon_NONE] // "Tiara [1]"
 ,[610,weapTyp_DAGGER,1001,120,4,3,50,55,0,0,0,0,bon_CH_STATUS_BLEEDING,5,bon_NONE] // "Scalpel"
@@ -2557,7 +2557,7 @@
 ,[2466,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ATK,10,bon_NONE] // Thief's Handcuff + Bloodied Shackle Ball
 ,[2467,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"ev_shoes_ref",1,bon_ATK,1,bon_NONE] // Thief's Handcuff + Shackles
 ,[2468,itm_type_HEAD_UPPER,219,10,0,1,20,100,0,0,0,0,"ref_lvl",9,bon_DMG_SKILL + skill_GEN_CART_CANNON,15,bon_NONE] // Harvester Hat
-,[2469,itm_type_HEAD_UPPER,0,12,0,1,30,90,0,0,0,0,bon_STR,5,bon_INT,5,bon_DMG_SKILL + skill_GEN_CART_CANNON,10,bon_DMG_SKILL + skill_GEN_CART_TORNADO,5,"ref_lvl",5,bon_DMG_SKILL + skill_GEN_CART_CANNON,20,"ref_lvl",5,bon_DMG_SKILL + skill_GEN_CART_TORNADO,10,"ref_lvl",8,bon_DMG_SKILL + skill_GEN_CART_CANNON,30,"ref_lvl",8,bon_DMG_SKILL + skill_GEN_CART_TORNADO,20,bon_NONE] // Cylinder Hairband
+,[2469,itm_type_HEAD_UPPER,0,12,0,1,30,90,0,0,0,0,bon_CAST_SKILL + skill_GEN_CART_CANNON,100,bon_STR,5,bon_INT,5,bon_DMG_SKILL + skill_GEN_CART_CANNON,10,bon_DMG_SKILL + skill_GEN_CART_TORNADO,5,"ref_lvl",5,bon_DMG_SKILL + skill_GEN_CART_CANNON,20,"ref_lvl",5,bon_DMG_SKILL + skill_GEN_CART_TORNADO,10,"ref_lvl",8,bon_DMG_SKILL + skill_GEN_CART_CANNON,30,"ref_lvl",8,bon_DMG_SKILL + skill_GEN_CART_TORNADO,20,bon_NONE] // Cylinder Hairband
 
 ,[2470,itm_type_ACCESSORY,0,5,0,1,10,0,0,0,0,0,bon_VIT,1,bon_HP_ADD,250,bon_HP_MUL,10,bon_NONE] //Recovery Ring
 ,[2471,itm_type_ARMOR,0,50,0,1,100,30,0,0,0,0,bon_ALL_STATS,1,bon_RED_ELE_HOLY,-10,bon_RED_RC_ANGEL,-15,bon_RED_RC_DEMON,5,bon_RED_RC_DEMI_HUMAN,5,"ref_lvl",7,bon_HP_MUL,5,"ref_lvl",9,bon_RED_RC_DEMON,5,"ref_lvl",9,bon_RED_RC_DEMI_HUMAN,5,"ref_lvl",11,bon_RED_CAST,-8,bon_NONE] //Fallen Angel Armor
@@ -2676,8 +2676,8 @@
 ,[2577,itm_type_HEAD_MIDDLE,0,3,0,0,50,50,0,0,0,0,bon_HIT,10,bon_CH_GUIDE_ATK,5,bon_RED_CASTDELAY,5,bon_NONE]//Bio Protector
 ,[2578,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RED_CASTDELAY,5,bon_NONE]//Bio Protector + Pipe
 //Need more work
-,[2579,itm_type_UNOBTAINABLE,0,0,0,0,0,0,0,0,0,0,bon_NONE]//Arch Bishop Ring
-,[2580,itm_type_UNOBTAINABLE,0,0,0,0,0,0,0,0,0,0,bon_NONE]//Hibram's Gloves
+,[2579,itm_type_ACCESSORY,0,0,0,1,40,90,0,0,0,0,bon_LUK,2,bon_PDODGE,5,bon_HEAL_REC,15,bon_NONE]//Arch Bishop Ring
+,[2580,itm_type_ACCESSORY,0,0,0,1,40,90,0,0,0,0,bon_INT,2,bon_MATK_MUL,2,bon_SKILL_ENABLE,4,"bint_hi",100,bon_MATK,5,bon_NONE]//Hibram's Gloves
 //
 ,[2581,itm_type_SHADOW_EARRING,59,0,0,0,0,0,0,0,0,0,"ev_ref",1,bon_HP_ADD,10,bon_HP_MUL,5,"ref_lvl",7,bon_HP_MUL,5,"ref_lvl",9,bon_HP_ADD,2000,"ref_lvl",9,bon_SP_ADD,200,"ref_lvl",9,bon_DMG_RANGE,7,bon_NONE]//Fire Dance Shadow Earring
 ,[2582,itm_type_SHADOW_PENDANT,59,0,0,0,0,0,0,0,0,0,"ev_ref",1,bon_HP_ADD,10,bon_DMG_SKILL + skill_REB_FIRE_DANCE,5,"ev_ref",2,bon_DMG_SKILL + skill_REB_FIRE_DANCE,2,bon_NONE]//Fire Dance Shadow Pendant
@@ -2806,7 +2806,16 @@
 ,[2698,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RES_STATUS_BLIND,100,bon_RES_STATUS_SILENCE,100,bon_ATK,40,bon_ASPD_MUL,3,bon_DMG_RC_DEMI_HUMAN,2,bon_DMG_RC_BRUTE,2,"bagi_hi",108,bon_ATK,60,"bagi_hi",108,bon_ASPD_MUL,5,"bagi_hi",108,bon_DMG_RC_DEMI_HUMAN,2,"bagi_hi",108,bon_DMG_RC_BRUTE,2,"bagi_hi",120,bon_ATK,80,"bagi_hi",120,bon_ASPD_MUL,7,"bagi_hi",120,bon_DMG_RC_DEMI_HUMAN,4,"bagi_hi",120,bon_DMG_RC_BRUTE,4,bon_NONE]//Royal Guard Necklace + Imperial Feather
 ,[2699,itm_type_SHIELD,2056,100,0,1,250,100,0,0,0,0,bon_UNBREAKABLE,1,"ev_ref",1,bon_ATK,10,"ref_lvl",7,bon_ASPD_MUL,10,"ref_lvl",9,bon_DMG_RANGE,10,"ref_lvl",9,bon_RED_CASTDELAY,5,"ref_lvl",11,bon_DMG_SKILL + skill_GEN_CART_CANNON,15,"ref_lvl",11,bon_DMG_SKILL + skill_MEC_ARM_CANNON,15,bon_NONE]//Angel Mirror [1]
 ,[2700,itm_type_HEAD_MIDDLE,0,0,0,0,20,30,0,0,0,0,bon_CAST_SKILL_FLAT + skill_CR_SACRIFICE,2,bon_CAST_SKILL_FLAT + skill_PA_GLORIA_DOMINI,2,bon_HP_MUL,1,bon_ASPD_MUL,1,"ev_blvl",1,bon_DMG_SKILL + skill_PA_MARTYR_RECONING,2,"blvl_hi",100,bon_HP_MUL,1,"blvl_hi",100,bon_ASPD_MUL,1,"blvl_hi",150,bon_HP_MUL,1,"blvl_hi",150,bon_ASPD_MUL,1,bon_NONE]//Noble Mask
-// ,[2701,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+,[2701,itm_type_HEAD_MIDDLE,0,0,0,0,30,70,0,0,0,0,"ev_bdex",10,bon_MATK,5,"bdex_hi",108,bon_RED_CAST,-5,"bdex_hi",108,bon_MATK,60,"bdex_hi",120,bon_RED_CAST,-5,"bdex_hi",120,bon_MATK,100,bon_NONE]//Kardui Ears
+// ,[2702,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2703,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2704,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2705,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2706,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2707,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2708,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2709,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
+// ,[2710,itm_type,0,0,0,0,0,0,0,0,0,0,bon_NONE]//
 
 // ,[,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK,50,"set_ref"+(fl_WEAPON+fl_HEAD),7,bon_RED_CAST,-10,"set_sum"+(fl_WEAPON+fl_HEAD),18,bon_MDMG_SIZ_SMALL,15,"set_sum"+(fl_WEAPON+fl_HEAD),18,bon_MDMG_SIZ_MEDIUM,15,"set_sum"+(fl_WEAPON+fl_HEAD),22,bon_MATK,50,"set_sum"+(fl_WEAPON+fl_HEAD),22,bon_INC_MAGIC_FIRE,20,bon_NONE]//Illusion Fancy Flower + Illusion Bazerald
 

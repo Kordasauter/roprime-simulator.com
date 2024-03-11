@@ -2,6 +2,8 @@
 function calc() {
   // Init variables
   totalCastTime = 0;
+  if(formElements["beta"])
+    BETA = formElements["beta"].checked;
 
   // Init the damage strings.
   for (var i = 0; i < 3; i++) {
@@ -2178,9 +2180,35 @@ function DisplayAdditionalBattleInfo() {
   }
 
   // Min Number of Hits ---------------------------------
+
+  //classic calc
+  let currentSkill = n_A_DMG;
+  let currentSkillCrit = [0,0,0];
+  for(let i = 0; i < 3 ; i++)
+    currentSkillCrit[i] = currentSkill[2] * 1.4;
+  //beta calc
+  if(BETA)
+  {
+      currentSkill = getFinalDamage(getBaseDamage(0), Skill[n_A_ActiveSkill], n_A_ActiveSkillLV, 0);
+      currentSkillCrit = getFinalDamage(getBaseDamage(1), Skill[n_A_ActiveSkill], n_A_ActiveSkillLV, 1);
+  }
   var minNumHits;
-  minNumHits = Math.floor(n_B[en_HP] / w_DMG[2]);
-  if (n_B[en_HP] % Math.floor(w_DMG[2]) != 0) minNumHits += 1;
+  let skillDamage = [1,1,1];
+  if(Skill[n_A_ActiveSkill].canCrit)
+    skillDamage = currentSkillCrit;
+  else
+    skillDamage = currentSkill;
+  
+  //old
+  // minNumHits = Math.floor(n_B[en_HP] / w_DMG[2]);
+  // if (n_B[en_HP] % Math.floor(w_DMG[2]) != 0) minNumHits += 1;
+  // console.log(skillDamage)
+  let double = 1;
+  if(SkillSearch(skill_TH_DOUBLE_ATTACK))
+    double = 2;
+
+  minNumHits = Math.floor(n_B[en_HP] / (skillDamage[2] * double));
+  if (n_B[en_HP] % Math.floor(skillDamage[2] * double) != 0) minNumHits += 1;
   if (minNumHits < 10000) myInnerHtml("MinATKnum", minNumHits, 0);
   else myInnerHtml("MinATKnum", SubName[5][Language], 0);
 
@@ -2224,19 +2252,39 @@ function DisplayAdditionalBattleInfo() {
   }
 
   // Max Number of Hits ------------------------------------
+  skillDamage = currentSkill;
   if (w_HIT_HYOUJI < 100 && n_PerHIT_DMG == 0) {
     myInnerHtml("MaxATKnum", "<Font size=2>Infinite (no 100% Hit)</font>", 0);
   } else {
-    var wX = w_DMG[0];
-    if (w_HIT_HYOUJI < 100) wX = n_PerHIT_DMG;
-    minNumHits = Math.floor(n_B[en_HP] / wX);
-    if (n_B[en_HP] % Math.floor(wX) != 0) minNumHits += 1;
+    if (w_HIT_HYOUJI < 100) skillDamage[0] = n_PerHIT_DMG;
+    minNumHits = Math.floor(n_B[en_HP] / skillDamage[0]);
+    if (n_B[en_HP] % Math.floor(skillDamage[0]) != 0) minNumHits += 1;
     if (minNumHits < 10000) myInnerHtml("MaxATKnum", minNumHits, 0);
     else myInnerHtml("MaxATKnum", SubName[5][Language], 0);
   }
 
-  minNumHits = Math.floor(n_B[en_HP] / w_DMG[1]);
-  if (n_B[en_HP] % w_DMG[1] != 0) {
+  // Ave Number of Hits ------------------------------------
+    // //add Double Attack to DPS Calculation
+    DoubleAttackRate = SkillSearch(skill_TH_DOUBLE_ATTACK)/100;
+    if(PATCH <= 1)
+      DoubleAttackRate *= 5;
+    else
+      DoubleAttackRate *= 7;
+  
+    //Crit rate - enemy's crit shield
+    let critRate = n_A_CRI - (Max(n_B[en_LUK], 0) / 5);
+    critRate = Min(critRate,100);
+    critRate = Max(critRate,1);
+  
+    //add crit to average hit calculation
+    if(Skill[n_A_ActiveSkill].canCrit)
+      for(let i = 0; i < 3 ; i++){
+       currentSkill[i] = (currentSkill[i] * (1 - (critRate/100))) + (currentSkillCrit[i] * (critRate/100));
+       currentSkill[i] = ((currentSkill[1] * (1-DoubleAttackRate))+((currentSkill[1] * 2) * DoubleAttackRate));
+      }
+
+  minNumHits = Math.floor(n_B[en_HP] / skillDamage[1]);
+  if (n_B[en_HP] % skillDamage[1] != 0) {
     minNumHits += 1;
   }
 
@@ -2284,16 +2332,19 @@ function DisplayAdditionalBattleInfo() {
     myInnerHtml("AveATKnum", SubName[5][Language], 0);
     myInnerHtml("BattleTime", SubName[6][Language], 0);
   }
+
   //TODO improve
-  var w = (1 / (totalCastTime + totalDelay)) * w_DMG[1];
-  w *= 100;
-  w = Math.round(w);
-  w /= 100;
+  //added crit to calculation
+  //added Double Attack to calculation
+  let damagePerSecond = (1 / (totalCastTime + totalDelay)) * ((currentSkill[1] * (1-DoubleAttackRate))+((currentSkill[1] * 2) * DoubleAttackRate));
+  damagePerSecond *= 100;
+  damagePerSecond = Math.round(damagePerSecond);
+  damagePerSecond /= 100;
 
   if (n_Delay[0]) {
     myInnerHtml("AveSecondATK", "Special", 0);
   } else {
-    myInnerHtml("AveSecondATK", w, 0);
+    myInnerHtml("AveSecondATK", damagePerSecond, 0);
   }
 
   // Damage taken

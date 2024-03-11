@@ -5525,11 +5525,11 @@
 ,[ 5523,"Gentle Touch-Cure Lv.3",0,bon_HP_MUL,6,bon_NONE]
 ,[ 5524,"Gentle Touch-Cure Lv.4",0,bon_HP_MUL,8,bon_NONE]
 ,[ 5525,"Gentle Touch-Cure Lv.5",0,bon_HP_MUL,10,bon_NONE]
-,[ 5526,"Gentle Touch-Silence Lv.1",0,bon_PHY_ATK,4,bon_NONE]//Gentle Touch-Silence for Tengu Shoes
-,[ 5527,"Gentle Touch-Silence Lv.2",0,bon_PHY_ATK,8,bon_NONE]
-,[ 5528,"Gentle Touch-Silence Lv.3",0,bon_PHY_ATK,12,bon_NONE]
-,[ 5529,"Gentle Touch-Silence Lv.4",0,bon_PHY_ATK,16,bon_NONE]
-,[ 5530,"Gentle Touch-Silence Lv.5",0,bon_PHY_ATK,20,bon_NONE]
+,[ 5526,"Gentle Touch-Silence Lv.1",0,bon_ATK_MUL,4,bon_NONE]//Gentle Touch-Silence for Tengu Shoes
+,[ 5527,"Gentle Touch-Silence Lv.2",0,bon_ATK_MUL,8,bon_NONE]
+,[ 5528,"Gentle Touch-Silence Lv.3",0,bon_ATK_MUL,12,bon_NONE]
+,[ 5529,"Gentle Touch-Silence Lv.4",0,bon_ATK_MUL,16,bon_NONE]
+,[ 5530,"Gentle Touch-Silence Lv.5",0,bon_ATK_MUL,20,bon_NONE]
 ,[ 5531,"Flaming Petals Lv.1",0,bon_DMG_SKILL + skill_NIN_EXPLODING_DRAGON,3,bon_NONE]//Flaming Petals for Great Shinobi Sash
 ,[ 5532,"Flaming Petals Lv.2",0,bon_DMG_SKILL + skill_NIN_EXPLODING_DRAGON,6,bon_NONE]
 ,[ 5533,"Flaming Petals Lv.3",0,bon_DMG_SKILL + skill_NIN_EXPLODING_DRAGON,9,bon_NONE]
