@@ -80,7 +80,11 @@
 	// Rebellion
 	[2,bon_DEX-1,4,bon_INT-1,6,bon_VIT-1,7,bon_DEX-1,8,bon_INT-1,9,bon_AGI-1,10,bon_LUK-1,13,bon_VIT-1,14,bon_INT-1,16,bon_AGI-1,17,bon_DEX-1,18,bon_INT-1,19,bon_VIT-1,20,bon_LUK-1,23,bon_VIT-1,24,bon_DEX-1,25,bon_STR-1,26,bon_INT-1,27,bon_AGI-1,30,bon_LUK-1,31,bon_VIT-1,33,bon_DEX-1,34,bon_INT-1,35,bon_STR-1,38,bon_DEX-1,40,bon_AGI-1,41,bon_LUK-1,43,bon_DEX-1,44,bon_VIT-1,45,bon_INT-1,50,bon_STR-1,51,bon_AGI-1,52,bon_LUK-1,54,bon_INT-1,55,bon_DEX-1,57,bon_AGI-1,"n"],
 	//Summoner
-	[1,bon_DEX-1,3,bon_VIT-1,5,bon_DEX-1,6,bon_VIT-1,8,bon_AGI-1,9,bon_INT-1,11,bon_AGI-1,12,bon_INT-1,13,bon_DEX-1,15,bon_AGI-1,16,bon_INT-1,17,bon_DEX-1,19,bon_AGI-1,20,bon_INT-1,21,bon_DEX-1,23,bon_LUK-1,24,bon_VIT-1,25,bon_DEX-1,27,bon_AGI-1,29,bon_LUK-1,31,bon_INT-1,32,bon_DEX-1,34,bon_LUK-1,36,bon_INT-1,37,bon_LUK-1,39,bon_AGI-1,41,bon_DEX-1,42,bon_INT-1,43,bon_VIT-1,45,bon_DEX-1,46,bon_LUK-1,47,bon_VIT-1,48,bon_AGI-1,50,bon_DEX-1,"n"]
+	[1,bon_DEX-1,3,bon_VIT-1,5,bon_DEX-1,6,bon_VIT-1,8,bon_AGI-1,9,bon_INT-1,11,bon_AGI-1,12,bon_INT-1,13,bon_DEX-1,15,bon_AGI-1,16,bon_INT-1,17,bon_DEX-1,19,bon_AGI-1,20,bon_INT-1,21,bon_DEX-1,23,bon_LUK-1,24,bon_VIT-1,25,bon_DEX-1,27,bon_AGI-1,29,bon_LUK-1,31,bon_INT-1,32,bon_DEX-1,34,bon_LUK-1,36,bon_INT-1,37,bon_LUK-1,39,bon_AGI-1,41,bon_DEX-1,42,bon_INT-1,43,bon_VIT-1,45,bon_DEX-1,46,bon_LUK-1,47,bon_VIT-1,48,bon_AGI-1,50,bon_DEX-1,"n"],
+	//Star Emperor
+	[1,bon_STR-1,2,bon_DEX-1,5,bon_AGI-1,7,bon_INT-1,8,bon_STR-1,9,bon_LUK-1,11,bon_DEX-1,12,bon_STR-1,13,bon_AGI-1,15,bon_INT-1,16,bon_LUK-1,17,bon_VIT-1,19,bon_STR-1,20,bon_DEX-1,21,bon_AGI-1,23,bon_STR-1,24,bon_VIT-1,25,bon_INT-1,27,bon_DEX-1,29,bon_AGI-1,30,bon_DEX-1,31,bon_STR-1,34,bon_DEX-1,35,bon_AGI-1,36,bon_LUK-1,37,bon_VIT-1,38,bon_DEX-1,39,bon_STR-1,41,bon_AGI-1,42,bon_VIT-1,43,bon_STR-1,45,bon_DEX-1,47,bon_AGI-1,48,bon_STR-1,50,bon_DEX-1,56,bon_STR-1,59,bon_AGI-1,"n"],
+	//Soul Reaper
+	[1,bon_INT-1,2,bon_DEX-1,5,bon_INT-1,6,bon_VIT-1,7,bon_DEX-1,11,bon_DEX-1,12,bon_INT-1,13,bon_AGI-1,15,bon_DEX-1,16,bon_INT-1,17,bon_VIT-1,19,bon_STR-1,20,bon_DEX-1,21,bon_AGI-1,24,bon_VIT-1,25,bon_INT-1,26,bon_DEX-1,28,bon_STR-1,29,bon_AGI-1,30,bon_DEX-1,31,bon_INT-1,34,bon_DEX-1,35,bon_AGI-1,37,bon_VIT-1,38,bon_DEX-1,39,bon_INT-1,41,bon_AGI-1,42,bon_VIT-1,43,bon_STR-1,44,bon_INT-1,45,bon_DEX-1,47,bon_AGI-1,49,bon_INT-1,50,bon_DEX-1,52,bon_AGI-1,54,bon_INT-1,59,bon_INT-1,"n"]
 	];
 	
 	for ( var i=46;i<=70;i += 2 )

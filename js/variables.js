@@ -76,6 +76,7 @@ var battleEffects = new Array();
 var monsterDebuffs = new Array();
 var monsterBuffs = new Array();
 var summonerBuffs = new Array();
+var soulReaperBuffs = new Array();
 
 var wBCEDPch = 0;
 var wLAch = 0;

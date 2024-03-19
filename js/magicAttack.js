@@ -1319,6 +1319,11 @@ function calcBuffMATK()
 	if ( SkillSearch( skill_ROY_SHIELD_SPELL ) === 3 && PATCH == 2)
 		buffMATK += 150;
 	
+	if(soulReaperBuffs[ksFairySoul])
+	{
+		buffMATK += 10 * soulReaperBuffs[ksFairySoul];
+	}
+	
 	//TODO
 	//Add Shadow Spell to the passiv skill for SC
 	// if ( SkillSearch( skill_SHA_AUTO_SHADOW_SPELL ) )

@@ -803,6 +803,43 @@ SkillOBJ = [
 [800,1,"20 points used on seafood branch"],
 [801,1,"20 points used on plant branch"],
 [802,1,"20 points used on animal branch"],
+[803,3,"Solar, Lunar, and Stellar Record"],//Star Emperor
+[804,1,"Solar, Lunar, and Stellar Purification"],
+[805,3,"Solar Stance"],
+[806,3,"Lunar Stance"],
+[807,3,"Stellar Stance"],
+[808,3,"Universal Stance"],
+[809,7,"Blaze Kick"],
+[810,7,"New Moon Kick"],
+[811,7,"Flash Kick"],
+[812,5,"Nova Explosion"],
+[813,1,"Gravity Control"],
+[814,7,"Solar Explosion"],
+[815,7,"Full Moon Kick"],
+[816,7,"Falling Stars"],
+[817,5,"Star Emperor's Descent"],
+[818,5,"Solar Luminance"],
+[819,5,"Lunar Luminance"],
+[820,5,"Stellar Luminance"],
+[821,5,"Star Creator's Book"],
+[822,5,"Book of Dimensions"],
+[823,5,"Soul Collection"],//Soul Reaper
+[824,5,"Soul Harvest"],
+[825,5,"Evil Soul Curse"],
+[826,5,"Soul Energy Research"],
+[827,5,"Kaute"],
+[828,5,"Esha"],
+[829,5,"Curse Explosion"],
+[830,7,"Soul Bind"],
+[831,3,"Soul Circulation"],
+[832,5,"Espa"],
+[833,5,"Shadow Soul"],
+[834,5,"Fairy Soul"],
+[835,5,"Falcon Soul"],
+[836,5,"Golem Soul"],
+[837,7,"Eswoo"],
+[838,5,"Soul Division"],
+[839,5,"Soul Explosion"],
 ];
 }
 
@@ -883,7 +920,9 @@ JobSkillPassOBJ = [
 [393,404,79,80,skill_KAG_16TH_NIGHT,skill_KAG_SUMMON_ELEMENTAL_SEAL,skill_KAG_GET_ELEMENTAL_SEAL,999,999,999,999,999,999,999,999], // KAG
 [  3, 13, 14, 23, 24, 38, 39, 42,253,385,  9,309,196,310,183,146,148,241,156,185,999], // Expanded SNovi
 [425,426,427,416,420,421,422,433,429,749,763,430,750,753,756,759,760,999,999,999], // Rebellion
-[skill_SUM_STOOP,skill_SUM_SPRITE_MARBLE,skill_SUM_BUNCH_OF_SHRIMP,skill_SUM_SILVERVINE_ROOT_TWIST,skill_SUM_SPIRIT_OF_SEA,skill_SUM_CATNIP_POWDERING,skill_SUM_SEAFOOD,skill_SUM_POWER_OF_LAND,skill_SUM_GROOMING,skill_SUM_PLANT,skill_SUM_ARCLOUSE_DASH,skill_SUM_CHATTERING,skill_SUM_POWER_OF_LIFE,skill_SUM_MEOW_MEOW,skill_SUM_ANIMAL,skill_SUM_NYANG_GRASS,skill_SUM_HISS,skill_SUM_SPIRIT_OF_LAND,skill_SUM_SPIRIT_OF_LIFE,999] // Summoner
+[skill_SUM_STOOP,skill_SUM_SPRITE_MARBLE,skill_SUM_BUNCH_OF_SHRIMP,skill_SUM_SILVERVINE_ROOT_TWIST,skill_SUM_SPIRIT_OF_SEA,skill_SUM_CATNIP_POWDERING,skill_SUM_SEAFOOD,skill_SUM_POWER_OF_LAND,skill_SUM_GROOMING,skill_SUM_PLANT,skill_SUM_ARCLOUSE_DASH,skill_SUM_CHATTERING,skill_SUM_POWER_OF_LIFE,skill_SUM_MEOW_MEOW,skill_SUM_ANIMAL,skill_SUM_NYANG_GRASS,skill_SUM_HISS,skill_SUM_SPIRIT_OF_LAND,skill_SUM_SPIRIT_OF_LIFE,999], // Summoner
+[329,379,338,342,380,352,353,354,355,356,357,367,361,364,365,skill_STEM_SOLAR_STANCE,skill_STEM_LUNAR_STANCE,skill_STEM_STELLAR_STANCE,skill_STEM_UNIVERSAL_STANCE,skill_STEM_SOLAR_LUMINANCE,skill_STEM_LUNAR_LUMINANCE,skill_STEM_STELLAR_LUMINANCE,skill_STEM_BOOK_OF_DIMENSIONS,999],//Star Emperor
+[329,338,342,380,372,379,999,999,999,999,999,999,999,999,999],//Soul Reaper
 ];
 }
 {
@@ -965,8 +1004,11 @@ JobSkillPassOBJ = [
 	[skill_KAG_CROSS_STRIKE, skill_KAG_SWIRLING_PETAL, skill_KAG_OVERTHROW, skill_KAG_SPINTHROW_KUNAI, skill_KAG_SPIRIT_BREAKER, skill_KAG_THROW_EXPLOSIVE_KUNAI], // Kagerou/Oboro
 	[skill_WI_EARTH_SPIKE, skill_HU_FREEZING_TRAP, skill_WI_FIRE_PILLAR, skill_WI_FROST_NOVA, skill_WI_HEAVENS_DRIVE, skill_CR_HOLY_CROSS, skill_WI_JUPITEL_THUNDER, skill_WI_SIGHTRASHER, skill_HW_STAVE_CRASHER, skill_WI_WATER_BALL], // Expanded Super Novice
 	[skill_REB_FIRE_DANCE, skill_REB_SHATTERING_STORM, skill_REB_VANISHING_BUSTER, skill_REB_SLUG_SHOT, skill_REB_MASS_SPIRAL, skill_REB_ANTI_MATERIAL_BLAST, skill_REB_GODS_HAMMER, skill_REB_QUICK_DRAW_SHOT, skill_REB_HOWLING_MINE, skill_REB_DRAGON_TAIL, skill_REB_FIRE_RAIN, skill_REB_ROUND_TRIP,skill_REB_BINDING_TRAP],//Rebellion
-	[skill_SUM_SOUL_ATTACK,skill_SUM_BITE,skill_SUM_SCRATCH,skill_SUM_SILVERVINE_STEM_SPEAR,skill_SUM_CATNIP_METEOR,skill_SUM_PICKY_PECK,skill_SUM_SCAR_OF_TAROU,skill_SUM_LUNATIC_CARROT_BEAT,skill_SUM_SPIRIT_OF_SAVAGE]//Summoner
- ];
+	[skill_SUM_SOUL_ATTACK,skill_SUM_BITE,skill_SUM_SCRATCH,skill_SUM_SILVERVINE_STEM_SPEAR,skill_SUM_CATNIP_METEOR,skill_SUM_PICKY_PECK,skill_SUM_SCAR_OF_TAROU,skill_SUM_LUNATIC_CARROT_BEAT,skill_SUM_SPIRIT_OF_SAVAGE],//Summoner
+	//TODO
+	[skill_STEM_BLAZE_KICK,skill_STEM_NEW_MOON_KICK,skill_STEM_FLASH_KICK,skill_STEM_NOVA_EXPLOSION,skill_STEM_GRAVITY_CONTROL,skill_STEM_SOLAR_EXPLOSION,skill_STEM_FULL_MOON_KICK,skill_STEM_FALLING_STARS,skill_STEM_STAR_EMPERORS_DESCENT],//Star Emperor
+	[skill_SRIP_ESHA,skill_SRIP_CURSE_EXPLOSION,skill_SRIP_ESPA,skill_SRIP_ESWOO,skill_SRIP_SOUL_EXPLOSION],//Soul Reaper
+];
 }
 
 {
@@ -1046,7 +1088,10 @@ JobSkillPassOBJ = [
 	[], // Kagerou/Oboro
 	[], // Expanded Super Novice
 	[], //Rebellion
-	[] //Summoner
+	[], //Summoner
+	//TODO
+	[],//Star Emperor
+	[],//Soul Reaper
     ];
 }
 
@@ -1188,7 +1233,10 @@ JobSkillPassOBJ = [
 	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_NIN]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_KAGOB]] ], // Kagerou/Oboro
 	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_SNOVI]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_ENOVI]] ], // Super Novice
 	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_GUN]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_REB]] ], // Rebellion
-	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_SUM]]] // summoner
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_SUM]]], // summoner
+	//TODO
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_TKK]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_TKM]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_STEM]] ], // Taekwon Master
+	[ [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_SL]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_SRIP]]  ], // Soul Linker
     ];
 }
 
@@ -1274,6 +1322,9 @@ JobSkillActiveOBJ = [
 [  0,418,419,423,428,429,430,431,432,434,435,436,437,748,750,751,752,753,754,755,757,758,759,760,761,764,999], // Rebellion
 // [  0,skill_SUM_BASIC_SKILL,skill_SUM_BITE,skill_SUM_HIDE,skill_SUM_SCRATCH,skill_SUM_LOPE,skill_SUM_STOOP,skill_SUM_SPRITE_MARBLE,skill_SUM_SOUL_ATTACK,skill_SUM_FRESH_SHRIMP,skill_SUM_BUNCH_OF_SHRIMP,skill_SUM_TUNA_BELLY,skill_SUM_TUNA_PARTY,skill_SUM_POWER_OF_SEA,skill_SUM_GROOMING,skill_SUM_PURRING,skill_SUM_TASTY_SHRIMP_PARTY,skill_SUM_SPIRIT_OF_SEA,skill_SUM_SILVERVINE_STEM_SPEAR,skill_SUM_SILVERVINE_ROOT_TWIST,skill_SUM_CATNIP_METEOR,skill_SUM_CATNIP_POWDERING,skill_SUM_POWER_OF_LAND,skill_SUM_CHATTERING,skill_SUM_MEOW_MEOW,skill_SUM_NYANG_GRASS,skill_SUM_SPIRIT_OF_LAND,skill_SUM_PICKY_PECK,skill_SUM_ARCLOUSE_DASH,skill_SUM_SCAR_OF_TAROU,skill_SUM_LUNATIC_CARROT_BEAT,skill_SUM_POWER_OF_LIFE,skill_SUM_HISS,skill_SUM_POWER_OF_FLOCK,skill_SUM_SPIRIT_OF_SAVAGE,skill_SUM_SPIRIT_OF_LIFE,999] // Summoner
 [  0,skill_SUM_SOUL_ATTACK,skill_SUM_BITE,skill_SUM_SCRATCH,skill_SUM_SILVERVINE_STEM_SPEAR,skill_SUM_CATNIP_METEOR,skill_SUM_PICKY_PECK,skill_SUM_SCAR_OF_TAROU,skill_SUM_LUNATIC_CARROT_BEAT,skill_SUM_SPIRIT_OF_SAVAGE,999], // Summoner
+//TODO
+[  0,999],//Star Emperor
+[  0,999],//Soul Reaper
 ];
 }
 

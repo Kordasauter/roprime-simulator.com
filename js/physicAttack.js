@@ -10,11 +10,7 @@ function getBaseDamage(isCrit,offHand) {
 	let PropertyMultiplier = getPropertyMultiplier();
 
 	let baseDamage = new Array();
-	// let leftHandBonus =	1;
-	let leftHandBonus =	AS_LEFTHAND_MASTERY.skillFormula(SkillSearch(skill_AS_LEFTHAND_MASTERY)) / 100;
-	// if (n_A_JOB == cls_KAGOB) leftHandBonus += 0.2;
-	if(!offHand){
-		leftHandBonus = 1;
+	if(!offHand || (n_A_WeaponType == weapTyp_KATAR)){
 		StatusATK *= 2;
 	}
 	
@@ -23,42 +19,49 @@ function getBaseDamage(isCrit,offHand) {
 			baseDamage[i] =	Math.floor(StatusATK  + groupAMul[i] + groupBMul[i]) * (1 + PATK / 100) + MasteryATK + BuffATK;
 		else
 			baseDamage[i] =	Math.floor(StatusATK * (1 + PropertyMultiplier / 100)  +	groupAMul[i] + groupBMul[i]) * (1 + PATK / 100) + MasteryATK + BuffATK;
-		//ATK = {(StatusATK × 2) + [(WeaponATK + ExtraATK) × Type2ATKMultiplier] + [(WeaponATK + ExtraATK) × (1 + RaceMultiplier) × (1 + SizeMultiplier) × ...]} × (1 + P.ATK ÷ 100) + MasteryATK + BuffATK
-		// baseDamage[i] = Math.floor(baseDamage[i]);
-		baseDamage[i] = Math.floor(baseDamage[i] * leftHandBonus);
+		baseDamage[i] = Math.floor(baseDamage[i]);
 	}
 	
 	return baseDamage;
 }
-function getBaseDamage2() {
-	let StatusATK = getStatATK();
-	let MasteryATK = getMasteryATK();
-	let BuffATK = 0;
-	let PATK = 0; //4th class stat
-
-	let groupAMul = groupAMultiplier2(0);
-	let groupBMul = groupBMultiplier2(0);
-	// let groupBMul = [0,0,0];
-
-	let PropertyMultiplier = getPropertyMultiplier();
-
-	let baseDamage = new Array();
-	// let leftHandBonus =	AS_LEFTHAND_MASTERY.skillFormula(SkillSearch(skill_AS_LEFTHAND_MASTERY)) / 100;
-	let leftHandBonus =	1;
-	if (n_A_JOB == cls_KAGOB) leftHandBonus += 0.2;
-	console.log("leftHandBonus " + leftHandBonus)
-
-	for (let i = 0; i <= 2; i++) {
-	if (SkillSearch(skill_TK_MILD_WIND) == 0)
-		baseDamage[i] = Math.floor(StatusATK * 1 + ((groupAMul[i] + groupBMul[i]) * 1)) * (1 + PATK / 100) + MasteryATK + BuffATK;
-	else
-		baseDamage[i] = Math.floor(StatusATK * PropertyMultiplier * 1 + groupAMul[i] + groupBMul[i]) * (1 + PATK / 100) + MasteryATK + BuffATK;
-	//ATK = {(StatusATK × 2) + [(WeaponATK + ExtraATK) × Type2ATKMultiplier] + [(WeaponATK + ExtraATK) × (1 + RaceMultiplier) × (1 + SizeMultiplier) × ...]} × (1 + P.ATK ÷ 100) + MasteryATK + BuffATK
-	// baseDamage[i] = Math.floor(baseDamage[i] * leftHandBonus);
-	baseDamage[i] = Math.floor(baseDamage[i] * 1);
-	}
-	return baseDamage;
+function getOffHandBonus()
+{
+	let OffHandBonus = 0;
+	OffHandBonus += AS_LEFTHAND_MASTERY.skillFormula(SkillSearch(skill_AS_LEFTHAND_MASTERY)) / 100;
+	if (n_A_JOB == cls_KAGOB) OffHandBonus += 0.2;
+	if(n_A_WeaponType == weapTyp_KATAR)
+	OffHandBonus = (1+(SkillSearch(skill_TH_DOUBLE_ATTACK)*2))/100;
+	return OffHandBonus;
 }
+// function getBaseDamage2() {
+// 	let StatusATK = getStatATK();
+// 	let MasteryATK = getMasteryATK();
+// 	let BuffATK = 0;
+// 	let PATK = 0; //4th class stat
+
+// 	let groupAMul = groupAMultiplier2(0);
+// 	let groupBMul = groupBMultiplier2(0);
+// 	// let groupBMul = [0,0,0];
+
+// 	let PropertyMultiplier = getPropertyMultiplier();
+
+// 	let baseDamage = new Array();
+// 	// let leftHandBonus =	AS_LEFTHAND_MASTERY.skillFormula(SkillSearch(skill_AS_LEFTHAND_MASTERY)) / 100;
+// 	let leftHandBonus =	1;
+// 	if (n_A_JOB == cls_KAGOB) leftHandBonus += 0.2;
+// 	console.log("leftHandBonus " + leftHandBonus)
+
+// 	for (let i = 0; i <= 2; i++) {
+// 	if (SkillSearch(skill_TK_MILD_WIND) == 0)
+// 		baseDamage[i] = Math.floor(StatusATK * 1 + ((groupAMul[i] + groupBMul[i]) * 1)) * (1 + PATK / 100) + MasteryATK + BuffATK;
+// 	else
+// 		baseDamage[i] = Math.floor(StatusATK * PropertyMultiplier * 1 + groupAMul[i] + groupBMul[i]) * (1 + PATK / 100) + MasteryATK + BuffATK;
+// 	//ATK = {(StatusATK × 2) + [(WeaponATK + ExtraATK) × Type2ATKMultiplier] + [(WeaponATK + ExtraATK) × (1 + RaceMultiplier) × (1 + SizeMultiplier) × ...]} × (1 + P.ATK ÷ 100) + MasteryATK + BuffATK
+// 	// baseDamage[i] = Math.floor(baseDamage[i] * leftHandBonus);
+// 	baseDamage[i] = Math.floor(baseDamage[i] * 1);
+// 	}
+// 	return baseDamage;
+// }
 function getBaseDamageNoMastery() {
 	let StatusATK = getStatATK();
 	let MasteryATK = 0;
@@ -81,9 +84,12 @@ function getBaseDamageNoMastery() {
 	return baseDamage;
 }
 
-function getFinalDamage(finalDamage, sk, SkillLevel, isCrit) {
+function getFinalDamage(finalDamage, sk, SkillLevel, isCrit,offHand) {
 	for (let i = 0; i <= 2; i++) {
-
+	
+	// //off hand adjustment 
+	// if(offHand && n_A_WeaponType != weapTyp_KATAR)//only dual wielding !
+	// 	finalDamage[i] *= getOffHandBonus()
 	
 	if (sk.id == skill_AX_SOUL_DESTROYER || sk.id == skill_CR_GRAND_CROSS)
 		finalDamage[i] += BK_n_A_MATK[i];
@@ -109,11 +115,14 @@ function getFinalDamage(finalDamage, sk, SkillLevel, isCrit) {
 		//finalDamage[i] = Math.floor(finalDamage[i] * (1 + (getRangedReduction()/100)));
 	}
 	if (!sk.isSpecialFormula) {
-		finalDamage[i] *= Math.floor(sk.skillFormula(SkillLevel)) / 100;
+		if(sk.id == skill_SUR_KNUCKLE_ARROW && SkillLevel > 10)//for Knuckle arrow knockback damages
+			finalDamage[i] *= Math.floor(sk.skillFormula2(SkillLevel-10)) / 100;
+		else
+			finalDamage[i] *= Math.floor(sk.skillFormula(SkillLevel)) / 100;
 	} else {
 		switch (sk.id) {
 		case skill_LK_CLASHING_SPIRAL:
-			finalDamage[i] *=
+			finalDamage[i] =
 			(getBaseDamageNoMastery()[i] +
 				ItemOBJ[n_A_Equip[eq_WEAPON]][itm_WEIGHT]) *
 				0.7 *
@@ -144,9 +153,11 @@ function getFinalDamage(finalDamage, sk, SkillLevel, isCrit) {
 			if (SkillSearch(skill_NIN_MIRROR_IMAGE))
 			finalDamage[i] *= (6 + numMirrors) / 5;
 			break;
+		//skill that deal fix damage an bypass def
 		case skill_GS_COING_FLING:
 		case skill_KAG_OVERTHROW:
 		case skill_SUM_SILVERVINE_ROOT_TWIST:
+		case skill_SRIP_SOUL_EXPLOSION:
 			finalDamage[0] = sk.skillFormula(SkillLevel);
 			finalDamage[1] = finalDamage[0];
 			finalDamage[2] = finalDamage[0];
@@ -207,16 +218,17 @@ function getFinalDamage(finalDamage, sk, SkillLevel, isCrit) {
 		finalDamage[i] * (1 + getDamageMultiplier() / 100)
 	);
 	
-	//exclude ice pick effect
-	if (!sk.bypassDef && n_tok[bon_ICE_PICK] === 0 ) {
-		//HardDEF Reduction
-		finalDamage[i] = Math.floor(finalDamage[i] * getHardDEFReduction());
-		//SoftDEF Reduction
-		finalDamage[i] = Math.floor(finalDamage[i] - getSoftDEF(true));
-	} else {
-		//Hard def used as soft def, should apply def bypass ?
-		if( n_tok[bon_ICE_PICK] === 0)
-			finalDamage[i] -= n_B[en_HARDDEF];
+	//exclude ice pick effect && Katar offHand
+	if((n_tok[bon_ICE_PICK] === 0)/* && !(offHand && n_A_WeaponType == weapTyp_KATAR)*/){
+		if ((!sk.bypassDef )) {
+			//HardDEF Reduction
+			finalDamage[i] = Math.floor(finalDamage[i] * getHardDEFReduction());
+			//SoftDEF Reduction
+			finalDamage[i] = Math.floor(finalDamage[i] - getSoftDEF(true));
+		} else {
+			//Hard def used as soft def, should apply def bypass ?
+				finalDamage[i] -= n_B[en_HARDDEF];
+		}
 	}
 	
 	//BaseCriticalMultiplier
@@ -228,7 +240,7 @@ function getFinalDamage(finalDamage, sk, SkillLevel, isCrit) {
 		Skill[n_A_ActiveSkill].id == skill_MO_MAX_GUILLOTINE_FIST
 	)
 		finalDamage[i] += 250 + 150 * SkillLevel;
-
+	
 	//Final Damage Multiplier
 	finalDamage[i] = Math.floor(
 		finalDamage[i] * (1 + getFinalDamageMultiplier(sk.id) / 100)
@@ -308,7 +320,10 @@ function getFinalDamage(finalDamage, sk, SkillLevel, isCrit) {
 	finalDamage[i] += LK_AURA_BLADE.skillFormula(
 		SkillSearch(skill_LK_AURA_BLADE)
 	);
-
+	//off hand adjustment 
+	if(offHand /*&& n_A_WeaponType == weapTyp_KATAR*/)//only katar !
+		finalDamage[i] *= getOffHandBonus()
+	
 	//hit divisibility
 	finalDamage[i] =
 		Math.floor(finalDamage[i] / eval(sk.hitDivisibility)) *
@@ -321,44 +336,31 @@ function getFinalDamage(finalDamage, sk, SkillLevel, isCrit) {
 		finalDamage[i] *= sk.skillFormula2(1) / 100;
 
 	if (sk.id == skill_SUR_KNUCKLE_ARROW)
-		if (formElements["SkillSubNum"].checked)
+		if (formElements["SkillSubNum"].checked && SkillLevel<=10)
 		finalDamage[i] += getFinalDamage(
 			getBaseDamage(0),
-			SUR_KNUCKLE_ARROW_KNOCKBACK,
-			SkillLevel,
+			SUR_KNUCKLE_ARROW,
+			SkillLevel+10,
 			0
 		)[i];
+	
 	//damage can't go lower than 0
 	finalDamage[i] = Max(finalDamage[i], 1);
 	}
 	if(!isCrit && sk.id == n_A_ActiveSkill)
 		w_DMG = finalDamage;
+
 	return finalDamage;
 }
 function groupAMultiplier(isCrit,offHand) {
 	let WeaponATK = getWeaponATK(isCrit);
-	if(offHand)
-		WeaponATK = getWeaponATK2(isCrit);
+	if(offHand && n_A_WeaponType != weapTyp_KATAR)
+			WeaponATK = getWeaponATK2(isCrit);
 	let ExtraATK = getExtraATK();
 	let Type2ATKMultiplier = getType2ATKMultiplier();
 	// Type2ATKMultiplier in script = bAtkRate
 	let PropertyMultiplier = getPropertyMultiplier();
 
-	let groupAMul = new Array();
-	for (let i = 0; i <= 2; i++)
-	groupAMul[i] = Math.floor(
-		(WeaponATK[i] + ExtraATK) *
-		(Type2ATKMultiplier / 100) *
-		(PropertyMultiplier / 100)
-	);
-	return groupAMul;
-}
-function groupAMultiplier2(isCrit) {
-	let WeaponATK = getWeaponATK2(isCrit);
-	let ExtraATK = getExtraATK();
-	let Type2ATKMultiplier = getType2ATKMultiplier();
-	// Type2ATKMultiplier in script = bAtkRate
-	let PropertyMultiplier = getPropertyMultiplier();
 	let groupAMul = new Array();
 	for (let i = 0; i <= 2; i++)
 	groupAMul[i] = Math.floor(
@@ -499,8 +501,8 @@ function getType2ATKMultiplier() {
 }
 function groupBMultiplier(isCrit,offHand) {
 	let WeaponATK = getWeaponATK(isCrit);
-	if(offHand)
-		WeaponATK = getWeaponATK2(isCrit);
+	if(offHand && n_A_WeaponType != weapTyp_KATAR)
+			WeaponATK = getWeaponATK2(isCrit);
 	let ExtraATK = getExtraATK();
 	let RaceMultiplier = getRaceMultiplier();
 	let SizeMultiplier = getSizeMultiplier();
@@ -552,47 +554,7 @@ function groupBMultiplier(isCrit,offHand) {
 		(PropertyMultiplier / 100) *
 		(1 + skillBonus / 100)
 	);
-	return groupBMul;
-}
-function groupBMultiplier2(isCrit) {
-	let WeaponATK = getWeaponATK2(isCrit);
-	let ExtraATK = getExtraATK();
-	let RaceMultiplier = getRaceMultiplier();
-	let SizeMultiplier = getSizeMultiplier();
-	let TargetPropertyMultiplier = getTargetPropertyMultiplier();
-	let MonsterMultiplier = getMonsterMultiplier();
-	let ATKMultiplier = getATKMultiplier(); // ATKMultiplier in script = bAddClass,Class_All = n_tok[bon_PHY_ATK] in sim
-	let PropertyMultiplier = getPropertyMultiplier();
-
-	let skillBonus = 0;
-	if (
-	n_A_ActiveSkill != skill_AS_VENOM_SPLASHER &&
-	n_A_ActiveSkill != skill_AX_METEOR_ASSAULT &&
-	n_A_ActiveSkill != skill_AS_GRIMTOOTH &&
-	n_A_ActiveSkill != skill_AS_VENOM_KNIFE
-	)
-	skillBonus = AX_ENCHANT_DEADLY_POISON.skillFormula(
-		SkillSearch(skill_AX_ENCHANT_DEADLY_POISON)
-	);
-
-	skillBonus = TKM_SOLAR_WRATH.skillFormula(SkillSearch(skill_TKM_SOLAR_WRATH));
-	skillBonus = TKM_LUNAR_WRATH.skillFormula(SkillSearch(skill_TKM_LUNAR_WRATH));
-	skillBonus = TKM_STELLAR_WRATH.skillFormula(
-	SkillSearch(skill_TKM_STELLAR_WRATH)
-	);
-
-	let groupBMul = new Array();
-	for (let i = 0; i <= 2; i++)
-	groupBMul[i] = Math.floor(
-		(WeaponATK[i] + ExtraATK) *
-		(1 + RaceMultiplier / 100) *
-		(1 + SizeMultiplier / 100) *
-		(1 + TargetPropertyMultiplier / 100) *
-		(1 + MonsterMultiplier / 100) *
-		(1 + ATKMultiplier / 100) *
-		(PropertyMultiplier / 100) *
-		(1 + skillBonus / 100)
-	);
+	
 	return groupBMul;
 }
 function getRaceMultiplier() {
@@ -889,8 +851,7 @@ function getTargetPropertyMultiplier() {
 		//holy cannon ball
 		if((n_A_Arrow == 2) && (Math.floor(n_B[en_ELEMENT] / 10) == ele_DARK))
 			targetPropertyMultipluer += 10;
-	}
-		
+	}		
 
 	return targetPropertyMultipluer;
 }
@@ -1069,7 +1030,7 @@ function getBossATKMultiplier() {
 		bossMultiplier += 10;	
 	}
 		//Black Feather
-	if(EquipNumSearch(2695) && (n_A_HEAD_DEF_PLUS >= 10) && (SkillSearch(skill_SHA_INVISIBILITY) == 5))
+	if(EquipNumSearch(2695) && (n_A_HEAD_DEF_PLUS >= 10) && (EnchNumSearch(ench_INVISIBILITY + 1)))
 		bossMultiplier += 50;
 
 	bossMultiplier +=
@@ -1376,10 +1337,12 @@ function getStatATKBonus(batk) {
 	// Flee + 50
 	batk += (batk * 20) / 100;
 	}
+	//Star Emperor skill
 	// if (sc->getSCE(SC_SUNSTANCE))
 	// 	batk += batk * sc->getSCE(SC_SUNSTANCE)->val2 / 100;
-	//Star Emperor skill
-
+	if(SkillSearch(skill_STEM_SOLAR_STANCE))
+		batk += batk * (SkillSearch(skill_STEM_SOLAR_STANCE) + 2);
+	
 	// if (sc->getSCE(SC_ALMIGHTY))
 	// 	batk += 30;
 	if (usableItems[ksSuperhumanSweets]) batk += 30;
@@ -1455,35 +1418,22 @@ function getWeaponATK2(isCrit) {
 	//WeaponATK = (BaseWeaponDamage + Variance + StatBonus + RefinementBonus + OverUpgradeBonus) × SizePenalty
 	let weaponATK = new Array();
 	let ATKOverUpgradeBonus = getWeaponATKOverUpgradeBonus2();
+	// let ATKOverUpgradeBonus = 0;
 	let minATKOverUpgradeBonus = 0;
 	if (ATKOverUpgradeBonus) minATKOverUpgradeBonus = 1;
-	weaponATK[0] = Math.floor(
-	(getBaseWeaponATK2() - Math.floor( getWeaponATKVariance2()) + Math.floor(getWeaponATKStatBonus2()) + getWeaponATKRefinementBonus2() + minATKOverUpgradeBonus + getWeaponATKHighUpgradeBonus2()) * getSizePenalty2());
+		weaponATK[0] = Math.floor((getBaseWeaponATK2() - Math.floor( getWeaponATKVariance2()) + Math.floor(getWeaponATKStatBonus2()) + getWeaponATKRefinementBonus2() + minATKOverUpgradeBonus + getWeaponATKHighUpgradeBonus2()) * getSizePenalty2());
 	if (isCrit)
-	weaponATK[0] = Math.floor(
-		(getBaseWeaponATK2() +
-		Math.floor(
-			getWeaponATKVariance2()
-		) + Math.floor(getWeaponATKStatBonus2()) +
-		getWeaponATKRefinementBonus2() +
-		minATKOverUpgradeBonus +
-		getWeaponATKHighUpgradeBonus2()) *
-		getSizePenalty2());
-	weaponATK[2] = Math.floor(
-	(getBaseWeaponATK2() +
-		Math.floor(getWeaponATKVariance2()) + getWeaponATKStatBonus2()  +
-		getWeaponATKRefinementBonus2() +
-		ATKOverUpgradeBonus +
-		getWeaponATKHighUpgradeBonus()) *
-		getSizePenalty2());
+		weaponATK[0] = Math.floor((getBaseWeaponATK2() + Math.floor(getWeaponATKVariance2()) + Math.floor(getWeaponATKStatBonus2()) + getWeaponATKRefinementBonus2() + minATKOverUpgradeBonus + getWeaponATKHighUpgradeBonus2()) * getSizePenalty2());
+	weaponATK[2] = Math.floor((getBaseWeaponATK2() + Math.floor(getWeaponATKVariance2()) + Math.floor(getWeaponATKStatBonus2())  + getWeaponATKRefinementBonus2() +	ATKOverUpgradeBonus + getWeaponATKHighUpgradeBonus()) *	getSizePenalty2());
 	weaponATK[1] = Math.floor((weaponATK[0] + weaponATK[2]) / 2);
 	if (SkillSearch(skill_BS_POWER_MAXIMIZE))
-	weaponATK[0] = weaponATK[1] = weaponATK[2];
+		weaponATK[0] = weaponATK[1] = weaponATK[2];
 	if (SkillSearch(GS_MAGICAL_BULLET)) {
-	weaponATK[0] += BK_n_A_MATK[0];
-	weaponATK[1] += BK_n_A_MATK[1];
-	weaponATK[2] += BK_n_A_MATK[2];
+		weaponATK[0] += BK_n_A_MATK[0];
+		weaponATK[1] += BK_n_A_MATK[1];
+		weaponATK[2] += BK_n_A_MATK[2];
 	}
+
 	return weaponATK;
 }
 function getBaseWeaponATK() {
@@ -1887,9 +1837,12 @@ function getWeaponATKBonus(watk) {
 	// if (sc->getSCE(SC_CHATTERING))
 	// 	watk += sc->getSCE(SC_CHATTERING)->val2;
 	watk += SUM_CHATTERING.skillFormula(SkillSearch(skill_SUM_CHATTERING));
+	//Star Emperor Skill
 	// if (sc->getSCE(SC_SUNSTANCE))
 	// 	watk += watk * sc->getSCE(SC_SUNSTANCE)->val2 / 100;
-	//Star Emperor Skill
+	if(SkillSearch(skill_STEM_SOLAR_STANCE))
+		watk += watk * (SkillSearch(skill_STEM_SOLAR_STANCE) + 2);
+	
 	// if (sc->getSCE(SC_SOULFALCON))
 	// 	watk += sc->getSCE(SC_SOULFALCON)->val2;
 	//Soul Reaper Skill
@@ -2899,6 +2852,7 @@ function getBuffATK() {
 
 	// if (sc->getSCE(SC_SUNSTANCE))
 	// 	watk += watk * sc->getSCE(SC_SUNSTANCE)->val2 / 100;
+	
 	// if (sc->getSCE(SC_SOULFALCON))
 	// 	watk += sc->getSCE(SC_SOULFALCON)->val2;
 	// if (sc->getSCE(SC_PACKING_ENVELOPE1))
@@ -3297,18 +3251,12 @@ function getRangedReduction() {
 }
 function getHardDEFReduction() {
 	//Damage after Hard DEF = Damage × [(4000 + HardDEF) ÷ (4000 + HardDEF × 10)]
-	// MonsterOBJ[en_ID][en_HARDDEF];
-	// return (4000 + MonsterOBJ[n_B[en_ID]][en_HARDDEF]) / (4000 + (MonsterOBJ[n_B[en_ID]][en_HARDDEF] * 10));
 	return (4000 + n_B[en_HARDDEF]) / (4000 + n_B[en_HARDDEF] * 10);
 }
 function getHardDEFReduction2() {
 	//Damage after Hard DEF = Damage × [(4000 + HardDEF) ÷ (4000 + HardDEF × 10)]
-	// MonsterOBJ[en_ID][en_HARDDEF];
-	// return (4000 + MonsterOBJ[n_B[en_ID]][en_HARDDEF]) / (4000 + (MonsterOBJ[n_B[en_ID]][en_HARDDEF] * 10));
-	return (
-	(4000 + MonsterOBJ[n_B[en_ID]][en_HARDDEF]) /
-	(4000 + MonsterOBJ[n_B[en_ID]][en_HARDDEF] * 10)
-	);
+	//bypass def reduction
+	return ((4000 + MonsterOBJ[n_B[en_ID]][en_HARDDEF]) / (4000 + MonsterOBJ[n_B[en_ID]][en_HARDDEF] * 10));
 }
 function getSoftDEF(isMonster) {
 	let softDef = 0;
@@ -4681,39 +4629,4 @@ function getSkillMultiplier(currentSkill) {
 	StPlusCard(bon_DMG_SKILL + currentSkill) +
 	testSkMod
 	);
-}
-
-function testCalcHP(level, hp_increase, hp_factor) {
-	let base_hp = 35 + level * (hp_increase / 100);
-
-	for (let i = 2; i <= level; i++)
-	base_hp += Math.round((hp_factor / 100) * i + 0.5); //Don't have round()
-	// if (job_id == JOB_SUMMONER || job_id == JOB_SPIRIT_HANDLER)
-	// 	base_hp += floor((base_hp / 2) + 0.5);
-	return base_hp;
-}
-
-function testCalcSP(level, sp_increase) {
-	let base_sp = 10 + Math.floor(level * (sp_increase / 100));
-
-	// switch (job_id) {
-	// 	case JOB_NINJA:
-	// 		if (level >= 10)
-	// 			base_sp -= 22;
-	// 		else
-	// 			base_sp = 11 + 3*level;
-	// 		break;
-	// 	case JOB_GUNSLINGER:
-	// 		if (level > 10)
-	// 			base_sp -= 18;
-	// 		else
-	// 			base_sp = 9 + 3*level;
-	// 		break;
-	// 	case JOB_SUMMONER:
-	// 	case JOB_SPIRIT_HANDLER:
-	// 		base_sp -= floor(base_sp / 2);
-	// 		break;
-	// }
-
-	return base_sp;
 }

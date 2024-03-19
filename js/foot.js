@@ -357,6 +357,13 @@ with ( document.calcForm )
 		summonerBuffs[ksHiss] = parseInt(formElements["hiss"].value);
 		summonerBuffs[ksArclouseDash] = parseInt(formElements["arclouseDash"].value);
 	}
+	{// Soul Reaper Skills
+		soulReaperBuffs[ksShadowSoul] = parseInt(formElements["shadowSoul"].value);
+		soulReaperBuffs[ksFairySoul] = parseInt(formElements["fairySoul"].value);
+		soulReaperBuffs[ksFalconSoul] = parseInt(formElements["falconSoul"].value);
+		soulReaperBuffs[ksGolemSoul] = parseInt(formElements["golemSoul"].value);
+		soulReaperBuffs[ksSoulDivision] = parseInt(formElements["soulDivision"].value);
+	}
 	
 	{ // Guild Skills
 		guildBuffs[pass_IV_BAT_ORDER] = formElements["guildSkill0"].checked;
@@ -677,6 +684,8 @@ function StPlusCalc()
 
 	
 	wSPCall = StPlusCalc2(bon_ALL_STATS);
+	if(SkillSearch(skill_STEM_UNIVERSAL_STANCE))
+		wSPCall += SkillSearch(skill_STEM_UNIVERSAL_STANCE) +2
 	wSPC_STR += StPlusCalc2(bon_STR) + wSPCall;
 	wSPC_AGI += StPlusCalc2(bon_AGI) + wSPCall;
 	wSPC_VIT += StPlusCalc2(bon_VIT) + wSPCall;
@@ -2634,10 +2643,12 @@ function FirstNovis()
 // 222 = Reb
 // 223 = TKW Cls
 // 224 = Summoner
-// 225 = Kag/Oro + Reb
-// 226 = 3rd + Kag/Oro + Reb + Summoner
+// 225 = Kag/Oro + Reb + Soul Reaper + Star Emperor
+// 226 = 3rd + Kag/Oro + Reb + Summoner + Soul Reaper + Star Emperor
 // 227 = MIN & WAN
 // 228 = AB & WLK & ENO (& Soul Reaper)
+// 229 = Star Emperor
+// 230 = Soul Reaper
 // >1000 -> Rebi & Sub
 // >2000 -> 3rd  & Sub
 // 2092 = 3rd swo + mer + aco
@@ -2727,6 +2738,8 @@ JobEquipItemOBJ = [
 /* Eno */[0, 2, 50, 90, 120, 226, 228, 999],
 /* Reb */[0, 2, 1, 3, 145,  59,  83, 222, 225, 226, 999],
 /* Sum */[0, 1, 224, 226, 999],
+/* Ste */[0, 2, 1, 3,142, 79, 83, 84, 85, 86, 87, 91, 93, 95,  147, 223, 225, 226, 229, 999],
+/* Srp */[0, 2, 1, 3,143, 55, 65,111, 71, 77, 79, 89, 97, 146, 223, 225, 226, 228, 230, 999],
 ];
 }
 

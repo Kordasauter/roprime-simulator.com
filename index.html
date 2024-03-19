@@ -294,6 +294,10 @@
 																	<option value="72">Kagerou/Oboro</option>
 																	<option value="74">Rebellion</option>
 																</optgroup>
+																<optgroup label="Expanded 3rd Job">
+																	<option value="76">Star Emperor</option>
+																	<option value="77">Soul Reaper</option>
+																</optgroup>
 																<optgroup label="Doram">
 																	<option value="75">Summoner</option>
 																</optgroup>
@@ -2006,6 +2010,87 @@
 										</div>
 									</div>
 								</div>
+
+								<!--Soul Reaper Skills-->
+								<div  class="padded_side">
+									<div class="card shadow mb-4">
+										<!-- Card Header -->
+										<div
+											class="card-header d-flex flex-row align-items-center justify-content-between head_bg">
+											<h6 class="m-0 font-weight-bold text-primary head_btn" onclick="ToggleVisibility('Soul_Reaper_Skills')"><span class="padded_large">Soul Reaper Skills</span></h6>
+										</div>
+										<!-- Card Body -->
+										<div class="card-body" id="Soul_Reaper_Skills">
+											<table id="soulreapers" class="shadow">
+												<tbody>
+													<tr>
+														<td id="SRIP0_1" class="padded">Shadow Soul</td>
+														<td id="SRIP0_2" class="padded">
+															<select id="shadowSoul" style="width:65px;" onchange="StAllCalc()">
+																<option selected="selected" value="0">0</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+																<option value="3">3</option>
+																<option value="4">4</option>
+																<option value="5">5</option>
+															</select>
+														</td>
+														<td id="SRIP1_1" class="padded">Fairy Soul</td>
+														<td id="SRIP1_2" class="padded">
+															<select id="fairySoul" style="width:65px;" onchange="StAllCalc()">
+																<option selected="selected" value="0">0</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+																<option value="3">3</option>
+																<option value="4">4</option>
+																<option value="5">5</option>
+															</select>
+														</td>
+													</tr>
+													<tr>
+														<td id="SRIP2_1" class="padded">Falcon Soul</td>
+														<td id="SRIP2_2" class="padded">
+															<select id="falconSoul" style="width:65px;" onchange="StAllCalc()">
+																<option selected="selected" value="0">0</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+																<option value="3">3</option>
+																<option value="4">4</option>
+																<option value="5">5</option>
+															</select>
+														</td>
+														<td id="SRIP3_1" class="padded">Golem Soul</td>
+														<td id="SRIP3_2" class="padded">
+															<select id="golemSoul" style="width:65px;" onchange="StAllCalc()">
+																<option selected="selected" value="0">0</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+																<option value="3">3</option>
+																<option value="4">4</option>
+																<option value="5">5</option>
+															</select>
+														</td>
+													</tr>
+													<tr>
+														<td id="SRIP4_1" class="padded">Soul Division</td>
+														<td id="SRIP4_2" class="padded">
+															<select id="soulDivision" style="width:65px;" onchange="StAllCalc()">
+																<option selected="selected" value="0">0</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+																<option value="3">3</option>
+																<option value="4">4</option>
+																<option value="5">5</option>
+															</select>
+														</td>
+														<td id="SRIP5_1" class="padded"></td>
+														<td id="SRIP5_2" class="padded"></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
 								
 							</div>
 							
@@ -2737,7 +2822,7 @@
 	}
 </style>
 	<script>
-		var version = '65';
+		var version = '66';
 		var jsassets = [
 		'js/menu.js',
 		'js/variables.js',

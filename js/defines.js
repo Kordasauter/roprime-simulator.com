@@ -75,6 +75,8 @@ cls_KAGOB = 72;
 cls_ENOVI = 73;
 cls_REB = 74;
 cls_SUM = 75;
+cls_STEM = 76;
+cls_SRIP = 77;
 cls_COUNT = 76;
 }
 
@@ -657,7 +659,9 @@ ench_GT_SILENCE = ench_GT_CURE + 5;
 ench_FLAMING_PETALS = ench_GT_SILENCE + 5;
 ench_FREEZING_SPEAR = ench_FLAMING_PETALS + 10;
 ench_WIND_BLADE = ench_FREEZING_SPEAR + 10;
-// ench_ = ench_WIND_BLADE + 10;
+ench_INVISIBILITY = ench_WIND_BLADE + 10;
+// ench_ = ench_INVISIBILITY + 1;//for other skills
+// ench_ = ench_INVISIBILITY + 10;
 
 }
 
@@ -2028,6 +2032,47 @@ skill_SUM_SEAFOOD = 800;
 skill_SUM_PLANT = 801;
 skill_SUM_ANIMAL = 802;
 
+//Star Emperor
+skill_STEM_SOLAR_LUNAR_STELLAR_RECORD = 803;
+skill_STEM_SOLAR_LUNAR_STELLAR_PURIFICATION = 804;
+skill_STEM_SOLAR_STANCE = 805;
+skill_STEM_LUNAR_STANCE = 806;
+skill_STEM_STELLAR_STANCE = 807;
+skill_STEM_UNIVERSAL_STANCE = 808;
+skill_STEM_BLAZE_KICK = 809;
+skill_STEM_NEW_MOON_KICK = 810;
+skill_STEM_FLASH_KICK = 811;
+skill_STEM_NOVA_EXPLOSION = 812;
+skill_STEM_GRAVITY_CONTROL= 813;
+skill_STEM_SOLAR_EXPLOSION = 814;
+skill_STEM_FULL_MOON_KICK = 815;
+skill_STEM_FALLING_STARS = 816;
+skill_STEM_STAR_EMPERORS_DESCENT = 817;
+skill_STEM_SOLAR_LUMINANCE = 818;
+skill_STEM_LUNAR_LUMINANCE = 819;
+skill_STEM_STELLAR_LUMINANCE = 820;
+skill_STEM_STAR_CREATORS_BOOK = 821;
+skill_STEM_BOOK_OF_DIMENSIONS = 822;
+
+//Soul Reaper
+skill_SRIP_SOUL_COLLECTION = 823;
+skill_SRIP_SOUL_HARVEST = 824;
+skill_SRIP_EVIL_SOUL_CURSE = 825;
+skill_SRIP_SOUL_ENERGY_RESEARCH = 826;
+skill_SRIP_KAUTE = 827;
+skill_SRIP_ESHA = 828;//
+skill_SRIP_CURSE_EXPLOSION = 829;//
+skill_SRIP_SOUL_BIND = 830;
+skill_SRIP_SOUL_CIRCULATION = 831;
+skill_SRIP_ESPA = 832;//
+skill_SRIP_SHADOW_SOUL = 833;
+skill_SRIP_FAIRY_SOUL = 834;
+skill_SRIP_FALCON_SOUL = 835;
+skill_SRIP_GOLEM_SOUL = 836;
+skill_SRIP_ESWOO = 837;//
+skill_SRIP_SOUL_DIVISION = 838;
+skill_SRIP_SOUL_EXPLOSION = 839;//
+
 skill_FINISH_DELIMITER = 999;
 }
 
@@ -2126,12 +2171,18 @@ var ksPerformerVit = 32;
 var ksPerformerInt = 33;
 var ksPerformerDex = 34;
 var ksPerformerLuk = 35;
-
+//Summoner Buffs
 var ksBunchOfShrimp = 0;
 var ksPurring = 1;
 var ksMeowMeow = 2;
 var ksHiss = 3;
 var ksArclouseDash = 4;
+//Soul Reaper Buffs
+var ksShadowSoul = 0;
+var ksFairySoul = 1;
+var ksFalconSoul = 2;
+var ksGolemSoul = 3;
+var ksSoulDivision = 4;
 
 // Guild Skills
 pass_IV_BAT_ORDER = 0;

@@ -623,7 +623,7 @@ function AdjustJobLevelList( job )
 	}
 	else if ( job == cls_KAGOB || job == cls_REB ) // KAG/OBO/REBEL
 	{
-		maxJobLvl = 60;
+		maxJobLvl = 65;//was 60
 	}
 	else if ( job === cls_SNOVI ) // SNovi
 	{
@@ -673,7 +673,7 @@ function AdjustBaseLevelList( job )
 	var formElements = document.forms["calcForm"].elements;
 	var maxBaseLvl = 0;
 	
-	if ( thirdClass === 1 || job == cls_REB) // 3rdCls
+	if ( thirdClass === 1 || job == cls_REB || job == cls_STEM || job == cls_SRIP ) // 3rdCls
 	{
 			maxBaseLvl=CONST_MAXLVL_THIRD-CONST_MAXLVL; // amount of BLvl [99, 175]
 	}
@@ -706,7 +706,7 @@ function AdjustBaseLevelList( job )
 		for ( var i = 0; i !== ( maxBaseLvl + 1); i++ )
 		{
 			// refresh labels
-			if(thirdClass === 1 || job == cls_REB || job == cls_KAGOB ) {
+			if(thirdClass === 1 || job == cls_REB || job == cls_KAGOB || job == cls_STEM || job == cls_SRIP) {
 				formElements["A_BaseLV"].options[i] = new Option( i + 99, i + 99 );
 			}
 			else
@@ -751,7 +751,7 @@ function AdjustStatLists( job )
 	var maxStatLvl = 0;
 	
 	// Stats [list refresh]
-	if ( thirdClass === 1 || job == cls_REB || job == cls_SUM) // third cls
+	if ( thirdClass === 1 || job == cls_REB || job == cls_SUM || job == cls_STEM || job == cls_SRIP ) // third cls
 	{
 		maxStatLvl = CONST_MAXSTAT_THIRD; // maxStats
 		if(formElements["A_youshi"].checked)
@@ -958,7 +958,6 @@ function BuildPassiveSkillTable()
 	var rowCaptionB = 'class="padded"';
 	var rowAreaB = 'class="padded"';
 	var formElements = document.forms["calcForm"].elements;
-	
 	// Calc total number of passive skills
 	for ( skillCount; JobSkillPassOBJ[job][skillCount] !== 999; skillCount++ );
 	if ( skillCount <= 0 )
@@ -966,7 +965,6 @@ function BuildPassiveSkillTable()
 		$('#id_passiveSkills table').remove();
 		return;
 	}
-
 	// Build Skill Table
 	var str = '<table class="shadow">';
 	var rowCount = 0;
@@ -989,7 +987,6 @@ function BuildPassiveSkillTable()
 	}
 	str += '</table>';		
 	myInnerHtml( "id_passiveSkills", str, 0 );
-
 	// Build Skill Labels and Option Boxes
 	for ( var i = 0; i < skillCount; i++ )
 	{
@@ -999,7 +996,6 @@ function BuildPassiveSkillTable()
 			myInnerHtml( "P_Skill" + i + "s", '<select class="Passive_Skill" name="A_Skill' + i + '" style="width:65px;" onchange="TogglePassiveSkills()"></select>',0);
 		}
 	}
-
 	// Fill Option Boxes
 	for ( var j = 0; j < skillCount; j++ )
 	{ // SkillLevel
@@ -1029,7 +1025,6 @@ function BuildPassiveSkillTable()
 			}
 		}
 	}
-
 	// Handle Special Skills
 	var skillASelect = formElements["A_Skill0"];
 	var skillBSelect = formElements["A_Skill5"];
@@ -1039,7 +1034,6 @@ function BuildPassiveSkillTable()
 	var skillFSelect = formElements["A_Skill6"];
 	var skillGSelect = formElements["A_Skill7"];
 	var skillHSelect = formElements["A_Skill10"];
-	
 	// Energy Coat
 	if ( JobSkillPassOBJ[job][0] === skill_MA_ENERGY_COAT )
 	{ 

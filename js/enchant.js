@@ -5560,6 +5560,16 @@
 ,[ 5558,"Wind Blade Lv.8",0,bon_DMG_SKILL + skill_NIN_FIRST_WIND,24,bon_NONE]
 ,[ 5559,"Wind Blade Lv.9",0,bon_DMG_SKILL + skill_NIN_FIRST_WIND,27,bon_NONE]
 ,[ 5560,"Wind Blade Lv.10",0,bon_DMG_SKILL + skill_NIN_FIRST_WIND,30,bon_NONE]
+,[ 5561,"Invisibility Lv.5",0,bon_NONE]//effect on formula file (item need to be +10)
+,[ 5562,"Skill Lv.X",0,bon_NONE]
+,[ 5563,"Skill Lv.X",0,bon_NONE]
+,[ 5564,"Skill Lv.X",0,bon_NONE]
+,[ 5565,"Skill Lv.X",0,bon_NONE]
+,[ 5566,"Skill Lv.X",0,bon_NONE]
+,[ 5567,"Skill Lv.X",0,bon_NONE]
+,[ 5568,"Skill Lv.X",0,bon_NONE]
+,[ 5569,"Skill Lv.X",0,bon_NONE]
+,[ 5570,"Skill Lv.X",0,bon_NONE]
 ]
 //,[  x,"name",0,bon_NONE]
 EnchantNum = EnchantOBJ.length -1;
@@ -5704,6 +5714,7 @@ EnchantNum = EnchantOBJ.length -1;
 /* 135  */[ench_NONE,ench_FLAMING_PETALS + 1,ench_FLAMING_PETALS + 2,ench_FLAMING_PETALS + 3,ench_FLAMING_PETALS + 4,ench_FLAMING_PETALS + 5,ench_FLAMING_PETALS + 6,ench_FLAMING_PETALS + 7,ench_FLAMING_PETALS + 8,ench_FLAMING_PETALS + 9,ench_FLAMING_PETALS + 10,"NULL"],
 /* 136  */[ench_NONE,ench_FREEZING_SPEAR + 1,ench_FREEZING_SPEAR + 2,ench_FREEZING_SPEAR + 3,ench_FREEZING_SPEAR + 4,ench_FREEZING_SPEAR + 5,ench_FREEZING_SPEAR + 6,ench_FREEZING_SPEAR + 7,ench_FREEZING_SPEAR + 8,ench_FREEZING_SPEAR + 9,ench_FREEZING_SPEAR + 10,"NULL"],
 /* 137  */[ench_NONE,ench_WIND_BLADE + 1,ench_WIND_BLADE + 2,ench_WIND_BLADE + 3,ench_WIND_BLADE + 4,ench_WIND_BLADE + 5,ench_WIND_BLADE + 6,ench_WIND_BLADE + 7,ench_WIND_BLADE + 8,ench_WIND_BLADE + 9,ench_WIND_BLADE + 10,"NULL"],
-/* 138  */[ench_NONE,"NULL"],
+/* 138 Black Feather */[ench_NONE,ench_INVISIBILITY + 1,"NULL"],
+/* 139  */[ench_NONE,"NULL"],
 ];
 }

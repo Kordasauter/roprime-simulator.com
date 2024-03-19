@@ -304,43 +304,39 @@ function CalcDupleLightChance() {
 }
 
 function CalcDoubleAttackChance() {
-  doubleAttackChance = SkillSearch(skill_TH_DOUBLE_ATTACK) * 5;
+  let doubleAttackRateMultiplier = 5;
+  if(PATCH >= 2)
+    doubleAttackRateMultiplier = 7;
+  doubleAttackChance = SkillSearch(skill_TH_DOUBLE_ATTACK) * doubleAttackRateMultiplier;
   if (n_A_WeaponType != weapTyp_DAGGER) {
     // dagger only.
     doubleAttackChance = 0;
   }
   if (CardNumSearch(43)) {
     // Side Winder Card
-    if (SkillSearch(skill_TH_DOUBLE_ATTACK) > 1) {
-      doubleAttackChance = SkillSearch(skill_TH_DOUBLE_ATTACK) * 5;
-    } else {
-      doubleAttackChance = 5;
-    }
+    doubleAttackChance =  Max(SkillSearch(skill_TH_DOUBLE_ATTACK),1) * doubleAttackRateMultiplier;
   }
   if (EquipNumSearch(570) && n_A_WeaponType != weapTyp_NONE) {
     // Chick Hat
-    if (SkillSearch(skill_TH_DOUBLE_ATTACK) > 1) {
-      doubleAttackChance = SkillSearch(skill_TH_DOUBLE_ATTACK) * 5;
-    } else {
-      doubleAttackChance = 10;
-    }
+    doubleAttackChance =  Max(SkillSearch(skill_TH_DOUBLE_ATTACK),2) * doubleAttackRateMultiplier;
   }
   if (EquipNumSearch(1296) && n_A_WeaponType != weapTyp_NONE) {
     // Snake Head
-    if (SkillSearch(skill_TH_DOUBLE_ATTACK) > 1) {
-      doubleAttackChance = SkillSearch(skill_TH_DOUBLE_ATTACK) * 5;
-    } else {
-      doubleAttackChance = 25;
-    }
+    doubleAttackChance =  Max(SkillSearch(skill_TH_DOUBLE_ATTACK),5) * doubleAttackRateMultiplier;
   }
   if (EquipNumSearch(399)) {
     // Nagan
-    if (SkillSearch(skill_TH_DOUBLE_ATTACK) > 5) {
-      doubleAttackChance = SkillSearch(skill_TH_DOUBLE_ATTACK) * 5;
-    } else {
-      doubleAttackChance = 25;
-    }
+    doubleAttackChance =  Max(SkillSearch(skill_TH_DOUBLE_ATTACK),5) * doubleAttackRateMultiplier;
   }
+  if (EquipNumSearch(2235)) {
+    //Poison Forged Spear
+    doubleAttackChance =  Max(SkillSearch(skill_TH_DOUBLE_ATTACK),5) * doubleAttackRateMultiplier;
+  }
+  if (EquipNumSearch(2460)) {
+    //Magician's Night Cap
+    doubleAttackChance =  Max(SkillSearch(skill_TH_DOUBLE_ATTACK),5) * doubleAttackRateMultiplier;
+  }
+
   if (n_A_WeaponType === weapTyp_HANDGUN) {
     //Chain Action
     doubleAttackChance = SkillSearch(skill_GS_CHAIN_ACTION) * 5;
@@ -348,19 +344,19 @@ function CalcDoubleAttackChance() {
       // Side Winder Card
       doubleAttackChance =
         SkillSearch(skill_GS_CHAIN_ACTION) * 5 +
-        ((100 - SkillSearch(skill_GS_CHAIN_ACTION) * 5) * 5) / 100;
+        ((100 - SkillSearch(skill_GS_CHAIN_ACTION) * 5) * (1 * doubleAttackRateMultiplier)) / 100;
     }
     if (EquipNumSearch(570)) {
       // Chick Hat
       doubleAttackChance =
         SkillSearch(skill_GS_CHAIN_ACTION) * 5 +
-        ((100 - SkillSearch(skill_GS_CHAIN_ACTION) * 5) * 10) / 100;
+        ((100 - SkillSearch(skill_GS_CHAIN_ACTION) * 5) * (2 * doubleAttackRateMultiplier)) / 100;
     }
     if (EquipNumSearch(1296)) {
       // Snake Head
       doubleAttackChance =
         SkillSearch(skill_GS_CHAIN_ACTION) * 5 +
-        ((100 - SkillSearch(skill_GS_CHAIN_ACTION) * 5) * 25) / 100;
+        ((100 - SkillSearch(skill_GS_CHAIN_ACTION) * 5) * (5 * doubleAttackRateMultiplier)) / 100;
     }
   }
 
@@ -370,6 +366,7 @@ function CalcDoubleAttackChance() {
       (doubleAttackHit * (100 + SkillSearch(skill_TH_DOUBLE_ATTACK))) / 100;
     doubleAttackHit = Min(doubleAttackHit, 100);
   }
+  return doubleAttackChance;
 }
 
 function CalcFinalCriticalChance() {
@@ -1794,6 +1791,15 @@ function ApplySkillModifiers(damage) {
     if (n_A_Equip[eq_WEAPONII] == 1267 && n_A_Weapon2_ATKplus >= 6)
       dmgMultiplier += (n_A_Weapon2_ATKplus - 5) * 2;
   }
+  //seems to increase damage on skill formulas instead of here ? source: RAthena's code 
+  // if(n_A_ActiveSkill == skill_STEM_SOLAR_EXPLOSION)
+  //   dmgMultiplier += SkillSearch(skill_STEM_SOLAR_LUMINANCE) * 5;
+  // if(n_A_ActiveSkill == skill_STEM_FULL_MOON_KICK)
+  //   dmgMultiplier += SkillSearch(skill_STEM_LUNAR_LUMINANCE) * 5;
+  // if(n_A_ActiveSkill == skill_STEM_FALLING_STARS)
+  //   dmgMultiplier += SkillSearch(skill_STEM_STELLAR_LUMINANCE) * 5;
+
+
   // if ( n_A_ActiveSkill==skill_WI_EARTH_SPIKE ||
   // n_A_ActiveSkill == skill_WI_HEAVENS_DRIVE )
   // {
@@ -2184,6 +2190,9 @@ function DisplayAdditionalBattleInfo() {
   //classic calc
   let currentSkill = n_A_DMG;
   let currentSkillCrit = [0,0,0];
+
+  if(Skill[n_A_ActiveSkill].isMagic)
+    currentSkill = w_DMG
   for(let i = 0; i < 3 ; i++)
     currentSkillCrit[i] = currentSkill[2] * 1.4;
   //beta calc
@@ -2265,7 +2274,8 @@ function DisplayAdditionalBattleInfo() {
 
   // Ave Number of Hits ------------------------------------
     // //add Double Attack to DPS Calculation
-    DoubleAttackRate = SkillSearch(skill_TH_DOUBLE_ATTACK)/100;
+    // DoubleAttackRate = SkillSearch(skill_TH_DOUBLE_ATTACK)/100;
+    DoubleAttackRate = CalcDoubleAttackChance();
     if(PATCH <= 1)
       DoubleAttackRate *= 5;
     else
@@ -2344,7 +2354,7 @@ function DisplayAdditionalBattleInfo() {
   if (n_Delay[0]) {
     myInnerHtml("AveSecondATK", "Special", 0);
   } else {
-    myInnerHtml("AveSecondATK", damagePerSecond, 0);
+    myInnerHtml("AveSecondATK", numberFormat(damagePerSecond), 0);
   }
 
   // Damage taken
@@ -2591,6 +2601,21 @@ function ChangePatch() {
     SkillOBJ[689][1] = 5; //[689,5,"Cart Tornado"],
     SkillOBJ[694][1] = 5; //[694,5,"Spore Explosion"],
     // SkillOBJ[xxx][1]=y;
+    //REB
+    SkillOBJ[748][1] = 5;//[748,5,"Fire Dance"]
+    SkillOBJ[751][1] = 5;//[751,5,"Vanishing Buster"]
+    SkillOBJ[755][1] = 5;//[755,5,"God's Hammer"]
+    SkillOBJ[759][1] = 5;//[759,5,"Dragon Tail"]
+    SkillOBJ[761][1] = 5;//[761,5,"Round Trip"]
+    //Star Emperor
+    SkillOBJ[814][1] = 7// [814,7,"Solar Explosion"]
+    SkillOBJ[815][1] = 7// [815,7,"Full Moon Kick"]
+    SkillOBJ[816][1] = 7// [816,7,"Falling Stars"]
+    //Soul Reaper
+    // [825,5,"Evil Soul Curse"]
+    SkillOBJ[829][1] = 5// [829,5,"Curse Explosion"]
+    SkillOBJ[832][1] = 5// [832,5,"Espa"]
+    SkillOBJ[837][1] = 7// [837,7,"Eswoo"]
   }
   if (PATCH >= 1) {
     //Update Max Blv
@@ -2638,6 +2663,21 @@ function ChangePatch() {
     SkillOBJ[689][1] = 10; //[689,10,"Cart Tornado"]
     SkillOBJ[694][1] = 10; //[694,10,"Spore Explosion"]
     // SkillOBJ[573][1]=5;
+    //REB
+    SkillOBJ[748][1] = 5;//[748,5,"Fire Dance"]
+    SkillOBJ[751][1] = 5;//[751,5,"Vanishing Buster"]
+    SkillOBJ[755][1] = 5;//[755,5,"God's Hammer"]
+    SkillOBJ[759][1] = 5;//[759,5,"Dragon Tail"]
+    SkillOBJ[761][1] = 5;//[761,5,"Round Trip"]
+    //Star Emperor
+    SkillOBJ[814][1] = 7// [814,7,"Solar Explosion"]
+    SkillOBJ[815][1] = 7// [815,7,"Full Moon Kick"]
+    SkillOBJ[816][1] = 7// [816,7,"Falling Stars"]
+    //Soul Reaper
+    // [825,5,"Evil Soul Curse"]
+    SkillOBJ[829][1] = 5// [829,5,"Curse Explosion"]
+    SkillOBJ[832][1] = 5// [832,5,"Espa"]
+    SkillOBJ[837][1] = 7// [837,7,"Eswoo"]
   }
   if (PATCH == 2) {
     //Update Max Blv
@@ -2683,6 +2723,22 @@ function ChangePatch() {
     //GEN
     SkillOBJ[689][1] = 10; //[689,10,"Cart Tornado"]
     SkillOBJ[694][1] = 10; //[694,10,"Spore Explosion"]
+    //REB
+    SkillOBJ[748][1] = 10;//[748,5,"Fire Dance"]
+    SkillOBJ[751][1] = 10;//[751,5,"Vanishing Buster"]
+    SkillOBJ[755][1] = 10;//[755,5,"God's Hammer"]
+    SkillOBJ[759][1] = 10;//[759,5,"Dragon Tail"]
+    SkillOBJ[761][1] = 10;//[761,5,"Round Trip"]
+    //Star Emperor
+    SkillOBJ[814][1] = 10// [814,7,"Solar Explosion"]
+    SkillOBJ[815][1] = 10// [815,7,"Full Moon Kick"]
+    SkillOBJ[816][1] = 10// [816,7,"Falling Stars"]
+    //Soul Reaper
+    // [825,5,"Evil Soul Curse"]
+    SkillOBJ[829][1] = 10// [829,5,"Curse Explosion"]
+    SkillOBJ[832][1] = 10// [832,5,"Espa"]
+    SkillOBJ[837][1] = 10// [837,7,"Eswoo"]
+    
   }
   let temp = "";
   if (formElements["A_JOB"].value != 0) temp += TempSaveActual();

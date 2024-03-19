@@ -2922,6 +2922,16 @@ function ClickHeadUp( data, isRefine )
 		formElements["A_HEAD_UPPER_ENCHANT" + "_3"].disabled = false;
 		formElements["A_HEAD_UPPER_ENCHANT" + "_2"].disabled = true;
 	}
+	else if(head_up_id == 2695)
+	{//Black Feather
+		if(!isRefine)
+			CleanEnchant("A_HEAD_UPPER_ENCHANT");
+		formElements["A_HEAD_UPPER_ENCHANT" + "_4"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[138][i] != "NULL" && !isRefine; i++ )
+		{
+			formElements["A_HEAD_UPPER_ENCHANT" + "_4" ].options[i] = new Option(EnchantOBJ[EnchantListOBJ[138][i]][1],EnchantOBJ[EnchantListOBJ[138][i]][0]);
+		}
+	}
 	// else if(head_up_id == 9999)
 	// {
 		// if(!isRefine)
@@ -4260,6 +4270,9 @@ with(document.calcForm)
 		for(i=0;i<=10;i++)
 			SkillSubNum.options[i] = new Option(i,i);
 		SkillSubNum.value=0;
+		myInnerHtml("AASkillName2","<br/>marked by Crimson Marker",0);
+		myInnerHtml("AASkill2", '<input type="checkbox" name="SkillSubNum2" onchange="calc()">', 0 );
+		SkillSubNum2.checked = false;
 	}
 	else if ( n_A_ActiveSkill == skill_KN_BOWLING_BASH )
 	{
@@ -4353,6 +4366,18 @@ with(document.calcForm)
 		SkillSubNum.options[2] = new Option(">50%",2);
 		SkillSubNum.options[3] = new Option(">80%",3);
 		SkillSubNum.options[4] = new Option("100%",4);
+	}
+	else if ( n_A_ActiveSkill == skill_SRIP_CURSE_EXPLOSION )
+	{
+		myInnerHtml("AASkillName","<br/>Evil Soul Curse ",0);
+		myInnerHtml( "AASkill", '<input type="checkbox" name="SkillSubNum" onchange="calc()">', 0 );
+		SkillSubNum.checked = false;
+	}
+	else if ( n_A_ActiveSkill == skill_REB_DRAGON_TAIL )
+	{
+		myInnerHtml("AASkillName","<br/>marked by Crimson Marker",0);
+		myInnerHtml("AASkill", '<input type="checkbox" name="SkillSubNum" onchange="calc()">', 0 );
+		SkillSubNum.checked = false;
 	}
 	else
 	{

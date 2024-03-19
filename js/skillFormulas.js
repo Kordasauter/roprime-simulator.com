@@ -157,6 +157,11 @@ var MAGICAL_SKILLS = [
   skill_SUM_SILVERVINE_STEM_SPEAR,
   skill_SUM_CATNIP_METEOR,
   skill_GEN_DEMONIC_FIRE,
+  skill_SRIP_ESHA,
+  skill_SRIP_CURSE_EXPLOSION,
+  skill_SRIP_ESPA,
+  skill_SRIP_ESWOO,
+  // skill_SRIP_SOUL_EXPLOSION,
 ];
 function clashingATKFormula(weight) {
   CalcAtk();
@@ -889,6 +894,13 @@ function CalcSkillDamage_old() {
     skill_GEN_CRAZY_WEED,
     skill_GEN_SPORE_EXPLOSION,
     skill_SHA_FEINT_BOMB,
+    skill_STEM_BLAZE_KICK,
+    skill_STEM_NEW_MOON_KICK,
+    skill_STEM_FLASH_KICK,
+    skill_STEM_NOVA_EXPLOSION,
+    skill_STEM_GRAVITY_CONTROL,
+    skill_STEM_FULL_MOON_KICK,
+    skill_STEM_STAR_EMPERORS_DESCENT,
     "NULL",
   ];
   for (var iw = 0; w_ActS[iw] != n_A_ActiveSkill && w_ActS[iw] != "NULL"; iw++);
@@ -2395,6 +2407,11 @@ function CalcSkillDamage_old() {
       damageType = kDmgTypeRanged;
       w_SkillMod = n_A_ActiveSkillLV * 2;
       w_SkillMod += SkillSearch(skill_GS_DESPERADO) * 0.5;
+      if(PATCH == 2)
+      {
+        w_SkillMod = n_A_ActiveSkillLV + 2;
+        w_SkillMod += SkillSearch(skill_GS_DESPERADO) * 0.2;
+      }
       fixedCastTime *= 0.0;
       variableCastTime *= 0.0;
       n_Delay[ksDelayGlobal] = 0.5;
@@ -2413,7 +2430,8 @@ function CalcSkillDamage_old() {
     } else if (n_A_ActiveSkill == skill_REB_VANISHING_BUSTER) {
       damageType = kDmgTypeRanged;
       w_SkillMod = 20 + n_A_ActiveSkillLV * 3;
-
+      if(PATCH >= 2)
+        w_SkillMod = 15 + n_A_ActiveSkillLV;
       fixedCastTime *= 1.0;
       variableCastTime *= 3.5 - n_A_ActiveSkillLV * 0.5;
       n_Delay[ksDelayCooldown] = 2.0;
@@ -2459,7 +2477,16 @@ function CalcSkillDamage_old() {
       damageType = kDmgTypeRanged;
       w_SkillMod = 28 + n_A_ActiveSkillLV * 14;
       w_SkillMod += Math.ceil((numSpheres + 1) / 2) * 2;
-
+      if(PATCH >= 2)
+      {
+        w_SkillMod = n_A_ActiveSkillLV;
+       
+        if (formElements["SkillSubNum2"].checked)
+          w_SkillMod += numSpheres * 1.5;
+        else
+          w_SkillMod += numSpheres * 4;
+      }
+      
       fixedCastTime *= 0.0;
       variableCastTime *= 0.0;
       n_Delay[ksDelayCooldown] = 30.0;
@@ -2470,7 +2497,13 @@ function CalcSkillDamage_old() {
     } else if (n_A_ActiveSkill == skill_REB_DRAGON_TAIL) {
       damageType = kDmgTypeRanged;
       w_SkillMod = 40 + n_A_ActiveSkillLV * 10;
-
+      if(PATCH == 2)
+      {
+        w_SkillMod = 5 + n_A_ActiveSkillLV * 2;
+        if (formElements["SkillSubNum"].checked)
+          w_SkillMod *= 2;
+        w_SkillMod *= (n_A_BaseLV/100);
+      }
       fixedCastTime *= 0.0;
       variableCastTime *= 1.0 + n_A_ActiveSkillLV * 0.2;
       n_Delay[ksDelayGlobal] = 2.0;
@@ -2638,7 +2671,77 @@ function CalcSkillDamage_old() {
       fixedCastTime *= 0.0;
       variableCastTime *= 1.0;
       n_Delay[ksDelayCooldown] = 5.0;
+    } else if (n_A_ActiveSkill == skill_STEM_BLAZE_KICK)
+    {
+      n_A_Weapon_element = ele_FIRE;
+      damageType = kDmgTypeMelee;
+      w_SkillMod = 1.5 + (n_A_ActiveSkillLV * 0.5);
+
+      fixedCastTime *= 0.0;
+      variableCastTime *= 0.0;
+      n_Delay[ksDelayGlobal] = 1.0;
+    } else if (n_A_ActiveSkill == skill_STEM_NEW_MOON_KICK)
+    {
+      damageType = kDmgTypeMelee;
+      w_SkillMod = 6 + n_A_ActiveSkillLV;
+
+      fixedCastTime *= 0.0;
+      variableCastTime *= 1.0;
+      n_Delay[ksDelayCooldown] = 1.0;
+    } else if (n_A_ActiveSkill == skill_STEM_FLASH_KICK)
+    {
+      damageType = kDmgTypeMelee;
+      w_SkillMod = 1;
+
+      fixedCastTime *= 0.0;
+      variableCastTime *= 0.0;
+      // n_Delay[] = 5.0;
+    } else if (n_A_ActiveSkill == skill_STEM_NOVA_EXPLOSION)
+    {
+      damageType = kDmgTypeMelee;
+      w_SkillMod = 2 + n_A_ActiveSkillLV;
+
+      fixedCastTime *= 1.0;
+      variableCastTime *= 5.0;
+      n_Delay[ksDelayGlobal] = 1.0;
+      n_Delay[ksDelayCooldown] = 20.0;
+    } else if (n_A_ActiveSkill == skill_STEM_GRAVITY_CONTROL)
+    {
+      damageType = kDmgTypeMelee;
+      w_SkillMod = (100 + (50 * n_B[en_LEVEL])) / 100;
+
+      fixedCastTime *= 1.0;
+      variableCastTime *= 1.0;
+      // n_Delay[] = 5.0;
+    } else if (n_A_ActiveSkill == skill_STEM_FULL_MOON_KICK)
+    {
+      damageType = kDmgTypeMelee;
+      w_SkillMod = 11 + n_A_ActiveSkillLV;
+      w_SkillMod += SkillSearch(skill_STEM_LUNAR_LUMINANCE) * 5;
+
+      fixedCastTime *= 0.0;
+      variableCastTime *= 0.0;
+      n_Delay[ksDelayCooldown] = 1.0;
+      // n_Delay[] = 5.0;
+    } else if (n_A_ActiveSkill == skill_STEM_STAR_EMPERORS_DESCENT)
+    {
+      damageType = kDmgTypeMelee;
+      w_SkillMod = 9 + n_A_ActiveSkillLV;
+
+      fixedCastTime *= 1.0;
+      variableCastTime *= 0.0;
+      n_Delay[ksDelayGlobal] = 1.0;
+      n_Delay[ksDelayCooldown] = 10.0;
     }
+    // else if (n_A_ActiveSkill == XXX)
+    // {
+    //   damageType = kDmgTypeMelee;
+    //   w_SkillMod = n_A_ActiveSkillLV;
+
+    //   fixedCastTime *= 1.0;
+    //   variableCastTime *= 1.0;
+    //   // n_Delay[] = 5.0;
+    // }
 
     CalcAtkMods02(w_SkillMod, 0);
     let basedmg = GetBaseDmg(n_A_Weapon_element, false, 0);
@@ -2698,7 +2801,9 @@ function CalcSkillDamage_old() {
     n_A_ActiveSkill === skill_GLT_CROSS_IMPACT ||
     n_A_ActiveSkill === skill_REB_QUICK_DRAW_SHOT ||
     // n_A_ActiveSkill === skill_SUM_PICKY_PECK ||
-    n_A_ActiveSkill === skill_SHA_FATAL_MENACE
+    n_A_ActiveSkill === skill_SHA_FATAL_MENACE ||
+    n_A_ActiveSkill === skill_STEM_FALLING_STARS ||
+    n_A_ActiveSkill === skill_STEM_SOLAR_EXPLOSION 
   ) {
     if (n_A_ActiveSkill === skill_AR_DOUBLE_STRAFE) {
       damageType = kDmgTypeRanged;
@@ -2961,6 +3066,28 @@ function CalcSkillDamage_old() {
       fixedCastTime *= 0.0;
       variableCastTime *= 0.0;
       n_Delay[ksDelayCooldown] = 0.5;
+    }else if (n_A_ActiveSkill == skill_STEM_FALLING_STARS)
+    {
+      damageType = kDmgTypeMelee;
+      w_SkillMod = 1 + n_A_ActiveSkillLV;
+      w_SkillMod += (5 * SkillSearch(skill_STEM_STELLAR_LUMINANCE))/100;
+
+      w_TotalHits = 3;
+      w_SkillMod = w_SkillMod / w_TotalHits;
+      fixedCastTime *= 2.0;
+      variableCastTime *= 1.0;
+      // n_Delay[] = 5.0;
+    }else if (n_A_ActiveSkill == skill_STEM_SOLAR_EXPLOSION)
+    {
+      damageType = kDmgTypeMelee;
+      w_SkillMod = 9 + n_A_ActiveSkillLV;
+      w_SkillMod += (5 * SkillSearch(skill_STEM_SOLAR_LUMINANCE))/100;
+
+      w_TotalHits = 3;
+      w_SkillMod = w_SkillMod / w_TotalHits;
+      fixedCastTime *= 1.0;
+      variableCastTime *= 1.0;
+      // n_Delay[] = 5.0;
     }
     CalcAtkMods02(w_SkillMod, 0);
 
@@ -5265,6 +5392,20 @@ function CalcSkillDamage_old() {
     n_Delay[ksDelayGlobal] = 1.0;
     n_Delay[ksDelayCooldown] = 14.0 - (n_A_ActiveSkillLV - 2);
   }
+  else if (n_A_ActiveSkill == skill_SRIP_SOUL_EXPLOSION)
+  {
+    w_DMG[0]= n_B[en_HP] *((20 + (10 * n_A_ActiveSkillLV))/100);
+    w_DMG[1] = w_DMG[0];
+    w_DMG[2] = w_DMG[0];
+    // w_DMG[0] = w_DMG[1] = w_DMG[2];
+    // n_A_DMG = w_DMG;
+    // Last_DMG_A = w_DMG;
+    InnStr = w_DMG;
+    fixedCastTime *= 1.0;
+    variableCastTime *= 2.0;
+    n_Delay[ksDelayGlobal] = 0.5;
+    n_Delay[ksDelayCooldown] = 6.0;
+  }
   /* else if(n_A_ActiveSkill == skill_SHA_FEINT_BOMB)
 	// {
 		// w_SkillMod = (n_A_DEX / 100) * (0.5 + (n_A_ActiveSkillLV * 0.5));//prime
@@ -5319,7 +5460,7 @@ function CalcSkillDamage_old() {
       if (n_B[en_BOSS] == 5) {
         w_DMG[2] = 1;
       }
-      w_DMG[0] = w_DMG[1] = w_DMG[2];
+
       /*for ( var i = 0; i < 3; i++ )
 		{
 			Last_DMG_A[i] = Last_DMG_B[i] = w_DMG[i];
@@ -6255,6 +6396,57 @@ function CalcSkillDamage_old() {
       n_Delay[ksDelayA] = 0.5;
       n_Delay[ksDelayCooldown] = 5.0;
     }
+    else if (n_A_ActiveSkill == skill_SRIP_ESHA)
+    {
+      n_A_Weapon_element = eval(document.calcForm.A_Weapon_element.value);
+      w_SkillMod = 0.05 * n_A_ActiveSkillLV;
+
+      fixedCastTime *= 1.0;
+      variableCastTime *= 0.5;
+      n_Delay[ksDelayCooldown] = 3.0;
+      n_Delay[ksDelayGlobal] = 0.5;
+    }
+    else if (n_A_ActiveSkill == skill_SRIP_CURSE_EXPLOSION)
+    {
+      n_A_Weapon_element = ele_DARK;
+      w_SkillMod = 4 + n_A_ActiveSkillLV;
+      if (formElements["SkillSubNum"].checked)
+        w_SkillMod += 15 + (2 *n_A_ActiveSkillLV);
+      fixedCastTime *= 1.0;
+      variableCastTime *= 3.0;
+      n_Delay[ksDelayCooldown] = 1.0;
+      n_Delay[ksDelayGlobal] = 0.5;
+    }
+    else if (n_A_ActiveSkill == skill_SRIP_ESPA)
+    {
+      n_A_Weapon_element = eval(document.calcForm.A_Weapon_element.value);
+      w_SkillMod = (5 + (2.5 *n_A_ActiveSkillLV)) * (n_A_BaseLV/100);
+
+      fixedCastTime *= 1.0;
+      variableCastTime *= 0.5;
+      n_Delay[ksDelayCooldown] = 3.0;
+      n_Delay[ksDelayGlobal] = 0.5;
+      // n_Delay[] = 5.0;
+    }
+    else if (n_A_ActiveSkill == skill_SRIP_ESWOO)
+    {
+      n_A_Weapon_element = eval(document.calcForm.A_Weapon_element.value);
+      w_SkillMod = (11 + (2 * n_A_ActiveSkillLV)) * (n_A_BaseLV/100);
+
+      fixedCastTime *= 1.0;
+      variableCastTime *= 0.5;
+      n_Delay[ksDelayCooldown] = 2.0;
+      n_Delay[ksDelayGlobal] = 0.5;
+      // n_Delay[] = 5.0;
+    }
+    // else if (n_A_ActiveSkill == XXX)
+    // {
+    //   w_SkillMod = n_A_ActiveSkillLV;
+
+    //   fixedCastTime *= 1.0;
+    //   variableCastTime *= 1.0;
+    //   // n_Delay[] = 5.0;
+    // }
 
     // if (damageType == kDmgTypeMagic) {
     // var mElementBoost = 100 + StPlusCalc2(bon_INC_MAGIC_NEUTRAL+n_A_Weapon_element) + StPlusCard(bon_INC_MAGIC_NEUTRAL+n_A_Weapon_element)+ StPlusEnchant(bon_INC_MAGIC_NEUTRAL+n_A_Weapon_element);
@@ -6262,6 +6454,7 @@ function CalcSkillDamage_old() {
     // }
     // calculate damage
     if (n_subHits === 0) {
+      console.log("no subhit")
       // No sub-hits for the magic formula
       for (var i = 0; i < 3; i++) {
         // console.log("CalcMATKMultipliers(n_A_MATK[i]) = " + CalcMATKMultipliers(n_A_MATK[i]));

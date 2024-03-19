@@ -76,5 +76,7 @@ JobName = [
 ,["Суперновичок 2","Expanded Super Novice"]
 ,["Мятежник","Rebellion"]
 ,["Призыватель","Summoner"]
+,["Звездный император","Star Emperor"]
+,["Жнец душ","Soul Reaper"]
 ];
 }

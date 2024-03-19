@@ -9833,8 +9833,8 @@ const Skill = [
     id: 373,
     type: Offensive,
     range: [10, 10, 10, 10, 10, 10, 10],
-    forcedElement: false,
-    skillElement: ele_NEUTRAL,
+    forcedElement: true,
+    skillElement: eval(document.calcForm.A_Weapon_element.value),
     fixedCastTime: "0.02",
     variableCastTime: "0.08",
     castDelay: "0.5",
@@ -9855,8 +9855,8 @@ const Skill = [
     id: 374,
     type: Offensive,
     range: [10, 10, 10, 10, 10, 10, 10],
-    forcedElement: false,
-    skillElement: ele_NEUTRAL,
+    forcedElement: true,
+    skillElement: eval(document.calcForm.A_Weapon_element.value),
     fixedCastTime: "0.02",
     variableCastTime: "0.08",
     castDelay: "0.5",
@@ -9877,8 +9877,8 @@ const Skill = [
     id: 375,
     type: Offensive,
     range: [10, 10, 10, 10, 10, 10, 10],
-    forcedElement: false,
-    skillElement: ele_NEUTRAL,
+    forcedElement: true,
+    skillElement: eval(document.calcForm.A_Weapon_element.value),
     fixedCastTime: `0`,
     variableCastTime: `0`,
     castDelay: `0`,
@@ -16936,16 +16936,12 @@ const Skill = [
     },
     skillFormula2(SkillLV) {
       // Knockback damage only
-      let addedDamage = 0;
       switch (PATCH) {
         case 0:
-          addedDamage = SkillLV * 150 + n_B[en_LEVEL] * 5 * (n_A_BaseLV / 150);
-          return addedDamage;
+          return SkillLV * 150 + n_B[en_LEVEL] * 5 * (n_A_BaseLV / 150);
         case 1:
         case 2:
-          addedDamage = SkillLV * 150 + n_B[en_LEVEL] * 5 * (n_A_BaseLV / 150);
-          if (n_B[en_BOSS] == 1) return addedDamage;
-          return addedDamage;
+          return SkillLV * 150 + n_B[en_LEVEL] * 5 * (n_A_BaseLV / 150);
         default:
           return 0;
       }
@@ -20669,7 +20665,7 @@ const Skill = [
   (REB_FIRE_DANCE = {
     id: 748,
     type: Offensive,
-    range: [9, 9, 9, 9, 9],
+    range: [9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
     forcedElement: false,
     skillElement: ele_NEUTRAL,
     fixedCastTime: `0`,
@@ -20689,8 +20685,9 @@ const Skill = [
         case 0:
           return 100 * SkillLV;
         case 1:
-        case 2:
           return 200 * SkillLV + SkillSearch(skill_GS_DESPERADO) * 50;
+        case 2:
+          return ((200 + 100 * SkillLV) + SkillSearch(skill_GS_DESPERADO) * 20) * (n_A_BaseLV / 100);
         default:
           return 0;
       }
@@ -20757,13 +20754,33 @@ const Skill = [
   (REB_VANISHING_BUSTER = {
     id: 751,
     type: Offensive,
-    range: [9, 9, 9, 9, 9],
+    range: [9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
     forcedElement: false,
     skillElement: ele_NEUTRAL,
-    fixedCastTime: `1`,
-    variableCastTime: `3.5 - (n_A_ActiveSkillLV * 0.5)`,
-    castDelay: `0`,
-    cooldown: `2`,
+    fixedCastTime: `
+    if(PATCH <= 1) 
+      1 
+    else
+      0.7
+    `,
+    variableCastTime: `
+    if(PATCH <= 1) 
+      3.5 - (n_A_ActiveSkillLV * 0.5)
+    else
+      1
+    `,
+    castDelay: `
+    if(PATCH <= 1) 
+      0
+    else
+      0.5
+    `,
+    cooldown: `
+    if(PATCH <= 1) 
+      2
+    else
+      1.5
+    `,
     animation: `0`,
     isMagic: false,
     canCrit: false,
@@ -20775,10 +20792,12 @@ const Skill = [
     skillFormula(SkillLV) {
       switch (PATCH) {
         case 0:
-          return (1000 + SkillLV * 200) * (n_A_BaseLV / 100);
+          return (1000 + SkillLV * 200) * (n_A_BaseLV / 100);// good formula?
         case 1:
-        case 2:
           return 2000 + SkillLV * 300;
+        case 2:
+          // return (1000 + SkillLV * 200) * (n_A_BaseLV / 100);
+          return (1500 + SkillLV * 100) * (n_A_BaseLV / 100); // as stated here : https://www.divine-pride.net/forum/index.php?/topic/4175-kro-expanded-classes-185-level-expansion-and-skills-balance/
         default:
           return 0;
       }
@@ -20874,13 +20893,23 @@ const Skill = [
   (REB_GODS_HAMMER = {
     id: 755,
     type: Offensive,
-    range: [7, 8, 9, 10, 11],
+    range: [7, 8, 9, 10, 11, 11, 11, 11, 11, 11],
     forcedElement: true,
     skillElement: ele_NEUTRAL,
     fixedCastTime: `0`,
     variableCastTime: `0`,
-    castDelay: `0`,
-    cooldown: `30`,
+    castDelay: `
+    if(PATCH < 2)
+      2
+    else
+      0.5
+    `,
+    cooldown: `
+    if(PATCH < 2)
+      30
+    else
+      20
+    `,
     animation: `0`,
     isMagic: false,
     canCrit: false,
@@ -20891,11 +20920,15 @@ const Skill = [
     isSpecialFormula: false,
     skillFormula(SkillLV) {
       let numSpheres = parseInt(formElements["SkillSubNum"].value);
+      let markedBonus = 150;
+      if(formElements["SkillSubNum2"].checked)
+        markedBonus = 400;
       switch (PATCH) {
         case 0:
         case 1:
-        case 2:
           return 2800 + 1400 * SkillLV + Math.ceil((numSpheres + 1) / 2) * 200;
+        case 2:
+          return (100 * SkillLV + (numSpheres * markedBonus)) * (n_A_BaseLV/100)
         default:
           return 0;
       }
@@ -20991,13 +21024,23 @@ const Skill = [
   (REB_DRAGON_TAIL = {
     id: 759,
     type: Offensive,
-    range: [9, 9, 9, 9, 9],
+    range: [9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
     forcedElement: true,
     skillElement: ele_NEUTRAL,
     fixedCastTime: `0`,
     variableCastTime: `1 + (n_A_ActiveSkillLV * 0.2)`,
-    castDelay: `2`,
-    cooldown: `5`,
+    castDelay: `
+    if(PATCH < 2)
+      2
+    else
+      1
+    `,
+    cooldown: `
+    if(PATCH < 2)
+      5
+    else
+      3.5
+    `,
     animation: `0`,
     isMagic: false,
     canCrit: false,
@@ -21007,11 +21050,15 @@ const Skill = [
     hitDivisibility: `1`,
     isSpecialFormula: false,
     skillFormula(SkillLV) {
+      let markedBonus = 1;
+      if(formElements["SkillSubNum"].checked)
+        markedBonus *= 2;
       switch (PATCH) {
         case 0:
         case 1:
-        case 2:
           return 4000 + 1000 * SkillLV;
+        case 2:
+          return ((500 + (200 * SkillLV)) * markedBonus) * (n_A_BaseLV/100);
         default:
           return 0;
       }
@@ -21050,7 +21097,7 @@ const Skill = [
   (REB_ROUND_TRIP = {
     id: 761,
     type: Offensive,
-    range: [9, 9, 9, 9, 9],
+    range: [9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
     forcedElement: false,
     skillElement: ele_NEUTRAL,
     fixedCastTime: `0`,
@@ -21071,8 +21118,9 @@ const Skill = [
         case 0:
           return (n_A_DEX / 2) * (10 + SkillLV * 3);
         case 1:
-        case 2:
           return 1000 + SkillLV * 300;
+        case 2:
+          return (500 + (200 * SkillLV)) * (n_A_BaseLV / 100);
         default:
           return 0;
       }
@@ -22234,15 +22282,43 @@ const Skill = [
       }
     },
   }),
-  (SUR_KNUCKLE_ARROW_KNOCKBACK = {
+  (STEM_SOLAR_LUNAR_STELLAR_RECORD = {
     id: 803,
-    type: Offensive,
-    range: [8, 8, 9, 9, 10, 10, 11, 11, 12, 12],
+    type: Passive /*TODO*/,
+    range: [1],
     forcedElement: false,
     skillElement: ele_NEUTRAL,
     fixedCastTime: `0`,
     variableCastTime: `0`,
-    castDelay: `1`,
+    castDelay: `0`,
+    cooldown: `60`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 0;
+      }
+    },
+  }),
+(STEM_SOLAR_LUNAR_STELLAR_PURIFICATION = {
+    id: 804,
+    type: Passive /*TODO*/,
+    range: [1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `0`,
+    variableCastTime: `0`,
+    castDelay: `0`,
     cooldown: `0`,
     animation: `0`,
     isMagic: false,
@@ -22253,20 +22329,1013 @@ const Skill = [
     hitDivisibility: `1`,
     isSpecialFormula: false,
     skillFormula(SkillLV) {
-      // Knockback damage only
       switch (PATCH) {
         case 0:
-          return SkillLV * 150 + n_B[en_LEVEL] * 5 * (n_A_BaseLV / 150);
         case 1:
         case 2:
-          return SkillLV * 150 + n_B[en_LEVEL] * 5 * (n_A_BaseLV / 150);
         default:
           return 0;
       }
     },
   }),
-];
+(STEM_SOLAR_STANCE = {
+    id: 805,
+    type: Passive /*TODO*/,
+    range: [1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `0`,
+    variableCastTime: `0`,
+    castDelay: `0`,
+    cooldown: `0`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 0;
+      }
+    },
+  }),
+(STEM_LUNAR_STANCE = {
+    id: 806,
+    type: Passive /*TODO*/,
+    range: [1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `0`,
+    variableCastTime: `0`,
+    castDelay: `0`,
+    cooldown: `0`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 0;
+      }
+    },
+  }),
+(STEM_STELLAR_STANCE = {
+    id: 807,
+    type: Passive /*TODO*/,
+    range: [1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `0`,
+    variableCastTime: `0`,
+    castDelay: `0`,
+    cooldown: `0`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 0;
+      }
+    },
+  }),
+(STEM_UNIVERSAL_STANCE = {
+    id: 808,
+    type: Passive /*TODO*/,
+    range: [1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `0`,
+    variableCastTime: `0`,
+    castDelay: `0`,
+    cooldown: `0`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 0;
+      }
+    },
+  }),
+(STEM_BLAZE_KICK = {
+    id: 809,
+    type: Active ,
+    range: [1,1,1,1,1,1,1],
+    forcedElement: true,
+    skillElement: ele_FIRE,
+    fixedCastTime: `0`,
+    variableCastTime: `0`,
+    castDelay: `1`,
+    cooldown: `0`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: true,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 150 + (50*SkillLV);
+      }
+    },
+  }),
+(STEM_NEW_MOON_KICK = {
+    id: 810,
+    type: Active /*TODO*/,
+    range: [1,1,1,1,1,1,1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `0`,
+    variableCastTime: `1`,
+    castDelay: `0`,
+    cooldown: `1`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 600 + (100 * SkillLV);
+      }
+    },
+  }),
+(STEM_FLASH_KICK = {
+    id: 811,
+    type: Active /*TODO*/,
+    range: [1,1,1,1,1,1,1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `0`,
+    variableCastTime: `0`,
+    castDelay: `0`,
+    cooldown: `0`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 100;
+      }
+    },
+  }),
+(STEM_NOVA_EXPLOSION = {
+    id: 812,
+    type: Active /*TODO*/,
+    range: [1,1,1,1,1],
+    forcedElement: true,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `1`,
+    variableCastTime: `5`,
+    castDelay: `1`,
+    cooldown: `20`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 200 + (100 * SkillLV);
+      }
+    },
+  }),
+(STEM_GRAVITY_CONTROL = {
+  id: 813,
+  type: Active,
+  range: [1],
+  forcedElement: false,
+  skillElement: ele_NEUTRAL,
+  fixedCastTime: `0`,
+  variableCastTime: `2`,
+  castDelay: `0.5`,
+  cooldown: `20`,
+  animation: `0`,
+  isMagic: false,
+  canCrit: false,
+  accuracyCheck: true,
+  bypassDef: false,
+  hitAmount: `1`,
+  hitDivisibility: `1`,
+  isSpecialFormula: false,
+  skillFormula(SkillLV) {
+    /* Rathena Code : 
+    case SJ_GRAVITYCONTROL: 
+			int fall_damage = sstatus->batk + sstatus->rhw.atk - tstatus->def2;
 
+			if (bl->type == BL_PC)// => player character
+				fall_damage += dstsd->weight / 10 - tstatus->def;
+			else // Monster's don't have weight. Put something in its place.
+				fall_damage += 50 * status_get_lv(src) - tstatus->def;
+
+			fall_damage = max(1, fall_damage);
+    */
+    switch (PATCH) {
+      case 0:
+      case 1:
+      case 2:
+      default:
+        return 100 + (50 * n_B[en_LEVEL]);
+    }
+  },
+}),
+(STEM_SOLAR_EXPLOSION = {
+    id: 814,
+    type: Active,
+    range: [1,1,1,1,1,1,1,1,1,1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `0`,
+    variableCastTime: `0`,
+    castDelay: `0.5`,
+    cooldown: `0`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `3`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return ((900 + (100 * SkillLV)) * (n_A_BaseLV/100)) + (5 * SkillSearch(skill_STEM_SOLAR_LUMINANCE));
+      }
+    },
+  }),
+(STEM_FULL_MOON_KICK = {
+    id: 815,
+    type: Active /*TODO*/,
+    range: [1,1,1,1,1,1,1,1,1,1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `0`,
+    variableCastTime: `0`,
+    castDelay: `0`,
+    cooldown: `1`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return ((1100 + (100 * SkillLV)) * (n_A_BaseLV/100)) + (SkillSearch(skill_STEM_LUNAR_LUMINANCE) * 5);
+      }
+    },
+  }),
+(STEM_FALLING_STARS = {
+    id: 816,
+    type: Active,
+    range: [1,1,1,1,1,1,1,1,1,1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `2`,
+    variableCastTime: `1`,
+    castDelay: `0`,
+    cooldown: `0`,
+    animation: `0`,
+    isMagic: true,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `3`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return ((100 + (100 * SkillLV)) * (n_A_BaseLV/100)) + (5 * SkillSearch(skill_STEM_STELLAR_LUMINANCE));
+      }
+    },
+  }),
+(STEM_STAR_EMPERORS_DESCENT = {
+    id: 817,
+    type: Active /*TODO*/,
+    range: [1,1,1,1,1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `1`,
+    variableCastTime: `0`,
+    castDelay: `1`,
+    cooldown: `10`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 800 + (200 * SkillLV);
+      }
+    },
+  }),
+(STEM_SOLAR_LUMINANCE = {
+    id: 818,
+    type: Passive /*TODO*/,
+    range: [1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `0`,
+    variableCastTime: `0`,
+    castDelay: `0`,
+    cooldown: `0`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 0;
+      }
+    },
+  }),
+(STEM_LUNAR_LUMINANCE = {
+    id: 819,
+    type: Passive /*TODO*/,
+    range: [1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `0`,
+    variableCastTime: `0`,
+    castDelay: `0`,
+    cooldown: `0`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 0;
+      }
+    },
+  }),
+(STEM_STELLAR_LUMINANCE = {
+    id: 820,
+    type: Passive /*TODO*/,
+    range: [1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `0`,
+    variableCastTime: `0`,
+    castDelay: `0`,
+    cooldown: `0`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 0;
+      }
+    },
+  }),
+(STEM_STAR_CREATORS_BOOK = {
+    id: 821,
+    type: Passive /*TODO*/,
+    range: [1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `1`,
+    variableCastTime: `2`,
+    castDelay: `0.5`,
+    cooldown: `15`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 0;
+      }
+    },
+  }),
+(STEM_BOOK_OF_DIMENSIONS = {
+    id: 822,
+    type: Passive /*TODO*/,
+    range: [1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `0`,
+    variableCastTime: `0`,
+    castDelay: `0`,
+    cooldown: `180 - (30 * n_A_ActiveSkillLV)`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 0;
+      }
+    },
+  }),
+  (SRIP_SOUL_COLLECTION = {
+    id: 823,
+    type: Passive /*TODO*/,
+    range: [1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `0`,
+    variableCastTime: `0`,
+    castDelay: `0`,
+    cooldown: `0`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 0;
+      }
+    },
+  }),
+  (SRIP_SOUL_HARVEST = {
+    id: 824,
+    type: Passive /*TODO*/,
+    range: [1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `1`,
+    variableCastTime: `3`,
+    castDelay: `0`,
+    cooldown: `60 + (30 * n_A_ActiveSkillLV)`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 0;
+      }
+    },
+  }),
+  (SRIP_EVIL_SOUL_CURSE = {
+    id: 825,
+    type: Passive /*TODO*/,
+    range: [1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `1`,
+    variableCastTime: `1`,
+    castDelay: `0.5`,
+    cooldown: `5`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 0;
+      }
+    },
+  }),
+  (SRIP_SOUL_ENERGY_RESEARCH = {
+    id: 826,
+    type: Passive /*TODO*/,
+    range: [1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `0`,
+    variableCastTime: `0`,
+    castDelay: `0`,
+    cooldown: `0`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 0;
+      }
+    },
+  }),
+  (SRIP_KAUTE = {
+    id: 827,
+    type: Passive /*TODO*/,
+    range: [1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `0`,
+    variableCastTime: `0`,
+    castDelay: `1`,
+    cooldown: `5`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 0;
+      }
+    },
+  }),
+  (SRIP_ESHA = {
+    id: 828,
+    type: Active /*TODO*/,
+    range: [10,10,10,10,10],
+    forcedElement: true,
+    skillElement: eval(document.calcForm.A_Weapon_element.value),
+    fixedCastTime: `1`,
+    variableCastTime: `0.5`,
+    castDelay: `0.5`,
+    cooldown: `3`,
+    animation: `0`,
+    isMagic: true,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 5 * SkillLV;
+      }
+    },
+  }),
+  (SRIP_CURSE_EXPLOSION = {
+    id: 829,
+    type: Active /*TODO*/,
+    range: [10,10,10,10,10],
+    forcedElement: true,
+    skillElement: ele_DARK,
+    fixedCastTime: `1`,
+    variableCastTime: `3`,
+    castDelay: `0.5`,
+    cooldown: `1`,
+    animation: `0`,
+    isMagic: true,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `7`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          if (formElements["SkillSubNum"].checked) 
+            return (400 + (100 * SkillLV))+(1500 + (200 * SkillLV)); //[Base_Damage]% + [Bonus_Damage]%
+          return 400 + (100 * SkillLV);//[Base_Damage]%
+      }
+    },
+  }),
+  (SRIP_SOUL_BIND = {
+    id: 830,
+    type: Passive /*TODO*/,
+    range: [1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `4`,
+    variableCastTime: `0`,
+    castDelay: `1`,
+    cooldown: `30 * n_A_ActiveSkillLV`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 0;
+      }
+    },
+  }),
+  (SRIP_SOUL_CIRCULATION = {
+    id: 831,
+    type: Passive /*TODO*/,
+    range: [1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `1`,
+    variableCastTime: `0`,
+    castDelay: `0.5`,
+    cooldown: `3`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 0;
+      }
+    },
+  }),
+  (SRIP_ESPA = {
+    id: 832,
+    type: Active /*TODO*/,
+    range: [10,10,10,10,10],
+    forcedElement: true,
+    skillElement: eval(document.calcForm.A_Weapon_element.value),
+    fixedCastTime: `1`,
+    variableCastTime: `0.5`,
+    castDelay: `0`,
+    cooldown: `0`,
+    animation: `0`,
+    isMagic: true,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return (500 + (250 * SkillLV)) * (n_A_BaseLV/100);
+      }
+    },
+  }),
+  (SRIP_SHADOW_SOUL = {
+    id: 833,
+    type: Passive /*TODO*/,
+    range: [1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `0`,
+    variableCastTime: `0`,
+    castDelay: `0.5`,
+    cooldown: `0`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 0;
+      }
+    },
+  }),
+  (SRIP_FAIRY_SOUL = {
+    id: 834,
+    type: Passive /*TODO*/,
+    range: [1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `0`,
+    variableCastTime: `0`,
+    castDelay: `0.5`,
+    cooldown: `0`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 0;
+      }
+    },
+  }),
+  (SRIP_FALCON_SOUL = {
+    id: 835,
+    type: Passive /*TODO*/,
+    range: [1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `0`,
+    variableCastTime: `0`,
+    castDelay: `0.5`,
+    cooldown: `0`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 0;
+      }
+    },
+  }),
+  (SRIP_GOLEM_SOUL = {
+    id: 836,
+    type: Passive /*TODO*/,
+    range: [1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `0`,
+    variableCastTime: `0`,
+    castDelay: `0.5`,
+    cooldown: `0`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 0;
+      }
+    },
+  }),
+  (SRIP_ESWOO = {
+    id: 837,
+    type: Active /*TODO*/,
+    range: [10,10,10,10,10,10,10],
+    forcedElement: true,
+    skillElement: eval(document.calcForm.A_Weapon_element.value),
+    fixedCastTime: `1`,
+    variableCastTime: `0.5`,
+    castDelay: `0.5`,
+    cooldown: `2`,
+    animation: `0`,
+    isMagic: true,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `5`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return (1100 + (200 * SkillLV)) * (n_A_BaseLV/100);
+      }
+    },
+  }),
+  (SRIP_SOUL_DIVISION = {
+    id: 838,
+    type: Passive /*TODO*/,
+    range: [1],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `1.5`,
+    variableCastTime: `0.5`,
+    castDelay: `0.5`,
+    cooldown: `3`,
+    animation: `0`,
+    isMagic: false,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: false,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return 0;
+      }
+    },
+  }),
+  (SRIP_SOUL_EXPLOSION = {
+    id: 839,
+    type: Active /*TODO*/,
+    range: [10,10,10,10,10],
+    forcedElement: false,
+    skillElement: ele_NEUTRAL,
+    fixedCastTime: `1`,
+    variableCastTime: `2`,
+    castDelay: `0.5`,
+    cooldown: `6`,
+    animation: `0`,
+    isMagic: true,
+    canCrit: false,
+    accuracyCheck: true,
+    bypassDef: false,
+    hitAmount: `1`,
+    hitDivisibility: `1`,
+    isSpecialFormula: true,
+    skillFormula(SkillLV) {
+      switch (PATCH) {
+        case 0:
+        case 1:
+        case 2:
+        default:
+          return Math.floor(n_B[en_HP] * ((20 + (10 * SkillLV))/100)); // % of enemy's current HP
+      }
+    },
+  }),
+];
+  //skill source for Star Emperor and Soul Reaper: 
+  //http://renewal.playragnarok.com/news/updatedetail.aspx?id=342&p=1
+  //Skill Update 
+  //https://www.divine-pride.net/forum/index.php?/topic/4175-kro-expanded-classes-185-level-expansion-and-skills-balance/
 function CalcSkillDamage() {
   let baseDmg = [0, 0, 0];
 
@@ -22277,7 +23346,7 @@ function CalcSkillDamage() {
   )
     baseDmg = getBaseDamageNoMastery(0);
   else baseDmg = getBaseDamage(0,false);
-  if (n_Nitou) {
+  if (n_Nitou || n_A_WeaponType == weapTyp_KATAR) {
     if (Skill[n_A_ActiveSkill].id == 0) {
       let baseDmg1 = getFinalDamage(
         baseDmg,
@@ -22285,12 +23354,7 @@ function CalcSkillDamage() {
         n_A_ActiveSkillLV,
         0
       );
-      let baseDmg2 = getFinalDamage(
-        getBaseDamage(0,true),
-        Skill[n_A_ActiveSkill],
-        n_A_ActiveSkillLV,
-        0
-      );
+      let baseDmg2 = getFinalDamage(getBaseDamage(0,true),Skill[n_A_ActiveSkill],n_A_ActiveSkillLV,0,true);
       for (let i = 0; i <= 2; i++) {
         //damage can't go below 0
         if (baseDmg1[i] < 0) baseDmg1[i] = 1;
@@ -22334,8 +23398,8 @@ function displayDamage(finalDamage, sk) {
     if (formElements["SkillSubNum"].checked)
       tmpDmg = getFinalDamage(
         getBaseDamage(0),
-        SUR_KNUCKLE_ARROW_KNOCKBACK,
-        n_A_ActiveSkillLV,
+        SUR_KNUCKLE_ARROW,
+        n_A_ActiveSkillLV+10,
         0
       );
   }
@@ -22344,17 +23408,17 @@ function displayDamage(finalDamage, sk) {
     if (finalDamage[i] < 0) finalDamage[i] = 1;
     if (eval(sk.hitDivisibility) != 1) {
       InnStr[i] =
-        finalDamage[i] +
+      numberFormat(finalDamage[i]) +
         " (" +
-        finalDamage[i] / eval(sk.hitDivisibility) +
+        numberFormat(finalDamage[i] / eval(sk.hitDivisibility)) +
         " x " +
         eval(sk.hitDivisibility) +
         ")";
     } else if (eval(sk.hitAmount) != 1) {
       InnStr[i] =
-        finalDamage[i] +
+      numberFormat(finalDamage[i]) +
         " (" +
-        finalDamage[i] / eval(sk.hitAmount) +
+        numberFormat(finalDamage[i] / eval(sk.hitAmount)) +
         " x " +
         eval(sk.hitAmount) +
         ")";
@@ -22362,22 +23426,23 @@ function displayDamage(finalDamage, sk) {
       if (sk.id == skill_SUR_KNUCKLE_ARROW) {
         if (formElements["SkillSubNum"].checked)
           InnStr[i] =
-            finalDamage[i] +
+          numberFormat(finalDamage[i]) +
             "<BR>(" +
-            (finalDamage[i] - tmpDmg[i]) +
+            numberFormat(finalDamage[i] - tmpDmg[i]) +
             " + " +
-            tmpDmg[i] +
+            numberFormat(tmpDmg[i]) +
             " Knockback damage)";
-        else InnStr[i] = finalDamage[i];
-      } else InnStr[i] = finalDamage[i];
+        else InnStr[i] = numberFormat(finalDamage[i]);
+      } else InnStr[i] = numberFormat(finalDamage[i]);
+      
     }
   }
 }
 function displayAdditionalDamage() {
   if (Skill[n_A_ActiveSkill].canCrit) {
-    let str_Title = SubName[3][Language];
-    // let str_Content = displaySubHits(skill_ALL_BASIC_ATTACK, 1);
-    let str_Content = displaySubHits(n_A_ActiveSkill, n_A_ActiveSkillLV, 1);
+    let str_Title = SubName[3][Language];//Critical Damage
+    let str_Content = displaySubHits(n_A_ActiveSkill, n_A_ActiveSkillLV, 1);//Current Skill Damage (crit)
+
     //Double Attack || Snake Head || Sidewinder Card
     if (
       ((SkillSearch(skill_TH_DOUBLE_ATTACK) &&
@@ -22494,6 +23559,14 @@ function displaySubHits(autoSkill,autoSkillLv, isCrit) {
   let textStr = "";
   let numHits = 0;
   let tempDMG = getFinalDamage(getBaseDamage(isCrit),Skill[autoSkill],autoSkillLv,isCrit);
+  let offHandTempDMG = [0,0,0]
+  if((n_Nitou || n_A_WeaponType == weapTyp_KATAR) && (autoSkill == skill_ALL_BASIC_ATTACK))
+  {
+    if(n_Nitou)//off hand never crit exept for Katar
+      offHandTempDMG = getFinalDamage(getBaseDamage(false,true),Skill[autoSkill],autoSkillLv,false,true);
+    else
+      offHandTempDMG = getFinalDamage(getBaseDamage(isCrit,true),Skill[autoSkill],autoSkillLv,isCrit,true);
+  }
   if (eval(Skill[autoSkill].hitDivisibility) > 1)
     numHits = eval(Skill[autoSkill].hitDivisibility);
   if (eval(Skill[autoSkill].hitAmount) > 1)
@@ -22501,27 +23574,30 @@ function displaySubHits(autoSkill,autoSkillLv, isCrit) {
   if (numHits > 0) {
     if (tempDMG[0] === tempDMG[2])
       textStr +=
-        tempDMG[1] +
+      numberFormat(tempDMG[1]) +
         "<BR>(" +
-        tempDMG[1] / numHits +
+        numberFormat(tempDMG[1] / numHits) +
         " x " +
         numHits +
         " hits)<BR>";
     else
       textStr +=
-        tempDMG[0] +
+      numberFormat(tempDMG[0]) +
         " ~ " +
-        tempDMG[2] +
+        numberFormat(tempDMG[2]) +
         "<BR>(" +
-        tempDMG[0] / numHits +
+        numberFormat(tempDMG[0] / numHits) +
         " ~ " +
-        tempDMG[2] / numHits +
+        numberFormat(tempDMG[2] / numHits) +
         " x " +
         numHits +
         " hits)<BR>";
   } else {
-    if (tempDMG[0] === tempDMG[2]) textStr += tempDMG[1] + "<BR>";
-    else textStr += tempDMG[0] + " ~ " + tempDMG[2] + "<BR>";
+    
+    if (tempDMG[0] === tempDMG[2])
+    //main hand crit + offhand damage if offhand crit (katar only)
+    textStr += numberFormat(tempDMG[1]) + (((n_Nitou || n_A_WeaponType == weapTyp_KATAR) && (autoSkill == skill_ALL_BASIC_ATTACK))?(" + " + numberFormat(offHandTempDMG[1])):(""))+"<BR>";
+    else textStr += numberFormat(tempDMG[0]) + " ~ " + numberFormat(tempDMG[2]) + "<BR>";
   }
   return textStr;
 }
@@ -22541,27 +23617,32 @@ function displaySubHitsGiantGrowth(autoSkill, isCrit) {
   if (numHits > 0) {
     if (tempDMG[0] === tempDMG[2])
       textStr +=
-        tempDMG[1] +
+      numberFormat(tempDMG[1]) +
         "<BR>(" +
-        tempDMG[1] / numHits +
+        numberFormat(tempDMG[1] / numHits) +
         " x " +
         numHits +
         " hits)<BR>";
     else
       textStr +=
-        tempDMG[0] +
+      numberFormat(tempDMG[0]) +
         " ~ " +
-        tempDMG[2] +
+        numberFormat(tempDMG[2]) +
         "<BR>(" +
-        tempDMG[0] / numHits +
+        numberFormat(tempDMG[0] / numHits) +
         " ~ " +
-        tempDMG[2] / numHits +
+        numberFormat(tempDMG[2] / numHits) +
         " x " +
         numHits +
         " hits)<BR>";
   } else {
-    if (tempDMG[0] === tempDMG[2]) textStr += tempDMG[1] + "<BR>";
-    else textStr += tempDMG[0] + " ~ " + tempDMG[2] + "<BR>";
+    if (tempDMG[0] === tempDMG[2]) textStr += numberFormat(tempDMG[1]) + "<BR>";
+    else textStr += numberFormat(tempDMG[0]) + " ~ " + numberFormat(tempDMG[2]) + "<BR>";
   }
   return textStr;
+}
+
+function numberFormat(number)
+{
+    return (number - 0).toLocaleString('en-US')
 }
