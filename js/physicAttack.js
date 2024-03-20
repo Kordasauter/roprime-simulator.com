@@ -494,7 +494,7 @@ function getType2ATKMultiplier() {
 	bAtkRate += 15 * SkillSearch(skill_KAG_SUMMON_ELEMENTAL_SEAL);
 	//not 100% sure it belong here
 	if (SkillSearch(skill_TK_KIHOP))
-	skillMod +=
+	bAtkRate +=
 		2 * SkillSearch(skill_TK_KIHOP) * SkillSearch(skill_TK_KIHOP_PARTY);
 
 	return bAtkRate;
