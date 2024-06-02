@@ -3063,6 +3063,12 @@ function CalcWeaponSizeMod() {
     weaponSizeMod = 1;
     weapon2SizeMod = 1;
   }
+  //enchant
+  if (EnchNumSearch(5590)) {
+    // enchant for Shield of the sun Knight
+    weaponSizeMod = 1;
+    weapon2SizeMod = 1;
+  }
 }
 
 {

@@ -690,7 +690,8 @@ ench_THOUSAND_BOW = ench_STRONG + 1;
 ench_DIVINE_POWER = ench_THOUSAND_BOW + 1;
 ench_RIGID = ench_DIVINE_POWER + 1;
 ench_HUNDREAD_LUCK = ench_RIGID + 1;
-// ench_ = ench_HUNDREAD_LUCK + 1;
+ench_NULLIFY_SIZE = ench_HUNDREAD_LUCK + 1;
+// ench_ = ench_NULLIFY_SIZE + 1;
 
 }
 

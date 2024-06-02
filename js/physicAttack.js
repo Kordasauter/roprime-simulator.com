@@ -1680,10 +1680,19 @@ function getWeaponATKHighUpgradeBonus2() {
 }
 function getSizePenalty() {
 	// return 1;
+	  //enchant
+	  if (EnchNumSearch(5590)) {
+		// enchant for Shield of the sun Knight
+		return 1;
+	  }
 	return weaponsize[n_A_WeaponType][n_B[en_SIZE]];
 }
 function getSizePenalty2() {
 	// return 1;
+	if (EnchNumSearch(5590)) {
+		// enchant for Shield of the sun Knight
+		return 1;
+	  }
 	return weaponsize[n_A_Weapon2Type][n_B[en_SIZE]];
 }
 
