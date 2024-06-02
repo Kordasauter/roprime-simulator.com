@@ -175,7 +175,8 @@ function ClearBonuses()
 		n_tok[i] += StPlusCard(i);
 		n_tok[i] += StPlusEnchant(i);
 	}
-	//temporal, for test without breaking the sim
+
+	//for non beta formulas
 	n_tok[bon_PHY_ATK] += n_tok[bon_ATK_MUL];
 	
 	calcSpecialTok();	
@@ -261,11 +262,11 @@ function StCalc(nSC)
 	}
 	else
 	{
-                if (n_A_JOB == cls_KAGOB || n_A_JOB == cls_ENOVI) {
-                        wMAXLV = CONST_MAXLVL_KAGOB_ENOVI;
-                } else {
-                        wMAXLV = CONST_MAXLVL;
-                }
+		if (n_A_JOB == cls_KAGOB || n_A_JOB == cls_ENOVI) {
+				wMAXLV = CONST_MAXLVL_KAGOB_ENOVI;
+		} else {
+				wMAXLV = CONST_MAXLVL;
+		}
 	}
 		
 	if ( nSC == 1 || formElements["BLVauto"].checked == 0 )

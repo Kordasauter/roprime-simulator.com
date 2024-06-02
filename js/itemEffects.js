@@ -49,7 +49,15 @@ ITEM_SP_TIME_OBJ =[
 ,[46,"Celine's Dress","magical damage against all race monsters + 15%",1,2673,bon_MDMG_RC_FORMLESS,15,bon_MDMG_RC_UNDEAD,15,bon_MDMG_RC_BRUTE,15,bon_MDMG_RC_PLANT,15,bon_MDMG_RC_INSECT,15,bon_MDMG_RC_FISH,15,bon_MDMG_RC_DEMON,15,bon_MDMG_RC_DEMI_HUMAN,15,bon_MDMG_RC_ANGEL,15,bon_MDMG_RC_DRAGON,15,0]
 ,[47,"Elemental Boots","Int + 70 and Matk + 10%",1,2676,bon_INT,70,bon_MATK_MUL,10,0]
 ,[48,"Shadow Ring","Buffing the user for 20 seconds when using Urgent Escape; Increases the damage of Triangle Shot by 1% for every 3 base levels.",1,2696,"ev_blvl",3,bon_DMG_SKILL + skill_SHA_TRIANGLE_SHOT,1,0]
-//,[id,"item_name","effect_desc",1=Equip/2=Card,item/card_id,bonus_typ,bonus_amount,0]
+,[49,"Illusion Hunter Bow and Illusion Shoes Set","If the sum of refine rate is 22 or higher, when dealing normal long ranged physical damage, has a chance to activate Hunter's Sight for 10 seconds.",1,2726,bon_ATK,100,bon_DMG_CRIT,15,bon_DMG_RC_BRUTE,30,bon_DMG_RC_INSECT,30,0]
+,[50,"Platinum Dagger (+11 or more)"," increase MATK + 100 and magical damage agains all size monsters by 30% for 10 seconds when dealing physical damage.",1,2757,bon_MATK,100,bon_MDMG_SIZ_SMALL,30,bon_MDMG_SIZ_MEDIUM,30,bon_MDMG_SIZ_LARGE,30,0]
+,[51,"Illusion Butcher + Illusion Boots","When using Round Trip, has a chance to gain additional ATK + 50 and increases physical damage against Brute and Demon race enemies by additional 50% for 10 seconds.",1,2791,bon_ATK,50,bon_DMG_RC_BRUTE,50,bon_DMG_RC_DEMON,50,0]
+,[52,"Illusion Gold Lux + Illusion Hot-blooded Headband","When using Fire Dance, has a chance to gain additional ATK + 100 and increases long-range physical damage by additional 15% for 10 seconds",1,2795,bon_ATK,100,bon_DMG_RANGE,15,0]
+,[53,"Illusion Bazerald + Illusion Fancy Flower","When dealing magical damage, has a chance to gain additional MATK + 50 and increases Fire property magical damage by additional 20% for 10 seconds",1,2797,bon_MATK,50,bon_INC_MAGIC_FIRE,20,0]
+,[54,"Revived Demon's Shot (+9)","when using [Platinum Altar] ATK +50%, ranged physical damage +10% for 90 sec.",1,2827,bon_ATK_MUL,50,bon_DMG_RANGE,10,0]
+,[55,"Revived Crimson Rose","ranged physical damage +20%",1,2828,bon_DMG_RANGE,20,0]
+,[56,"Revived Guttling Gun (+9)","when using [Platinum Altar] ATK +50%, ranged physical damage +15% for 90 sec.",1,2831,bon_ATK_MUL,50,bon_DMG_RANGE,15,0]
+// ,[id,"item_name","effect_desc",1=Equip/2=Card,item/card_id,bonus_typ,bonus_amount,0]
 ];
 ITEM_SP_TIME_OBJ_SORT = [
     0,
@@ -59,12 +67,12 @@ ITEM_SP_TIME_OBJ_SORT = [
     47,45, // E
     15,11,12,14,13, // G
     43,17,32,20, // H
-    2,1,7, // I
+    2,53,51,52,49,1,7, // I
     35, // L
     44,33,  // M
     40,21,16,28, // N
-    42, // P
-    34,38, // R
+    42,50, // P
+    54,34,38, // R
     19,48,22,23,24,36, // S
     25,18, // T
     9, // U

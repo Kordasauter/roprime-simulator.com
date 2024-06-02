@@ -882,7 +882,7 @@ function SetCard()
 ,[789,   card_com_ARMOR,"Decorated Evil Tree","",bon_HP_ADD,1000,bon_SP_ADD,150,bon_FLEE,-25,0]
 ,[790,   card_com_SHOES,"Vicious Cookie","",bon_ATK_MUL,1,bon_MATK_MUL,1,bon_HP_MUL,-2,"ev_ref",2,bon_ATK_MUL,1,"ev_ref",2,bon_MATK_MUL,1,"ev_ref",2,bon_HP_MUL,-2,0]
 ,[791,   card_comp_WEAPON,"Evil Dwelling Box","Adds a chance of inflicting Curse on the target when performing a magical attack.",bon_HP_ADD,-1225,0]
-,[792,   card_com_ACC,"Creepy Demon","Adds a chance of inflicting Curse on the attacker when receiving a magical attack.",bon_HP_MUL,13,0]
+,[792,   card_com_ACC,"Creepy Demon","Adds a chance of inflicting Curse on the attacker when receiving a magical attack.",bon_HP_MUL,-13,0]
 ,[793,   card_com_ACC,"Malicious Baby Ghost","Adds a chance of inflicting Curse on the attacker when receiving a physical attack.",bon_HP_MUL,13,0]
 ,[794,   card_comp_WEAPON,"Dancing Marionette","",bon_ASPD_MUL,10,bon_ATK_MUL,-3,0]
 ,[795,   card_com_SHOES,"Abandoned Teddy Bear","Has a chance to inflict Curse on wearer when dealing physical and magical attack.",bon_SP_MUL,20,0]
@@ -1013,6 +1013,59 @@ function SetCard()
 ,[904,   card_com_ARMOR,"Black Coelacanth","",bon_HP_MUL,10,bon_DEF,100,0]
 ,[905,   card_comp_HEAD,"Mutant Coelacanth","",bon_MATK_MUL,2,"ev_head_ref",2,bon_MATK_MUL,1,"ev_head_ref",2,bon_HP_MUL,-1,0]
 ,[906,   card_comp_HEAD,"Cruel Coelacanth","",bon_PHY_ATK,2,"ev_head_ref",2,bon_PHY_ATK,1,"ev_head_ref",2,bon_SP_MUL,-1,0]
+//Infinity Update
+//Infinite Space
+,[907,   card_com_SHOES,"Infinite Toad","",bon_PDODGE,2,"ref_lvl",7,bon_PDODGE,2,"ref_lvl",9,bon_PDODGE,3,0]
+,[908,   card_com_SHOES,"Infinite Vagabond Wolf","",bon_ATK,10,"ref_lvl",7,bon_ATK,10,"ref_lvl",9,bon_ATK,15,0]
+,[909,   card_com_SHOES,"Infinite Vocal","",bon_MDEF,5,"ref_lvl",7,bon_MDEF,10,"ref_lvl",9,bon_MDEF,15,0]
+,[910,   card_com_SHOES,"Infinite Eclipse","",bon_HP_ADD,300,"ref_lvl",7,bon_HP_ADD,300,"ref_lvl",9,bon_HP_ADD,400,0]
+,[911,   card_com_GARMENT,"Infinite Chimera","",bon_HP_MUL,8,bon_SP_MUL,4,0]
+,[912,   card_com_ACC,"Infinite Osiris","When defeating monster with melee physical attack, recovers 300 HP.",0]
+,[913,   card_com_SHOES,"Infinite Eddga","50% chance to autocast Level 10 Provoke on the attacker when receiving physical attacks.",0]
+,[914,   card_comp_WEAPON,"Infinite Phreeoni","",bon_CRIT,100,0]
+,[915,   card_comp_HEAD,"Infinite Orc Hero","Every time the wearer receives magical attack, has a 100% chance to Stun the attacker.",bon_VIT,3,0]
+,[916,   card_com_ARMOR,"Infinite Tao Gunka","",bon_HP_ADD,10000,bon_AGI,-10,0]
+
+//Luanda illusion
+//https://ratemyserver.net/npc_shop_warp.php?map=com_d02_i&s_block=mob_block&re_mob=1&small=1
+,[917,   card_comp_WEAPON,"Ancient Tri Joint","",bon_ATK,30,bon_HP_MUL,-1,0]
+,[918,   card_com_GARMENT,"Ancient Stalactic Golem","","ev_bvit",10,bon_HP_ADD,150,"ev_bvit",10,bon_ASPD_MUL,1,"bvit_hi",120,bon_RED_CASTDELAY,3,0]
+,[919,   card_comp_WEAPON,"Ancient Megalith","",bon_MATK,30,bon_SP_MUL,-1,0]
+,[920,   card_comp_HEAD,"Ancient Tao Gunka","",bon_DEFIGN_RC_BOSS,30,"ref_lvl",10,bon_DEFIGN_RC_BOSS,20,0]
+,[921,   card_com_GARMENT,"Ancient Stone Shooter","","ev_bluk",10,bon_DMG_CRIT,1,"ev_bluk",10,bon_ASPD_MUL,1,"bluk_hi",120,bon_DMG_CRIT,5,0]
+,[922,   card_com_GARMENT,"Ancient Wootan Shooter","","ev_bdex",10,bon_DMG_RANGE,1,"ev_bdex",10,bon_ASPD_MUL,1,"bdex_hi",120,bon_ATK,40,0]
+,[923,   card_comp_WEAPON,"Ancient Wootan Fighter","",bon_CRIT,5,bon_DMG_CRIT,10,0]
+,[924,   card_com_SHIELD,"Ancient Wootan Defender","",bon_RED_BOSS,30,"ref_lvl",10,bon_RED_BOSS,20,0]
+
+//Edda Biolab
+//https://wiki.shining-moon.com/index.php/Edda_Biolab
+//unavailable
+,[925,   itm_type_SET,"Rekenber Guard","",0]
+,[926,   itm_type_SET,"Rekenber High Guard","",0]
+,[927,   itm_type_SET,"Regenschirm Scientist","",0]
+,[928,   itm_type_SET,"Unknown Swordsman","",0]
+
+//Edda: the fall of glastheim
+,[929,   card_com_ARMOR,"Cursed King Schmidt","",bon_DMG_ELE_FIRE,40,0]
+
+//Illusion Maze
+,[930,   card_com_ACC_L,"Chaos Acolyte","",bon_RED_CASTDELAY,4,0]
+,[931,   card_com_SHOES,"Chaos Baphomet Jr.","","ev_bagi",15,bon_CRIT,1,0]
+,[932,   card_comp_WEAPON,"Chaos Ghostring","",bon_ATK,20,bon_DMG_SIZ_SMALL,25,bon_DMG_SIZ_LARGE,25,0]
+,[933,   card_com_SHIELD,"Chaos Hunter Fly","",bon_RED_ELE2_WIND,15,bon_RED_RC_INSECT,15,0]
+,[934,   card_com_ACC,"Chaos Killer Mantis","",bon_DMG_CRIT,3,0]
+,[935,   card_com_ACC,"Chaos Mantis","",bon_STR,3,0]
+,[936,   card_com_SHIELD,"Chaos Poporing","",bon_RED_ELE2_WATER,15,bon_RED_RC_FISH,15,0]
+,[937,   card_com_SHIELD,"Chaos Sidewinder","",bon_RED_ELE2_POISON,15,bon_RED_RC_BRUTE,15,0]
+,[938,   card_com_GARMENT,"Chaos Stem Worm","",bon_HIT,10,bon_RED_ELE_EARTH,2,bon_RED_ELE_NEUTRAL,10,0]
+,[939,   card_com_ARMOR,"Chaos Baphomet","",bon_ATK_MUL,25,bon_RED_RC_DEMON,-5,0]
+
+//Sets
+,[940,   itm_type_SET,"Infinite Chimera + Inifnite Miniboss","",bon_PHY_ATK,10,bon_MATK_MUL,10,0]
+,[941,   itm_type_SET,"Chaos Baphomet Jr. + Baphomet Jr.","",bon_DMG_CRIT,15,0]
+,[942,   itm_type_SET,"Chaos Ghostring + Ghostring","",bon_PHY_ATK,10,0]
+,[943,   itm_type_SET,"Chaos Killer Mantis + Angra Mantis","",bon_DMG_CRIT,5,0]
+,[944,   itm_type_SET,"Chaos Mantis + Mantis","",bon_PHY_ATK,7,bon_HIT,12,0]
 ];
 
 CardNum = cardOBJ.length -1;
@@ -1139,6 +1192,16 @@ w_SC = [
 ,[895,893,894,"NULL"] //Ominous Assaulter + Ominous Heater
 ,[898,896,897,"NULL"] //Ominous Permeter + Ominous Solider
 ,[901,323,900,"NULL"] //Turtle General + Ominous Turtle General
+,[940,911,910,"NULL"] //Infinite Chimera + Infinite Eclipse
+,[940,911,909,"NULL"] //Infinite Chimera + Infinite Vocal
+,[940,911,908,"NULL"] //Infinite Chimera + Infinite Vagabond Wolf
+,[940,911,907,"NULL"] //Infinite Chimera + Infinite Toad
+,[941,931,78,"NULL"] //Chaos Baphomet Jr. + Baphomet Jr.
+,[942,932,136,"NULL"] //Chaos Ghostring + Ghostring
+,[943,934,536,"NULL"] //Chaos Killer Mantis + Angra Mantis
+,[944,935,101,"NULL"] //Chaos Mantis + Mantis
+// ,[,,,"NULL"] //
+// ,[,,,"NULL"] //
 // ,[,,,"NULL"] //
 // ,[,,,"NULL"] //
 // ,[,,,"NULL"] //

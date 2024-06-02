@@ -1875,6 +1875,13 @@ function CalcSizeMod() {
       2 * Math.floor(n_A_SHADOW_EARRING_DEF_PLUS / 2);
     n_tok[bon_DMG_SIZ_LARGE] += 2 * Math.floor(n_A_SHADOW_EARRING_DEF_PLUS / 2);
   }
+  //enchants
+  if(EnchNumSearch(5585) && EnchNumSearch(861))
+    {//Strong && Bear's Power
+      n_tok[bon_DMG_SIZ_SMALL] += 25;
+      n_tok[bon_DMG_SIZ_MEDIUM] += 25;
+      n_tok[bon_DMG_SIZ_LARGE] += 25;
+    }
   sizeMod = n_tok[bon_DMG_SIZ_SMALL + n_B[en_SIZE]];
   if (monsterBuffs[status_en_buff_Size]) {
     // Size Reduction
@@ -2170,6 +2177,10 @@ function CalcAttackMod() {
     if (n_A_BODY_DEF_PLUS >= 12) n_tok[bon_PHY_ATK] += 8;
     if (n_A_BODY_DEF_PLUS >= 13) n_tok[bon_PHY_ATK] += 2;
   }
+  if(EnchNumSearch(5586) && EnchNumSearch(862))
+		{//Thousand Bow && Hawkeye
+			n_tok[bon_PHY_ATK] += 10;
+		}
 
   //items
   if (usableItems[ksArchmagePotion]) {
@@ -2473,6 +2484,10 @@ function CalcCriticalMod() {
     if (n_A_SHOULDER_DEF_PLUS >= 9)
       n_tok[bon_DMG_CRIT] += 5 * EnchNumSearch(5248);
   }
+  if(EnchNumSearch(5584) && EnchNumSearch(866))
+    {//Flash && Speed of Light
+      n_tok[bon_DMG_CRIT] +=30;
+    }
 
   //Shadow
   if (EquipNumSearch(1825)) {
@@ -2671,6 +2686,9 @@ function CalcRangedMod() {
     n_tok[bon_DMG_RANGE] += 50;
   } else if (EquipNumSearch(101) && n_A_Arrow == arrTyp_HUNTING) {
     // Hunter Bow
+    n_tok[bon_DMG_RANGE] += 50;
+  } else if (EquipNumSearch(2720) && n_A_Arrow == arrTyp_HUNTING) {
+    // Illusion Hunter Bow
     n_tok[bon_DMG_RANGE] += 50;
   }
   if (EquipNumSearch(1255) && SU_AGI >= 120) {
@@ -7237,6 +7255,10 @@ function calcASPD() {
       }
     }
   }
+  if(EnchNumSearch(5589) && EnchNumSearch(863))
+		{//Hundread Luck && Lucky Day
+			flatASPD += 2;
+		}
 
   //Items
   if (usableItems[ksArchmagePotion]) {
@@ -7642,6 +7664,11 @@ function getEquipASPDMul() {
 
 function getEquipASPDFlat() {
   let equipASPDFlat = 0;
+
+  if(EnchNumSearch(5589) && EnchNumSearch(863))
+		{//Hundread Luck && Lucky Day
+			equipASPDFlat += 2;
+		}
 
   return equipASPDFlat;
 }
@@ -8482,6 +8509,10 @@ function CalcDelay() {
     if (n_A_BODY_DEF_PLUS >= 7) n_tok[bon_RED_CASTDELAY] += 5;
     if (n_A_BODY_DEF_PLUS >= 9) n_tok[bon_RED_CASTDELAY] += 5;
   }
+  if(EnchNumSearch(5588) && EnchNumSearch(864))
+		{//Rigid && Muscle Fool
+			n_tok[bon_RED_CASTDELAY] += 10;
+		}
 
   // Skills
   if (

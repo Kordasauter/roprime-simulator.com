@@ -722,6 +722,10 @@ function magicAtkMul()
 			if(n_A_BODY_DEF_PLUS >= 13)
 				matk_mul += 2;
 		}
+		if(EnchNumSearch(5587) && EnchNumSearch(865))
+		{//Divine Power && Runaway Magic
+			matk_mul += 15;
+		}
 		
 //Cards
 		if(CardNumSearch(582))

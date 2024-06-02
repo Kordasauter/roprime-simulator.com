@@ -485,6 +485,11 @@ function getType2ATKMultiplier() {
 	// multiplier = (6 + (SkillSearch( skill_REB_HIT_BARREL ) * 2)) * SkillSearch( skill_GS_COIN_FLIP);
 	// }
 
+	//Enchants
+	if(EnchNumSearch(5586) && EnchNumSearch(862))
+		{//Thousand Bow && Hawkeye
+			bAtkRate += 10;
+		}
 	//not 100% sure it belong here
 	//rathena say : "final attack bonuses that aren't affected by cards"
 	if (
@@ -763,7 +768,11 @@ function getSizeMultiplier() {
 	// "Chronocloak of Strength"// "Chronocloak of Agility"
 	if (EquipNumSearch(2142) || EquipNumSearch(2143))
 	sizeMultiplier += 5 * Math.floor(n_A_SHOULDER_DEF_PLUS / 4);
-
+	//Enchants
+	if(EnchNumSearch(5585) && EnchNumSearch(861))
+	{//Strong && Bear's Power
+		sizeMultiplier += 25;
+	}
 	//Shadows
 	// "Shadow Blacksmith Armor"
 	if (EquipNumSearch(1726) && SkillSearch(skill_BS_WEAPON_PERFECTION)) {
@@ -2975,7 +2984,8 @@ function getRangedMultiplier() {
 	if (
 	(EquipNumSearch(630) && n_A_Arrow == arrTyp_STEEL) || // Orc Archer Bow
 	(EquipNumSearch(1286) && n_A_Arrow == arrTyp_ELVEN) || // Elven Bow
-	(EquipNumSearch(101) && n_A_Arrow == arrTyp_HUNTING)
+	(EquipNumSearch(101) && n_A_Arrow == arrTyp_HUNTING) || //Hunter Bow
+	(EquipNumSearch(2720) && n_A_Arrow == arrTyp_HUNTING) //Illusion Hunter Bow
 	)
 	// Hunter Bow
 	rangedMultiplier += 50;
@@ -3551,7 +3561,12 @@ function getCriticalMultiplier() {
 	if (n_A_SHOULDER_DEF_PLUS >= 9)
 		criticalMultiplier += 5 * EnchNumSearch(5248);
 	}
-	//Shadows
+	if(EnchNumSearch(5584) && EnchNumSearch(866))
+	{//Flash && Speed of Light
+		criticalMultiplier +=30;
+	}
+
+//Shadows
 	//Shadow Gunslinger Shield
 	if (EquipNumSearch(1825)) {
 	if (n_A_SHADOW_SHIELD_DEF_PLUS >= 7) {
@@ -3761,7 +3776,7 @@ function getSkillMultiplier(currentSkill) {
 	) {
 	var remainingHP = formElements["SkillSubNum"].value;
 	// testSkMod += 30 * remainingHP;
-	damage = (damage * (100 + 30 * remainingHP)) / 100;
+	testSkMod = (testSkMod * (100 + 30 * remainingHP)) / 100;
 	}
 
 	if (

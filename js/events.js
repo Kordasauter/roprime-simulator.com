@@ -1567,6 +1567,24 @@ function ClickWeapon( data,isRefine )
 		formElements["A_WEAPON_ENCHANT_2"].disabled = true;
 		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
 		formElements["A_WEAPON_ENCHANT_4"].disabled = false;
+	}else if(weapon >= 2729 && weapon <= 2769)//spe
+	{//Edda Biolab
+		if(!isRefine)
+		{
+			CleanEnchant("A_WEAPON_ENCHANT");
+			//Slot 3
+			for ( var i = 0; EnchantListOBJ[140][i] != "NULL"; i++ )
+			{
+				formElements["A_WEAPON_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[140][i]][1],EnchantOBJ[EnchantListOBJ[140][i]][0]);
+			}//Slot 4
+			for ( var i = 0; EnchantListOBJ[139][i] != "NULL"; i++ )
+			{
+				formElements["A_WEAPON_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[139][i]][1],EnchantOBJ[EnchantListOBJ[139][i]][0]);
+			}
+		}
+		formElements["A_WEAPON_ENCHANT_2"].disabled = true;
+		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
+		formElements["A_WEAPON_ENCHANT_4"].disabled = false;
 	}
 	// else if(weapon == 9999)
 	// {
@@ -1682,6 +1700,20 @@ function ClickWeapon2( weapon2 )
 		for ( var i = 1; EnchantListOBJ[127][i] != "NULL"; i++ )
 		{
 			formElements["A_Mal_Ench3"].options[i + formsize] = new Option(EnchantOBJ[EnchantListOBJ[127][i]][1],EnchantOBJ[EnchantListOBJ[127][i]][0]);
+		}
+	}
+	else if(weapon2 >= 2729 && weapon2 <= 2769)//spe
+	{//Edda Biolab
+		formElements["A_Mal_Ench3"].disabled = false;
+		formElements["A_Mal_Ench4"].disabled = false;
+		//Slot 3
+		for ( var i = 0; EnchantListOBJ[140][i] != "NULL"; i++ )
+		{
+			formElements["A_Mal_Ench3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[140][i]][1],EnchantOBJ[EnchantListOBJ[140][i]][0]);
+		}//Slot 4
+		for ( var i = 0; EnchantListOBJ[139][i] != "NULL"; i++ )
+		{
+			formElements["A_Mal_Ench4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[139][i]][1],EnchantOBJ[EnchantListOBJ[139][i]][0]);
 		}
 	}
 	else
@@ -1964,6 +1996,23 @@ function ClickGarment( data, isRefine )
 		formElements["A_GARMENT_ENCHANT_4"].disabled = false;
 		formElements["A_GARMENT_ENCHANT_3"].disabled = false;
 		formElements["A_GARMENT_ENCHANT_2"].disabled = true;
+	}
+	else if(garm_id == 2771)
+	{
+		if(!isRefine)
+		{
+			CleanEnchant("A_GARMENT_ENCHANT");
+			let ench_num = 143;
+			for ( var i = 0; EnchantListOBJ[ench_num][i] != "NULL"; i++ )
+			{
+				formElements["A_GARMENT_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench_num][i]][1],EnchantOBJ[EnchantListOBJ[ench_num][i]][0]);
+				formElements["A_GARMENT_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench_num][i]][1],EnchantOBJ[EnchantListOBJ[ench_num][i]][0]);
+				formElements["A_GARMENT_ENCHANT_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench_num][i]][1],EnchantOBJ[EnchantListOBJ[ench_num][i]][0]);
+			}
+		}
+		formElements["A_GARMENT_ENCHANT_4"].disabled = false;
+		formElements["A_GARMENT_ENCHANT_3"].disabled = false;
+		formElements["A_GARMENT_ENCHANT_2"].disabled = false;
 	}
 	// else if(garm_id == 9999)
 	// {
@@ -2447,6 +2496,29 @@ function ClickArmor( data, isRefine )
 		formElements["A_ARMOR_ENCHANT_3"].disabled = false;
 		formElements["A_ARMOR_ENCHANT_2"].disabled = true;
 	}
+	else if(armor_id == 2770)
+	{//King Schmidt's Suit
+		if(!isRefine)
+		{
+			CleanEnchant("A_ARMOR_ENCHANT");
+			let ench_num = 141;
+			for ( var i = 0; EnchantListOBJ[ench_num][i] != "NULL"; i++ )
+			{
+				formElements["A_ARMOR_ENCHANT_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench_num][i]][1],EnchantOBJ[EnchantListOBJ[ench_num][i]][0]);
+				formElements["A_ARMOR_ENCHANT_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench_num][i]][1],EnchantOBJ[EnchantListOBJ[ench_num][i]][0]);
+				
+			}
+			ench_num = 142;
+			for ( var i = 0; EnchantListOBJ[ench_num][i] != "NULL"; i++ )
+			{
+				formElements["A_ARMOR_ENCHANT_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench_num][i]][1],EnchantOBJ[EnchantListOBJ[ench_num][i]][0]);
+				
+			}
+		}
+		formElements["A_ARMOR_ENCHANT_4"].disabled = false;
+		formElements["A_ARMOR_ENCHANT_3"].disabled = false;
+		formElements["A_ARMOR_ENCHANT_2"].disabled = false;
+	}
 	// else if(armor_id == 9999)
 	// {
 		// if(!isRefine)
@@ -2837,6 +2909,29 @@ function ClickAcces( data, numAccess )
 		formElements[formAcc + "_2"].disabled = false;
 		formElements[formAcc + "_3"].disabled = false;
 		formElements[formAcc + "_4"].disabled = false;
+	}
+	else if(access_id >= 2772 && access_id <= 2777)
+	{
+		CleanEnchant(formAcc);
+
+		var ench1 = 141;
+		var ench2 = 144;
+		var ench3 = 145;
+		for ( var i = 0; EnchantListOBJ[ench1][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_4"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench1][i]][1],EnchantOBJ[EnchantListOBJ[ench1][i]][0]);
+		}
+		formElements[formAcc + "_4"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[ench2][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_3"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench2][i]][1],EnchantOBJ[EnchantListOBJ[ench2][i]][0]);
+		}
+		formElements[formAcc + "_3"].disabled = false;
+		for ( var i = 0; EnchantListOBJ[ench3][i] != "NULL"; i++ )
+		{
+			formElements[formAcc + "_2"].options[i] = new Option(EnchantOBJ[EnchantListOBJ[ench3][i]][1],EnchantOBJ[EnchantListOBJ[ench3][i]][0]);
+		}
+		formElements[formAcc + "_2"].disabled = false;
 	}
 	// else if(access_id == 9999)
 	// {
@@ -5240,6 +5335,133 @@ function DisplayItemDescription( ItemIndex )
 							descriptionString += "<br>[if the sum of "+tmp_str+" refine level is "+ ItemOBJ[setIndex][j + 1] + " or higher]<br>";
 						}
 					}
+					if(ItemOBJ[setIndex][j].substr(0,7) == "set_evr")
+						{
+							let flag = 0;
+							let first = true;
+							let tmp_str = "";
+							flag = parseInt(ItemOBJ[setIndex][j].substr(7));
+							if((flag - 4096)>=0)
+							{
+								tmp_str += "Shadow Pendant";
+								first = false;
+								flag = flag - 4096;
+							}
+							if((flag - 2048)>=0)
+							{
+								if(first)
+									tmp_str += "Shadow Earring";
+								else
+									tmp_str += " and Shadow Earring";
+								first = false;
+								flag = flag - 2048;
+							}
+							if((flag - 1024)>=0)
+							{
+								if(first)
+									tmp_str += "Shadow Shoes";
+								else
+									tmp_str += " and Shadow Shoes";
+								first = false;
+								flag = flag - 1024;
+							}
+							if((flag - 512)>=0)
+							{
+								if(first)
+									tmp_str += "Shadow Shield";
+								else
+									tmp_str += " and Shadow Shield";
+								first = false;
+								flag = flag - 512;
+							}
+							if((flag - 256)>=0)
+							{
+								if(first)
+									tmp_str += "Shadow Glove";
+								else
+									tmp_str += " and Shadow Glove";
+								first = false;
+								flag = flag - 256;
+							}
+							if((flag - 128)>=0)
+							{
+								if(first)
+									tmp_str += "Shadow Armor";
+								else
+									tmp_str += " and Shadow Armor";
+								first = false;
+								flag = flag - 128;
+							}
+							//---------------------------------------------
+							if((flag - 64)>=0)
+							{
+								if(first)
+									tmp_str += "Shoes";
+								else
+									tmp_str += " and Shoes";
+								first = false;
+								flag = flag - 64;
+							}
+							if((flag - 32)>=0)
+							{
+								if(first)
+									tmp_str += "Garment";
+								else
+									tmp_str += " and Garment";
+								first = false;
+								flag = flag - 32;
+							}
+							if((flag - 16)>=0)
+							{
+								if(first)
+									tmp_str += "Shield";
+								else
+									tmp_str += " and Shield";
+								first = false;
+								flag = flag - 16;
+							}
+							if((flag - 8)>=0)
+							{
+								if(first)
+									tmp_str += "Armor";
+								else
+									tmp_str += " and Armor";
+								first = false;
+								flag = flag - 8;
+							}
+							if((flag - 4)>=0)
+							{
+								if(first)
+									tmp_str += "Headgear";
+								else
+									tmp_str += " and Headgear";
+								first = false;
+								flag = flag - 4;
+							}
+							if((flag - 2)>=0)
+							{
+								if(first)
+									tmp_str += "Weapon (left)";
+								else
+									tmp_str += " and Weapon (left)";
+								first = false;
+								flag = flag - 2;
+							}
+							if((flag - 1)>=0)
+							{
+								if(first)
+									tmp_str += "Weapon";
+								else
+									tmp_str += " and Weapon";
+								first = false;
+								flag = flag - 1;
+							}
+							if(tempDesc != "[for every "+ ItemOBJ[setIndex][j + 1] +" refine of "+ tmp_str + "]<br>")
+							{
+								tempDesc = "[for every "+ ItemOBJ[setIndex][j + 1] +" refine of "+ tmp_str + "]<br>";
+								descriptionString += "<br>[for every "+ ItemOBJ[setIndex][j + 1] +" refine of "+ tmp_str + "]<br>";
+							}
+						}
 					descriptionString += "-"+ BuildItemDescription(ItemOBJ[setIndex][j + 2], ItemOBJ[setIndex][j + 3] ); // add them to Strings
 					j += 2;
 				}

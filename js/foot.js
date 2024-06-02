@@ -1868,7 +1868,7 @@ function BonusCalc(bonus_condition,refine,ref_opt,bonus_eq)
 		flag = parseInt(bonus_condition.substr(7));
 		bonus_condition = bonus_condition.substr(0,7);
 		
-		if(bonus_condition == "set_sum")
+		if(bonus_condition == "set_sum" || bonus_condition == "set_evr")
 		{
 			if((flag - 4096)>=0)
 			{
@@ -2148,6 +2148,9 @@ function BonusCalc(bonus_condition,refine,ref_opt,bonus_eq)
 		case "set_sum":
 			if(ref2 >= ref_opt)
 				bonus += bonus_eq;
+			break;
+		case "set_evr":
+			bonus += Math.floor(ref2 / ref_opt) * bonus_eq;
 			break;
 		// case "":
 			// break;
@@ -2466,16 +2469,23 @@ with(document.calcForm)
 		z = workB[7][i];
 		if(z < ITEM_NAME.length){
 			//Left
-			if(ItemOBJ[z][0] != 2135 && ItemOBJ[z][0] != 2407 && ItemOBJ[z][0] != 2531 && ItemOBJ[z][0] != 2533) 
-			{//All exept : Sarah's Right Earring && Sheriff's Right Badge && Illusion Booster R && Illusion Battle Chip R
+			if(ItemOBJ[z][0] != 2135 && ItemOBJ[z][0] != 2407 && ItemOBJ[z][0] != 2531 && ItemOBJ[z][0] != 2533 && ItemOBJ[z][0] != 2846  ) 
+			{//All exept : Sarah's Right Earring && Sheriff's Right Badge && Illusion Booster R && Illusion Battle Chip R && Ring of Jupiter Right
 				if(ItemOBJ[z][5] != 0)
 					A_acces1.options[A_acces1.options.length] = new Option(ITEM_NAME[z][nx] + " [" + ItemOBJ[z][5] + "]",ItemOBJ[z][0]);
 				else
 					A_acces1.options[A_acces1.options.length] = new Option(ITEM_NAME[z][nx],ItemOBJ[z][0]);
 			}
 			//Right
-			if(ItemOBJ[z][0] != 2134 && ItemOBJ[z][0] != 2406 && ItemOBJ[z][0] != 2480 && ItemOBJ[z][0] != 2530 && ItemOBJ[z][0] != 2532) 
-			{//All exept : Sarah's Left Earring && Sheriff's Left Badge && Perverse Demon Mask && Illusion Booster L && Illusion Battle Chip L
+			if(ItemOBJ[z][0] != 2134 && 
+				ItemOBJ[z][0] != 2406 && 
+				ItemOBJ[z][0] != 2480 && 
+				ItemOBJ[z][0] != 2530 && 
+				ItemOBJ[z][0] != 2532 &&
+				!(ItemOBJ[z][0] >= 2772 && ItemOBJ[z][0] <= 2777) && //King Schmidt's Insignia
+				ItemOBJ[z][0] != 2845 // Ring of Jupiter Left 
+			) 
+			{//All exept : Sarah's Left Earring && Sheriff's Left Badge && Perverse Demon Mask && Illusion Booster L && Illusion Battle Chip L && King Schmidt's Insignia
 				if(ItemOBJ[z][5] != 0)
 					A_acces2.options[A_acces2.options.length] = new Option(ITEM_NAME[z][nx] + " [" + ItemOBJ[z][5] + "]",ItemOBJ[z][0]);
 				else

@@ -1583,6 +1583,13 @@ JobSkillActiveOBJ = [
 ,[168,0, 25, 5, 1, 1] // Heal 5 when recieving physical damage (1%)
 ,[169,1, 92, 1, 0, 1] // Aspersio 1 When Attacking
 ,[170,1,168, 1, 5, 1] // Mug 1 When Attacking
+,[171,1,490, 2, 0, 1] // Judex 2 When Attacking
+,[172,1,446, 2, 0, 1] // Sonic Wave 2 When Attacking
+,[173,1,125, 7, 0, 1] // Meteor Storm 7 When Attacking
+,[174,1,678, 4, 0, 1] // Psychic Wave 3 When Attacking
+,[175,1,490, 2, 0, 1] // Judex 5 When Attacking
+,[176,1,277, 3, 7, 1] // Napalm Vulcan 5 When Attacking
+,[177,1,535, 3, 7, 1] // Soul Expension 5 When Attacking
 
  //IDAutocast, Type(0=when hit, 1=when attack), SkillID, SkillLVL, Chance, AutoCastTrigger
 ];
