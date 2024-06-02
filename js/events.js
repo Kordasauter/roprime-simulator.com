@@ -1351,8 +1351,8 @@ function ClickWeapon( data,isRefine )
 		formElements["A_WEAPON_ENCHANT_3"].disabled = false;
 		formElements["A_WEAPON_ENCHANT_4"].disabled = false;
 	}
-	else if(weapon >= 2050 && weapon <= 2083)//spe
-	{//Ancient Weapons 
+	else if((weapon >= 2050 && weapon <= 2083) || (weapon >= 2799 && weapon <= 2832))//spe
+	{//Ancient Weapons  || revived weapons
 		if(!isRefine)
 		{
 			CleanEnchant("A_WEAPON_ENCHANT");
