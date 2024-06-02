@@ -2969,8 +2969,8 @@
 
 //22-05-24 update
 ,[2844,itm_type_SHIELD,0,170,0,1,400,100,0,0,147,146,bon_NONE] // Shield of Phoenix
-,[2845,itm_type_ACCESSORY,0,2,0,1,50,100,0,0,0,0,"ev_bluk",10,bon_ATK,10,"ev_bluk",10,bon_MATK,10,"bluk_hi",125,bon_DMG_BOSS,15,"bluk_hi",125,bon_MDMG_BOSS,15,bon_NONE] // Ring of Jupiter Left
-,[2846,itm_type_ACCESSORY,0,2,0,1,50,100,0,0,0,0,"ev_bvit",10,bon_HP_MUL,2,"ev_bvit",10,bon_SP_MUL,2,"bvit_hi",125,bon_DEF,300,"bvit_hi",125,bon_MDEF,50,"bvit_hi",125,bon_RED_RC_DEMI_HUMAN,3,"bvit_hi",125,bon_RED_RC_BRUTE,3,bon_NONE] // Ring of Jupiter Right
+,[2845,itm_type_ACCESSORY,0,2,0,1,50,100,0,0,0,0,"ev_bvit",10,bon_HP_MUL,2,"ev_bvit",10,bon_SP_MUL,2,"bvit_hi",125,bon_DEF,300,"bvit_hi",125,bon_MDEF,50,"bvit_hi",125,bon_RED_RC_DEMI_HUMAN,3,"bvit_hi",125,bon_RED_RC_BRUTE,3,bon_NONE] // Ring of Jupiter Left
+,[2846,itm_type_ACCESSORY,0,2,0,1,50,100,0,0,0,0,"ev_bluk",10,bon_ATK,15,"ev_bluk",10,bon_MATK,15,"bluk_hi",125,bon_DMG_BOSS,15,"bluk_hi",125,bon_MDMG_BOSS,15,bon_NONE] // Ring of Jupiter Right
 
 // ,[2847,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
 // ,[2848,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
