@@ -1480,7 +1480,7 @@
 ,[1473,itm_type_SET,/*0*/999,0,0,0,0,0,0,0,0,0,bon_MATK_MUL,4,bon_PHY_ATK,4,bon_NONE] // "Chambered RWC 2012 Ring & RWC 2012 Pendant"
 ,[1474,itm_type_SET,/*0*/999,0,0,0,0,0,0,0,0,0,bon_MATK_MUL,4,bon_PHY_ATK,4,bon_NONE] // "RWC 2012 Ring & Chambered RWC 2012 Pendant"
 ,[1475,itm_type_ARMOR,/*146*/999,40,0,1,50,95,0,0,0,0,bon_RED_RC_DEMI_HUMAN,2,bon_MDEF,20,bon_NONE] // "WoE Robe"
-,[1476,itm_type_ARMOR,/*147*/999,50,0,1,75,95,0,0,0,0,bon_RED_RC_DEMI_HUMAN,2,bon_MDEF,10,bon_NONE] // "WoE Suit"
+,[1476,itm_type_ARMOR,147,50,0,1,75,95,0,0,0,0,bon_RED_RC_DEMI_HUMAN,2,bon_MDEF,10,bon_NONE] // "WoE Suit"
 ,[1477,itm_type_ARMOR,/*86*/999,85,0,1,330,95,0,0,0,0,bon_RED_RC_DEMI_HUMAN,2,bon_MDEF,5,bon_NONE] // "WoE Plate"
 ,[1478,itm_type_GARMENT,/*146*/999,15,0,1,40,95,0,0,0,0,bon_RED_RC_DEMI_HUMAN,1,bon_MDEF,10,bon_NONE] // "WoE Muffler"
 ,[1479,itm_type_GARMENT,/*1*/999,32,0,1,50,95,0,0,0,0,bon_RED_RC_DEMI_HUMAN,2,bon_MDEF,1,bon_NONE] // "WoE Manteau"
