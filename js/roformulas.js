@@ -2863,6 +2863,10 @@ function CalcRangedMod() {
     if (n_A_JobSearch() == cls_ARC || n_A_JobSearch() == cls_GUN)
       n_tok[bon_DMG_RANGE] += n_A_HEAD_DEF_PLUS;
   }
+  if(EquipNumSearch(2849) && CardNumSearch(191))
+  {// Ceres Armor + Ancient Mimic Card
+    n_tok[bon_DMG_RANGE] += 10;
+  }
   // if(EquipNumSearch())
   // {
   // }
@@ -6841,6 +6845,10 @@ function calcCrit(n_A_CRI) {
       n_A_CRI += 20;
     }
   }
+  if(EquipNumSearch(2849) && CardNumSearch(191))
+    {// Ceres Armor + Ancient Mimic Card
+      n_A_CRI += 5;
+    }
 
   //Shadow
   if (EquipNumSearch(1825)) {
@@ -9173,7 +9181,19 @@ function calcRaceElementalReduction() {
       skill_SUR_GENTLE_TOUCH_REVITALIZE
     );
   }
-
+  if(EquipNumSearch(2849) && (CardNumSearch(585) || CardNumSearch(586)))
+    {// Ceres Armor + (Clown Card || Gypsy Card)
+      n_tok[bon_RED_RC_ANGEL] += 10;
+      n_tok[bon_RED_RC_BRUTE] += 10;
+      n_tok[bon_RED_RC_DEMI_HUMAN] += 10;
+      n_tok[bon_RED_RC_DEMON] += 10;
+      n_tok[bon_RED_RC_DRAGON] += 10;
+      n_tok[bon_RED_RC_FISH] += 10;
+      n_tok[bon_RED_RC_FORMLESS] += 10;
+      n_tok[bon_RED_RC_INSECT] += 10;
+      n_tok[bon_RED_RC_PLANT] += 10;
+      n_tok[bon_RED_RC_UNDEAD] += 10;
+    }
   // Sanctuary. Not sure why this is here...
   if (EquipNumSearch(1085)) {
     if (n_A_Weapon_ATKplus >= 6) {
@@ -9269,6 +9289,11 @@ function calcRaceElementalReduction() {
   if (miscEffects[ksPetEffects] == 42 && EquipNumSearch(1218)) {
     n_tok[bon_RES_STATUS_STUN] += 10;
   }
+
+  if(EquipNumSearch(2849) && (CardNumSearch(585) || CardNumSearch(586)))
+    {// Ceres Armor + (Clown Card || Gypsy Card)
+      n_tok[bon_RES_STATUS_FREEZE] = 100;
+    }
   if (SkillSearch(skill_ROY_SHIELD_SPELL) === 3 && PATCH == 2) {
     // Shield Spell status effect resistance: [(Shield Upgrade x 2) + (Caster’s LUK / 10)] %
     var resistanceBonus = Math.floor(n_A_LEFT_DEF_PLUS * 2 + n_A_LUK / 10.0);

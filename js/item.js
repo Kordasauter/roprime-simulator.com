@@ -2972,10 +2972,22 @@
 ,[2845,itm_type_ACCESSORY,0,2,0,1,50,100,0,0,0,0,"ev_bvit",10,bon_HP_MUL,2,"ev_bvit",10,bon_SP_MUL,2,"bvit_hi",125,bon_DEF,300,"bvit_hi",125,bon_MDEF,50,"bvit_hi",125,bon_RED_RC_DEMI_HUMAN,3,"bvit_hi",125,bon_RED_RC_BRUTE,3,bon_NONE] // Ring of Jupiter Left
 ,[2846,itm_type_ACCESSORY,0,2,0,1,50,100,0,0,0,0,"ev_bluk",10,bon_ATK,15,"ev_bluk",10,bon_MATK,15,"bluk_hi",125,bon_DMG_BOSS,15,"bluk_hi",125,bon_MDMG_BOSS,15,bon_NONE] // Ring of Jupiter Right
 
-// ,[2847,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
-// ,[2848,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
-// ,[2849,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
-// ,[2850,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
+//02-04-2024 update
+,[2847,itm_type_ACCESSORY,0,0,0,1,10,100,0,0,0,0,bon_ATK,50,bon_MATK,50,bon_RED_RC_UNDEAD,,bon_NONE] // Immortal Dog Tag
+,[2848,itm_type_HEAD_MIDDLE,0,0,0,0,20,70,0,0,0,0,bon_LUK,10,bon_MDEF,10,bon_PDODGE,2,bon_NONE] // Ancient Elven Ear
+,[2849,itm_type_ARMOR,2054,0,0,1,30,100,0,0,0,0,bon_DMG_RANGE,10,"ev_ref",4,bon_AGI,3,"ev_ref",4,bon_DEX,3,"ref_lvl",12,bon_DMG_SKILL + skill_RAN_WARG_STRIKE,30,"ref_lvl",12,bon_DMG_SKILL + skill_MIWA_METALLIC_SOUND,30,bon_NONE] // Ceres Armor
+,[2850,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"set_evr" + fl_WEAPON,1,bon_PHY_ATK,5,bon_NONE] // Immortal Dog Tag + Juliette D Rachel
+,[2851,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"set_evr" + fl_WEAPON,1,bon_INT,2,"set_evr" + fl_WEAPON,1,bon_DMG_SKILL + skill_WAR_CRIMSON_ROCK,1,bon_NONE] // Immortal Dog Tag + Sunflower Boy
+,[2852,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"set_evr" + fl_WEAPON,1,bon_DMG_CRIT,3,"set_ref" + fl_WEAPON,9,bon_CRIT,50,"set_ref" + fl_WEAPON,9,bon_DMG_BOSS,25,bon_NONE] // Immortal Dog Tag + Lindy Hop
+
+// ,[2853,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // 
+// ,[2854,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
+// ,[2855,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
+// ,[2856,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
+// ,[2857,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
+// ,[2858,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
+// ,[2859,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
+// ,[2860,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
 
 //"ev_ref" = for every x refine
 //"ev_ref",x,bonus,amount,
@@ -3989,6 +4001,10 @@ w_SE = [
 	[2841,2798,2823,"NULL"], //Great Hero's Boots + Revived Claws of the Bifrost
 	[2842,2798,2832,"NULL"], //Great Hero's Boots + Revived Meow Meow Foxtail
 	[2843,2798,2829,"NULL"], //Great Hero's Boots + Revived Master of Souls
+	[2850,2847,2179,"NULL"], //Immortal Dog Tag + Juliette D Rachel
+	[2851,2847,2161,"NULL"], //Immortal Dog Tag + Sunflower Boy
+	[2852,2847,2160,"NULL"], //Immortal Dog Tag + Lindy Hop
+	// [,,,"NULL"], //
 	// [,,,"NULL"], //
 	// [,,,"NULL"], //
 	// [,,,"NULL"], //

@@ -57,6 +57,7 @@ ITEM_SP_TIME_OBJ =[
 ,[54,"Revived Demon's Shot (+9)","when using [Platinum Altar] ATK +50%, ranged physical damage +10% for 90 sec.",1,2827,bon_ATK_MUL,50,bon_DMG_RANGE,10,0]
 ,[55,"Revived Crimson Rose","ranged physical damage +20%",1,2828,bon_DMG_RANGE,20,0]
 ,[56,"Revived Guttling Gun (+9)","when using [Platinum Altar] ATK +50%, ranged physical damage +15% for 90 sec.",1,2831,bon_ATK_MUL,50,bon_DMG_RANGE,15,0]
+,[57,"Immortal Dog Tag & +9 Sunflower Boy","with a successful MATK with a 1% chance for 10 sec. Fire property damage +50%",1,2851,bon_INC_MAGIC_FIRE,50,0]
 // ,[id,"item_name","effect_desc",1=Equip/2=Card,item/card_id,bonus_typ,bonus_amount,0]
 ];
 ITEM_SP_TIME_OBJ_SORT = [
@@ -67,7 +68,7 @@ ITEM_SP_TIME_OBJ_SORT = [
     47,45, // E
     15,11,12,14,13, // G
     43,17,32,20, // H
-    2,53,51,52,49,1,7, // I
+    2,53,51,52,49,57,1,7, // I
     35, // L
     44,33,  // M
     40,21,16,28, // N

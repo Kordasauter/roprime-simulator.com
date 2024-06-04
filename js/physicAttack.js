@@ -3135,6 +3135,11 @@ function getRangedMultiplier() {
 	)
 	rangedMultiplier += n_A_HEAD_DEF_PLUS;
 
+	if(EquipNumSearch(2849) && CardNumSearch(191))
+	{// Ceres Armor + Ancient Mimic Card
+		rangedMultiplier += 10;
+	}
+
 	// if(EquipNumSearch())
 	// {
 	// }
