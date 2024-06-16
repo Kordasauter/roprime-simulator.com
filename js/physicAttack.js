@@ -515,7 +515,7 @@ function groupBMultiplier(isCrit,offHand) {
 	let MonsterMultiplier = getMonsterMultiplier();
 	let ATKMultiplier = getATKMultiplier(); // ATKMultiplier in script = bAddClass,Class_All = n_tok[bon_PHY_ATK] in sim
 	let PropertyMultiplier = getPropertyMultiplier();
-
+console.log(ATKMultiplier)
 	let skillBonus = 0;
 	if (
 	n_A_ActiveSkill != skill_AS_VENOM_SPLASHER &&

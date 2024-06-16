@@ -2976,7 +2976,7 @@
 ,[2847,itm_type_ACCESSORY,0,0,0,1,10,100,0,0,0,0,bon_ATK,50,bon_MATK,50,bon_RED_RC_UNDEAD,,bon_NONE] // Immortal Dog Tag
 ,[2848,itm_type_HEAD_MIDDLE,0,0,0,0,20,70,0,0,0,0,bon_LUK,10,bon_MDEF,10,bon_PDODGE,2,bon_NONE] // Ancient Elven Ear
 ,[2849,itm_type_ARMOR,2054,0,0,1,30,100,0,0,0,0,bon_DMG_RANGE,10,"ev_ref",4,bon_AGI,3,"ev_ref",4,bon_DEX,3,"ref_lvl",12,bon_DMG_SKILL + skill_RAN_WARG_STRIKE,30,"ref_lvl",12,bon_DMG_SKILL + skill_MIWA_METALLIC_SOUND,30,bon_NONE] // Ceres Armor
-,[2850,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"set_evr" + fl_WEAPON,1,bon_PHY_ATK,5,bon_NONE] // Immortal Dog Tag + Juliette D Rachel
+,[2850,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"set_evr" + fl_WEAPON,1,bon_ATK_MUL,5,bon_NONE] // Immortal Dog Tag + Juliette D Rachel
 ,[2851,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"set_evr" + fl_WEAPON,1,bon_INT,2,"set_evr" + fl_WEAPON,1,bon_DMG_SKILL + skill_WAR_CRIMSON_ROCK,1,bon_NONE] // Immortal Dog Tag + Sunflower Boy
 ,[2852,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"set_evr" + fl_WEAPON,1,bon_DMG_CRIT,3,"set_ref" + fl_WEAPON,9,bon_CRIT,50,"set_ref" + fl_WEAPON,9,bon_DMG_BOSS,25,bon_NONE] // Immortal Dog Tag + Lindy Hop
 
