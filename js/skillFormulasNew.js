@@ -13001,7 +13001,7 @@ const Skill = [
     accuracyCheck: true,
     bypassDef: false,
     hitAmount: `1`,
-    hitDivisibility: `1`,
+    hitDivisibility: `10`,
     isSpecialFormula: false,
     skillFormula(SkillLV) {
       switch (PATCH) {

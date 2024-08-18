@@ -2806,7 +2806,7 @@
 ,[2698,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RES_STATUS_BLIND,100,bon_RES_STATUS_SILENCE,100,bon_ATK,40,bon_ASPD_MUL,3,bon_DMG_RC_DEMI_HUMAN,2,bon_DMG_RC_BRUTE,2,"bagi_hi",108,bon_ATK,60,"bagi_hi",108,bon_ASPD_MUL,5,"bagi_hi",108,bon_DMG_RC_DEMI_HUMAN,2,"bagi_hi",108,bon_DMG_RC_BRUTE,2,"bagi_hi",120,bon_ATK,80,"bagi_hi",120,bon_ASPD_MUL,7,"bagi_hi",120,bon_DMG_RC_DEMI_HUMAN,4,"bagi_hi",120,bon_DMG_RC_BRUTE,4,bon_NONE]//Royal Guard Necklace + Imperial Feather
 ,[2699,itm_type_SHIELD,2056,100,0,1,250,100,0,0,0,0,bon_UNBREAKABLE,1,"ev_ref",1,bon_ATK,10,"ref_lvl",7,bon_ASPD_MUL,10,"ref_lvl",9,bon_DMG_RANGE,10,"ref_lvl",9,bon_RED_CASTDELAY,5,"ref_lvl",11,bon_DMG_SKILL + skill_GEN_CART_CANNON,15,"ref_lvl",11,bon_DMG_SKILL + skill_MEC_ARM_CANNON,15,bon_NONE]//Angel Mirror [1]
 ,[2700,itm_type_HEAD_MIDDLE,0,0,0,0,20,30,0,0,0,0,bon_CAST_SKILL_FLAT + skill_CR_SACRIFICE,2,bon_CAST_SKILL_FLAT + skill_PA_GLORIA_DOMINI,2,bon_HP_MUL,1,bon_ASPD_MUL,1,"ev_blvl",1,bon_DMG_SKILL + skill_PA_MARTYR_RECONING,2,"blvl_hi",100,bon_HP_MUL,1,"blvl_hi",100,bon_ASPD_MUL,1,"blvl_hi",150,bon_HP_MUL,1,"blvl_hi",150,bon_ASPD_MUL,1,bon_NONE]//Noble Mask
-,[2701,itm_type_HEAD_MIDDLE,0,0,0,0,30,70,0,0,0,0,"ev_bdex",10,bon_MATK,5,"bdex_hi",108,bon_RED_CAST,-5,"bdex_hi",108,bon_MATK,60,"bdex_hi",120,bon_RED_CAST,-5,"bdex_hi",120,bon_MATK,100,bon_NONE]//Kardui Ears
+,[2701,itm_type_HEAD_MIDDLE,0,0,0,0,30,70,0,0,0,0,"ev_bdex",10,bon_MATK,2,"bdex_hi",108,bon_RED_CAST,-5,"bdex_hi",108,bon_MATK,60,"bdex_hi",120,bon_RED_CAST,-5,"bdex_hi",120,bon_MATK,100,bon_NONE]//Kardui Ears
 
 //Infinity Update
 //Infinite Space
@@ -2980,12 +2980,12 @@
 ,[2851,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"set_evr" + fl_WEAPON,1,bon_INT,2,"set_evr" + fl_WEAPON,1,bon_DMG_SKILL + skill_WAR_CRIMSON_ROCK,1,bon_NONE] // Immortal Dog Tag + Sunflower Boy
 ,[2852,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"set_evr" + fl_WEAPON,1,bon_DMG_CRIT,3,"set_ref" + fl_WEAPON,9,bon_CRIT,50,"set_ref" + fl_WEAPON,9,bon_DMG_BOSS,25,bon_NONE] // Immortal Dog Tag + Lindy Hop
 
-// ,[2853,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // 
-// ,[2854,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
-// ,[2855,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
-// ,[2856,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
-// ,[2857,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
-// ,[2858,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
+,[2853,itm_type_ACCESSORY,0,0,0,1,10,130,0,0,0,0,bon_ATK_MUL,6,"ev_blvl",3,bon_DMG_SKILL + skill_GLT_ROLLING_CUTTER,1,"ev_blvl",10,bon_DMG_SKILL + skill_GLT_CROSS_RIPPER_SLASHER,1,bon_NONE] // Abyss King's Ring
+,[2854,itm_type_HEAD_LOWER,0,0,0,0,30,1,0,0,0,0,bon_RED_CAST,-5,bon_NONE] //Tree Sprout
+,[2855,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MATK,10,bon_RED_CAST,-2,"bdex_hi",108,bon_MATK,20,"bdex_hi",108,bon_RED_CAST,-3,"bdex_hi",120,bon_MATK,30,"bdex_hi",120,bon_RED_CAST,-5,bon_NONE] //Tree Sprout + Kardui Ears
+,[2856,itm_type_SHIELD,0,1,0,1,50,1,0,0,0,0,bon_FLEE,5,bon_PDODGE,1,"ev_ref",3,bon_PDODGE,2,"ref_lvl",10,bon_HP_MUL,10,"ref_lvl",10,bon_SP_MUL,10,bon_NONE] //Scutum
+,[2857,itm_type_SHIELD,0,50,0,1,50,65,0,0,0,0,bon_RED_RANGE,5,bon_NONE] //Legendary Hero's Shield
+,[2858,itm_type_HEAD_MIDDLE,0,0,0,0,20,10,0,0,0,0,bon_MDMG_ELE_WIND,5,bon_NONE] //Anemos Mask
 // ,[2859,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
 // ,[2860,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
 
@@ -4004,7 +4004,7 @@ w_SE = [
 	[2850,2847,2179,"NULL"], //Immortal Dog Tag + Juliette D Rachel
 	[2851,2847,2161,"NULL"], //Immortal Dog Tag + Sunflower Boy
 	[2852,2847,2160,"NULL"], //Immortal Dog Tag + Lindy Hop
-	// [,,,"NULL"], //
+	[2855,2854,2701,"NULL"], //Tree Sprout + Kardui Ears
 	// [,,,"NULL"], //
 	// [,,,"NULL"], //
 	// [,,,"NULL"], //

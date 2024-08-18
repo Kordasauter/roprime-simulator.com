@@ -20,7 +20,7 @@ function calcMAtk( includeMultipliers )
 	
 	StatMATK = Math.floor(StatMATK);
 	//WeaponMATK = BaseWeaponDamage + Variance + RefinementBonus
-	WeaponMATK = BaseWeaponDamage + UpgradeMATK;
+	WeaponMATK = BaseWeaponDamage  /*+ UpgradeMATK*/;
 	// CalcOverRefineMatk();
 	n_A_MATK_Variance = Math.floor( n_A_MATK_Variance );
 	extraMATK = Math.floor(extraMATK);
@@ -39,9 +39,10 @@ function calcMAtk( includeMultipliers )
 		n_A_MATK[0] = StatMATK + WeaponMATK + extraMATK - n_A_MATK_Variance + minOverRefineMagicAttack;
 		n_A_MATK[2] = StatMATK + WeaponMATK + extraMATK + n_A_MATK_Variance + overRefineMagicAttack;
 	}
-	
+
 	n_A_MATK[1] = Math.floor( ( n_A_MATK[0] + n_A_MATK[2] ) / 2 );
-	
+
+
 	BK_n_A_MATK = [0,0,0];
 	
 	// console.log("mysticalAmplification " + mysticalAmplification);
@@ -69,25 +70,31 @@ function CalcMATKMultipliers(MATK)
 	
 	//RaceMultiplier
 	damage *= ( 100 + magicRaceMultiplier() ) / 100;
+	console.log("magicRaceMultiplier() " + magicRaceMultiplier())
 
 	//SizeMultiplier
 	damage *= ( 100 + magicSizMultiplier() ) / 100;
+	console.log("magicSizMultiplier() " + magicSizMultiplier())
 	
 	//TargetPropertyMultiplier
 	damage *= ( 100 + magicElementMultiplier() ) / 100;
+	console.log("magicElementMultiplier() " + magicElementMultiplier())
 
 	//MonsterMultiplier
 	//TODO
 
 	//MATKMultiplier
 	damage *= ( 100 + magicAtkMul() ) / 100;
+	console.log("magicAtkMul() " + magicAtkMul())
 	
 
 	
 		// SkillPropertyMultiplier
 	damage *=  ( 100 + magicSkillElementMultiplier() ) / 100;
+	console.log("magicSkillElementMultiplier() " + magicSkillElementMultiplier())
 	// BossMATKMultiplier
 	damage *= ( 100 + magicBossMod() ) / 100;
+	console.log("magicBossMod() " + magicBossMod())
 	
 	// damage *= ( 100 + (5 * SkillSearch(skill_HW_MYSTICAL_AMPLIFICATION) ) ) / 100;
 	

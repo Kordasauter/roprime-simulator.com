@@ -7286,7 +7286,9 @@ function calcASPD() {
     n_A_JOB == cls_KAGOB ||
     n_A_JOB == cls_ENOVI ||
     n_A_JOB == cls_REB ||
-    n_A_JOB == cls_SUM
+    n_A_JOB == cls_SUM ||
+    n_A_JOB == cls_STEM ||
+    n_A_JOB == cls_SRIP
   ) {
     // 3rd class
     n_A_ASPD = Min(n_A_ASPD, 193);
