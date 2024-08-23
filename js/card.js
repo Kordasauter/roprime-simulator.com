@@ -407,7 +407,7 @@ function SetCard()
 ,[355,1,"Beetle King","Regain 5 SP when killing a [Fish] type monster with a physical attack<BR>Drains 5 SP when the weapon is unequipped",0]
 ,[356,1,"Aster","+30% damage on [Shellfish]",1059,30,0]
 ,[357,2,"Kiel-D-01",0,bon_RED_CASTDELAY,30,0]
-,[358,3,"Parasite","[description translation missing - ItemID: 358]",bon_RED_RC_FORMLESS,5,bon_DEF,1,0]
+,[358,3,"Parasite","",bon_RED_ELE_NEUTRAL,5,bon_DEF,1,0]
 ,[359,1,"Fake Angel","Regain 5 SP when killing a [Angel] type monster with a physical attack<BR>Drains 5 SP when the weapon is unequipped",0]
 ,[360,1,"Phendark","Regain 5 SP when killing a [Demi-human] type monster with a physical attack<BR>Drains 5 SP when the weapon is unequipped",0]
 ,[361,1,"Bloody Knight",0,221,76,0]

@@ -1373,7 +1373,7 @@
 ,[1366,itm_type_HEAD_UPPER,/*0*/999,6,0,0,30,70,0,0,0,0,bon_DEX,2,bon_ASPD_MUL,1,bon_NONE] // "Virgo Crown"
 ,[1367,itm_type_HEAD_UPPER,/*0*/999,6,0,1,30,70,0,0,0,0,bon_ASPD_MUL,3,bon_RED_ELE_EARTH,5,bon_SKILL_AUTOCAST,114,bon_NONE] // "Virgo Diadem"
 ,[1368,itm_type_HEAD_UPPER,/*0*/999,4,0,1,10,30,0,0,0,0,bon_LUK,5,bon_HIT,10,bon_RED_CAST,-5,bon_RED_ELE_NEUTRAL,5,bon_RED_ELE_WATER,5,bon_RED_ELE_EARTH,5,bon_RED_ELE_FIRE,5,bon_RED_ELE_WIND,5,bon_RED_ELE_POISON,5,bon_RED_ELE_HOLY,5,bon_RED_ELE_SHADOW,5,bon_RED_ELE_GHOST,5,bon_RED_ELE_UNDEAD,5,bon_NONE] // "Garuda Hat"
-,[1369,itm_type_ARMOR,0,2,0,1,50,1,0,0,0,0,bon_RES_STATUS_STUN,15,bon_RES_STATUS_FREEZE,15,bon_RED_BOSS,5,bon_RED_NON_BOSS,5,bon_MDEF,10,bon_NONE] // "Tidung"
+,[1369,itm_type_ARMOR,0,2,0,1,50,1,0,0,0,0,bon_RES_STATUS_STUN,15,bon_RES_STATUS_FREEZE,15,bon_RED_ELE_NEUTRAL,5,bon_RED_ELE_DARK,5,bon_RED_ELE_EARTH,5,bon_RED_ELE_FIRE,5,bon_RED_ELE_GHOST,5,bon_RED_ELE_HOLY,5,bon_RED_ELE_POISON,5,bon_RED_ELE_UNDEAD,5,bon_RED_ELE_WATER,5,bon_RED_ELE_WIND,5,bon_MDEF,10,bon_NONE] // "Tidung"
 ,[1370,itm_type_HEAD_MIDDLE,/*0*/999,2,0,0,10,80,0,0,0,0,bon_NONE] // "Sigrun''s Wings"'
 ,[1371,weapTyp_KATAR,2108,190,3,1,120,100,0,0,0,0,bon_NONE] // "Durga"
 ,[1372,itm_type_HEAD_UPPER,/*0*/999,1,0,0,15,70,0,0,0,0,bon_HP_MUL,15,bon_SP_REG,5,bon_NONE] // "Victorious Coronet"
