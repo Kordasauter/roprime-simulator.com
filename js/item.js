@@ -2986,8 +2986,39 @@
 ,[2856,itm_type_SHIELD,0,1,0,1,50,1,0,0,0,0,bon_FLEE,5,bon_PDODGE,1,"ev_ref",3,bon_PDODGE,2,"ref_lvl",10,bon_HP_MUL,10,"ref_lvl",10,bon_SP_MUL,10,bon_NONE] //Scutum
 ,[2857,itm_type_SHIELD,0,50,0,1,50,65,0,0,0,0,bon_RED_RANGE,5,bon_NONE] //Legendary Hero's Shield
 ,[2858,itm_type_HEAD_MIDDLE,0,0,0,0,20,10,0,0,0,0,bon_MDMG_ELE_WIND,5,bon_NONE] //Anemos Mask
-// ,[2859,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
-// ,[2860,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
+//missing items
+,[2859,itm_type_HEAD_LOWER,0,0,0,0,10,80,0,0,0,0,bon_VIT,2,bon_RED_RANGE,5,bon_HP_ADD,200,"blvl_hi",100,bon_HP_ADD,1800,bon_NONE] //Strawberry Mouth Guard
+,[2860,weapTyp_STAFF,230,70,4,2,110,100,0,0,0,0,bon_WEAPON_MATK,160,"ev_ref",2,bon_MATK,10,"ev_ref",3,bon_SP_REG,2,"ref_lvl",7,bon_DMG_SKILL + skill_SRIP_ESPA,15,"ref_lvl",9,bon_RED_CAST,-10,"ref_lvl",11,bon_DMG_SKILL + skill_SRIP_ESWOO,20,bon_NONE] //Spirit Pendulum
+,[2861,weapTyp_STAFF,230,70,4,2,120,150,0,0,0,0,bon_WEAPON_MATK,190,"ev_ref",2,bon_MATK,15,"ev_ref",3,bon_MDMG_ELE_ALL,2,"ref_lvl",7,bon_DMG_SKILL + skill_SRIP_ESPA,15,"ref_lvl",9,bon_DMG_SKILL + skill_SRIP_ESWOO,25,bon_NONE] //Revived Spirit Pendulum
+,[2862,weapTyp_BOOK,229,160,4,2,90,100,0,0,0,0,"ev_ref",2,bon_ATK,10,"ev_ref",3,bon_SP_REG,2,"ref_lvl",7,bon_DMG_SKILL + skill_STEM_BLAZE_KICK,15,"ref_lvl",9,bon_ASPD_MUL,10,"ref_lvl",11,bon_DMG_SKILL + skill_STEM_SOLAR_EXPLOSION,20,bon_NONE] //All-Sun Book
+,[2863,weapTyp_BOOK,229,200,4,2,110,150,0,0,0,0,"ev_ref",2,bon_ATK,15,"ev_ref",3,bon_PHY_ATK,4,"ref_lvl",7,bon_DMG_SKILL + skill_STEM_BLAZE_KICK,20,"ref_lvl",7,bon_ASPD_MUL,10,"ref_lvl",9,bon_DMG_SKILL + skill_STEM_SOLAR_EXPLOSION,25,"ref_lvl",11,bon_DMG_SIZ_SMALL,15,"ref_lvl",11,bon_DMG_SIZ_MEDIUM,15,"ref_lvl",11,bon_DMG_SIZ_LARGE,15,bon_NONE] //Revived All-Sun Book
+,[2864,itm_type_SHADOW_ARMOR,230,0,0,0,0,100,0,0,0,0,bon_DMG_SKILL + skill_SRIP_ESWOO,20,"ev_ref",1,bon_DMG_SKILL + skill_SRIP_ESPA,3,bon_NONE] //Reaper's Shadow Armor
+,[2865,itm_type_SHADOW_SHOES,230,0,0,0,0,100,0,0,0,0,bon_DELAY_SKILL_FLAT + skill_SRIP_SOUL_HARVEST,3,"ev_ref",1,bon_DELAY_SKILL_FLAT + skill_SRIP_SOUL_HARVEST,1,bon_NONE] //Reaper's Shadow Boots
+,[2866,itm_type_SHADOW_SHOES,230,0,0,0,0,100,0,0,0,0,bon_DELAY_SKILL_FLAT + skill_SRIP_EVIL_SOUL_CURSE,1,"ev_ref",2,bon_DELAY_SKILL_FLAT + skill_SRIP_EVIL_SOUL_CURSE,0.1,bon_NONE] //Cursed Shadow Boots
+,[2867,itm_type_SHADOW_EARRING,230,0,0,0,0,100,0,0,0,0,bon_MDMG_ELE_SHADOW,3,"ref_lvl",7,bon_MDMG_ELE_SHADOW,3,"ref_lvl",9,bon_MDMG_ELE_SHADOW,4,bon_NONE] //Cursed Shadow Earring
+,[2868,itm_type_SHADOW_PENDANT,230,0,0,0,0,100,0,0,0,0,bon_MDMG_ELE_SHADOW,5,"ev_ref",2,bon_DMG_SKILL + skill_SRIP_CURSE_EXPLOSION,3,bon_NONE] //Cursed Shadow Pendant
+,[2869,itm_type_SHADOW_ARMOR,229,0,0,0,0,100,0,0,0,0,bon_DMG_SKILL + skill_STEM_NEW_MOON_KICK,20,"ev_ref",1,bon_DMG_SKILL + skill_STEM_FULL_MOON_KICK,3,bon_NONE] //Emperor's Shadow Armor
+,[2870,itm_type_SHADOW_SHOES,229,0,0,0,0,100,0,0,0,0,bon_DELAY_SKILL_FLAT + skill_STEM_SOLAR_LUNAR_STELLAR_RECORD,3,"ev_ref",1,bon_DELAY_SKILL_FLAT + skill_STEM_SOLAR_LUNAR_STELLAR_RECORD,1,bon_NONE] //Emperor's Shadow Boots
+,[2871,itm_type_SHADOW_SHOES,229,0,0,0,0,100,0,0,0,0,bon_DMG_SKILL + skill_STEM_NEW_MOON_KICK,5,"ev_ref",2,bon_DMG_SKILL + skill_STEM_NEW_MOON_KICK,2,bon_NONE] //Moon Shadow Boots
+,[2872,itm_type_SHADOW_EARRING,229,0,0,0,0,100,0,0,0,0,bon_PHY_ATK,3,"ref_lvl",7,bon_PHY_ATK,3,bon_NONE] //Moon Shadow Earring
+,[2873,itm_type_SHADOW_PENDANT,229,0,0,0,0,100,0,0,0,0,"ref_lvl",9,bon_DMG_SIZ_LARGE,5,"ref_lvl",9,bon_DMG_SIZ_MEDIUM,5,"ref_lvl",9,bon_DMG_SIZ_SMALL,5,"ev_ref",2,bon_DMG_SIZ_LARGE,1,"ev_ref",2,bon_DMG_SIZ_MEDIUM,1,"ev_ref",2,bon_DMG_SIZ_SMALL,1,bon_NONE] //Moon Shadow Pendant
+,[2874,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DELAY_SKILL_FLAT + skill_SRIP_SOUL_HARVEST,2,bon_NONE] //Reaper's Shadow Armor + Reaper's Shadow Boots
+,[2875,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,7,bon_HP_MUL,3,bon_SP_MUL,3,bon_NONE] //Soul Reaper Set + Taekwon Set
+,[2876,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"set_evr"+(fl_SHADOW_EARRING+fl_SHADOW_PENDANT+fl_SHADOW_SHOES),1,bon_DMG_SKILL + skill_SRIP_CURSE_EXPLOSION,1,bon_NONE] //Cursed shadow Set
+,[2877,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MDEFIGN_RC_ALL,40,"set_evr"+(fl_SHADOW_EARRING+fl_SHADOW_ARMOR),1,bon_MDEFIGN_RC_ALL,1,bon_NONE] //Reaper's Shadow Armor + Cursed Shadow Earring
+,[2878,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DELAY_SKILL_FLAT + skill_STEM_SOLAR_LUNAR_STELLAR_RECORD,2,bon_NONE] //Emperor's Shadow Armor + Emperor's Shadow Boots
+,[2879,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_ALL_STATS,7,bon_HP_MUL,3,bon_SP_MUL,3,bon_NONE] //Star Emperor Set + Taekwon Set
+,[2880,itm_type_SET,0,0,0,0,0,0,0,0,0,0,"set_evr"+(fl_SHADOW_EARRING+fl_SHADOW_PENDANT+fl_SHADOW_SHOES),2,bon_DMG_SKILL + skill_STEM_FULL_MOON_KICK,1,bon_NONE] //Moon shadow Set
+,[2881,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_DEFIGN_RC_ALL,40,"set_evr"+(fl_SHADOW_EARRING+fl_SHADOW_ARMOR),1,bon_DEFIGN_RC_ALL,1,bon_NONE] //Emperor's Shadow Armor + Moon Shadow Earring
+,[2882,itm_type_HEAD_MIDDLE,0,7,0,0,10,50,0,0,0,0,bon_NONE] //Amber Wings
+,[2883,itm_type_GARMENT,0,15,0,1,60,100,0,0,0,0,bon_MDEF,10,bon_INT,5,bon_DEX,5,bon_RED_RC_DEMON,5,bon_RED_RC_UNDEAD,5,bon_RED_ELE_DARK,5,bon_RED_ELE_UNDEAD,5,bon_NONE] //Skin of Gwiber
+,[2884,itm_type_GARMENT,0,15,0,1,60,100,0,0,0,0,bon_MDEF,10,bon_AGI,5,bon_VIT,5,bon_RED_RC_DEMI_HUMAN,5,bon_RED_RC_BRUTE,5,bon_RED_ELE_EARTH,5,bon_RED_ELE_WIND,5,bon_NONE] //Skin of Ladon
+,[2885,itm_type_GARMENT,0,15,0,1,60,100,0,0,0,0,bon_MDEF,10,bon_STR,5,bon_LUK,5,bon_RED_RC_ANGEL,5,bon_RED_RC_FORMLESS,5,bon_RED_ELE_HOLY,5,bon_RED_ELE_GHOST,5,"ref_lvl",9,bon_DMG_CRIT,5,"ref_lvl",11,bon_DMG_CRIT,5,bon_NONE] //Skin of Marraco
+,[2886,itm_type_GARMENT,0,15,0,1,60,100,0,0,0,0,bon_MDEF,10,bon_AGI,5,bon_VIT,5,bon_RED_RC_DEMI_HUMAN,5,bon_RED_RC_FISH,5,bon_RED_ELE_NEUTRAL,5,bon_RED_ELE_POISON,5,bon_NONE] //Skin of Typhon
+// ,[2887,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
+// ,[2888,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
+// ,[2889,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
+// ,[2890,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
 
 //"ev_ref" = for every x refine
 //"ev_ref",x,bonus,amount,
@@ -4005,9 +4036,14 @@ w_SE = [
 	[2851,2847,2161,"NULL"], //Immortal Dog Tag + Sunflower Boy
 	[2852,2847,2160,"NULL"], //Immortal Dog Tag + Lindy Hop
 	[2855,2854,2701,"NULL"], //Tree Sprout + Kardui Ears
-	// [,,,"NULL"], //
-	// [,,,"NULL"], //
-	// [,,,"NULL"], //
+	[2874,2864,2865,"NULL"], //Reaper's Shadow Armor + Reaper's Shadow Boots
+	[2875,2864,2865,1823,1840,"NULL"], //Soul Reaper Set + Taekwon Set
+	[2876,2866,2867,2868,"NULL"], //Cursed shadow Set
+	[2877,2864,2867,"NULL"], //Reaper's Shadow Armor + Cursed Shadow Earring
+	[2878,2869,2870,"NULL"], //Emperor's Shadow Armor + Emperor's Shadow Boots
+	[2879,2869,2870,1823,1840,"NULL"], //Soul Emperor Set + Taekwon Set
+	[2880,2871,2872,2873,"NULL"], //Moon shadow Set
+	[2881,2869,2872,"NULL"], ///Emperor's Shadow Armor + Moon Shadow Earring
 	// [,,,"NULL"], //
 
 	// ,[itm_set,item1,item2,...,"NULL"] //

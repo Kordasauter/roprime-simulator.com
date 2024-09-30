@@ -1111,6 +1111,10 @@ function calcEquipMATK()
 		if((n_A_Equip[eq_WEAPONII] == 1267) && (n_A_Weapon2_ATKplus >= 6))
 			equipMATK += (n_A_Weapon2_ATKplus - 5) * 3;
 	}
+	if(EquipNumSearch(2886) && n_A_SHOULDER_DEF_PLUS >= 10)//Skin of Typhon
+	{
+		equipMATK += 15 * Math.floor((SU_AGI+SU_VIT)/20)
+	}
 	
 //shadows
 	if ( EquipNumSearch( 1657 ) )

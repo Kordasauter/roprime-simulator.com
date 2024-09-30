@@ -112,8 +112,12 @@ MAP_NAME = [
 ,["","Advanced Old Glast Heim"]
 ,["","Illusion of Teddy Bear (ein_d02_i)"]
 ,["","Illusion of Abyss Turtle Island (tur_d04_i)"]
-// ,["","Place_Holder"]
-// ,["","Place_Holder"]
+,["","Illusion Labyrinth"]
+,["","Illusion Luanda"]
+,["","Infinite Space"]
+,["","Edda Fall of Glast Heim (Normal)"]
+,["","Edda Fall of Glast Heim (Hard)"]
+,["","Edda Biolab"]
 // ,["","Place_Holder"]
 ];
 }

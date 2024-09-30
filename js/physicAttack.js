@@ -515,7 +515,7 @@ function groupBMultiplier(isCrit,offHand) {
 	let MonsterMultiplier = getMonsterMultiplier();
 	let ATKMultiplier = getATKMultiplier(); // ATKMultiplier in script = bAddClass,Class_All = n_tok[bon_PHY_ATK] in sim
 	let PropertyMultiplier = getPropertyMultiplier();
-console.log(ATKMultiplier)
+// console.log(ATKMultiplier)
 	let skillBonus = 0;
 	if (
 	n_A_ActiveSkill != skill_AS_VENOM_SPLASHER &&
@@ -559,7 +559,6 @@ console.log(ATKMultiplier)
 		(PropertyMultiplier / 100) *
 		(1 + skillBonus / 100)
 	);
-	
 	return groupBMul;
 }
 function getRaceMultiplier() {
@@ -1453,7 +1452,7 @@ function getBaseWeaponATK2() {
 }
 function getWeaponATKVariance() {
 	//Variance = ± 0.05 × WeaponLevel × BaseWeaponDamage
-	return 0.05 * getWeaponLevel() * getBaseWeaponATK();
+	return Math.floor(0.05 * getWeaponLevel() * getBaseWeaponATK())>0?(0.05 * getWeaponLevel() * getBaseWeaponATK()):1;
 }
 function getWeaponATKVariance2() {
 	//Variance = ± 0.05 × WeaponLevel × BaseWeaponDamage

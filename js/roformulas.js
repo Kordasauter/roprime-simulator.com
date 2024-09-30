@@ -1002,10 +1002,14 @@ function CalcEquipAtk() {
       Math.floor(SkillSearch(skill_SW_SWORD_MASTERY) / 2) *
       EquipNumSearch(2641);
   }
-  // if(EquipNumSearch(2688))
-  // {//Emerald Ring
-  // 	equipmentAttack += 20 * Math.floor(SkillSearch(skill_AR_DOUBLE_STRAFE));
-  // }
+  if(EquipNumSearch(2883) && n_A_SHOULDER_DEF_PLUS >= 10)//Skin of Gwiber
+  {
+      equipmentAttack += 5 * Math.floor((SU_DEX+SU_INT)/20)
+  }
+  if(EquipNumSearch(2884) && n_A_SHOULDER_DEF_PLUS >= 10)//Skin of Ladon
+  {
+      equipmentAttack += 15 * Math.floor((SU_AGI+SU_VIT)/20)
+  }
 
   //Cards
   if (CardNumSearch(557)) {
@@ -3931,6 +3935,13 @@ function calcHP() {
       additiveHP += 500;
     }
   }
+  if(EquipNumSearch(2882)) //Amber Wings
+  {
+    if(n_A_JobSearch() == cls_NOV || n_A_JobSearch() == cls_TKK || n_A_JobSearch() == cls_NIN || n_A_JobSearch() == cls_GUN || n_A_JobSearch() == cls_SNOVI)
+      {
+        additiveHP += 1000;
+      } 
+  }
 
   //Cards
   if (CardNumSearch(565)) {
@@ -5156,6 +5167,13 @@ function calcSP(n_A_MaxSP) {
       w += 50;
     }
   }
+  if(EquipNumSearch(2882)) //Amber Wings
+  {
+    if(n_A_JobSearch() == cls_NOV || n_A_JobSearch() == cls_TKK || n_A_JobSearch() == cls_NIN || n_A_JobSearch() == cls_GUN || n_A_JobSearch() == cls_SNOVI)
+      {
+        w += 100;
+      } 
+  }
 
   //Shadows
   if (EquipNumSearch(1655)) {
@@ -5613,6 +5631,10 @@ function calcHardDef(n_A_totalDEF) {
   if (EquipNumSearch(2684)) {
     //Tengu Shoes
     n_A_DEF += 30 * SkillSearch(skill_SUR_GENTLE_TOUCH_REVITALIZE);
+  }
+  if(EquipNumSearch(2886) && n_A_SHOULDER_DEF_PLUS >= 10)//Skin of Typhon
+  {
+    n_A_DEF += 20 * Math.floor((SU_AGI+SU_VIT)/20)
   }
 
   // Shadows
@@ -6175,6 +6197,10 @@ function calcHit(n_A_HIT) {
     //Dex Glove
     n_A_HIT += Math.floor(SU_DEX / 10) * EquipNumSearch(1796);
   }
+  if(EquipNumSearch(2884) && n_A_SHOULDER_DEF_PLUS >= 10)//Skin of Ladon
+  {
+    n_A_HIT += 5 * Math.floor((SU_AGI+SU_VIT)/20)
+  }
 
   // Skills
   n_A_HIT += 1 * SkillSearch(skill_AR_VULTURES_EYE);
@@ -6378,6 +6404,13 @@ function calcFlee(n_A_FLEE) {
     //Consultation Robe [1] + Morrigane's Manteau
     n_A_FLEE += n_A_BODY_DEF_PLUS * 2;
   }
+  if(EquipNumSearch(2882)) //Amber Wings
+  {
+    if(n_A_JobSearch() == cls_THI)
+      {
+        n_A_FLEE += 10;
+      } 
+  }
 
   if (n_A_JobSearch2() == cls_ASS || n_A_JobSearch2() == cls_ROG)
     n_A_FLEE += 4 * SkillSearch(skill_TH_IMPROVE_DODGE);
@@ -6569,6 +6602,13 @@ function calcPDodge(n_A_LUCKY) {
       n_A_LUCKY += 5;
     if(EnchNumSearch(878))//Archbishop Lv2
       n_A_LUCKY += 5;
+  }
+  if(EquipNumSearch(2882)) //Amber Wings
+  {
+    if(n_A_JobSearch() == cls_THI)
+      {
+        n_A_LUCKY += 3;
+      } 
   }
 
   //Cards
@@ -6828,6 +6868,10 @@ function calcCrit(n_A_CRI) {
   if(EquipNumSearch(2849) && CardNumSearch(191))
     {// Ceres Armor + Ancient Mimic Card
       n_A_CRI += 5;
+    }
+    if(EquipNumSearch(2885) && n_A_SHOULDER_DEF_PLUS >= 10)//Skin of Marraco
+    {
+      n_A_CRI +=  Math.floor((SU_STR+SU_LUK)/20)
     }
 
   //Shadow
@@ -7562,6 +7606,10 @@ function getEquipASPDMul() {
   if (EquipNumSearch(2685)) {
     //Traveler's Shoes
     equipASPDMul += 4 * SkillSearch(skill_MIN_HARMONIZE);
+  }
+  if(EquipNumSearch(2885) && n_A_SHOULDER_DEF_PLUS >= 10)//Skin of Marraco
+  {
+    equipASPDMul +=  Math.floor((SU_STR+SU_LUK)/20)
   }
 
   // if(EquipNumSearch())
@@ -8509,6 +8557,10 @@ function CalcDelay() {
 		{//Rigid && Muscle Fool
 			n_tok[bon_RED_CASTDELAY] += 10;
 		}
+    if(EquipNumSearch(2883) && n_A_SHOULDER_DEF_PLUS >= 10)//Skin of Gwiber
+  {
+    n_tok[bon_RED_CASTDELAY] += Math.floor((SU_DEX+SU_INT)/20)
+  }
 
   // Skills
   if (
@@ -8999,6 +9051,36 @@ function calcRaceElementalReduction() {
     if (n_A_SHADOW_SHIELD_DEF_PLUS >= 9) {
       n_tok[bon_RED_RC_BRUTE] += 1;
     }
+  }
+  if(EquipNumSearch(2882)) //Amber Wings
+  {
+    if( n_A_JobSearch() == cls_SWO)
+    {
+      n_tok[bon_RED_SIZ_LARGE] += 5;
+      n_tok[bon_RED_SIZ_MEDIUM] += 3;
+    }
+    if( n_A_JobSearch() == cls_MAG)
+    {
+      n_tok[bon_RED_ELE_NEUTRAL] += 5;
+      n_tok[bon_RED_ELE_WATER] += 5;
+      n_tok[bon_RED_ELE_EARTH] += 5;
+      n_tok[bon_RED_ELE_FIRE] += 5;
+      n_tok[bon_RED_ELE_WIND] += 5;
+      n_tok[bon_RED_ELE_POISON] += 5;
+      n_tok[bon_RED_ELE_HOLY] += 5;
+      n_tok[bon_RED_ELE_SHADOW] += 5;
+      n_tok[bon_RED_ELE_GHOST] += 5;
+      n_tok[bon_RED_ELE_UNDEAD] += 5;
+    }
+    if( n_A_JobSearch() == cls_MER)
+    {
+      n_tok[bon_RED_BOSS] += 5;
+      n_tok[bon_RED_NONBOSS] += 3;
+    }
+    if( n_A_JobSearch() == cls_ARC)
+      {
+        n_tok[bon_RED_RANGE] += 10;
+      }
   }
 
   //Enchants
