@@ -375,6 +375,16 @@ function magicSkillElementMultiplier()
 			eleSkillMul += (n_A_HEAD_DEF_PLUS + n_A_BODY_DEF_PLUS);
 		}
 	}
+	if((n_A_Equip[eq_WEAPON] == 2894) && (n_A_card[card_loc_WEAPON_I] == 363 || n_A_card[card_loc_WEAPON_II] == 363 || n_A_card[card_loc_WEAPON_III] == 363 || n_A_card[card_loc_WEAPON_IV] == 363))//Dragonslayer Sword + Randgris Card
+	{
+		if(n_A_Weapon_element == ele_HOLY)
+			eleSkillMul += (n_A_BaseLV >= 100)?30:15
+	}
+  if((n_A_Equip[eq_WEAPONII] == 2894) && (n_A_card[card_loc_WEAPONII_I] == 363 || n_A_card[card_loc_WEAPONII_II] == 363 || n_A_card[card_loc_WEAPONII_III] == 363 || n_A_card[card_loc_WEAPONII_IV] == 363))//Dragonslayer Sword + Randgris Card
+	{
+		if(n_A_Weapon_element == ele_HOLY)
+			eleSkillMul += (n_A_BaseLV >= 100)?30:15
+	}
 		
 //skill (element)
 	if((SkillSearch( skill_SA_ENDOW_BLAZE ) && n_A_Weapon_element == ele_FIRE) || 

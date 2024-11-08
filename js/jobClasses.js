@@ -42,7 +42,7 @@ JobName = [
 ,["Ст. Маг","High Magician"]
 ,["Ст. Торговец","High Merchant"]
 ,["Таэквондист","Taekwon Kid"]
-,["Гладиатор","Teakwon Master"]
+,["Гладиатор","Taekwon Master"]
 ,["Медиум","Soul Linker"]
 ,["Ниндзя","Ninja"]
 ,["Стрелок","Gunslinger"]

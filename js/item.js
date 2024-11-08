@@ -2632,7 +2632,7 @@
 ,[2537,weapTyp_SPEAR,213,190,4,2,100,130,0,0,0,0,bon_ASPD_MUL,3,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SKILL + skill_ROY_VANISHING_POINT,20,"ref_lvl",11,bon_DMG_SKILL + skill_ROY_VANISHING_POINT,15,bon_NONE]//Boost Lance-OS
 ,[2538,weapTyp_KNUCKLE,215,175,4,2,90,130,0,0,0,0,bon_ATK_MUL,3,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SKILL + skill_SUR_RAMPAGE_BLASTER,15,"ref_lvl",11,bon_DMG_SIZ_MEDIUM,20,"ref_lvl",11,bon_DMG_SIZ_LARGE,20,bon_NONE]//Burning Knuckle-OS
 ,[2539,weapTyp_SWORD,2072,160,4,2,80,130,0,0,0,0,bon_WEAPON_MATK,150,bon_SKILL_AUTOCAST,119,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SKILL + skill_MA_FIRE_BALL,30,"ref_lvl",11,bon_SKILL_AUTOCAST,166,bon_NONE]//Cannon Rapier-OS
-,[2540,weapTyp_BOOK,2095,180,4,2,120,130,0,0,0,0,bon_ATK_MUL,3,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SIZ_SMALL,20,"ref_lvl",9,bon_DMG_SIZ_MEDIUM,20,"ref_lvl",11,bon_DMG_CRIT,20,bon_NONE]//Circuit Board-OS
+,[2540,weapTyp_BOOK,300,180,4,2,120,130,0,0,0,0,bon_ATK_MUL,3,"ref_lvl",7,bon_ASPD_MUL,7,"ref_lvl",9,bon_DMG_SIZ_SMALL,20,"ref_lvl",9,bon_DMG_SIZ_MEDIUM,20,"ref_lvl",11,bon_DMG_CRIT,20,bon_NONE]//Circuit Board-OS
 ,[2541,weapTyp_ROD,224,250,4,2,120,130,0,0,0,0,bon_WEAPON_MATK,350,bon_MATK_MUL,5,bon_UNBREAKABLE,1,"ref_lvl",7,bon_DMG_SKILL + skill_SUM_SILVERVINE_STEM_SPEAR,20,"ref_lvl",9,bon_RED_CAST,-10,"ref_lvl",9,bon_INC_MAGIC_EARTH,15,"ref_lvl",9,bon_INC_MAGIC_FIRE,15,"ref_lvl",9,bon_INC_MAGIC_WATER,15,"ref_lvl",9,bon_INC_MAGIC_GHOST,15,"ref_lvl",9,bon_INC_MAGIC_NEUTRAL,15,"ref_lvl",11,bon_DMG_SKILL + skill_SUM_CATNIP_METEOR,30,bon_NONE]//Electric Fox-OS
 ,[2542,weapTyp_RIFLE,222,250,4,2,100,130,0,0,0,0,bon_ATK_MUL,3,"ref_lvl",7,bon_DMG_RANGE,7,"ref_lvl",9,bon_DMG_SKILL + skill_REB_GODS_HAMMER,20,bon_NONE]//HR-S55-OS
 ,[2543,weapTyp_DAGGER,221,150,4,2,90,130,0,0,0,0,bon_WEAPON_MATK,150,bon_DMG_ELE_SHADOW,5,bon_MDMG_ELE_SHADOW,5,bon_DMG_ELE_UNDEAD,5,bon_MDMG_ELE_UNDEAD,5,"ref_lvl",7,bon_DMG_ELE_UNDEAD,10,"ref_lvl",7,bon_MDMG_ELE_UNDEAD,10,"ref_lvl",7,bon_DMG_ELE_UNDEAD,10,"ref_lvl",7,bon_MDMG_ELE_UNDEAD,10,"ref_lvl",9,bon_DMG_SKILL + skill_KAG_KUNAI_SPLASH,20,"ref_lvl",11,bon_DMG_ELE_UNDEAD,10,"ref_lvl",11,bon_MDMG_ELE_UNDEAD,10,"ref_lvl",11,bon_DMG_ELE_UNDEAD,10,"ref_lvl",11,bon_MDMG_ELE_UNDEAD,10,bon_NONE]//Kuroiro-OS
@@ -3015,10 +3015,21 @@
 ,[2884,itm_type_GARMENT,0,15,0,1,60,100,0,0,0,0,bon_MDEF,10,bon_AGI,5,bon_VIT,5,bon_RED_RC_DEMI_HUMAN,5,bon_RED_RC_BRUTE,5,bon_RED_ELE_EARTH,5,bon_RED_ELE_WIND,5,bon_NONE] //Skin of Ladon
 ,[2885,itm_type_GARMENT,0,15,0,1,60,100,0,0,0,0,bon_MDEF,10,bon_STR,5,bon_LUK,5,bon_RED_RC_ANGEL,5,bon_RED_RC_FORMLESS,5,bon_RED_ELE_HOLY,5,bon_RED_ELE_GHOST,5,"ref_lvl",9,bon_DMG_CRIT,5,"ref_lvl",11,bon_DMG_CRIT,5,bon_NONE] //Skin of Marraco
 ,[2886,itm_type_GARMENT,0,15,0,1,60,100,0,0,0,0,bon_MDEF,10,bon_AGI,5,bon_VIT,5,bon_RED_RC_DEMI_HUMAN,5,bon_RED_RC_FISH,5,bon_RED_ELE_NEUTRAL,5,bon_RED_ELE_POISON,5,bon_NONE] //Skin of Typhon
-// ,[2887,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
-// ,[2888,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
-// ,[2889,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
-// ,[2890,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
+//
+,[2887,itm_type_ACCESSORY,0,0,0,1,50,80,0,0,0,0,bon_DMG_BOSS,5,bon_RED_CASTDELAY,10,bon_DEFIGN_RC_ALL,15,bon_NONE] //Blacksmith's Gloves
+,[2888,itm_type_ARMOR,0,55,0,1,50,70,0,0,0,0,bon_USR_ELEMENT,ele_DARK,bon_MDEF,5,bon_NONE] //Chiu Armor
+,[2889,itm_type_ARMOR,0,55,0,1,50,70,0,0,0,0,bon_USR_ELEMENT,ele_HOLY,bon_NONE] //Kirin Armor
+,[2890,itm_type_ARMOR,0,30,0,1,50,50,0,0,0,0,bon_DMG_RC_DEMON,3,bon_MDMG_RC_DEMON,3,bon_NONE] //Holy Father Mail
+,[2891,itm_type_ACCESSORY,0,0,0,1,50,80,0,0,0,0,bon_INC_MAGIC_FIRE,5,bon_INC_MAGIC_WATER,5,bon_INC_MAGIC_WIND,5,bon_INC_MAGIC_EARTH,5,bon_INC_MAGIC_NEUTRAL,5,bon_MDEFIGN_RC_ALL,50,bon_RED_CAST,-10,bon_NONE] //Magician's Gloves
+,[2892,itm_type_HEAD_MIDDLE,0,200,0,1,30,99,0,0,0,0,bon_RES_STATUS_STUN,30,bon_VIT,3,bon_MDEF,10,bon_NONE] //Star Eyepatch
+,[2893,itm_type_SHOES,0,60,0,1,120,100,0,0,0,0,bon_DMG_BOSS,15,"ev_ref",2,bon_ATK,15,"ev_ref",2,bon_ASPD_MUL,2,"ev_ref",2,bon_HP_MUL,2,"ev_ref",2,bon_SP_MUL,2,bon_NONE] //Nameless Swordsman's Boots
+,[2894,weapTyp_SWORD,148,200,4,1,175,99,0,0,0,0,bon_WEAPON_MATK,150,bon_STR,10,bon_INT,10,bon_NONE] //Dragonslayer Sword
+,[2895,itm_type_SHOES,0,7,0,1,20,1,0,0,0,0,bon_MDEF,10,"ev_ref",1,bon_RED_CASTDELAY,2,bon_NONE] //Applause Sandals
+,[2896,itm_type_GARMENT,0,10,0,1,30,100,0,0,0,0,bon_HP_MUL,10,bon_HIT,10,"ref_lvl",7,bon_HIT,20,"ref_lvl",8,bon_HIT,30,"ref_lvl",9,bon_HIT,40,"ref_lvl",10,bon_HIT,100,bon_NONE] //Phreeoni Wing
+,[2897,itm_type_GARMENT,0,10,0,1,30,100,0,0,0,0,bon_FLEE,10,bon_HP_MUL,5,"ref_lvl",8,bon_FLEE,30,"ref_lvl",9,bon_FLEE,40,"ref_lvl",11,bon_PDODGE,25,bon_NONE] //Old Morroc Shawl
+,[2898,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RED_CAST,-10,"set_evr"+(fl_SHOES+fl_HEAD),2,bon_RED_CAST,-1,"set_evr"+(fl_SHOES+fl_HEAD),2,bon_PHY_ATK,1,bon_NONE] //Applause Sandals + Crown
+,[2899,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_RED_CAST,-10,"set_evr"+(fl_SHOES+fl_HEAD),2,bon_RED_CAST,-1,"set_evr"+(fl_SHOES+fl_HEAD),2,bon_MATK_MUL,1,bon_NONE] //Applause Sandals + Tiara
+// ,[2900,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] //
 
 //"ev_ref" = for every x refine
 //"ev_ref",x,bonus,amount,
@@ -4044,6 +4055,10 @@ w_SE = [
 	[2879,2869,2870,1823,1840,"NULL"], //Soul Emperor Set + Taekwon Set
 	[2880,2871,2872,2873,"NULL"], //Moon shadow Set
 	[2881,2869,2872,"NULL"], ///Emperor's Shadow Armor + Moon Shadow Earring
+	[2898,2895,217,"NULL"], //Applause Sandals + Crown
+	[2899,2895,220,"NULL"], //Applause Sandals + Tiara
+	// [,,,"NULL"], //
+	// [,,,"NULL"], //
 	// [,,,"NULL"], //
 
 	// ,[itm_set,item1,item2,...,"NULL"] //

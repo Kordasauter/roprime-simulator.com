@@ -2397,6 +2397,19 @@ function getEquipATK() {
 	// 	equipmentAttack += 20 * Math.floor(SkillSearch(skill_AR_DOUBLE_STRAFE));
 	// }
 
+	if(EquipNumSearch(2883) && n_A_SHOULDER_DEF_PLUS >= 10)//Skin of Gwiber
+	{
+		equipmentAttack += 5 * Math.floor((SU_DEX+SU_INT)/20)
+	}
+	if(EquipNumSearch(2884) && n_A_SHOULDER_DEF_PLUS >= 10)//Skin of Ladon
+	{
+		equipmentAttack += 15 * Math.floor((SU_AGI+SU_VIT)/20)
+	}
+	if(EquipNumSearch(2892) && n_A_card[card_loc_HEAD_MIDDLE] == 52)//Star Eyepatch + Orc Hero Card
+	{
+	  equipmentAttack += Math.floor(SU_VIT/12) * ((n_A_BaseLV >= 100)?15:10)
+	}
+
 	//Cards
 	if (CardNumSearch(557)) {
 	//Faithful Manager Card

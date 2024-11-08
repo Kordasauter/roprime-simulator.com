@@ -1011,6 +1011,11 @@ function CalcEquipAtk() {
       equipmentAttack += 15 * Math.floor((SU_AGI+SU_VIT)/20)
   }
 
+  if(EquipNumSearch(2892) && n_A_card[card_loc_HEAD_MIDDLE] == 52)//Star Eyepatch + Orc Hero Card
+  {
+    equipmentAttack += Math.floor(SU_VIT/12) * ((n_A_BaseLV >= 100)?15:10)
+  }
+
   //Cards
   if (CardNumSearch(557)) {
     //Faithful Manager Card
@@ -1590,6 +1595,8 @@ function CalcElementalMod(weaponElement) {
     n_tok[bon_DMG_ELE_FIRE] += 15;
     n_tok[bon_DMG_ELE_DARK] += 15;
   }
+
+
   // Card Bonuses
   if (not_use_card != 1)
     weaponElementalMod +=
@@ -1701,7 +1708,10 @@ function CalcRacialMod() {
     n_tok[bon_DMG_RC_DEMON] += 10;
   }
 
-
+  if(EquipNumSearch(2890)){//Holy Father Mail
+    n_tok[bon_DMG_RC_DEMON] += (n_A_BODY_DEF_PLUS > 6) ? (n_A_BODY_DEF_PLUS-6):0;
+    n_tok[bon_MDMG_RC_DEMON] += (n_A_BODY_DEF_PLUS > 6) ? (n_A_BODY_DEF_PLUS-6):0;
+  }
 
   //Shadows
   if (EquipNumSearch(1673)) {
@@ -1839,6 +1849,19 @@ function CalcSizeMod() {
     n_tok[bon_DMG_SIZ_MEDIUM] += 5 * Math.floor(n_A_SHOULDER_DEF_PLUS / 4);
     n_tok[bon_DMG_SIZ_LARGE] += 5 * Math.floor(n_A_SHOULDER_DEF_PLUS / 4);
   }
+  if(n_A_Equip[eq_WEAPON] == 2894 )//Dragonslayer Sword on main hand
+	{
+    n_tok[bon_DMG_SIZ_SMALL] += ((n_A_BaseLV>=100)?10:3) * n_A_Weapon_ATKplus;
+    n_tok[bon_DMG_SIZ_MEDIUM] += ((n_A_BaseLV>=100)?10:3) * n_A_Weapon_ATKplus;
+    n_tok[bon_DMG_SIZ_LARGE] += ((n_A_BaseLV>=100)?10:3) * n_A_Weapon_ATKplus;
+	}
+  if(n_A_Equip[eq_WEAPONII] == 2894 )//Dragonslayer Sword on off hand
+	{
+    n_tok[bon_DMG_SIZ_SMALL] += ((n_A_BaseLV>=100)?10:3) * n_A_Weapon2_ATKplus;
+    n_tok[bon_DMG_SIZ_MEDIUM] += ((n_A_BaseLV>=100)?10:3) * n_A_Weapon2_ATKplus;
+    n_tok[bon_DMG_SIZ_LARGE] += ((n_A_BaseLV>=100)?10:3) * n_A_Weapon2_ATKplus;
+	}
+
   //Shadows
   if (EquipNumSearch(1726)) {
     // "Shadow Blacksmith Armor"
@@ -3370,6 +3393,7 @@ function CalcWeaponSizeMod() {
       14271, 14642, 15008, 15353, 15752, 
     ],
     /* KO */ [
+      4300, 4426, 4554, 4684, 4814, 4945, 5078, 5213, 5348, 5484, 5622, 5762, 5902,
       6043, 6186, 6331, 6476, 6622, 6770, 6920, 7070, 7221, 7374, 7529, 7684, 7840, 
       7998, 8158, 8318, 8479, 8642, 8807, 8972, 9138, 9306, 9476, 9646, 9817, 9990, 
       10165, 10340, 10516, 10694, 10874, 11054, 11235, 11418, 11603, 11788, 11974, 12162, 
@@ -3633,109 +3657,13 @@ function calcHP() {
       // n_A_MaxHP = JobHP_Third[13][n_A_BaseLV - 99];
 
       let KagobHP = new Array(
-        4250,
-        4305, //99-100
-        4360,
-        4415,
-        4470,
-        4525,
-        4580,
-        4635,
-        4690,
-        4745,
-        4800,
-        4855, //101-110
-        4910,
-        4965,
-        5020,
-        5075,
-        5130,
-        5185,
-        5240,
-        5295,
-        5350,
-        5405, //111-120
-        5460,
-        5515,
-        5570,
-        5625,
-        5680,
-        5735,
-        5790,
-        5845,
-        5900,
-        5955, //121-130
-        6010,
-        6065,
-        6120,
-        6175,
-        6230,
-        6285,
-        6340,
-        6395,
-        6450,
-        6505, //131-140
-        6560,
-        6615,
-        6670,
-        6725,
-        6780,
-        6835,
-        6890,
-        6945,
-        7000,
-        7055, //141-150
-        7110,
-        7265,
-        7320,
-        7575,
-        7730,
-        7985,
-        8240,
-        8495,
-        8550,
-        8705, //151-160
-        // 8860,9015,9170,9325,9480,9635,9790,9945,10100,10255,//161-170
-        8860,
-        9015,
-        9170,
-        9325,
-        9480,
-        9635,
-        9790,
-        9945,
-        10100,
-        16397, //161-170
-        10410,
-        10565,
-        10720,
-        10875,
-        11030,
-        11185,
-        11340,
-        11495,
-        11650,
-        11805, //171-180
-        11960,
-        12115,
-        12270,
-        12425,
-        12580,
-        12735,
-        12890,
-        13045,
-        13200,
-        13355, //181-190
-        13510,
-        13665,
-        13820,
-        13975,
-        14130,
-        14285,
-        14440,
-        14595,
-        14750,
-        14905
+        4300, 4426, 4554, 4684, 4814, 4945, 5078, 5213, 5348, 5484, 5622, 5762, 5902,
+        6043, 6186, 6331, 6476, 6622, 6770, 6920, 7070, 7221, 7374, 7529, 7684, 7840, 
+        7998, 8158, 8318, 8479, 8642, 8807, 8972, 9138, 9306, 9476, 9646, 9817, 9990, 
+        10165, 10340, 10516, 10694, 10874, 11054, 11235, 11418, 11603, 11788, 11974, 12162, 
+        12352, 12542, 12733, 12926, 13121, 13316, 13512, 13710, 13910, 14110, 14311, 14514, 
+        14719, 14924, 15130, 15338, 15548, 15758, 15969, 16182, 16397, 16612, 16828, 17046, 
+        17266, 17486, 17667, 18223, 18434, 18804, 19198, 19411, 19616, 20208, 20418, 20838, 
       ); //191-200
       n_A_MaxHP = KagobHP[n_A_BaseLV - 99];
     }
@@ -4431,6 +4359,10 @@ function calcHP() {
     //Traveler's Shoes
     hpMultiplier += 2 * SkillSearch(skill_MIWA_FRIGGS_SONG);
   }
+  if(EquipNumSearch(2897) && CardNumSearch(Osiris))//Old Morroc Shawl + Osiris Card
+	{
+    hpMultiplier += 15
+	}
 
   //Shadows
   if (EquipNumSearch(1653)) {
@@ -6411,6 +6343,10 @@ function calcFlee(n_A_FLEE) {
         n_A_FLEE += 10;
       } 
   }
+  if(EquipNumSearch(2893) && n_A_card[card_loc_SHOES] == 423)//Nameless Swordsman's Boots + Boss Egnigem Card
+	{
+		n_A_FLEE += 15 * Math.floor(n_A_SHOES_DEF_PLUS/3)
+	}
 
   if (n_A_JobSearch2() == cls_ASS || n_A_JobSearch2() == cls_ROG)
     n_A_FLEE += 4 * SkillSearch(skill_TH_IMPROVE_DODGE);
@@ -8090,6 +8026,10 @@ function getGearVTCReduction() {
     if(EnchNumSearch(782))//spell 2
       GearVTCReduc -= 5;
   }
+  if(EquipNumSearch(2895) && n_A_card[card_loc_SHOES] == 228)//Applause Sandals + Amon Ra Card
+	{
+    GearVTCReduc -= 10;
+	}
 
   if (EquipNumSearch(1745)) {
     //"Shadow Wizard Boots"
@@ -9081,7 +9021,15 @@ function calcRaceElementalReduction() {
       {
         n_tok[bon_RED_RANGE] += 10;
       }
+    if(EquipNumSearch(2857)){//Legendary Hero's Shield
+      n_tok[bon_RED_RANGE] += (n_A_LEFT_DEF_PLUS > 6) ? (n_A_LEFT_DEF_PLUS-6):0;
+    }
   }
+  if(EquipNumSearch(2897) && CardNumSearch(Osiris))//Old Morroc Shawl + Osiris Card
+	{
+    n_tok[bon_RED_ELE_FIRE] += 50;
+    n_tok[bon_RED_ELE_SHADOW] += 100;
+	}
 
   //Enchants
   if (EnchNumSearch(5255)) {
@@ -9289,6 +9237,26 @@ function calcRaceElementalReduction() {
     n_tok[bon_RES_STATUS_FREEZE] += 2 * n_A_HEAD_DEF_PLUS;
     n_tok[bon_RES_STATUS_STONE] += 2 * n_A_HEAD_DEF_PLUS;
   }
+
+  if((n_A_Equip[eq_WEAPON] == 2894) && (n_A_card[card_loc_WEAPON_I] == 363 || n_A_card[card_loc_WEAPON_II] == 363 || n_A_card[card_loc_WEAPON_III] == 363 || n_A_card[card_loc_WEAPON_IV] == 363))//Dragonslayer Sword + Randgris Card
+	{
+	  n_tok[bon_RES_STATUS_STUN] += (n_A_BaseLV >= 100)?30:20
+	  n_tok[bon_RES_STATUS_SILENCE] += (n_A_BaseLV >= 100)?30:20
+	}
+  if((n_A_Equip[eq_WEAPONII] == 2894) && (n_A_card[card_loc_WEAPONII_I] == 363 || n_A_card[card_loc_WEAPONII_II] == 363 || n_A_card[card_loc_WEAPONII_III] == 363 || n_A_card[card_loc_WEAPONII_IV] == 363))//Dragonslayer Sword + Randgris Card
+	{
+	  n_tok[bon_RES_STATUS_STUN] += (n_A_BaseLV >= 100)?30:20
+	  n_tok[bon_RES_STATUS_SILENCE] += (n_A_BaseLV >= 100)?30:20
+	}
+  if(EquipNumSearch(2896) && CardNumSearch(52))//Phreeoni Wing + Phreeoni Card
+	{
+	  n_tok[bon_RES_STATUS_STONE] += 100
+	}
+  if(EquipNumSearch(2897) && CardNumSearch(Osiris))//Old Morroc Shawl + Osiris Card
+	{
+	  n_tok[bon_RES_STATUS_CURSE] += 100
+	}
+
   //Shadows
   if (EquipNumSearch(1763)) {
     //Shadow Boots of Hypnos

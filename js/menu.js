@@ -4,7 +4,7 @@ function setMenu() {
 
   let str = "";
   let code = CentralLabCode();
-  str += '<div class="sidebar-heading">Last update : 19/03/2024</div>';
+  str += '<div class="sidebar-heading">Last update : 08/11/2024</div>';
   if (index == "index.html" || path == "/")
     str += '<li class="nav-item active">';
   else str += '<li class="nav-item">';
