@@ -244,7 +244,21 @@ function getFinalDamage(finalDamage, sk, SkillLevel, isCrit,offHand) {
 	//Final Damage Multiplier
 	finalDamage[i] = Math.floor(
 		finalDamage[i] * (1 + getFinalDamageMultiplier(sk.id) / 100)
+		
 	);
+
+	//Spirit of life final multiplier
+	if (
+		SkillSearch(skill_SUM_SPIRIT_OF_LIFE) &&
+		(sk.id == skill_SUM_PICKY_PECK ||
+			sk.id == skill_SUM_SCAR_OF_TAROU ||
+			sk.id == skill_SUM_LUNATIC_CARROT_BEAT ||
+			sk.id == skill_SUM_SPIRIT_OF_SAVAGE)
+		) {
+		var remainingHP = formElements["SkillSubNum"].value;
+		// testSkMod += 30 * remainingHP;
+		finalDamage[i] = (finalDamage[i] * (100 + 30 * remainingHP)) / 100;
+		}
 
 	//Final Damage Reduction
 	finalDamage[i] = Math.floor(
@@ -3616,10 +3630,10 @@ function getCriticalMultiplier() {
 	// Faceworm Queen Card
 	if (CardNumSearch(635)) criticalMultiplier += n_A_SHOES_DEF_PLUS;
 	//Powerful Soldier Skeleton Card
-	if (CardNumSearch(724) && n_A_BaseLV >= 100) criticalMultiplier += 5;
+	if (CardNumSearch(724) && n_A_BaseLV >= 100) criticalMultiplier += 5 * CardNumSearch(724);
 	//Mutant Dolor Card
 	if (CardNumSearch(849) && n_A_WeaponType == weapTyp_KATAR)
-	criticalMultiplier += n_A_Weapon_ATKplus * 2;
+	criticalMultiplier += n_A_Weapon_ATKplus * 2 * CardNumSearch(849);
 	//Ominous Assaulter Card
 	if (
 	CardNumSearch(893) &&
@@ -3793,17 +3807,18 @@ function getSkillMultiplier(currentSkill) {
 		break;
 	}
 	}
-	if (
-	SkillSearch(skill_SUM_SPIRIT_OF_LIFE) &&
-	(currentSkill == skill_SUM_PICKY_PECK ||
-		currentSkill == skill_SUM_SCAR_OF_TAROU ||
-		currentSkill == skill_SUM_LUNATIC_CARROT_BEAT ||
-		currentSkill == skill_SUM_SPIRIT_OF_SAVAGE)
-	) {
-	var remainingHP = formElements["SkillSubNum"].value;
+	// if (
+	// SkillSearch(skill_SUM_SPIRIT_OF_LIFE) &&
+	// (currentSkill == skill_SUM_PICKY_PECK ||
+	// 	currentSkill == skill_SUM_SCAR_OF_TAROU ||
+	// 	currentSkill == skill_SUM_LUNATIC_CARROT_BEAT ||
+	// 	currentSkill == skill_SUM_SPIRIT_OF_SAVAGE)
+	// ) {
+	// var remainingHP = formElements["SkillSubNum"].value;
 	// testSkMod += 30 * remainingHP;
-	testSkMod = (testSkMod * (100 + 30 * remainingHP)) / 100;
-	}
+	// // testSkMod = (testSkMod * (100 + 30 * remainingHP)) / 100;
+	// console.log("testSkMod " + testSkMod)
+	// }
 
 	if (
 	(EquipNumSearch(1723) && currentSkill == skill_CR_GRAND_CROSS) || // Shadow Crusader Armor
@@ -4664,7 +4679,6 @@ function getSkillMultiplier(currentSkill) {
 	// testSkMod += n_A_HEAD_DEF_PLUS;
 	// }
 	// }
-
 	return (
 	StPlusCalc2(bon_DMG_SKILL + currentSkill) +
 	StPlusCard(bon_DMG_SKILL + currentSkill) +

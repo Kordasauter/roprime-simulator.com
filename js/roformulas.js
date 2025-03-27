@@ -9030,6 +9030,10 @@ function calcRaceElementalReduction() {
     n_tok[bon_RED_ELE_FIRE] += 50;
     n_tok[bon_RED_ELE_SHADOW] += 100;
 	}
+  if(EquipNumSearch(3204) && CardNumSearch(492)) // Arabian Manteau + Ifrit Card
+  {
+    n_tok[bon_RED_ELE_FIRE] += 100;
+  }
 
   //Enchants
   if (EnchNumSearch(5255)) {
