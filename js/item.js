@@ -3325,11 +3325,11 @@
 ,[3179,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_HP_MUL,5,bon_ATK_MUL,2,bon_DMG_CRIT,5,"set_sum" + (fl_ARMOR+fl_GARMENT+fl_SHOES),27,bon_HP_MUL,5,"set_sum" + (fl_ARMOR+fl_GARMENT+fl_SHOES),27,bon_ATK_MUL,3,"set_sum" + (fl_ARMOR+fl_GARMENT+fl_SHOES),27,bon_DMG_CRIT,5,bon_NONE] //Grace Super Novice Suit Set
 ,[3180,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_HP_MUL,5,bon_MATK_MUL,2,bon_SKILL_AUTOCAST,156,"set_sum" + (fl_ARMOR+fl_GARMENT+fl_SHOES),27,bon_HP_MUL,5,"set_sum" + (fl_ARMOR+fl_GARMENT+fl_SHOES),27,bon_MATK_MUL,3,"set_sum" + (fl_ARMOR+fl_GARMENT+fl_SHOES),27,bon_DMG_SKILL + skill_SOR_PSYCHIC_WAVE,15,bon_NONE] //Grace Super Novice Robe Set
 //https://eu.4gameforum.com/threads/695036/
-,[3181,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // Valkyrie's Knife
-,[3182,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // Crow Tengu Mask
-,[3183,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // Tengu Scroll
+,[3181,weapTyp_DAGGER,50,50,4,4,10,70,0,0,0,0,bon_WEAPON_MATK,50,bon_ATK,150,bon_MATK,150,bon_HP_ADD,300,bon_SP_ADD,300,bon_RED_RC_DEMI_HUMAN,10,bon_UNBREAKABLE,1,"ev_ref",1,bon_MATK,15,"ev_ref",1,bon_INT,2,"ev_ref",1,bon_DEX,2,"ev_ref",1,bon_CRIT,2,"ev_ref",1,bon_ASPD_MUL,2,"ev_ref",1,bon_HP_ADD,100,"ev_ref",1,bon_SP_ADD,10,"ev_ref",1,bon_DMG_CRIT,1,bon_NONE] // Valkyrie's Knife (Novice)
+,[3182,itm_type_HEAD_MIDDLE,0,0,0,0,30,80,0,0,0,0,bon_PHY_ATK,1,bon_DMG_RANGE,2,"bstr_hi",108,bon_PHY_ATK,1,"bstr_hi",108,bon_DMG_RANGE,2,"bstr_hi",120,bon_PHY_ATK,2,"bstr_hi",120,bon_DMG_RANGE,3,bon_NONE] // Crow Tengu Mask
+,[3183,itm_type_HEAD_LOWER,0,0,0,0,30,40,0,0,0,0,bon_NONE] // Tengu Scroll
 //https://eu.4gameforum.com/threads/695042/
-,[3184,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // Cor Core Headset
+,[3184,itm_type_HEAD_MIDDLE,0,5,0,0,10,150,0,0,0,0,bon_RED_CAST,-8,bon_RED_CASTDELAY,8,bon_NONE] // Cor Core Headset
 ,[3185,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // Spiritual Cloth
 ,[3186,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // Antonio Coat
 ,[3187,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // Citrus Ribbon
@@ -3364,14 +3364,15 @@
 ,[3211,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // Booster Shoes
 ,[3212,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // Fairy Leaf Powder
 ,[3213,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // Cursed Mad Bunny
+//missing from https://eu.4gameforum.com/threads/695036/
+,[3214,itm_type_GARMENT,0,38,0,1,40,100,0,0,0,0,bon_RED_BOSS,5,bon_RED_NON_BOSS,5,"ev_ref",2,bon_HP_MUL,2,"ev_ref",2,bon_SP_MUL,2,"ev_ref",2,bon_RED_ELE_HOLY,3,"ref_lvl",8,bon_PHY_ATK,10,"ref_lvl",8,bon_MDMG_BOSS,10,"ref_lvl",8,bon_MDMG_NON_BOSS,10,"ref_lvl",10,bon_ALL_STATS,3,"ref_lvl",12,bon_PHY_ATK,15,"ref_lvl",12,bon_MDMG_BOSS,15,"ref_lvl",12,bon_MDMG_NON_BOSS,15,bon_NONE] // Divine Phoenix Wing
+,[3215,weapTyp_DAGGER,55,50,4,4,10,70,0,0,0,0,bon_WEAPON_MATK,50,"ev_ref",1,bon_HP_ADD,100,"ev_ref",1,bon_SP_ADD,10,"ref_lvl",7,bon_RED_RC_DEMI_HUMAN,10,bon_NONE] // Valkyrie's Knife (Mage)
+,[3216,weapTyp_DAGGER,110,50,4,4,10,70,0,0,0,0,bon_WEAPON_MATK,50,bon_HP_ADD,200,"ev_ref",1,bon_INT,2,"ev_ref",1,bon_DEX,2,bon_NONE] // Valkyrie's Knife (Hunter)
+,[3217,weapTyp_DAGGER,301,50,4,4,10,70,0,0,0,0,bon_WEAPON_MATK,50,bon_UNBREAKABLE,1,"ev_ref",1,bon_ASPD_MUL,2,bon_NONE] // Valkyrie's Knife (Bard/Dancer)
+,[3218,weapTyp_DAGGER,52,50,4,4,10,70,0,0,0,0,bon_WEAPON_MATK,50,bon_MATK,150,bon_SP_ADD,100,"ev_ref",1,bon_DMG_CRIT,1,bon_NONE] // Valkyrie's Knife (Thief)
+,[3219,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_PHY_ATK,1,bon_DMG_RANGE,1,"bstr_hi",108,bon_PHY_ATK,2,"bstr_hi",108,bon_DMG_RANGE,1,"bstr_hi",120,bon_PHY_ATK,3,"bstr_hi",120,bon_DMG_RANGE,1,bon_NONE] // Crow Tengu Mask + Tengu Scroll
 
-// ,[3214,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // 
-// ,[3215,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // 
-// ,[3216,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // 
-// ,[3217,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // 
-// ,[3218,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // 
-// ,[3219,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // 
-// ,[3220,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_NONE] // 
+,[3220,itm_type_SET,0,0,0,0,0,0,0,0,0,0,bon_MDMG_ELE_ALL,7,bon_NONE] // Cor Core Headset + CD in Mouth
 
 //"ev_ref" = for every x refine
 //"ev_ref",x,bonus,amount,
@@ -4513,8 +4514,8 @@ w_SE = [
 	[3175,3106,3107,3108,3139,"NULL"],//Eswoo
 	[3176,3106,3107,3108,3140,"NULL"],//Curse
 	[3180,3106,3107,3108,3144,"NULL"],//Super Novice Robe
-	// [,,,"NULL"], //
-	// [,,,"NULL"], //
+	[3219,3182,3183,"NULL"], // Crow Tengu Mask + Tengu Scroll
+	[3220,3184,1961,"NULL"], //Cor Core Headset + CD in Mouth
 	// [,,,"NULL"], //
 	// [,,,"NULL"], //
 	// [,,,"NULL"], //
