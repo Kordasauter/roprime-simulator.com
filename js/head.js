@@ -2619,9 +2619,9 @@ function ChangePatch() {
   }
   if (PATCH >= 1) {
     //Update Max Blv
-    CONST_MAXLVL_THIRD = 185;
-    CONST_MAXLVL_KAGOB_ENOVI = 185;
-    CONST_MAXJOBLVL_THIRD = 65;
+    CONST_MAXLVL_THIRD = 200;
+    CONST_MAXLVL_KAGOB_ENOVI = 200;
+    CONST_MAXJOBLVL_THIRD = 70;
 
     //update skill level from updates
     SkillOBJ[445][1] = 10; //[445,10,"Enchant Blade"],
@@ -2681,9 +2681,9 @@ function ChangePatch() {
   }
   if (PATCH == 2) {
     //Update Max Blv
-    CONST_MAXLVL_THIRD = 185;
-    CONST_MAXLVL_KAGOB_ENOVI = 185;
-    CONST_MAXJOBLVL_THIRD = 65;
+    CONST_MAXLVL_THIRD = 200;
+    CONST_MAXLVL_KAGOB_ENOVI = 200;
+    CONST_MAXJOBLVL_THIRD = 70;
     //RK
     SkillOBJ[445][1] = 10; //[445,10,"Enchant Blade"],
     SkillOBJ[446][1] = 10; //[446,10,"Sonic Wave"],
